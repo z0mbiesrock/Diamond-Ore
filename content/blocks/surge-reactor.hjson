@@ -7,7 +7,7 @@ health: 6000
 size: 6
 itemDuration: 720
 buildVisibility: sandboxOnly
-//baseExplosiveness: 50
+baseExplosiveness: 500
 heating: 0.02
 explosionRadius: 50
 explosionDamage: 98657
