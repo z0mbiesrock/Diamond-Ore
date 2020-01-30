@@ -17,7 +17,7 @@ coolantPower: 0.225
 buildCostMultiplier: 0.73227
 powerProduction: 166.66666666666666666666666666667
 consumes: {
-  
+  powerBuffered: 750000
   items: {
     items: [
       surge-alloy/1
