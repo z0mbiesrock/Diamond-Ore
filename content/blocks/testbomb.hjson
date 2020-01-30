@@ -4,8 +4,8 @@ solid: true
 hasItems: true
 configurable: true
 buildVisibility: sandboxOnly
-localizedName: "Scatter Silo"
-description: "A player-activatable block that scatters bullets everywhere upon use."
+localizedName: "Test Bomb"
+description: "A player-activatable block that scatters bullets everywhere upon use. Mostly for testing."
 category: turret
 requirements: [
   graphite/75,
