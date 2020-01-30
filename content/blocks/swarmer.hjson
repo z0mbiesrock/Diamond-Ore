@@ -1,0 +1,58 @@
+//use a custom ogg sound for shooting
+//shootSound: swings
+
+//define ammo, which is done by assigning a bullet type per item
+ammo: {
+  //re-define old types of ammo
+  blast-compound: missileExplosive
+  pyratite: missileIncendiary
+  surge-alloy: missileSurge
+  
+  //define a custom type with different properties
+  cryogem: {
+    type: MissileBulletType
+    //move 6 world units per frame (very fast)
+    speed: 6.0
+    damage: 30
+    //0.5x reload time, so 2x shoot speed
+    reloadMultiplier: 0.9
+    //visual size - does not affect hitbox
+    bulletWidth: 7
+    bulletHeight: 9
+    shootEffect: shootSmall
+    smokeEffect: shootSmallSmoke
+    //2 bullets per electrum item
+    ammoMultiplier: 4
+    //visual bullet front and back
+    backColor: 49acdc
+    frontColor: 9cd1fb
+    trailColor: 9cd1fb
+	homingPower: 0.015
+	homingRange: 160
+	splashDamage: 25
+	splashDamageRadius: 48
+	despawnEffect: explosion
+	hitEffect: hitLancer
+	status: freezing
+	statusDuration: 720
+	fragBullets: 15
+	fragVelocityMin: 3
+	fragVelocityMax: 9
+	fragBullet: {
+      type: BasicBulletType
+      speed: 1
+	  lifetime: 2
+      damage: 1
+      bulletWidth: 1
+      bulletHeight: 1
+	  despawnEffect: freezing
+	  hitEffect: none
+	  frontColor: 99eefe
+	  backColor: 002fff
+	  pierce: true
+	  status: freezing
+	  statusDuration: 720
+	  bulletSprite: diamond-ore-diamondbullet
+    }
+  }
+}

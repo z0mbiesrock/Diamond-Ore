@@ -1,0 +1,11 @@
+name: Diamond Wall
+description: A wall made of pure diamond. Extremely hard to destroy.
+type: Wall
+health: 2150
+size: 1
+buildCostMultiplier: 2.5
+requirements: [
+  diamond/8
+]
+category: defense
+research: thorium-wall-large

@@ -1,0 +1,24 @@
+name: Aqua Drill
+description: Extracts groundwater. Useful in locations with no surface water available. It extracts groundwater much more quickly than a regular water extractor despite its size.
+type: SolidPump
+health: 150
+size: 1
+liquidCapacity: 20
+warmupSpeed: 0.005
+rotateSpeed: 3
+hasPower: true
+updateEffect: wet
+updateEffectChance: 0.04
+pumpAmount: 0.25
+attribute: water
+consumes: {
+  power: 2
+}
+requirements: [
+  cryogem/5
+  silicon/25
+  titanium/50
+  metaglass/15
+]
+category: production
+research: oil-extractor

@@ -1,0 +1,6 @@
+type: material
+name: Cryogem
+description: A packet of highly compressed and solidified cryofluid. Mostly just a way to have prepared cryofluid for any purpose, provided you know how to decompress it.
+hardness: 5
+cost: 1
+color: aaffff

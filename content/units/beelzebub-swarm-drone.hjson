@@ -1,0 +1,47 @@
+type: flyingUnit
+name: Beelzebub Swarm Drone
+description: Fast, cheap, fragile, and weak. However, are very numerous and can sense a target from far away.
+speed: 2.25
+maxVelocity: 4.5
+flying: true
+health: 35
+engineOffset: 2.5
+engineSize: 2
+drag: 0.00625
+range: 512
+hitsize: 2
+hitsizeTile: 2
+shootCone: 210
+rotatespeed: 0.025
+baseRotateSpeed: 0.2
+mass: 0.66
+retreatPercent: 1.3
+weapon: {
+  name: swarm-blaster
+  length: 2
+  reload: 15
+  alternate: true
+  recoil: -0.5
+  width: 0.25
+  bullet: {
+    type: BasicBulletType
+    speed: 9
+	drag: 0.01875
+	lifetime: 25
+    damage: 3
+    bulletWidth: 2
+    bulletHeight: 3
+	frontColor: bbffff
+	backColor: bbaadd
+    shootEffect: none
+    smokeEffect: none
+    despawnEffect: none
+	hitEffect: none
+	keepVelocity: false
+	pierce: false
+	homingPower: 2.25
+	homingRange: 100
+	bulletSprite: diamond-ore-diamondbullet
+	inaccuracy: 15
+  }
+}

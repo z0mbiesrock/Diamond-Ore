@@ -1,0 +1,45 @@
+type: NuclearReactor
+name: Surge Reactor
+description: A massive and incredibly unstable reactor which converts surge alloy directly into energy. It will explode violently if insufficient amounts of coolant are supplied. Power output depends on fullness, with base power generated at full capacity.
+itemCapacity: 100
+liquidCapacity: 100
+health: 6000
+size: 6
+itemDuration: 720
+//baseExplosiveness: 50
+heating: 0.02
+explosionRadius: 50
+explosionDamage: 98657
+smokeThreshold: 0.5
+flashThreshold: 0.75
+coolantPower: 0.225
+buildCostMultiplier: 0.73227
+powerProduction: 166.66666666666666666666666666667
+consumes: {
+  
+  items: {
+    items: [
+      surge-alloy/1
+    ]
+  }
+  liquid: {
+    liquid: cryofluid
+    amount: 1.25
+  }
+}
+requirements: [
+  silicon/275
+  metaglass/275
+  graphite/275
+  surge-alloy/550
+  phase-fabric/80
+  thorium/1050
+  cryogem/150
+  diamond/150
+]
+category: power
+research: thorium-reactor
+activeSound: thruster
+activeSoundVolume: 0.85
+idleSound: respawning
+idleSoundVolume: 0.25

@@ -1,0 +1,31 @@
+name: Diamond Drill
+description: A fast, durable, and highly efficient drill. Optionally uses cryofluid to greatly increase mining speed.
+type: Drill
+health: 600
+size: 2
+tier: 6
+drillTime: 3
+liquidBoostIntensity: 2.75
+warmupSpeed: 0.015
+hasPower: true
+drillEffect: freezing
+updateEffect: pulverizeMedium
+heatColor: eeffff
+itemCapacity: 30
+consumes: {
+  power: 1.4
+  liquid: {
+    liquid: cryofluid
+    amount: 0.1
+    booster: true
+	optional: true
+  }
+}
+requirements: [
+  diamond/20
+  silicon/110
+  thorium/5
+  surge-alloy/25
+]
+category: production
+research: blast-drill

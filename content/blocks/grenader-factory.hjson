@@ -1,0 +1,29 @@
+name: Grenader Mech Factory
+description: A pad that manufactures powerful ground assault units.
+type: UnitFactory
+unitType: grenader
+size: 2
+buildCostMultiplier: 2.5
+//buildVisibility: hidden
+//buildVisibility: sandboxOnly
+health: 800
+produceTime: 840
+maxSpawn: 2
+consumes: {
+  power: 7
+  items: {
+    items: [
+      titanium/12
+      blast-compound/10
+      spore-pod/5
+    ]
+  }
+}
+category: units
+research: fortress-factory
+requirements: [
+  diamond/65
+  titanium/400
+  thorium/150
+  plastanium/120
+]

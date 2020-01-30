@@ -1,0 +1,32 @@
+name: Precision Diamond Drill
+description: A fast, durable, and highly efficient drill. It's smaller and cheaper. Optionally uses cryofluid to drastically increase mining speed.
+type: Drill
+health: 150
+size: 1
+tier: 6
+drillTime: 6
+liquidBoostIntensity: 5.5
+warmupSpeed: 0.005
+hasPower: true
+drillEffect: freezing
+updateEffect: pulverizeSmall
+heatColor: eeffff
+itemCapacity: 1
+consumes: {
+  power: 1
+  liquid: {
+    liquid: cryofluid
+    amount: 0.25
+    booster: true
+	optional: true
+  }
+}
+requirements: [
+  diamond/5
+  silicon/25
+  titanium/25
+  thorium/1
+  cryogem/1
+]
+category: production
+research: blast-drill

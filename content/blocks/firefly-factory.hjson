@@ -1,0 +1,33 @@
+name: Firefly Bomber Factory
+description: A pad that manufactures large expensive self-destructing siege bombers.
+type: UnitFactory
+unitType: firefly
+size: 3
+buildCostMultiplier: 1.25
+//buildVisibility: hidden
+//buildVisibility: sandboxOnly
+health: 2700
+produceTime: 900
+maxSpawn: 1
+consumes: {
+  power: 10
+  items: {
+    items: [
+      pyratite/10
+      blast-compound/10
+      spore-pod/5
+      graphite/15
+      scrap/35
+    ]
+  }
+}
+category: units
+research: omega-mech-pad
+requirements: [
+  diamond/100
+  lead/400
+  silicon/300
+  graphite/250
+  thorium/200
+  plastanium/125
+]

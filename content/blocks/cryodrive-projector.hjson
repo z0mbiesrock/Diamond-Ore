@@ -1,0 +1,33 @@
+name: Cryodrive Projector
+description: An advanced overdrive projector that greatly increases the speed of nearby buildings. Optionally uses diamonds to grant an even bigger boost over an even larger area.
+type: OverdriveProjector
+health: 900
+size: 3
+buildCostMultiplier: 1.75
+hasPower: true
+color: a1ccb5
+phase: b8ffe9
+speedBoost: 2
+speedBoostPhase: 2
+range: 120
+phaseRangeBoost: 120
+useTime: 240
+consumes: {
+  power: 5
+  items: {
+    items: [
+      diamond/1
+    ]
+    booster: true
+	optional: true
+  }
+}
+requirements: [
+  diamond/75
+  silicon/75
+  thorium/75
+  phase-fabric/75
+  cryogem/75
+]
+category: effect
+research: overdrive-projector

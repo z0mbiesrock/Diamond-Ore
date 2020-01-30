@@ -1,0 +1,6 @@
+type: material
+name: Diamond
+description: An extremely rare and precious mineral. Its hardness is unmatched, making it very useful for making highly efficient drills or for building extremely durable structures.
+hardness: 5
+cost: 3
+color: 88ccff

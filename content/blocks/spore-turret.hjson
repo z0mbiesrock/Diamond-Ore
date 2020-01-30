@@ -1,0 +1,104 @@
+type: DoubleTurret
+name: Spore Turret
+description: Spore Turret
+health: 1600
+size: 2
+reload: 190
+range: 200
+ammoUseEffect: smoke
+maxAmmo: 100
+inaccuracy: 24
+rotatespeed: 9
+buildVisibility: debugOnly
+layer: turret
+layer2: block
+outlineIcon: false
+expanded: true
+shots: 4
+ammo: {
+  spore-pod: {
+    type: MissileBulletType
+    speed: 6
+	drag: 0.0045
+    damage: 25
+	lifetime: 240
+    bulletWidth: 12
+    bulletHeight: 14
+	frontColor: 995D9A
+	backColor: 7C4B80
+	trailColor: 6B4474
+    shootEffect: shootBig
+    smokeEffect: shootSmallSmoke
+	splashDamage: 75
+	splashDamageRadius: 24
+	hitEffect: mineBig
+    ammoMultiplier: 4
+	pierce: false
+	bulletSprite: shell
+	homingPower: 0.00015
+	homingRange: 240
+	fragBullets: 16
+	fragVelocityMin: 0.45
+	fragVelocityMax: 0.5
+	fragBullet: {
+      type: BasicBulletType
+      speed: 1
+	  lifetime: 18
+      damage: 4
+      bulletWidth: 1
+      bulletHeight: 4
+	  despawnEffect: none
+	  hitEffect: none
+	  frontColor: 995D9A
+	  backColor: 995D9A
+	  pierce: true
+	  status: corroded
+	  statusDuration: 1200
+	  bulletSprite: diamond-ore-diamondbullet
+	fragBullets: 1
+	fragVelocityMin: 0.4
+	fragVelocityMax: 0.45
+	fragBullet: {
+      type: BasicBulletType
+      speed: 1
+	  lifetime: 18
+      damage: 4
+      bulletWidth: 1
+      bulletHeight: 4
+	  despawnEffect: none
+	  hitEffect: none
+	  frontColor: 7C4B80
+	  backColor: 7C4B80
+	  pierce: true
+	  status: corroded
+	  statusDuration: 1200
+	  bulletSprite: diamond-ore-diamondbullet
+	fragBullets: 1
+	fragVelocityMin: 0.35
+	fragVelocityMax: 0.4
+	fragBullet: {
+      type: BasicBulletType
+      speed: 1
+	  lifetime: 18
+      damage: 4
+      bulletWidth: 1
+      bulletHeight: 4
+	  despawnEffect: none
+	  hitEffect: none
+	  frontColor: 6B4474
+	  backColor: 6B4474
+	  pierce: true
+	  status: corroded
+	  statusDuration: 1200
+	  bulletSprite: diamond-ore-diamondbullet
+	  }
+	  }
+    }
+  }
+}
+requirements: [
+  silicon/125
+  titanium/125
+]
+category: turret
+//research: swarmer
