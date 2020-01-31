@@ -49,10 +49,6 @@ surgeReactorMeltdownBlast.hitEffect = Fx.hitMeltdown;
 surgeReactorMeltdownBlast.despawnEffect = Fx.none;
 surgeReactorMeltdownBlast.hitSize = 5;
 surgeReactorMeltdownBlast.pierce = true;
-//this does not do anything
-//the one that you see on my other lasers are custom made that creates lighting at random
-//surgeReactorMeltdownBlast.lightining = 7;
-//surgeReactorMeltdownBlast.lightningLength = 25;
 
 const siloLaunchEffect = newEffect(20, e => {
     Draw.color(Color.white, Color.lightGray, e.fin()); //color goes from white to light gray
@@ -81,7 +77,7 @@ const silo = extendContent(Block, "testbomb", {
             for(var i = 0; i < 15; i++){
 				//this also doesnt do anything. drawSize is the distance where bullets stopped rendering.
                 //surgeReactorMeltdownBlast.drawSize = Mathf.random(200, 500);
-                Calls.createBullet(surgeReactorMeltdownBlast, null, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
+                Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
             }
             //triggering consumption makes it use up the items it requires
             tile.entity.cons.trigger()
