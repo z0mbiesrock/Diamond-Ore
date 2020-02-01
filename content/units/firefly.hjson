@@ -11,8 +11,8 @@ engineColor: "ffbb00"
 engineOffset: 7
 engineSize: 6
 range: 240
-attackLength: 600
-retreatPercent: 0.001
+attackLength: 60
+retreatPercent: 0
 shootCone: 360
 rotatespeed: 0.2
 baseRotateSpeed: 0.1
