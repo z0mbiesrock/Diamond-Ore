@@ -1,0 +1,17 @@
+type: liquidTank
+name: Reinforced Liquid Tank
+health: 4000
+size: 5
+description: Stores a massive amount of liquids. Useful for creating buffers in situations with non-constant demand of materials or as a safeguard for cooling vital blocks..
+liquidCapacity: 6000
+hasLiquids: true
+requirements: [
+  titanium/300
+  metaglass/150
+  diamond/125
+  cryogem/25
+]
+category: liquid
+research: liquid-tank
+
+
