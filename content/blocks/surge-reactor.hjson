@@ -5,7 +5,7 @@ itemCapacity: 100
 liquidCapacity: 100
 health: 6000
 size: 6
-itemDuration: 720
+itemDuration: 300
 buildVisibility: sandboxOnly
 baseExplosiveness: 500
 heating: 0.02
