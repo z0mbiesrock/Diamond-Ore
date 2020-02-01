@@ -36,3 +36,7 @@ Diamond Vault - A durable storage block.
 Mass Distributer - A larger router.
 
 Aqua Drill - A compact water extractor
+
+Reinforced Battery - 2x2 block that combines 4 regular batteries into one durable block.
+
+Reinforced Liquid Tank - 5x5 block with a much larger liquid capacity.
