@@ -40,3 +40,5 @@ Aqua Drill - A compact water extractor
 Reinforced Battery - 2x2 block that combines 4 regular batteries into one durable block.
 
 Reinforced Liquid Tank - 5x5 block with a much larger liquid capacity.
+
+Surge Reactor - 6x6 power generator block fueled by surge alloy. Very unstable and requires lots of cryofluid to operate safely...
