@@ -1,0 +1,14 @@
+//type: Conveyor
+health: 450
+name: Crystal Conveyor
+solid: true
+description: A fast conveyor block reinforced with diamond plating. It can also cram more items inside of it.
+requirements: [
+  graphite/3
+  silicon/2
+  diamond/1
+]
+category: distribution
+speed: 0.25
+displayedSpeed: 15.0
+research: armored-conveyor
