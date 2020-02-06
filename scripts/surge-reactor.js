@@ -43,18 +43,25 @@ surgeReactorMeltdownBlast.fragBullet = surgeReactorMeltdownFlak;
 const SurgeReactor = extendContent(NuclearReactor, "surge-reactor", {
 	
     //OVERRIDE
-	onDestroyed(tile){
-				surgeReactorMeltdownBlast.lightningLength = 25
-                Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
-				surgeReactorMeltdownBlast.lightningLength = 30
-                Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
-				surgeReactorMeltdownBlast.lightningLength = 35
-                Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
-				surgeReactorMeltdownBlast.lightningLength = 40
-                Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
-				surgeReactorMeltdownBlast.lightningLength = 45
-                Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
-				surgeReactorMeltdownBlast.lightningLength = 50
+	drawLayer2: function(tile){
+		Draw.alpha(tile.entity.items.total() / tile.entity.itemCapacity);
+		Draw.rect(Core.atlas.find("diamond-ore-surge-reactor-top"), tile.drawx(), tile.drawy());
+	},
+	
+    //OVERRIDE
+	onDestroyed: function(tile){
+		Blocks.thoriumReactor.onDestroyed(tile);
+		surgeReactorMeltdownBlast.lightningLength = 25
+        Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
+		surgeReactorMeltdownBlast.lightningLength = 30
+        Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
+		surgeReactorMeltdownBlast.lightningLength = 35
+        Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
+		surgeReactorMeltdownBlast.lightningLength = 40
+        Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
+		surgeReactorMeltdownBlast.lightningLength = 45
+        Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
+		surgeReactorMeltdownBlast.lightningLength = 50
 	},
 })
 /* surgeReactor.itemCapacity: 100

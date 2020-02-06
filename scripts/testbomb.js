@@ -1,54 +1,34 @@
 //this is NOT the complete definition for this block! see content/blocks/scatter-silo.hjson for the stats and other properties.
 
 //create a simple shockwave effect
-const surgeReactorMeltdownBlast = extend(BasicBulletType, {
-    
-    update: function(b){
-        Effects.shake(1.2, 1.2, b.x, b.y);
-        if(b.timer.get(1, 5)){
-            Damage.collideLine(b.x, b.y, this.hitEffect, b.x, b.y, b.rot(), 310.0, true);
-        }
-    },
-    
-    /*hit: function(b, hitx, hity){
-    Effects.effect(this.hitEffect, Color.valueOf("ec7458aa"), hitx, hity);
-        if(Mathf.chance(0.6)){
-            Fire.create(world.tileWorld(hitx + Mathf.range(6.0), hity + Mathf.range(6.0)));
-        }
-    },*/
-    
-    draw: function(b){
-        
-        /*Draw.color(Color.valueOf("ec7458"));
-        Lines.stroke((9 + Mathf.absin(Time.time(), 0.8, 1.5)) * b.fout() * 3.2 * 1.0);
-        Lines.lineAngle(b.x, b.y, b.rot(), 310.0 * b.fout());
-        Draw.reset();*/
-        const colors = [Color.valueOf("fff75855"), Color.valueOf("f7ff58aa"), Color.valueOf("ffff5a"), Color.valueOf("ffffff")];
-        const tscales = [1, 0.7, 0.5, 0.2];
-        const strokes = [3.2, 2.1, 1.1, 0.8];
-        const lenscales = [1, 1.12, 1.15, 1.17];
-        //const baseLen = 310.0 * b.fout();
-
-        //Lines.lineAngle(b.x, b.y, b.rot(), baseLen);
-        for(var s = 0; s < 4; s++){
-            Draw.color(colors[s]);
-            for(var i = 0; i < 4; i++){
-                Lines.stroke((9 + Mathf.absin(Time.time(), 0.8, 1.5)) * b.fout() * strokes[s] * tscales[i]);
-                Lines.lineAngle(b.x, b.y, b.rot(), 310.0 * b.fout() * lenscales[i]);
-            }
-        }
-    }
-});
+const surgeReactorMeltdownBlast = extend(BasicBulletType, {});
 
 surgeReactorMeltdownBlast.speed = 0.001;
 //this does 800 damage per 5 ticks btw.
-surgeReactorMeltdownBlast.damage = 800;
+surgeReactorMeltdownBlast.damage = 500;
 surgeReactorMeltdownBlast.drawSize = 480;
-surgeReactorMeltdownBlast.lifetime = 16;
+surgeReactorMeltdownBlast.lifetime = 1;
 surgeReactorMeltdownBlast.hitEffect = Fx.hitMeltdown;
-surgeReactorMeltdownBlast.despawnEffect = Fx.none;
+surgeReactorMeltdownBlast.despawnEffect = Fx.nuclearShockwave;
 surgeReactorMeltdownBlast.hitSize = 5;
+surgeReactorMeltdownBlast.lightining = 5;
+surgeReactorMeltdownBlast.lightningLength = 25;
 surgeReactorMeltdownBlast.pierce = true;
+
+const surgeReactorMeltdownFlak = extend(BasicBulletType, {});
+
+surgeReactorMeltdownFlak.speed = 9;
+//this does 800 damage per 5 ticks btw.
+surgeReactorMeltdownFlak.damage = 250;
+surgeReactorMeltdownFlak.bulletWidth = 16;
+surgeReactorMeltdownFlak.bulletHeight = 24;
+surgeReactorMeltdownFlak.lifetime = 60;
+surgeReactorMeltdownFlak.hitEffect = Fx.hitMeltdown;
+surgeReactorMeltdownFlak.despawnEffect = Fx.hitMeltdown;
+surgeReactorMeltdownFlak.hitSize = 5;
+surgeReactorMeltdownFlak.lightining = 5;
+surgeReactorMeltdownFlak.lightningLength = 10;
+surgeReactorMeltdownFlak.pierce = true;
 
 const siloLaunchEffect = newEffect(20, e => {
     Draw.color(Color.white, Color.lightGray, e.fin()); //color goes from white to light gray
@@ -64,7 +44,7 @@ const silo = extendContent(Block, "testbomb", {
             //configure the tile to signal that it has been pressed (this sync on client to server)
             tile.configure(0)
         //})).size(50).disabled(boolf(b => tile.entity != null && !tile.entity.cons.valid()))
-		})).size(50).disabled(boolf(b => !tile.entity.cons.valid()))
+		})).size(50).disabled(boolf(b => tile.entity != null && !tile.entity.cons.valid()))
     },
 
     //override configure event
@@ -73,11 +53,39 @@ const silo = extendContent(Block, "testbomb", {
         if(tile.entity.cons.valid()){
             //make this effect occur at the tile location
             Effects.effect(siloLaunchEffect, tile)
+            Effects.effect(Fx.nuclearShockwave, tile)
 
             for(var i = 0; i < 15; i++){
 				//this also doesnt do anything. drawSize is the distance where bullets stopped rendering.
                 //surgeReactorMeltdownBlast.drawSize = Mathf.random(200, 500);
+				surgeReactorMeltdownBlast.lightningLength = 25;
                 Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
+				surgeReactorMeltdownBlast.lightningLength = 30;
+                Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
+                surgeReactorMeltdownBlast.lightningLength = 35;
+				Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
+                surgeReactorMeltdownBlast.lightningLength = 40;
+				Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
+                surgeReactorMeltdownBlast.lightningLength = 45;
+				Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
+                surgeReactorMeltdownBlast.lightningLength = 50;
+				Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
+				//Calls.createBullet(Bullets.flakSurge, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.125, 1.0), Mathf.random(0.1, 0.75))
+				Calls.createBullet(surgeReactorMeltdownFlak, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.125, 1.0), Mathf.random(0.1, 0.75))
+				Calls.createBullet(surgeReactorMeltdownFlak, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.125, 1.0), Mathf.random(0.1, 0.75))
+				Calls.createBullet(surgeReactorMeltdownFlak, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.125, 1.0), Mathf.random(0.1, 0.75))
+				Calls.createBullet(surgeReactorMeltdownFlak, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.125, 1.0), Mathf.random(0.1, 0.75))
+				Calls.createBullet(surgeReactorMeltdownFlak, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.125, 1.0), Mathf.random(0.1, 0.75))
+				Calls.createBullet(surgeReactorMeltdownFlak, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.125, 1.0), Mathf.random(0.1, 0.75))
+				Calls.createBullet(surgeReactorMeltdownFlak, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.125, 1.0), Mathf.random(0.1, 0.75))
+				Calls.createBullet(surgeReactorMeltdownFlak, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.125, 1.0), Mathf.random(0.1, 0.75))
+				Calls.createBullet(surgeReactorMeltdownFlak, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.125, 1.0), Mathf.random(0.1, 0.75))
+				Calls.createBullet(surgeReactorMeltdownFlak, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.125, 1.0), Mathf.random(0.1, 0.75))
+				Calls.createBullet(surgeReactorMeltdownFlak, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.125, 1.0), Mathf.random(0.1, 0.75))
+				Calls.createBullet(surgeReactorMeltdownFlak, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.125, 1.0), Mathf.random(0.1, 0.75))
+				Calls.createBullet(surgeReactorMeltdownFlak, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.125, 1.0), Mathf.random(0.1, 0.75))
+				Calls.createBullet(surgeReactorMeltdownFlak, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.125, 1.0), Mathf.random(0.1, 0.75))
+				Calls.createBullet(surgeReactorMeltdownFlak, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.125, 1.0), Mathf.random(0.1, 0.75))
             }
             //triggering consumption makes it use up the items it requires
             tile.entity.cons.trigger()
