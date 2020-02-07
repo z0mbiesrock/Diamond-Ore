@@ -10,5 +10,6 @@ requirements: [
 ]
 category: distribution
 speed: 0.25
+layer2: power
 displayedSpeed: 15.0
 research: armored-conveyor

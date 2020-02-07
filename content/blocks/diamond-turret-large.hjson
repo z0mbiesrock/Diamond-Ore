@@ -21,6 +21,7 @@ ammo: {
     smokeEffect: shootSmallSmoke
 	hitEffect: hitLancer
     ammoMultiplier: 6
+	bulletShrink: 0
 	pierce: true
 	bulletSprite: diamond-ore-diamondbullet
   }
@@ -37,6 +38,7 @@ ammo: {
 	hitEffect: hitLancer
 	reloadMultiplier: 1.4
     ammoMultiplier: 4
+	bulletShrink: 0
 	pierce: true
 	knockback: 60
 	bulletSprite: diamond-ore-diamondbullet
@@ -55,6 +57,7 @@ ammo: {
 	hitEffect: hitLancer
     ammoMultiplier: 5
 	reloadMultiplier: 0.5
+	bulletShrink: 0
 	pierce: true
 	knockback: 150
 	status: freezing
@@ -75,6 +78,7 @@ ammo: {
     smokeEffect: shootSmallSmoke
 	hitEffect: hitLancer
     ammoMultiplier: 2
+	bulletShrink: 0
 	reloadMultiplier: 1.9
 	pierce: true
 	status: corroded
@@ -94,6 +98,7 @@ ammo: {
     smokeEffect: shootSmallSmoke
 	hitEffect: hitLancer
     ammoMultiplier: 6
+	bulletShrink: 0
 	reloadMultiplier: 0.9
 	pierce: true
 	status: burning
@@ -116,6 +121,7 @@ ammo: {
 	hitEffect: hitLancer
     ammoMultiplier: 10
 	reloadMultiplier: 10
+	bulletShrink: 0
 	pierce: true
 	homingPower: 5
 	homingRange: 75
@@ -134,6 +140,7 @@ ammo: {
     shootEffect: shootSmall
     smokeEffect: shootSmallSmoke
 	hitEffect: hitLancer
+	bulletShrink: 0
     ammoMultiplier: 10
 	reloadMultiplier: 0.5
 	homingPower: 0.0005
@@ -158,6 +165,7 @@ ammo: {
 	pierce: false
 	homingPower: 0.0005
 	homingRange: 0
+	bulletShrink: 0
 	bulletSprite: diamond-ore-diamondbullet
 	fragBullets: 15
 	splashDamage: 30
@@ -193,6 +201,7 @@ ammo: {
 	trailColor: 99ff99
     shootEffect: shootSmall
     despawnEffect: mineBig
+	bulletShrink: 0
 	hitEffect: mine
     ammoMultiplier: 2
 	reloadMultiplier: 0.2
@@ -230,6 +239,7 @@ ammo: {
 	weaveScale: 6
 	weaveMag: 4.5
 	frontColor: eeffff
+	bulletShrink: 0
 	backColor: ffeecc
 	trailColor: ccaaff
     shootEffect: shootSmall

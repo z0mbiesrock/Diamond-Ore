@@ -31,6 +31,7 @@ ammo: {
     smokeEffect: shootSmallSmoke
 	splashDamage: 75
 	splashDamageRadius: 24
+	bulletShrink: 0
 	hitEffect: mineBig
     ammoMultiplier: 4
 	pierce: false
@@ -48,6 +49,7 @@ ammo: {
       bulletWidth: 1
       bulletHeight: 4
 	  despawnEffect: none
+	  bulletShrink: 0
 	  hitEffect: none
 	  frontColor: 995D9A
 	  backColor: 995D9A
@@ -69,6 +71,7 @@ ammo: {
 	  hitEffect: none
 	  frontColor: 7C4B80
 	  backColor: 7C4B80
+	  bulletShrink: 0
 	  pierce: true
 	  status: corroded
 	  statusDuration: 1200
@@ -84,6 +87,7 @@ ammo: {
       bulletWidth: 1
       bulletHeight: 4
 	  despawnEffect: none
+	  bulletShrink: 0
 	  hitEffect: none
 	  frontColor: 6B4474
 	  backColor: 6B4474

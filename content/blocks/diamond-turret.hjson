@@ -21,6 +21,7 @@ ammo: {
     smokeEffect: shootSmallSmoke
 	hitEffect: hitLancer
     ammoMultiplier: 8
+	bulletShrink: 0
 	pierce: true
 	bulletSprite: diamond-ore-diamondbullet
   }
@@ -36,6 +37,7 @@ ammo: {
     smokeEffect: shootSmallSmoke
 	hitEffect: hitLancer
     ammoMultiplier: 4
+	bulletShrink: 0
 	pierce: true
 	knockback: 4
 	bulletSprite: diamond-ore-diamondbullet
@@ -52,6 +54,7 @@ ammo: {
     smokeEffect: shootSmallSmoke
 	hitEffect: hitLancer
     ammoMultiplier: 5
+	bulletShrink: 0
 	reloadMultiplier: 3
 	pierce: true
 	knockback: 150
@@ -71,6 +74,7 @@ ammo: {
     smokeEffect: shootSmallSmoke
 	hitEffect: hitLancer
     ammoMultiplier: 2
+	bulletShrink: 0
 	reloadMultiplier: 1.4
 	pierce: true
 	status: corroded
@@ -89,6 +93,7 @@ ammo: {
     smokeEffect: shootSmallSmoke
 	hitEffect: hitLancer
     ammoMultiplier: 2
+	bulletShrink: 0
 	reloadMultiplier: 1.4
 	pierce: true
 	status: burning
@@ -109,6 +114,7 @@ ammo: {
     smokeEffect: shootSmallSmoke
 	hitEffect: hitLancer
     ammoMultiplier: 4
+	bulletShrink: 0
 	reloadMultiplier: 10
 	pierce: true
 	homingPower: 5
@@ -129,6 +135,7 @@ ammo: {
     smokeEffect: shootSmallSmoke
 	hitEffect: hitLancer
     ammoMultiplier: 10
+	bulletShrink: 0
 	reloadMultiplier: 0.5
 	pierce: true
 	homingPower: 0.0005
@@ -148,6 +155,7 @@ ammo: {
     despawnEffect: shootSmallSmoke
 	hitEffect: hitLancer
     ammoMultiplier: 2
+	bulletShrink: 0
 	reloadMultiplier: 0.225
 	pierce: false
 	homingPower: 0.0005
@@ -189,6 +197,7 @@ ammo: {
     despawnEffect: mineBig
 	hitEffect: mine
     ammoMultiplier: 2
+	bulletShrink: 0
 	reloadMultiplier: 0.225
 	pierce: true
 	homingPower: 0.0005
@@ -230,6 +239,7 @@ ammo: {
     smokeEffect: shootSmallSmoke
 	hitEffect: hitLancer
     ammoMultiplier: 4
+	bulletShrink: 0
 	reloadMultiplier: 2
 	homingPower: 0.0005
 	homingRange: 0
