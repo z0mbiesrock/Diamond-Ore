@@ -2,7 +2,7 @@
 health: 450
 name: Crystal Conveyor
 solid: true
-description: A fast conveyor block reinforced with diamond plating. It can also cram more items inside of it.
+description: A fast conveyor block reinforced with diamond plating.
 requirements: [
   graphite/3
   silicon/2
