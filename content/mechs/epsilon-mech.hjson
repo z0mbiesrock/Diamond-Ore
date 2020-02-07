@@ -35,6 +35,7 @@ weapon: {
 	splashDamageRadius: 25
     bulletWidth: 6
     bulletHeight: 9
+	bulletShrink: 0
 	lifetime: 55
 	frontColor: ddffff
 	backColor: bbeeff
