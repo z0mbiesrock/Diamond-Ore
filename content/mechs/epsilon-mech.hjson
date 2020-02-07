@@ -1,5 +1,5 @@
 name: Epsilon
-description: A slow but sturdy mining and resource transport ship. Also armed with a turret to fire homing missiles that slow enemies.
+description: A slow but extremely high health mining and resource transport ship. Also armed with a turret to fire homing missiles that slow enemies.
 speed: 0.5
 maxSpeed: 1.25
 boostSpeed: 2.0
@@ -11,7 +11,7 @@ itemCapacity: 200
 engineColor: "66ddee"
 flying: true
 cellTrnsY: 2
-health: 1200
+health: 10200
 engineOffset: 8
 weaponOffsetX: 0
 weaponOffsetY: -5
