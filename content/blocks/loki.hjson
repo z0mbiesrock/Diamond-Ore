@@ -1,0 +1,177 @@
+//type: ItemTurret
+name: Loki
+description: A large anti-ground gatling turret that mows down ground units with piercing projectiles.
+health: 1700
+size: 3
+reload: 3
+range: 240
+coolantMultiplier: 2
+ammoUseEffect: shellEjectMedium
+maxAmmo: 200
+inaccuracy: 18
+xRand: 2
+rotatespeed: 3
+shootSound: shootBig
+outlineIcon: false
+expanded: true
+targetAir: false
+ammo: {
+  copper: {
+    type: BasicBulletType
+	collidesAir: false
+    speed: 10
+    damage: 20
+	lifetime: 24
+    bulletWidth: 6
+    bulletHeight: 12
+	frontColor: d99d73
+	backColor: eac2a9
+    shootEffect: shootSmall
+    smokeEffect: none
+	bulletShrink: 0
+	hitEffect: hitBulletSmall
+	despawnEffect: shootSmallSmoke
+    ammoMultiplier: 4
+	pierce: true
+	knockback: 0.8
+	bulletSprite: diamond-ore-diamondbullet
+  }
+  lead: {
+    type: BasicBulletType
+	collidesAir: false
+    speed: 6
+    damage: 25
+	lifetime: 40
+    bulletWidth: 6
+    bulletHeight: 12
+	frontColor: ab99d3
+	backColor: 8c7fa9
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
+	bulletShrink: 0
+	hitEffect: hitBulletSmall
+	despawnEffect: shootSmallSmoke
+    ammoMultiplier: 4
+	pierce: true
+	bulletSprite: diamond-ore-diamondbullet
+  }
+  titanium: {
+    type: BasicBulletType
+	collidesAir: false
+    speed: 8
+    damage: 22
+	lifetime: 30
+    bulletWidth: 6
+    bulletHeight: 12
+	frontColor: a4b8fa
+	backColor: 919fe7
+    shootEffect: shootBig
+    smokeEffect: freezing
+	bulletShrink: 0
+	hitEffect: hitBulletSmall
+	despawnEffect: shootSmallSmoke
+    ammoMultiplier: 4
+	reloadMultiplier: 1.1
+	pierce: true
+	knockback: 2.7
+	bulletSprite: diamond-ore-diamondbullet
+  }
+  phase-fabric: {
+    type: BasicBulletType
+	collidesAir: false
+    speed: 12
+    damage: 22
+	lifetime: 20
+    bulletWidth: 6
+    bulletHeight: 12
+	frontColor: ffd59e
+	backColor: f19583
+    shootEffect: shootBig
+    smokeEffect: shootBig
+	bulletShrink: 0
+	hitEffect: hitBulletSmall
+	despawnEffect: shootSmallSmoke
+    ammoMultiplier: 8
+	reloadMultiplier: 1.5
+	pierce: true
+	knockback: -0.5
+	bulletSprite: diamond-ore-diamondbullet
+  }
+  pyratite: {
+    type: BasicBulletType
+	collidesAir: false
+    speed: 10
+    damage: 22
+	lifetime: 24
+    bulletWidth: 6
+    bulletHeight: 12
+	frontColor: ffaa5f
+	backColor: d37f47
+    shootEffect: shootSmallFlame
+    smokeEffect: shootPyraFlame
+	bulletShrink: 0
+	hitEffect: burning
+	despawnEffect: shootBigSmoke
+    ammoMultiplier: 16
+	reloadMultiplier: 0.95
+	pierce: true
+	status: burning
+	statusDuration: 720
+	bulletSprite: diamond-ore-diamondbullet
+  }
+  cryogem: {
+    type: BasicBulletType
+	collidesAir: false
+    speed: 10
+    damage: 22
+	lifetime: 24
+    bulletWidth: 6
+    bulletHeight: 12
+	frontColor: 5faaff
+	backColor: 477fd3
+    shootEffect: shootBig
+    smokeEffect: shootBig
+	bulletShrink: 0
+	hitEffect: freezing
+	despawnEffect: shootBigSmoke
+    ammoMultiplier: 16
+	reloadMultiplier: 0.95
+	pierce: true
+	status: freezing
+	statusDuration: 720
+	knockback: 0.85
+	bulletSprite: diamond-ore-diamondbullet
+  }
+  thorium: {
+    type: BasicBulletType
+	collidesAir: false
+    speed: 15
+    damage: 40
+	lifetime: 16
+    bulletWidth: 8
+    bulletHeight: 15
+	frontColor: f9a3c7
+	backColor: cb8ebf
+    shootEffect: lancerLaserShoot
+    smokeEffect: shootBigSmoke
+	bulletShrink: 0
+	hitEffect: melting
+	despawnEffect: shootBigSmoke
+    ammoMultiplier: 16
+	reloadMultiplier: 0.95
+	pierce: true
+	status: melting
+	statusDuration: 720
+	knockback: 2.55
+	bulletSprite: diamond-ore-diamondbullet
+  }
+}
+requirements: [
+  lead/400
+  titanium/125
+  thorium/225
+  phase-fabric/250
+  diamond/300
+]
+category: turret
+research: ripple

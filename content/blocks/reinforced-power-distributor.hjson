@@ -1,0 +1,17 @@
+type: PowerNode
+name: Reinforced Power Distributor
+description: A very durable power node with a vast connection range.
+laserRange: 50
+maxNodes: 3
+size: 3
+health: 2160
+insulated: true
+requirements: [
+  copper/45
+  metaglass/35
+  thorium/25
+  phase-fabric/15
+  diamond/5
+]
+category: power
+research: surge-tower

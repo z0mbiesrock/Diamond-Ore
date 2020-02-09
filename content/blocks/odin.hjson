@@ -1,0 +1,172 @@
+//type: BurstTurret
+name: Odin
+description: A large rapid-fire anti-air burstfire turret that fires concussive shells.
+health: 1700
+size: 3
+reload: 140
+burstSpacing: 4
+range: 294
+ammoUseEffect: none
+coolantMultiplier: 4
+maxAmmo: 40
+inaccuracy: 6
+rotatespeed: 12
+shootSound: artillery
+outlineIcon: false
+expanded: true
+targetGround: false
+shots: 12
+ammo: {
+  graphite: {
+    type: BasicBulletType
+    speed: 6
+    damage: 60
+	lifetime: 60
+    bulletWidth: 8
+    bulletHeight: 20
+	frontColor: bbbbdd
+	backColor: 8888aa
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
+	bulletShrink: 0
+	hitEffect: hitFuse
+	despawnEffect: hitBulletBig
+    ammoMultiplier: 4
+	pierce: false
+	knockback: 45
+	bulletSprite: shell
+  }
+  scrap: {
+    type: BasicBulletType
+    speed: 6
+    damage: 45
+	lifetime: 60
+    bulletWidth: 8
+    bulletHeight: 20
+	frontColor: bbbbbb
+	backColor: 888888
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
+	hitEffect: hitFuse
+	despawnEffect: hitBulletBig
+    ammoMultiplier: 3
+	reloadMultiplier: 0.75
+	pierce: false
+	knockback: 15
+	bulletSprite: shell
+	bulletShrink: 0
+	fragBullets: 20
+	fragVelocityMin: 1.125
+	fragVelocityMax: 2.25
+	fragBullet: {
+      type: BasicBulletType
+      speed: 1
+	  lifetime: 20
+      damage: 5
+      bulletWidth: 2
+      bulletHeight: 4
+	  despawnEffect: none
+	  hitEffect: none
+	  frontColor: ffa044
+	  backColor: ff6614
+	  pierce: true
+	  knockback: 10
+	  bulletSprite: shell
+    }
+  }
+  silicon: {
+    type: BasicBulletType
+    speed: 4
+    damage: 60
+	lifetime: 90
+    bulletWidth: 8
+    bulletHeight: 14
+	frontColor: bbbbdd
+	backColor: 8888aa
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
+	bulletShrink: 0
+	hitEffect: hitFuse
+	despawnEffect: hitBulletBig
+    ammoMultiplier: 2
+	reloadMultiplier: 1.25
+	pierce: false
+	knockback: 45
+	bulletSprite: shell
+	homingPower: 0.00015
+	homingRange: 120
+  }
+  thorium: {
+    type: BasicBulletType
+    speed: 6
+    damage: 150
+	lifetime: 60
+    bulletWidth: 8
+    bulletHeight: 20
+	frontColor: fbbbeb
+	backColor: c878a8
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
+	hitEffect: bigShockwave
+	despawnEffect: hitFuse
+    ammoMultiplier: 1
+	reloadMultiplier: 0.5
+	pierce: false
+	knockback: 60
+	bulletSprite: shell
+	bulletShrink: 0
+  }
+  pyratite: {
+    type: BasicBulletType
+    speed: 6
+    damage: 150
+	lifetime: 60
+    bulletWidth: 8
+    bulletHeight: 20
+	frontColor: fbbb0b
+	backColor: c87808
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
+	hitEffect: bigShockwave
+	despawnEffect: hitFuse
+    ammoMultiplier: 2
+	reloadMultiplier: 1.1
+	pierce: false
+	status: burning
+	statusDuration: 900
+	knockback: 90
+	bulletSprite: shell
+	bulletShrink: 0
+  }
+  cryogem: {
+    type: BasicBulletType
+    speed: 6
+    damage: 150
+	lifetime: 60
+    bulletWidth: 8
+    bulletHeight: 20
+	frontColor: 0bbbfb
+	backColor: 48a8f8
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
+	hitEffect: bigShockwave
+	despawnEffect: hitFuse
+    ammoMultiplier: 2
+	reloadMultiplier: 1.1
+	pierce: false
+	status: freezing
+	statusDuration: 900
+	knockback: 90
+	bulletSprite: shell
+	bulletShrink: 0
+  }
+}
+requirements: [
+  copper/400
+  graphite/125
+  thorium/225
+  surge-alloy/250
+  diamond/300
+]
+category: turret
+research: fuse
