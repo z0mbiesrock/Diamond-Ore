@@ -6,15 +6,15 @@ size: 3
 reload: 135
 range: 600
 ammoUseEffect: shellEjectBig
-coolantMultiplier: 6
+coolantMultiplier: 8
 shotWidth: 10
 maxAmmo: 2
 inaccuracy: 0
 rotatespeed: 4
 cooldown: 2
 shootSound: shotgun
-layer: turret
-layer2: block
+shootCone: 90
+layer: power
 outlineIcon: false
 expanded: true
 ammo: {
@@ -26,8 +26,8 @@ ammo: {
 	lifetime: 300
     bulletWidth: 12
     bulletHeight: 25
-	frontColor: ffa84A
-	backColor: bba84A
+	frontColor: ff884A
+	backColor: bb584A
 	trailColor: bba84A
     shootEffect: shootBig2
     smokeEffect: shootBigSmoke
@@ -65,11 +65,11 @@ ammo: {
 	bulletSprite: missile
 	status: burning
 	statusDuration: 720
-	homingPower: 0.00015
+	homingPower: 0.002
 	homingRange: 120
-	fragBullets: 20
-	fragVelocityMin: 0.7
-	fragVelocityMax: 2.25
+	fragBullets: 30
+	fragVelocityMin: 1.125
+	fragVelocityMax: 3.375
 	fragBullet: {
       type: MissileBulletType
 	  homingPower: 0
@@ -115,7 +115,7 @@ ammo: {
 	bulletSprite: missile
 	status: shocked
 	statusDuration: 120
-	homingPower: 0.00015
+	homingPower: 0.002
 	homingRange: 120
 	lightningLength: 20
 	lightning: 3
@@ -190,7 +190,7 @@ ammo: {
 	bulletSprite: missile
 	status: freezing
 	statusDuration: 720
-	homingPower: 0.00015
+	homingPower: 0.002
 	homingRange: 120
 	fragBullets: 20
 	fragVelocityMin: 0.75
@@ -233,8 +233,8 @@ ammo: {
 	reloadMultiplier: 0.75
 	pierce: false
 	bulletSprite: missile
-	homingPower: 0.00015
-	homingRange: 120
+	homingPower: 0.15
+	homingRange: 180
   }
   thorium: {
     type: MissileBulletType
@@ -259,8 +259,8 @@ ammo: {
 	pierce: false
 	bulletSprite: missile
 	status: melting
-	statusDuration: 900
-	homingPower: 0.00015
+	statusDuration: 2400
+	homingPower: 0.015
 	homingRange: 120
 	fragBullets: 80
 	fragVelocityMin: 1
@@ -285,7 +285,7 @@ ammo: {
 	  weaveMag: 4.5
 	  knockback: 1
 	  status: melting
-	  statusDuration: 900
+	  statusDuration: 1800
 	  bulletSprite: shell
 	  fragBullets: 1
 	  fragVelocityMin: 2.25
@@ -303,13 +303,13 @@ ammo: {
 	    despawnEffect: shootPyraFlame
 	    hitEffect: none
 	    frontColor: ffa044
-	   backColor: ff6614
+	    backColor: ff6614
 	    pierce: true
 	    weaveScale: 4.53
 	    weaveMag: 4.5
 	    knockback: 1
-	    status: melting
-	    statusDuration: 900
+	    status: corroded
+	    statusDuration: 1200
 	    bulletSprite: shell
       }
     }

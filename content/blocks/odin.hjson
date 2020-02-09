@@ -7,7 +7,7 @@ reload: 140
 burstSpacing: 4
 range: 294
 ammoUseEffect: none
-coolantMultiplier: 4
+coolantMultiplier: 6
 maxAmmo: 40
 inaccuracy: 6
 rotatespeed: 12
@@ -15,6 +15,7 @@ shootSound: artillery
 outlineIcon: false
 expanded: true
 targetGround: false
+layer: power
 shots: 12
 ammo: {
   graphite: {
@@ -76,8 +77,9 @@ ammo: {
   }
   silicon: {
     type: BasicBulletType
-    speed: 4
-    damage: 60
+    speed: 4.8
+	drag: 0.0175
+    damage: 55
 	lifetime: 90
     bulletWidth: 8
     bulletHeight: 14
@@ -93,8 +95,8 @@ ammo: {
 	pierce: false
 	knockback: 45
 	bulletSprite: shell
-	homingPower: 0.00015
-	homingRange: 120
+	homingPower: 0.015
+	homingRange: 60
   }
   thorium: {
     type: BasicBulletType
@@ -112,7 +114,7 @@ ammo: {
     ammoMultiplier: 1
 	reloadMultiplier: 0.5
 	pierce: false
-	knockback: 60
+	knockback: 200
 	bulletSprite: shell
 	bulletShrink: 0
   }

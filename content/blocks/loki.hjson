@@ -5,16 +5,17 @@ health: 1700
 size: 3
 reload: 3
 range: 240
-coolantMultiplier: 2
+coolantMultiplier: 3
 ammoUseEffect: shellEjectMedium
 maxAmmo: 200
-inaccuracy: 18
+inaccuracy: 8
 xRand: 2
 rotatespeed: 3
 shootSound: shootBig
 outlineIcon: false
 expanded: true
 targetAir: false
+layer: power
 ammo: {
   copper: {
     type: BasicBulletType
@@ -34,6 +35,7 @@ ammo: {
     ammoMultiplier: 4
 	pierce: true
 	knockback: 0.8
+	inaccuracy: 2
 	bulletSprite: diamond-ore-diamondbullet
   }
   lead: {
@@ -93,6 +95,7 @@ ammo: {
 	despawnEffect: shootSmallSmoke
     ammoMultiplier: 8
 	reloadMultiplier: 1.5
+	inaccuracy: 6
 	pierce: true
 	knockback: -0.5
 	bulletSprite: diamond-ore-diamondbullet
@@ -114,6 +117,7 @@ ammo: {
 	despawnEffect: shootBigSmoke
     ammoMultiplier: 16
 	reloadMultiplier: 0.95
+	inaccuracy: -4
 	pierce: true
 	status: burning
 	statusDuration: 720
@@ -136,6 +140,7 @@ ammo: {
 	despawnEffect: shootBigSmoke
     ammoMultiplier: 16
 	reloadMultiplier: 0.95
+	inaccuracy: -4
 	pierce: true
 	status: freezing
 	statusDuration: 720
@@ -158,9 +163,10 @@ ammo: {
 	hitEffect: melting
 	despawnEffect: shootBigSmoke
     ammoMultiplier: 16
-	reloadMultiplier: 0.95
+	reloadMultiplier: 0.85
+	inaccuracy: -4
 	pierce: true
-	status: melting
+	status: corroded
 	statusDuration: 720
 	knockback: 2.55
 	bulletSprite: diamond-ore-diamondbullet
