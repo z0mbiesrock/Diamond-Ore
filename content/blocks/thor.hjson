@@ -47,7 +47,7 @@ ammo: {
     speed: 2
 	drag: -0.04
     damage: 120
-	lifetime: 180
+	lifetime: 300
     bulletWidth: 12
     bulletHeight: 25
 	frontColor: ffa044
