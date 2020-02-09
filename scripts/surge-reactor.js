@@ -43,10 +43,11 @@ surgeReactorMeltdownBlast.fragBullet = surgeReactorMeltdownFlak;
 const SurgeReactor = extendContent(NuclearReactor, "surge-reactor", {
 	
     //OVERRIDE
-	drawLayer2: function(tile){
+	/* draw: function(tile){
+		Blocks.thoriumReactor.draw(tile);
 		Draw.alpha(tile.entity.items.total() / tile.entity.itemCapacity);
 		Draw.rect(Core.atlas.find("diamond-ore-surge-reactor-top"), tile.drawx(), tile.drawy());
-	},
+	}, */
 	
     //OVERRIDE
 	onDestroyed: function(tile){
