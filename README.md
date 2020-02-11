@@ -52,3 +52,13 @@ Thor Turret - A late-game missile turret
 Odin Turret - A late-game anti-air turret
 
 Loki Turret - A late-game anti-ground turret
+
+Pyra-Smelter - A late-game Silicon Smelter
+
+Cryo-Separator - A late-game Separator that can output any vanilla resource in the game.
+
+Multi-Compressor - A late-game Plastanium Compressor
+
+Multi-Pyra Mixer - A late-game Pyratite Mixer
+
+Blast Compound Multi-Mixer - A late-game Blast Mixer
