@@ -1,0 +1,46 @@
+type: Separator
+name: Cryo-Separator
+description: An upgraded separator that can separate slag into its mineral components much more efficiently. The pool of potential results is also much larger. It is recommended to use sorters to organize the output.
+itemCapacity: 30
+liquidCapacity: 30
+health: 400
+size: 3
+hasPower: true
+hasLiquids: true
+hasItems: true
+craftTime: 12
+spinnerSpeed: 16
+updateEffect: pulverizeRedder
+consumes: {
+  power: 7.2
+  liquid: {
+    liquid: slag
+    amount: 0.1
+  }
+}
+requirements: [
+  copper/120
+  lead/75
+  graphite/105
+  silicon/75
+  diamond/25
+  cryogem/65
+]
+category: crafting
+research: separator
+activeSound: respawning
+activeSoundVolume: 0.95
+idleSound: respawning
+idleSoundVolume: 0.5
+results: [
+    copper/275
+    lead/250
+    titanium/200
+    plastanium/100
+    metaglass/150
+    graphite/75
+    silicon/150
+    thorium/25
+    surge-alloy/50
+	phase-fabric/1
+]

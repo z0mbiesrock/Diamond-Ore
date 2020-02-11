@@ -1,0 +1,34 @@
+type: GenericSmelter
+name: Blast Compund Multi-Mixer
+description: A larger, sturdier, and more efficient Blast Mixer.
+itemCapacity: 30
+health: 2000
+size: 3
+hasPower: true
+hasItems: true
+craftTime: 48
+updateEffect: mineBig
+consumes: {
+  power: 3.76
+  items: {
+    items: [
+      coal/1
+      pyratite/4
+      spore-pod/2
+    ]
+  }
+}
+requirements: [
+  lead/200
+  titanium/130
+  thorium/35
+  diamond/35
+  cryogem/15
+]
+category: crafting
+research: multipyra
+activeSound: fire
+activeSoundVolume: 0.95
+idleSound: respawning
+idleSoundVolume: 0.5
+outputItem: blast-compound/6

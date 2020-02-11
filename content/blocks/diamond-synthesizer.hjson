@@ -1,6 +1,6 @@
 type: GenericSmelter
 name: Diamond Synthesizer
-description: A slow snd sturdy smeltery that compresses large amounts of coal and converts it into diamond.
+description: A slow snd sturdy smeltery that compresses large amounts of coal using the heat of slag and converts it into diamond.
 itemCapacity: 50
 liquidCapacity: 50
 health: 2000
@@ -19,7 +19,7 @@ consumes: {
   }
   liquid: {
     liquid: slag
-    amount: 0.01
+    amount: 0.083333333333
   }
 }
 requirements: [
@@ -30,6 +30,8 @@ requirements: [
 ]
 category: crafting
 research: multi-press
+activeSound: respawning
+activeSoundVolume: 0.95
 idleSound: respawning
 idleSoundVolume: 0.5
 outputItem: diamond/1
