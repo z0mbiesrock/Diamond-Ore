@@ -1,0 +1,94 @@
+type: GroundUnit
+name: Reaver
+description: A fast assault unit. Launches fast high-damage homing missiles.
+speed: 0.4
+maxVelocity: 2.75
+drag: 0.02222222
+flying: false
+health: 450
+mass: 6
+range: 144
+attackLength: 90
+retreatPercent: 23
+shootCone: 90
+rotatespeed: 0.2
+baseRotateSpeed: 0.1
+rotateWeapon: true
+weaponOffsetY: 0
+//targetAir: true
+weapon: {
+  name: reaver-arm
+  length: 4
+  reload: 260
+  shots: 1
+  alternate: true
+  recoil: 0
+  width: 7
+  shootSound: shotgun
+  bullet: {
+    type: MissileBulletType
+    speed: 4
+	lifetime: 48
+    damage: 100
+    bulletWidth: 8
+    bulletHeight: 16
+    bulletShrink: 0
+	frontColor: 898989
+	backColor: 666666
+	trailColor: ffffff
+	weaveScale: 2.53
+	weaveMag: 1.55
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
+    despawnEffect: flakExplosionBig
+	hitEffect: hitLancer
+	pierce: false
+	knockback: 700
+	bulletSprite: diamond-ore-diamondmissile
+	inaccuracy: 18
+	fragBullets: 10
+	splashDamage: 150
+	knockback: 3
+	homingPower: 0.04
+	homingRange: 160
+	splashDamageRadius: 12
+	fragVelocityMin: 0.2
+	fragVelocityMax: 1
+	fragBullet: {
+      type: BasicBulletType
+      //speed: 1
+	  lifetime: 1
+      damage: 0
+      bulletWidth: 0
+      bulletHeight: 0
+	  despawnEffect: shootSmallFlame
+	  collidesTiles: true
+	  hitEffect: none
+	  frontColor: bbbbbb
+	  backColor: 999999
+	  //trailColor: bbbbbb
+	  pierce: true
+	  knockback: 1.5
+	  bulletSprite: shell
+	  fragBullets: 2
+	  fragVelocityMin: 1
+	  fragVelocityMax: 3
+	  fragBullet: {
+        type: BasicBulletType
+        //speed: 1
+	    lifetime: 10
+        damage: 8
+        bulletWidth: 2
+        bulletHeight: 3
+	    despawnEffect: shootSmallSmoke
+	    hitEffect: none
+	    frontColor: bbbbbb
+	    backColor: 999999
+	    //trailColor: bbbbbb
+	    pierce: true
+	    knockback: 1.5
+	    bulletSprite: diamond-ore-diamondbullet
+      }
+    }
+  }
+}
