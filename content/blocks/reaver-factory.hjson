@@ -1,0 +1,32 @@
+name: Reaver Mech Factory
+description: A pad that manufactures fast evasive mobile missile platforms.
+type: UnitFactory
+unitType: reaver
+size: 4
+buildCostMultiplier: 0.75
+//buildVisibility: hidden
+//buildVisibility: sandboxOnly
+health: 1700
+produceTime: 2357
+maxSpawn: 1
+consumes: {
+  power: 10
+  items: {
+    items: [
+      graphite/25
+      metaglass/25
+	  thorium/15
+      spore-pod/15
+    ]
+  }
+}
+category: units
+research: firefly-factory
+requirements: [
+  copper/1400
+  lead/65
+  metaglass/200
+  thorium/800
+  surge-alloy/100
+  diamond/100
+]

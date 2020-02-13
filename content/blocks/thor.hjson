@@ -217,8 +217,8 @@ ammo: {
 	drag: -0.06
     damage: 400
 	lifetime: 200
-    bulletWidth: 8
-    bulletHeight: 20
+    bulletWidth: 16
+    bulletHeight: 8
 	frontColor: bbbbbb
 	backColor: 38a8a8
 	trailColor: bba84A
@@ -235,6 +235,73 @@ ammo: {
 	bulletSprite: missile
 	homingPower: 0.15
 	homingRange: 180
+  }
+  phase-fabric: {
+    type: MissileBulletType
+    speed: 3.9
+	drag: -0.06
+    damage: 10
+	lifetime: 200
+    bulletWidth: 14
+    bulletHeight: 9
+	frontColor: ffd59e
+	backColor: f19583
+	trailColor: fff3d6
+    shootEffect: shootBig2
+    smokeEffect: shootBigSmoke
+	bulletShrink: 0
+	hitEffect: hitFuse
+	despawnEffect: hitFuse
+    ammoMultiplier: 1
+	reloadMultiplier: 0.65
+	pierce: true
+	bulletSprite: diamond-ore-diamondmissile
+	homingPower: 1
+	homingRange: 320
+	fragBullets: 3
+	fragVelocityMin: 1.25
+	fragVelocityMax: 2.50
+	weaveScale: 1.53
+	weaveMag: 3.5
+	fragBullet: {
+      type: BasicBulletType
+	  lifetime: 60
+      damage: 15
+      bulletWidth: 0
+      bulletHeight: 0
+	  despawnEffect: hitBulletBig
+	  hitEffect: none
+	  pierce: true
+	  collides: false
+	  knockback: 1
+	  homingPower: 0.7
+	  homingRange: 40
+	  weaveScale: 2.53
+	  weaveMag: 2.5
+	  bulletSprite: bullet
+	  fragBullets: 1
+	  fragVelocityMin: 2
+	  fragVelocityMax: 4
+	  fragBullet: {
+        type: MissileBulletType
+	    lifetime: 90
+		//drag: 0.015
+        damage: 15
+        bulletWidth: 4
+        bulletHeight: 8
+	    despawnEffect: hitFuse
+	    hitEffect: hitBulletBig
+	    pierce: false
+	    knockback: 1
+	    homingPower: 0.007
+	    homingRange: 400
+	    weaveScale: 2.53
+	    weaveMag: 2.5
+	    bulletSprite: diamond-ore-diamondmissile
+	    splashDamage: 25
+	    splashDamageRadius: 20
+      }
+    }
   }
   thorium: {
     type: MissileBulletType
