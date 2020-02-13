@@ -49,7 +49,7 @@ weapon: {
 	inaccuracy: 12
 	homingPower: 0.05
 	homingRange: 100
-	bulletSprite: diamond-ore-diamondbullet
+	bulletSprite: diamond-ore-diamondmissile
 	fragBullets: 12
 	fragVelocityMin: 1
 	fragVelocityMax: 3
