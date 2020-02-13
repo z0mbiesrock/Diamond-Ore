@@ -21,6 +21,8 @@ Grenader Factory - builds grenade-firing ground units.
 
 Firefly Factory - builds highly volatile air units.
 
+Reaver Factory - builds fast ground-based missile units.
+
 Diamond Synthesizer - Fueled by slag, it uses large amounts of coal to synthesize a diamond that's identical to natural diamonds down to chemical composition.
 
 Cryogem Compressor - uses power to turn cryofluid into solid chunks you can launch with your core.
