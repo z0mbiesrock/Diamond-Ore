@@ -121,7 +121,7 @@ ammo: {
 	pierce: true
 	status: burning
 	statusDuration: 720
-	bulletSprite: diamond-ore-diamondbullet
+	bulletSprite: shell
   }
   cryogem: {
     type: BasicBulletType

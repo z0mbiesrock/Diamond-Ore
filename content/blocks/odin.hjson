@@ -77,8 +77,8 @@ ammo: {
   }
   silicon: {
     type: BasicBulletType
-    speed: 4.8
-	drag: 0.0175
+    speed: 5.3
+	drag: 0.0035
     damage: 55
 	lifetime: 90
     bulletWidth: 8
@@ -95,7 +95,7 @@ ammo: {
 	pierce: false
 	knockback: 45
 	bulletSprite: shell
-	homingPower: 0.015
+	homingPower: 0.03
 	homingRange: 60
   }
   thorium: {
@@ -161,6 +161,44 @@ ammo: {
 	knockback: 90
 	bulletSprite: shell
 	bulletShrink: 0
+  }
+  phase-fabric: {
+    type: BasicBulletType
+    speed: 9
+    damage: 50
+	lifetime: 40
+    bulletWidth: 13
+    bulletHeight: 20
+	frontColor: ffd59e
+	backColor: f19583
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
+	hitEffect: hitFuse
+	despawnEffect: hitBulletBig
+    ammoMultiplier: 3
+	reloadMultiplier: 0.75
+	pierce: true
+	knockback: 15
+	bulletSprite: bullet
+	bulletShrink: 0
+	fragBullets: 12
+	fragVelocityMin: 1.125
+	fragVelocityMax: 3.375
+	fragBullet: {
+      type: BasicBulletType
+      speed: 1
+	  lifetime: 20
+      damage: 10
+      bulletWidth: 2
+      bulletHeight: 8
+	  despawnEffect: shootSmallSmoke
+	  hitEffect: none
+	  frontColor: ffa044
+	  backColor: ff6614
+	  pierce: false
+	  knockback: 125
+	  bulletSprite: shell
+    }
   }
 }
 requirements: [
