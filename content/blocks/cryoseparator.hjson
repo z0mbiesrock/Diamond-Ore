@@ -15,7 +15,7 @@ consumes: {
   power: 7.2
   liquid: {
     liquid: slag
-    amount: 0.1
+    amount: 0.083333333333
   }
 }
 requirements: [
@@ -29,7 +29,7 @@ requirements: [
 category: crafting
 research: separator
 activeSound: respawning
-activeSoundVolume: 0.95
+activeSoundVolume: 1.95
 idleSound: respawning
 idleSoundVolume: 0.5
 results: [
