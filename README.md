@@ -57,7 +57,7 @@ Loki Turret - A late-game anti-ground turret
 
 Pyra-Smelter - A late-game Silicon Smelter
 
-Cryo-Separator - A late-game Separator that can output any vanilla resource in the game.
+Cryo-Separator - A late-game Separator that can output any vanilla resource in the game. *Phase fabric is stupidly rare though
 
 Multi-Compressor - A late-game Plastanium Compressor
 
