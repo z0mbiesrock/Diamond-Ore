@@ -26,11 +26,12 @@ requirements: [
   lead/120
   surge-alloy/30
   silicon/75
-  diamond/5
+  titanium/200
+  graphite/200
 ]
 category: crafting
-research: multi-press
-activeSound: respawning
+research: diamond-drill
+activeSound: machine
 activeSoundVolume: 0.95
 idleSound: respawning
 idleSoundVolume: 0.5
