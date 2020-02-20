@@ -26,6 +26,7 @@ weapon: {
   shootSound: bang
   velocityRnd: 0.6
   lengthRand: 0.6
+  inaccuracy: 70
   bullet: {
     type: BasicBulletType
     speed: 7
@@ -43,7 +44,6 @@ weapon: {
 	pierce: false
 	knockback: 700
 	bulletSprite: diamond-ore-diamondshell
-	inaccuracy: 70
 	splashDamage: 150
 	knockback: 40
 	splashDamageRadius: 12
