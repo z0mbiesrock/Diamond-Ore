@@ -84,7 +84,7 @@ surgeReactor.flashThreshold: 0.75
 surgeReactor.coolantPower: 0.225
 surgeReactor.buildCostMultiplier: 0.73227
 surgeReactor.powerProduction: 166.66666666666666666666666666667
- */
 surgeReactor.lightColor = Color.valueOf("7f19ea");
 surgeReactor.coolColor = Color.valueOf("ffff00a3");
 surgeReactor.hotColor = Color.valueOf("ff9575a3");
+ */
