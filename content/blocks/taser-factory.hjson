@@ -6,7 +6,6 @@ size: 3
 buildCostMultiplier: 0.75
 health: 1100
 produceTime: 1667
-buildVisibility: sandboxOnly
 maxSpawn: 2
 consumes: {
   power: 10
