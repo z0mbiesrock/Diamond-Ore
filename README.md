@@ -23,6 +23,10 @@ Firefly Factory - builds highly volatile air units.
 
 Reaver Factory - builds fast ground-based missile units.
 
+Hunter Factory - builds heavy ground-based shotgun units.
+
+Taser Factory - builds slow but very powerful lightning-shooting air units.
+
 Diamond Synthesizer - Fueled by slag, it uses large amounts of coal to synthesize a diamond that's identical to natural diamonds down to chemical composition.
 
 Cryogem Compressor - uses power to turn cryofluid into solid chunks you can launch with your core.
