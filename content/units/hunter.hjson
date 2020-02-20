@@ -45,8 +45,5 @@ weapon: {
 	pierce: false
 	knockback: 700
 	bulletSprite: diamond-ore-diamondshell
-	splashDamage: 150
-	knockback: 40
-	splashDamageRadius: 12
   }
 }
