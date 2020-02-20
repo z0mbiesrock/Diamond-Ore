@@ -1,0 +1,33 @@
+name: Hunter Mech Factory
+description: A pad that manufactures slow durable shotgun mechs.
+type: UnitFactory
+unitType: hunter
+size: 4
+canOverdrive: false
+buildCostMultiplier: 0.75
+//buildVisibility: hidden
+//buildVisibility: sandboxOnly
+health: 1700
+produceTime: 1293
+maxSpawn: 2
+consumes: {
+  power: 10
+  items: {
+    items: [
+      lead/50
+      thorium/50
+	  graphite/50
+      scrap/50
+    ]
+  }
+}
+category: units
+research: firefly-factory
+requirements: [
+  lead/1400
+  graphite/800
+  surge-alloy/150
+  phase-fabric/200
+  diamond/100
+  cryogem/25
+]
