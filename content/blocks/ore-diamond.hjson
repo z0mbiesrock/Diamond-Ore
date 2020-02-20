@@ -1,3 +1,6 @@
 type: OreBlock
 itemDrop: diamond
 playerUnmineable: true
+//oreDefault: true
+//oreScale: 12.7
+//oreThreshold: 0.94

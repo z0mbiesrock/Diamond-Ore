@@ -3,7 +3,7 @@ description: A massive wall made of pure diamond. Extremely hard to destroy. Cap
 type: Wall
 health: 34400
 size: 4
-buildCostMultiplier: 1.45
+buildCostMultiplier: 0.85
 requirements: [
   diamond/384
 ]

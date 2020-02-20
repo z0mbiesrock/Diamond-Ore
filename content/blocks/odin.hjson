@@ -72,7 +72,7 @@ ammo: {
 	  backColor: ff6614
 	  pierce: true
 	  knockback: 10
-	  bulletSprite: shell
+	  bulletSprite: diamond-ore-diamondshell
     }
   }
   silicon: {
@@ -81,8 +81,8 @@ ammo: {
 	drag: 0.0035
     damage: 55
 	lifetime: 90
-    bulletWidth: 8
-    bulletHeight: 14
+    bulletWidth: 5
+    bulletHeight: 20
 	frontColor: bbbbdd
 	backColor: 8888aa
     shootEffect: shootBig
@@ -94,7 +94,7 @@ ammo: {
 	reloadMultiplier: 1.25
 	pierce: false
 	knockback: 45
-	bulletSprite: shell
+	bulletSprite: diamond-ore-diamondbullet
 	homingPower: 0.03
 	homingRange: 60
   }
@@ -137,7 +137,7 @@ ammo: {
 	status: burning
 	statusDuration: 900
 	knockback: 90
-	bulletSprite: shell
+	bulletSprite: diamond-ore-diamondshell
 	bulletShrink: 0
   }
   cryogem: {
@@ -159,7 +159,7 @@ ammo: {
 	status: freezing
 	statusDuration: 900
 	knockback: 90
-	bulletSprite: shell
+	bulletSprite: diamond-ore-diamondbullet
 	bulletShrink: 0
   }
   phase-fabric: {
@@ -179,7 +179,7 @@ ammo: {
 	reloadMultiplier: 0.75
 	pierce: true
 	knockback: 15
-	bulletSprite: bullet
+	bulletSprite: diamond-ore-diamondbullet
 	bulletShrink: 0
 	fragBullets: 12
 	fragVelocityMin: 1.125

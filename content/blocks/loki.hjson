@@ -55,7 +55,7 @@ ammo: {
 	despawnEffect: shootSmallSmoke
     ammoMultiplier: 4
 	pierce: true
-	bulletSprite: diamond-ore-diamondbullet
+	bulletSprite: diamond-ore-diamondshell
   }
   titanium: {
     type: BasicBulletType
@@ -121,7 +121,7 @@ ammo: {
 	pierce: true
 	status: burning
 	statusDuration: 720
-	bulletSprite: shell
+	bulletSprite: diamond-ore-diamondshell
   }
   cryogem: {
     type: BasicBulletType
@@ -169,7 +169,7 @@ ammo: {
 	status: corroded
 	statusDuration: 720
 	knockback: 2.55
-	bulletSprite: diamond-ore-diamondbullet
+	bulletSprite: diamond-ore-diamondshell
   }
 }
 requirements: [

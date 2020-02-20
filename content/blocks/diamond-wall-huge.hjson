@@ -3,7 +3,7 @@ description: A huge wall made of pure diamond. Extremely hard to destroy.
 type: Wall
 health: 19350
 size: 3
-buildCostMultiplier: 1.75
+buildCostMultiplier: 1.2
 requirements: [
   diamond/144
 ]
