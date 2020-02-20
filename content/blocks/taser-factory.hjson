@@ -1,0 +1,30 @@
+name: Taser Fighter Factory
+description: A pad that manufactures flying shocker units.
+type: UnitFactory
+unitType: taser
+size: 3
+buildCostMultiplier: 0.75
+health: 1100
+produceTime: 1667
+maxSpawn: 2
+consumes: {
+  power: 10
+  items: {
+    items: [
+      titanium/50
+      thorium/25
+	  surge-alloy/25
+      phase-fabric/5
+    ]
+  }
+}
+category: units
+research: hunter-factory
+requirements: [
+  titanium/1400
+  metaglass/800
+  surge-alloy/200
+  phase-fabric/150
+  diamond/25
+  cryogem/75
+]
