@@ -1,12 +1,12 @@
 type: HoverUnit
 name: Taser Fighter
-description: A flying unit that fires long electrical arcs that can strike multiple enemies.
+description: A flying unit that fires powerful balls of lightning.
 speed: 0.25
 maxVelocity: 0.35
 flying: true
 health: 500
-engineOffset: -4
-engineSize: 7
+engineOffset: -7
+engineSize: 3
 drag: 0.125
 range: 300
 hitsize: 2
@@ -19,31 +19,56 @@ retreatPercent: 0.2
 weapon: {
   name: clear
   length: 6
-  reload: 15
+  reload: 125
   alternate: true
   recoil: 0
   width: 0
+  inaccuracy: 25
   bullet: {
-    type: BasicBulletType
-    speed: 125
-	drag: 125
-	lifetime: 1
+    type: MissileBulletType
+    speed: 2
+	drag: 0
+	lifetime: 180
     damage: 11
-    bulletWidth: 2
-    bulletHeight: 3
-	frontColor: ffee33
-	backColor: bbaa44
-    shootEffect: none
-    smokeEffect: none
-    despawnEffect: none
+    bulletWidth: 9
+    bulletHeight: 9
+	bulletShrink: 0
+	frontColor: ffffff
+	trailColor: ffbb64
+	backColor: ffff00
+    shootEffect: hitFuse
+    smokeEffect: hitFuse
+    despawnEffect: hitLancer
 	hitEffect: hitLancer
 	keepVelocity: false
-	pierce: false
-	lightningLength: 55
-	lightning: 2
+	pierce: true
+	lightningLength: 60
+	lightning: 3
 	status: shocked
 	statusDuration: 120
+	homingPower: 0.0025
+	homingRange: 30
+	splashDamage: 15
+	splashDamageRadius: 8
 	bulletSprite: diamond-ore-diamondbullet
-	inaccuracy: 15
+	fragBullets: 3
+	fragVelocityMin: 1
+	fragVelocityMax: 1
+	fragBullet: {
+      type: BasicBulletType
+      speed: 1
+	  lifetime: 1
+      damage: 15
+      bulletWidth: 0
+      bulletHeight: 0
+	  despawnEffect: hitFuse
+	  hitEffect: hitLancer
+	  frontColor: ffff77
+	  backColor: ffff77
+	  pierce: false
+	  bulletSprite: bullet
+	  lightningLength: 15
+	  lightning: 1
+	}
   }
 }
