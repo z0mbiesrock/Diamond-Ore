@@ -1,6 +1,7 @@
 name: Epsilon
 description: A slow but extremely high health mining and resource transport ship. Also armed with a turret to fire homing missiles that slow enemies.
 speed: 0.5
+drag: 0.1
 maxSpeed: 1.25
 boostSpeed: 2.0
 buildPower: 2
@@ -38,15 +39,15 @@ weapon: {
 	bulletShrink: 0
 	lifetime: 55
 	frontColor: ddffff
-	backColor: bbeeff
+	backColor: 00beef
 	trailColor: 88ffff
-    shootEffect: shootSmall
-    despawnEffect: shootSmallSmoke
+    shootEffect: shootBigSmoke
+    despawnEffect: freezing
 	hitEffect: hitLancer
 	status: freezing
-	statusDuration: 330
+	statusDuration: 465
 	pierce: false
-	inaccuracy: 12
+	inaccuracy: 16
 	homingPower: 0.05
 	homingRange: 100
 	bulletSprite: diamond-ore-diamondmissile
@@ -58,12 +59,13 @@ weapon: {
       speed: 1
 	  lifetime: 10
       damage: 1
-      bulletWidth: 0
-      bulletHeight: 0
+      bulletWidth: 1
+      bulletHeight: 4
 	  despawnEffect: none
-	  hitEffect: none
-	  frontColor: 99eefe
+	  hitEffect: freezing
+	  frontColor: 45eefe
 	  backColor: 002fff
+	  //trailColor: 88ffff
 	  pierce: true
 	  status: freezing
 	  statusDuration: 330
