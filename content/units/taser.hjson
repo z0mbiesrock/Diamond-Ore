@@ -1,0 +1,49 @@
+type: HoverUnit
+name: Taser Fighter
+description: A flying unit that fires long electrical arcs that can strike multiple enemies.
+speed: 0.25
+maxVelocity: 0.35
+flying: true
+health: 500
+engineOffset: -4
+engineSize: 7
+drag: 0.125
+range: 300
+hitsize: 2
+hitsizeTile: 2
+shootCone: 45
+rotatespeed: 0.25
+baseRotateSpeed: 0.42
+mass: 25
+retreatPercent: 0.2
+weapon: {
+  name: clear
+  length: 6
+  reload: 15
+  alternate: true
+  recoil: 0
+  width: 0
+  bullet: {
+    type: BasicBulletType
+    speed: 125
+	drag: 125
+	lifetime: 1
+    damage: 11
+    bulletWidth: 2
+    bulletHeight: 3
+	frontColor: ffee33
+	backColor: bbaa44
+    shootEffect: none
+    smokeEffect: none
+    despawnEffect: none
+	hitEffect: hitLancer
+	keepVelocity: false
+	pierce: false
+	lightningLength: 55
+	lightning: 2
+	status: shocked
+	statusDuration: 120
+	bulletSprite: diamond-ore-diamondbullet
+	inaccuracy: 15
+  }
+}
