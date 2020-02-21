@@ -7,7 +7,7 @@ health: 180
 produceTime: 90
 maxSpawn: 10
 consumes: {
-  power: 12
+  power: 100
   items: {
     items: [
       titanium/1
