@@ -1,0 +1,21 @@
+name: Tempest Mech Pad
+description: Transforms the ship into a large electric mech.
+type: MechPad
+mech: tempest-mech
+size: 6
+health: 1200
+buildCostMultiplier: 0.45
+consumes: {
+  power: 75
+}
+category: upgrade
+research: taser-factory
+requirements: [
+  diamond/250
+  cryogem/250
+  titanium/400
+  silicon/1200
+  copper/3300
+  thorium/500
+  surge-alloy/200
+]
