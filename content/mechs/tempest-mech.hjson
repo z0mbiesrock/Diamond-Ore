@@ -1,0 +1,100 @@
+name: Tempest
+description: A large, slow, and durable mech that fires powerful balls of plasma.
+speed: 0.5
+maxSpeed: 2.45
+boostSpeed: 2.0
+buildPower: 0.8
+mineSpeed: 5
+hitsize: 30
+drillPower: 2
+mass: 50
+itemCapacity: 50
+engineColor: ffff88
+compoundSpeed: 5
+compoundSpeedBoost: 7
+flying: false
+health: 4500
+engineOffset: 6
+engineSize: 12
+weaponOffsetX: 0
+weaponOffsetY: -5
+//turnCursor: false
+weapon: {
+  name: tempest-plasma
+  length: 3
+  width: 0
+  shots: 1
+  reload: 160
+  recoil: 0
+  ignoreRotation: true
+  shootSound: missile
+  alternate: true
+  bullet: {
+    type: MissileBulletType
+    speed: 2.4
+	drag: 0.0025
+	lifetime: 320
+    damage: 25
+    bulletWidth: 16
+    bulletHeight: 16
+	bulletShrink: 0
+	frontColor: ffffff
+	trailColor: ffbb64
+	backColor: ffff00
+    shootEffect: hitFuse
+    smokeEffect: hitLancer
+    despawnEffect: flakExplosionBig
+	hitEffect: hitMeltdown
+	keepVelocity: false
+	pierce: false
+	lightningLength: 60
+	lightning: 1
+	status: shocked
+	statusDuration: 120
+	homingPower: 0
+	homingRange: 0
+	splashDamage: 300
+	splashDamageRadius: 32
+	bulletSprite: diamond-ore-diamondbullet
+	fragBullets: 2
+	fragVelocityMin: 1
+	fragVelocityMax: 1
+	fragBullet: {
+      type: BasicBulletType
+      speed: 1
+	  lifetime: 1
+      damage: 15
+      bulletWidth: 0
+      bulletHeight: 0
+	  despawnEffect: hitFuse
+	  hitEffect: hitLancer
+	  frontColor: ffff77
+	  backColor: ffff77
+	  pierce: false
+	  bulletSprite: bullet
+	  lightningLength: 25
+	  status: shocked
+	  statusDuration: 120
+	  lightning: 1
+	  fragBullets: 12
+	  fragVelocityMin: 2
+	  fragVelocityMax: 6
+	  fragBullet: {
+        type: BasicBulletType
+        //speed: 1
+	    lifetime: 10
+        damage: 8
+        bulletWidth: 2
+        bulletHeight: 3
+	    despawnEffect: hitFuse
+	    hitEffect: none
+	    frontColor: ffdd77
+	    backColor: dcba99
+	    //trailColor: bbbbbb
+	    pierce: true
+	    knockback: 1.5
+	    bulletSprite: diamond-ore-diamondbullet
+      }
+	}
+  }
+}
