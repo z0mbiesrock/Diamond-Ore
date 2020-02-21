@@ -17,16 +17,16 @@ health: 4500
 engineOffset: 6
 engineSize: 12
 weaponOffsetX: 0
-weaponOffsetY: -5
+weaponOffsetY: 17
 //turnCursor: false
 weapon: {
   name: tempest-plasma
-  length: 3
+  length: 17
   width: 0
   shots: 1
   reload: 160
   recoil: 0
-  ignoreRotation: true
+  ignoreRotation: false
   shootSound: missile
   alternate: true
   bullet: {
@@ -84,9 +84,10 @@ weapon: {
         //speed: 1
 	    lifetime: 10
         damage: 8
-        bulletWidth: 2
-        bulletHeight: 3
-	    despawnEffect: hitFuse
+        bulletWidth: 10
+        bulletHeight: 40
+		bulletShrink: 0.25
+	    despawnEffect: none
 	    hitEffect: none
 	    frontColor: ffdd77
 	    backColor: dcba99
