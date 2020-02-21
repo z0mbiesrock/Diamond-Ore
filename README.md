@@ -15,6 +15,10 @@ Barrage Turret - Short range high damage rapidfire turret.
 
 Epsilon Ship Pad - Transform your mech into a slow but durable resource transport and mining vehicle.
 
+Mortar Mech Pad - Transform your mech into a long-range artillery mech.
+
+Tempest Mech Pad - Transform your mech into a large slow mech that fires balls of plasma.
+
 Beelzebub Swarm Drone Factory - builds cheap fast drones that are weak but hard to hit. Each factory can spawn up to ten drones.
 
 Grenader Factory - builds grenade-firing ground units.
