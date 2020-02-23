@@ -1,8 +1,8 @@
 name: Tempest
-description: A large, slow, and durable mech that fires powerful balls of plasma.
+description: A large, slow, and durable mech that fires powerful balls of plasma. 
 speed: 0.5
-maxSpeed: 2.45
-boostSpeed: 2.0
+maxSpeed: 5.6
+boostSpeed: 1.0
 buildPower: 0.8
 mineSpeed: 5
 hitsize: 30
@@ -14,7 +14,7 @@ compoundSpeed: 5
 compoundSpeedBoost: 7
 flying: false
 health: 4500
-engineOffset: 6
+engineOffset: 16
 engineSize: 12
 weaponOffsetX: 0
 weaponOffsetY: 17
@@ -41,20 +41,20 @@ weapon: {
 	frontColor: ffffff
 	trailColor: ffbb64
 	backColor: ffff00
-    shootEffect: hitFuse
-    smokeEffect: hitLancer
+    shootEffect: lightningShoot
+    smokeEffect: lightningShoot
     despawnEffect: flakExplosionBig
-	hitEffect: hitMeltdown
-	keepVelocity: false
-	pierce: false
-	lightningLength: 60
-	lightning: 1
-	status: shocked
-	statusDuration: 120
-	homingPower: 0
-	homingRange: 0
-	splashDamage: 300
-	splashDamageRadius: 32
+    hitEffect: hitMeltdown
+    keepVelocity: false
+    pierce: false
+    lightningLength: 60
+    lightning: 1
+    status: shocked
+    statusDuration: 120
+    homingPower: 0.001
+    homingRange: 8
+    splashDamage: 300
+    splashDamageRadius: 32
 	bulletSprite: diamond-ore-diamondbullet
 	fragBullets: 2
 	fragVelocityMin: 1
@@ -72,10 +72,10 @@ weapon: {
 	  backColor: ffff77
 	  pierce: false
 	  bulletSprite: bullet
-	  lightningLength: 25
+      lightningLength: 25
 	  status: shocked
 	  statusDuration: 120
-	  lightning: 1
+      lightning: 2
 	  fragBullets: 12
 	  fragVelocityMin: 2
 	  fragVelocityMax: 6
@@ -83,7 +83,7 @@ weapon: {
         type: BasicBulletType
         //speed: 1
 	    lifetime: 10
-        damage: 8
+        damage: 20
         bulletWidth: 10
         bulletHeight: 40
 		bulletShrink: 0.25
@@ -94,6 +94,8 @@ weapon: {
 	    //trailColor: bbbbbb
 	    pierce: true
 	    knockback: 1.5
+	    status: shocked
+	    statusDuration: 20
 	    bulletSprite: diamond-ore-diamondbullet
       }
 	}

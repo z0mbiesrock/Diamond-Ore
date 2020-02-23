@@ -1,8 +1,8 @@
 name: Mortar
 description: Ground-based mech that fires homing artillery missiles. Low health but high range and damage.
 speed: 0.8
-maxSpeed: 2.45
-boostSpeed: 2.0
+maxSpeed: 3.00
+boostSpeed: 0.805
 buildPower: 1
 mineSpeed: 1.5
 drillPower: 3
@@ -89,7 +89,7 @@ weapon: {
 	    pierce: false
 	    bulletSprite: shell
 	    knockback: 7.5
-    }
+      }
     }
   }
 }
