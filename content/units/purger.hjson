@@ -1,0 +1,85 @@
+type: HoverUnit
+name: Purger
+//description: A flying unit that fires powerful balls of lightning.
+speed: 0.15
+maxVelocity: 0.95
+flying: true
+rotateWeapon: false
+health: 21500
+engineOffset: -36
+engineSize: 12
+drag: 0.0066666666
+range: 400
+hitsize: 25
+hitsizeTile: 20
+shootCone: 20
+rotatespeed: 0.085
+baseRotateSpeed: 0.6
+mass: 250
+retreatPercent: 0.8
+weaponOffsetY: 40
+weapon: {
+  name: purger-plasma
+  length: 36
+  reload: 200
+  alternate: true
+  recoil: 0
+  width: 0
+  inaccuracy: 0
+  shootSound: spark
+  shootCone: 12
+  bullet: {
+    type: MissileBulletType
+    speed: 4.8
+	drag: 0.005125
+	lifetime: 200
+    damage: 500
+    bulletWidth: 32
+    bulletHeight: 32
+	hitSize: 16
+	bulletShrink: 0
+	frontColor: ffffff
+	trailColor: ffbb64
+	backColor: ffff00
+    shootEffect: lightningShoot
+    smokeEffect: lightningShoot
+    despawnEffect: nuclearShockwave
+    hitEffect: hitMeltdown
+    keepVelocity: false
+    pierce: false
+    lightningLength: 60
+    lightning: 1
+    status: shocked
+    statusDuration: 120
+    homingPower: 2
+    homingRange: 200
+    splashDamage: 1000
+    splashDamageRadius: 32
+	bulletSprite: diamond-ore-diamondbullet
+	fragBullets: 144
+	hitShake: 55
+	fragVelocityMin: 1
+	fragVelocityMax: 20
+	fragBullet: {
+      type: BasicBulletType
+      //speed: 1
+	  lifetime: 10
+      damage: 50
+      bulletWidth: 10
+      bulletHeight: 80
+	  bulletShrink: 0.45
+	  despawnEffect: none
+	  hitEffect: none
+	  shootEffect: lightningShoot
+      smokeEffect: shootBig2
+	  frontColor: ffdd77
+	  backColor: dcba99
+	  //trailColor: bbbbbb
+	  pierce: true
+	  knockback: 150
+	  status: shocked
+	  statusDuration: 20
+	  bulletSprite: diamond-ore-diamondbullet
+	}
+  }
+}
