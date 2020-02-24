@@ -58,15 +58,15 @@ weapon: {
 	bulletSprite: diamond-ore-diamondbullet
 	fragBullets: 144
 	hitShake: 55
-	fragVelocityMin: 1
-	fragVelocityMax: 20
+	fragVelocityMin: 0.2
+	fragVelocityMax: 4
 	fragBullet: {
       type: BasicBulletType
       //speed: 1
 	  lifetime: 10
       damage: 50
       bulletWidth: 10
-      bulletHeight: 80
+      bulletHeight: 200
 	  bulletShrink: 0.45
 	  despawnEffect: none
 	  hitEffect: none
@@ -80,6 +80,10 @@ weapon: {
 	  status: shocked
 	  statusDuration: 20
 	  bulletSprite: diamond-ore-diamondbullet
+	  fragBullets: 1
+	  fragVelocityMin: 0.25
+	  fragVelocityMax: 1
+	  fragBullet: flakSurge
 	}
   }
 }
