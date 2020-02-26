@@ -1,0 +1,37 @@
+type: GenericSmelter
+name: Surge Pyra-Forge
+description: An upgraded Alloy Smelter that mixes surge alloy directly from scrap quickly and efficiently. Requires pyratite to fuel the conversion process.
+itemCapacity: 20
+health: 160
+size: 4
+hasPower: true
+hasItems: true
+craftTime: 42
+updateEffect: pulverizeRedder
+buildCostMultiplier: 0.5
+drawLiquidLight: true
+updateEffectChance: 0.25
+consumes: {
+  power: 9.3637
+  items: {
+    items: [
+      scrap/6
+      pyratite/2
+    ]
+  }
+}
+requirements: [
+  graphite/900
+  thorium/275
+  metaglass/150
+  plastanium/350
+  diamond/250
+  cryogem/250
+]
+category: crafting
+research: heavy-surge-forge
+activeSound: machine
+activeSoundVolume: 0.95
+idleSound: respawning
+idleSoundVolume: 0.5
+outputItem: surge-alloy/2

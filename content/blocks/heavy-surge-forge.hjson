@@ -1,0 +1,40 @@
+type: GenericSmelter
+name: Heavy Surge Forge
+description: An upgraded version of the Alloy Smelter.
+itemCapacity: 60
+health: 400
+size: 6
+hasPower: true
+hasItems: true
+craftTime: 90
+updateEffect: pulverizeRedder
+buildCostMultiplier: 0.5
+drawLiquidLight: true
+updateEffectChance: 0.12
+consumes: {
+  power: 12
+  items: {
+    items: [
+      lead/9
+      copper/9
+      titanium/6
+      silicon/3
+    ]
+  }
+}
+requirements: [
+  lead/240
+  graphite/120
+  silicon/240
+  copper/240
+  titanium/240
+  thorium/210
+  cryogem/15
+]
+category: crafting
+research: diamond-synthesizer
+activeSound: machine
+activeSoundVolume: 0.95
+idleSound: respawning
+idleSoundVolume: 0.5
+outputItem: surge-alloy/5

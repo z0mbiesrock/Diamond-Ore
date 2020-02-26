@@ -1,0 +1,38 @@
+type: Separator
+name: Phase String Solidifier
+description: Weaves loose phase string into solid phase fabric.
+itemCapacity: 20
+liquidCapacity: 30
+health: 800
+size: 4
+hasPower: true
+hasLiquids: true
+hasItems: true
+craftTime: 30
+spinnerSpeed: 8
+updateEffect: melting
+updateEffectChance: 0.25
+consumes: {
+  power: 9
+  liquid: {
+    liquid: phase-string
+    amount: 0.2
+  }
+}
+requirements: [
+  silicon/275
+  thorium/75
+  plastanium/75
+  surge-alloy/75
+  diamond/125
+  cryogem/150
+]
+category: crafting
+research: stringmaker
+activeSound: machine
+activeSoundVolume: 1.95
+idleSound: respawning
+idleSoundVolume: 0.5
+results: [
+	phase-fabric/1
+]
