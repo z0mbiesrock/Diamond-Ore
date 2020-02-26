@@ -37,6 +37,10 @@ Cryogem Compressor - uses power to turn cryofluid into solid chunks you can laun
 
 Cryogem Dissipator - uses power to turn cryogems back into cryofluid for use in cooling turrets or thorium reactors.
 
+Phase String Maker - Creates phase string which can be solidified into phase fabric or used with wave turrets to snare enemy units.
+
+Phase String Solidifier - Solidifies Phase string into phase fabric.
+
 Diamond Wall - Comes in four sizes; can take seriously large amounts of punishment, especially the Huge and Gigantic sizes.
 
 Diamond Solar Panel - A much stronger solar panel.
@@ -72,3 +76,9 @@ Multi-Compressor - A late-game Plastanium Compressor
 Multi-Pyra Mixer - A late-game Pyratite Mixer
 
 Blast Compound Multi-Mixer - A late-game Blast Mixer
+
+Heavy Surge Forge - A larger Alloy Mixer.
+
+Surge Pyra-Forge - Create surge alloy from scrap using pyratite as a catalyst.
+
+Industrial Diamond Synthesizer - A larger and more efficient diamond synthesizer.
