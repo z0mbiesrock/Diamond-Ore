@@ -1,0 +1,10 @@
+name: Phase String
+description: Phase fabric in a liquid form. Can be solidified to fabricate phase fabric efficiently or use in waves turrets as a high knockback weapon. Can also be used as a turret coolant.
+heatCapacity: 2.7
+explosiveness: 3.14
+temperature: 0.5
+viscosity: 0.01
+effect: corroded
+color: fff3d6
+barColor: f19583
+lightColor: ffd59388
