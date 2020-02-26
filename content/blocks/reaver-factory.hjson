@@ -1,5 +1,5 @@
 name: Reaver Mech Factory
-description: A pad that manufactures fast evasive mobile missile platforms.
+description: A pad that manufactures fast mobile missile platforms.
 type: UnitFactory
 unitType: reaver
 size: 4
