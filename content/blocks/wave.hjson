@@ -14,7 +14,6 @@ ammo: {
     type: LiquidBulletType
     //move 6 world units per frame (very fast)
     speed: 6.0
-	drag: 0.06
 	status: corroded
 	homingPower: 60
 	homingRange: 75
