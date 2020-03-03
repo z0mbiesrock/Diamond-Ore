@@ -9,7 +9,7 @@ Diamond Drill - Extremely rapid drill that can mine anything extractable.
 
 Precision Diamond Drill - Extremely rapid drill that can mine anything extractable. Only occupies one tile.
 
-Diamond Turret - Comes in two sizes, and accepts a variety of ammo types.
+Diamond Turret - Comes in four sizes, and accepts a variety of ammo types.
 
 Barrage Turret - Short range high damage rapidfire turret.
 
