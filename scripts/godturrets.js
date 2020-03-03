@@ -26,3 +26,12 @@ const lokiTurret = extendContent(ItemTurret, "loki", {
 		];
 	},
 });
+const yggdrasilTurret = extendContent(ChargeTurret, "yggdrasil", {
+	
+	generateIcons: function(){
+		return [
+			Core.atlas.find("diamond-ore-yggdrasil-icon-base"),
+			Core.atlas.find("diamond-ore-yggdrasil-icon")
+		];
+	},
+});

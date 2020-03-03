@@ -48,43 +48,44 @@ const SurgeReactor = extendContent(NuclearReactor, "surge-reactor", {
 	
     //OVERRIDE
 	/* draw: function(tile){
-		Blocks.thoriumReactor.draw(tile);
-		Draw.alpha(tile.entity.items.total() / tile.entity.itemCapacity);
-		Draw.rect(Core.atlas.find("diamond-ore-surge-reactor-top"), tile.drawx(), tile.drawy());
+		
+
+        Draw.color(tile.entity.coolColor, tile.entity.hotColor, tile.entity.heat);
+        Fill.rect(tile.drawx(), tile.drawy(), size * tilesize, size * tilesize);
+
+        Draw.color(tile.entity.liquids.current().color);
+        Draw.alpha(tile.entity.liquids.currentAmount() / liquidCapacity);
+        Draw.rect(topRegion, tile.drawx(), tile.drawy());
+		
+		if(tile.entity.heat > tile.entity.flashThreshold){
+            flash = 1 + ((tile.entity.heat - tile.entity.flashThreshold) / (1 - tile.entity.flashThreshold)) * 5.4;
+            tile.entity.flash += flash * Time.delta();
+            Draw.color(Color.red, Color.yellow, Mathf.absin(tile.entity.flash, 9, 1));
+            Draw.alpha(0.6);
+            Draw.rect(lightsRegion, tile.drawx(), tile.drawy());
+        }
+		Draw.alpha(tile.tile.entity.items.total() / tile.tile.entity.itemCapacity);
+		Draw.rect(Core.atlas.find(this.name + "-top"), tile.drawx(), tile.drawy());
+
+        Draw.reset();
 	}, */
 	
     //OVERRIDE
 	onDestroyed: function(tile){
 		Blocks.thoriumReactor.onDestroyed(tile);
         for(var i = 0; i < 45; i++){
-            Calls.createBullet(surgeReactorMeltdownFlak, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.15, 1.0), Mathf.random(0.2, 1.0))
+            Calls.createBullet(surgeReactorMeltdownFlak, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.15, 1.0), Mathf.random(0.2, 1.0));
 		}
-		surgeReactorMeltdownBlast.lightningLength = 25
-        Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
-		surgeReactorMeltdownBlast.lightningLength = 35
-        Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
-		surgeReactorMeltdownBlast.lightningLength = 45
-        Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
-		surgeReactorMeltdownBlast.lightningLength = 55
-        Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
-		surgeReactorMeltdownBlast.lightningLength = 65
-        Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
-		surgeReactorMeltdownBlast.lightningLength = 75
+		surgeReactorMeltdownBlast.lightningLength = 25;
+        Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0));
+		surgeReactorMeltdownBlast.lightningLength = 35;
+        Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0));
+		surgeReactorMeltdownBlast.lightningLength = 45;
+        Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0));
+		surgeReactorMeltdownBlast.lightningLength = 55;
+        Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0));
+		surgeReactorMeltdownBlast.lightningLength = 65;
+        Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0));
+		surgeReactorMeltdownBlast.lightningLength = 75;
 	},
 })
-/* surgeReactor.itemCapacity: 100
-surgeReactor.liquidCapacity: 100
-surgeReactor.health: 6000
-surgeReactor.baseExplosiveness: 50
-surgeReactor.heating: 0.02
-surgeReactor.explosionRadius: 50
-surgeReactor.explosionDamage: 98657
-surgeReactor.smokeThreshold: 0.5
-surgeReactor.flashThreshold: 0.75
-surgeReactor.coolantPower: 0.225
-surgeReactor.buildCostMultiplier: 0.73227
-surgeReactor.powerProduction: 166.66666666666666666666666666667
-surgeReactor.lightColor = Color.valueOf("7f19ea");
-surgeReactor.coolColor = Color.valueOf("ffff00a3");
-surgeReactor.hotColor = Color.valueOf("ff9575a3");
- */
