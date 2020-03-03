@@ -18,9 +18,9 @@ expanded: true
 powerUse: 150
 chargeEffect: hitMeltdown
 chargeBeginEffect: shockwave
-chargeEffects: 42
-chargeTime: 5
-chargeMaxDelay: 30
+chargeEffects: 60
+chargeTime: 300
+chargeMaxDelay: 300
 shootShake: 9
 shootType: {
     type: MissileBulletType
