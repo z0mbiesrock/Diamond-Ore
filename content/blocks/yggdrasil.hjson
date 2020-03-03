@@ -85,8 +85,8 @@ shootType: {
 	    backColor: ffff00
 	    trailColor: ffff00
 	    pierce: true
-        lightningLength: 60
-        lightining: 1
+        //lightningLength: 60
+        //lightining: 1
 	    knockback: 1666
 	    status: shocked
 	    statusDuration: 300
