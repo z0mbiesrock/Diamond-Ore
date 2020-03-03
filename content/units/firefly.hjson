@@ -30,6 +30,7 @@ weapon: {
   recoil: 0
   width: 0
   shootSound: shootBig
+  shootEffect: flakExplosionBig
   bullet: {
     type: BombBulletType
     speed: 3

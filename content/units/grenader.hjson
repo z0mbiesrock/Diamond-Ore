@@ -6,8 +6,8 @@ maxVelocity: 0.975
 flying: false
 health: 450
 mass: 6
-engineOffset: 0
-engineSize: 1
+//engineOffset: 0
+//engineSize: 1
 range: 96
 attackLength: 150
 //retreatPercent: 0.

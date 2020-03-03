@@ -14,7 +14,7 @@ explosionDamage: 98657
 smokeThreshold: 0.5
 flashThreshold: 0.75
 coolantPower: 0.225
-layer2: power
+layer: power
 buildCostMultiplier: 0.73227
 powerProduction: 166.66666666666666666666666666667
 consumes: {

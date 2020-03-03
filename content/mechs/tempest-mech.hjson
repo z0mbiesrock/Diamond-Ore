@@ -48,7 +48,7 @@ weapon: {
     keepVelocity: false
     pierce: false
     lightningLength: 60
-    lightning: 1
+    lightining: 1
     status: shocked
     statusDuration: 120
     homingPower: 0.001
@@ -75,7 +75,7 @@ weapon: {
       lightningLength: 25
 	  status: shocked
 	  statusDuration: 120
-      lightning: 2
+      lightining: 2
 	  fragBullets: 12
 	  fragVelocityMin: 2
 	  fragVelocityMax: 6

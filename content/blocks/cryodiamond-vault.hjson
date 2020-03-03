@@ -1,0 +1,17 @@
+name: Cryo-Diamond Vault
+description: An ultimate item storage block, capable of storing a massive amount of items of each type.
+type: Vault
+itemCapacity: 8000
+hasItems: true
+health: 2000
+size: 5
+buildCostMultiplier: 0.666666
+requirements: [
+  diamond/100
+  cryogem/100
+  lead/1500
+  titanium/1500
+  metaglass/500
+]
+category: effect
+research: diamond-vault

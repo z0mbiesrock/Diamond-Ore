@@ -1,0 +1,107 @@
+//type: ChargeTurret
+name: Yggdrasil
+description: Ultimate plasma cannon of ancient origin. Requires astronomical amounts of power to charge and launch a giant ball of destructive plasma that annihilates anything it hits!
+health: 80000
+size: 4
+reload: 600
+range: 800
+coolantMultiplier: 11
+buildCostMultiplier: 0.33333333
+inaccuracy: 0
+rotatespeed: 3
+cooldown: 0.003333
+shootSound: yggdrasilfire
+shootCone: 6
+layer: power
+outlineIcon: false
+expanded: true
+powerUse: 150
+chargeEffect: hitMeltdown
+chargeBeginEffect: shockwave
+chargeEffects: 42
+chargeTime: 5
+chargeMaxDelay: 30
+shootShake: 9
+shootType: {
+    type: MissileBulletType
+    speed: 8
+    damage: 1500
+	lifetime: 300
+    bulletWidth: 40
+    bulletHeight: 45
+	hitSize: 20
+	frontColor: ffffbb
+	backColor: ffff00
+	trailColor: ffff00
+    shootEffect: shootBig2
+    smokeEffect: shootBigSmoke
+	splashDamage: 9000
+	splashDamageRadius: 120
+	bulletShrink: 0
+	hitShake: 15
+	hitEffect: mineHuge
+	despawnEffect: flakExplosionBig
+    lightningLength: 150
+    lightining: 6
+	pierce: false
+	bulletSprite: diamond-ore-diamondbullet
+	homingPower: 0
+	homingRange: 0
+	fragBullets: 10
+	fragVelocityMin: 1
+	fragVelocityMax: 1
+	status: shocked
+	statusDuration: 300
+	fragBullet: {
+      type: BasicBulletType
+      //speed: 1
+	  instantDisappear: true
+	  fragBullets: 20
+	  fragVelocityMin: 0.72
+	  fragVelocityMax: 12
+      bulletWidth: 0
+      bulletHeight: 0
+	  despawnEffect: nuclearShockwave
+	  hitEffect: nuclearShockwave
+	  frontColor: ffff77
+	  backColor: ffff77
+	  pierce: false
+      lightningLength: 45
+      lightining: 1
+	  status: shocked
+	  statusDuration: 300
+	  fragBullet: {
+        type: MissileBulletType
+	    homingPower: 0
+	    homingRange: 0
+	    lifetime: 20
+        damage: 300
+        bulletWidth: 25
+        bulletHeight: 200
+	    bulletShrink: 0.75
+	    despawnEffect: none
+	    hitEffect: none
+	    frontColor: ffffbb
+	    backColor: ffff00
+	    trailColor: ffff00
+	    pierce: true
+        lightningLength: 60
+        lightining: 1
+	    knockback: 1666
+	    status: shocked
+	    statusDuration: 300
+	    bulletSprite: bullet
+		}
+    }
+}
+requirements: [
+  diamond/4000
+  cryogem/1250
+  thorium/2250
+  surge-alloy/2500
+  plastanium/3000
+  phase-fabric/1000
+  graphite/1500
+]
+category: turret
+research: meltdown

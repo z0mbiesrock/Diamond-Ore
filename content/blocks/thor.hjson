@@ -141,7 +141,7 @@ ammo: {
 	  fragVelocityMin: 4.5
 	  fragVelocityMax: 9
 	  lightningLength: 15
-	  lightning: 2 
+	  lightining: 2 
 	  status: shocked
 	  statusDuration: 120
 	  fragBullet: {

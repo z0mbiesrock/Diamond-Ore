@@ -23,13 +23,13 @@ weapon: {
   alternate: true
   recoil: 0
   width: 0
-  inaccuracy: 25
+  inaccuracy: 5
   bullet: {
     type: MissileBulletType
     speed: 2
 	drag: 0
 	lifetime: 180
-    damage: 11
+    damage: 8
     bulletWidth: 9
     bulletHeight: 9
 	bulletShrink: 0
@@ -42,8 +42,8 @@ weapon: {
 	hitEffect: hitLancer
 	keepVelocity: false
 	pierce: true
-	lightningLength: 60
-	lightning: 3
+    //lightningLength: 60
+    //lightining: 3
 	status: shocked
 	statusDuration: 120
 	homingPower: 0.0025
@@ -58,7 +58,7 @@ weapon: {
       type: BasicBulletType
       speed: 1
 	  lifetime: 1
-      damage: 15
+      damage: 5
       bulletWidth: 0
       bulletHeight: 0
 	  despawnEffect: hitFuse
@@ -67,8 +67,8 @@ weapon: {
 	  backColor: ffff77
 	  pierce: false
 	  bulletSprite: bullet
-	  lightningLength: 15
-	  lightning: 1
+      lightningLength: 15
+      lightining: 1
 	}
   }
 }

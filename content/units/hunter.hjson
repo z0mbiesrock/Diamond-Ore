@@ -13,7 +13,7 @@ shootCone: 135
 rotatespeed: 0.2
 baseRotateSpeed: 0.15
 rotateWeapon: true
-weaponOffsetY: 3
+weaponOffsetY: -3
 //targetAir: true
 weapon: {
   name: hunter-arm

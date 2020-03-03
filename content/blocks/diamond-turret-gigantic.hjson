@@ -1,178 +1,190 @@
 type: ItemTurret
-name: Diamond Turret
-description: A versatile all-around turret that converts a variety of different ammo types into projectiles that pierce multiple enemies.
-health: 300
-size: 1
-reload: 36
-range: 180
-maxAmmo: 40
-inaccuracy: 1
-rotatespeed: 12
+name: Gigantic Diamond Turret
+description: A versatile all-around turret that converts a variety of different ammo types into projectiles that pierce multiple enemies. 
+health: 4800
+size: 4
+reload: 72
+range: 420
+maxAmmo: 60
+inaccuracy: 3
+rotatespeed: 6
+shootCone: 19
 ammo: {
   copper: {
     type: BasicBulletType
-    speed: 8
-    damage: 10
-    bulletWidth: 5
-    bulletHeight: 5
+    speed: 11
+	lifetime: 48
+    damage: 62
+    bulletWidth: 9
+    bulletHeight: 9
 	frontColor: aaffff
 	backColor: ffffff
     shootEffect: shootSmall
     smokeEffect: shootSmallSmoke
 	hitEffect: hitLancer
-    ammoMultiplier: 8
+    ammoMultiplier: 6
 	bulletShrink: 0
 	pierce: true
 	bulletSprite: diamond-ore-diamondbullet
   }
   lead: {
     type: BasicBulletType
-    speed: 8
-    damage: 10
-    bulletWidth: 6
-    bulletHeight: 8
+    speed: 11
+    damage: 50
+    bulletWidth: 8
+    bulletHeight: 10
 	frontColor: 99eeee
 	backColor: eeffff
-    shootEffect: shootSmall
-    smokeEffect: shootSmallSmoke
+    shootEffect: shootBig
+    smokeEffect: hitFuse
 	hitEffect: hitLancer
+	reloadMultiplier: 1.2
     ammoMultiplier: 4
 	bulletShrink: 0
 	pierce: true
-	knockback: 4
+	knockback: 600
 	bulletSprite: diamond-ore-diamondbullet
   }
   titanium: {
     type: BasicBulletType
-    speed: 8
-    damage: 5
-    bulletWidth: 8
-    bulletHeight: 5
+    speed: 11
+    damage: 45
+	hitSize: 11
+    bulletWidth: 20
+    bulletHeight: 30
 	frontColor: 99eefe
 	backColor: 002fff
-    shootEffect: shootSmall
+    shootEffect: pulverizeMedium
     smokeEffect: shootSmallSmoke
 	hitEffect: hitLancer
-    ammoMultiplier: 5
+    ammoMultiplier: 3
+	reloadMultiplier: 1.65
 	bulletShrink: 0
-	reloadMultiplier: 3
 	pierce: true
 	knockback: 150
 	status: freezing
-	statusDuration: 330
+	statusDuration: 1320
 	bulletSprite: diamond-ore-diamondbullet
   }
   silicon: {
     type: BasicBulletType
-    speed: 6
-    damage: 12
-    bulletWidth: 2
-    bulletHeight: 8
+    speed: 4
+	lifetime: 135
+    damage: 25
+	hitSize: 11
+    bulletWidth: 20
+    bulletHeight: 70
 	frontColor: bbbbbb
 	backColor: 888888
-    shootEffect: shootSmall
+    shootEffect: pulverizeMedium
     smokeEffect: shootSmallSmoke
 	hitEffect: hitLancer
     ammoMultiplier: 2
 	bulletShrink: 0
-	reloadMultiplier: 1.4
+	reloadMultiplier: 4.5
+	inaccuracy: 9
 	pierce: true
 	status: corroded
-	statusDuration: 300
+	statusDuration: 1800
 	bulletSprite: diamond-ore-diamondbullet
   }
   pyratite: {
     type: BasicBulletType
-    speed: 6
-    damage: 7
-    bulletWidth: 5
-    bulletHeight: 10
-	frontColor: bbeeee
-	backColor: bb8888
+    speed: 12
+    damage: 17
+	hitSize: 5
+    bulletWidth: 15
+    bulletHeight: 30
+	frontColor: eebb99
+	backColor: cc8888
     shootEffect: shootSmall
-    smokeEffect: shootSmallSmoke
+    smokeEffect: shootSmallFlame
 	hitEffect: hitLancer
-    ammoMultiplier: 2
+    ammoMultiplier: 6
 	bulletShrink: 0
-	reloadMultiplier: 1.4
+	reloadMultiplier: 1.9
+	inaccuracy: 9
 	pierce: true
 	status: burning
-	statusDuration: 240
+	statusDuration: 660
 	bulletSprite: diamond-ore-diamondbullet
   }
   thorium: {
     type: BasicBulletType
-    speed: 7
-	drag: 0.02
-	lifetime: 105
-    damage: 3
-    bulletWidth: 3
-    bulletHeight: 4
+    speed: 19
+	drag: 0.036
+	lifetime: 145
+    damage: 30
+	hitSize: 5
+    bulletWidth: 10
+    bulletHeight: 50
 	frontColor: bbaaee
 	backColor: bbaadd
-    shootEffect: shootSmall
-    smokeEffect: shootSmallSmoke
+    shootEffect: lancerLaserShoot
+    smokeEffect: shootBigSmoke
 	hitEffect: hitLancer
-    ammoMultiplier: 4
-	bulletShrink: 0
-	reloadMultiplier: 10
+    ammoMultiplier: 5
+	reloadMultiplier: 5
+	bulletShrink: 0.8
 	pierce: true
 	homingPower: 5
-	homingRange: 75
+	homingRange: 145
 	bulletSprite: diamond-ore-diamondshell
-	inaccuracy: 9
+	inaccuracy: 19
   }
   diamond: {
     type: MissileBulletType
-    speed: 7
-    damage: 45
-    bulletWidth: 3
-    bulletHeight: 6
+    speed: 9
+    damage: 300
+    bulletWidth: 17
+    bulletHeight: 32
 	frontColor: ddffff
 	backColor: bbeeff
 	trailColor: 88ffff
-    shootEffect: shootSmall
-    smokeEffect: shootSmallSmoke
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
 	hitEffect: hitLancer
-    ammoMultiplier: 4
 	bulletShrink: 0
-	reloadMultiplier: 0.75
-	pierce: true
+    ammoMultiplier: 4
+	reloadMultiplier: 0.3
 	homingPower: 0
 	homingRange: 0
+	pierce: true
 	bulletSprite: diamond-ore-diamondbullet
   }
   blast-compound: {
     type: MissileBulletType
-    speed: 8
-    damage: 12
-    bulletWidth: 5
-    bulletHeight: 8
+    speed: 5
+	lifetime: 740
+    damage: 30
+    bulletWidth: 12
+    bulletHeight: 16
 	frontColor: ddffff
 	backColor: ffccdd
 	trailColor: ffac99
-    shootEffect: shootSmall
-    despawnEffect: shootSmallSmoke
-	hitEffect: hitLancer
+    shootEffect: lancerLaserShoot
+    despawnEffect: shootBigSmoke
+	hitEffect: flakExplosion
     ammoMultiplier: 2
-	bulletShrink: 0
-	reloadMultiplier: 0.225
+	reloadMultiplier: 0.166666
 	pierce: false
 	homingPower: 0.0005
 	homingRange: 0
+	bulletShrink: 0
 	bulletSprite: diamond-ore-diamondbullet
-	fragBullets: 12
-	splashDamage: 20
-	splashDamageRadius: 30
-	fragVelocityMin: 0.175
-	fragVelocityMax: 0.95
+	fragBullets: 24
+	splashDamage: 70
+	splashDamageRadius: 80
+	fragVelocityMin: 0.675
+	fragVelocityMax: 2.175
 	fragBullet: {
       type: BasicBulletType
-      speed: 1
+      speed: 2
+	  drag: 0.01
 	  lifetime: 30
-      damage: 7
-      bulletWidth: 2
-      bulletHeight: 4
+      damage: 11
+      bulletWidth: 3
+      bulletHeight: 5
 	  despawnEffect: hitLancer
 	  hitEffect: none
 	  frontColor: b94e9e
@@ -185,75 +197,80 @@ ammo: {
   }
   plastanium: {
     type: MissileBulletType
-    speed: 7
-    damage: 15
-	lifetime: 30
-    bulletWidth: 3
-    bulletHeight: 8
+    speed: 5
+	lifetime: 78
+    damage: 25
+    bulletWidth: 9
+    bulletHeight: 22
 	frontColor: eeffee
-	backColor: bbeebb
-	trailColor: 99dd99
+	backColor: bbffbb
+	trailColor: 99ff99
     shootEffect: shootSmall
-    despawnEffect: mineBig
+    despawnEffect: plasticExplosion
+	hitEffect: mineBig
+	bulletShrink: 0
 	hitEffect: mine
     ammoMultiplier: 2
-	bulletShrink: 0
-	reloadMultiplier: 0.225
+	reloadMultiplier: 0.2
 	pierce: true
 	homingPower: 0.0005
 	homingRange: 0
 	bulletSprite: diamond-ore-diamondbullet
-	fragBullets: 11
-	fragVelocityMin: 0.25
-	fragVelocityMax: 1.25
+	fragBullets: 21
+	fragVelocityMin: 0.75
+	fragVelocityMax: 2.19
 	fragBullet: {
       type: BasicBulletType
       speed: 1
 	  drag: 0.0375
-	  lifetime: 20
-      damage: 4
+	  lifetime: 23
+      damage: 8
       bulletWidth: 1
       bulletHeight: 4
 	  despawnEffect: none
 	  hitEffect: none
 	  frontColor: bbffbb
-	  backColor: dddddd
+	  backColor: ddeddd
 	  pierce: true
-	  knockback: 5
+	  knockback: 12
 	  bulletSprite: diamond-ore-diamondbullet
     }
   }
   phase-fabric: {
     type: MissileBulletType
-    speed: 3
-	lifetime: 60
-    damage: 18
-    bulletWidth: 4
-    bulletHeight: 8
-	weaveScale: 4
-	weaveMag: 3
+    speed: 7
+	lifetime: 54
+    damage: 32
+    bulletWidth: 6
+    bulletHeight: 11
+	weaveScale: 7.5
+	weaveMag: 5
 	frontColor: eeffff
+	bulletShrink: 0
 	backColor: ffeecc
 	trailColor: ccaaff
     shootEffect: shootSmall
     smokeEffect: shootSmallSmoke
 	hitEffect: hitLancer
     ammoMultiplier: 4
-	bulletShrink: 0
-	reloadMultiplier: 2
+	reloadMultiplier: 4
 	homingPower: 0.0005
 	homingRange: 0
 	pierce: true
-	knockback: 1.75
+	knockback: 5.25
 	bulletSprite: diamond-ore-diamondbullet
   }
 }
 requirements: [
-  diamond/6
-  lead/40
-  silicon/24
-  titanium/27
-  thorium/37
+  diamond/100
+  lead/1100
+  graphite/150
+  silicon/72
+  titanium/300
+  thorium/400
+  surge-alloy/225
+  phase-fabric/45
+  cryogem/35
 ]
 category: turret
-research: salvo
+research: diamond-turret-large

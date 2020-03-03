@@ -1,14 +1,13 @@
 type: GroundUnit
 name: Reaver
-description: A fast assault unit. Launches fast high-damage homing missiles.
+description: An assault unit with high movement speed. Launches fast high-damage homing missiles.
 speed: 0.4
 maxVelocity: 2.75
-drag: 0.02222222
 flying: false
 health: 450
 mass: 6
 range: 144
-attackLength: 90
+attackLength: 200
 retreatPercent: 23
 shootCone: 90
 rotatespeed: 0.2
@@ -27,8 +26,8 @@ weapon: {
   shootSound: shotgun
   bullet: {
     type: MissileBulletType
-    speed: 4
-	lifetime: 48
+    speed: 4.4
+	lifetime: 75
     damage: 100
     bulletWidth: 8
     bulletHeight: 16
@@ -46,7 +45,7 @@ weapon: {
 	knockback: 700
 	bulletSprite: diamond-ore-diamondmissile
 	inaccuracy: 18
-	fragBullets: 10
+	fragBullets: 15
 	splashDamage: 150
 	knockback: 3
 	homingPower: 0.04
@@ -77,7 +76,7 @@ weapon: {
         type: BasicBulletType
         //speed: 1
 	    lifetime: 10
-        damage: 8
+        damage: 10
         bulletWidth: 2
         bulletHeight: 3
 	    despawnEffect: shootSmallSmoke

@@ -18,6 +18,7 @@ baseRotateSpeed: 0.6
 mass: 250
 retreatPercent: 0.8
 weaponOffsetY: 40
+immunities: [shocked, wet, tarred, corroded, freezing]
 weapon: {
   name: purger-plasma
   length: 36
@@ -48,7 +49,7 @@ weapon: {
     keepVelocity: false
     pierce: false
     lightningLength: 60
-    lightning: 1
+    lightining: 1
     status: shocked
     statusDuration: 120
     homingPower: 2
@@ -77,6 +78,8 @@ weapon: {
 	  //trailColor: bbbbbb
 	  pierce: true
 	  knockback: 150
+      lightningLength: 20
+      lightining: 1
 	  status: shocked
 	  statusDuration: 20
 	  bulletSprite: diamond-ore-diamondbullet

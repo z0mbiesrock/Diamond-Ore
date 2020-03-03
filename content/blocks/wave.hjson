@@ -12,8 +12,8 @@ ammo: {
   //define a custom type with different properties
   phase-string: {
     type: LiquidBulletType
-    speed: 4.5
-    lifetime: 150
+    speed: 3.5
+	lifetime: 150
 	status: corroded
 	homingPower: 60
 	homingRange: 75

@@ -1,6 +1,6 @@
 type: ItemTurret
 name: Large Diamond Turret
-description: A versatile sniper turret that converts a variety of different ammo types into projectiles that pierce multiple enemies. 
+description: A versatile all-around turret that converts a variety of different ammo types into projectiles that pierce multiple enemies. 
 health: 1200
 size: 2
 reload: 48
@@ -90,8 +90,8 @@ ammo: {
     speed: 9
     damage: 15
 	hitSize: 5
-    bulletWidth: 9
-    bulletHeight: 7
+    bulletWidth: 10
+    bulletHeight: 20
 	frontColor: bbeeee
 	backColor: cc8888
     shootEffect: shootSmall
@@ -124,8 +124,8 @@ ammo: {
 	bulletShrink: 0
 	pierce: true
 	homingPower: 5
-	homingRange: 75
-	bulletSprite: diamond-ore-diamondbullet
+	homingRange: 100
+	bulletSprite: diamond-ore-diamondshell
 	inaccuracy: 9
   }
   diamond: {
@@ -137,13 +137,13 @@ ammo: {
 	frontColor: ddffff
 	backColor: bbeeff
 	trailColor: 88ffff
-    shootEffect: shootSmall
+    shootEffect: shootBig
     smokeEffect: shootSmallSmoke
 	hitEffect: hitLancer
 	bulletShrink: 0
-    ammoMultiplier: 10
-	reloadMultiplier: 0.5
-	homingPower: 0.0005
+    ammoMultiplier: 4
+	reloadMultiplier: 0.65
+	homingPower: 0
 	homingRange: 0
 	pierce: true
 	bulletSprite: diamond-ore-diamondbullet
@@ -231,8 +231,8 @@ ammo: {
   }
   phase-fabric: {
     type: MissileBulletType
-    speed: 3.75
-	lifetime: 80
+    speed: 5
+	lifetime: 72
     damage: 27
     bulletWidth: 5
     bulletHeight: 9
