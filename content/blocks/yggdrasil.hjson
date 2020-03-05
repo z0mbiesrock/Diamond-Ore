@@ -16,7 +16,7 @@ layer: power
 outlineIcon: false
 expanded: true
 powerUse: 150
-chargeEffect: hitMeltdown
+//chargeEffect: yggdrasilCharge
 chargeBeginEffect: shockwave
 chargeEffects: 60
 chargeTime: 300
@@ -104,4 +104,4 @@ requirements: [
   graphite/1500
 ]
 category: turret
-research: meltdown
+research: spectre

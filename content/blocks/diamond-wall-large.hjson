@@ -1,7 +1,7 @@
 name: Large Diamond Wall
 description: A wall made of pure diamond. Extremely hard to destroy. Spans multiple tiles.
 type: Wall
-health: 8600
+health: 12500
 size: 2
 buildCostMultiplier: 2
 requirements: [

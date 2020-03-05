@@ -1,7 +1,7 @@
 name: Diamond Wall
 description: A wall made of pure diamond. Extremely hard to destroy.
 type: Wall
-health: 2150
+health: 3125
 size: 1
 buildCostMultiplier: 2.5
 requirements: [

@@ -21,9 +21,7 @@ consumes: {
 requirements: [
   lead/400
   graphite/175
-  silicon/75
-  surge-alloy/150
-  phase-fabric/150
+  silicon/150
   diamond/225
 ]
 category: crafting

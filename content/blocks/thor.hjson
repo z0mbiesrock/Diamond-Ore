@@ -11,7 +11,7 @@ shotWidth: 10
 maxAmmo: 2
 inaccuracy: 0
 rotatespeed: 4
-cooldown: 2
+cooldown: 0.0125
 shootSound: shotgun
 shootCone: 90
 layer: power
