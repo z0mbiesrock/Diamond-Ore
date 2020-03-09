@@ -11,7 +11,7 @@ inaccuracy: 0
 rotatespeed: 3
 cooldown: 0.003333
 shootSound: yggdrasilfire
-shootCone: 6
+shootCone: 2
 layer: power
 outlineIcon: false
 expanded: true
