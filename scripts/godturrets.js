@@ -63,3 +63,4 @@ const yggdrasilTurret = extendContent(ChargeTurret, "yggdrasil", {
 });
 yggdrasilTurret.chargeEffect = yggdrasilCharge;
 yggdrasilTurret.shootEffect = yggdrasilShoot;
+//yggdrasilTurret.shootSound = Sounds.yggdrasilfire;

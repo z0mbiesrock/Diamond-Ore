@@ -4,5 +4,6 @@ require("crystal-conveyor")
 require("godturrets")
 require("testbomb")
 require("surge-reactor")
+require("cryogem-dissipator")
 //require("tasergun")
 

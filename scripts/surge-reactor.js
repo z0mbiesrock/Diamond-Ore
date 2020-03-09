@@ -50,21 +50,22 @@ const SurgeReactor = extendContent(NuclearReactor, "surge-reactor", {
 	/* draw: function(tile){
 		
 
-        Draw.color(tile.entity.coolColor, tile.entity.hotColor, tile.entity.heat);
+        Draw.color(this.coolColor, this.hotColor, this.heat);
         Fill.rect(tile.drawx(), tile.drawy(), size * tilesize, size * tilesize);
 
-        Draw.color(tile.entity.liquids.current().color);
-        Draw.alpha(tile.entity.liquids.currentAmount() / liquidCapacity);
+        Draw.color(this.liquids.current().color);
+        Draw.alpha(this.liquids.currentAmount() / this.liquidCapacity);
         Draw.rect(topRegion, tile.drawx(), tile.drawy());
 		
 		if(tile.entity.heat > tile.entity.flashThreshold){
-            flash = 1 + ((tile.entity.heat - tile.entity.flashThreshold) / (1 - tile.entity.flashThreshold)) * 5.4;
-            tile.entity.flash += flash * Time.delta();
-            Draw.color(Color.red, Color.yellow, Mathf.absin(tile.entity.flash, 9, 1));
+            flash = 1 + ((tile.entity.heat - this.flashThreshold) / (1 - this.flashThreshold)) * 5.4;
+            this.flash += flash * Time.delta();
+            Draw.color(Color.red, Color.yellow, Mathf.absin(this.flash, 9, 1));
             Draw.alpha(0.6);
             Draw.rect(lightsRegion, tile.drawx(), tile.drawy());
         }
-		Draw.alpha(tile.tile.entity.items.total() / tile.tile.entity.itemCapacity);
+        Draw.color();
+		Draw.alpha(this.items.total() / tile.tile.entity.itemCapacity);
 		Draw.rect(Core.atlas.find(this.name + "-top"), tile.drawx(), tile.drawy());
 
         Draw.reset();
