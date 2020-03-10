@@ -4,14 +4,16 @@ type: Drill
 health: 600
 size: 2
 tier: 6
-drillTime: 3
-liquidBoostIntensity: 2.75
+drillTime: 18
+liquidBoostIntensity: 2
+hardnessDrillMultiplier: 12
 warmupSpeed: 0.015
 hasPower: true
 drillEffect: freezing
 updateEffect: pulverizeMedium
 heatColor: eeffff
 itemCapacity: 30
+drawRim: true
 consumes: {
   power: 1.4
   liquid: {
@@ -24,7 +26,8 @@ consumes: {
 requirements: [
   diamond/20
   silicon/110
-  thorium/5
+  graphite/30
+  thorium/15
   surge-alloy/25
 ]
 category: production

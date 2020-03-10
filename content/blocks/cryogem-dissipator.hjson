@@ -3,7 +3,7 @@ name: Cryogem Dissipator
 health: 540
 size: 3
 description: Uses a large amount of power to disassemble cryogems back into pure cryofluid.
-liquidCapacity: 3000
+liquidCapacity: 600
 hasPower: true
 hasLiquids: true
 hasItems: true

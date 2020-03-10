@@ -1,0 +1,41 @@
+name: Omni Drill
+description: The true ultimate drill. Extremely expensive and fragile. However, its mining speed is unmatched.
+type: Drill
+health: 200
+size: 5
+tier: 99999
+drillTime: 25
+drawRim: true
+rotateSpeed: 6
+liquidBoostIntensity: 3
+hardnessDrillMultiplier: 0
+baseExplosiveness: 500
+warmupSpeed: 1
+hasPower: true
+drillEffect: hitMeltdown
+updateEffect: overdriven
+buildCostMultiplier: 0.43227
+heatColor: aacccc
+updateEffectChance: 0.5
+liquidCapacity: 120
+itemCapacity: 120
+consumes: {
+  power: 25
+  liquid: {
+    liquid: phase-string
+    amount: 2.3
+    booster: true
+	optional: true
+  }
+}
+requirements: [
+  diamond/500
+  cryogem/2500
+  silicon/1100
+  thorium/1500
+  metaglass/1500
+  surge-alloy/250
+  phase-fabric/2500
+]
+category: production
+research: diamond-drill
