@@ -82,3 +82,5 @@ Heavy Surge Forge - A larger Alloy Mixer.
 Surge Pyra-Forge - Create surge alloy from scrap using pyratite as a catalyst.
 
 Industrial Diamond Synthesizer - A larger and more efficient diamond synthesizer.
+
+Omni Drill - A huge power-hungry drill.
