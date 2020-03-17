@@ -53,6 +53,8 @@ Aqua Drill - A compact water extractor
 
 Reinforced Battery - 2x2 block that combines 4 regular batteries into one durable block.
 
+Surge Battery - 4x4 battery block. Very durable with high capacity.
+
 Reinforced Liquid Tank - 5x5 block with a much larger liquid capacity.
 
 Reinforced Power Distributor - 3x3 Power node with a range of 50 blocks. Its insulated plating makes automatic connection impossible.
@@ -82,5 +84,9 @@ Heavy Surge Forge - A larger Alloy Mixer.
 Surge Pyra-Forge - Create surge alloy from scrap using pyratite as a catalyst.
 
 Industrial Diamond Synthesizer - A larger and more efficient diamond synthesizer.
+
+Blast Furnace - A larger kiln that is slower, but more efficient and has a large output.
+
+Cryofluid Centrifuge - Larger more efficient cryofluid mixer.
 
 Omni Drill - A huge power-hungry drill.
