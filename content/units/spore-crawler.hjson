@@ -1,0 +1,62 @@
+type: GroundUnit
+name: Spore Crawler
+description: Suicidal explosive ground unit. Releases sticky corrosive fluids in all directions upon detonating.
+speed: 0.17
+maxVelocity: 0.6
+drag: 0.14
+flying: false
+health: 180
+mass: 2
+//engineOffset: 0
+//engineSize: 1
+attackLength: 150
+hitsize: 8
+//retreatPercent: 0.
+//shootCone: 360
+//rotatespeed: 0.2
+//baseRotateSpeed: 0.1
+//rotateWeapon: true
+//weaponOffsetY: 3
+//targetAir: false
+immunities: [shocked, wet, tarred, corroded, freezing]
+weapon: {
+  name: clear
+  length: 0
+  reload: 12
+  shots: 1
+  alternate: true
+  shootSound: explosion
+  bullet: {
+    type: BasicBulletType
+    shootEffect: none
+    smokeEffect: none
+    despawnEffect: none
+	hitEffect: flakExplosion
+	instantDisappear: true
+	splashDamageRadius: 90
+	splashDamage: 90
+	killShooter: true
+	bulletSprite: shell
+	fragBullets: 100
+	fragVelocityMin: 0.35
+	fragVelocityMax: 0.85
+	fragBullet: {
+        type: LiquidBulletType
+        //keepVelocity: true
+		drag: 0.0125
+	    lifetime: 150
+        damage: 1
+	    collidesAir: false
+        bulletWidth: 15
+        bulletHeight: 15
+	    despawnEffect: none
+	    hitEffect: none
+	    pierce: true
+		status: corroded
+		statusDuration: 900
+		liquid: corrupt-water
+	    //bulletSprite: shell
+	    //knockback: 7.5
+    }
+  }
+}

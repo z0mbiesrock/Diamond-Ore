@@ -1,0 +1,22 @@
+name: Surge Battery
+description: A large high-tech battery with a huge storage capacity.
+//type: Battery
+health: 8000
+size: 4
+buildCostMultiplier: 0.9
+emptyLightColor: 333355
+fullLightColor: ffe770
+consumes: {
+  powerBuffered: 150000
+}
+requirements: [
+  copper/64
+  lead/320
+  silicon/120
+  thorium/50
+  surge-alloy/100
+  diamond/100
+  cryogem/100
+]
+category: power
+research: reinforced-power-distributor

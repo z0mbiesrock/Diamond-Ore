@@ -1,0 +1,41 @@
+type: GenericSmelter
+name: Blast Furnace
+description: An upgraded version of the Kiln. Using blast compound as a catalyst, it efficiently combines a decent amount of lead and sand to make a large batch of metaglass.
+itemCapacity: 20
+health: 900
+size: 3
+hasPower: true
+hasItems: true
+craftTime: 380
+craftEffect: pulverizeRedder
+updateEffect: mine
+buildCostMultiplier: 0.5
+drawLiquidLight: true
+itemCapacity: 60
+updateEffectChance: 0.05
+flameColor: ffe9cc
+consumes: {
+  power: 16.66666666666
+  items: {
+    items: [
+      sand/15
+      lead/15
+	  blast-compound/5
+    ]
+  }
+}
+requirements: [
+  copper/600
+  lead/300
+  graphite/300
+  metaglass/900
+  plastanium/150
+  diamond/150
+]
+category: crafting
+research: surge-pyraforge
+activeSound: machine
+activeSoundVolume: 0.95
+idleSound: respawning
+idleSoundVolume: 0.5
+outputItem: metaglass/30

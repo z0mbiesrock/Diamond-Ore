@@ -1,0 +1,11 @@
+name: Spore Water
+description: Water that has been saturated with mutated spores. It can be cultivated into highly destructive pods.
+heatCapacity: 0.1
+explosiveness: 90.01
+temperature: 0.5
+viscosity: 0.99
+flammability: 0.05
+effect: corroded
+color: 355085
+barColor: 007a96
+lightColor: 00659666

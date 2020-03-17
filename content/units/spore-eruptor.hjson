@@ -1,0 +1,76 @@
+type: GroundUnit
+name: Spore Eruptor
+description: A heavy ground mech infested by mutant spores. Fires homing pods of corrosive fluid, rapidly contaminating its surroundings.
+speed: 0.12
+maxVelocity: 0.19
+flying: false
+health: 975
+mass: 7
+//engineOffset: 0
+//engineSize: 1
+range: 100
+attackLength: 150
+//retreatPercent: 0.
+shootCone: 90
+rotatespeed: 0.08
+baseRotateSpeed: 0.1
+rotateWeapon: true
+//weaponOffsetY: 3
+//targetAir: false
+immunities: [shocked, wet, tarred, corroded, freezing, burning, melting]
+weapon: {
+  name: spore-eruptor-arm
+  length: 1
+  width: 8
+  reload: 33
+  shots: 1
+  recoil: 1
+  alternate: true
+  shootSound: bigshot
+  bullet: {
+    type: MissileBulletType
+    speed: 6
+	lifetime: 40
+    damage: 35
+    bulletWidth: 11
+    bulletHeight: 9
+	hitSound: splash
+	frontColor: 009696
+	backColor: 550099
+	trailColor: 95a7e9
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke2
+	bulletShrink: 0
+    despawnEffect: none
+	hitEffect: none
+	status: corroded
+	statusDuration: 120
+	splashDamageRadius: 20
+    homingPower: 2
+    homingRange: 200
+	splashDamage: 10
+	pierce: false
+	bulletSprite: missile
+	fragBullets: 6
+	fragVelocityMin: 0.05
+	fragVelocityMax: 0.25
+	fragBullet: {
+        type: LiquidBulletType
+        //keepVelocity: true
+		drag: 0.00625
+	    lifetime: 150
+        damage: 1
+	    collidesAir: false
+        bulletWidth: 15
+        bulletHeight: 15
+	    despawnEffect: none
+	    hitEffect: none
+	    pierce: true
+		status: corroded
+		statusDuration: 900
+		liquid: corrupt-water
+	    //bulletSprite: shell
+	    //knockback: 7.5
+    }
+  }
+}

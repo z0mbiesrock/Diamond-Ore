@@ -1,0 +1,42 @@
+name: Dark Cultivator
+description: A massive production facility that purifies and concentrates the spores in corrupted water, synthesizing highly infectious pods. Requires massive amounts of liquid and power.
+type: Cultivator
+health: 660
+size: 4
+itemCapacity: 10
+liquidCapacity: 120
+outputItem: dark-spore-pod/1
+baseExplosiveness: 250
+hasItems: true
+hasLiquids: true
+recurrence: 75
+floating: true
+hasPower: true
+craftEffect: purify
+updateEffect: melting
+updateEffectChance: 0.21
+craftTime: 666
+activeSound: wave
+activeSoundVolume: 0.51
+attribute: spores
+idleSound: drill
+idleSoundVolume: 0.01
+consumes: {
+  power: 15
+  liquid: {
+    liquid: corrupt-water
+    amount: 0.15
+    booster: false
+	optional: false
+  }
+}
+requirements: [
+  copper/35
+  lead/65
+  graphite/20
+  cryogem/45
+  diamond/15
+  surge-alloy/255
+]
+category: production
+research: oil-extractor

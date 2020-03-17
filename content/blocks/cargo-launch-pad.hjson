@@ -1,0 +1,18 @@
+name: Cargo Launch Pad
+description: A launch pad with a very large storage capacity.
+type: LaunchPad
+health: 28800
+buildVisibility: campaignOnly
+itemCapacity: 800
+size: 6
+launchTime: 1800
+buildCostMultiplier: 0.85
+requirements: [
+  diamond/400
+  lead/800
+  silicon/400
+  surge-alloy/400
+  plastanium/400
+]
+category: effect
+research: launch-pad-large

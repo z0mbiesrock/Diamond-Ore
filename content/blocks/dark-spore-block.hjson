@@ -1,0 +1,12 @@
+//type: Wall
+name: Dark Spore Wall
+description: A self-regenerating spore wall.
+health: 1000
+size: 1
+update: true
+buildCostMultiplier: 2.5
+requirements: [
+  dark-spore-pod/5
+]
+category: defense
+research: dark-cultivator

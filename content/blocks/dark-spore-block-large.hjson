@@ -1,0 +1,12 @@
+//type: Wall
+name: Large Dark Spore Wall
+description: A large self-regenerating spore wall.
+health: 4000
+size: 2
+update: true
+buildCostMultiplier: 2.5
+requirements: [
+  dark-spore-pod/5
+]
+category: defense
+research: dark-spore-block

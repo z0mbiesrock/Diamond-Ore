@@ -253,6 +253,90 @@ ammo: {
 	knockback: 3.5
 	bulletSprite: diamond-ore-diamondbullet
   }
+  dark-spore-pod: {
+    type: MissileBulletType
+    speed: 9
+	drag: 0.00675
+    damage: 35
+	lifetime: 240
+    bulletWidth: 9
+    bulletHeight: 12
+	frontColor: 995D9A
+	backColor: 7C4B80
+	trailColor: 6B4474
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
+	splashDamage: 125
+	splashDamageRadius: 28
+	bulletShrink: 0
+	hitEffect: mineBig
+    ammoMultiplier: 1
+	reloadMultiplier: 0.1
+	pierce: false
+	bulletSprite: diamond-ore-diamondshell
+	homingPower: 2
+	homingRange: 260
+	fragBullets: 16
+	fragVelocityMin: 0.65
+	fragVelocityMax: 0.7
+	fragBullet: {
+      type: BasicBulletType
+	  bulletShrink: 0
+      speed: 1
+	  lifetime: 21
+      damage: 6
+      bulletWidth: 1
+      bulletHeight: 4
+	  despawnEffect: none
+	  hitEffect: none
+	  frontColor: 995D9A
+	  backColor: 995D9A
+	  pierce: true
+	  status: corroded
+	  statusDuration: 1200
+	  bulletSprite: diamond-ore-diamondbullet
+	fragBullets: 1
+	fragVelocityMin: 0.55
+	fragVelocityMax: 0.6
+	fragBullet: {
+      type: BasicBulletType
+	  bulletShrink: 0
+      speed: 1
+	  lifetime: 21
+      damage: 6
+      bulletWidth: 1
+      bulletHeight: 4
+	  despawnEffect: none
+	  hitEffect: none
+	  frontColor: 7C4B80
+	  backColor: 7C4B80
+	  pierce: true
+	  status: corroded
+	  statusDuration: 1200
+	  bulletSprite: diamond-ore-diamondbullet
+	fragBullets: 1
+	fragVelocityMin: 0.45
+	fragVelocityMax: 0.5
+	fragBullet: {
+      type: BasicBulletType
+	  bulletShrink: 0
+      speed: 1
+	  lifetime: 21
+      damage: 6
+      bulletWidth: 1
+      bulletHeight: 4
+	  despawnEffect: none
+	  hitEffect: none
+	  frontColor: 6B4474
+	  backColor: 6B4474
+	  pierce: true
+	  status: corroded
+	  statusDuration: 1200
+	  bulletSprite: diamond-ore-diamondbullet
+	  }
+	  }
+    }
+  }
 }
 requirements: [
   diamond/24

@@ -1,0 +1,42 @@
+//type: GenericCrafter
+name: Cryofluid Centrifuge
+description: A larger and more efficient version of the Cryofluid Mixer. It uses a large amount of power to thoroughly mix pulverized titanium powder and lots of water together in order to quickly produce cryofluid.
+itemCapacity: 20
+liquidCapacity: 375
+health: 1280
+size: 4
+hasPower: true
+hasItems: true
+craftTime: 60
+updateEffect: pulverizeSmall
+craftEffect: freezing
+buildCostMultiplier: 0.5
+drawLiquidLight: true
+updateEffectChance: 0.25
+consumes: {
+  power: 7.75
+  items: {
+    items: [
+      titanium/3
+    ]
+  }
+  liquid: {
+    liquid: water
+    amount: 1.25
+  }
+}
+requirements: [
+  lead/300
+  graphite/175
+  metaglass/150
+  silicon/150
+  thorium/150
+  cryogem/500
+]
+category: crafting
+research: blast-furnace
+activeSound: respawning
+activeSoundVolume: 1.15
+idleSound: machine
+idleSoundVolume: 0.35
+outputLiquid: cryofluid/75

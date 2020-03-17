@@ -1,0 +1,79 @@
+type: GroundUnit
+name: Spore Fortress
+description: A heavy artillery mech infested with mutant spores. Moves slowly, but spews lots of damaging fluids. Explodes into rapidly-evaporating droplets when killed.
+speed: 0.07
+maxVelocity: 0.15
+flying: false
+health: 1200
+mass: 7
+//engineOffset: 0
+//engineSize: 1
+range: 100
+attackLength: 150
+//retreatPercent: 0.
+shootCone: 140
+rotatespeed: 0.08
+baseRotateSpeed: 0.071
+rotateWeapon: true
+//weaponOffsetY: 3
+//targetAir: false
+immunities: [shocked, wet, tarred, corroded, freezing, burning, melting]
+weapon: {
+  name: spore-fortress-arm
+  length: 1
+  width: 9.4
+  reload: 80
+  shots: 30
+  recoil: 1
+  spacing: 1
+  velocityRnd: 0.9
+  lengthRand: 0.45
+  alternate: true
+  shootSound: laser
+  bullet: {
+    type: ArtilleryBulletType
+    speed: 12
+	lifetime: 20
+	//inaccuracy: 15
+    bulletWidth: 6
+    bulletHeight: 14
+	frontColor: 004c96
+	backColor: 009696
+	trailEffect: wet
+    shootEffect: shootBig
+    smokeEffect: hitFuse
+    despawnEffect: none
+	hitEffect: none
+	hitSound: splash
+	status: corroded
+	statusDuration: 120
+	splashDamageRadius: 25
+    //homingPower: 1
+    //homingRange: 8
+	splashDamage: 15
+	bulletSprite: diamond-ore-diamondshell
+	fragBullets: 3
+	fragVelocityMin: 0.1
+	fragVelocityMax: 0.3
+	fragBullet: {
+        type: LiquidBulletType
+        //keepVelocity: true
+		drag: 0.015
+	    lifetime: 40
+        damage: 1
+	    collidesAir: false
+        bulletWidth: 9
+        bulletHeight: 9
+	    despawnEffect: none
+	    hitEffect: none
+	    pierce: true
+		status: corroded
+        homingPower: 1
+        homingRange: 8
+		statusDuration: 900
+		liquid: corrupt-water
+	    //bulletSprite: shell
+	    //knockback: 7.5
+    }
+  }
+}
