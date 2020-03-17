@@ -47,33 +47,17 @@ surgeReactorMeltdownBlast.trailColor = Color.valueOf("#ffffff");
 const SurgeReactor = extendContent(NuclearReactor, "surge-reactor", {
 	
     //OVERRIDE
-	/* draw: function(tile){
-		
-
-        Draw.color(this.coolColor, this.hotColor, this.heat);
-        Fill.rect(tile.drawx(), tile.drawy(), size * tilesize, size * tilesize);
-
-        Draw.color(this.liquids.current().color);
-        Draw.alpha(this.liquids.currentAmount() / this.liquidCapacity);
-        Draw.rect(topRegion, tile.drawx(), tile.drawy());
-		
-		if(tile.entity.heat > tile.entity.flashThreshold){
-            flash = 1 + ((tile.entity.heat - this.flashThreshold) / (1 - this.flashThreshold)) * 5.4;
-            this.flash += flash * Time.delta();
-            Draw.color(Color.red, Color.yellow, Mathf.absin(this.flash, 9, 1));
-            Draw.alpha(0.6);
-            Draw.rect(lightsRegion, tile.drawx(), tile.drawy());
-        }
+	draw: function(tile){
+        this.super$draw(tile);
         Draw.color();
-		Draw.alpha(this.items.total() / tile.tile.entity.itemCapacity);
+		Draw.alpha(tile.entity.items.total() / this.itemCapacity);
 		Draw.rect(Core.atlas.find(this.name + "-top"), tile.drawx(), tile.drawy());
-
         Draw.reset();
-	}, */
+	},
 	
     //OVERRIDE
 	onDestroyed: function(tile){
-		Blocks.thoriumReactor.onDestroyed(tile);
+		this.super$onDestroyed(tile);
         for(var i = 0; i < 45; i++){
             Calls.createBullet(surgeReactorMeltdownFlak, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.15, 1.0), Mathf.random(0.2, 1.0));
 		}
@@ -89,4 +73,18 @@ const SurgeReactor = extendContent(NuclearReactor, "surge-reactor", {
         Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0));
 		surgeReactorMeltdownBlast.lightningLength = 75;
 	},
+})
+
+const SurgeBattery = extendContent(Battery, "surgebattery", {
+    //OVERRIDE
+	onDestroyed: function(tile){
+		this.super$onDestroyed(tile);
+        for(var i = 0; i < 55; i++){
+            Calls.createBullet(Bullets.cryoShot, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.15, 1.0), Mathf.random(0.2, 3.0));
+		}
+        for(var i = 0; i < 15; i++){
+            Calls.createBullet(Bullets.flakSurge, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.15, 1.0), Mathf.random(0.2, 1.0));
+		}
+	},
+	
 })
