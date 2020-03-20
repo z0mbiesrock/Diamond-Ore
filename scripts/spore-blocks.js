@@ -91,3 +91,17 @@ extendContent(DoubleTurret, "spore-turret-c", {
         ];
     }
 });
+extendContent(Floor, "spore-water", {
+    generateIcons(){
+        return [
+            Core.atlas.find(this.name)
+        ];
+    }
+});
+extendContent(Floor, "spore-water-deep", {
+    generateIcons(){
+        return [
+            Core.atlas.find(this.name)
+        ];
+    }
+});
