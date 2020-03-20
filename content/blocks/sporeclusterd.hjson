@@ -1,6 +1,6 @@
 name: Spore Cluster
 description: Produces spore pods passively.
-type: Cultivator
+//type: Cultivator
 health: 480
 rotate: true
 size: 1
