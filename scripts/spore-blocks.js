@@ -30,3 +30,64 @@ const darkSporeBlockLarge = extendContent(Wall, "dark-spore-block-large", {
             }
       }
 });
+extendContent(Cultivator, "sporecluster", {
+	draw(tile){
+		Draw.rect(this.region, tile.drawx(), tile.drawy());
+	},
+    generateIcons(){
+        return [
+            Core.atlas.find(this.name)
+        ];
+    }
+});
+extendContent(Cultivator, "sporeclusterb", {
+	draw(tile){
+		Draw.rect(this.region, tile.drawx(), tile.drawy());
+	},
+    generateIcons(){
+        return [
+            Core.atlas.find(this.name)
+        ];
+    }
+});
+extendContent(Cultivator, "sporeclusterc", {
+	draw(tile){
+		Draw.rect(this.region, tile.drawx(), tile.drawy());
+	},
+    generateIcons(){
+        return [
+            Core.atlas.find(this.name)
+        ];
+    }
+});
+extendContent(Cultivator, "sporeclusterd", {
+	draw(tile){
+		Draw.rect(this.region, tile.drawx(), tile.drawy());
+	},
+    generateIcons(){
+        return [
+            Core.atlas.find(this.name)
+        ];
+    }
+});
+extendContent(DoubleTurret, "spore-turret", {
+    generateIcons(){
+        return [
+            Core.atlas.find(this.name)
+        ];
+    }
+});
+extendContent(DoubleTurret, "spore-turret-b", {
+    generateIcons(){
+        return [
+            Core.atlas.find(this.name)
+        ];
+    }
+});
+extendContent(DoubleTurret, "spore-turret-c", {
+    generateIcons(){
+        return [
+            Core.atlas.find(this.name)
+        ];
+    }
+});
