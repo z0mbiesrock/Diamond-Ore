@@ -5,7 +5,7 @@ health: 400
 ammoPerShot: 0
 size: 1
 reload: 20
-range: 200
+range: 120
 ammoUseEffect: smoke
 maxAmmo: 1
 shots: 1
@@ -27,7 +27,7 @@ ammo: {
     speed: 6
 	drag: 0.0045
     damage: 5
-	lifetime: 240
+	lifetime: 90
     bulletWidth: 3
     bulletHeight: 6
 	frontColor: 995D9A
@@ -54,7 +54,7 @@ ammo: {
     speed: 6
 	drag: 0.0045
     damage: 15
-	lifetime: 240
+	lifetime: 90
     bulletWidth: 3
     bulletHeight: 6
 	frontColor: 995D9A
@@ -80,7 +80,7 @@ ammo: {
     speed: 6
 	drag: 0.0065
     damage: 5
-	lifetime: 240
+	lifetime: 90
     bulletWidth: 3
     bulletHeight: 6
 	frontColor: 995D9A
