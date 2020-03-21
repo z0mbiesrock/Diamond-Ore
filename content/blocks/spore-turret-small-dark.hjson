@@ -12,7 +12,7 @@ shots: 1
 shootSound: pew
 inaccuracy: 24
 rotatespeed: 7
-buildVisibility: sandboxOnly
+buildVisibility: debugOnly
 layer: turret
 layer2: block
 outlineIcon: false
