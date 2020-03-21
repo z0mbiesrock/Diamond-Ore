@@ -1,0 +1,111 @@
+//type: DoubleTurret
+name: Small Spore Turret Dark
+description: Spore Turret
+health: 450
+ammoPerShot: 0
+size: 1
+reload: 20
+range: 200
+ammoUseEffect: smoke
+maxAmmo: 1
+shots: 1
+shootSound: pew
+inaccuracy: 24
+rotatespeed: 7
+buildVisibility: sandboxOnly
+layer: turret
+layer2: block
+outlineIcon: false
+expanded: true
+shootEffect: none
+smokeEffect: none
+recoil: -4
+restitution: 0.05
+ammo: {
+  copper: {
+    type: ArtilleryBulletType
+    speed: 6
+	drag: 0.0045
+    damage: 7
+	lifetime: 240
+    bulletWidth: 3
+    bulletHeight: 6
+	frontColor: 42336f
+	backColor: 6d54b7
+	hitSound: swings
+	trailEffect: wet
+    shootEffect: shootSmall
+    smokeEffect: none
+	splashDamage: 20
+	splashDamageRadius: 16
+	bulletShrink: 0
+	hitEffect: pulverize
+    ammoMultiplier: 1
+	pierce: false
+	bulletSprite: shell
+	homingPower: 0.00015
+	homingRange: 40
+	collides: true
+	collidesAir: true
+	collidesTiles: true
+  }
+  lead: {
+    type: ArtilleryBulletType
+    speed: 6
+	drag: 0.0045
+    damage: 20
+	lifetime: 240
+    bulletWidth: 3
+    bulletHeight: 6
+	frontColor: 42336f
+	backColor: 6d54b7
+	hitSound: swings
+	trailEffect: wet
+    shootEffect: shootSmall
+    smokeEffect: none
+	splashDamageRadius: -1
+	bulletShrink: 0
+	hitEffect: pulverize
+    ammoMultiplier: 1
+	pierce: false
+	bulletSprite: shell
+	homingPower: 3
+	homingRange: 40
+	collides: true
+	collidesAir: true
+	collidesTiles: true
+  }
+  scrap: {
+    type: ArtilleryBulletType
+    speed: 6
+	drag: 0.0075
+    damage: 7
+	lifetime: 240
+    bulletWidth: 4
+    bulletHeight: 6
+	frontColor: 42336f
+	backColor: 6d54b7
+	hitSound: swings
+	trailEffect: wet
+    shootEffect: shootSmall
+    smokeEffect: none
+	splashDamage: 25
+	splashDamageRadius: 24
+	bulletShrink: 0
+	hitEffect: pulverize
+    ammoMultiplier: 1
+	pierce: false
+	bulletSprite: shell
+	homingPower: 4
+	homingRange: 40
+	collides: true
+	collidesAir: true
+	collidesTiles: true
+  }
+}
+requirements: [
+  silicon/125
+  titanium/125
+]
+category: turret
+//research: swarmer

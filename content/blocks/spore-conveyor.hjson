@@ -1,0 +1,15 @@
+//type: Conveyor
+health: 700
+name: Spore Conveyor
+solid: true
+//update: true
+canOverdrive: false
+description: An organic way of transporting items. Not as fast as other conveyors, but very durable and can regenerate health.
+requirements: [
+  plastanium/3
+  dark-spore-pod/1
+]
+category: distribution
+speed: 0.125
+displayedSpeed: 7.5
+research: armored-conveyor
