@@ -32,7 +32,7 @@ const sporeBlockDeathFx = newEffect(80, e => {
     const d = new Floatc2({get(x, y){
     Fill.square(e.x + x, e.y + y, 0.25 + e.fout() * 1, 45 + e.rotation);
     }})
-    Angles.randLenVectors(e.id, 3, 0.5 + e.fin() * 9, d);
+    Angles.randLenVectors(e.id, 3, 0.5 + e.fin() * 16, d);
 });
 
 
@@ -53,6 +53,7 @@ sporeBlockDeath.collides = true;
 sporeBlockDeath.collidesAir = true;
 sporeBlockDeath.trailEffect = sporeBlockDeathTrail;
 sporeBlockDeath.hitEffect = sporeBlockDeathHit;
+sporeBlockDeath.hitSound = Sounds.none;
 sporeBlockDeath.despawnEffect = Fx.wet;
 sporeBlockDeath.hitSize = 5;
 sporeBlockDeath.pierce = true;
@@ -329,3 +330,92 @@ const sporeConveyor = extendContent(Conveyor, "spore-conveyor", {
 		}
 	},
 });
+const sporeUnitBirth = newEffect(72, e => {
+    Draw.color(Color.valueOf("#455085"), Color.valueOf("#995d9a"), e.fin());
+    const d = new Floatc2({get(x, y){
+    Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fslope() * 12 + 1);
+    }});
+    Lines.stroke(e.fout() * 5);
+    Angles.randLenVectors(e.id, 12, 1 + 18 * e.fin(), e.rotation, 360,d);
+    Draw.color(Color.valueOf("#455085"), Color.valueOf("#995d9a"), e.fout());
+    Lines.stroke(e.fout() * 12);
+    Lines.circle(e.x, e.y, e.fin() * 16);
+    const f = new Floatc2({get(x, y){
+    Fill.square(e.x + x, e.y + y, 0.25 + e.fout() * 1, 45 - e.rotation);
+    }});
+    Draw.color(Color.valueOf("#8d69db"), Color.valueOf("#995d9a"), Mathf.random(-1,1));
+    Angles.randLenVectors(e.id, 36, 1 + 24 * e.fin(), e.rotation, 360,f);
+});
+// UNUSED / BROKEN
+/* extendContent(UnitFactory, "spore-dagger-factory", {
+	init(){ 
+	this.super$init();
+	},
+	draw(tile){
+		Draw.rect(Core.atlas.find(this.name), tile.drawx(), tile.drawy());
+		if (tile.entity.cons.valid()){
+		growTime += tile.entity.delta() * tile.entity.efficiency() * Vars.state.rules.unitBuildSpeedMultiplier;
+		};
+		try{
+			spawnProgress = (growTime / this.produceTime);
+		}
+		catch(error){
+			growTime = 0;
+			spawnProgress = 0;
+		}
+		embryo = Core.atlas.find(this.unitType);
+		if (spawnProgress > 0.1){
+			if (spawnProgress < 0.7){
+				Draw.alpha(spawnProgress * 0.7);
+			}
+			else{
+				Draw.alpha((1 - spawnProgress) * 0.3);
+			}
+			Draw.rect(Core.atlas.find(this.name + "-sludge"), tile.drawx(), tile.drawy(), (spawnProgress * 360) + Mathf.random(-9,9));
+		}
+		Draw.alpha(Math.max(((spawnProgress * 2) - 1.4), 0));
+		Draw.rect(embryo, tile.drawx(), tile.drawy());
+		Draw.alpha(1);
+		if (spawnProgress < 0.04){
+			Draw.rect(Core.atlas.find(this.name + "-bud-burst"), tile.drawx(), tile.drawy());
+		}
+		else if (spawnProgress < 0.1){
+			Draw.rect(Core.atlas.find(this.name + "-bud-young"), tile.drawx(), tile.drawy());
+		}
+		else if (spawnProgress < 0.25){
+			Draw.rect(Core.atlas.find(this.name + "-bud-immature"), tile.drawx(), tile.drawy());
+		}
+		else if (spawnProgress < 1){
+			Draw.rect(Core.atlas.find(this.name + "-bud-mature"), tile.drawx(), tile.drawy());
+		}
+		else{
+			growTime = 0;
+			Sounds.laser.at(tile);
+			for(var k = 0; k < 7; k++){
+				Effects.effect(sporeUnitBirth, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
+			};
+		}
+		Draw.reset();
+	},
+	onDestroyed: function(tile){
+		this.super$onDestroyed(tile);
+		//const entity = tile.entity
+		if (growTime != null){
+			growth = Math.floor(((growTime / this.produceTime) * 30) + 8);
+		}
+		else{
+			growth = 8;
+		}
+        for(var i = 0; i < growth; i++){
+            Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.drawx(), tile.drawy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.75, 1.50));
+		}
+        for(var k = 0; k < 7; k++){
+			Effects.effect(sporeBlockDeathFx, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
+		}
+	},
+    generateIcons(){
+        return [
+            Core.atlas.find(this.name)
+        ];
+    }
+}); */
