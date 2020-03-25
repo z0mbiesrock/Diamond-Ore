@@ -1,0 +1,35 @@
+//type: GenericCrafter
+name: Heavy Coal Processor
+description: A larger and more efficient Coal Centrifuge. Uses a lot of power to efficiently solidify oil into chunks of coal.
+itemCapacity: 30
+liquidCapacity: 150
+health: 1200
+size: 4
+hasPower: true
+hasLiquids: true
+hasItems: true
+craftTime: 60
+craftEffect: steam
+updateEffect: oily
+consumes: {
+  power: 6.7
+  liquid: {
+    liquid: oil
+    amount: 0.12
+  }
+}
+requirements: [
+  lead/200
+  graphite/100
+  silicon/15
+  titanium/85
+  diamond/125
+  cryogem/5
+]
+category: crafting
+research: diamond-synthesizer
+idleSound: respawning
+idleSoundVolume: 0.5
+activeSound: machine
+activeSoundVolume: 1.05
+outputItem: coal/6

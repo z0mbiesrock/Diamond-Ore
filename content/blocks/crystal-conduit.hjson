@@ -1,0 +1,17 @@
+type: Conduit
+health: 500
+name: Crystal Conduit
+solid: true
+floating: true
+liquidCapacity: 5
+liquidPressure: 2.3
+leakResistance: 5
+description: A stronger conduit block. Although it has a lower storage capacity than regular conduits, it transports liquids much faster.
+requirements: [
+  metaglass/2
+  silicon/2
+  graphite/2
+  diamond/2
+]
+category: liquid
+research: reinforced-liquid-tank

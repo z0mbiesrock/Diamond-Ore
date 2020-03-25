@@ -6,7 +6,7 @@ size: 2
 update: true
 buildCostMultiplier: 2.5
 requirements: [
-  dark-spore-pod/5
+  dark-spore-pod/20
 ]
 category: defense
 research: dark-spore-block

@@ -1,4 +1,4 @@
-type: GenericCrafter
+//type: GenericCrafter
 name: Multi-Pyra Mixer
 description: A larger, sturdier, and more efficient Pyratite mixer.
 itemCapacity: 20
