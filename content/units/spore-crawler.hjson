@@ -1,8 +1,8 @@
 type: GroundUnit
 name: Spore Crawler
 description: Suicidal explosive ground unit. Releases sticky corrosive fluids in all directions upon detonating.
-speed: 0.17
-maxVelocity: 0.6
+speed: 0.19
+maxVelocity: 0.7
 drag: 0.14
 flying: false
 health: 180
