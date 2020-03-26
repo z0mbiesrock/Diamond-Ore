@@ -3,6 +3,7 @@ description: Produces spore pods passively.
 //type: Cultivator
 health: 480
 rotate: true
+breakSound: sporesplat
 size: 1
 itemCapacity: 1
 outputItem: spore-pod/1
