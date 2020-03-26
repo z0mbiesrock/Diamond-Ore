@@ -112,6 +112,7 @@ extendContent(Cultivator, "sporecluster", {
             }
       },
 	onDestroyed: function(tile){
+	this.breakSound.at(tile);
         for(var i = 0; i < 10; i++){
             Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
 			Effects.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
@@ -138,6 +139,7 @@ extendContent(Cultivator, "sporeclusterb", {
             }
       },
 	onDestroyed: function(tile){
+	this.breakSound.at(tile);
         for(var i = 0; i < 10; i++){
             Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
 			Effects.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
@@ -164,6 +166,7 @@ extendContent(Cultivator, "sporeclusterc", {
             }
       },
 	onDestroyed: function(tile){
+	this.breakSound.at(tile);
         for(var i = 0; i < 10; i++){
             Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
 			Effects.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
@@ -190,6 +193,7 @@ extendContent(Cultivator, "sporeclusterd", {
             }
       },
 	onDestroyed: function(tile){
+	this.breakSound.at(tile);
         for(var i = 0; i < 10; i++){
             Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
 			Effects.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
