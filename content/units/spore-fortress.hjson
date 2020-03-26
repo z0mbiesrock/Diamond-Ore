@@ -1,10 +1,10 @@
 type: GroundUnit
 name: Spore Fortress
-description: A heavy artillery mech infested with mutant spores. Moves slowly, but spews lots of damaging fluids. Explodes into rapidly-evaporating droplets when killed.
+description: A heavy artillery mech infested with mutant spores. Moves slowly, but spews lots of damaging fluids and can absorb a lot of damage. Explodes into rapidly-evaporating droplets when killed.
 speed: 0.07
 maxVelocity: 0.15
 flying: false
-health: 1200
+health: 2000
 mass: 7
 //engineOffset: 0
 //engineSize: 1
