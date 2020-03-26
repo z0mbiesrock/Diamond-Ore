@@ -47,7 +47,7 @@ sporeBlockDeath.bulletWidth = 4;
 sporeBlockDeath.bulletHeight = 5;
 sporeBlockDeath.bulletShrink = 0;
 sporeBlockDeath.hitShake = 0;
-sporeBlockDeath.lifetime = 60;
+sporeBlockDeath.lifetime = 80;
 sporeBlockDeath.collidesTiles = true;
 sporeBlockDeath.collides = true;
 sporeBlockDeath.collidesAir = true;
@@ -112,7 +112,6 @@ extendContent(Cultivator, "sporecluster", {
             }
       },
 	onDestroyed: function(tile){
-		this.super$onDestroyed(tile);
         for(var i = 0; i < 10; i++){
             Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
 			Effects.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
@@ -139,7 +138,6 @@ extendContent(Cultivator, "sporeclusterb", {
             }
       },
 	onDestroyed: function(tile){
-		this.super$onDestroyed(tile);
         for(var i = 0; i < 10; i++){
             Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
 			Effects.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
@@ -166,7 +164,6 @@ extendContent(Cultivator, "sporeclusterc", {
             }
       },
 	onDestroyed: function(tile){
-		this.super$onDestroyed(tile);
         for(var i = 0; i < 10; i++){
             Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
 			Effects.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
@@ -193,7 +190,6 @@ extendContent(Cultivator, "sporeclusterd", {
             }
       },
 	onDestroyed: function(tile){
-		this.super$onDestroyed(tile);
         for(var i = 0; i < 10; i++){
             Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
 			Effects.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
