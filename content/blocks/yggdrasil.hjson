@@ -22,78 +22,7 @@ chargeEffects: 60
 chargeTime: 300
 chargeMaxDelay: 300
 shootShake: 9
-shootType: {
-    type: MissileBulletType
-    speed: 8
-    damage: 1500
-	lifetime: 300
-    bulletWidth: 40
-    bulletHeight: 45
-	hitSize: 20
-	frontColor: ffffbb
-	backColor: ffff00
-	trailColor: ffff00
-    shootEffect: shootBig2
-    smokeEffect: shootBigSmoke
-	splashDamage: 9000
-	splashDamageRadius: 120
-	bulletShrink: 0
-	hitShake: 15
-	hitEffect: mineHuge
-	despawnEffect: flakExplosionBig
-    lightningLength: 150
-    lightining: 6
-	pierce: false
-	bulletSprite: diamond-ore-diamondbullet
-	homingPower: 0
-	homingRange: 0
-	fragBullets: 10
-	fragVelocityMin: 1
-	fragVelocityMax: 1
-	status: shocked
-	statusDuration: 300
-	fragBullet: {
-      type: BasicBulletType
-      //speed: 1
-	  instantDisappear: true
-	  fragBullets: 20
-	  fragVelocityMin: 0.72
-	  fragVelocityMax: 12
-      bulletWidth: 0
-      bulletHeight: 0
-	  despawnEffect: nuclearShockwave
-	  hitEffect: nuclearShockwave
-	  frontColor: ffff77
-	  backColor: ffff77
-	  pierce: false
-      lightningLength: 45
-      lightining: 1
-	  status: shocked
-	  statusDuration: 300
-	  fragBullet: {
-        type: MissileBulletType
-	    homingPower: 0
-	    homingRange: 0
-	    lifetime: 20
-        damage: 300
-        bulletWidth: 25
-        bulletHeight: 200
-	    bulletShrink: 0.75
-	    despawnEffect: none
-	    hitEffect: none
-	    frontColor: ffffbb
-	    backColor: ffff00
-	    trailColor: ffff00
-	    pierce: true
-        //lightningLength: 60
-        //lightining: 1
-	    knockback: 1666
-	    status: shocked
-	    statusDuration: 300
-	    bulletSprite: bullet
-		}
-    }
-}
+
 requirements: [
   diamond/4000
   cryogem/1250
