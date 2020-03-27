@@ -89,4 +89,8 @@ Blast Furnace - A larger kiln that is slower, but more efficient and has a large
 
 Cryofluid Centrifuge - Larger more efficient cryofluid mixer.
 
+Heavy Coal Processor - Larger more efficient Coal Centrifuge.
+
+Multi-Melter - Larger melter that melts a lot of scrap into slag at once.
+
 Omni Drill - A huge power-hungry drill.
