@@ -44,7 +44,10 @@ const sporeFortress = extendContent(UnitType, "spore-fortress", {
 sporeFortress.create(prov(() => new JavaAdapter(GroundUnit, { 
     onDeath(){
         Sounds.explosionbig.at(this);
-        for(var i = 0; i < 40; i++){
+        for(var i = 0; i < 30; i++){
+            Calls.createBullet(DeathGoo, this.getTeam(), this.x, this.y, Mathf.random(360), Mathf.random(0.45, 1.2), Mathf.random(0.4, 1.0));
+		}
+        for(var i = 0; i < 10; i++){
             Calls.createBullet(DeathGoo, Team.derelict, this.x, this.y, Mathf.random(360), Mathf.random(0.45, 1.2), Mathf.random(0.4, 1.0));
 		}
     this.super$onDeath();

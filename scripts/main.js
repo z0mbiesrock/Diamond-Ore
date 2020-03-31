@@ -12,4 +12,5 @@ require("water-decorruptor")
 require("multipyra")
 require("spore-blocks")
 require("heavy-coal-processor")
+require("lambdaship")
 
