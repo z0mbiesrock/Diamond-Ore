@@ -1,8 +1,9 @@
 name: Epsilon Ship Pad
-description: Transforms the ship into a slow but heavily armored mining ship.
+description: Provides transformation into a slow but heavily armored mining ship. Use by tapping while standing on it.
 type: MechPad
 mech: epsilon-mech
 size: 3
+liquidCapacity: 30
 consumes: {
   power: 1.5
   liquid: {

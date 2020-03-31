@@ -1,5 +1,5 @@
 name: Tempest Mech Pad
-description: Transforms the ship into a large electric mech.
+description: Provides transformation into a large electric mech. Use by tapping while standing on it.
 type: MechPad
 mech: tempest-mech
 size: 6

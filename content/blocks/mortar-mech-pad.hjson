@@ -1,9 +1,10 @@
 name: Mortar Mech Pad
-description: Transforms the ship into a long-range artillery mech.
+description: Provides transformation into a long-range artillery mech. Use by tapping while standing on it.
 type: MechPad
 mech: mortar-mech
 size: 3
 buildTime: 120
+liquidCapacity: 30
 consumes: {
   power: 3
   liquid: {

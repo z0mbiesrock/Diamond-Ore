@@ -1,0 +1,33 @@
+name: Destroyer Fighter Factory
+description: A pad that uses massive amounts of power and resources to manufacture a slow, expensive, sturdy, and powerful battleship.
+type: UnitFactory
+unitType: destroyer-fighter
+size: 4
+buildCostMultiplier: 0.45
+//buildVisibility: hidden
+//buildVisibility: sandboxOnly
+health: 3200
+produceTime: 4500
+maxSpawn: 1
+consumes: {
+  power: 105
+  items: {
+    items: [
+      scrap/60
+      titanium/50
+      silicon/55
+	  thorium/25
+      diamond/30
+    ]
+  }
+}
+category: units
+research: water-decorruptor
+requirements: [
+  titanium/1000
+  silicon/1250
+  thorium/750
+  surge-alloy/1000
+  diamond/1500
+  cryogem/500
+]

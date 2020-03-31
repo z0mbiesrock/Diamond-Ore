@@ -1,0 +1,26 @@
+name: Lambda Ship Pad
+description: Provides transformation into a large ship that can teleport. Use by tapping while standing on it.
+//type: MechPad
+//mech: lambda-mech
+size: 5
+health: 2500
+liquidCapacity: 150
+consumes: {
+  power: 15
+  liquid: {
+    liquid: phase-string
+    amount: 1.3
+    booster: false
+	optional: false
+  }
+}
+category: upgrade
+research: tau-mech-pad
+requirements: [
+  diamond/25
+  graphite/400
+  silicon/400
+  metaglass/330
+  plastanium/500
+  surge-alloy/200
+]
