@@ -30,6 +30,7 @@ weapon: {
   lengthRand: 0.45
   alternate: true
   shootSound: laser
+  ignoreRotation: true
   bullet: {
     type: ArtilleryBulletType
     speed: 12

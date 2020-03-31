@@ -1,0 +1,21 @@
+type: BuilderDrone
+name: Apparition Builder Drone
+description: A more advanced version of the Phantom Builder Drone.
+speed: 0.625
+drag: 0.125
+mass: 7
+maxVelocity: 1.35
+flying: true
+health: 750
+engineOffset: 5.75
+range: 120
+buildPower: 0.95
+retreatPercent: 0.3
+toMine: [thorium]
+weapon: {
+  name: clear
+  length: 1.5
+  reload: 10
+  alternate: true
+  bullet: lightning
+}

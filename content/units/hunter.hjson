@@ -7,8 +7,9 @@ flying: false
 health: 1500
 mass: 200
 range: 160
+hitsize: 6
+hitsizeTile: 6
 attackLength: 60
-retreatPercent: 0.4
 shootCone: 135
 rotatespeed: 0.2
 baseRotateSpeed: 0.15
@@ -21,6 +22,7 @@ weapon: {
   reload: 160
   shots: 25
   alternate: true
+  ignoreRotation: true
   recoil: 0
   width: 7
   shootSound: bang

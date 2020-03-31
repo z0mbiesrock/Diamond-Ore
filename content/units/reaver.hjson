@@ -1,9 +1,12 @@
 type: GroundUnit
 name: Reaver
-description: An assault unit with high movement speed. Launches fast high-damage homing missiles.
+description: An evasive assault unit with high movement speed. Launches fast high-damage homing missiles.
 speed: 0.4
 maxVelocity: 2.75
+drag: 0.3
 flying: false
+hitsize: 1
+hitsizeTile: 8
 health: 450
 mass: 6
 range: 144

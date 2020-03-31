@@ -3,11 +3,13 @@ name: Firefly
 description: Durable flying siege unit. Selfdestructs above a target structure, raining incendiary napalm.
 speed: 0.275
 maxVelocity: 1.475
+drag: 0.200
 hitsize: 11
+hitsizeTile: 11
 flying: true
 health: 750
-mass: 6
-engineColor: "ffbb00"
+mass: 12
+//engineColor: "ffbb00"
 engineOffset: 7
 engineSize: 6
 range: 240

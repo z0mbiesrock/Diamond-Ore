@@ -3,6 +3,7 @@ name: Taser Fighter
 description: A flying unit that fires powerful balls of lightning.
 speed: 0.25
 maxVelocity: 0.35
+drag: 0.235
 flying: true
 health: 500
 engineOffset: -7

@@ -1,0 +1,58 @@
+type: FlyingUnit
+name: Destroyer Fighter
+description: A large heavily-armored battleship. Fires volleys of powerful homing missiles.
+speed: 0.175
+drag: 0.165
+maxVelocity: 0.965
+hitsize: 24
+hitsizeTile: 24
+flying: true
+health: 3600
+mass: 90
+engineOffset: 7
+engineSize: 4
+range: 400
+attackLength: 180
+retreatPercent: 0
+shootCone: 270
+rotatespeed: 0.144
+baseRotateSpeed: 0.05
+rotateWeapon: true
+weaponOffsetY: -2
+targetAir: true
+immunities: [shocked, wet, tarred, corroded, freezing]
+weapon: {
+  //name: clear
+  length: 0
+  reload: 180
+  shots: 4
+  spacing: 6
+  shotDelay: 12
+  alternate: true
+  ignoreRotation: true
+  recoil: 0
+  width: 4
+  shootSound: bigshot
+  shootEffect: none
+  bullet: {
+    type: MissileBulletType
+    speed: 4.2
+    damage: 32
+	splashDamage: 128
+	splashDamageRadius: 16
+    bulletWidth: 3
+    bulletHeight: 9
+	bulletShrink: 0
+	lifetime: 70
+	frontColor: 998844
+	backColor: 776f33
+	trailColor: ddaa55
+	hitEffect: flakExplosion
+	pierce: false
+	weaveScale: 2
+	weaveMag: -3
+	homingPower: 15
+	homingRange: 64
+	bulletSprite: diamond-ore-diamondmissile
+	}
+}

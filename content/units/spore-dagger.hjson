@@ -12,10 +12,10 @@ mass: 2
 range: 150
 attackLength: 150
 //retreatPercent: 0.
-//shootCone: 360
+shootCone: 150
 //rotatespeed: 0.2
 //baseRotateSpeed: 0.1
-//rotateWeapon: true
+rotateWeapon: true
 //weaponOffsetY: 3
 //targetAir: false
 immunities: [shocked, wet, tarred, corroded, freezing]
@@ -27,6 +27,7 @@ weapon: {
   shots: 1
   alternate: true
   shootSound: shoot
+  ignoreRotation: true
   bullet: {
     type: BasicBulletType
     speed: 5

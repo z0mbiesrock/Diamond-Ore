@@ -29,6 +29,7 @@ weapon: {
   spacing: 6
   alternate: true
   shootSound: flame
+  ignoreRotation: true
   bullet: {
     type: BasicBulletType
     speed: 5

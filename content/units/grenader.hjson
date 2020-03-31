@@ -6,6 +6,8 @@ maxVelocity: 0.975
 flying: false
 health: 450
 mass: 6
+hitsize: 5
+hitsizeTile: 5
 //engineOffset: 0
 //engineSize: 1
 range: 96
@@ -23,8 +25,6 @@ weapon: {
   reload: 120
   shots: 1
   alternate: true
-  velocityRnd: 0.3
-  lengthRand: 0.3
   recoil: 5
   width: 6
   shootSound: shootBig

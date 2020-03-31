@@ -3,6 +3,7 @@ name: Purger
 //description: A flying unit that fires powerful balls of lightning.
 speed: 0.15
 maxVelocity: 0.95
+drag: 0.125
 flying: true
 rotateWeapon: false
 health: 21500
@@ -20,9 +21,9 @@ retreatPercent: 0.8
 weaponOffsetY: 40
 immunities: [shocked, wet, tarred, corroded, freezing]
 weapon: {
-  name: purger-plasma
+  //name: purger-plasma
   length: 36
-  reload: 200
+  reload: 210
   alternate: true
   recoil: 0
   width: 0
@@ -85,8 +86,33 @@ weapon: {
 	  bulletSprite: diamond-ore-diamondbullet
 	  fragBullets: 1
 	  fragVelocityMin: 0.25
-	  fragVelocityMax: 1
-	  fragBullet: flakSurge
+	  fragVelocityMax: 1.5
+	  fragBullet: {
+        type: MissileBulletType
+	    lifetime: 40
+        damage: 20
+        bulletWidth: 4
+        bulletHeight: 4
+	    bulletShrink: 0
+	    despawnEffect: none
+	    hitEffect: none
+	    shootEffect: lightningShoot
+        smokeEffect: shootBig2
+	    frontColor: ffdd77
+	    backColor: dcba99
+	    trailColor: ffffee
+	    pierce: false
+	    weaveScale: 1.3
+	    weaveMag: 2.3
+	    knockback: 150
+        lightningLength: 10
+        lightining: 2
+        homingPower: 2
+        homingRange: 16
+	    status: shocked
+	    statusDuration: 20
+	    bulletSprite: diamond-ore-diamondbullet
+	  }
 	}
   }
 }
