@@ -46,21 +46,38 @@ const lambdaTeleportExitFx = newEffect(80, e => {
 });
 
 const lambdaTeleportPush = extend(BasicBulletType, {});
-lambdaTeleportPush.speed = 8;
-lambdaTeleportPush.lifetime = 15;
+lambdaTeleportPush.lifetime = 5;
 lambdaTeleportPush.damage = 2;
 lambdaTeleportPush.bulletWidth = 0;
 lambdaTeleportPush.bulletHeight = 0;
-lambdaTeleportPush.hitSize = 10;
 lambdaTeleportPush.bulletShrink = 1;
 lambdaTeleportPush.knockback = 5000;
 lambdaTeleportPush.hitShake = 0;
 lambdaTeleportPush.frontColor = Color.valueOf("#efe4ca");
 lambdaTeleportPush.backColor = Color.valueOf("#e3a880");
-lambdaTeleportPush.pierce = true;
+lambdaTeleportPush.pierce = false;
 lambdaTeleportPush.despawnEffect = Fx.none;
 lambdaTeleportPush.hitEffect = Fx.none;
 lambdaTeleportPush.hitSound = Sounds.none;
+
+const lambdaTeleportPushSource = extend(BasicBulletType, {});
+lambdaTeleportPushSource.speed = 8;
+lambdaTeleportPushSource.lifetime = 15;
+lambdaTeleportPushSource.damage = 2;
+lambdaTeleportPushSource.bulletWidth = 0;
+lambdaTeleportPushSource.bulletHeight = 0;
+lambdaTeleportPushSource.bulletShrink = 1;
+lambdaTeleportPushSource.hitShake = 0;
+lambdaTeleportPushSource.frontColor = Color.valueOf("#efe4ca");
+lambdaTeleportPushSource.backColor = Color.valueOf("#e3a880");
+lambdaTeleportPushSource.pierce = true;
+lambdaTeleportPushSource.despawnEffect = Fx.none;
+lambdaTeleportPushSource.hitEffect = Fx.none;
+lambdaTeleportPushSource.hitSound = Sounds.none;
+lambdaTeleportPushSource.fragBullets = 8;
+lambdaTeleportPushSource.fragBullet = lambdaTeleportPush;
+lambdaTeleportPushSource.fragVelocityMin = 4;
+lambdaTeleportPushSource.fragVelocityMax = 8;
 
 const lambdaShip = extendContent(Mech, "lambda-mech", {
 	// OVERRIDE
@@ -73,13 +90,14 @@ const lambdaShip = extendContent(Mech, "lambda-mech", {
 			Effects.effect(lambdaTeleportReadyFx, player.x, player.y, Mathf.random(-360,360));
 			if(Core.input.keyDown(Binding.dash)){
 				Effects.effect(lambdaTeleportEnterFx, player.x, player.y, Mathf.random(-360,360));
+				Sounds.respawn.at(player);
 				player.x = player.pointerX;
 				player.y = player.pointerY;
 				Sounds.laser.at(player);
-				this.abilityCooldown = 135;
+				this.abilityCooldown = 90;
 				Effects.effect(lambdaTeleportExitFx, player.x, player.y, Mathf.random(-360,360));
 				for(var i = 0; i < 48; i++){
-					Calls.createBullet(lambdaTeleportPush, player.getTeam(), player.x, player.y, 7.5 * i, 1, 1);
+					Calls.createBullet(lambdaTeleportPushSource, player.getTeam(), player.x, player.y, 7.5 * i, 1, 1);
 				}
 			}
 		}
@@ -88,7 +106,7 @@ const lambdaShip = extendContent(Mech, "lambda-mech", {
 		}
 	},
 });
-lambdaShip.abilityCooldown = 135;
+lambdaShip.abilityCooldown = 90;
 
 const lambdaWeaponBullet = extend(BasicBulletType, {});
 lambdaWeaponBullet.speed = 4;
@@ -115,7 +133,7 @@ lambdaWeapon.shots = 20;
 lambdaWeapon.reload = 95;
 lambdaWeapon.recoil = 0;
 lambdaWeapon.spacing = 0;
-lambdaWeapon.inaccuracy = 12;
+lambdaWeapon.inaccuracy = 15;
 lambdaWeapon.velocityRnd = 0.5;
 lambdaWeapon.lengthRand = 0.1;
 lambdaWeapon.alternate = true;
@@ -124,9 +142,9 @@ lambdaWeapon.bullet = lambdaWeaponBullet;
 
 lambdaShip.region = region = Core.atlas.find(lambdaShip.name);
 lambdaShip.description = "A ship with accelerated construction capabilities. Uses a shotgun that fires disruptive bullets.";
-lambdaShip.speed = 0.3;
+lambdaShip.speed = 0.36;
 lambdaShip.drag = 0.12;
-lambdaShip.maxSpeed = 1.25;
+lambdaShip.maxSpeed = 1.55;
 lambdaShip.boostSpeed = 2.0;
 lambdaShip.buildPower = 5;
 lambdaShip.mineSpeed = 0.6;
@@ -138,7 +156,7 @@ lambdaShip.engineSize = 4.44;
 lambdaShip.flying = true;
 lambdaShip.cellTrnsY = 4;
 lambdaShip.health = 700;
-lambdaShip.engineOffset = 11;
+lambdaShip.engineOffset = 14;
 lambdaShip.weaponOffsetX = 5;
 lambdaShip.weaponOffsetY = -2;
 lambdaShip.weapon = lambdaWeapon;
