@@ -39,7 +39,7 @@ weapon: {
 	splashDamage: 40
 	splashDamageRadius: 36
 	fragBullets: 10
-	fragVelocityMin: 0.3
+	fragVelocityMin: 0.375
 	fragVelocityMax: 1.05
 	fragBullet: {
         type: HealBulletType
