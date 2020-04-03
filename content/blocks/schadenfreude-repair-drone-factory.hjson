@@ -1,5 +1,5 @@
 name: Schadenfreude Repair Drone Factory
-description: A pad that manufactures advanced builder drones to assist in construction. Has a very complex and expensive recipe.
+description: A pad that manufactures advanced repair drones that drop reconstruction bombs. Has a very complex and expensive recipe.
 type: UnitFactory
 unitType: schadenfreude-repair-drone
 size: 3
