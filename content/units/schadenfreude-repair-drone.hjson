@@ -1,0 +1,64 @@
+type: RepairDrone
+name: Schadenfreude Repair Drone
+description: A larger and more advanced version of the Spirit Repair Drone. Instead of firing healing laser pulses, it drops powerful healing bombs.
+speed: 0.18
+drag: 0.09
+mass: 100
+maxVelocity: 2.75
+flying: true
+health: 1800
+engineOffset: 5.75
+engineSize: 3.75
+range: 12
+buildPower: 0.95
+retreatPercent: 0.5
+rotatespeed: 0.15
+baseRotateSpeed: 0.096
+weapon: {
+  name: clear
+  length: 0
+  width: 0
+  length: 1.5
+  velocityRnd: 0.3
+  shots: 1
+  reload: 80
+  inaccuracy: 360
+  alternate: true
+  shootSound: shootBig
+  bullet: {
+    type: BombBulletType
+    bulletWidth: 4
+    bulletHeight: 16
+	frontColor: 77ccff
+	backColor: 00ff00
+	//trailColor: 666666
+    despawnEffect: ripple
+	hitEffect: smelt
+	pierce: false
+	bulletSprite: diamond-ore-diamondshell
+	splashDamage: 40
+	splashDamageRadius: 36
+	fragBullets: 10
+	fragVelocityMin: 0.3
+	fragVelocityMax: 1.05
+	fragBullet: {
+        type: HealBulletType
+        //keepVelocity: true
+		drag: 0.0075
+	    lifetime: 24
+        damage: 10
+        healPercent: 2.5
+	    collidesAir: false
+        bulletWidth: 3
+        bulletHeight: 3
+        bulletShrink: 0
+	    frontColor: 229999
+	    backColor: 69ff69
+	    pierce: true
+        despawnEffect: shootHeal
+	    hitEffect: shootHeal
+	    bulletSprite: diamond-ore-diamondshell
+	    knockback: 7.5
+    }
+  }
+}

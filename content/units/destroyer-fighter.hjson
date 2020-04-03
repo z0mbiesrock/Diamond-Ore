@@ -9,7 +9,7 @@ hitsizeTile: 24
 flying: true
 health: 3600
 mass: 90
-engineOffset: 7
+engineOffset: 13
 engineSize: 4
 range: 400
 attackLength: 180
@@ -24,8 +24,8 @@ immunities: [shocked, wet, tarred, corroded, freezing]
 weapon: {
   //name: clear
   length: 0
-  reload: 180
-  shots: 4
+  reload: 190
+  shots: 5
   spacing: 6
   shotDelay: 12
   alternate: true
