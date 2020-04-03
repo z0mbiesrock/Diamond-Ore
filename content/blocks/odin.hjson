@@ -3,12 +3,12 @@ name: Odin
 description: A large rapid-fire anti-air burstfire turret that fires concussive shells.
 health: 1700
 size: 3
-reload: 140
+reload: 200
 burstSpacing: 4
 range: 294
 ammoUseEffect: none
 coolantMultiplier: 6
-maxAmmo: 40
+maxAmmo: 80
 inaccuracy: 6
 rotatespeed: 12
 shootSound: artillery

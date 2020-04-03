@@ -123,6 +123,52 @@ ammo: {
 	statusDuration: 720
 	bulletSprite: diamond-ore-diamondshell
   }
+  blast-compound: {
+    type: ArtilleryBulletType
+	collides: true
+	collidesTiles: true
+    speed: 4
+    damage: 15
+	lifetime: 60
+    bulletWidth: 5
+    bulletHeight: 20
+	frontColor: eebb77
+	backColor: eebb88
+    trailEffect: burning
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
+	hitEffect: hitFuse
+	despawnEffect: hitFuse
+    ammoMultiplier: 1
+	reloadMultiplier: 0.6
+	pierce: true
+	knockback: 15
+	bulletSprite: shell
+	bulletShrink: 0.1
+	fragBullets: 4
+	fragVelocityMin: 0.25
+	fragVelocityMax: 1.25
+	fragBullet: {
+      type: ArtilleryBulletType
+      speed: 1
+	  lifetime: 40
+      damage: 5
+      bulletWidth: 2
+      bulletHeight: 4
+      trailEffect: melting
+	  despawnEffect: hitBulletBig
+	  hitEffect: hitBulletBig
+	  frontColor: ffa044
+	  backColor: ff6614
+	  pierce: true
+	  knockback: 10
+	  bulletSprite: diamond-ore-diamondshell
+	  homingPower: 0.03
+	  homingRange: 60
+	  splashDamage: 15
+	  splashDamageRadius: 15
+    }
+  }
   cryogem: {
     type: BasicBulletType
 	collidesAir: false

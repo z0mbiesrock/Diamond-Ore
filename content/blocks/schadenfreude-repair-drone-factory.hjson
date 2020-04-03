@@ -1,0 +1,39 @@
+name: Schadenfreude Repair Drone Factory
+description: A pad that manufactures advanced builder drones to assist in construction. Has a very complex and expensive recipe.
+type: UnitFactory
+unitType: schadenfreude-repair-drone
+size: 3
+buildCostMultiplier: 0.75
+//buildVisibility: hidden
+//buildVisibility: sandboxOnly
+health: 450
+produceTime: 3600
+//canOverdrive: false
+maxSpawn: 4
+consumes: {
+  power: 6.25
+  items: {
+    items: [
+      lead/30
+      graphite/30
+      titanium/30
+      silicon/30
+      phase-fabric/30
+      diamond/30
+      blast-compound/5
+      thorium/5
+      cryogem/5
+    ]
+  }
+}
+category: units
+research: apparition-builder-drone-factory
+requirements: [
+  copper/1200
+  graphite/1400
+  plastanium/200
+  thorium/800
+  surge-alloy/100
+  cryogem/100
+  dark-spore-pod/100
+]
