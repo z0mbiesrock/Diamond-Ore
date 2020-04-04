@@ -38,7 +38,7 @@ weapon: {
 	bulletSprite: diamond-ore-diamondshell
 	splashDamage: 40
 	splashDamageRadius: 36
-	fragBullets: 10
+	fragBullets: 12
 	fragVelocityMin: 0.375
 	fragVelocityMax: 1.05
 	fragBullet: {
