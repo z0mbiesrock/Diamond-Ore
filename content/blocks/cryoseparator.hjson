@@ -10,7 +10,6 @@ hasLiquids: true
 hasItems: true
 craftTime: 12
 spinnerSpeed: 16
-updateEffect: pulverizeRedder
 consumes: {
   power: 7.2
   liquid: {

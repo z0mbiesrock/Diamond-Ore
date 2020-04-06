@@ -337,6 +337,48 @@ ammo: {
 	  }
     }
   }
+  graphite: {
+    type: ArtilleryBulletType
+    speed: 10
+    damage: 50
+	lifetime: 33
+    bulletWidth: 4
+    bulletHeight: 11
+    bulletShrink: 0
+	frontColor: 00aabb
+	backColor: 44aadd
+	trailEffect: freezing
+    shootEffect: shootSmall
+    despawnEffect: ripple
+	hitEffect: shockwave
+    ammoMultiplier: 1
+	bulletShrink: 0
+	reloadMultiplier: 0.6
+	collides: true
+	collidesTiles: true
+	collidesAir: true
+	pierce: true
+	bulletSprite: diamond-ore-diamondbullet
+	fragBullets: 30
+	fragVelocityMin: 4.5
+	fragVelocityMax: 4.5
+	fragBullet: {
+      type: BasicBulletType
+      speed: 1
+	  drag: 0.1
+	  lifetime: 20
+      damage: 0.1
+      bulletWidth: 1.5
+      bulletHeight: 3
+	  despawnEffect: none
+	  hitEffect: none
+	  frontColor: 00aabb
+	  backColor: 44aadd
+	  pierce: false
+	  knockback: 50
+	  bulletSprite: diamond-ore-diamondbullet
+    }
+  }
 }
 requirements: [
   diamond/24

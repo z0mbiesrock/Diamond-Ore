@@ -1,0 +1,49 @@
+type: GroundUnit
+name: Spiker
+description: Offensive ground unit. Can soak up a decent amount of damage and has a piercing melee attack.
+speed: 0.25
+maxVelocity: 1.5
+flying: false
+health: 1500
+mass: 6
+engineOffset: 0
+engineSize: 1
+drag: 0.0625
+range: 300
+retreatPercent: 0
+attackLength: 1
+shootCone: 360
+rotatespeed: 0.4
+baseRotateSpeed: 0.06
+rotateWeapon: true
+weaponOffsetY: 0
+targetAir: false
+weapon: {
+  name: spiker-spike
+  length: 2
+  reload: 60
+  shots: 5
+  alternate: false
+  ignoreRotation: true
+  sequenceNum: -1
+  recoil: -4
+  width: 0
+  bullet: {
+    type: BasicBulletType
+    speed: 2
+	lifetime: 8
+    damage: 25
+    bulletWidth: 2
+    bulletHeight: 8
+	frontColor: 666666
+	backColor: 666666
+    shootEffect: none
+    smokeEffect: none
+    despawnEffect: none
+	hitEffect: hitLancer
+	pierce: false
+	knockback: 700
+	bulletSprite: missile
+	inaccuracy: 0
+  }
+}

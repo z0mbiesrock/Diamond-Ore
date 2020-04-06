@@ -32,8 +32,8 @@ weapon: {
 	frontColor: 77ccff
 	backColor: 00ff00
 	//trailColor: 666666
-    despawnEffect: ripple
-	hitEffect: smelt
+    despawnEffect: heal
+	hitEffect: ripple
 	pierce: false
 	bulletSprite: diamond-ore-diamondshell
 	splashDamage: 40
@@ -51,8 +51,8 @@ weapon: {
 	    collidesAir: false
         bulletWidth: 3
         bulletHeight: 3
-        bulletShrink: 0
-	    frontColor: 229999
+        bulletShrink: 1
+	    frontColor: 227777
 	    backColor: 69ff69
 	    pierce: true
         despawnEffect: shootHeal

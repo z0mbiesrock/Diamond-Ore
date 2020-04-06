@@ -1,0 +1,28 @@
+type: GroundUnit
+name: Fixer
+description: Support ground unit. Heals nearby friendly units. Protects itself with lightning arcs.
+speed: 0.16
+maxVelocity: 1.175
+flying: false
+health: 200
+mass: 2
+engineOffset: 0
+engineSize: 1
+drag: 0.0625
+range: 240
+shootCone: 360
+rotatespeed: 0.2
+baseRotateSpeed: 0.1
+retreatPercent: 0.99
+rotateWeapon: true
+weaponOffsetY: 0
+update: true
+weapon: {
+  name: clear
+  length: 0
+  reload: 20
+  alternate: true
+  recoil: 0
+  width: 0
+  bullet: arc
+}

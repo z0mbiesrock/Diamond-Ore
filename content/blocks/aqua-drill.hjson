@@ -4,7 +4,6 @@ type: SolidPump
 health: 150
 size: 1
 liquidCapacity: 20
-warmupSpeed: 0.005
 rotateSpeed: 3
 hasPower: true
 updateEffect: wet

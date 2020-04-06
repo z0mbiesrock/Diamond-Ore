@@ -1,0 +1,30 @@
+name: Spiker Mech Factory
+description: A pad that manufactures durable melee attackers. 
+type: UnitFactory
+unitType: spiker
+size: 2
+//buildVisibility: hidden
+buildVisibility: sandboxOnly
+health: 800
+produceTime: 720
+maxSpawn: 4
+consumes: {
+  power: 7
+  items: {
+    items: [
+      scrap/30
+      lead/10
+      thorium/5
+    ]
+  }
+}
+category: units
+research: hunter-factory
+requirements: [
+  diamond/150
+  cryogem/50
+  lead/400
+  titanium/90
+  thorium/200
+  surge-alloy/45
+]

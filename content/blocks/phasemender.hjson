@@ -1,0 +1,35 @@
+name: Phase Mender
+description: An advanced mend projector that rapidly repairs nearby blocks. Optionally uses cryogems to significantly boost its efficiency.
+type: MendProjector
+health: 900
+size: 3
+buildCostMultiplier: 1
+hasPower: true
+baseColor: 81cce5
+phaseColor: ffffff
+healPercent: 3
+phaseBoost: 5
+range: 96
+reload: 40
+phaseRangeBoost: 48
+itemCapacity: 4
+useTime: 600
+consumes: {
+  power: 8
+  items: {
+    items: [
+      cryogem/1
+    ]
+    booster: true
+	optional: true
+  }
+}
+requirements: [
+  diamond/300
+  lead/75
+  silicon/75
+  surge-alloy/25
+  phase-fabric/125
+]
+category: effect
+research: cryodrive-projector

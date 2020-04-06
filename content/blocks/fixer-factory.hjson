@@ -1,0 +1,31 @@
+name: Fixer Mech Factory
+description: A pad that manufactures crawling robots that heal damaged units. 
+type: UnitFactory
+unitType: fixer
+//buildVisibility: hidden
+buildVisibility: sandboxOnly
+size: 2
+health: 200
+produceTime: 1800
+maxSpawn: 1
+consumes: {
+  power: 7
+  items: {
+    items: [
+      copper/16
+      phase-fabric/3
+      spore-pod/6
+    ]
+  }
+}
+category: units
+research: hunter-factory
+requirements: [
+  diamond/60
+  copper/400
+  lead/140
+  titanium/90
+  silicon/400
+  thorium/20
+  cryogem/20
+]

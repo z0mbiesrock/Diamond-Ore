@@ -15,12 +15,13 @@ consumes: {
   }
 }
 category: upgrade
-research: tau-mech-pad
+research: tempest-mech-pad
 requirements: [
-  diamond/25
+  diamond/255
   graphite/400
   silicon/400
-  metaglass/330
-  plastanium/500
-  surge-alloy/200
+  metaglass/900
+  plastanium/1500
+  surge-alloy/1200
+  cryogem/200
 ]

@@ -1,6 +1,6 @@
 type: BuilderDrone
 name: Apparition Builder Drone
-description: A more advanced version of the Phantom Builder Drone.
+description: A more advanced version of the Phantom Builder Drone. Follows users faster and can rebuild most destroyed blocks.
 speed: 0.9
 drag: 0.125
 mass: 9

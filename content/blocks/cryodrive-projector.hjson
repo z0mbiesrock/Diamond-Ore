@@ -5,8 +5,8 @@ health: 900
 size: 3
 buildCostMultiplier: 1.75
 hasPower: true
-color: a1ccb5
-phase: b8ffe9
+baseColor: a1ccb5
+phaseColor: b8ffe9
 speedBoost: 2
 speedBoostPhase: 2
 range: 120
