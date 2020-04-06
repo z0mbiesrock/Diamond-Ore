@@ -14,6 +14,5 @@ require("blocks/spore-blocks")
 require("blocks/heavy-coal-processor")
 require("mechs/lambdaship")
 require("units/schadenfreude")
-require("units/fixer")
 require("units/spiker")
 
