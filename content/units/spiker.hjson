@@ -4,7 +4,7 @@ description: Offensive ground unit. Can soak up a decent amount of damage and ha
 speed: 0.25
 maxVelocity: 1.5
 flying: false
-health: 1500
+health: 750
 mass: 6
 engineOffset: 0
 engineSize: 1
@@ -36,7 +36,7 @@ weapon: {
     speed: 4
 	lifetime: 8
 	range: 32
-    damage: 25
+    damage: 15
     bulletWidth: 0
     bulletHeight: 0
 	frontColor: 666666

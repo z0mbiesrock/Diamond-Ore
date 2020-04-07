@@ -11,10 +11,6 @@ spikerUnit.create(prov(() => new JavaAdapter(GroundUnit, {
 		if(this.meleeTarget != null && (this.meleeTarget.isDead() || this.meleeTarget.dst(this) > 40)){
             this.meleeTarget = null;
         }
-		this.closestcore = Vars.state.teams.closestEnemyCore(this.x, this.y, this.getTeam())
-		if(this.closestcore != null && (this.closestcore.dst(this) < 40)){
-            this.meleeTarget = this.closestcore;
-        }
 		if (this.meleeTarget != null){
 			vel = Vec2(this.x, this.y);
 			try{

@@ -1,13 +1,13 @@
 name: Spiker Mech Factory
-description: A pad that manufactures durable melee attackers. 
+description: A pad that manufactures fast melee attackers. 
 type: UnitFactory
 unitType: spiker
 size: 2
 //buildVisibility: hidden
 //buildVisibility: sandboxOnly
-health: 800
+health: 120
 produceTime: 720
-maxSpawn: 4
+maxSpawn: 6
 consumes: {
   power: 7
   items: {
