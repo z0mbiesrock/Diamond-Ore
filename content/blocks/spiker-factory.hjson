@@ -4,7 +4,7 @@ type: UnitFactory
 unitType: spiker
 size: 2
 //buildVisibility: hidden
-buildVisibility: sandboxOnly
+//buildVisibility: sandboxOnly
 health: 800
 produceTime: 720
 maxSpawn: 4
