@@ -29,7 +29,7 @@ weapon: {
   velocityRnd: 0.6
   lengthRand: 0.6
   inaccuracy: 70
-  spacing: 0.35
+  spacing: 0.1
   bullet: {
     type: BasicBulletType
     speed: 7
