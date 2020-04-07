@@ -1,5 +1,6 @@
 # Diamond-Ore
 Adds the Diamond resource, as well as various structures which utilize it.
+It also adds more than just diamonds. It also adds enhanced versions of vanilla production blocks.
 
 > Diamonds require an Airblast Drill or better to be mined.
 
