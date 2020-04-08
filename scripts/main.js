@@ -15,4 +15,5 @@ require("blocks/heavy-coal-processor")
 require("mechs/lambdaship")
 require("units/schadenfreude")
 require("units/spiker")
+require("blocks/omnijunction")
 

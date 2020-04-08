@@ -7,7 +7,7 @@ const sporeBlockDeathTrail = newEffect(45, e => {
     const d = new Floatc2({get(x, y){
     Fill.square(e.x + x, e.y + y, 0.25 + e.fout() * 1, 45 + e.rotation);
     }})
-    Angles.randLenVectors(e.id, 3, 0 + e.fin() * 5, d);
+    Angles.randLenVectors(e.id, 3, 8 - Math.abs(8 - (e.fin() * 16)), d);
 });
 const sporeBlockDeathHit = newEffect(30, e => {
 	Draw.color(Color.valueOf("#6d54b7"), Color.valueOf("#995d9a"), e.fin());
@@ -346,6 +346,60 @@ const sporeUnitBirth = newEffect(72, e => {
     Draw.color(Color.valueOf("#8d69db"), Color.valueOf("#995d9a"), Mathf.random(-1,1));
     Angles.randLenVectors(e.id, 36, 1 + 24 * e.fin(), e.rotation, 360,f);
 });
+const mutatorUpdate = newEffect(45, e => {
+	Draw.color(Color.valueOf("#9f81db"), Color.valueOf("#008fc4"), e.fin());
+    const d = new Floatc2({get(x, y){
+    Fill.circle(e.x + x, e.y + y, e.fout() * Mathf.random(3,5));
+    }})
+    Angles.randLenVectors(e.id, 3, -6 + e.fin() * 12, d);
+});
+const sporeMutator = extendContent(GenericCrafter, "mutator", {
+	draw(tile){
+		if (this.initiate != true){
+			this.initiate = true;
+			this.variant = Math.ceil(Math.random(0,4));
+			this.angle1 = Math.floor(Math.random(0,4));
+			this.rot1 = 90 * this.angle1;
+			this.angle2 = Math.floor(Math.random(0,4));
+			this.rot2 = 90 * this.angle2;
+		}
+		else{
+			if (Math.random < 0.03){
+				this.variant = Math.ceil(Math.random(0,4));
+			}
+			if (Math.random < 0.05){
+				this.angle1 = Math.floor(Math.random(0,4));
+				this.rot1 = 90 * this.angle1;
+			}
+			if (Math.random < 0.05){
+				this.angle2 = Math.floor(Math.random(0,4));
+				this.rot2 = 90 * this.angle2;
+			}
+		}
+		Draw.rect(this.region, tile.drawx(), tile.drawy());
+		Draw.alpha(tile.entity.items.total() - tile.entity.items.get(this.outputItem.item) / this.itemCapacity);
+		Draw.rect(Core.atlas.find(this.name + "-input" + this.variant), tile.drawx(), tile.drawy(), this.rot1);
+		Draw.alpha(tile.entity.items.total() - tile.entity.items.get(this.outputItem.item) / this.itemCapacity);
+		Draw.rect(Core.atlas.find(this.name + "-output" + this.variant), tile.drawx(), tile.drawy(), this.rot2);
+		Draw.alpha(tile.entity.liquids.get(tile.entity.liquids.current()) / this.liquidCapacity);
+		Draw.rect(Core.atlas.find(this.name + "-top"), tile.drawx(), tile.drawy());
+		Draw.reset();
+	},
+    generateIcons(){
+        return [
+            Core.atlas.find(this.name),
+            Core.atlas.find(this.name + "-input0"),
+            Core.atlas.find(this.name + "-top"),
+        ];
+    }
+});
+sporeMutator.updateEffect = mutatorUpdate;
+sporeMutator.angle1 = 0;
+sporeMutator.angle2 = 0;
+sporeMutator.rot1 = 0;
+sporeMutator.rot2 = 0;
+sporeMutator.variant = 0;
+sporeMutator.initiate = false;
 // UNUSED / BROKEN
 /* extendContent(UnitFactory, "spore-dagger-factory", {
 	init(){ 

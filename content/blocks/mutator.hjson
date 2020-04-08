@@ -1,0 +1,40 @@
+//type: GenericCrafter
+name: Mutator
+description: Uses a huge amount of power and a small amount of phase string to controllably mutate regular spore pods into a unique but incredibly unstable building material.
+itemCapacity: 10
+liquidCapacity: 10
+health: 1000
+size: 2
+hasPower: true
+hasLiquids: true
+hasItems: true
+craftTime: 30
+updateEffectChance: 0.08
+consumes: {
+  power: 22.5
+  items: {
+    items: [
+      spore-pod/1
+    ]
+  }
+  liquid: {
+    liquid: phase-string
+    amount: 0.03333333333
+  }
+}
+requirements: [
+  copper/455
+  metaglass/130
+  plastanium/255
+  thorium/155
+  cryogem/35
+  phase-fabric/125
+  dark-spore-pod/35
+]
+category: crafting
+research: advanced-cultivator
+activeSound: respawning
+activeSoundVolume: 1.45
+idleSound: machine
+idleSoundVolume: 0.125
+outputItem: dark-spore-pod/1
