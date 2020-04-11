@@ -1,5 +1,5 @@
 name: Apocalypse Gorge
-description: "This hostile sector makes the Desolate Rift look as easy as Ground Zero. Extremely high risk of destruction. [#7a2222]Unknown powerful energy signatures detected...[]"
+description: "This hostile sector makes the Desolate Rift look as easy as Ground Zero. Extremely high risk of destruction. \n\n[#7a2222]Unknown powerful energy signatures detected...[]"
 loadout: basicNucleus
 startingItems: [
   copper/2000

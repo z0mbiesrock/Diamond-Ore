@@ -1,7 +1,8 @@
 name: Omni-Junction
-description: "Acts as a bridge for two crossing conveyor belts or conduits. Useful in situations with coveyor belts having to cross a line of conduits or vice versa. Requires power to operate, and cannot transfer liquids without full power input.\n [#aa6666]\nThis block is currently (but not completely) unusable in the current version of this mod.[]"
+description: Acts as a bridge for two crossing conveyor belts or conduits. Useful in situations with coveyor belts having to cross a line of conduits or vice versa. Requires power to transport items, but does not require it for liquids.
+//description: "Acts as a bridge for two crossing conveyor belts or conduits. Useful in situations with coveyor belts having to cross a line of conduits or vice versa. Requires power to operate, and cannot transfer liquids without full power input.\n [#aa6666]\nThis block is currently (but not completely) unusable in the current version of this mod.[]"
 //type: Wall
-buildVisibility: sandboxOnly
+// buildVisibility: sandboxOnly
 health: 20
 size: 1
 capacity: 1
@@ -10,7 +11,7 @@ buildCostMultiplier: 0.4
 baseExplosiveness: 12
 hasPower: true
 consumes: {
-  power: 1
+  power: 1.9
 }
 requirements: [
   diamond/2
@@ -19,5 +20,5 @@ requirements: [
   graphite/6
   silicon/4
 ]
-category: distribution
+category: liquid
 research: crystal-conveyor

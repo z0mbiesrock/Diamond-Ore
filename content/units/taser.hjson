@@ -41,6 +41,7 @@ weapon: {
     smokeEffect: hitFuse
     despawnEffect: hitLancer
 	hitEffect: hitLancer
+	hitSound: spark
 	keepVelocity: false
 	pierce: true
     //lightningLength: 60

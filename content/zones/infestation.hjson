@@ -1,5 +1,5 @@
 name: Infestation
-description: "The spores are speading at a terrifying rate. One of our colonies has gone silent after reporting highly aggressive spead heading their direction. [darkgray]It's possible that the spore pods are not as stable as we thought...[]"
+description: "The spores are speading at a terrifying rate. One of our colonies has gone silent after reporting highly aggressive spead heading their direction. \n\n[darkgray]It's possible that the spore pods are not as stable as we thought...[]"
 loadout: basicNucleus
 startingItems: [
   copper/2000

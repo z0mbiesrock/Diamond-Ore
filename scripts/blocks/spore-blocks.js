@@ -377,9 +377,9 @@ const sporeMutator = extendContent(GenericCrafter, "mutator", {
 			}
 		}
 		Draw.rect(this.region, tile.drawx(), tile.drawy());
-		Draw.alpha(tile.entity.items.total() - tile.entity.items.get(this.outputItem.item) / this.itemCapacity);
+		Draw.alpha((tile.entity.items.total() - tile.entity.items.get(this.outputItem.item)) / this.itemCapacity);
 		Draw.rect(Core.atlas.find(this.name + "-input" + this.variant), tile.drawx(), tile.drawy(), this.rot1);
-		Draw.alpha(tile.entity.items.total() - tile.entity.items.get(this.outputItem.item) / this.itemCapacity);
+		Draw.alpha(tile.entity.items.get(this.outputItem.item) / this.itemCapacity);
 		Draw.rect(Core.atlas.find(this.name + "-output" + this.variant), tile.drawx(), tile.drawy(), this.rot2);
 		Draw.alpha(tile.entity.liquids.get(tile.entity.liquids.current()) / this.liquidCapacity);
 		Draw.rect(Core.atlas.find(this.name + "-top"), tile.drawx(), tile.drawy());
