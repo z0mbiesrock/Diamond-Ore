@@ -75,7 +75,7 @@ const SurgeReactor = extendContent(NuclearReactor, "surge-reactor", {
 	},
 })
 
-const SurgeBattery = extendContent(Battery, "surgebattery", {
+/* const SurgeBattery = extendContent(Battery, "surgebattery", {
     //OVERRIDE
 	onDestroyed: function(tile){
 		this.super$onDestroyed(tile);
@@ -87,4 +87,4 @@ const SurgeBattery = extendContent(Battery, "surgebattery", {
 		}
 	},
 	
-})
+}) */

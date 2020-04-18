@@ -144,3 +144,8 @@ const overdriverFighter = new JavaAdapter(UnitType, {}, "overdriver-fighter",  p
 		this.super$update();
 	},
 })))
+overdriverFighter.buffing = false;
+overdriverFighter.buffDuration = 600;
+overdriverFighter.buffEffectTimer = 0;
+print("Overdriver script Initialized");
+overdriverFighter.buffCooldown = 300;
