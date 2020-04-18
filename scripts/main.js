@@ -16,4 +16,7 @@ require("mechs/lambdaship")
 require("units/schadenfreude")
 require("units/spiker")
 require("blocks/omnijunction")
+require("units/overdriver")
+require("units/fixer")
+require("blocks/commandcenter")
 

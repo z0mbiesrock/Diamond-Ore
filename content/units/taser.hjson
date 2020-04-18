@@ -10,8 +10,8 @@ engineOffset: -7
 engineSize: 3
 drag: 0.125
 range: 300
-hitsize: 2
-hitsizeTile: 2
+hitsize: 8
+hitsizeTile: 8
 shootCone: 45
 rotatespeed: 0.25
 baseRotateSpeed: 0.42

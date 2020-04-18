@@ -16,7 +16,7 @@ const lambdaTeleportReadyFx = newEffect(10, e => {
     const h = new Floatc2({get(x, y){
     Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fslope() * 6 + 1 + e.fout() * 3);
     }}) 
-    Angles.randLenVectors(e.id, 3, 11 + 10 * e.fout(), e.rotation, 360,d);
+    Angles.randLenVectors(e.id, 3, 11 + 10 * e.fout(), e.rotation, 360,h);
 });
 
 const lambdaTeleportEnterFx = newEffect(80, e => {

@@ -3,7 +3,6 @@ name: Beelzebub Swarm Drone
 description: Fast, cheap, fragile, and weak. However, are very numerous and can sense a target from far away.
 speed: 1.5
 maxVelocity: 4.5
-drag: 2
 flying: true
 health: 35
 engineOffset: 2.5

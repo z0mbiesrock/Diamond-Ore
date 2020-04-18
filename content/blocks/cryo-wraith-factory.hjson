@@ -1,0 +1,30 @@
+name: Cryogenic Wraith Fighter Factory
+description: "A pad that manufactures [#87ceeb]cold[], fast, hit-and-run interceptor units."
+type: UnitFactory
+unitType: cryo-wraith
+size: 2
+//buildVisibility: hidden
+//buildVisibility: sandboxOnly
+health: 360
+produceTime: 700
+maxSpawn: 3
+consumes: {
+  power: 1.25
+  items: {
+    items: [
+      silicon/15
+      titanium/10
+      cryogem/1
+    ]
+  }
+}
+category: units
+research: spiker-factory
+requirements: [
+  lead/120
+  titanium/90
+  silicon/135
+  diamond/45
+  phase-fabric/30
+  cryogem/5
+]

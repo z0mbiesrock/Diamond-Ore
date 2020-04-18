@@ -2,11 +2,11 @@ type: GroundUnit
 name: Hunter
 description: An extremely heavy push-resistant unit that fires a spray of projectiles. Very powerful at close range.
 speed: 0.2
-drga: 0.1375
+drag: 0.1375
 maxVelocity: 0.625
 flying: false
 health: 1500
-mass: 200000
+mass: 8000
 range: 160
 hitsize: 6
 hitsizeTile: 6

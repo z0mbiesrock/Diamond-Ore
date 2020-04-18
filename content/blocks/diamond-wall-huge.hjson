@@ -1,5 +1,5 @@
 name: Huge Diamond Wall
-description: A huge wall made of pure diamond. Extremely hard to destroy.
+description: A huge wall made of pure diamond. Extremely hard to destroy. Spans many tiles.
 type: Wall
 health: 28125
 size: 3
