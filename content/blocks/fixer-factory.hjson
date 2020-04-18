@@ -5,7 +5,7 @@ unitType: fixer
 size: 2
 buildCostMultiplier: 1.65
 //buildVisibility: hidden
-buildVisibility: sandboxOnly
+//buildVisibility: sandboxOnly
 health: 360
 produceTime: 1800
 maxSpawn: 1

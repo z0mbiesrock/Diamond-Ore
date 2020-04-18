@@ -36,6 +36,8 @@ Taser Factory - builds slow but very powerful lightning-shooting air units.
 
 Spiker Factory - builds fast durable melee units.
 
+Fixer Factory - builds mobile healer units.
+
 Diamond Synthesizer - Fueled by slag, it uses large amounts of coal to synthesize a diamond that's identical to natural diamonds down to chemical composition.
 
 Cryogem Compressor - uses power to turn cryofluid into solid chunks you can launch with your core.
@@ -87,3 +89,5 @@ Heavy Surge Forge - A larger Alloy Mixer.
 Surge Pyra-Forge - Create surge alloy from scrap using pyratite as a catalyst.
 
 Industrial Diamond Synthesizer - A larger and more efficient diamond synthesizer.
+
+Differential Reactor - The Differential Generator was a wimp before this mod! Now it's a jerk, and everybody loves it!
