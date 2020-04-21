@@ -14,6 +14,7 @@ hitsizeTile: 2
 shootCone: 210
 rotatespeed: 0.15
 baseRotateSpeed: 0.06
+velocityPercision: 0.4
 rotateWeapon: true
 mass: 0.66
 weapon: {
