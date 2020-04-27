@@ -11,7 +11,7 @@ mass: 7
 range: 100
 attackLength: 150
 //retreatPercent: 0.
-shootCone: 140
+shootCone: 30
 rotatespeed: 0.08
 baseRotateSpeed: 0.071
 rotateWeapon: true
@@ -23,7 +23,7 @@ weapon: {
   length: 1
   width: 9.4
   reload: 80
-  shots: 30
+  shots: 15
   recoil: 1
   spacing: 1
   velocityRnd: 0.9
@@ -51,7 +51,7 @@ weapon: {
 	splashDamageRadius: 25
     //homingPower: 1
     //homingRange: 8
-	splashDamage: 15
+	splashDamage: 20
 	bulletSprite: diamond-ore-diamondshell
 	fragBullets: 3
 	fragVelocityMin: 0.1
@@ -60,8 +60,8 @@ weapon: {
         type: LiquidBulletType
         //keepVelocity: true
 		drag: 0.015
-	    lifetime: 40
-        damage: 1
+	    lifetime: 15
+        damage: 3
 	    collidesAir: false
         bulletWidth: 9
         bulletHeight: 9

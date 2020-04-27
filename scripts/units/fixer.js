@@ -22,13 +22,21 @@ const fixerUnit = new JavaAdapter(UnitType, {}, "fixer",  prov(() => new JavaAda
 		this.super$draw();
 		try{
 			if(this.targetIsBeingRepaired == true){
+				clr = Mathf.random(50, 100) / 75
+				if(this.targetIsBeingRepaired > 1){
+					clr = 1
+				}				
+				Draw.color(Color.white, this.getTeam().color, clr)
 				Drawf.laser(Core.atlas.find("diamond-ore-fixer-laser"),Core.atlas.find("diamond-ore-fixer-laser-end"), this.x, this.y, this.healTarget.x, this.healTarget.y, this.beamstrength);
 			}
 		}
 		catch(wait){
-			
+			// Catch is empty because 
 		}
 	},
+	getPowerCellRegion(){
+        return Core.atlas.find("diamond-ore-fixer-cell");
+    },
 	update(){
 		try{
 			this.targetIsBeingRepaired = false;

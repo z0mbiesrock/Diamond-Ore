@@ -349,7 +349,7 @@ const sporeUnitBirth = newEffect(72, e => {
 const mutatorUpdate = newEffect(45, e => {
 	Draw.color(Color.valueOf("#9f81db"), Color.valueOf("#008fc4"), e.fin());
     const d = new Floatc2({get(x, y){
-    Fill.circle(e.x + x, e.y + y, e.fout() * Mathf.random(3,5));
+    Fill.circle(e.x + x, e.y + y, e.fout() * Mathf.random(1,2));
     }})
     Angles.randLenVectors(e.id, 3, -6 + e.fin() * 12, d);
 });
