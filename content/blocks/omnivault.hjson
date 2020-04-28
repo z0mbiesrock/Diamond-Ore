@@ -1,0 +1,24 @@
+name: Omni Vault
+description: The absolute ultimate item storage block, capable of storing countless items of each type. Its destruction will result in a tremendous explosion!
+//type: Vault
+itemCapacity: 54000
+hasItems: true
+health: 30625
+size: 7
+buildCostMultiplier: 0.666666
+requirements: [
+  lead/1500
+  copper/1500
+  titanium/1500
+  silicon/1500
+  plastanium/1500
+  graphite/1500
+  surge-alloy/1500
+  phase-fabric/1500
+  thorium/1500
+  cryogem/1500
+  diamond/1500
+  dark-spore-pod/1500
+]
+category: effect
+research: differential-reactor

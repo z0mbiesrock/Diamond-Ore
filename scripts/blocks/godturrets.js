@@ -26,6 +26,15 @@ const lokiTurret = extendContent(ItemTurret, "loki", {
 		];
 	},
 });
+const massdriverStrong = extendContent(MassDriver, "massdriver-strong", {
+	
+	generateIcons: function(){
+		return [
+			Core.atlas.find("diamond-ore-massdriver-strong-icon-base"),
+			Core.atlas.find("diamond-ore-massdriver-strong-icon")
+		];
+	},
+});
 
 const yggdrasilCharge = newEffect(40, e => {
     Draw.color(Color.white, Color.yellow, e.fin());

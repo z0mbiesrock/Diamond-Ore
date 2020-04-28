@@ -1,0 +1,14 @@
+name: Reinforced Plastanium Wall
+description: "A special type of wall that absorbs electric arcs and blocks automatic power node connections.\n\n\nSpans many tiles and reinforced with diamond plating."
+type: Wall
+health: 10260
+insulated: true
+size: 3
+buildCostMultiplier: 6.5
+requirements: [
+  metaglass/18
+  plastanium/45
+  diamond/9
+]
+category: defense
+research: diamond-wall-large

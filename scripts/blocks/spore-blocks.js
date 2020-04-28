@@ -400,6 +400,103 @@ sporeMutator.rot1 = 0;
 sporeMutator.rot2 = 0;
 sporeMutator.variant = 0;
 sporeMutator.initiate = false;
+
+const sporeVaultDeathSmall = extend(ArtilleryBulletType, {});
+
+sporeVaultDeathSmall.speed = 12;
+//this does 800 damage per 5 ticks btw.
+sporeVaultDeathSmall.damage = 45;
+sporeVaultDeathSmall.splashDamage = 50;
+sporeVaultDeathSmall.splashDamageRadius = 20;
+sporeVaultDeathSmall.bulletWidth = 4;
+sporeVaultDeathSmall.bulletHeight = 5;
+sporeVaultDeathSmall.bulletShrink = 0;
+sporeVaultDeathSmall.hitShake = 0;
+sporeVaultDeathSmall.lifetime = 40;
+sporeVaultDeathSmall.collidesTiles = true;
+sporeVaultDeathSmall.collides = true;
+sporeVaultDeathSmall.collidesAir = true;
+sporeVaultDeathSmall.trailEffect = sporeBlockDeathTrail;
+sporeVaultDeathSmall.hitEffect = sporeBlockDeathHit;
+sporeVaultDeathSmall.hitSound = Sounds.none;
+sporeVaultDeathSmall.despawnEffect = Fx.wet;
+sporeVaultDeathSmall.hitSize = 5;
+sporeVaultDeathSmall.pierce = true;
+sporeVaultDeathSmall.homingPower= 12;
+sporeVaultDeathSmall.homingRange= 16;
+sporeVaultDeathSmall.bulletSprite = "shell";
+sporeVaultDeathSmall.frontColor = Color.valueOf("#42336f");
+sporeVaultDeathSmall.backColor = Color.valueOf("#6d54b7");
+
+const sporeVaultDeathLarge = extend(ArtilleryBulletType, {});
+
+sporeVaultDeathLarge.speed = 10;
+//this does 800 damage per 5 ticks btw.
+sporeVaultDeathLarge.damage = 125;
+sporeVaultDeathLarge.splashDamage = 300;
+sporeVaultDeathLarge.splashDamageRadius = 32;
+sporeVaultDeathLarge.bulletWidth = 10;
+sporeVaultDeathLarge.bulletHeight = 15;
+sporeVaultDeathLarge.bulletShrink = 0;
+sporeVaultDeathLarge.hitShake = 0;
+sporeVaultDeathLarge.lifetime = 50;
+sporeVaultDeathLarge.collidesTiles = true;
+sporeVaultDeathLarge.collides = true;
+sporeVaultDeathLarge.collidesAir = true;
+sporeVaultDeathLarge.trailEffect = sporeBlockDeathTrail;
+sporeVaultDeathLarge.hitEffect = sporeBlockDeathHit;
+sporeVaultDeathLarge.hitSound = Sounds.none;
+sporeVaultDeathLarge.despawnEffect = Fx.wet;
+sporeVaultDeathLarge.hitSize = 5;
+sporeVaultDeathLarge.pierce = true;
+sporeVaultDeathLarge.homingPower= 12;
+sporeVaultDeathLarge.homingRange= 16;
+sporeVaultDeathLarge.bulletSprite = "shell";
+sporeVaultDeathLarge.frontColor = Color.valueOf("#42336f");
+sporeVaultDeathLarge.backColor = Color.valueOf("#6d54b7");
+
+const sporeVaultDeathExplode = newEffect(105, e => {
+	alignGrad = 1;
+	if (e.rotation < 0){
+		alignGrad = e.fin();
+		alignBhur = e.fout();
+		alignAebg = 1;
+	}
+	else{
+		alignGrad = e.fout();
+		alignBhur = e.fin();
+		alignAebg = -1;
+	}
+	Draw.color(Color.valueOf("#6d54b7"), Color.valueOf("#995d9a"), alignGrad);
+    const d = new Floatc2({get(x, y){
+    Fill.square(e.x + x, e.y + y, 0.25 + e.fout() * 4, 45 + e.rotation);
+    }})
+    Angles.randLenVectors(e.id, 3, 40 * e.fin(), e.rotation + Mathf.random(-5,5), 360, d);
+	Draw.color(Color.valueOf("#6d54b7"), Color.valueOf("#995d9a"), alignBhur);
+    const fg = new Floatc2({get(x, y){
+    Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fslope() * 12 + 1);
+    }})
+    Angles.randLenVectors(e.id, 4, 80 * e.fin() * alignAebg, e.rotation + Mathf.random(-5,5) + (40 * (alignGrad - alignBhur)), 90 + 45 * alignBhur, fg);
+});
+
+const sporeVault = extendContent(Vault, "omnivault", {
+	
+    //OVERRIDE
+	onDestroyed: function(tile){
+		this.super$onDestroyed(tile);
+        for(var i = 0; i < 25; i++){
+		Effects.effect(sporeVaultDeathExplode, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
+		}
+		Effects.effect(Fx.impactShockwave, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
+		Effects.shake(1.3, 1.3, tile.drawx(), tile.drawy());
+        for(var j = 0; j < 50; i++){
+            Calls.createBullet(sporeVaultDeathSmall, Team.derelict, tile.drawx(), tile.drawy(), Mathf.random(360), Mathf.random(0.15, 1.0), Mathf.random(0.2, 1.0));
+		}
+        for(var k = 0; k < 25; i++){
+            Calls.createBullet(sporeVaultDeathLarge, Team.derelict, tile.drawx(), tile.drawy(), Mathf.random(360), Mathf.random(0.15, 1.0), Mathf.random(0.2, 1.0));
+		}
+	},
+})
 // UNUSED / BROKEN
 /* extendContent(UnitFactory, "spore-dagger-factory", {
 	init(){ 

@@ -44,6 +44,62 @@ surgeReactorMeltdownBlast.frontColor = Color.valueOf("#ffffcc");
 surgeReactorMeltdownBlast.backColor = Color.valueOf("#ffff00");
 surgeReactorMeltdownBlast.trailColor = Color.valueOf("#ffffff");
 
+const surgeReactorMeltdownShock = extend(BasicBulletType, {
+});
+surgeReactorMeltdownShock.lightining = 5;
+surgeReactorMeltdownShock.lightningLength = 35;
+surgeReactorMeltdownShock.damage = 150;
+surgeReactorMeltdownShock.instantDisappear = true;
+surgeReactorMeltdownShock.pierce = true;
+
+const surgeReactorMeltdownFxA = newEffect(60, e => {
+	Draw.color(Color.valueOf("#ffffff"), Color.valueOf("#ffff00"), e.fin());
+    const d = new Floatc2({get(x, y){
+    Fill.circle(e.x + x, e.y + y, e.fout() * 10);
+    }})
+    const aed = new Floatc2({get(x, y){
+    Fill.circle(e.x + x, e.y + y, e.fout() * 7);
+    }})
+    Angles.randLenVectors(e.id, 15, 20 - 120 * e.fout(), e.rotation + 180, 360 * e.fin(),d);
+    Angles.randLenVectors(e.id, 15, 192 * e.fout(), e.rotation, 360 * e.fout(),aed);
+	Draw.color(Color.valueOf("#ffffff"), Color.valueOf("#ffff00"), e.fout());
+    Angles.randLenVectors(e.id, 15, 20 - 120 * e.fout(), e.rotation, 360 * e.fout(),d);
+    Angles.randLenVectors(e.id, 15, 192 * e.fout(), e.rotation, 360 * e.fout(),aed);
+});
+
+const surgeReactorMeltdownFxB = newEffect(80, e => {
+	alignGrad = 1;
+	if (e.rotation < 0){
+		alignGrad = e.fin();
+	}
+	else{
+		alignGrad = e.fout();
+	}
+	Draw.color(Color.valueOf("#ffffff"), Color.valueOf("#ffff00"), alignGrad);
+    const aed = new Floatc2({get(x, y){
+    Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fslope() * 12 + 1);
+    }})
+    Angles.randLenVectors(e.id, 10, Math.sqrt(65536 * e.fin()), e.rotation + 180, 360,aed);
+});
+
+const surgeReactorMeltdown = extend(BasicBulletType, {
+});
+
+surgeReactorMeltdown.speed = 0.01;
+surgeReactorMeltdown.splashDamage = 25000000;
+surgeReactorMeltdown.splashDamageRadius = 320;
+surgeReactorMeltdown.lifetime = 1;
+surgeReactorMeltdown.hitEffect = Fx.none;
+surgeReactorMeltdown.despawnEffect = Fx.none;
+surgeReactorMeltdown.hitSize = 16;
+surgeReactorMeltdownFlak.bulletWidth = 16;
+surgeReactorMeltdownFlak.bulletHeight = 200;
+//surgeReactorMeltdown.rayLength = 140 + 20;
+surgeReactorMeltdown.drawSize = 610;
+surgeReactorMeltdown.instantDisappear = true;
+surgeReactorMeltdown.shootEffect = Fx.none;
+surgeReactorMeltdown.smokeEffect = Fx.none;
+
 const SurgeReactor = extendContent(NuclearReactor, "surge-reactor", {
 	
     //OVERRIDE
@@ -58,6 +114,27 @@ const SurgeReactor = extendContent(NuclearReactor, "surge-reactor", {
     //OVERRIDE
 	onDestroyed: function(tile){
 		this.super$onDestroyed(tile);
+		Calls.createBullet(surgeReactorMeltdown, Team.derelict, tile.drawx(), tile.drawy(), 0, 0.1, 0.1);
+		Sounds.explosionbig.at(tile.drawx(), tile.drawy());
+		Effects.shake(122, 122, tile.drawx(), tile.drawy());
+		try{
+			Units.all(cons(plr => {
+				if (plr.isDead() == false && plr instanceof Player){
+					Effects.shake(45, 45, plr.x, plr.y);
+					Sounds.corexplode.at(plr.x, plr.y);
+					Sounds.explosionbig.at(plr.x, plr.y);
+					Sounds.explosionbig.at(plr.x, plr.y);
+					Sounds.explosionbig.at(plr.x, plr.y);
+				}
+			}));
+		}
+		catch (err){
+			print(err);
+		}
+		Effects.effect(surgeReactorMeltdownFxA, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
+        for(var lfr = 0; lfr < 15; lfr++){
+            Effects.effect(surgeReactorMeltdownFxB, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
+		}
         for(var i = 0; i < 45; i++){
             Calls.createBullet(surgeReactorMeltdownFlak, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.15, 1.0), Mathf.random(0.2, 1.0));
 		}

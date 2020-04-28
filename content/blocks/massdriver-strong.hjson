@@ -1,0 +1,36 @@
+//type: MassDriver
+name: Bulk Mass Driver
+description: "The ultimate item transport block. Collects several items and then shoots them to another mass driver over a long range. Requires power to operate.\n\n\nBulk Mass Drivers are larger, store more items, and have increased range and speed. However, requires much more power."
+health: 4800
+size: 4
+range: 520
+buildCostMultiplier: 1.33333333
+itemCapacity: 240
+reloadTime: 100
+outlineIcon: false
+expanded: true
+minDistribute: 10
+shootEffect: shootBig2
+smokeEffect: lancerLaserShoot
+recieveEffect: mineHuge
+knockback: 10
+translation: 14
+shake: 6
+consumes: {
+  power: 46.825
+}
+
+requirements: [
+  copper/300
+  lead/1250
+  graphite/25
+  titanium/1250
+  silicon/750
+  plastanium/25
+  thorium/500
+  surge-alloy/25
+  phase-fabric/25
+  diamond/25
+]
+category: distribution
+research: omnidrill

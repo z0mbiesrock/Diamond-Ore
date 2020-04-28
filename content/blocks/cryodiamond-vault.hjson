@@ -3,7 +3,7 @@ description: An ultimate item storage block, capable of storing a massive amount
 type: Vault
 itemCapacity: 8000
 hasItems: true
-health: 2000
+health: 5000
 size: 5
 buildCostMultiplier: 0.666666
 requirements: [
