@@ -1,7 +1,4 @@
-const beelzebubDrone = extendContent(UnitType, "beelzebub-swarm-drone", {
-    
-});
-beelzebubDrone.create(prov(() => new JavaAdapter(flyingUnit, { 
+const beelzebubDrone = new JavaAdapter(UnitType, {}, "fixer",  prov(() => new JavaAdapter(GroundUnit, {
 	getPowerCellRegion(){
         return Core.atlas.find("diamond-ore-beelzebub-swarm-drone-cell");
     },
