@@ -1,4 +1,4 @@
-const beelzebubDrone = new JavaAdapter(UnitType, {}, "beelzebub-swarm-drone",  prov(() => new JavaAdapter(GroundUnit, {
+const beelzebubDrone = new JavaAdapter(UnitType, {}, "beelzebub-swarm-drone",  prov(() => new JavaAdapter(FlyingUnit, {
 	getPowerCellRegion(){
         return Core.atlas.find("diamond-ore-beelzebub-swarm-drone-cell");
     },
@@ -9,7 +9,7 @@ const beelzebubDrone = new JavaAdapter(UnitType, {}, "beelzebub-swarm-drone",  p
 			if (nearestfoe != null){
 				vel = Vec2(this.x, this.y);
 				if (nearestfoe.dst(this) < 200){
-					this.velocity().add(Mathf.random(-1,1), Mathf.random(-1,1));
+					this.velocity().add(Mathf.random(-0.2,0.2), Mathf.random(-0.2,0.2));
 				}
 				this.avoidOthers();	
 			}
