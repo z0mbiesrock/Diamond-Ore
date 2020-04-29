@@ -1,4 +1,4 @@
-const beelzebubDrone = new JavaAdapter(UnitType, {}, "fixer",  prov(() => new JavaAdapter(GroundUnit, {
+const beelzebubDrone = new JavaAdapter(UnitType, {}, "beelzebub-swarm-drone",  prov(() => new JavaAdapter(GroundUnit, {
 	getPowerCellRegion(){
         return Core.atlas.find("diamond-ore-beelzebub-swarm-drone-cell");
     },
