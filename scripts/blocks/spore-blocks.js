@@ -489,10 +489,10 @@ const sporeVault = extendContent(Vault, "omnivault", {
 		}
 		Effects.effect(Fx.impactShockwave, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
 		Effects.shake(1.3, 1.3, tile.drawx(), tile.drawy());
-        for(var j = 0; j < 50; i++){
+        for(var j = 0; j < 50; j++){
             Calls.createBullet(sporeVaultDeathSmall, Team.derelict, tile.drawx(), tile.drawy(), Mathf.random(360), Mathf.random(0.15, 1.0), Mathf.random(0.2, 1.0));
 		}
-        for(var k = 0; k < 25; i++){
+        for(var k = 0; k < 25; k++){
             Calls.createBullet(sporeVaultDeathLarge, Team.derelict, tile.drawx(), tile.drawy(), Mathf.random(360), Mathf.random(0.15, 1.0), Mathf.random(0.2, 1.0));
 		}
 	},
