@@ -7,9 +7,18 @@ beelzebubDrone.create(prov(() => new JavaAdapter(flyingUnit, {
     },
 	update(){
 		this.super$update();
-		if (this.target.dst(this) < 200){
-			this.velocity().add(Mathf.random(-2,2), Mathf.random(-2,2));
-			this.avoidOthers();
+		try{ // Put in a "try"; keep a distance from enemies at all costs
+			nearestfoe = Units.closestTarget(this.getTeam(), this.x, this.y, 250);
+			if (nearestfoe != null){
+				vel = Vec2(this.x, this.y);
+				if (nearestfoe.dst(this) < 200){
+					this.velocity().add(Mathf.random(-1,1), Mathf.random(-1,1));
+				}
+				this.avoidOthers();	
+			}
+		}
+		catch(error){
+			//print(error);
 		}
 	},
 })));
