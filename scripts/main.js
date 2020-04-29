@@ -19,6 +19,7 @@ require("units/spiker")
 require("blocks/omnijunction")
 require("units/overdriver")
 require("units/fixer")
+require("units/beelzebub")
 require("blocks/commandcenter")
 //require("blocks/vanillaammo")
 

@@ -8,7 +8,7 @@ beelzebubDrone.create(prov(() => new JavaAdapter(flyingUnit, {
 	update(){
 		this.super$update();
 		if (this.target.dst(this) < 200){
-			this.velocity().add(Mathf.random(-1,1), Mathf.random(-1,1));
+			this.velocity().add(Mathf.random(-2,2), Mathf.random(-2,2));
 			this.avoidOthers();
 		}
 	},
