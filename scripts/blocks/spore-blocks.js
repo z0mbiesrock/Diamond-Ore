@@ -406,8 +406,8 @@ const sporeVaultDeathSmall = extend(ArtilleryBulletType, {});
 sporeVaultDeathSmall.speed = 12;
 //this does 800 damage per 5 ticks btw.
 sporeVaultDeathSmall.damage = 45;
-sporeVaultDeathSmall.splashDamage = 50;
-sporeVaultDeathSmall.splashDamageRadius = 20;
+sporeVaultDeathSmall.splashDamage = 200;
+sporeVaultDeathSmall.splashDamageRadius = 60;
 sporeVaultDeathSmall.bulletWidth = 4;
 sporeVaultDeathSmall.bulletHeight = 5;
 sporeVaultDeathSmall.bulletShrink = 0;
@@ -433,8 +433,8 @@ const sporeVaultDeathLarge = extend(ArtilleryBulletType, {});
 sporeVaultDeathLarge.speed = 10;
 //this does 800 damage per 5 ticks btw.
 sporeVaultDeathLarge.damage = 125;
-sporeVaultDeathLarge.splashDamage = 300;
-sporeVaultDeathLarge.splashDamageRadius = 32;
+sporeVaultDeathLarge.splashDamage = 800;
+sporeVaultDeathLarge.splashDamageRadius = 120;
 sporeVaultDeathLarge.bulletWidth = 10;
 sporeVaultDeathLarge.bulletHeight = 15;
 sporeVaultDeathLarge.bulletShrink = 0;
@@ -474,9 +474,9 @@ const sporeVaultDeathExplode = newEffect(105, e => {
     Angles.randLenVectors(e.id, 3, 40 * e.fin(), e.rotation + Mathf.random(-5,5), 360, d);
 	Draw.color(Color.valueOf("#6d54b7"), Color.valueOf("#995d9a"), alignBhur);
     const fg = new Floatc2({get(x, y){
-    Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fslope() * 12 + 1);
+    Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fslope() * 32 + 1);
     }})
-    Angles.randLenVectors(e.id, 4, 80 * e.fin() * alignAebg, e.rotation + Mathf.random(-5,5) + (40 * (alignGrad - alignBhur)), 90 + 45 * alignBhur, fg);
+    Angles.randLenVectors(e.id, 6, 240 * e.fin() * alignAebg, e.rotation + Mathf.random(-5,5) + (40 * (alignGrad - alignBhur)), 360, fg);
 });
 
 const sporeVault = extendContent(Vault, "omnivault", {
@@ -489,11 +489,11 @@ const sporeVault = extendContent(Vault, "omnivault", {
 		}
 		Effects.effect(Fx.impactShockwave, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
 		Effects.shake(1.3, 1.3, tile.drawx(), tile.drawy());
-        for(var j = 0; j < 50; j++){
-            Calls.createBullet(sporeVaultDeathSmall, Team.derelict, tile.drawx(), tile.drawy(), Mathf.random(360), Mathf.random(0.15, 1.0), Mathf.random(0.2, 1.0));
+        for(var j = 0; j < 150; j++){
+            Calls.createBullet(sporeVaultDeathSmall, Team.derelict, tile.drawx(), tile.drawy(), Mathf.random(360), Mathf.random(0.25, 1.0), Mathf.random(0.2, 1.0));
 		}
-        for(var k = 0; k < 25; k++){
-            Calls.createBullet(sporeVaultDeathLarge, Team.derelict, tile.drawx(), tile.drawy(), Mathf.random(360), Mathf.random(0.15, 1.0), Mathf.random(0.2, 1.0));
+        for(var k = 0; k < 75; k++){
+            Calls.createBullet(sporeVaultDeathLarge, Team.derelict, tile.drawx(), tile.drawy(), Mathf.random(360), Mathf.random(0.25, 1.0), Mathf.random(0.2, 1.0));
 		}
 	},
 })
