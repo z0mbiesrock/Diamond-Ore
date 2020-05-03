@@ -77,16 +77,25 @@ const surgeReactorMeltdownFxB = newEffect(80, e => {
 	}
 	Draw.color(Color.valueOf("#ffffff"), Color.valueOf("#ffff00"), alignGrad);
     const aed = new Floatc2({get(x, y){
+    Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fslope() * 36 + 1);
+    }})
+    Angles.randLenVectors(e.id, 10, Math.sqrt(65536 * e.fin()), e.rotation, 360,aed);
+    const aqd = new Floatc2({get(x, y){
+    Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fslope() * 24 + 1);
+    }})
+    Angles.randLenVectors(e.id, 10, Math.sqrt(65536 * e.fin()), e.rotation, 360,aqd);
+	Draw.color(Color.valueOf("#ffff00"), Color.valueOf("#ffffff"), alignGrad);
+    const aqf = new Floatc2({get(x, y){
     Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fslope() * 12 + 1);
     }})
-    Angles.randLenVectors(e.id, 10, Math.sqrt(65536 * e.fin()), e.rotation + 180, 360,aed);
+    Angles.randLenVectors(e.id, 10, Math.sqrt(65536 * e.fin()), e.rotation, 360,aqf);
 });
 
 const surgeReactorMeltdown = extend(BasicBulletType, {
 });
 
 surgeReactorMeltdown.speed = 0.01;
-surgeReactorMeltdown.splashDamage = 25000000;
+surgeReactorMeltdown.splashDamage = 2400000;
 surgeReactorMeltdown.splashDamageRadius = 320;
 surgeReactorMeltdown.lifetime = 1;
 surgeReactorMeltdown.hitEffect = Fx.none;
@@ -116,11 +125,11 @@ const SurgeReactor = extendContent(NuclearReactor, "surge-reactor", {
 		this.super$onDestroyed(tile);
 		Calls.createBullet(surgeReactorMeltdown, Team.derelict, tile.drawx(), tile.drawy(), 0, 0.1, 0.1);
 		Sounds.explosionbig.at(tile.drawx(), tile.drawy());
-		Effects.shake(122, 122, tile.drawx(), tile.drawy());
+		Effects.shake(155, 155, tile.drawx(), tile.drawy());
 		try{
 			Units.all(cons(plr => {
 				if (plr.isDead() == false && plr instanceof Player){
-					Effects.shake(45, 45, plr.x, plr.y);
+					Effects.shake(75, 75, plr.x, plr.y);
 					Sounds.corexplode.at(plr.x, plr.y);
 					Sounds.explosionbig.at(plr.x, plr.y);
 					Sounds.explosionbig.at(plr.x, plr.y);

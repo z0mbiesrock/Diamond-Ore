@@ -476,7 +476,7 @@ const sporeVaultDeathExplode = newEffect(105, e => {
     const fg = new Floatc2({get(x, y){
     Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fslope() * 32 + 1);
     }})
-    Angles.randLenVectors(e.id, 6, 240 * e.fin() * alignAebg, e.rotation + Mathf.random(-5,5) + (40 * (alignGrad - alignBhur)), 360, fg);
+    Angles.randLenVectors(e.id, 10, 240 * e.fin() * alignAebg, e.rotation + Mathf.random(-5,5) + (40 * (alignGrad - alignBhur)), 360, fg);
 });
 
 const sporeVault = extendContent(Vault, "omnivault", {
