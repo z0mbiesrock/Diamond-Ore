@@ -9,7 +9,7 @@ const beelzebubDrone = new JavaAdapter(UnitType, {}, "beelzebub-swarm-drone",  p
 			if (this.nearestfoe != null){
 				vel = Vec2(this.x, this.y);
 				if (this.nearestfoe.dst(this) < 200){
-					this.velocity().add(Mathf.random(-0.5,0.5), Mathf.random(-0.5,0.5));
+					this.velocity().add(Mathf.random(-3,3), Mathf.random(-3,3));
 				}
 				this.avoidOthers();	
 			}
