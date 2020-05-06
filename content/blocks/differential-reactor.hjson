@@ -9,10 +9,10 @@ baseExplosiveness: 9000
 size: 6
 warmupSpeed: 0.00025
 //buildVisibility: sandboxOnly
-baseExplosiveness: 500
+baseExplosiveness: 5000
 itemDuration: 48
 explosionRadius: 50
-explosionDamage: 98657
+explosionDamage: 9999999999
 plasma1: c0ecff
 plasma2: ffaa5f
 plasmas: 4

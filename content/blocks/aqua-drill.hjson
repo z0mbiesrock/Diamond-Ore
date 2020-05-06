@@ -1,11 +1,12 @@
 name: Aqua Drill
-description: Extracts groundwater. Useful in locations with no surface water available. It extracts groundwater much more quickly than a regular water extractor despite its size.
+description: "Extracts groundwater. Useful in locations with no surface water available.\n\n Despite its size, it extracts groundwater much more quickly than a regular water extractor."
 type: SolidPump
 health: 150
 size: 1
 liquidCapacity: 20
 rotateSpeed: 3
 hasPower: true
+hasShadow: false
 updateEffect: wet
 updateEffectChance: 0.04
 pumpAmount: 0.25

@@ -1,0 +1,25 @@
+name: Organic Drill
+description: "A smaller and more compact Oil Extractor. It's slow, but only needs a small amount of power."
+type: SolidPump
+health: 150
+size: 1
+liquidCapacity: 10
+baseExplosiveness: 10
+rotateSpeed: -1.5
+hasPower: true
+updateEffect: oily
+updateEffectChance: 0.04
+pumpAmount: 0.06
+attribute: oil
+result: oil
+consumes: {
+  power: 0.375
+}
+requirements: [
+  cryogem/45
+  thorium/25
+  plastanium/50
+  dark-spore-pod/65
+]
+category: production
+research: mutator
