@@ -37,6 +37,17 @@ const fixerUnit = new JavaAdapter(UnitType, {}, "fixer",  prov(() => new JavaAda
 	getPowerCellRegion(){
         return Core.atlas.find("diamond-ore-fixer-cell");
     },
+	move(x, y){
+		try{
+			if(this.targetIsBeingRepaired == false){
+				this.super$move(x, y);
+			}
+		}
+		catch(wait){
+			this.super$move(x, y);
+		}
+        
+    },
 	update(){
 		try{
 			this.targetIsBeingRepaired = false;

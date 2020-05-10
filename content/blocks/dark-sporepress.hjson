@@ -1,0 +1,41 @@
+//type: GenericCrafter
+name: Dark Spore Press
+description: A Spore Press that has been modified to compress mutated spore pods under extreme pressure to liquefy them, potentially using them to cultivate even more pods.
+itemCapacity: 10
+health: 900
+size: 3
+hasPower: true
+hasItems: true
+hasLiquids: true
+craftTime: 60
+buildCostMultiplier: 0.75
+drawLiquidLight: false
+liquidCapacity: 600
+updateEffectChance: 0.15
+outputLiquid: corrupt-water/60
+consumes: {
+  power: 14
+  items: {
+    items: [
+      dark-spore-pod/1
+    ]
+  }
+  liquid: {
+    liquid: oil
+    amount: 1
+  }
+}
+requirements: [
+  copper/600
+  titanium/300
+  silicon/300
+  metaglass/125
+  plastanium/900
+  dark-spore-pod/150
+]
+category: crafting
+research: mutator
+activeSound: respawning
+activeSoundVolume: 1.25
+idleSound: conveyor
+idleSoundVolume: 0.5

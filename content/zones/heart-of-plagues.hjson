@@ -1,0 +1,60 @@
+name: Heart of Plagues
+description: It's time to dive headfirst into enemy territory. Be prepared or be destroyed!
+loadout: basicNucleus
+startingItems: [
+  copper/4000
+  lead/4000
+  silicon/4000
+  diamond/1000
+  cryogem/1000
+]
+//Mode: Attack
+conditionWave: 101
+launchPeriod: 9
+configureObjective: 
+  {
+    type: ZoneWave
+    zone: heart-of-plagues
+    wave: 105
+  }
+requirements: [
+  {
+    type: ZoneWave
+    zone: desolateRift
+    wave: 15
+  }
+  {
+    type: ZoneWave
+    zone: overgrowth
+    wave: 40
+  }
+  {
+    type: Launched
+    zone: infected
+    //wave: 50
+  }
+  {
+    type: Launched
+    zone: the-diamond-ruins
+    //wave: 50
+  }
+  {
+    type: Unlock
+    block: yggdrasil
+  }
+  {
+    type: Unlock
+    block: differential-reactor
+  }
+]
+resources: [
+  copper
+  coal
+  lead
+  sand
+  dark-spore-pod
+  diamond
+  thorium
+  scrap
+  titanium
+]

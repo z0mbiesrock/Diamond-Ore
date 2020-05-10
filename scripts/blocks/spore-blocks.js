@@ -497,6 +497,34 @@ const sporeVault = extendContent(Vault, "omnivault", {
 		}
 	},
 })
+const darkSporePressUpdate = newEffect(27, e => {
+	Draw.color(Color.valueOf("#cce9ff"), Color.valueOf("#007a96"), e.fin());
+    const d = new Floatc2({get(x, y){
+    Fill.square(e.x + x, e.y + y, e.fout() * 2, 45 + Mathf.random(-15,15));
+    }})
+    Angles.randLenVectors(e.id, 3, 1 + e.fin() * 6, d);
+});
+const darkSporePressCraft = newEffect(30, e => {
+    Draw.color(Color.valueOf("#cce9ff"), Color.valueOf("#007a96"), e.fin());
+    Lines.stroke(e.fout() * 5); //line thickness goes from 3 to 0
+    Lines.circle(e.x, e.y, 10 + e.fin() * 30);
+	Draw.color(Color.valueOf("#9f81db"), Color.valueOf("#008fc4"), e.fin());
+    const rg = new Floatc2({get(x, y){
+    Fill.circle(e.x + x, e.y + y, e.fout() * Mathf.random(1,2));
+    }})
+    Angles.randLenVectors(e.id, 5, -6 + e.fin() * 24, e.rotation + (e.fin() * Mathf.random(-45,45)), 360, rg);
+});
+const darkSporePress = extendContent(GenericCrafter, "dark-sporepress", {
+	draw(tile){
+		Draw.rect(this.region, tile.drawx(), tile.drawy());
+		Draw.color(this.outputLiquid.liquid.color);
+		Draw.alpha(tile.entity.liquids.get(this.outputLiquid.liquid) / this.liquidCapacity);
+		Draw.rect(Core.atlas.find("diamond-ore-dark-sporepress-liquid"), tile.drawx(), tile.drawy());
+		Draw.reset();
+	}
+});
+darkSporePress.updateEffect = darkSporePressUpdate;
+darkSporePress.craftEffect = darkSporePressCraft;
 // UNUSED / BROKEN
 /* extendContent(UnitFactory, "spore-dagger-factory", {
 	init(){ 
