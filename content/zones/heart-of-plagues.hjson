@@ -4,7 +4,9 @@ loadout: basicNucleus
 startingItems: [
   copper/4000
   lead/4000
-  silicon/4000
+  titanium/1000
+  graphite/1000
+  silicon/1000
   diamond/1000
   cryogem/1000
 ]
