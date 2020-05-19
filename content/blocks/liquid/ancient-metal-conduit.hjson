@@ -1,0 +1,18 @@
+type: ArmoredConduit
+health: 1500
+name: Ancient Metal Conduit
+solid: true
+floating: true
+liquidCapacity: 20
+liquidPressure: 2
+leakResistance: 70
+buildCostMultiplier: 0.5
+description: A much stronger conduit block. Very leak-resistant.
+requirements: [
+  metaglass/4
+  graphite/4
+  silicon/1
+  ancient-alloy/2
+]
+category: liquid
+research: ancient-metal-conveyor

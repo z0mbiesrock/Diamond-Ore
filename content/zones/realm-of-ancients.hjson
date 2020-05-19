@@ -1,0 +1,52 @@
+name: Realm of the Ancients
+description: "After obtaining intel from the infested base, we learned the location of their next assault. Unlike the Diamond Ruins, the ruins in this sector appear to be [#e5b85e]much, much older.[]\n\nSome of the derelict structures in this area are still functional, and should distract the enemy while we get a foothold in the area."
+loadout: basicNucleus
+startingItems: [
+  copper/1000
+  lead/1000
+  silicon/1000
+  titanium/1000
+  metaglass/1000
+  plastanium/1000
+  graphite/1000
+  thorium/1000
+  surge-alloy/1000
+  phase-fabric/1000
+  diamond/1000
+  cryogem/1000
+  dark-spore-pod/1000
+]
+conditionWave: 25
+launchPeriod: 25
+configureObjective: 
+  {
+    type: ZoneWave
+    zone: realm-of-ancients
+    wave: 30
+  }
+requirements: [
+  {
+    type: Launched
+    zone: saltFlats
+  }
+  {
+    type: Launched
+    zone: infected
+  }
+  {
+    type: Launched
+    zone: the-diamond-ruins
+  }
+]
+resources: [
+  copper
+  coal
+  lead
+  sand
+  diamond
+  thorium
+  scrap
+  titanium
+  ancient-scrap
+  dark-spore-pod
+]

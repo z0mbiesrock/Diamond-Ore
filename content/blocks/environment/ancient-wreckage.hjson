@@ -1,0 +1,5 @@
+type: Rock
+name: Ancient Wreckage
+variants: 5
+alwaysReplace: false
+buildCost: 300

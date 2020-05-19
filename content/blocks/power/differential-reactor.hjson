@@ -16,7 +16,7 @@ explosionDamage: 9999999999
 plasma1: c0ecff
 plasma2: ffaa5f
 plasmas: 4
-buildCostMultiplier: 0.1
+buildCostMultiplier: 0.3
 powerProduction: 1866.6666666666666666666666666667
 consumes: {
   power: 200  

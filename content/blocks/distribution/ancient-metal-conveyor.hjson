@@ -1,0 +1,18 @@
+type: ArmoredConveyor
+health: 1250
+name: Ancient Metal Conveyor
+solid: true
+floating: true
+insulated: true
+buildCostMultiplier: 0.3
+description: An extremely durable armored conveyor belt.
+requirements: [
+  phase-fabric/1
+  plastanium/2
+  cryogem/1
+  ancient-alloy/1
+]
+category: distribution
+speed: 0.2375
+displayedSpeed: 14.25
+research: ancient-solar-generator

@@ -1,0 +1,274 @@
+//type: BurstTurret
+name: Ancient Sentinel
+description: A powerful artillery turret.
+health: 8000
+size: 4
+reload: 80
+range: 320
+ammoUseEffect: pulverizeRedder
+coolantMultiplier: 7
+maxAmmo: 20
+rotatespeed: 9
+cooldown: 0.01
+shootSound: shootBig
+outlineColor: 966102
+targetAir: false
+ammo: {
+  metaglass: {
+    type: ArtilleryBulletType
+    speed: 6
+    damage: 20
+	lifetime: 30
+    bulletWidth: 8
+    bulletHeight: 14
+	frontColor: 999999
+	backColor: ffffff
+    splashDamage: 38
+    splashDamageRadius: 24
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
+    trailEffect: pulverizeSmall
+	hitEffect: flakExplosion
+	despawnEffect: flakExplosionBig
+    ammoMultiplier: 4
+	pierce: false
+	bulletSprite: shell
+    splashDamage: 50
+    splashDamageRadius: 20
+  }
+  scrap: {
+    type: ArtilleryBulletType
+    speed: 6
+    damage: 15
+    splashDamage: 38
+    splashDamageRadius: 24
+	lifetime: 60
+    bulletWidth: 8
+    bulletHeight: 14
+	frontColor: bbbbbb
+	backColor: 888888
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
+    trailEffect: smelt
+	hitEffect: hitFuse
+	despawnEffect: pulverize
+    ammoMultiplier: 3
+	pierce: false
+	knockback: 15
+	bulletSprite: shell
+	fragBullets: 20
+	fragVelocityMin: 1.125
+	fragVelocityMax: 3.375
+	fragBullet: {
+      type: BasicBulletType
+      speed: 1
+	  lifetime: 20
+      damage: 5
+      bulletWidth: 2
+      bulletHeight: 4
+	  despawnEffect: none
+	  hitEffect: none
+	  frontColor: ffa044
+	  backColor: ff6614
+	  pierce: true
+	  knockback: 10
+	  bulletSprite: diamond-ore-diamondshell
+    }
+  }
+  ancient-scrap: {
+    type: ArtilleryBulletType
+    speed: 6
+    damage: 15
+    splashDamage: 45
+    splashDamageRadius: 36
+	lifetime: 60
+    bulletWidth: 11
+    bulletHeight: 17
+	frontColor: 69501c
+	backColor: ce8404
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
+    trailEffect: smelt
+	hitEffect: hitFuse
+	despawnEffect: pulverizeRed
+    reloadMultiplier: 0.35
+    ammoMultiplier: 3
+	pierce: false
+	knockback: 15
+	bulletSprite: shell
+	fragBullets: 15
+	fragVelocityMin: 2
+	fragVelocityMax: 18
+	fragBullet: {
+      type: BasicBulletType
+      drag: 0.1
+      damage: 10
+	  lifetime: 300
+      bulletWidth: 2
+      bulletHeight: 2
+      collidesTiles: false
+	  frontColor: 69501c
+	  backColor: ff6614
+      shootEffect: none
+      smokeEffect: none
+	  hitEffect: hitBulletSmall
+	  despawnEffect: pulverizeSmall
+      ammoMultiplier: 4
+	  pierce: false
+	  bulletSprite: diamond-ore-diamondshell
+	  bulletShrink: 0
+	  splashDamage: 20
+	  status: corroded
+	  statusDuration: 5
+	  splashDamageRadius: 10
+	  knockback: 25
+    }
+  }
+  thorium: {
+    type: ArtilleryBulletType
+    speed: 6
+    damage: 50
+	lifetime: 60
+    bulletWidth: 10
+    bulletHeight: 16
+	frontColor: fbbbeb
+	backColor: c878a8
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
+    trailEffect: melting
+	hitEffect: bigShockwave
+	despawnEffect: flakExplosionBig
+    ammoMultiplier: 4
+	reloadMultiplier: 0.85
+	pierce: false
+	knockback: 200
+	bulletSprite: shell
+    splashDamage: 80
+    splashDamageRadius: 40
+  }
+  blast-compound: {
+    type: ArtilleryBulletType
+    speed: 6
+    damage: 50
+	lifetime: 60
+    bulletWidth: 13
+    bulletHeight: 20
+	frontColor: fb4444
+	backColor: c87833
+    splashDamage: 38
+    splashDamageRadius: 24
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
+    trailEffect: melting
+	hitEffect: bigShockwave
+	despawnEffect: flakExplosionBig
+    ammoMultiplier: 1
+	reloadMultiplier: 0.5
+	pierce: false
+	knockback: 200
+	bulletSprite: shell
+    splashDamage: 200
+    splashDamageRadius: 50
+  }
+  surge-alloy: {
+    type: ArtilleryBulletType
+    speed: 6
+    damage: 20
+	lifetime: 60
+    bulletWidth: 4
+    bulletHeight: 9
+	frontColor: ddbb22
+	backColor: ffff33
+    splashDamage: 38
+    splashDamageRadius: 24
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
+    trailEffect: absorb
+	hitEffect: bigShockwave
+	despawnEffect: flakExplosionBig
+    ammoMultiplier: 3
+	reloadMultiplier: 0.975
+	lightningLength: 18
+	lightining: 4
+	pierce: false
+	knockback: 20
+	bulletSprite: diamond-ore-diamondshell
+    splashDamage: 30
+    splashDamageRadius: 24
+  }
+  ancient-alloy: {
+    type: ArtilleryBulletType
+    speed: 6
+    damage: 40
+	lifetime: 60
+    bulletWidth: 8
+    bulletHeight: 20
+	frontColor: ffff00
+	backColor: ffffff
+    splashDamage: 38
+    splashDamageRadius: 24
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
+    trailEffect: overdriven
+	hitEffect: bigShockwave
+	despawnEffect: flakExplosionBig
+    ammoMultiplier: 1
+	reloadMultiplier: 0.575
+	lightningLength: 32
+	lightining: 6
+	pierce: false
+	knockback: 200
+	bulletSprite: diamond-ore-diamondshell
+    splashDamage: 120
+    splashDamageRadius: 32
+  }
+  plastanium: {
+    type: ArtilleryBulletType
+    speed: 6
+    damage: 15
+    splashDamage: 38
+    splashDamageRadius: 24
+	lifetime: 60
+    bulletWidth: 9
+    bulletHeight: 18
+	frontColor: 66ff66
+	backColor: 888888
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
+	hitEffect: plasticExplosion
+	despawnEffect: plasticExplosionFlak
+    ammoMultiplier: 3
+	reloadMultiplier: 0.7
+	pierce: false
+	knockback: 15
+	bulletSprite: shell
+	fragBullets: 20
+	fragVelocityMin: 4
+	fragVelocityMax: 6
+	fragBullet: {
+      type: ArtilleryBulletType
+      drag: 0.1
+	  lifetime: 30
+      damage: 15
+      bulletWidth: 2
+      bulletHeight: 4
+	  despawnEffect: hitBulletSmall
+	  hitEffect: hitBulletSmall
+	  frontColor: 44a044
+	  backColor: 116614
+	  knockback: 10
+	  splashDamage: 38
+	  splashDamageRadius: 24
+	  bulletSprite: diamond-ore-diamondshell
+    }
+  }
+}
+requirements: [
+  copper/400
+  lead/400
+  plastanium/325
+  diamond/125
+  ancient-alloy/150
+]
+category: turret
+research: ancient-sprayer

@@ -1,0 +1,15 @@
+type: PowerNode
+name: Ancient Energy Node
+description: Compact durable power node.
+laserRange: 10
+maxNodes: 15
+size: 1
+health: 400
+insulated: false
+requirements: [
+  diamond/15
+  cryogem/25
+  ancient-alloy/5
+]
+category: power
+research: ancient-decaygen

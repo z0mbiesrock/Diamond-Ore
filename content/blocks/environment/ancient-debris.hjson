@@ -1,0 +1,8 @@
+type: OverlayFloor
+localizedName: Ancient Debris
+name: Ancient Debris
+itemDrop: ancient-alloy
+playerUnmineable: true
+variants: 8
+oreScale: 8
+oreThreshold: 0.97

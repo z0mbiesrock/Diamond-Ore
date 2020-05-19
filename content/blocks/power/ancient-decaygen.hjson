@@ -1,0 +1,21 @@
+type: DecayGenerator
+name: Ancient Decay Generator
+description: Durable radiation-powered generator. Can handle the explosiveness of even the most volatile compounds as fuel.
+health: 400
+size: 1
+powerProduction: 5
+hasItems: true
+itemCapacity: 10
+itemDuration: 120
+randomlyExplode: false
+generateEffect: smelt
+heatColor: 66a8ff
+minItemEfficiency: 0.75
+requirements: [
+  thorium/100
+  silicon/100
+  diamond/25
+  ancient-alloy/25
+]
+category: power
+research: ancient-refinery

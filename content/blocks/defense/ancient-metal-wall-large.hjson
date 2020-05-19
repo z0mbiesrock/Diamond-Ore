@@ -1,0 +1,15 @@
+name: Large Ancient Metal Wall
+description: "Made of [#e5b85e]a mysterious alloy[], this large wall can endure massive amounts of punishment. Spans multiple tiles."
+type: SurgeWall
+health: 16000
+size: 2
+lightningChance: 0.25
+lightningDamage: 55
+lightningLength: 33
+buildCostMultiplier: 0.50
+requirements: [
+  ancient-alloy/40
+  cryogem/4
+]
+category: defense
+research: ancient-metal-wall

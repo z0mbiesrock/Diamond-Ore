@@ -1,0 +1,7 @@
+type: resource
+name: Ancient Scrap
+description: "The remains of derelict structures built by an unknown mysterious race. [#e5b85e]Incredibly more complex than regular scrap.[]" 
+hardness: 5
+radioactivity: 1.5
+explosiveness: 0.25
+color: 8e5811

@@ -1,0 +1,4 @@
+type: StaticWall
+name: Decaying Ancient Metal
+variants: 5
+fillsTile: false

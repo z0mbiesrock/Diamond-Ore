@@ -1,4 +1,4 @@
-//type: floor
+type: floor
 name: Deep Corrupted Water
 variants: 6
 dragMultiplier: 2.5
@@ -10,7 +10,7 @@ drownUpdateEffect: melting
 cacheLayer: water
 isLiquid: true
 liquidDrop: corrupt-water
-blendGroup: air
-//edge: spore-water-deep-edge
+blendGroup: water
+edge: spore-water-deep-edge
 drownTime: 90
 attributes: {array: [0, 1.0, 0, 0]}

@@ -1,0 +1,47 @@
+type: GenericSmelter
+name: Ancient Forge
+description: "A Surge Pyra-Forge that has been modified with ancient technology. Combines many different items using lots and lots of power in order to synthesize the mysterious [#e5b85e]Ancient Alloy[]."
+itemCapacity: 60
+health: 1600
+size: 4
+hasPower: true
+hasItems: true
+craftTime: 42
+updateEffect: overdriven
+craftEffect: bigShockwave
+buildCostMultiplier: 0.75
+drawLiquidLight: true
+updateEffectChance: 0.75
+consumes: {
+  power: 105
+  items: {
+    items: [
+      copper/4
+      lead/4
+      graphite/3
+      silicon/3
+      titanium/2
+      metaglass/4
+      thorium/4
+      phase-fabric/2
+      surge-alloy/5
+      plastanium/1
+      blast-compound/1
+    ]
+  }
+}
+requirements: [
+  copper/2300
+  silicon/275
+  metaglass/750
+  thorium/350
+  diamond/1000
+  ancient-alloy/50
+]
+category: crafting
+research: ancient-refinery
+activeSound: machine
+activeSoundVolume: 1.75
+idleSound: respawning
+idleSoundVolume: 0.75
+outputItem: ancient-alloy/2

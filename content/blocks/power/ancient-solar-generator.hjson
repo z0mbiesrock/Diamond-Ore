@@ -1,0 +1,15 @@
+type: SolarGenerator
+name: Ancient Solar Generator
+description: A sturdy reliable generator. Absorbs solar energy and converts it into power.
+health: 1200
+size: 2
+powerProduction: 2
+requirements: [
+  metaglass/55
+  plastanium/30
+  thorium/15
+  ancient-alloy/25
+  cryogem/15
+]
+category: power
+research: ancient-energy-node-large

@@ -203,6 +203,7 @@ extendContent(Cultivator, "sporeclusterd", {
 extendContent(DoubleTurret, "spore-turret", {
 	draw(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
+        Draw.color();
 	},
     generateIcons(){
         return [
@@ -213,6 +214,7 @@ extendContent(DoubleTurret, "spore-turret", {
 extendContent(DoubleTurret, "spore-turret-b", {
 	draw(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
+        Draw.color();
 	},
     generateIcons(){
         return [
@@ -223,6 +225,7 @@ extendContent(DoubleTurret, "spore-turret-b", {
 extendContent(DoubleTurret, "spore-turret-c", {
 	draw(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
+        Draw.color();
 	},
     generateIcons(){
         return [
@@ -230,7 +233,7 @@ extendContent(DoubleTurret, "spore-turret-c", {
         ];
     }
 });
-extendContent(Floor, "spore-water", {
+/* extendContent(Floor, "spore-water", {
     generateIcons(){
         return [
             Core.atlas.find(this.name)
@@ -243,7 +246,7 @@ extendContent(Floor, "spore-water-deep", {
             Core.atlas.find(this.name)
         ];
     }
-});
+}); */
 extendContent(ItemTurret, "spore-turret-small", {
 	draw(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());

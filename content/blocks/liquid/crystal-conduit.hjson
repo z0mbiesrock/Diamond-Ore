@@ -4,7 +4,7 @@ name: Crystal Conduit
 solid: true
 floating: true
 liquidCapacity: 5
-liquidPressure: 2.3
+liquidPressure: 3
 leakResistance: 5
 description: A stronger conduit block. Although it has a lower storage capacity than regular conduits, it transports liquids much faster.
 requirements: [

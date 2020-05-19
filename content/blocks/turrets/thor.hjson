@@ -117,8 +117,8 @@ ammo: {
 	statusDuration: 120
 	homingPower: 0.002
 	homingRange: 120
-	lightningLength: 20
-	lightning: 3
+	lightningLength: 25
+	lightining: 3
 	fragBullets: 3
 	fragVelocityMin: 6.0
 	fragVelocityMax: 12.0

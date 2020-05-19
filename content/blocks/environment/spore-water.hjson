@@ -1,4 +1,4 @@
-//type: floor
+type: floor
 name: Corrupted Water
 variants: 6
 dragMultiplier: 2.5
@@ -10,6 +10,6 @@ drownUpdateEffect: melting
 cacheLayer: water
 isLiquid: true
 liquidDrop: corrupt-water
-blendGroup: air
-//edge: spore-water-edge
+blendGroup: water
+edge: spore-water-edge
 attributes: {array: [0, 0.75, 0, 0.2]}

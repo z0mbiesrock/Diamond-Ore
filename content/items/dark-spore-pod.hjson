@@ -2,7 +2,7 @@ type: material
 name: Dark Spore Pod
 description: "A mutated and corrupted version of the spores normally used for conversion into oil, explosives and fuel. \n\n\n[#ae00bf]It has the potential to destroy this world if they are left to multiply unchecked.[]"
 hardness: 5
-explosiveness: 13.37
+explosiveness: 420.69
 flammability: 6.66
 radioactivity: 13.37
 cost: 1

@@ -1,0 +1,4 @@
+type: Floor
+name: Damaged Ancient Metal Tile
+blendGroup: ancient-metal-tile
+variants: 9

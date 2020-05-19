@@ -1,0 +1,7 @@
+type: OreBlock
+itemDrop: ancient-scrap
+playerUnmineable: true
+oreDefault: true
+variants: 6
+oreScale: 20
+oreThreshold: 0.90

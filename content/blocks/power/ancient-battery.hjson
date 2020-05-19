@@ -1,0 +1,20 @@
+name: Ancient Battery
+description: A compact battery with a high storage capacity.
+type: Battery
+health: 600
+size: 1
+buildCostMultiplier: 6
+emptyLightColor: 888888
+fullLightColor: 6974c4
+consumes: {
+  powerBuffered: 25000
+}
+requirements: [
+  diamond/40
+  titanium/32
+  plastanium/80
+  metaglass/15
+  ancient-alloy/15
+]
+category: power
+research: ancient-energy-node

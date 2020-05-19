@@ -21,5 +21,7 @@ require("units/overdriver")
 require("units/fixer")
 require("units/beelzebub")
 require("blocks/commandcenter")
+require("blocks/ancientrefinery")
 require("units/spore-bosses")
+require("blocks/ancients")
 
