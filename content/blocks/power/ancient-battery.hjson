@@ -3,7 +3,7 @@ description: A compact battery with a high storage capacity.
 type: Battery
 health: 600
 size: 1
-buildCostMultiplier: 6
+buildCostMultiplier: 0.85
 emptyLightColor: 888888
 fullLightColor: 6974c4
 consumes: {
