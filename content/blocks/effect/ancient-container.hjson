@@ -1,0 +1,15 @@
+name: Ancient Container
+description: A very durable compact storage block with a high item capacity.
+type: Vault
+itemCapacity: 6000
+hasItems: true
+health: 6000
+size: 2
+buildCostMultiplier: 1.4
+requirements: [
+  metaglass/200
+  thorium/400
+  ancient-alloy/120
+]
+category: effect
+research: ancient-crate

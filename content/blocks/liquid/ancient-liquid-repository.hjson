@@ -1,0 +1,18 @@
+type: liquidTank
+name: Ancient Liquid Repository
+health: 18000
+size: 6
+description: A giant liquid storage block. Extremely durable and can store a vast amount of liquid.
+liquidCapacity: 15000
+hasLiquids: true
+//floating: true
+requirements: [
+  titanium/800
+  metaglass/1025
+  cryogem/125
+  ancient-alloy/125
+]
+category: liquid
+research: ancient-vault
+
+

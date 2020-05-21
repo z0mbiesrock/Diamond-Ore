@@ -23,7 +23,7 @@ consumes: {
   power: 25
   liquid: {
     liquid: phase-string
-    amount: 2.3
+    amount: 1.6
     booster: true
 	optional: true
   }

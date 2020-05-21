@@ -1,0 +1,15 @@
+name: Ancient Crate
+description: A durable compact storage block.
+type: Vault
+itemCapacity: 1500
+hasItems: true
+health: 1500
+size: 1
+buildCostMultiplier: 1.4
+requirements: [
+  metaglass/50
+  thorium/100
+  ancient-alloy/30
+]
+category: effect
+research: ancient-metal-conveyor

@@ -1,0 +1,32 @@
+name: Ancient Oil Drill
+description: "A larger version of the Oil Extractor. Uses a huge amount of power and sand to extract oil from underground."
+type: Fracker
+itemCapacity: 10
+health: 3200
+size: 4
+liquidCapacity: 120
+baseExplosiveness: 75
+rotateSpeed: -4.5
+hasPower: true
+updateEffect: oily
+updateEffectChance: 0.125
+pumpAmount: 0.9
+attribute: oil
+result: oil
+itemUseTime: 20
+consumes: {
+  power: 14
+  items: {
+    items: [
+      sand/1
+    ]
+  }
+}
+requirements: [
+  silicon/445
+  thorium/252
+  surge-alloy/250
+  ancient-alloy/165
+]
+category: production
+research: ancient-liquid-repository

@@ -1,0 +1,15 @@
+name: Ancient Repository
+description: An heavily-armored durable storage block with an extremely high item capacity.
+type: Vault
+itemCapacity: 24000
+hasItems: true
+health: 24000
+size: 4
+buildCostMultiplier: 1.4
+requirements: [
+  metaglass/800
+  thorium/1600
+  ancient-alloy/480
+]
+category: effect
+research: ancient-vault

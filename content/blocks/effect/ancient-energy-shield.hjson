@@ -1,0 +1,44 @@
+name: Ancient Energy Shield
+description: "A highly advanced shield generator. Uses a large amount of power, especially while absorbing damage. Optionally uses [#e5b85e]Ancient Alloy[] to drastically increase the shield's size."
+type: ForceProjector
+health: 2000
+size: 4
+liquidCapacity: 90
+baseExplosiveness: 25
+buildCostMultiplier: 2.7
+hasPower: true
+canOverdrive: true
+phaseUseTime: 270
+phaseRadiusBoost: 174
+radius: 174
+breakage: 4800
+cooldownNormal: 7.5
+cooldownLiquid: 37.5
+cooldownBrokenBase: 3.75
+basePowerDraw: 90
+consumes: {
+  power: 10
+  items: {
+    items: [
+      ancient-alloy/1
+    ]
+    booster: true
+	optional: true
+  }
+  liquid: {
+    liquid: phase-string
+    amount: 0.75
+    booster: true
+	optional: true
+  }
+}
+requirements: [
+  copper/750
+  silicon/500
+  plastanium/125
+  cryogem/250
+  surge-alloy/250
+  ancient-alloy/250
+]
+category: effect
+research: ancient-energy-node-large

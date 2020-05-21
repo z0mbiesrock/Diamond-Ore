@@ -1,0 +1,15 @@
+name: Ancient Unloader
+description: "An unloader that has been reinforced with [#e5b85e]ancient technology[]."
+type: Unloader
+health: 1500
+size: 1
+speed: 3
+buildCostMultiplier: 0.35
+requirements: [
+  plastanium/35
+  titanium/50
+  silicon/60
+  ancient-alloy/15
+]
+category: effect
+research: ancient-crate

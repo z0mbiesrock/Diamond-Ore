@@ -1,0 +1,20 @@
+name: Ancient ADM
+description: "Area Denial Mine: Shocks nearby enemies when stepped on."
+type: ShockMine
+health: 300
+size: 1
+length: 25
+tendrils: 3
+tileDamage: 5
+damage: 20
+cooldown: 40
+hasShadow: false
+fillsTile: false
+buildCostMultiplier: 1.35
+requirements: [
+  thorium/6
+  ancient-alloy/10
+  plastanium/12
+]
+category: effect
+research: ancient-blaster
