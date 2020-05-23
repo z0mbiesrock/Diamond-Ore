@@ -3,7 +3,7 @@ description: "A highly advanced shield generator. Uses a large amount of power, 
 type: ForceProjector
 health: 2000
 size: 4
-liquidCapacity: 90
+liquidCapacity: 30
 baseExplosiveness: 25
 buildCostMultiplier: 2.7
 hasPower: true
@@ -22,12 +22,6 @@ consumes: {
     items: [
       ancient-alloy/1
     ]
-    booster: true
-	optional: true
-  }
-  liquid: {
-    liquid: phase-string
-    amount: 0.75
     booster: true
 	optional: true
   }

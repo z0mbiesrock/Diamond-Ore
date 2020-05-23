@@ -1,0 +1,19 @@
+type: liquidTank
+name: Ancient Liquid Repository
+health: 6000
+size: 2
+description: A small, compact, and durable liquid storage block.
+liquidCapacity: 2000
+hasLiquids: true
+floating: true
+requirements: [
+  titanium/300
+  metaglass/200
+  silicon/100
+  cryogem/35
+  ancient-alloy/55
+]
+category: liquid
+research: ancient-liquid-repository
+
+

@@ -322,8 +322,28 @@ ammo: {
 	status: shocked
 	statusDuration: 20
 	splashDamageRadius: 12
-	lightningLength: 12
-	lightining: 3
+	fragBullets: 3
+	fragBullet: {
+      type: BasicBulletType
+      damage: 10
+	  lifetime: 10
+      bulletWidth: 0
+      bulletHeight: 0
+      instantDisappear: true
+	  frontColor: 000000
+	  backColor: 000000
+      shootEffect: none
+      smokeEffect: none
+	  hitEffect: none
+	  despawnEffect: none
+	  pierce: false
+	  bulletSprite: diamond-ore-diamondshell
+	  bulletShrink: 0.875
+	  status: shocked
+	  statusDuration: 20
+	  lightningLength: 12
+	  lightining: 1
+    }
   }
   ancient-alloy: {
     type: MissileBulletType
@@ -353,8 +373,30 @@ ammo: {
 	status: shocked
 	statusDuration: 20
 	splashDamageRadius: 20
-	lightningLength: 18
-	lightining: 5
+	fragBullets: 5
+	lightningLength: 30
+	lightining: 1
+	fragBullet: {
+      type: BasicBulletType
+      damage: 10
+	  lifetime: 10
+      bulletWidth: 0
+      bulletHeight: 0
+      instantDisappear: true
+	  frontColor: 000000
+	  backColor: 000000
+      shootEffect: none
+      smokeEffect: none
+	  hitEffect: none
+	  despawnEffect: none
+	  pierce: false
+	  bulletSprite: diamond-ore-diamondshell
+	  bulletShrink: 0.875
+	  status: shocked
+	  statusDuration: 20
+	  lightningLength: 18
+	  lightining: 1
+    }
   }
 }
 requirements: [
