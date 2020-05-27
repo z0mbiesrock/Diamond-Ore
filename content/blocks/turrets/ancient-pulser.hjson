@@ -1,0 +1,44 @@
+//type: PowerTurret
+name: Ancient Pulser
+description: A small mid-range anti-air turret. Only needs power.
+health: 500
+size: 1
+reload: 20
+range: 200
+ammoUseEffect: none
+coolantMultiplier: 7
+cooldown: 0.01
+maxAmmo: 40
+rotatespeed: 15
+shootSound: pew
+outlineColor: 966102
+powerUse: 3
+recoil: 0
+outlineIcon: false
+targetGround: false
+shootType: {
+  type: BasicBulletType
+  speed: 8
+  damage: 25
+  lifetime: 28
+  bulletWidth: 3
+  bulletHeight: 6
+  frontColor: 2a83f6
+  backColor: c878a8
+  shootEffect: shootSmall
+  smokeEffect: none
+  hitEffect: hitBulletSmall
+  despawnEffect: shootSmallSmoke
+  knockback: 40
+  pierce: false
+  bulletSprite: diamond-ore-diamondbullet
+  bulletShrink: 0.12
+}
+requirements: [
+  copper/10
+  silicon/20
+  titanium/16
+  ancient-alloy/5
+]
+category: turret
+research: ancient-blaster

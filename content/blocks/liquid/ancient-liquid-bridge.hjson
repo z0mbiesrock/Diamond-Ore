@@ -1,0 +1,22 @@
+name: Ancient Liquid Bridge
+description: "An advanced phase conduit that uses [#e5b85e]ancient technology[]. Requires extremely high amounts of power."
+type: LiquidBridge
+health: 320
+size: 1
+range: 24
+buildCostMultiplier: 0.325
+baseExplosiveness: 15
+liquidCapacity: 20
+consumes: {
+  power: 6
+}
+requirements: [
+  graphite/10
+  thorium/30
+  diamond/15
+  metaglass/25
+  phase-fabric/20
+  ancient-alloy/5
+]
+category: liquid
+research: ancient-metal-conveyor

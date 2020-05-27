@@ -10,7 +10,13 @@ const waterDecorruptor = extendContent(GenericSmelter, "water-decorruptor", {
 		Draw.alpha(tile.entity.liquids.currentAmount() / this.liquidCapacity);
 		Draw.rect(Core.atlas.find(this.name + "-liquid-input"), tile.drawx(), tile.drawy());
 		Draw.reset()
-	}
+	},
+	setBars(){
+		this.super$setBars();
+		this.bars.add("Water",func(entity =>
+			new Bar(prov(() => this.outputLiquid.liquid.localizedName), prov(() => this.outputLiquid.liquid.barColor()), floatp(() => entity.liquids.get(this.outputLiquid.liquid) / this.liquidCapacity))
+		));
+	},
 	//new Func(){bars.add("liquidOutput", this => new Bar(this.outputLiquid.liquid, this.outputLiquid.liquid.color, (tile.entity.liquids.get(this.outputLiquid.liquid) / this.liquidCapacity)))}
 	//new Func(){get(entity, bar){ new Bar()}}
 })

@@ -524,7 +524,13 @@ const darkSporePress = extendContent(GenericCrafter, "dark-sporepress", {
 		Draw.alpha(tile.entity.liquids.get(this.outputLiquid.liquid) / this.liquidCapacity);
 		Draw.rect(Core.atlas.find("diamond-ore-dark-sporepress-liquid"), tile.drawx(), tile.drawy());
 		Draw.reset();
-	}
+	},
+	setBars(){
+		this.super$setBars();
+		this.bars.add("Spore Water",func(entity =>
+			new Bar(prov(() => this.outputLiquid.liquid.localizedName), prov(() => this.outputLiquid.liquid.barColor()), floatp(() => entity.liquids.get(this.outputLiquid.liquid) / this.liquidCapacity))
+		));
+	},
 });
 darkSporePress.updateEffect = darkSporePressUpdate;
 darkSporePress.craftEffect = darkSporePressCraft;

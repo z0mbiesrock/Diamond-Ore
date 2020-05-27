@@ -1,0 +1,42 @@
+name: Precision Omni Drill
+description: "Miniature version of the Omni Drill, utilizing [#e5b85e]ancient technology[] to rapidly mine any ore. Uses Phase String as fuel and does not require power."
+type: Drill
+health: 300
+size: 1
+tier: 99999
+drillTime: 4
+drawRim: true
+rotateSpeed: -3
+liquidBoostIntensity: 1
+hardnessDrillMultiplier: 0
+baseExplosiveness: 500
+warmupSpeed: 1
+hasPower: false
+drillEffect: shockwave
+updateEffect: burning
+buildCostMultiplier: 0.07
+heatColor: f3e979
+drawLiquidLight: true
+updateEffectChance: 0.5
+liquidCapacity: 60
+itemCapacity: 30
+consumes: {
+  liquid: {
+    liquid: phase-string
+    amount: 0.2
+    booster: false
+	optional: false
+  }
+}
+requirements: [
+  diamond/2500
+  cryogem/500
+  silicon/500
+  thorium/1500
+  metaglass/1500
+  plastanium/1500
+  surge-alloy/2500
+  ancient-alloy/2500
+]
+category: production
+research: ancient-oildrill

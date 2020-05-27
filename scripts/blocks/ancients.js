@@ -47,6 +47,78 @@ const ancientBlaster = extendContent(ItemTurret, "ancient-blaster", {
 });
 ancientBlaster.ammoUseEffect = ancientBlasterAmmoUse;
 ancientBlaster.shootEffect = ancientBlasterShoot;
+const ancientPulser = extendContent(PowerTurret, "ancient-pulser", {
+	draw(tile){
+		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
+	},
+    generateIcons(){
+        return [
+            Core.atlas.find(this.name + "-base"),
+            Core.atlas.find(this.name)
+        ];
+    }
+});
+const ancientBladeLaser = extend(BasicBulletType, {
+	
+	update: function(b){
+		if(b.timer.get(1, 3)){
+			Damage.collideLine(b, b.getTeam(), this.hitEffect, b.x, b.y, b.rot(), 96.0, false);
+		}
+	},
+	
+	/*hit: function(b, hitx, hity){
+	Effects.effect(this.hitEffect, Color.valueOf("a9d8ffaa"), hitx, hity);
+		if(Mathf.chance(0.1)){
+			//Fire.create(world.tileWorld(hitx + Mathf.range(6.0), hity + Mathf.range(6.0)));
+			Damage.createIncend(hitx, hity, 6, 1);
+		}
+	},*/
+	
+	draw: function(b){
+		
+		const colors = [Color.valueOf("a9d8ff5f"), Color.valueOf("a9d8ff"), Color.valueOf("ffffff")];
+		const tscales = [1, 0.8, 0.6, 0.3];
+		const strokes = [0.45, 0.3, 0.15];
+		const lenscales = [1.0, 1.18, 1.21, 1.217];
+		const tmpColor = new Color();
+
+		//Lines.lineAngle(b.x, b.y, b.rot(), baseLen);
+		for(var s = 0; s < 3; s++){
+			//Draw.color(colors[s]);
+			Draw.color(tmpColor.set(colors[s]).mul(1.0 + Mathf.absin(Time.time(), 1.5, 0.1)));
+			for(var i = 0; i < 4; i++){
+				Tmp.v1.trns(b.rot() + 180.0, (lenscales[i] - 1.0) * 25.0);
+				Lines.stroke((9 + Mathf.absin(Time.time(), 1.4, 1.5)) * b.fout() * strokes[s] * tscales[i]);
+				Lines.lineAngle(b.x + Tmp.v1.x, b.y + Tmp.v1.y, b.rot(), 96.0 * b.fout() * lenscales[i], CapStyle.none);
+			}
+		};
+		Draw.reset();
+	}
+});
+ancientBladeLaser.speed = 0.001;
+ancientBladeLaser.damage = 75;
+ancientBladeLaser.lifetime = 13;
+ancientBladeLaser.hitEffect = Fx.hitLancer;
+ancientBladeLaser.despawnEffect = Fx.none;
+ancientBladeLaser.hitSize = 4;
+ancientBladeLaser.drawSize = 610;
+ancientBladeLaser.pierce = true;
+ancientBladeLaser.shootEffect = Fx.none;
+ancientBladeLaser.smokeEffect = Fx.none;
+const ancientBlade = extendContent(LaserTurret, "ancient-blade", {
+	draw(tile){
+		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
+	},
+    generateIcons(){
+        return [
+            Core.atlas.find(this.name + "-base"),
+            Core.atlas.find(this.name)
+        ];
+    }
+});
+ancientBlade.shootType = ancientBladeLaser;
+ancientBlade.update = true;
+ancientBlade.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1), 0.11)).update(false);
 const ancientShotgun = extendContent(ItemTurret, "ancient-shotgun", {
 	draw(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
