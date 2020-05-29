@@ -12,7 +12,7 @@ cooldown: 0.005
 rotatespeed: 9
 shootSound: flame
 shootEffect: lancerLaserShoot
-smokeEffect: lancerLaserShoot
+smokeEffect: hitLancer
 firingMoveFract: 0.666
 powerUse: 4
 recoil: 0

@@ -5,7 +5,7 @@ itemCapacity: 13500
 hasItems: true
 health: 13500
 size: 3
-buildCostMultiplier: 1.4
+buildCostMultiplier: 1.2
 requirements: [
   metaglass/450
   thorium/900

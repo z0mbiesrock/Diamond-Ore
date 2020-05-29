@@ -15,8 +15,8 @@ ammo: {
     speed: 11
 	lifetime: 48
     damage: 62
-    bulletWidth: 9
-    bulletHeight: 9
+    bulletWidth: 11
+    bulletHeight: 11
 	frontColor: aaffff
 	backColor: ffffff
     shootEffect: shootSmall
@@ -31,8 +31,8 @@ ammo: {
     type: BasicBulletType
     speed: 11
     damage: 50
-    bulletWidth: 8
-    bulletHeight: 10
+    bulletWidth: 9
+    bulletHeight: 13
 	frontColor: 99eeee
 	backColor: eeffff
     shootEffect: shootBig
@@ -49,9 +49,9 @@ ammo: {
     type: BasicBulletType
     speed: 11
     damage: 45
-	hitSize: 11
-    bulletWidth: 20
-    bulletHeight: 30
+	hitSize: 13
+    bulletWidth: 25
+    bulletHeight: 37
 	frontColor: 99eefe
 	backColor: 002fff
     shootEffect: pulverizeMedium
@@ -71,9 +71,9 @@ ammo: {
     speed: 4
 	lifetime: 135
     damage: 25
-	hitSize: 11
-    bulletWidth: 20
-    bulletHeight: 70
+	hitSize: 14
+    bulletWidth: 27
+    bulletHeight: 90
 	frontColor: bbbbbb
 	backColor: 888888
     shootEffect: pulverizeMedium
@@ -92,9 +92,9 @@ ammo: {
     type: BasicBulletType
     speed: 12
     damage: 17
-	hitSize: 5
-    bulletWidth: 15
-    bulletHeight: 30
+	hitSize: 8
+    bulletWidth: 19
+    bulletHeight: 37
 	frontColor: eebb99
 	backColor: cc8888
     shootEffect: shootSmall

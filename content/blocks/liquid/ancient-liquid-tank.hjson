@@ -1,5 +1,5 @@
 type: liquidTank
-name: Ancient Liquid Repository
+name: Ancient Liquid Tank
 health: 6000
 size: 2
 description: A small, compact, and durable liquid storage block.

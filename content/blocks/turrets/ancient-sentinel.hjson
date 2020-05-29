@@ -128,7 +128,7 @@ ammo: {
     type: ArtilleryBulletType
     speed: 6
     damage: 50
-	lifetime: 60
+	lifetime: 40
     bulletWidth: 10
     bulletHeight: 16
 	frontColor: fbbbeb
@@ -243,11 +243,11 @@ ammo: {
 	knockback: 15
 	bulletSprite: shell
 	fragBullets: 20
-	fragVelocityMin: 4
-	fragVelocityMax: 6
+	fragVelocityMin: 3
+	fragVelocityMax: 4.5
 	fragBullet: {
       type: ArtilleryBulletType
-      drag: 0.1
+      drag: 0.13
 	  lifetime: 30
       damage: 15
       bulletWidth: 2
@@ -257,6 +257,7 @@ ammo: {
 	  frontColor: 44a044
 	  backColor: 116614
 	  knockback: 10
+	  keepVelocity: false
 	  splashDamage: 38
 	  splashDamageRadius: 24
 	  bulletSprite: diamond-ore-diamondshell

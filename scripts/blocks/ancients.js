@@ -58,6 +58,14 @@ const ancientPulser = extendContent(PowerTurret, "ancient-pulser", {
         ];
     }
 });
+const ancientBladeLaserHit = newEffect(15, e => {
+    Draw.color(Color.white, Color.valueOf("a9d8ff"), e.fout());
+    Lines.stroke(e.fout() * 3);
+    const d = new Floatc2({get(x, y){
+    Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fslope() * 12 + 3);
+    }}) 
+    Angles.randLenVectors(e.id, 8, 1 + 12 * e.fin(), e.rotation, 360,d);
+});
 const ancientBladeLaser = extend(BasicBulletType, {
 	
 	update: function(b){
@@ -76,7 +84,7 @@ const ancientBladeLaser = extend(BasicBulletType, {
 	
 	draw: function(b){
 		
-		const colors = [Color.valueOf("a9d8ff5f"), Color.valueOf("a9d8ff"), Color.valueOf("ffffff")];
+		const colors = [Color.valueOf("a9d8ff5f"), Color.valueOf("6998ff"), Color.valueOf("ffffff")];
 		const tscales = [1, 0.8, 0.6, 0.3];
 		const strokes = [0.45, 0.3, 0.15];
 		const lenscales = [1.0, 1.18, 1.21, 1.217];
@@ -98,8 +106,8 @@ const ancientBladeLaser = extend(BasicBulletType, {
 ancientBladeLaser.speed = 0.001;
 ancientBladeLaser.damage = 75;
 ancientBladeLaser.lifetime = 13;
-ancientBladeLaser.hitEffect = Fx.hitLancer;
-ancientBladeLaser.despawnEffect = Fx.none;
+ancientBladeLaser.hitEffect = ancientBladeLaserHit;
+ancientBladeLaser.despawnEffect = Fx.shootBigSmoke2;
 ancientBladeLaser.hitSize = 4;
 ancientBladeLaser.drawSize = 610;
 ancientBladeLaser.pierce = true;

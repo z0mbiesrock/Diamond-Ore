@@ -12,7 +12,7 @@ maxAmmo: 40
 rotatespeed: 15
 shootSound: pew
 outlineColor: 966102
-powerUse: 3
+powerUse: 1
 recoil: 0
 outlineIcon: false
 targetGround: false
