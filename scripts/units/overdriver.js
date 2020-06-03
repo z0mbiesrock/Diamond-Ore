@@ -44,6 +44,12 @@ const overdriverFighter = new JavaAdapter(UnitType, {}, "overdriver-fighter",  p
 		}
 		this.super$draw();
 	}, */
+	//var buffing = false;
+	//var buffDuration = 600;
+	//var buffEffectTimer = 0;
+	//var circleLength = 200;
+	//var initiated = true;
+	//var buffCooldown = 300;
 	update(){
 		this.super$update();
 		try{

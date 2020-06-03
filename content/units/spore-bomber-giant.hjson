@@ -1,0 +1,113 @@
+type: FlyingUnit
+name: Giant Spore Bomb
+//description: Sentient floating spore bomb. Upon death or detonation, it splits into two Large Spore Bombs
+speed: 0.105
+maxVelocity: 0.675
+drag: 0.05
+hitsize: 33
+hitsizeTile: 33
+flying: true
+health: 4000
+mass: 240
+//engineColor: "ffbb00"
+engineOffset: 4
+engineSize: 6
+range: 768
+attackLength: 60
+retreatPercent: 0
+shootCone: 360
+rotatespeed: 0.2
+baseRotateSpeed: 0.1
+weapon: {
+  //name: clear
+  length: 0
+  reload: 120
+  shots: 48
+  alternate: true
+  velocityRnd: 1
+  lengthRand: 1
+  recoil: 0
+  width: 0
+  shootSound: explosionbig
+  shootEffect: flakExplosionBig
+  bullet: {
+    type: BasicBulletType
+    speed: 3.5
+	drag: 0.075
+	lifetime: 15
+	killShooter: true
+	instantDisappear: true
+	keepVelocity: false
+    damage: 25
+    bulletWidth: 14
+    bulletHeight: 18
+	frontColor: bd85e5
+	backColor: bd85e5
+	//trailColor: 666666
+    shootEffect: shootBig
+    smokeEffect: none
+    despawnEffect: flakExplosion
+	hitEffect: hitLancer
+	pierce: false
+	knockback: 700
+	bulletSprite: shell
+	inaccuracy: 360
+	fragBullets: 4
+	splashDamage: 70
+	splashDamageRadius: 108
+	status: corroded
+	statusDuration: 600
+	fragBullets: 8
+	fragVelocityMin: 0.2
+	fragVelocityMax: 24
+	fragBullet: {
+        type: MissileBulletType
+        bulletSprite: shell
+        homingPower: 0
+        keepVelocity: false
+		drag: 0.075
+	    lifetime: 45
+        damage: 12
+	    collidesAir: true
+	    collides: true
+	    collidesTiles: true
+        bulletWidth: 15
+        bulletHeight: 15
+	    despawnEffect: none
+	    hitEffect: none
+	    frontColor: bd85e5
+	    backColor: bd85e5
+	    trailColor: bd85e5
+	    pierce: true
+		status: corroded
+		statusDuration: 900
+		fragBullets: 4
+		weaveScale: 4
+		weaveMag: 4
+		fragVelocityMin: 0.2
+		fragVelocityMax: 1.2
+	    fragBullet: {
+            type: LiquidBulletType
+            keepVelocity: false
+		    drag: 0.075
+	        lifetime: 150
+            damage: 15
+	        collidesAir: false
+            bulletWidth: 15
+            bulletHeight: 15
+	        despawnEffect: none
+	        hitEffect: none
+	        frontColor: f0511d
+	        backColor: f0511d
+	        pierce: true
+		    status: corroded
+		    statusDuration: 900
+		    liquid: corrupt-water
+	        //bulletSprite: shell
+	        //knockback: 7.5
+        }
+    }
+  }
+}
+/*
+*/

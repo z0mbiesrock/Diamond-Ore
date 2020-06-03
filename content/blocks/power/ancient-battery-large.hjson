@@ -1,0 +1,22 @@
+name: Large Ancient Battery
+description: A larger version of the Ancient Battery, with a very massive storage capacity.
+type: Battery
+health: 2800
+size: 2
+buildCostMultiplier: 0.30
+emptyLightColor: 888888
+fullLightColor: 6974c4
+consumes: {
+  powerBuffered: 250000
+}
+requirements: [
+  diamond/160
+  titanium/128
+  plastanium/320
+  thorium/120
+  metaglass/60
+  cryogem/32
+  ancient-alloy/60
+]
+category: power
+research: ancient-battery

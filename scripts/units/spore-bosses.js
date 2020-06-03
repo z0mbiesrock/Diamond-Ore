@@ -87,7 +87,7 @@ const sporeEradTrailSml = newEffect(22, e => {
     Lines.stroke(e.fout() * 2);
     Lines.circle(e.x, e.y, e.fout() * 2);
 });
-sporeWater = Vars.content.getByName(ContentType.liquid, "diamond-ore-corrupt-water");
+const sporeWater = Vars.content.getByName(ContentType.liquid, "diamond-ore-corrupt-water");
 const sporeEradSplash = extend(ArtilleryBulletType, {
 	//OVERRIDE
     draw(b){

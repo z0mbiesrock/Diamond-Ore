@@ -24,4 +24,5 @@ require("blocks/commandcenter")
 require("blocks/ancientrefinery")
 require("units/spore-bosses")
 require("blocks/ancients")
+require("units/spore-bombs")
 

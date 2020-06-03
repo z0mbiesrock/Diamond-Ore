@@ -1,0 +1,4 @@
+type: Floor
+name: Ancient Metal Panel
+blendGroup: ancient-metal-tile
+variants: 0

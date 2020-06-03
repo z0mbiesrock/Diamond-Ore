@@ -14,7 +14,7 @@ rotatespeed: 13
 inaccuracy: 7.5
 shootSound: shoot
 outlineColor: 966102
-//targetAir: false
+outlineIcon: false
 //targetGround: false
 ammo: {
   lead: {
@@ -101,9 +101,9 @@ ammo: {
   }
   phase-fabric: {
     type: BasicBulletType
-    speed: 11
+    speed: 10
     damage: 4
-	lifetime: 30
+	lifetime: 42
     bulletWidth: 2
     bulletHeight: 4
 	inaccuracy: 3.5
@@ -114,10 +114,12 @@ ammo: {
 	hitEffect: shootBig2
 	despawnEffect: shootBig
     ammoMultiplier: 4
+	homingPower: 7
+	homingRange: 12
 	pierce: true
 	status: corroded
-	statusDuration: 150
-	bulletSprite: bullet
+	statusDuration: 600
+	bulletSprite: shell
 	bulletShrink: 0.25
   }
   pyratite: {
@@ -158,6 +160,25 @@ ammo: {
 	status: freezing
 	statusDuration: 240
 	bulletSprite: bullet
+	bulletShrink: 1
+  }
+  titanium: {
+    type: BasicBulletType
+    speed: 11
+    damage: 8
+	lifetime: 30
+    bulletWidth: 2
+    bulletHeight: 4
+	frontColor: 66aaff
+	backColor: 207cef
+    shootEffect: shootSmall
+    smokeEffect: shootSmallSmoke
+	hitEffect: shootBig2
+	despawnEffect: shootBig
+    ammoMultiplier: 4
+	pierce: false
+	knockback: 40
+	bulletSprite: diamond-ore-diamondbullet
 	bulletShrink: 1
   }
   silicon: {
