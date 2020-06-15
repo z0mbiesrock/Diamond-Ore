@@ -1,0 +1,32 @@
+name: Ancient Sniper Factory
+description: A pad that manufactures intelligent mechs that fire a powerful projectile.
+type: UnitFactory
+unitType: ancient-sniper
+size: 3
+buildCostMultiplier: 0.8725
+//buildVisibility: hidden
+//buildVisibility: sandboxOnly
+health: 2700
+produceTime: 1734
+maxSpawn: 2
+consumes: {
+  power: 10
+  items: {
+    items: [
+      copper/28
+      metaglass/17
+      thorium/12
+      ancient-alloy/15
+    ]
+  }
+}
+category: units
+research: ancient-warrior-factory
+requirements: [
+  copper/400
+  silicon/900
+  plastanium/400
+  thorium/200
+  diamond/100
+  ancient-alloy/125
+]

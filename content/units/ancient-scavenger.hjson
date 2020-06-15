@@ -1,0 +1,28 @@
+type: MinerDrone
+name: Ancient Scavenger
+description: "A [#e5b85e]special mining ship[] that can quickly locate and mine any of the basic ores, including diamond."
+speed: 0.28
+drag: 0.015
+mass: 45
+maxVelocity: 2.00
+flying: true
+health: 400
+engineOffset: 6.5
+engineSize: 2.15
+itemCapacity: 50
+hitsize: 13
+hitsizeTile: 13
+range: 80
+minePower: 7.4
+retreatPercent: 0.975
+rotatespeed: 0.03
+baseRotateSpeed: 0.02
+toMine: [copper, lead, titanium, thorium, diamond]
+weapon: {
+  name: blaster
+  length: 1.5
+  reload: 14
+  alternate: true
+  ejectEffect: shellEjectSmall
+  bullet: standardMechSmall
+}

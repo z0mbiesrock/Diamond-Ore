@@ -1,0 +1,28 @@
+name: Ancient Widow Mine Factory
+description: "A small pad that manufactures [#e5b85e]walking shock mines[]."
+type: UnitFactory
+unitType: ancient-widowmine
+size: 1
+health: 540
+produceTime: 180
+maxSpawn: 5
+hasItems: true
+itemCapacity: 30
+consumes: {
+  power: 37.5
+  items: {
+    items: [
+      copper/1
+	  blast-compound/1
+	  ancient-alloy/1
+    ]
+  }
+}
+category: units
+research: ancient-sentinel
+requirements: [
+  copper/400
+  lead/400
+  silicon/250
+  ancient-alloy/25
+]

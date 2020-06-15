@@ -1,0 +1,22 @@
+type: GroundUnit
+name: Ancient Pawn
+description: "A small strafing mech unit. Not very powerful, but in great numbers they can be quite a serious threat or distraction."
+speed: 0.125
+drag: 0.2
+mass: 4
+maxVelocity: 0.625
+flying: false
+//countsAsEnemy: false
+deathSound: shoot
+health: 50
+shootCone: 160
+hitsize: 3
+hitsizeTile: 1
+engineSize: 1
+range: 80
+weaponOffsetY: 0
+retreatPercent: 0.975
+rotatespeed: 0.13
+baseRotateSpeed: 0.05
+rotateWeapon: true
+immunities: [shocked, freezing, melting, corroded, burning, tarred]

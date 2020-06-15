@@ -39,7 +39,7 @@ ammo: {
     ammoMultiplier: 2
 	pierce: false
 	bulletSprite: missile
-	homingPower: 0.00015
+	homingPower: 3
 	homingRange: 120
   }
   pyratite: {
@@ -65,7 +65,7 @@ ammo: {
 	bulletSprite: missile
 	status: burning
 	statusDuration: 720
-	homingPower: 0.002
+	homingPower: 1.2
 	homingRange: 120
 	fragBullets: 30
 	fragVelocityMin: 1.125
@@ -115,7 +115,7 @@ ammo: {
 	bulletSprite: missile
 	status: shocked
 	statusDuration: 120
-	homingPower: 0.002
+	homingPower: 2
 	homingRange: 120
 	lightningLength: 25
 	lightining: 3
@@ -190,7 +190,7 @@ ammo: {
 	bulletSprite: missile
 	status: freezing
 	statusDuration: 720
-	homingPower: 0.002
+	homingPower: 1
 	homingRange: 120
 	fragBullets: 20
 	fragVelocityMin: 0.75
@@ -233,7 +233,7 @@ ammo: {
 	reloadMultiplier: 0.75
 	pierce: false
 	bulletSprite: missile
-	homingPower: 0.15
+	homingPower: 12
 	homingRange: 180
   }
   phase-fabric: {
@@ -327,7 +327,7 @@ ammo: {
 	bulletSprite: missile
 	status: melting
 	statusDuration: 2400
-	homingPower: 0.015
+	homingPower: 0.5
 	homingRange: 120
 	fragBullets: 80
 	fragVelocityMin: 1

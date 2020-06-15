@@ -24,7 +24,7 @@ const ancientShotgunShoot = newEffect(20, e => {
     const d = new Floatc2({get(x, y){
     Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fslope() * 6 + 0.25);
     }}) 
-    Angles.randLenVectors(e.id, 8, 1 + 12 * e.fin(), e.rotation, 90,d);
+    Angles.randLenVectors(e.id, 8, 1 + 22 * e.fin(), e.rotation, 90,d);
 });
 const ancientBlasterAmmoUse = newEffect(20, e => {
     Draw.color(Color.yellow, Color.valueOf("#555500"), e.fin());

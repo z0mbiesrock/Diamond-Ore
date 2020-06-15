@@ -24,6 +24,7 @@ immunities: [shocked, wet, tarred, corroded, freezing, burning, melting]
 weapon: {
   name: spore-eradication-equip
   length: 13
+  minPlayerDist: 5
   width: 22
   reload: 64
   shots: 7
@@ -32,6 +33,7 @@ weapon: {
   shotDelay: 5
   alternate: true
   shootSound: explosionbig
+  ignoreRotation: true
   bullet: {
     type: MissileBulletType
     speed: 9

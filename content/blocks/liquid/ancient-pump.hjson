@@ -4,11 +4,8 @@ type: Pump
 health: 1200
 size: 2
 liquidCapacity: 600
-rotateSpeed: 3
 hasPower: true
 drawLiquidLight: false
-updateEffect: freezing
-updateEffectChance: 0.04
 pumpAmount: 5
 consumes: {
   power: 2.5

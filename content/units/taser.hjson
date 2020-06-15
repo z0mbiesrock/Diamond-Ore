@@ -10,6 +10,7 @@ engineOffset: -7
 engineSize: 3
 drag: 0.125
 range: 300
+attackLength: 120
 hitsize: 8
 hitsizeTile: 8
 shootCone: 45

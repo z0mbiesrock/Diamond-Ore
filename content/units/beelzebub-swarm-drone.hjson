@@ -5,6 +5,7 @@ speed: 1.5
 maxVelocity: 4.5
 flying: true
 health: 35
+attackLength: 200
 engineOffset: 2.5
 engineSize: 1
 drag: 0.125

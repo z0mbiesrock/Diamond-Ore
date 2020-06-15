@@ -1,0 +1,31 @@
+name: Ancient Discharger Factory
+description: A pad that manufactures crawling robots that create a burst of lightning in all directions.
+type: UnitFactory
+unitType: ancient-discharger
+size: 2
+buildCostMultiplier: 1.65
+//buildVisibility: hidden
+//buildVisibility: sandboxOnly
+health: 360
+produceTime: 1800
+maxSpawn: 4
+consumes: {
+  power: 7
+  items: {
+    items: [
+      silicon/15
+      metaglass/15
+      surge-alloy/5
+      ancient-alloy/5
+    ]
+  }
+}
+category: units
+research: ancient-widowmine-factory
+requirements: [
+  metaglass/400
+  titanium/150
+  thorium/300
+  cryogem/40
+  ancient-alloy/5
+]

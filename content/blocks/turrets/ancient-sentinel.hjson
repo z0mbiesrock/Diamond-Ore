@@ -19,8 +19,8 @@ ammo: {
     speed: 6
     damage: 20
 	lifetime: 30
-    bulletWidth: 8
-    bulletHeight: 14
+    bulletWidth: 10
+    bulletHeight: 24
 	frontColor: 999999
 	backColor: ffffff
     splashDamage: 38
@@ -31,10 +31,29 @@ ammo: {
 	hitEffect: flakExplosion
 	despawnEffect: flakExplosionBig
     ammoMultiplier: 4
+	reloadMultiplier: 1.5
 	pierce: false
 	bulletSprite: shell
     splashDamage: 50
     splashDamageRadius: 20
+	fragBullets: 6
+	fragVelocityMin: 5
+	fragVelocityMax: 10
+	fragBullet: {
+      type: BasicBulletType
+      speed: 1
+	  lifetime: 20
+      damage: 25
+      bulletWidth: 2
+      bulletHeight: 16
+	  despawnEffect: none
+	  hitEffect: none
+	  frontColor: 999999
+	  backColor: ffffff
+	  pierce: true
+	  knockback: 10
+	  bulletSprite: shell
+    }
   }
   scrap: {
     type: ArtilleryBulletType
@@ -43,8 +62,8 @@ ammo: {
     splashDamage: 38
     splashDamageRadius: 24
 	lifetime: 60
-    bulletWidth: 8
-    bulletHeight: 14
+    bulletWidth: 14
+    bulletHeight: 28
 	frontColor: bbbbbb
 	backColor: 888888
     shootEffect: shootBig
@@ -82,8 +101,8 @@ ammo: {
     splashDamage: 45
     splashDamageRadius: 36
 	lifetime: 60
-    bulletWidth: 11
-    bulletHeight: 17
+    bulletWidth: 15
+    bulletHeight: 40
 	frontColor: 69501c
 	backColor: ce8404
     shootEffect: shootBig
@@ -96,7 +115,7 @@ ammo: {
 	pierce: false
 	knockback: 15
 	bulletSprite: shell
-	fragBullets: 15
+	fragBullets: 30
 	fragVelocityMin: 2
 	fragVelocityMax: 18
 	fragBullet: {
@@ -106,7 +125,9 @@ ammo: {
 	  lifetime: 300
       bulletWidth: 2
       bulletHeight: 2
-      collidesTiles: false
+      hitsTiles: false
+      collides: true
+      collidesAir: true
 	  frontColor: 69501c
 	  backColor: ff6614
       shootEffect: none
@@ -129,8 +150,8 @@ ammo: {
     speed: 6
     damage: 50
 	lifetime: 40
-    bulletWidth: 10
-    bulletHeight: 16
+    bulletWidth: 20
+    bulletHeight: 32
 	frontColor: fbbbeb
 	backColor: c878a8
     shootEffect: shootBig
@@ -145,14 +166,36 @@ ammo: {
 	bulletSprite: shell
     splashDamage: 80
     splashDamageRadius: 40
+	hitShake: 3
+	fragBullets: 40
+	fragVelocityMin: 1
+	fragVelocityMax: 3
+	fragBullet: {
+      type: MissileBulletType
+      speed: 1
+	  lifetime: 40
+      damage: 10
+      bulletWidth: 2
+      bulletHeight: 4
+	  despawnEffect: none
+	  hitEffect: none
+	  frontColor: ffa0ee
+	  backColor: ff66ff
+	  trailColor: c878a8
+	  weaveScale: 1.364
+	  weaveMag: 2.66
+	  pierce: true
+	  knockback: 10
+	  bulletSprite: diamond-ore-diamondshell
+    }
   }
   blast-compound: {
     type: ArtilleryBulletType
     speed: 6
     damage: 50
 	lifetime: 60
-    bulletWidth: 13
-    bulletHeight: 20
+    bulletWidth: 16
+    bulletHeight: 32
 	frontColor: fb4444
 	backColor: c87833
     splashDamage: 38
@@ -175,8 +218,8 @@ ammo: {
     speed: 6
     damage: 20
 	lifetime: 60
-    bulletWidth: 4
-    bulletHeight: 9
+    bulletWidth: 12
+    bulletHeight: 24
 	frontColor: ddbb22
 	backColor: ffff33
     splashDamage: 38
@@ -190,19 +233,22 @@ ammo: {
 	reloadMultiplier: 0.975
 	lightningLength: 18
 	lightining: 4
+	hitShake: 5
 	pierce: false
 	knockback: 20
 	bulletSprite: diamond-ore-diamondshell
     splashDamage: 30
     splashDamageRadius: 24
+	status: shocked
+	statusDuration: 15
   }
   ancient-alloy: {
     type: ArtilleryBulletType
     speed: 6
     damage: 40
 	lifetime: 60
-    bulletWidth: 8
-    bulletHeight: 20
+    bulletWidth: 16
+    bulletHeight: 32
 	frontColor: ffff00
 	backColor: ffffff
     splashDamage: 38
@@ -216,6 +262,9 @@ ammo: {
 	reloadMultiplier: 0.575
 	lightningLength: 32
 	lightining: 6
+	hitShake: 12
+	status: shocked
+	statusDuration: 120
 	pierce: false
 	knockback: 200
 	bulletSprite: diamond-ore-diamondshell
@@ -229,8 +278,8 @@ ammo: {
     splashDamage: 38
     splashDamageRadius: 24
 	lifetime: 60
-    bulletWidth: 9
-    bulletHeight: 18
+    bulletWidth: 15
+    bulletHeight: 40
 	frontColor: 66ff66
 	backColor: 888888
     shootEffect: shootBig
@@ -250,16 +299,145 @@ ammo: {
       drag: 0.13
 	  lifetime: 30
       damage: 15
-      bulletWidth: 2
-      bulletHeight: 4
+      bulletWidth: 7.5
+      bulletHeight: 18
 	  despawnEffect: hitBulletSmall
-	  hitEffect: hitBulletSmall
+	  hitEffect: hitBulletBig
 	  frontColor: 44a044
 	  backColor: 116614
 	  knockback: 10
 	  keepVelocity: false
 	  splashDamage: 38
 	  splashDamageRadius: 24
+	  bulletSprite: diamond-ore-diamondshell
+    }
+  }
+  titanium: {
+    type: ArtilleryBulletType
+    speed: 6
+    damage: 5
+    splashDamage: 35
+    splashDamageRadius: 32
+	lifetime: 60
+    bulletWidth: 18
+    bulletHeight: 22
+	frontColor: 9999eb
+	backColor: 3388c8
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
+    trailEffect: hitFuse
+	hitEffect: mineHuge
+	despawnEffect: bigShockwave
+    ammoMultiplier: 2
+	pierce: false
+	knockback: 15
+	bulletSprite: missile
+	fragBullets: 40
+	fragVelocityMin: 1.125
+	fragVelocityMax: 3.375
+	fragBullet: {
+      type: BasicBulletType
+      speed: 1
+	  lifetime: 20
+      damage: 2
+      bulletWidth: 2
+      bulletHeight: 12
+      bulletShrink: 0
+	  despawnEffect: none
+	  hitEffect: shootSmall
+	  frontColor: 44aaff
+	  backColor: 0000ff
+	  pierce: false
+	  knockback: 600
+	  bulletSprite: diamond-ore-diamondshell
+    }
+  }
+  cryogem: {
+    type: ArtilleryBulletType
+    speed: 6
+    damage: 5
+    splashDamage: 35
+    splashDamageRadius: 32
+	lifetime: 40
+    bulletWidth: 18
+    bulletHeight: 22
+	frontColor: 99ffff
+	backColor: 33b8e8
+    shootEffect: shootBig2
+    smokeEffect: shootBigSmoke
+    trailEffect: ripple
+	hitEffect: mineHuge
+	despawnEffect: bigShockwave
+    ammoMultiplier: 2
+    reloadMultiplier: 0.85
+	pierce: false
+	knockback: 15
+	bulletSprite: missile
+	fragBullets: 30
+	fragVelocityMin: 1.125
+	fragVelocityMax: 3.375
+	fragBullet: {
+      type: BasicBulletType
+      speed: 1
+	  lifetime: 20
+      damage: 2
+      bulletWidth: 4
+      bulletHeight: 8
+      bulletShrink: 0
+	  despawnEffect: none
+	  hitEffect: freezing
+	  frontColor: 44ffff
+	  backColor: ffffff
+	  pierce: true
+	  knockback: 600
+	  status: freezing
+	  statusDuration: 300
+	  bulletSprite: diamond-ore-diamondshell
+    }
+  }
+  pyratite: {
+    type: ArtilleryBulletType
+    speed: 6
+    damage: 45
+    splashDamage: 75
+    splashDamageRadius: 50
+	lifetime: 40
+    bulletWidth: 18
+    bulletHeight: 22
+	frontColor: ff9c3a
+	backColor: e7885c
+    shootEffect: shootBig2
+    smokeEffect: shootSmallFlame
+    trailEffect: ripple
+	hitEffect: mineHuge
+	despawnEffect: bigShockwave
+    ammoMultiplier: 2
+    reloadMultiplier: 0.85
+	pierce: false
+	knockback: 15
+	incendSpread: 30
+	incendAmount: 15
+	incendChance: 0.8
+	bulletSprite: diamond-ore-diamondmissile
+	fragBullets: 30
+	fragVelocityMin: 1.125
+	fragVelocityMax: 3.375
+	fragBullet: {
+      type: BasicBulletType
+      speed: 1
+	  lifetime: 20
+      damage: 2
+      bulletWidth: 4
+      bulletHeight: 8
+      bulletShrink: 0
+	  despawnEffect: none
+	  hitEffect: burning
+	  frontColor: e7885c
+	  backColor: ff9c3a
+	  pierce: true
+	  knockback: 600
+	  status: burning
+	  statusDuration: 300
 	  bulletSprite: diamond-ore-diamondshell
     }
   }

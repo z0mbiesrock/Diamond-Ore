@@ -135,6 +135,7 @@ ammo: {
   diamond: {
     type: MissileBulletType
     speed: 9
+	lifetime: 70
     damage: 300
     bulletWidth: 17
     bulletHeight: 32

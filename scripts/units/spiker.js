@@ -16,6 +16,8 @@ spikerUnit.create(prov(() => new JavaAdapter(GroundUnit, {
 			try{
 				//Move slightly faster than the speed of 0.25 to reduce pull from the original pathfinding.
 				this.velocity().add(vel.trns(this.angleTo(this.meleeTarget), 0.45 * Time.delta()));
+				//?
+				//this.move(this.meleeTarget.x, this.meleeTarget.y);
 				this.target = this.meleeTarget
 				//this.rotation = Mathf.slerpDelta(rotation, this.angleTo(this.meleeTarget), type.rotatespeed);
 			}

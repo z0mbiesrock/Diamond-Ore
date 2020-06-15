@@ -55,7 +55,7 @@ const overdriverFighter = new JavaAdapter(UnitType, {}, "overdriver-fighter",  p
 		try{
 			if(this.initiated == true){
 				try{ // Put in a "try"; keep a distance from enemies at all costs
-					nearestfoe = Units.closestTarget(this.getTeam(), this.x, this.y, 250);
+					var nearestfoe = Units.closestTarget(this.getTeam(), this.x, this.y, 250);
 					if (nearestfoe != null){
 						vel = Vec2(this.x, this.y);
 						if (nearestfoe.dst(this) < 150){

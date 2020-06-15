@@ -81,13 +81,13 @@ const sporeBomberFx1 = newEffect(50, e => {
 
 const sporeBomb1 = new JavaAdapter(UnitType, {}, "spore-bomber",  prov(() => new JavaAdapter(FlyingUnit, {
 	drawEngine(){
-		Effects.effect(sporeBomberFx1, this.x, this.y, Mathf.random(-360,360));
 	},
 	getPowerCellRegion(){
         return Core.atlas.find("clear");
     },
 	update(){
 		this.super$update();
+		Effects.effect(sporeBomberFx1, this.x, this.y, Mathf.random(-360,360));
 		if(this.health < this.maxHealth()){
 			this.healBy(Time.delta() * 0.27);
 		}
@@ -117,13 +117,13 @@ const sporeBomberFx2 = newEffect(70, e => {
 
 const sporeBomb2 = new JavaAdapter(UnitType, {}, "spore-bomber-large",  prov(() => new JavaAdapter(FlyingUnit, {
 	drawEngine(){
-		Effects.effect(sporeBomberFx2, this.x, this.y, Mathf.random(-360,360));
 	},
 	getPowerCellRegion(){
         return Core.atlas.find("clear");
     },
 	update(){
 		this.super$update();
+		Effects.effect(sporeBomberFx2, this.x, this.y, Mathf.random(-360,360));
 		if(this.health < this.maxHealth()){
 			this.healBy(Time.delta() * 0.54);
 		}
@@ -168,13 +168,13 @@ const sporeBomberFx3 = newEffect(90, e => {
 });
 const sporeBomb3 = new JavaAdapter(UnitType, {}, "spore-bomber-giant",  prov(() => new JavaAdapter(FlyingUnit, {
 	drawEngine(){
-		Effects.effect(sporeBomberFx3, this.x, this.y, Mathf.random(-360,360));
 	},
 	getPowerCellRegion(){
         return Core.atlas.find("clear");
     },
 	update(){
 		this.super$update();
+		Effects.effect(sporeBomberFx3, this.x, this.y, Mathf.random(-360,360));
 		if(this.health < this.maxHealth()){
 			this.healBy(Time.delta() * 0.81);
 		}

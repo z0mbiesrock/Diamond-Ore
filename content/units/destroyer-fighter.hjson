@@ -12,7 +12,7 @@ mass: 90
 engineOffset: 13
 engineSize: 4
 range: 400
-attackLength: 180
+attackLength: 200
 retreatPercent: 0
 shootCone: 270
 rotatespeed: 0.144

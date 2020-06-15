@@ -1,0 +1,26 @@
+name: Ancient Pawn Factory
+description: "A small pad that quickly manufactures small fragile mechs."
+type: UnitFactory
+unitType: ancient-pawn
+size: 1
+health: 540
+produceTime: 40
+maxSpawn: 16
+hasItems: true
+consumes: {
+  power: 3.75
+  items: {
+    items: [
+      copper/1
+	  plastanium/1
+	  surge-alloy/1
+    ]
+  }
+}
+category: units
+research: ancient-refinery
+requirements: [
+  graphite/400
+  silicon/125
+  ancient-alloy/10
+]

@@ -1,0 +1,18 @@
+type: GroundUnit
+name: Ancient Zapper
+description: "A [#e5b85e]shocking[] ground unit that fires electrical arcs, and creates random electrical discharges upon taking heavy damage. When killed, it creates a large electrical explosion."
+speed: 0.15
+drag: 0.09
+mass: 45
+maxVelocity: 1.234
+flying: false
+health: 1000
+shootCone: 10
+hitsize: 18
+hitsizeTile: 7
+range: 80
+weaponOffsetY: -4
+retreatPercent: 0.975
+rotatespeed: 0.09
+baseRotateSpeed: 0.06
+immunities: [shocked, freezing, melting]

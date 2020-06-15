@@ -1,0 +1,33 @@
+name: Ancient Warrior Factory
+description: A pad that manufactures advanced rapid-fire attack mechs.
+type: UnitFactory
+unitType: ancient-warrior
+size: 3
+buildCostMultiplier: 0.465
+//buildVisibility: hidden
+//buildVisibility: sandboxOnly
+health: 630
+produceTime: 1200
+maxSpawn: 3
+consumes: {
+  power: 70
+  items: {
+    items: [
+      copper/20
+      lead/15
+      plastanium/10
+      surge-alloy/10
+      ancient-alloy/1
+    ]
+  }
+}
+category: units
+research: ancient-grunt-factory
+requirements: [
+  graphite/900
+  silicon/500
+  surge-alloy/350
+  diamond/45
+  cryogem/90
+  ancient-alloy/120
+]

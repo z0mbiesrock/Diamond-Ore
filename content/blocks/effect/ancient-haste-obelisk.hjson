@@ -1,0 +1,36 @@
+name: Ancient Haste Obelisk
+description: "A Cryodrive projector that has been upgraded using [#e5b85e]ancient technology[]. As a result, its range and power usage has been increased to incredible amounts."
+type: OverdriveProjector
+health: 3200
+size: 4
+buildCostMultiplier: 0.75
+hasPower: true
+baseColor: 82e4e988
+phaseColor: 00ffff
+speedBoost: 2
+speedBoostPhase: 2
+range: 240
+phaseRangeBoost: 240
+useTime: 120
+consumes: {
+  power: 25
+  items: {
+    items: [
+      surge-alloy/1
+    ]
+    booster: true
+	optional: true
+  }
+}
+requirements: [
+  plastanium/750
+  silicon/825
+  thorium/825
+  surge-alloy/750
+  phase-fabric/825
+  diamond/825
+  cryogem/825
+  ancient-alloy/250
+]
+category: effect
+research: ancient-mending-obelisk

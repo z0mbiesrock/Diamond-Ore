@@ -1,0 +1,7 @@
+duplicatePadding: true
+combineSubdirectories: true
+flattenPaths: true
+maxWidth: 8192
+maxHeight: 8192
+fast: true
+bleedIterations: 4

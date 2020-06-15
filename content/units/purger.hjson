@@ -1,6 +1,6 @@
 type: HoverUnit
 name: Purger
-//description: A flying unit that fires powerful balls of lightning.
+//description: Punishes speedhackers by yeeting balls of omegaradium plasma into your core.
 speed: 0.15
 maxVelocity: 0.95
 drag: 0.125
@@ -17,6 +17,7 @@ shootCone: 20
 rotatespeed: 0.085
 baseRotateSpeed: 0.6
 mass: 250
+attackLength: 250
 retreatPercent: 0.8
 weaponOffsetY: 40
 immunities: [shocked, wet, tarred, corroded, freezing]

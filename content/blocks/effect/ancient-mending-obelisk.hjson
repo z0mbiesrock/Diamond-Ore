@@ -1,0 +1,34 @@
+name: Ancient Mending Obelisk
+description: "Using [#e5b85e]ancient technology[], this mend projector repairs nearby blocks in bursts. Optionally uses thorium to massively increase range, but weakens the repair burst."
+type: MendProjector
+health: 2400
+size: 2
+buildCostMultiplier: 0.7
+hasPower: true
+baseColor: e5a57e88
+phaseColor: e2bb7fbb
+healPercent: 20
+phaseBoost: -10
+range: 60
+reload: 180
+phaseRangeBoost: 180
+itemCapacity: 18
+useTime: 180
+consumes: {
+  power: 15
+  items: {
+    items: [
+      thorium/3
+    ]
+    booster: true
+	optional: true
+  }
+}
+requirements: [
+  plastanium/300
+  thorium/375
+  surge-alloy/125
+  ancient-alloy/225
+]
+category: effect
+research: ancient-vault
