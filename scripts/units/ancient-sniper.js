@@ -112,6 +112,34 @@ ancientSniperWeapon.ignoreRotation = true;
 ancientSniperWeapon.bullet = ancientSniperBullet;
 ancientSniperWeapon.shootSound = Sounds.shootSnap;
 ancientSniperWeapon.shootEffect = ancientSniperShoot;
+/* This is all for reference; it is broken
+const ancientSniperSeekCover = new JavaAdapter(Pathfinder.PathTarget(team, out) => {
+    var other = BlockIndexer.findTile(team, boolf(tile => tile.type == Wall && tile.size == 1));
+    out.add(other.pos());
+});
+const sniperMoveState = new UnitState({
+    entered(){
+        this.setTarget(null);
+        print("entered");
+    },
+    
+    update(){
+        print("update");
+        
+        if(this.retarget()){
+            var trgt = Units.closestTarget(this.getTeam(), this.x, this.y, 660);
+            this.setTarget(trgt);
+        };
+        
+        if(this.getTarget() != null){
+            this.moveToCore(ancientSniperSeekCover);
+        }
+    },
+    
+    exited(){
+    }    
+}),
+ */
 const sniperAttackState = new JavaAdapter(UnitState, {
 	entered(){
 		print("Sniper targeted enemy")
@@ -135,20 +163,21 @@ const ancientSniper = new JavaAdapter(UnitType, {}, "ancient-sniper",  prov(() =
     },
 	update(){
 		this.super$update();
-		if (this.target != null && this.state.is(this.attack)){
-			this.state.set(sniperAttackState)
+		if (this.target != null && (this.state.is(this.attack) || this.state.is(this.rally))){
+			this.state.set(sniperAttackState);
 		}
 		else if (this.target == null){
 			try{
-				this.onCommand(command);
+				if (this.isCommanded()){
+					this.onCommand(this.getCommand());
+				}
+				else{
+					this.state.set(this.getStartState());
+				}
 			}
 			catch(nooh){
-				try{
-				this.onCommand(getCommand());
-				}
-				catch(fooj){
-					this.state.set(this.attack);
-				}
+				print(nooh);
+				this.state.set(this.getStartState());
 			}
 		}
     },
@@ -165,23 +194,23 @@ const ancientSniper = new JavaAdapter(UnitType, {}, "ancient-sniper",  prov(() =
 	},
 	
 	behavior(){
-		if(this.state.is(sniperAttackState)){
+		/* if(this.state.is(sniperAttackState)){
 			this.super$behavior();
-		}
-			/* if(!Units.invalidateTarget(target, this)){
-				if(this.dst(this.target) < this.getWeapon().bullet.range()){
+		} */
+		if(!Units.invalidateTarget(this.target, this)){
+			if(this.dst(this.target) < this.getWeapon().bullet.range()){
 
-					this.rotate(angleTo(target));
+				this.rotate(this.angleTo(this.target));
 
-					if(Angles.near(angleTo(this.target), this.rotation, 13)){
-						var ammo = this.getWeapon().bullet;
+				if(Angles.near(this.angleTo(this.target), this.rotation, 13) && this.state.is(sniperAttackState)){
+					var ammo = this.getWeapon().bullet;
 
-						var to = Predict.intercept(this, this.target, ammo.speed);
+					var to = Predict.intercept(this, this.target, ammo.speed/*  - 7 * (this.dst(this.target) / this.getWeapon().bullet.range()) */);
 
-						this.getWeapon().update(this, to.x, to.y);
-					}
+					this.getWeapon().update(this, to.x, to.y);
 				}
-			} */
+			}
+		}
 	}
 })));
 ancientSniper.weapon = ancientSniperWeapon;
