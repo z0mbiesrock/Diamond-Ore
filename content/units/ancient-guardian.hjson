@@ -8,7 +8,7 @@ maxVelocity: 0.25
 flying: false
 //countsAsEnemy: false
 deathSound: explosionbig
-health: 25500
+health: 33333
 shootCone: 160
 hitsize: 28
 hitsizeTile: 6

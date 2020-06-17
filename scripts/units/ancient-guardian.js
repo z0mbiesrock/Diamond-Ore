@@ -166,10 +166,10 @@ const ancientGuardian = new JavaAdapter(UnitType, {}, "ancient-guardian",  prov(
     onDeath(){
         Sounds.explosionbig.at(this);
         for(var j = 0; j < 25; j++){
-            Calls.createBullet(Bullets.flakSurge, this.getTeam(), this.x, this.y, Mathf.random(360), Mathf.random(0.35, 2.7), Mathf.random(0.6, 1.1));
+            Calls.createBullet(Bullets.flakSurge, this.getTeam(), this.x, this.y, Mathf.random(360), Mathf.random(0.35, 1.4), Mathf.random(0.6, 1.1));
 		}
-        for(var k = 0; k < 11; k++){
-            Calls.createBullet(ancientGuardianDeathBullet, this.getTeam(), this.x, this.y, Mathf.random(360), Mathf.random(0.35, 2.7), Mathf.random(0.6, 1.1));
+        for(var k = 0; k < 12; k++){
+            Calls.createBullet(ancientGuardianDeathBullet, this.getTeam(), this.x, this.y, Mathf.random(360), Mathf.random(0.25, 1), Mathf.random(0.6, 1.6));
 		}
 		Effects.effect(ancientGuardianDeathFx, this.x, this.y, Mathf.random(-360,360));
 		this.super$onDeath();

@@ -13,7 +13,7 @@ hitsizeTile: 7
 //engineSize: 1
 range: 96
 //retreatPercent: 0.
-shootCone: 360
+shootCone: 45
 rotatespeed: 0.08
 baseRotateSpeed: 0.063
 rotateWeapon: true
