@@ -10,6 +10,7 @@ const ancientSentinel = extendContent(ArtilleryTurret, "ancient-sentinel", {
         ];
     }
 });
+ancientSentinel.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1), 0.3)).update(false).boost();
 const ancientBlasterShoot = newEffect(20, e => {
     Draw.color(Color.white, Color.yellow, e.fin());
     Lines.stroke(e.fin() * 2);
@@ -47,6 +48,7 @@ const ancientBlaster = extendContent(ItemTurret, "ancient-blaster", {
 });
 ancientBlaster.ammoUseEffect = ancientBlasterAmmoUse;
 ancientBlaster.shootEffect = ancientBlasterShoot;
+ancientBlaster.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1), 0.1)).update(false).boost();
 const ancientPulser = extendContent(PowerTurret, "ancient-pulser", {
 	draw(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
@@ -140,6 +142,7 @@ const ancientShotgun = extendContent(ItemTurret, "ancient-shotgun", {
 });
 ancientShotgun.ammoUseEffect = ancientBlasterAmmoUse;
 ancientShotgun.shootEffect = ancientShotgunShoot;
+ancientShotgun.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1), 0.15)).update(false).boost();
 const ancientSprayer = extendContent(ItemTurret, "ancient-sprayer", {
 	draw(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
@@ -157,4 +160,5 @@ const ancientSprayer = extendContent(ItemTurret, "ancient-sprayer", {
 		this.region = Core.atlas.find(this.name + this.xRand);
     }
 });
+ancientSprayer.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1), 0.4)).update(false).boost();
 //?

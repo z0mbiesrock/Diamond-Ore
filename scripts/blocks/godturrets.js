@@ -8,6 +8,7 @@ const thorTurret = extendContent(DoubleTurret, "thor", {
 		];
 	},
 });
+thorTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.5)).update(false).boost();
 const odinTurret = extendContent(BurstTurret, "odin", {
 	
 	generateIcons: function(){
@@ -17,6 +18,7 @@ const odinTurret = extendContent(BurstTurret, "odin", {
 		];
 	},
 });
+odinTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.314159)).update(false).boost();
 const lokiTurret = extendContent(ItemTurret, "loki", {
 	
 	generateIcons: function(){
@@ -26,6 +28,7 @@ const lokiTurret = extendContent(ItemTurret, "loki", {
 		];
 	},
 });
+lokiTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.2345)).update(false).boost();
 const massdriverStrong = extendContent(MassDriver, "massdriver-strong", {
 	
 	generateIcons: function(){
@@ -209,4 +212,5 @@ const yggdrasilTurret = extendContent(ChargeTurret, "yggdrasil", {
 yggdrasilTurret.chargeEffect = yggdrasilCharge;
 yggdrasilTurret.shootEffect = yggdrasilShoot;
 yggdrasilTurret.shootType = yggdrasilPlasma;
+yggdrasilTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.4)).update(false).boost();
 //yggdrasilTurret.shootSound = Sounds.yggdrasilfire;
