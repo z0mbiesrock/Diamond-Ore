@@ -40,12 +40,25 @@ const oldRefinery = extendContent(GenericSmelter, "ancient-refinery", {
 		Core.atlas.find(this.name + "-topB")
 	];},
 	
+	setStats(){
+        this.super$setStats();
+		this.stats.add(BlockStat.boostEffect, 2.25, StatUnit.timesSpeed);
+	},
+	
 	draw: function(tile){
         this.super$draw(tile);
 		ent = tile.ent();
 		Draw.rect(this.topRegionB, tile.drawx(), tile.drawy(), ent.totalProgress * 7);
+	},
+	
+	update(tile){
+        this.super$update(tile);
+		if(tile.ent().cons.valid() && tile.ent().cons.optionalValid()){
+			tile.ent().progress += (this.getProgressIncrease(tile.ent(), this.craftTime) * 1.25);
+		}
 	}
 });
 oldRefinery.craftEffect = alloyRefined;
 oldRefinery.updateEffect = alloyRefining;
 oldRefinery.spin = 0;
+oldRefinery.consumes.liquid(Liquids.slag, (5 / 18)).update(true).boost();
