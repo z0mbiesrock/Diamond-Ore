@@ -37,13 +37,14 @@ weapon: {
   bullet: {
     type: MissileBulletType
     speed: 4.2
+	drag: 0.005
     damage: 32
 	splashDamage: 128
 	splashDamageRadius: 16
     bulletWidth: 3
     bulletHeight: 9
 	bulletShrink: 0
-	lifetime: 70
+	lifetime: 90
 	frontColor: 998844
 	backColor: 776f33
 	trailColor: ddaa55
@@ -53,6 +54,6 @@ weapon: {
 	weaveMag: -3
 	homingPower: 15
 	homingRange: 64
-	bulletSprite: diamond-ore-diamondmissile
+	bulletSprite: diamond-ore-diamondconcus
 	}
 }

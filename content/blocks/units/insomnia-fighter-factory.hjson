@@ -1,0 +1,31 @@
+name: Insomnia Fighter Factory
+description: "A pad that manufactures strafing interceptors that fire high-knockback projectiles."
+type: UnitFactory
+unitType: insomnia-fighter
+size: 2
+buildCostMultiplier: 0.665
+//buildVisibility: hidden
+//buildVisibility: sandboxOnly
+health: 360
+produceTime: 800
+maxSpawn: 3
+consumes: {
+  power: 25
+  items: {
+    items: [
+      copper/15
+      titanium/5
+      plastanium/5
+      ancient-alloy/1
+    ]
+  }
+}
+category: units
+research: ancient-pawn-factory
+requirements: [
+  copper/600
+  silicon/375
+  phase-fabric/150
+  cryogem/15
+  ancient-alloy/60
+]

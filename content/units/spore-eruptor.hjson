@@ -51,7 +51,7 @@ weapon: {
     homingRange: 200
 	splashDamage: 10
 	pierce: false
-	bulletSprite: missile
+	bulletSprite: diamond-ore-diamondconcus
 	fragBullets: 13
 	fragVelocityMin: 0.05
 	fragVelocityMax: 0.25

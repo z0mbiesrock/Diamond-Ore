@@ -46,7 +46,7 @@ weapon: {
 	hitEffect: hitLancer
 	pierce: false
 	knockback: 700
-	bulletSprite: diamond-ore-diamondmissile
+	bulletSprite: diamond-ore-diamondconcus
 	inaccuracy: 18
 	fragBullets: 15
 	splashDamage: 150

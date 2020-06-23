@@ -79,7 +79,7 @@ ancientGuardianWeapon.shootCone = 100;
 ancientGuardianWeapon.alternate = true;
 ancientGuardianWeapon.ignoreRotation = true;
 ancientGuardianWeapon.bullet = ancientGuardianBullet;
-ancientGuardianWeapon.shootSound = Sounds.shootSnap;
+ancientGuardianWeapon.shootSound = Sounds.shotgun;
 ancientGuardianWeapon.shootEffect = ancientGuardianShoot;
 const ancientGuardianDeathBulletFx = newEffect(24, e => {
     Lines.stroke(e.fout() * 2);

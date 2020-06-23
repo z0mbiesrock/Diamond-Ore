@@ -1,0 +1,31 @@
+name: Paranoia Fighter Factory
+description: "A pad that manufactures [#e5b85e]missile artillery ships[] with [#6ecffa]erratic behavior[]."
+type: UnitFactory
+unitType: paranoia-fighter
+size: 2
+buildCostMultiplier: 0.7421
+//buildVisibility: hidden
+//buildVisibility: sandboxOnly
+health: 200
+produceTime: 1437
+maxSpawn: 1
+consumes: {
+  power: 73.527
+  items: {
+    items: [
+      copper/30
+      silicon/25
+      phase-fabric/15
+      ancient-alloy/10
+    ]
+  }
+}
+category: units
+research: insomnia-fighter-factory
+requirements: [
+  copper/600
+  silicon/375
+  phase-fabric/150
+  cryogem/400
+  ancient-alloy/60
+]

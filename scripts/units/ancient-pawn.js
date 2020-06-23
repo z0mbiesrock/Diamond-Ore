@@ -74,13 +74,16 @@ const ancientPawn = new JavaAdapter(UnitType, {}, "ancient-pawn",  prov(() => ne
 				if (nearestfoe.dst(this) < 200 && Mathf.chance(0.2)){
 					this.velocity().add(Mathf.random(-0.4,0.4), Mathf.random(-0.4,0.4));
 				}
+				if (nearestfoe.dst(this) < this.getWeapon().bullet.range() && Mathf.chance(0.4)){
+					this.velocity().add(Mathf.random(-0.8,0.8), Mathf.random(-0.8,0.8));
+				}
 				this.avoidOthers();	
 			}
 		}
 		catch(error){
 			//print(error);
 		}
-    },
+    }
 })));
 ancientPawn.weapon = ancientPawnWeapon;
 const ancientPawnFactorySpawn = newEffect(12, e => {

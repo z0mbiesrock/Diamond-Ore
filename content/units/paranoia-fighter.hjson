@@ -1,0 +1,21 @@
+type: flyingUnit
+name: Paranoia Fighter
+description: "A small ship, armed with [#e5b85e]heavy artillery[]. Phases in [#6ecffa]large glowing missiles[] that persistently seek enemies."
+speed: 0.25
+maxVelocity: 1.75
+flying: true
+health: 400
+attackLength: 300
+engineOffset: 8
+engineSize: 4
+drag: 0.0675
+range: 660
+hitsize: 6
+hitsizeTile: 12
+shootCone: 75
+rotatespeed: 0.1
+baseRotateSpeed: 0.2
+velocityPercision: 24
+rotateWeapon: false
+immunities: [freezing, tarred, melting]
+mass: 45

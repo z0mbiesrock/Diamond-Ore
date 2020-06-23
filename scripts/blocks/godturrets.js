@@ -1,14 +1,73 @@
 //require("effects")
+const thorConcussAmmoflak = extend(BasicBulletType, {
+});
+thorConcussAmmoflak.speed = 4;
+thorConcussAmmoflak.lifetime = 20;
+thorConcussAmmoflak.damage = 3;
+thorConcussAmmoflak.bulletWidth = 2.4;
+thorConcussAmmoflak.bulletHeight = 24;
+thorConcussAmmoflak.bulletShrink = 0.9;
+thorConcussAmmoflak.frontColor = Color.valueOf("#999999");
+thorConcussAmmoflak.backColor = Color.valueOf("#888888");
+thorConcussAmmoflak.trailColor = Color.valueOf("#bbbbbb");
+thorConcussAmmoflak.despawnEffect = Fx.none;
+thorConcussAmmoflak.hitEffect = Fx.none;
+thorConcussAmmoflak.knockback = 666;
+thorConcussAmmoflak.pierce = true;
+
+const thorConcussAmmo = extend(MissileBulletType, {
+	hit(b){
+		try{
+		for(var j = 0; j < 25; j++){
+			Calls.createBullet(thorConcussAmmoflak, b.getTeam(), this.x, this.y, b.rot() + Mathf.random(-45,45), Mathf.random(0.35, 2.6), 1);
+		}
+		}
+		catch(fck){
+			//print(fck);
+		}
+        this.super$hit(b);
+	},
+});
+thorConcussAmmo.speed = 4;
+thorConcussAmmo.lifetime = 150;
+thorConcussAmmo.knockback = 150;
+thorConcussAmmo.bulletWidth = 8;
+thorConcussAmmo.bulletHeight = 24;
+thorConcussAmmo.bulletShrink = 0;
+thorConcussAmmo.frontColor = Color.valueOf("#999999");
+thorConcussAmmo.backColor = Color.valueOf("#888888");
+thorConcussAmmo.trailColor = Color.valueOf("#bbbbbb");
+thorConcussAmmo.damage = 75;
+thorConcussAmmo.splashDamage = 100;
+thorConcussAmmo.splashDamageRadius = 16;
+thorConcussAmmo.ammoMultiplier = 16;
+thorConcussAmmo.homingPower = 3;
+thorConcussAmmo.homingRange = 48;
+thorConcussAmmo.reloadMultiplier = 1.06;
+thorConcussAmmo.despawnEffect = Fx.hitMeltdown;
+thorConcussAmmo.hitEffect = Fx.shockwave;
+thorConcussAmmo.hitSound = Sounds.explosionbig;
+thorConcussAmmo.shootEffect = Fx.shootBigSmoke2;
+thorConcussAmmo.smokeEffect = Fx.hitFuse;
+
 const thorTurret = extendContent(DoubleTurret, "thor", {
+	
+    init(){
+        this.super$init();
+        //this.ammo(Items.silicon, thorConcussAmmo);
+		//print(this.ammo);
+    },
 	
 	generateIcons: function(){
 		return [
 			Core.atlas.find("diamond-ore-godturret-icon-base"),
 			Core.atlas.find("diamond-ore-thor-icon")
 		];
-	},
+	}
 });
+//thorTurret.ammo.add(Items.silicon, thorConcussAmmo);
 thorTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.5)).update(false).boost();
+
 const odinTurret = extendContent(BurstTurret, "odin", {
 	
 	generateIcons: function(){
@@ -16,7 +75,7 @@ const odinTurret = extendContent(BurstTurret, "odin", {
 			Core.atlas.find("diamond-ore-godturret-icon-base"),
 			Core.atlas.find("diamond-ore-odin-icon")
 		];
-	},
+	}
 });
 odinTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.314159)).update(false).boost();
 const lokiTurret = extendContent(ItemTurret, "loki", {
@@ -26,7 +85,7 @@ const lokiTurret = extendContent(ItemTurret, "loki", {
 			Core.atlas.find("diamond-ore-godturret-icon-base"),
 			Core.atlas.find("diamond-ore-loki-icon")
 		];
-	},
+	}
 });
 lokiTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.2345)).update(false).boost();
 const massdriverStrong = extendContent(MassDriver, "massdriver-strong", {

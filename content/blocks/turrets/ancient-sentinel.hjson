@@ -163,7 +163,7 @@ ammo: {
 	reloadMultiplier: 0.85
 	pierce: false
 	knockback: 200
-	bulletSprite: shell
+	bulletSprite: diamond-ore-diamondbomb
     splashDamage: 80
     splashDamageRadius: 40
 	hitShake: 3
@@ -209,7 +209,7 @@ ammo: {
 	reloadMultiplier: 0.5
 	pierce: false
 	knockback: 200
-	bulletSprite: shell
+	bulletSprite: diamond-ore-diamondbomb
     splashDamage: 200
     splashDamageRadius: 50
   }
@@ -290,7 +290,7 @@ ammo: {
 	reloadMultiplier: 0.7
 	pierce: false
 	knockback: 15
-	bulletSprite: shell
+	bulletSprite: diamond-ore-diamondbomb
 	fragBullets: 20
 	fragVelocityMin: 3
 	fragVelocityMax: 4.5
