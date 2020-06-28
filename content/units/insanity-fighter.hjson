@@ -1,0 +1,91 @@
+type: HoverUnit
+name: Insanity Fighter
+description: "A [#e5b85e]slow, bulky, and well-armored hover ship[], designed for frontline assaults."
+speed: 0.0974
+maxVelocity: 0.98
+drag: 0.03
+flying: true
+health: 7000
+attackLength: 120
+engineOffset: 8
+engineSize: 3.2
+range: 255
+hitsize: 24
+hitsizeTile: 24
+shootCone: 90
+rotatespeed: 0.07
+baseRotateSpeed: 0.11
+rotateWeapon: true
+immunities: [freezing, tarred, melting, shocked, burning, wet]
+mass: 60
+weaponOffsetY: 4.75
+weapon: {
+  name: insanity-fighter-equip
+  length: 4.5
+  reload: 140
+  alternate: true
+  recoil: 0
+  width: 7
+  inaccuracy: 15
+  spacing: 0.2
+  shots: 24
+  shotDelay: 2
+  shootSound: explosionbig
+  velocityRnd: 0.2
+  bullet: {
+    type: MissileBulletType
+    speed: 4.65
+	drag: 0.00415
+	lifetime: 60
+    damage: 12
+    bulletWidth: 4
+    bulletHeight: 5
+	bulletShrink: 0
+	frontColor: 916d28
+	trailColor: e5a57e
+	backColor: edb369
+    shootEffect: shootBig2
+    smokeEffect: shootSmallFlame
+    despawnEffect: blastExplosion
+	hitEffect: flakExplosion
+	hitSound: explosion
+	keepVelocity: false
+	pierce: false
+	weaveScale: 8.6
+	weaveMag: 1.15
+    //lightningLength: 60
+    //lightining: 3
+	homingPower: 3
+	homingRange: 72
+	splashDamage: 16
+	splashDamageRadius: 18
+	bulletSprite: diamond-ore-diamondconcus
+	fragBullets: 7
+	fragVelocityMin: 0.375
+	fragVelocityMax: 1.05
+	status: burning
+	statusDuration: 120
+	fragBullet: {
+        type: BasicBulletType
+        keepVelocity: false
+        hitsTiles: false
+		drag: 0.1
+	    lifetime: 18
+        damage: 2
+        healPercent: 2.5
+	    collidesAir: false
+        bulletWidth: 1
+        bulletHeight: 5
+        bulletShrink: 1
+	    frontColor: fdb369
+	    backColor: e5a57e
+	    pierce: true
+        despawnEffect: none
+	    hitEffect: melting
+	    bulletSprite: diamond-ore-diamondbullet
+	    knockback: 3.75
+	    status: melting
+	    statusDuration: 600
+    }
+  }
+}

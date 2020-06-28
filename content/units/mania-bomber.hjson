@@ -1,0 +1,21 @@
+type: flyingUnit
+name: Mania Bomber
+description: "A durable medium-sized [#e5b85e]bomber ship[]. Drops large electrical cluster bombs."
+speed: 0.143257
+maxVelocity: 1.15
+flying: true
+health: 2000
+attackLength: 110
+engineOffset: 15
+engineSize: 5
+drag: 0.1177
+range: 500
+hitsize: 11
+hitsizeTile: 12
+shootCone: 360
+rotatespeed: 0.08
+baseRotateSpeed: 0.07
+rotateWeapon: false
+targetAir: false
+immunities: [freezing, tarred, melting, shocked]
+mass: 127

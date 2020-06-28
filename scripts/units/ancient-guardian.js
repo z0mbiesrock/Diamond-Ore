@@ -160,15 +160,21 @@ const ancientGuardian = new JavaAdapter(UnitType, {}, "ancient-guardian",  prov(
 			this.healBy(Time.delta() * 1.00);
 		}
 		Units.nearby(this.getTeam(), this.x, this.y, 80, cons(unit => {
-			unit.applyEffect(ancientGuardianProtection, 5);
+			if (unit.getType() != this){
+				unit.applyEffect(ancientGuardianProtection, 5);
+			}
 		}));
+		if(!(Vars.state.rules.pvp) && this.getTeam() == Team.crux){
+			this.applyEffect(StatusEffects.boss, Number.MAX_VALUE);
+		}
     },
     onDeath(){
         Sounds.explosionbig.at(this);
-        for(var j = 0; j < 25; j++){
+		Effects.shake(100, 9, this.x, this.y);
+        for(var j = 0; j < 50; j++){
             Calls.createBullet(Bullets.flakSurge, this.getTeam(), this.x, this.y, Mathf.random(360), Mathf.random(0.35, 1.4), Mathf.random(0.6, 1.1));
 		}
-        for(var k = 0; k < 12; k++){
+        for(var k = 0; k < 25; k++){
             Calls.createBullet(ancientGuardianDeathBullet, this.getTeam(), this.x, this.y, Mathf.random(360), Mathf.random(0.25, 1), Mathf.random(0.6, 1.6));
 		}
 		Effects.effect(ancientGuardianDeathFx, this.x, this.y, Mathf.random(-360,360));

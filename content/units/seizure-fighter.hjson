@@ -1,0 +1,20 @@
+type: HoverUnit
+name: Seizure Fighter
+description: "A medium-sized [#e5b85e]support ship[] that can make enemy units spaz out. Emanates an invisible aura that slowly but steadily heals friendly units nearby."
+speed: 0.125
+maxVelocity: 5.25
+drag: 0.0675
+flying: true
+health: 820
+attackLength: 120
+engineOffset: 9
+engineSize: 3.2
+range: 255
+hitsize: 11
+hitsizeTile: 14
+shootCone: 75
+rotatespeed: 0.1
+baseRotateSpeed: 0.2
+rotateWeapon: false
+immunities: [freezing, tarred, melting]
+mass: 60

@@ -9,8 +9,8 @@ const scavengerEngineEffect = newEffect(30, e => {
 
 const scavengerBase = prov(() => extend(MinerDrone, {
 	drawEngine(){
-		var zx = Angles.trnsx(this.rotation + 180, 1);
-		var zy = Angles.trnsy(this.rotation + 180, 1);
+		var zx = Angles.trnsx(this.rotation + 180, 0.6);
+		var zy = Angles.trnsy(this.rotation + 180, 0.6);
 		
 		Draw.color(Color.valueOf("#93a2ff"));
 		var ox = Angles.trnsx(this.rotation + 120, this.type.engineOffset);

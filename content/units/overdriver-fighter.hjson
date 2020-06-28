@@ -49,8 +49,8 @@ weapon: {
 	hitSound: shoot
 	keepVelocity: true
 	pierce: false
-	weaveScale: 0.6
-	weaveMag: 1.15
+	weaveScale: 1.6
+	weaveMag: 4.15
     //lightningLength: 60
     //lightining: 3
 	homingPower: 3

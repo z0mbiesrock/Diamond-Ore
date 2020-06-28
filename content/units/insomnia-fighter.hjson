@@ -47,6 +47,6 @@ weapon: {
     bulletShrink: 0.75
 	pierce: false
 	bulletSprite: diamond-ore-diamondbullet
-	knockback: 7
+	knockback: 1776
   }
 }

@@ -1,0 +1,17 @@
+name: Large Crystallized Door
+description: A large and very durable door. Can be opened or closed by tapping. Spans multiple tiles.
+type: Door
+health: 8000
+size: 2
+buildCostMultiplier: 3.75
+requirements: [
+  graphite/96
+  silicon/64
+  titanium/16
+  metaglass/16
+  thorium/16
+  diamond/12
+  cryogem/48
+]
+category: defense
+research: crystallized-door

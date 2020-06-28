@@ -77,13 +77,13 @@ const insomniaFighter = new JavaAdapter(UnitType, {}, "insomnia-fighter",  prov(
 		this.super$update();
 		try{ // Put in a "try"; Strafe around enemies
 			this.nearestfoe = Units.closestTarget(this.getTeam(), this.x, this.y, 300);
-			if (this.nearestfoe != null){
-				vel = Vec2(this.x, this.y);
-				if (this.nearestfoe.dst(this) < 250 && Mathf.chance(0.075)){
-					this.velocity().add(Mathf.random(-2,2), Mathf.random(-2,2));
-				}
+			if (this.nearestfoe != null && this.state.is(this.retreat) == false){
+				this.circle(Mathf.random(100,300),Mathf.random(-2,2));	
 				this.avoidOthers();	
 			}
+			Units.nearby(this.getTeam(), this.x, this.y, 136, cons(unit => {
+				unit.healBy(Time.delta() * 0.22657349);
+			}));
 		}
 		catch(error){
 			print(error);
@@ -129,8 +129,8 @@ const paranoiaTeleportRecent = newEffect(10, e => {
     Lines.circle(e.x, e.y, e.fin() * 4);
 });
 const paranoiaTPstatus = new StatusEffect("paranoiaFighterRecentlyTeleported");
-paranoiaTPstatus.speedMultiplier = 1;
-paranoiaTPstatus.armorMultiplier = 1;
+paranoiaTPstatus.speedMultiplier = 1.1;
+paranoiaTPstatus.armorMultiplier = 1.05;
 paranoiaTPstatus.damageMultiplier = 1;
 paranoiaTPstatus.effect = paranoiaTeleportRecent;
 const paranoiaMissileFragHit = newEffect(29, e => {
@@ -160,8 +160,8 @@ paranoiaMissileFrag.splashDamage = 80;
 paranoiaMissileFrag.splashDamageRadius = 8;
 paranoiaMissileFrag.homingRange = 200;
 paranoiaMissileFrag.homingPower = 5;
-paranoiaMissileFrag.weaveMag = 5;
-paranoiaMissileFrag.weaveScale = 3;
+paranoiaMissileFrag.weaveMag = 11;
+paranoiaMissileFrag.weaveScale = 2;
 paranoiaMissileFrag.keepVelocity = false;
 paranoiaMissileFrag.frontColor = Color.valueOf("#999999");
 paranoiaMissileFrag.backColor = Color.valueOf("#aabbcc");
@@ -194,9 +194,9 @@ const paranoiaMissileFragPhaseIn = newEffect(20, e => {
 const paranoiaMissileFragPortal = extend(BasicBulletType, {
 	despawned(b){
 		try{
-			var nearestTarget = Units.closestTarget(b.getTeam(), b.x, b.y, 128);
+			var nearestTarget = Units.closestTarget(b.getTeam(), b.x, b.y, 200);
 			if(nearestTarget != null){
-				Calls.createBullet(paranoiaMissileFrag, b.getTeam(), b.x, b.y, b.rot(), Mathf.random(1, 1.25), 1);
+				Calls.createBullet(paranoiaMissileFrag, b.getTeam(), b.x, b.y, b.rot() + 180, Mathf.random(1, 1.25), 1);
 			}
 		}
 		catch(fck){
@@ -206,6 +206,7 @@ const paranoiaMissileFragPortal = extend(BasicBulletType, {
 	},
 });
 paranoiaMissileFragPortal.speed = 6;
+paranoiaMissileFragPortal.drag = 0.01;
 paranoiaMissileFragPortal.lifetime = 20;
 paranoiaMissileFragPortal.bulletWidth = 0;
 paranoiaMissileFragPortal.bulletHeight = 0;
@@ -336,7 +337,7 @@ paranoiaFighterWeapon.inaccuracy = 0.25;
 paranoiaFighterWeapon.velocityRnd = 0.125;
 paranoiaFighterWeapon.spacing = 0;
 paranoiaFighterWeapon.alternate = true;
-paranoiaFighterWeapon.ignoreRotation = true;
+paranoiaFighterWeapon.ignoreRotation = false;
 paranoiaFighterWeapon.bullet = paranoiaMissile;
 paranoiaFighterWeapon.shootSound = Sounds.shotgun;
 paranoiaFighterWeapon.shootEffect = Fx.none;
@@ -455,3 +456,401 @@ const paranoiaFighter = new JavaAdapter(UnitType, {}, "paranoia-fighter",  prov(
 	},
 })));
 paranoiaFighter.weapon = paranoiaFighterWeapon;
+
+const seizureStatusFX = newEffect(24, e => {
+	Draw.color(Color.valueOf("00ffff").shiftHue(Mathf.random(360)), Color.valueOf("ffff00").shiftHue(Mathf.random(360)), Mathf.random());
+	Draw.mixcol(Color.valueOf("ffffff"), Mathf.random());
+    Fill.circle(e.x, e.y, e.fout() * 3 * Mathf.random());
+	Draw.color(Color.valueOf("00ffff").shiftHue(Mathf.random(360)), Color.valueOf("ffff00").shiftHue(Mathf.random(360)), Mathf.random());
+	Draw.mixcol(Color.valueOf("ffffff"), Mathf.random());
+    Lines.stroke(e.fout() * 2 * Mathf.random());
+    Lines.circle(e.x, e.y, 2 + e.fin() * 4 * Mathf.random());
+});
+const seizureStatus = extendContent(StatusEffect, "seizureFighterSpazzOut", {
+	update(unit, time){
+		this.super$update(unit, time);
+		try{ 
+			if (unit.getTeam() == Team.derelict){
+				time = 0;
+			}
+			unit.velocity().add(Mathf.random(-0.66,0.66), Mathf.random(-0.66,0.66));
+			unit.velocity().setAngle(Mathf.slerpDelta(unit.velocity().angle(), Mathf.random(360), Mathf.random()));
+			unit.rotation = Mathf.slerpDelta(unit.velocity().angle(), Mathf.random(360), Mathf.random());
+			var spzAng = Mathf.random(-360, 360);
+			var spzx = Angles.trnsx(spzAng, 2);
+			var spzy = Angles.trnsy(spzAng, 2);
+			var spz = Vec2(unit.x + spzx, unit.y + spzy);
+			if (Angles.near(unit.angleTo(spz), unit.rotation, unit.getType().shootCone) || Mathf.chance(0.02)){
+				// Bullet's "team" is private, no way to make bullets fired teamless
+				//unit.getWeapon().bullet.team = Team.derelict;
+				unit.getWeapon().update(unit, unit.x + spzx, unit.y + spzy);
+			}
+		}
+		catch(error){
+			print(error);
+		}
+	}
+});
+//const seizureStatus = new StatusEffect("seizureFighterSpazzOut");
+//Spaz out status effect: affected units jitter a lot, as well as aim and shoot in random directions
+seizureStatus.speedMultiplier = 1;
+seizureStatus.armorMultiplier = 1;
+seizureStatus.damageMultiplier = 1;
+seizureStatus.effect = seizureStatusFX;
+
+const seizureBulletTrail = newEffect(12, e => {
+	Draw.color(Color.valueOf("00ffff").shiftHue(Mathf.random(360)), Color.valueOf("ffff00").shiftHue(Mathf.random(360)), Mathf.random());
+	Draw.mixcol(Color.valueOf("ffffff"), Mathf.random());
+	var trlx = e.x + Angles.trnsx(e.rotation, e.fin() * 88)
+	var trly = e.y + Angles.trnsy(e.rotation, e.fin() * 88)
+    Fill.circle(trlx, trly, e.fout() * 3);
+	Draw.color(Color.valueOf("00ffff").shiftHue(Mathf.random(360)), Color.valueOf("ffff00").shiftHue(Mathf.random(360)), Mathf.random());
+	Draw.mixcol(Color.valueOf("ffffff"), Mathf.random());
+    Lines.stroke(e.fout() * 2);
+    Lines.circle(trlx, trly, 2 + e.fin() * 4);
+});
+const seizureBulletHit = newEffect(26, e => {
+	Draw.color(Color.valueOf("00ffff").shiftHue(Mathf.random(360)), Color.valueOf("ffff00").shiftHue(Mathf.random(360)), Mathf.random());
+	Draw.mixcol(Color.valueOf("ffffff"), Mathf.random());
+    Fill.circle(e.x, e.y, e.fout() * 3 * Mathf.random());
+	Draw.color(Color.valueOf("00ffff").shiftHue(Mathf.random(360)), Color.valueOf("ffff00").shiftHue(Mathf.random(360)), Mathf.random());
+	Draw.mixcol(Color.valueOf("ffffff"), Mathf.random());
+    Lines.stroke(e.fout() * 2 * Mathf.random());
+    Lines.circle(e.x, e.y, 2 + e.fin() * 14 * Mathf.random());
+    Lines.stroke(e.fout() * 1.6 * Mathf.random());
+    const ae = new Floatc2({get(x, y){
+		Draw.color(Color.valueOf("00ffff").shiftHue(Mathf.random(360)), Color.valueOf("ffff00").shiftHue(Mathf.random(360)), Mathf.random());
+		Draw.mixcol(Color.valueOf("ffffff"), Mathf.random());
+		Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fslope() * 6);
+    }}) 
+    Angles.randLenVectors(e.id, 10, 18 * e.fin()* Mathf.random(), e.rotation, 360,ae);
+});
+const seizureBulletDespawn = newEffect(26, e => {
+    Lines.stroke(e.fout() * 1.6 * Mathf.random());
+    const ae = new Floatc2({get(x, y){
+		Draw.color(Color.valueOf("00ffff").shiftHue(Mathf.random(360)), Color.valueOf("ffff00").shiftHue(Mathf.random(360)), Mathf.random());
+		Draw.mixcol(Color.valueOf("ffffff"), Mathf.random());
+		Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fslope() * 6);
+    }}) 
+    Angles.randLenVectors(e.id, 10, 18 * e.fin()* Mathf.random(), e.rotation, 120,ae);
+    Angles.randLenVectors(e.id, 10, 36 * e.fin()* Mathf.random(), e.rotation, 60,ae);
+});
+const seizureBullet = extend(BasicBulletType, {
+	
+    update(b){
+        this.super$update(b);
+		Effects.effect(seizureBulletTrail, b.x, b.y, b.rot());
+    },
+	
+});
+seizureBullet.speed = 10;
+seizureBullet.damage = 24;
+seizureBullet.lifetime = 30;
+seizureBullet.bulletWidth = 12;
+seizureBullet.bulletHeight = 24;
+seizureBullet.hitSize = 12;
+seizureBullet.frontColor = Color.valueOf("#ffffff");
+seizureBullet.backColor = Color.valueOf("#ffffff");
+seizureBullet.status = seizureStatus;
+seizureBullet.statusDuration = 420;
+seizureBullet.despawnEffect = seizureBulletDespawn;
+seizureBullet.hitEffect = seizureBulletHit;
+seizureBullet.shootEffect = Fx.none;
+seizureBullet.smokeEffect = Fx.none;
+
+const seizureFighterWeapon = extendContent(Weapon, "seizure-fighter-equip", {
+});
+seizureFighterWeapon.width = 4;
+seizureFighterWeapon.length = 4;
+seizureFighterWeapon.recoil = 2;
+seizureFighterWeapon.reload = 85;
+seizureFighterWeapon.minPlayerDist = 9;
+seizureFighterWeapon.inaccuracy = 0.25;
+seizureFighterWeapon.spacing = 0;
+seizureFighterWeapon.alternate = true;
+seizureFighterWeapon.ignoreRotation = false;
+seizureFighterWeapon.bullet = seizureBullet;
+seizureFighterWeapon.shootSound = Sounds.pew;
+seizureFighterWeapon.shootEffect = Fx.none;
+const seizureFighter = new JavaAdapter(UnitType, {}, "seizure-fighter",  prov(() => new JavaAdapter(HoverUnit, {
+	load(){
+		this.weapon.load();
+		this.region = Core.atlas.find(this.name);
+	},
+	getPowerCellRegion(){
+        return Core.atlas.find("diamond-ore-seizure-fighter-cell");
+    },
+	drawEngine(){
+		var zx = Angles.trnsx(this.rotation + 180, 1.16);
+		var zy = Angles.trnsy(this.rotation + 180, 1.16);
+		
+		Draw.color(Color.valueOf("#93a2ff"));
+		var ox = Angles.trnsx(this.rotation + 124, this.type.engineOffset);
+		var oy = Angles.trnsy(this.rotation + 124, this.type.engineOffset);
+		var oSize = Mathf.absin(Time.time(), 2.3, this.type.engineSize / 4);
+		Fill.circle(this.x + ox + zx, this.y + oy + zy, this.type.engineSize + oSize);
+		
+		Draw.color(Color.valueOf("#e3e2ff"));
+		var ix = Angles.trnsx(this.rotation + 124, this.type.engineOffset);
+		var iy = Angles.trnsy(this.rotation + 124, this.type.engineOffset);
+		var iSize = Mathf.absin(Time.time(), 3.2, this.type.engineSize / 5);
+		Fill.circle(this.x + ix, this.y + iy, (this.type.engineSize + iSize) / 2);
+		Draw.color();
+		
+		Draw.color(Color.valueOf("#93a2ff"));
+		var gx = Angles.trnsx(this.rotation + 236, this.type.engineOffset);
+		var gy = Angles.trnsy(this.rotation + 236, this.type.engineOffset);
+		var gSize = Mathf.absin(Time.time(), 2.3, this.type.engineSize / 4);
+		Fill.circle(this.x + gx + zx, this.y + gy + zy, this.type.engineSize + gSize);
+		
+		Draw.color(Color.valueOf("#e3e2ff"));
+		var yx = Angles.trnsx(this.rotation + 236, this.type.engineOffset);
+		var yy = Angles.trnsy(this.rotation + 236, this.type.engineOffset);
+		var ySize = Mathf.absin(Time.time(), 3.2, this.type.engineSize / 5);
+		Fill.circle(this.x + yx, this.y + yy, (this.type.engineSize + ySize) / 2);
+		Draw.color();
+	},
+	update(){
+		this.super$update();
+		try{ 
+			Units.nearby(this.getTeam(), this.x, this.y, 136, cons(unit => {
+				unit.healBy(Time.delta() * 0.22657349);
+			}));
+		}
+		catch(error){
+			print(error);
+		}
+	}
+})));
+seizureFighter.weapon = seizureFighterWeapon;
+const maniaBombletHit = newEffect(22, e => {
+	Draw.color(Color.valueOf("#98c6f0"), Color.valueOf("#a3f0ff"), e.fout());
+    Lines.stroke(e.fout() * 1.5);
+    Lines.circle(e.x, e.y, 3 + e.fin() * 15);
+    const d = new Floatc2({get(x, y){
+		Draw.color(Color.valueOf("#98c6f0"), Color.valueOf("#a3f0ff"), e.fout());
+		Fill.circle(e.x + x, e.y + y, e.fout() * 3);
+    }})
+    Angles.randLenVectors(e.id, 7, 2 + 12.5 * e.fin(), e.rotation, 360,d);
+    Angles.randLenVectors(e.id, 8, 2 + 20 * e.fin(), e.rotation, 360,d);
+    Angles.randLenVectors(e.id, 9, 2 + 27.5 * e.fin(), e.rotation, 360,d);
+});
+const maniaBombletTrail = newEffect(34, e => {
+	Draw.color(Color.valueOf("#a3c0ff"), Color.valueOf("#c3f0e3"), Mathf.random());
+	Fill.circle(e.x, e.y, e.fout() * 4.5);
+});
+const maniaBombHit = newEffect(34, e => {
+	Draw.color(Color.valueOf("#98c6f0"), Color.valueOf("#a3f0ff"), e.fout());
+    const d = new Floatc2({get(x, y){
+		Fill.circle(e.x + x, e.y + y, e.fout() * 3);
+    }})
+    Angles.randLenVectors(e.id, 15, 4 + 25 * e.fin(), e.rotation, 360,d);
+    Angles.randLenVectors(e.id, 15, 4 + 40 * e.fin(), e.rotation, 360,d);
+    Angles.randLenVectors(e.id, 15, 4 + 55 * e.fin(), e.rotation, 360,d);
+    Lines.stroke(e.fout() * 1.5);
+    const ae = new Floatc2({get(x, y){
+		Draw.color(Color.valueOf("#a3f0ff"), Color.valueOf("#c3f0e3"), Mathf.random());
+		Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fslope() * 13);
+    }}) 
+    Angles.randLenVectors(e.id, 10, 10 + 20 * e.fin(), e.rotation, 360,ae);
+    Angles.randLenVectors(e.id, 10, 20 + 40 * e.fin(), e.rotation, 360,ae);
+	Draw.alpha(e.fout());
+    Lines.stroke(e.fout() * 4);
+    Lines.circle(e.x, e.y, 7 + e.fin() * 30);
+});
+const maniaBombletFrag = extend(BasicBulletType, {
+});
+maniaBombletFrag.lifetime = 25;
+maniaBombletFrag.damage = 6;
+maniaBombletFrag.bulletWidth = 1;
+maniaBombletFrag.bulletHeight = 8;
+maniaBombletFrag.bulletShrink = 0.875;
+maniaBombletFrag.frontColor = Color.valueOf("#a3f0ff");
+maniaBombletFrag.backColor = Color.valueOf("#c3f0e3");
+maniaBombletFrag.bulletSprite = "diamond-ore-diamondshell";
+maniaBombletFrag.despawnEffect = Fx.none;
+maniaBombletFrag.hitEffect = Fx.shootSmall;
+
+const maniaBomblet = extend(ArtilleryBulletType, {
+	
+    update(b){
+        this.super$update(b);
+		b.rot(b.rot() + Mathf.random(-(3.75 * (1 - b.fin())),(3.75 * (1 - b.fin()))));
+    },
+});
+maniaBomblet.damage = 20;
+maniaBomblet.splashDamage = 75;
+maniaBomblet.splashDamageRadius = 25;
+maniaBomblet.lifetime = 70;
+maniaBomblet.speed = 1.2;
+maniaBomblet.drag = 0.004;
+maniaBomblet.frontColor = Color.valueOf("#c3f0e3");
+maniaBomblet.backColor = Color.valueOf("#a3f0ff");
+maniaBomblet.bulletSprite = "diamond-ore-diamondbomb";
+maniaBomblet.bulletWidth = 9;
+maniaBomblet.bulletHeight = 17;
+maniaBomblet.fragVelocityMin = 0.2;
+maniaBomblet.fragVelocityMax = 3.6;
+maniaBomblet.fragBullets = 36;
+maniaBomblet.fragBullet = maniaBombletFrag;
+maniaBomblet.trailEffect = maniaBombletTrail;
+maniaBomblet.hitEffect = maniaBombletHit;
+maniaBomblet.despawnEffect = Fx.none;
+
+const maniaBomb = extend(BombBulletType, {
+	despawned(b){
+		try{
+			for(var j = 0; j < 4; j++){
+				Calls.createBullet(maniaBomblet, b.getTeam(), b.x, b.y, Mathf.random(360), Mathf.random(0.3333333, 1.65), Mathf.random(0.6, 1.4));
+			}
+			for(var k = 0; k < 5; k++){
+				var shockLen = Math.floor(Mathf.random(5,20));
+				Lightning.create(b.getTeam(), Color.valueOf("#decf5a"), Mathf.random(25,75), this.x, this.y, Mathf.random(360), shockLen);
+			}
+		}
+		catch(fck){
+			//print(fck);
+		}
+        this.super$despawned(b);
+	}
+});
+maniaBomb.damage = 60;
+maniaBomb.splashDamage = 180;
+maniaBomb.splashDamageRadius = 48;
+maniaBomb.frontColor = Color.valueOf("#c3f0e3");
+maniaBomb.backColor = Color.valueOf("#a3f0ff");
+maniaBomb.bulletSprite = "diamond-ore-diamondbomb";
+maniaBomb.bulletWidth = 15;
+maniaBomb.bulletHeight = 33;
+maniaBomb.hitEffect = maniaBombHit;
+maniaBomb.despawnEffect = Fx.shockwave;
+maniaBomb.shootEffect = Fx.smelt;
+maniaBomb.smokeEffect = Fx.fuelburn;
+maniaBomb.status = StatusEffects.shocked;
+maniaBomb.statusDuration = 25;
+
+const maniaBomberWeapon = extendContent(Weapon, "mania-bomber-equip", {
+});
+maniaBomberWeapon.width = 0;
+maniaBomberWeapon.length = 0;
+maniaBomberWeapon.recoil = 0;
+maniaBomberWeapon.reload = 188;
+maniaBomberWeapon.minPlayerDist = 9;
+maniaBomberWeapon.inaccuracy = 360;
+maniaBomberWeapon.spacing = 0;
+maniaBomberWeapon.alternate = true;
+maniaBomberWeapon.ignoreRotation = true;
+maniaBomberWeapon.bullet = maniaBomb;
+maniaBomberWeapon.shootSound = Sounds.artillery;
+maniaBomberWeapon.shootEffect = Fx.none;
+const maniaBomber = new JavaAdapter(UnitType, {}, "mania-bomber",  prov(() => new JavaAdapter(FlyingUnit, {
+	load(){
+		this.weapon.load();
+		this.region = Core.atlas.find(this.name);
+	},
+	getPowerCellRegion(){
+        return Core.atlas.find("diamond-ore-mania-bomber-cell");
+    },
+	drawEngine(){
+		Draw.color(Color.valueOf("#98c6f0"));
+		var ox = Angles.trnsx(this.rotation + 140, this.type.engineOffset);
+		var oy = Angles.trnsy(this.rotation + 140, this.type.engineOffset);
+		var oSize = Mathf.absin(Time.time(), 1.2, this.type.engineSize / 5);
+		Fill.circle(this.x + ox, this.y + oy, this.type.engineSize + oSize);
+		
+		Draw.color(Color.valueOf("#c3f0e3"));
+		var ix = Angles.trnsx(this.rotation + 140, this.type.engineOffset - 1);
+		var iy = Angles.trnsy(this.rotation + 140, this.type.engineOffset - 1);
+		var iSize = Mathf.absin(Time.time(), 1.2, this.type.engineSize / 4);
+		Fill.circle(this.x + ix, this.y + iy, (this.type.engineSize + iSize) / 2);
+		Draw.color();
+		
+		Draw.color(Color.valueOf("#98c6f0"));
+		var gx = Angles.trnsx(this.rotation + 220, this.type.engineOffset);
+		var gy = Angles.trnsy(this.rotation + 220, this.type.engineOffset);
+		var gSize = Mathf.absin(Time.time(), 1.2, this.type.engineSize / 5);
+		Fill.circle(this.x + gx, this.y + gy, this.type.engineSize + gSize);
+		
+		Draw.color(Color.valueOf("#c3f0e3"));
+		var yx = Angles.trnsx(this.rotation + 220, this.type.engineOffset - 1);
+		var yy = Angles.trnsy(this.rotation + 220, this.type.engineOffset - 1);
+		var ySize = Mathf.absin(Time.time(), 1.2, this.type.engineSize / 4);
+		Fill.circle(this.x + yx, this.y + yy, (this.type.engineSize + ySize) / 2);
+		Draw.color();
+		
+		Draw.color(Color.valueOf("#98c6f0"));
+		var tx = Angles.trnsx(this.rotation + 180, this.type.engineOffset + 3);
+		var ty = Angles.trnsy(this.rotation + 180, this.type.engineOffset + 3);
+		var tSize = Mathf.absin(Time.time(), 3, this.type.engineSize / 4);
+		Fill.circle(this.x + tx, this.y + ty, this.type.engineSize + tSize + 3);
+		
+		Draw.color(Color.valueOf("#c3f0e3"));
+		var ynx = Angles.trnsx(this.rotation + 180, this.type.engineOffset + 1);
+		var yny = Angles.trnsy(this.rotation + 180, this.type.engineOffset + 1);
+		var ynSize = Mathf.absin(Time.time(), 6, (this.type.engineSize + 1.5) / 7);
+		Fill.circle(this.x + ynx, this.y + yny, (this.type.engineSize + ynSize + 2.25) / 2);
+		Draw.color();
+	},
+	/* update(){
+		this.super$update();
+		try{ // Put in a "try"; Strafe around enemies
+			...
+		}
+		catch(error){
+			print(error);
+		}
+	} */
+})));
+maniaBomber.weapon = maniaBomberWeapon;
+
+const insanityFighter = new JavaAdapter(UnitType, {}, "insanity-fighter",  prov(() => new JavaAdapter(HoverUnit, {
+	load(){
+		this.weapon.load();
+		this.region = Core.atlas.find(this.name);
+	},
+	calculateDamage(amount){
+		var dmgTkn = this.super$calculateDamage(amount);
+		finalAmount = dmgTkn * (((75 * (this.health / this.maxHealth())) + 25)/ 100);
+		return finalAmount;
+	},
+	getPowerCellRegion(){
+        return Core.atlas.find("diamond-ore-insanity-fighter-cell");
+    },
+	drawEngine(){
+		var zx = Angles.trnsx(this.velocity().angle(), 0.2 + (this.velocity().len() / this.maxVelocity()));
+		var zy = Angles.trnsy(this.velocity().angle(), 0.2 + (this.velocity().len() / this.maxVelocity()));
+		
+		Draw.color(Color.valueOf("#93a2ff"));
+		var ox = Angles.trnsx(this.rotation + 120, this.type.engineOffset);
+		var oy = Angles.trnsy(this.rotation + 120, this.type.engineOffset);
+		var oSize = Mathf.absin(Time.time(), 2.3, this.type.engineSize / 4);
+		Fill.circle(this.x + ox, this.y + oy, this.type.engineSize + oSize);
+		
+		Draw.color(Color.valueOf("#e3e2ff"));
+		var ix = Angles.trnsx(this.rotation + 120, this.type.engineOffset);
+		var iy = Angles.trnsy(this.rotation + 120, this.type.engineOffset);
+		var iSize = Mathf.absin(Time.time(), 3.2 - (1.7 + (this.velocity().len() / this.maxVelocity())), this.type.engineSize / 5);
+		Fill.circle(this.x + ix + zx, this.y + iy + zy, (this.type.engineSize + iSize) / 2);
+		Draw.color();
+		
+		Draw.color(Color.valueOf("#93a2ff"));
+		var gx = Angles.trnsx(this.rotation + 240, this.type.engineOffset);
+		var gy = Angles.trnsy(this.rotation + 240, this.type.engineOffset);
+		var gSize = Mathf.absin(Time.time(), 2.3, this.type.engineSize / 4);
+		Fill.circle(this.x + gx, this.y + gy, this.type.engineSize + gSize);
+		
+		Draw.color(Color.valueOf("#e3e2ff"));
+		var yx = Angles.trnsx(this.rotation + 240, this.type.engineOffset);
+		var yy = Angles.trnsy(this.rotation + 240, this.type.engineOffset);
+		var ySize = Mathf.absin(Time.time(), 3.2 - (1.7 + (this.velocity().len() / this.maxVelocity())), this.type.engineSize / 5);
+		Fill.circle(this.x + yx + zx, this.y + yy + zy, (this.type.engineSize + ySize) / 2);
+		Draw.color();
+	},
+	update(){
+		this.super$update();
+		if(this.health < this.maxHealth()){
+			this.healBy(Time.delta() * 0.25);
+		}
+	},
+})));
+maniaBomber.weapon = maniaBomberWeapon;
