@@ -6,7 +6,7 @@ maxVelocity: 1.15
 flying: true
 health: 2000
 attackLength: 110
-engineOffset: 15
+engineOffset: 11
 engineSize: 5
 drag: 0.1177
 range: 500
