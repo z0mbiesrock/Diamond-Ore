@@ -700,12 +700,12 @@ maniaBomblet.despawnEffect = Fx.none;
 const maniaBomb = extend(BombBulletType, {
 	despawned(b){
 		try{
-			for(var j = 0; j < 4; j++){
+			for(var j = 0; j < 6; j++){
 				Calls.createBullet(maniaBomblet, b.getTeam(), b.x, b.y, Mathf.random(360), Mathf.random(0.3333333, 1.65), Mathf.random(0.6, 1.4));
 			}
-			for(var k = 0; k < 5; k++){
+			for(var k = 0; k < 6; k++){
 				var shockLen = Math.floor(Mathf.random(5,20));
-				Lightning.create(b.getTeam(), Color.valueOf("#decf5a"), Mathf.random(25,75), this.x, this.y, Mathf.random(360), shockLen);
+				Lightning.create(b.getTeam(), Color.valueOf("#decfea"), Mathf.random(25,75), b.x, b.y, Mathf.random(360), shockLen);
 			}
 		}
 		catch(fck){
