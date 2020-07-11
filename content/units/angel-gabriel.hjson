@@ -1,0 +1,21 @@
+type: HoverUnit
+name: Gabriel
+//description: "[#e5b85e]Ancient angel entity. Engage with extreme caution[]"
+speed: 0.0974
+maxVelocity: 0.98
+drag: 0.03
+flying: true
+health: 16000
+attackLength: 120
+engineOffset: 12
+engineSize: 3.2
+range: 450
+hitsize: 22
+hitsizeTile: 22
+shootCone: 175
+rotatespeed: 0.02
+baseRotateSpeed: 0.03
+rotateWeapon: true
+immunities: [freezing, tarred, melting, shocked, burning, wet]
+mass: 600
+weaponOffsetY: 1.75

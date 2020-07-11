@@ -15,7 +15,7 @@ breakage: 4800
 cooldownNormal: 7.5
 cooldownLiquid: 37.5
 cooldownBrokenBase: 3.75
-basePowerDraw: 90
+basePowerDraw: 180
 consumes: {
   power: 10
   items: {

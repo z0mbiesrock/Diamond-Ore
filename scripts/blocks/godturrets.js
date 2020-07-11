@@ -217,6 +217,10 @@ const yggdrasilPlasmaSphere = newEffect(24, e => {
 
 const yggdrasilPlasma = extend(ArtilleryBulletType, {
 	
+	//OVERRIDE; Force projectors no longer block Yggdrasil's plasma projectile.
+	absorb(){
+	},
+	
     update(b){
         this.super$update(b);
         if(b.timer.get(0, 3 + b.fslope() * 2)){
@@ -271,5 +275,5 @@ const yggdrasilTurret = extendContent(ChargeTurret, "yggdrasil", {
 yggdrasilTurret.chargeEffect = yggdrasilCharge;
 yggdrasilTurret.shootEffect = yggdrasilShoot;
 yggdrasilTurret.shootType = yggdrasilPlasma;
-yggdrasilTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.4)).update(false).boost();
+yggdrasilTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 3.75)).update(false).boost();
 //yggdrasilTurret.shootSound = Sounds.yggdrasilfire;

@@ -36,5 +36,7 @@ require("units/ancient-grunt")
 require("units/ancient-warrior")
 require("units/ancient-guardian")
 require("units/ancient-sniper")
+require("units/ancient-engineer")
 require("units/ancient-air-units")
+require("units/spoilers")
 

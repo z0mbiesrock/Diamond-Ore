@@ -73,17 +73,21 @@ const insomniaFighter = new JavaAdapter(UnitType, {}, "insomnia-fighter",  prov(
 		Fill.circle(this.x + ix, this.y + iy, (this.type.engineSize + iSize) / 2);
 		Draw.color();
 	},
+	calculateDamage(amount){
+		if (Mathf.chance(1 - (this.health / this.maxHealth()))){
+			var vel = Vec2(this.x, this.y);
+			this.velocity().add(vel.trns(Mathf.random(360), Mathf.random(0.5,1.5) * Time.delta()));
+		}
+		return this.super$calculateDamage(amount);
+	},
 	update(){
 		this.super$update();
-		try{ // Put in a "try"; Strafe around enemies
+		try{ // Put in a "try"; move unpredictably
 			this.nearestfoe = Units.closestTarget(this.getTeam(), this.x, this.y, 300);
-			if (this.nearestfoe != null && this.state.is(this.retreat) == false){
-				this.circle(Mathf.random(100,300),Mathf.random(-2,2));	
-				this.avoidOthers();	
+			if (this.nearestfoe != null && !this.state.is(this.retreat) && Mathf.chance(0.055)){
+				var vel = Vec2(this.x, this.y);
+				this.velocity().add(vel.trns(Mathf.random(360), Mathf.random(0.25,1.25) * Time.delta()));
 			}
-			Units.nearby(this.getTeam(), this.x, this.y, 136, cons(unit => {
-				unit.healBy(Time.delta() * 0.22657349);
-			}));
 		}
 		catch(error){
 			print(error);
@@ -751,6 +755,10 @@ const maniaBomber = new JavaAdapter(UnitType, {}, "mania-bomber",  prov(() => ne
 	getPowerCellRegion(){
         return Core.atlas.find("diamond-ore-mania-bomber-cell");
     },
+	calculateDamage(amount){
+		this.retarget();
+		return this.super$calculateDamage(amount);
+	},
 	drawEngine(){
 		Draw.color(Color.valueOf("#98c6f0"));
 		var ox = Angles.trnsx(this.rotation + 140, this.type.engineOffset);
@@ -846,6 +854,16 @@ const insanityFighter = new JavaAdapter(UnitType, {}, "insanity-fighter",  prov(
 		Fill.circle(this.x + yx + zx, this.y + yy + zy, (this.type.engineSize + ySize) / 2);
 		Draw.color();
 	},
+	drawWeapons(){
+        for(var j = 0; j < Mathf.signs.length; j++){
+			var i = Mathf.signs[j];
+            var tra = this.rotation - 90;
+			var trY = -this.type.weapon.getRecoil(this, i > 0) + this.type.weaponOffsetY;
+            var w = -i * this.type.weapon.region.getWidth() * Draw.scl;
+			var wi = j;
+            Draw.rect(this.type.weapon.region, this.x + Angles.trnsx(tra, this.getWeapon().width * i, trY), this.y + Angles.trnsy(tra, this.getWeapon().width * i, trY), w, this.type.weapon.region.getHeight() * Draw.scl, this.weaponAngles[wi] - 90);
+        }
+	},
 	update(){
 		this.super$update();
 		if(this.health < this.maxHealth()){
@@ -853,4 +871,70 @@ const insanityFighter = new JavaAdapter(UnitType, {}, "insanity-fighter",  prov(
 		}
 	},
 })));
-maniaBomber.weapon = maniaBomberWeapon;
+
+const confusionFighter = new JavaAdapter(UnitType, {}, "confusion-fighter",  prov(() => new JavaAdapter(FlyingUnit, {
+	load(){
+		this.weapon.load();
+		this.region = Core.atlas.find(this.name);
+	},
+	getPowerCellRegion(){
+        return Core.atlas.find("diamond-ore-confusion-fighter-cell");
+    },
+	drawEngine(){
+		var zx = Angles.trnsx(this.rotation + 180, 0.6);
+		var zy = Angles.trnsy(this.rotation + 180, 0.6);
+		
+		Draw.color(Color.valueOf("#e3c161"));
+		var ox = Angles.trnsx(this.rotation + 220, this.type.engineOffset);
+		var oy = Angles.trnsy(this.rotation + 220, this.type.engineOffset);
+		var oSize = Mathf.absin(Time.time(), 2, this.type.engineSize / 4);
+		Fill.circle(this.x + ox + zx, this.y + oy + zy, this.type.engineSize + oSize);
+		
+		Draw.color(Color.valueOf("#f7f296"));
+		var ix = Angles.trnsx(this.rotation + 220, this.type.engineOffset);
+		var iy = Angles.trnsy(this.rotation + 220, this.type.engineOffset);
+		var iSize = Mathf.absin(Time.time(), 2, this.type.engineSize / 4);
+		Fill.circle(this.x + ix, this.y + iy, (this.type.engineSize + iSize) / 2);
+		Draw.color();
+		
+		Draw.color(Color.valueOf("#e3c161"));
+		var gx = Angles.trnsx(this.rotation + 140, this.type.engineOffset);
+		var gy = Angles.trnsy(this.rotation + 140, this.type.engineOffset);
+		var gSize = Mathf.absin(Time.time(), 2, this.type.engineSize / 4);
+		Fill.circle(this.x + gx + zx, this.y + gy + zy, this.type.engineSize + gSize);
+		
+		Draw.color(Color.valueOf("#f7f296"));
+		var yx = Angles.trnsx(this.rotation + 140, this.type.engineOffset);
+		var yy = Angles.trnsy(this.rotation + 140, this.type.engineOffset);
+		var ySize = Mathf.absin(Time.time(), 2, this.type.engineSize / 4);
+		Fill.circle(this.x + yx, this.y + yy, (this.type.engineSize + ySize) / 2);
+		Draw.color();
+	},
+	update(){
+		this.super$update();
+		try{ // Put in a "try"; Strafe around enemies
+			if (this.target != null && !this.state.is(this.retreat) && !this.state.is(this.rally)){
+				if (this.dst(this.target) < 400){
+					var vel = Vec2(this.x, this.y);
+					if (Mathf.chance(0.5)){
+						var trgx = Angles.trnsx(this.angleTo(this.target) + 90, 2);
+						var trgy = Angles.trnsy(this.angleTo(this.target) + 90, 2);
+						this.velocity().add(vel.trns(this.angleTo(this.x + trgx, this.y + trgy), Mathf.random(0.25) * Time.delta()));
+					}
+					else {
+						var trgx = Angles.trnsx(this.angleTo(this.target) - 90, 2);
+						var trgy = Angles.trnsy(this.angleTo(this.target) - 90, 2);
+						this.velocity().add(vel.trns(this.angleTo(this.x + trgx, this.y + trgy), Mathf.random(0.25) * Time.delta()));
+					}
+					this.avoidOthers();
+				}
+			}
+		}
+		catch(error){
+			print(error);
+		}
+		if(this.health < this.maxHealth()){
+			this.healBy(Time.delta() * 0.08);
+		}
+	}
+})));

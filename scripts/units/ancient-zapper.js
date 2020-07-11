@@ -1,4 +1,4 @@
-
+//Script for Ancient Zapper and similar units
 const ancientZapperMawArc = extend(BasicBulletType, {
 	//OVERRIDE
 	despawned(b){

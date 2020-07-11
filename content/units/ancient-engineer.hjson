@@ -1,0 +1,22 @@
+type: RepairDrone
+name: Ancient Engineer
+description: "A [#e5b85e]special repair drone[]. Very fast. Rapidly regenerates health when damaged."
+speed: 0.364
+drag: 0.07
+mass: 30
+maxVelocity: 3.50
+flying: true
+rotateWeapon: true
+shootCone: 160
+health: 800
+engineOffset: 6.5
+engineSize: 1.85
+itemCapacity: 50
+hitsize: 9
+hitsizeTile: 9
+range: 32
+retreatPercent: 0.125
+rotatespeed: 0.09
+baseRotateSpeed: 0.07
+weaponOffsetY: 2
+toMine: [copper, lead, titanium, thorium, diamond]

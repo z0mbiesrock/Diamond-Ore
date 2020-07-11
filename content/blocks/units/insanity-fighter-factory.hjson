@@ -10,7 +10,7 @@ health: 1200
 produceTime: 4444
 maxSpawn: 2
 consumes: {
-  power: 43.77
+  power: 93.47
   items: {
     items: [
       copper/60

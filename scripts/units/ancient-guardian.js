@@ -154,6 +154,18 @@ const ancientGuardian = new JavaAdapter(UnitType, {}, "ancient-guardian",  prov(
 	getPowerCellRegion(){
         return Core.atlas.find("diamond-ore-ancient-guardian-cell");
     },
+	/* drawWeapons(){
+        for(var j = 0; j < Mathf.signs.length; j++){
+			var i = Mathf.signs[j];
+            var tra = this.rotation - 90;
+			var trY = -this.type.weapon.getRecoil(this, i > 0) + this.type.weaponOffsetY;
+            var w = -i * this.type.weapon.region.getWidth() * Draw.scl;
+			var wi = j;
+			var wx = this.x + Angles.trnsx(tra, this.getWeapon().width * i, trY);
+			var wy = this.y + Angles.trnsy(tra, this.getWeapon().width * i, trY);
+            Draw.rect(this.type.weapon.region, this.x + Angles.trnsx(tra, this.getWeapon().width * i, trY), this.y + Angles.trnsy(tra, this.getWeapon().width * i, trY), w, this.type.weapon.region.getHeight() * Draw.scl, Angles.angle(wx, wy, this.target.getX(), this.target.getY()) - 90);
+        }
+	}, */
 	update(){
 		this.super$update();
 		if(this.health < this.maxHealth()){

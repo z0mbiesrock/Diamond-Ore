@@ -1,0 +1,56 @@
+type: flyingUnit
+name: Confusion Fighter
+description: "A [#e5b85e]shotgun-based attack ship[]. Has an unpredictable flight pattern."
+speed: 0.226741
+maxVelocity: 2.65
+flying: true
+health: 875
+attackLength: 120
+engineOffset: 7.47
+engineSize: 3.75
+drag: 0.017253
+range: 460
+hitsize: 9
+hitsizeTile: 10
+shootCone: 270
+rotatespeed: 0.05
+baseRotateSpeed: 0.114
+rotateWeapon: true
+immunities: [freezing, tarred, melting]
+mass: 26
+weapon: {
+  name: confusion-fighter-equip
+  length: 3
+  width: 3.9
+  reload: 167
+  shots: 20
+  spacing: 0
+  inaccuracy: 13.75
+  shotDelay: 0
+  alternate: true
+  recoil: 2.2
+  velocityRnd: 0.3
+  lengthRand: 0.3
+  shootSound: shoot
+  ejectEffect: shellEjectMedium
+  bullet: {
+    type: BasicBulletType
+    speed: 15
+    damage: 7
+	lifetime: 15
+    bulletWidth: 4
+    bulletHeight: 7
+	backColor: e5b85e
+	frontColor: ceb404
+    shootEffect: shootBig2
+    smokeEffect: shootSmallSmoke
+	hitEffect: pulverizeSmall
+	despawnEffect: shootSmallSmoke
+    bulletShrink: 0.3
+	pierce: false
+	bulletSprite: shell
+	knockback: 15
+	splashDamage: 15
+	splashDamageRadius: 15
+  }
+}
