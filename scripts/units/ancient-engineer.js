@@ -65,6 +65,15 @@ const engineerBase = prov(() => extend(RepairDrone, {
 	getPowerCellRegion(){
         return Core.atlas.find("diamond-ore-ancient-engineer-cell");
     },
+	update(){
+		this.super$update();
+		if(this.health < this.maxHealth()){
+			this.healBy(Time.delta() * 1.00);
+			this.healBy(Time.delta() * Mathf.random(0.2,0.4));
+			this.healBy(Time.delta() * Mathf.random(0.4,0.7));
+			this.healBy(Time.delta() * Mathf.random(-0.4,0.7));
+		}
+	}
 }));
 const ancientEngineerWeapon = extendContent(Weapon, "ancient-engineer-equip", {
 	load(){
@@ -101,9 +110,12 @@ const ancientEngineer = extendContent(UnitType, "ancient-engineer", {
 	update(){
 		this.super$update();
 		if(this.health < this.maxHealth()){
-			this.healBy(Time.delta() * 1.25);
+			this.healBy(Time.delta() * 1.00);
+			this.healBy(Time.delta() * Mathf.random(0.2,0.4));
+			this.healBy(Time.delta() * Mathf.random(0.4,0.7));
+			this.healBy(Time.delta() * Mathf.random(-0.4,0.7));
 		}
-	},
+	}
 });
 ancientEngineer.weapon = ancientEngineerWeapon;
 ancientEngineer.create(engineerBase);

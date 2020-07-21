@@ -15,6 +15,7 @@ hitsizeTile: 12
 shootCone: 360
 rotatespeed: 0.08
 baseRotateSpeed: 0.07
+retreatPercent: 0.975
 rotateWeapon: false
 targetAir: false
 immunities: [freezing, tarred, melting, shocked]

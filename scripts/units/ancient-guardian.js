@@ -169,11 +169,16 @@ const ancientGuardian = new JavaAdapter(UnitType, {}, "ancient-guardian",  prov(
 	update(){
 		this.super$update();
 		if(this.health < this.maxHealth()){
-			this.healBy(Time.delta() * 1.00);
+			this.healBy(Time.delta() * Mathf.random(0.94,4.7));
 		}
 		Units.nearby(this.getTeam(), this.x, this.y, 80, cons(unit => {
-			if (unit.getType() != this){
-				unit.applyEffect(ancientGuardianProtection, 5);
+			if (!(unit instanceof Player)){
+				if (unit.getType() != this){
+					unit.applyEffect(ancientGuardianProtection, 5);
+				}
+			}
+			else{
+				unit.applyEffect(ancientGuardianProtection, 600);
 			}
 		}));
 		if(!(Vars.state.rules.pvp) && this.getTeam() == Team.crux){

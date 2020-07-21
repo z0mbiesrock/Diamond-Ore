@@ -15,7 +15,7 @@ itemCapacity: 50
 hitsize: 9
 hitsizeTile: 9
 range: 32
-retreatPercent: 0.125
+retreatPercent: 0.225
 rotatespeed: 0.09
 baseRotateSpeed: 0.07
 weaponOffsetY: 2

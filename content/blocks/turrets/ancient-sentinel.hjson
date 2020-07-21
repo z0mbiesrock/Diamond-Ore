@@ -296,7 +296,7 @@ ammo: {
 	fragVelocityMax: 4.5
 	fragBullet: {
       type: ArtilleryBulletType
-      drag: 0.13
+      drag: 0.08
 	  lifetime: 30
       damage: 15
       bulletWidth: 7.5

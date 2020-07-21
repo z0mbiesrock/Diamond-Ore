@@ -6,7 +6,7 @@ size: 4
 reload: 72
 range: 420
 maxAmmo: 60
-inaccuracy: 3
+inaccuracy: 2
 rotatespeed: 6
 shootCone: 19
 ammo: {
