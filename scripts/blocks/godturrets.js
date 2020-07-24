@@ -217,11 +217,17 @@ const yggdrasilPlasmaSphere = newEffect(24, e => {
 
 const yggdrasilPlasma = extend(ArtilleryBulletType, {
 	
-	//OVERRIDE; Force projectors no longer block Yggdrasil's plasma projectile.
-	absorb(){
+	/*
+	// It is impossible to prevent abullet from being absorbed by a force projector.
+	canBeAbsorbed(){
+        return false;
 	},
-	
+	absorb(){
+		print("fuck");
+        this.despawned(this);
+	},	 */
     update(b){
+		this.supressCollision = false;
         this.super$update(b);
         if(b.timer.get(0, 3 + b.fslope() * 2)){
             Effects.effect(this.trailEffect, b.x, b.y);
@@ -275,5 +281,5 @@ const yggdrasilTurret = extendContent(ChargeTurret, "yggdrasil", {
 yggdrasilTurret.chargeEffect = yggdrasilCharge;
 yggdrasilTurret.shootEffect = yggdrasilShoot;
 yggdrasilTurret.shootType = yggdrasilPlasma;
-yggdrasilTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 3.75)).update(false).boost();
+yggdrasilTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.375)).update(false).boost();
 //yggdrasilTurret.shootSound = Sounds.yggdrasilfire;

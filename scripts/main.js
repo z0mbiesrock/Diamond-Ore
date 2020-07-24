@@ -38,6 +38,6 @@ require("units/ancient-guardian")
 require("units/ancient-sniper")
 require("units/ancient-engineer")
 require("units/ancient-air-units")
-//require("units/basilisk")
+require("units/basilisk")
 require("units/spoilers")
 

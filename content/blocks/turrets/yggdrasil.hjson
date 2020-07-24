@@ -5,7 +5,7 @@ health: 80000
 size: 4
 reload: 600
 range: 800
-coolantMultiplier: 11
+coolantMultiplier: 7
 buildCostMultiplier: 0.33333333
 inaccuracy: 0
 rotatespeed: 3

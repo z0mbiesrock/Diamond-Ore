@@ -1,0 +1,32 @@
+name: Basilisk Factory
+description: "A pad that manufactures [#e5b85e]fast multi-weapon mechs[]."
+type: UnitFactory
+unitType: basilisk
+size: 3
+buildCostMultiplier: 0.8
+//buildVisibility: hidden
+//buildVisibility: sandboxOnly
+health: 630
+produceTime: 1969
+maxSpawn: 2
+consumes: {
+  power: 200
+  items: {
+    items: [
+      metaglass/30
+      plastanium/10
+      silicon/15
+      ancient-alloy/25
+    ]
+  }
+}
+category: units
+research: ancient-warrior-factory
+requirements: [
+  copper/1100
+  silicon/255
+  metaglass/515
+  diamond/200
+  cryogem/145
+  ancient-alloy/300
+]

@@ -306,8 +306,6 @@ ammo: {
     ammoMultiplier: 2
     reloadMultiplier: 0.75
 	pierce: false
-	status: freezing
-	statusDuration: 240
 	bulletSprite: diamond-ore-diamondmissile
 	bulletShrink: 0
 	splashDamage: 25
