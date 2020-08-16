@@ -161,4 +161,3 @@ const ancientSprayer = extendContent(ItemTurret, "ancient-sprayer", {
     }
 });
 ancientSprayer.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1), 0.4)).update(false).boost();
-//?

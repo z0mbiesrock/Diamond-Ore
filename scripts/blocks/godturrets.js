@@ -227,12 +227,12 @@ const yggdrasilPlasma = extend(ArtilleryBulletType, {
         this.despawned(this);
 	},	 */
     update(b){
-		this.supressCollision = false;
         this.super$update(b);
         if(b.timer.get(0, 3 + b.fslope() * 2)){
             Effects.effect(this.trailEffect, b.x, b.y);
         }
 		Effects.effect(yggdrasilPlasmaSphere, b.x + Mathf.random(-10,10), b.y + Mathf.random(-10,10));
+		this.supressCollision = false;
     },
 	
 });

@@ -40,4 +40,5 @@ require("units/ancient-engineer")
 require("units/ancient-air-units")
 require("units/basilisk")
 require("units/spoilers")
+require("mechs/illithid")
 

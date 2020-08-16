@@ -1,0 +1,23 @@
+size: 8
+health: 32767
+buildCostMultiplier: 0.4
+consumes: {
+  power: 8192
+}
+category: upgrade
+research: ancient-guardian-factory
+requirements: [
+  copper/4000
+  lead/4000
+  thorium/4000
+  silicon/4000
+  graphite/4000
+  titanium/6000
+  metaglass/6000
+  plastanium/2500
+  surge-alloy/2500
+  phase-fabric/2500
+  diamond/4000
+  cryogem/4000
+  ancient-alloy/10000
+]

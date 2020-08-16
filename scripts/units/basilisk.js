@@ -268,7 +268,7 @@ const basiliskUnit = new JavaAdapter(UnitType, {}, "basilisk",  prov(() => new J
 
 					if(Angles.near(this.angleTo(this.target), this.rotation, this.type.shootCone)){
 						this.getWeapon().bullet = basiliskWeaponBulletArtillery;
-						this.getWeapon().shots = 4;
+						this.getWeapon().shots = 8;
 						this.getWeapon().inaccuracy = 14;
 						this.getWeapon().velocityRnd = 0.3;
 						var ammo = this.getWeapon().bullet;
@@ -292,7 +292,7 @@ const basiliskUnit = new JavaAdapter(UnitType, {}, "basilisk",  prov(() => new J
 
 				if(Angles.near(this.angleTo(this.target), this.rotation, this.type.shootCone)){
 					this.getWeapon().bullet = basiliskWeaponBulletArtillery;
-					this.getWeapon().shots = 4;
+					this.getWeapon().shots = 8;
 					this.getWeapon().inaccuracy = 14;
 					this.getWeapon().velocityRnd = 0.3;
 					var ammo = this.getWeapon().bullet;

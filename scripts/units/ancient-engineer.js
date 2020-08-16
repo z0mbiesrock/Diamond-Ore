@@ -32,12 +32,13 @@ const engineerBullet = extend(HealBulletType, {
 	}
 });
 engineerBullet.lifetime = 10;
-engineerBullet.speed = 5;
+engineerBullet.speed = 3;
 engineerBullet.damage = 5;
 engineerBullet.hitSize = 12;
 engineerBullet.bulletWidth = 4;
 engineerBullet.bulletHeight = 12;
 engineerBullet.despawnEffect = Fx.none;
+engineerBullet.keepVelocity = false;
 engineerBullet.hitEffect = engineerBulletHit;
 engineerBullet.hitSound = Sounds.place;
 engineerBullet.shootEffect = engineerBulletShoot;

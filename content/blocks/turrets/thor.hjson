@@ -88,6 +88,7 @@ ammo: {
 	  weaveMag: 2.25
 	  knockback: 1
 	  status: burning
+	  hitSound: none
 	  statusDuration: 300
 	  bulletSprite: shell
     }
@@ -380,7 +381,8 @@ ammo: {
 	homingRange: 120
 	fragBullets: 80
 	fragVelocityMin: 1
-	fragVelocityMax: 1
+	hitSound: explosionbig
+	fragVelocityMax: 3
 	hitShake: 15
 	fragBullet: {
       type: MissileBulletType
@@ -388,6 +390,7 @@ ammo: {
 	  homingRange: 0
       speed: 1
 	  lifetime: 1
+	  hitSound: none
       damage: 50
       bulletWidth: 6
       bulletHeight: 6
@@ -413,6 +416,7 @@ ammo: {
         speed: 1
 	    lifetime: 20
         damage: 50
+	    hitSound: none
         bulletWidth: 6
         bulletHeight: 6
 	    bulletShrink: 0

@@ -52,10 +52,12 @@ const fixerUnit = new JavaAdapter(UnitType, {}, "fixer",  prov(() => new JavaAda
 		try{
 			this.targetIsBeingRepaired = false;
 			if(this.healTarget == null){
-			this.healTarget = Units.closest(this.getTeam(), this.x, this.y, 96, boolf(unit => unit.health < unit.maxHealth() && unit != this));
+				this.healTarget = Units.closest(this.getTeam(), this.x, this.y, 96, boolf(unit => unit.health < unit.maxHealth() && unit != this));
+				this.target = this.healTarget;
 			}
 			else if (Mathf.chance(1 / 60)){// Randomly retarget if needed.
 				this.healTarget = Units.closest(this.getTeam(), this.x, this.y, 96, boolf(unit => unit.health < unit.maxHealth() && unit != this));
+				this.target = this.healTarget;
 			}
 			else if (Mathf.chance(1 / 20)){// Randomly retarget to a more injured ally.
 				this.currentHeal = this.healTarget.health / this.healTarget.maxHealth();
@@ -63,6 +65,7 @@ const fixerUnit = new JavaAdapter(UnitType, {}, "fixer",  prov(() => new JavaAda
 				this.morehurt = this.potentialHeal.health / this.potentialHeal.maxHealth();
 				if (this.morehurt < this.currentHeal){
 					this.healTarget = this.potentialHeal;
+					this.target = this.healTarget;
 				}
 
 			}
