@@ -451,13 +451,17 @@ const illithidShip = extendContent(Mech, "illithid", {
 				Units.all(cons(unit => {
 					if (!(unit instanceof Player)){
 						if(unit.isDead() == false && (unit.getTeam() != player.getTeam()) && unit.withinDst(player.x, player.y, 320)){
-							if(unit.maxHealth() < 2500){
+							if(unit.maxHealth() < 2500 && !(unit.hasEffect(illithidWither))){
 								unit.velocity().add(Mathf.random(-0.66,0.66), Mathf.random(-0.66,0.66));
 								unit.velocity().setAngle(Mathf.slerpDelta(unit.velocity().angle(), Mathf.random(360), Mathf.random()));
 								unit.rotation = Mathf.slerpDelta(unit.velocity().angle(), Mathf.random(360), Mathf.random());
 								unit.applyEffect(illithidWither, 2400);
 							}
 							else if(unit.maxHealth() < 25000){
+								if (unit.hasEffect(illithidWither)){
+									player.healBy(unit.health / 2);
+									unit.damage(unit.health / 2);
+								}
 								unit.applyEffect(illithidWither, 2400);
 							}
 							else{
@@ -468,7 +472,7 @@ const illithidShip = extendContent(Mech, "illithid", {
 								for(var i = 0; i < 6; i++){
 									illithidDeathBullet.weaveScale = Mathf.random(-2,2);
 									illithidDeathBullet.weaveMag = Mathf.random(-2,2);
-									Calls.createBullet(illithidDeathBullet, this.getTeam(), unit.x, unit.y, Mathf.random(360), Mathf.random(0.45, 1.2), Mathf.random(0.4, 1.0));
+									Calls.createBullet(illithidDeathBullet, player.getTeam(), unit.x, unit.y, Mathf.random(360), Mathf.random(0.45, 1.2), Mathf.random(0.4, 1.0));
 								}
 								Call.onUnitDeath(unit);
 								unit.remove();
