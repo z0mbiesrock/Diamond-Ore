@@ -1,5 +1,5 @@
 type: BuilderDrone
-name: Ancient Scavenger
+name: Ancient Assembler
 description: "A [#e5b85e]special builder drone[]. Moves slowly, but is nonetheless reliable."
 speed: 0.085
 drag: 0.0231675

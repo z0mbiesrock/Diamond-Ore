@@ -467,13 +467,13 @@ const illithidShip = extendContent(Mech, "illithid", {
 							else{
 								try{
 								// Put in a try so Azathoth doesn't crash the game
-								unit.setDead(true);
 								Effects.effect(illithidBossWither, unit.x, unit.y, Mathf.random(-360,360));
 								for(var i = 0; i < 6; i++){
 									illithidDeathBullet.weaveScale = Mathf.random(-2,2);
 									illithidDeathBullet.weaveMag = Mathf.random(-2,2);
 									Calls.createBullet(illithidDeathBullet, player.getTeam(), unit.x, unit.y, Mathf.random(360), Mathf.random(0.45, 1.2), Mathf.random(0.4, 1.0));
 								}
+								unit.setDead(true);
 								Call.onUnitDeath(unit);
 								unit.remove();
 								}
