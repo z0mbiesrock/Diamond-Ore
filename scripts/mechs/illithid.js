@@ -201,12 +201,15 @@ for(var p = 0; p < 24; p++){
 };
 //print("abilRand: " + abilRand);
 var descRand = "";
-for(var p = 0; p < 340; p++){
+for(var p = 0; p < 150; p++){
 	var tmp = String.fromCharCode(Mathf.round(Mathf.randomSeed(seed * p, 0, 127)));
 	var tmpA = String.fromCharCode(Mathf.round(Mathf.randomSeed(seed * p + 42624, 1024, 1279)));
 	var tmpAB = Mathf.randomSeed(seed * p + 341) < 0.5 ? tmpA : tmp;
-	var tmpB = String.fromCharCode(Mathf.round(Mathf.randomSeed(seed * p + 34134, 768, 879)));
+	var tmpB = String.fromCharCode(Mathf.round(Mathf.randomSeed(seedA * p + 34134, 768, 879)));
 	descRand = descRand + tmpAB + tmpB;
+	if(Mathf.chance(0.0626)){
+		descRand = descRand + " ";
+	}
 }
 //print("descRand: " + descRand);
 var padDescRand = "Provides transformation into ";

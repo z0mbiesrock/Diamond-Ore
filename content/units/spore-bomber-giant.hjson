@@ -12,7 +12,7 @@ mass: 240
 //engineColor: "ffbb00"
 engineOffset: 4
 engineSize: 6
-range: 768
+range: 80
 attackLength: 60
 retreatPercent: 0
 shootCone: 360
