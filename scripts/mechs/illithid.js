@@ -83,6 +83,11 @@ const illithidTrailFx = newEffect(107, e => {
     Fill.square(e.x + x, e.y + y, e.fout() * Mathf.random(1,4), 45);
     }})
     Angles.randLenVectors(e.id, 3, 30 * e.fout(), e.rotation, 360,d);
+    const g = new Floatc2({get(x, y){
+	Draw.color(Color.valueOf("#224422"), Color.valueOf("#444488"), Mathf.random());
+    Fill.circle(e.x + x, e.y + y, e.fout() * (2 + Mathf.random(1,4)));
+    }})
+    Angles.randLenVectors(e.id, 2, 22 + 22 * e.fout(), e.rotation + 180, 70, g);
 });
 
 const illithidAbilityFx = newEffect(40, e => {
@@ -109,38 +114,21 @@ const illithidWitherFx = newEffect(30, e => {
     }})
     Angles.randLenVectors(e.id, 2, 20 + 10 * e.fout(), e.rotation, 360,d);
 });
-const illithidBossWither = newEffect(30, e => {
+const illithidBossWither = newEffect(60, e => {
 	Draw.color(Color.valueOf("#111111"), Color.valueOf("#333333"), Mathf.random());
     const d = new Floatc2({get(x, y){
     Fill.square(e.x + x, e.y + y, e.fout() * 5, Mathf.random(-1,1));
     }})
     Angles.randLenVectors(e.id, 9, 12 + 36 * e.fin(), e.rotation, 360,d);
 });
+const illithidBossWither2 = newEffect(120, e => {
+	Draw.color(Color.valueOf("#111111"), Color.valueOf("#333333"), Mathf.random());
+    const d = new Floatc2({get(x, y){
+    Fill.square(e.x + x, e.y + y, e.fout() * (7 + Mathf.random(-1,3)), Mathf.random(-9,9));
+    }})
+    Angles.randLenVectors(e.id, 27, 24 + 72 * e.fin(), e.rotation, 360,d);
+});
 const illithidWither = extendContent(StatusEffect, "illithidWitherStatus", {
-	/* Too laggy
-	scanTiles(unit){
-		var tmpA = [];
-		for(var tx = -13; tx < 13; tx++){
-			for(var ty = -13; ty < 13; ty++){
-				var tileC = Vars.world.ltile(Mathf.round(unit.x / Vars.tilesize) + tx, Mathf.round(unit.y / Vars.tilesize) + ty);
-				if(tileC != null && tileC.ent() != null && tmpA.lastIndexOf(tileC) == -1 && tileC.getTeam() == unit.getTeam()){
-					entityC = tileC.ent();
-					//entityC.kill();
-					if (Mathf.chance(0.05)){
-						Effects.effect(illithidTileWither, tileC.drawx() + Mathf.random(-2 * tileC.size,2 * tileC.size), tileC.drawy() + Mathf.random(-2 * tileC.size,2 * tileC.size), Mathf.random(-360,360));
-						if (Mathf.chance(0.5) && tileC.size > 2){
-							Effects.effect(illithidTileWither, tileC.drawx() + Mathf.random(-2 * tileC.size,2 * tileC.size), tileC.drawy() + Mathf.random(-2 * tileC.size,2 * tileC.size), Mathf.random(-360,360));
-							if (Mathf.chance(0.25) && tileC.size >= 5){
-								Effects.effect(illithidTileWither, tileC.drawx() + Mathf.random(-2 * tileC.size,2 * tileC.size), tileC.drawy() + Mathf.random(-2 * tileC.size,2 * tileC.size), Mathf.random(-360,360));
-							}
-						}
-					}
-					//entityC.onDeath();
-					entityC.damage(Mathf.random(0.66,1.66 + (0.13 * tileC.size)));
-				}
-			}
-		}
-	}, */
 	
 	update(unit, time){
 		this.super$update(unit, time);
@@ -163,7 +151,6 @@ const illithidWither = extendContent(StatusEffect, "illithidWitherStatus", {
 					that.damage(Mathf.random(0.03,0.44));
 				}
 			}));
-			//this.scanTiles(unit);
 		}
 		catch(error){
 			print(error);
@@ -176,12 +163,12 @@ illithidWither.damageMultiplier = 0.6;
 illithidWither.damage = 0.37;
 illithidWither.effect = illithidWitherFx;
 
-var seed = Mathf.round(Mathf.random(-66666,66666));
-var seedA = Mathf.round(Mathf.random(-66666,66666));
-var seedB = Mathf.round(Mathf.random(-66666,66666));
-var seedC = Mathf.round(Mathf.random(-66666,66666));
-var seedD = Mathf.round(Mathf.random(-66666,66666));
-print(seed + " " + seedA + " " + seedB + " " + seedC + " " + seedD);
+var seed = Mathf.round(Mathf.random(666,6666));
+var seedA = Mathf.round(Mathf.random(666,6666));
+var seedB = Mathf.round(Mathf.random(666,6666));
+var seedC = Mathf.round(Mathf.random(666,6666));
+var seedD = Mathf.round(Mathf.random(666,6666));
+//print(seed + " " + seedA + " " + seedB + " " + seedC + " " + seedD);
 var weapRand = "";
 for(var p = 0; p < 24; p++){
 	var tmp = String.fromCharCode(Mathf.round(Mathf.randomSeed(seedC * p, 0, 127)));
@@ -201,19 +188,19 @@ for(var p = 0; p < 24; p++){
 };
 //print("abilRand: " + abilRand);
 var descRand = "";
-for(var p = 0; p < 150; p++){
+for(var p = 0; p < 66; p++){
 	var tmp = String.fromCharCode(Mathf.round(Mathf.randomSeed(seed * p, 0, 127)));
 	var tmpA = String.fromCharCode(Mathf.round(Mathf.randomSeed(seed * p + 42624, 1024, 1279)));
 	var tmpAB = Mathf.randomSeed(seed * p + 341) < 0.5 ? tmpA : tmp;
 	var tmpB = String.fromCharCode(Mathf.round(Mathf.randomSeed(seedA * p + 34134, 768, 879)));
 	descRand = descRand + tmpAB + tmpB;
-	if(Mathf.chance(0.0626)){
+	if(Mathf.chance(0.08626)){
 		descRand = descRand + " ";
 	}
 }
 //print("descRand: " + descRand);
 var padDescRand = "Provides transformation into ";
-for(var p = 0; p < 44; p++){
+for(var p = 0; p < 33; p++){
 	var tmp = String.fromCharCode(Mathf.round(Mathf.randomSeed(seedB * p, 0, 127)));
 	var tmpA = String.fromCharCode(Mathf.round(Mathf.randomSeed(seedB * p + 42624, 1024, 1279)));
 	var tmpAB = Mathf.randomSeed(seedB * p + 341) < 0.5 ? tmpA : tmp;
@@ -223,7 +210,7 @@ for(var p = 0; p < 44; p++){
 padDescRand = padDescRand + ". Use by tapping while standing on it";
 //print("padDescRand: " + padDescRand);
 var nameRand = "";
-for(var p = 0; p < 8; p++){
+for(var p = 0; p < 11; p++){
 	var tmp = String.fromCharCode(Mathf.round(Mathf.randomSeed(seedA * p, 0, 127)));
 	var tmpA = String.fromCharCode(Mathf.round(Mathf.randomSeed(seedB * p + 42624, 1024, 1279)));
 	var tmpAB = Mathf.randomSeed(seedC * p + 341) < 0.5 ? tmpA : tmp;
@@ -378,6 +365,8 @@ illithidDeathBullet.hitEffect = illithidDeathBulletFx;
 illithidDeathBullet.hitSound = Sounds.none;
 
 const illithidShip = extendContent(Mech, "illithid", {
+	
+	//var abilityCooldown = 255;
 	load(){
 		this.weapon.load();
 		this.region = Core.atlas.find(this.name);
@@ -450,7 +439,6 @@ const illithidShip = extendContent(Mech, "illithid", {
 				this.abilityCooldown = 512;
 				Draw.flush();
 				Draw.reset();
-				Effects.effect(illithidAbilityFx, player.x, player.y, Mathf.random(-360,360));
 				Units.all(cons(unit => {
 					if (!(unit instanceof Player)){
 						if(unit.isDead() == false && (unit.getTeam() != player.getTeam()) && unit.withinDst(player.x, player.y, 320)){
@@ -469,16 +457,37 @@ const illithidShip = extendContent(Mech, "illithid", {
 							}
 							else{
 								try{
-								// Put in a try so Azathoth doesn't crash the game
 								Effects.effect(illithidBossWither, unit.x, unit.y, Mathf.random(-360,360));
 								for(var i = 0; i < 6; i++){
 									illithidDeathBullet.weaveScale = Mathf.random(-2,2);
 									illithidDeathBullet.weaveMag = Mathf.random(-2,2);
 									Calls.createBullet(illithidDeathBullet, player.getTeam(), unit.x, unit.y, Mathf.random(360), Mathf.random(0.45, 1.2), Mathf.random(0.4, 1.0));
 								}
-								unit.setDead(true);
-								Call.onUnitDeath(unit);
-								unit.remove();
+								this.abilityCooldown += 48;
+								try{
+									unit.remove();
+								}
+								catch(h){
+									//:crab: AZATHOT IS AZAGON :crab:
+									var gsT = Vars.state.getState();
+									Vars.state.set(GameState.State.menu);
+									unit.remove();
+									Vars.state.set(gsT);
+									for(var cdf = 0; cdf < 12; cdf++){
+										illithidDeathBullet.weaveScale = Mathf.random(-2,2);
+										illithidDeathBullet.weaveMag = Mathf.random(-2,2);
+										Calls.createBullet(illithidDeathBullet, player.getTeam(), unit.x, unit.y, Mathf.random(360), Mathf.random(0.35, 1.2), Mathf.random(0.4, 1.3));
+									}
+									Vars.effectGroup.clear();
+									Draw.flush();
+									Draw.reset();
+									illithidDeathSound.breakSound.at(unit.x, unit.y);
+									Effects.effect(illithidBossWither2, unit.x, unit.y, Mathf.random(-360,360));
+									Effects.effect(illithidBossWither, unit.x, unit.y, Mathf.random(-360,360));
+									print(":crab: AZATHOT IS AZAGON :crab:");
+									Draw.reset();
+								}
+								
 								}
 								catch(fuck){
 									print(fuck);
@@ -488,14 +497,15 @@ const illithidShip = extendContent(Mech, "illithid", {
 					}
 				}
 				));
+				Effects.effect(illithidAbilityFx, player.x, player.y, Mathf.random(-360,360));
 			}
 		}
 		else {
 			this.abilityCooldown -= 1;
 		}
-		var zx = Angles.trnsx(this.rotation + 180, 33);
-		var zy = Angles.trnsy(this.rotation + 180, 33);
-		Effects.effect(illithidTrailFx, this.x + zx, this.x + zy);
+		var zx = Angles.trnsx(player.rotation + 180, 33);
+		var zy = Angles.trnsy(player.rotation + 180, 33);
+		Effects.effect(illithidTrailFx, player.x + zx, player.x + zy, player.rotation);
 	},
     onDeath(){
         illithidDeathSound.breakSound.at(this);
@@ -521,9 +531,9 @@ illithidShip.baseRotateSpeed = 0.04;
 illithidShip.drag = 0.02;
 illithidShip.maxSpeed = 0.35;
 illithidShip.boostSpeed = 2.0;
-illithidShip.buildPower = 0;
+illithidShip.buildPower = 0.5;
 illithidShip.mineSpeed = 0;
-illithidShip.drillPower = 0;
+illithidShip.drillPower = -1;
 illithidShip.hitSize = 70;
 illithidShip.hitSizeTile = 70;
 illithidShip.mass = Number.MAX_VALUE;
@@ -534,7 +544,7 @@ illithidShip.rotateWeapon = true;
 illithidShip.flying = true;
 illithidShip.cellTrnsY = 0;
 illithidShip.health = 32767;
-illithidShip.engineOffset = 32;
+illithidShip.engineOffset = 35;
 illithidShip.weaponOffsetX = 28;
 illithidShip.weaponOffsetY = 17;
 illithidShip.weapon = illithidWeapon;
@@ -549,9 +559,9 @@ const illithidPad = extendContent(MechPad, "illithid-nexus", {
 		}
 	},
 });
-print("2");
+//print("2");
 illithidPad.mech = illithidShip;
 illithidPad.description = padDescRand;
 illithidPad.localizedName = nameRand + " Nexus";
-print("3");
+//print("3");
 illithidPad.buildTime = Number.MAX_VALUE;
