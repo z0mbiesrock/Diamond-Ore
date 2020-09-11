@@ -9,7 +9,7 @@ hasItems: true
 craftTime: 42
 updateEffect: overdriven
 craftEffect: bigShockwave
-buildCostMultiplier: 0.75
+buildCostMultiplier: 0.65
 drawLiquidLight: true
 updateEffectChance: 0.75
 consumes: {
@@ -36,7 +36,9 @@ requirements: [
   metaglass/750
   thorium/350
   diamond/1000
-  ancient-alloy/50
+  surge-alloy/450
+  phase-fabric/450
+  cryogem/400
 ]
 category: crafting
 research: ancient-refinery

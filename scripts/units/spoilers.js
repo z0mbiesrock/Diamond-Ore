@@ -169,6 +169,10 @@ const urielUnit = new JavaAdapter(UnitType, {}, "angel-uriel",  prov(() => new J
 		finalAmount = dmgTkn * (((75 * (this.health / this.maxHealth())) + 25)/ 100);
 		return finalAmount;
 	},
+	
+	isHidden(){
+		return true;
+	}
 	drawEngine(){
 		Draw.color(Color.valueOf("#98c6f0"));
 		var ox = Angles.trnsx(this.rotation + 140, this.type.engineOffset);
@@ -274,6 +278,10 @@ const gabrielUnit = new JavaAdapter(UnitType, {}, "angel-gabriel",  prov(() => n
 		finalAmount = dmgTkn * (((90 * (this.health / this.maxHealth())) + 10)/ 100);
 		return finalAmount;
 	},
+	
+	isHidden(){
+		return true;
+	}
 	drawEngine(){
 		Draw.color(Color.valueOf("#98c6f0"));
 		var ox = Angles.trnsx(this.rotation + 140, this.type.engineOffset);

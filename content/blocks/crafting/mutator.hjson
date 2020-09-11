@@ -29,7 +29,6 @@ requirements: [
   thorium/155
   cryogem/35
   phase-fabric/125
-  dark-spore-pod/35
 ]
 category: crafting
 research: advanced-cultivator
