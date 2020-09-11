@@ -172,7 +172,7 @@ const urielUnit = new JavaAdapter(UnitType, {}, "angel-uriel",  prov(() => new J
 	
 	isHidden(){
 		return true;
-	}
+	},
 	drawEngine(){
 		Draw.color(Color.valueOf("#98c6f0"));
 		var ox = Angles.trnsx(this.rotation + 140, this.type.engineOffset);
@@ -281,7 +281,7 @@ const gabrielUnit = new JavaAdapter(UnitType, {}, "angel-gabriel",  prov(() => n
 	
 	isHidden(){
 		return true;
-	}
+	},
 	drawEngine(){
 		Draw.color(Color.valueOf("#98c6f0"));
 		var ox = Angles.trnsx(this.rotation + 140, this.type.engineOffset);
