@@ -1,6 +1,6 @@
-type: material
 name: "[#e5b85e]Ancient Alloy[]"
-description: A mysterious and extremely complex alloy, refined from Ancient Scrap, or mined directly from Ancient Debris. Believed to have been used extensively by a long forgotten civilization countless eons ago.
+description: "Refined from Ancient Scrap, or mined from [#e5b85e]mysterious ancient ruins[]."
+details: "A mysterious and extremely complex alloy. \n\n\nBelieved to have been used extensively by a long forgotten civilization countless eons ago."
 hardness: 6
 radioactivity: 0.75
 cost: 5

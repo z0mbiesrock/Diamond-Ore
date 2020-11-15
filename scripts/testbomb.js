@@ -30,7 +30,7 @@ surgeReactorMeltdownFlak.lightining = 5;
 surgeReactorMeltdownFlak.lightningLength = 10;
 surgeReactorMeltdownFlak.pierce = true;
 
-const siloLaunchEffect = newEffect(20, e => {
+const siloLaunchEffect = Effect(20, e => {
     Draw.color(Color.white, Color.lightGray, e.fin()); //color goes from white to light gray
     Lines.stroke(e.fout() * 3); //line thickness goes from 3 to 0
     Lines.circle(e.x, e.y, e.fin() * 100); //draw a circle whose radius goes from 0 to 100
@@ -52,8 +52,8 @@ const silo = extendContent(Block, "testbomb", {
         //make sure this silo has the items it needs to fire
         if(tile.entity.cons.valid()){
             //make this effect occur at the tile location
-            Effects.effect(siloLaunchEffect, tile)
-            Effects.effect(Fx.nuclearShockwave, tile)
+            Effect.effect(siloLaunchEffect, tile)
+            Effect.effect(Fx.nuclearShockwave, tile)
 
             for(var i = 0; i < 15; i++){
 				//this also doesnt do anything. drawSize is the distance where bullets stopped rendering.

@@ -1,6 +1,6 @@
 name: Ancient Crate
 description: A durable compact storage block.
-type: Vault
+type: StorageBlock
 itemCapacity: 1500
 hasItems: true
 health: 1500

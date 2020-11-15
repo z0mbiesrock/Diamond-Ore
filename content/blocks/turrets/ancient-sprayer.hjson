@@ -3,11 +3,11 @@ name: Ancient Sprayer
 description: A big rapid-fire gatling turret. 
 health: 5400
 size: 3
-reload: 4
+reloadTime: 4
 shots: 4
 //spread: 0.5
 range: 320
-ammoUseEffect: shellEjectSmall
+ammoUseEffect: casing2
 coolantMultiplier: 4
 maxAmmo: 400
 rotatespeed: 13

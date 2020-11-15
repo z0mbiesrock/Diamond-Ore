@@ -50,7 +50,7 @@ thorConcussAmmo.hitSound = Sounds.explosionbig;
 thorConcussAmmo.shootEffect = Fx.shootBigSmoke2;
 thorConcussAmmo.smokeEffect = Fx.hitFuse;
 
-const thorTurret = extendContent(DoubleTurret, "thor", {
+const thorTurret = extendContent(ItemTurret, "thor", {
 	
     init(){
         this.super$init();
@@ -66,9 +66,9 @@ const thorTurret = extendContent(DoubleTurret, "thor", {
 	}
 });
 //thorTurret.ammo.add(Items.silicon, thorConcussAmmo);
-thorTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.5)).update(false).boost();
+//thorTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.5)).update(false).boost();
 
-const odinTurret = extendContent(BurstTurret, "odin", {
+const odinTurret = extendContent(ItemTurret, "odin", {
 	
 	generateIcons: function(){
 		return [
@@ -77,7 +77,7 @@ const odinTurret = extendContent(BurstTurret, "odin", {
 		];
 	}
 });
-odinTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.314159)).update(false).boost();
+//odinTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.314159)).update(false).boost();
 const lokiTurret = extendContent(ItemTurret, "loki", {
 	
 	generateIcons: function(){
@@ -87,7 +87,7 @@ const lokiTurret = extendContent(ItemTurret, "loki", {
 		];
 	}
 });
-lokiTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.2345)).update(false).boost();
+//lokiTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.2345)).update(false).boost();
 const massdriverStrong = extendContent(MassDriver, "massdriver-strong", {
 	
 	generateIcons: function(){
@@ -98,7 +98,7 @@ const massdriverStrong = extendContent(MassDriver, "massdriver-strong", {
 	},
 });
 
-const yggdrasilCharge = newEffect(40, e => {
+const yggdrasilCharge = Effect(40, e => {
     Draw.color(Color.white, Color.yellow, e.fin());
     Lines.stroke(e.fin() * 4);
     Lines.circle(e.x, e.y, e.fout() * 20);
@@ -107,7 +107,7 @@ const yggdrasilCharge = newEffect(40, e => {
     }}) 
     Angles.randLenVectors(e.id, 8, 1 + 120 * e.fout(), e.rotation, 45,d);
 });
-const yggdrasilShoot = newEffect(30, e => {
+const yggdrasilShoot = Effect(30, e => {
     Draw.color(Color.gold, Color.white, e.fin());
     Lines.stroke(e.fout() * 7);
     const d = new Floatc2({get(x, y){
@@ -123,7 +123,7 @@ const yggdrasilShoot = newEffect(30, e => {
     Draw.color(Color.white, Color.white, e.fin());
     Lines.circle(e.x, e.y, e.fin() * 80);
 });
-const yggdrasilPlasmaTrail = newEffect(45, e => {
+const yggdrasilPlasmaTrail = Effect(45, e => {
 	Draw.color(Color.valueOf("#ffffff"), Color.valueOf("#ffff00"), e.fin());
     const d = new Floatc2({get(x, y){
     Fill.circle(e.x + x, e.y + y, 0.25 + e.fin() * 3);
@@ -132,7 +132,7 @@ const yggdrasilPlasmaTrail = newEffect(45, e => {
 	Draw.color(Color.valueOf("#ffffff"), Color.valueOf("#ffff00"), e.fout());
     Angles.randLenVectors(e.id, 6, -10 + 40 * e.fout(), e.rotation, 360 * e.fout(),d);
 });
-const yggdrasilPlasmaExplosion = newEffect(60, e => {
+const yggdrasilPlasmaExplosion = Effect(60, e => {
     Draw.color(Color.valueOf("#ffff66"), Color.valueOf("#999900"), e.fin());
     Lines.stroke(e.fout() * 12);
     const d = new Floatc2({get(x, y){
@@ -150,14 +150,14 @@ const yggdrasilPlasmaExplosion = newEffect(60, e => {
     Draw.color(Color.valueOf("#ffff66"), Color.valueOf("#bbbb00"), e.fin());
     Angles.randLenVectors(e.id, 25, -20 + 250 * e.fin(), e.rotation, 360,h);
 });
-const yggdrasilPlasmaExplosionSpark = newEffect(120, e => {
+const yggdrasilPlasmaExplosionSpark = Effect(120, e => {
     Draw.color(Color.gold, Color.white, e.fin());
     const d = new Floatc2({get(x, y){
     Fill.square(e.x + x, e.y + y, e.fout() * Math.abs(2 + Mathf.random(-1,1) * 2), 45 + e.rotation);
     }}) 
     Angles.randLenVectors(e.id, 20, 10 + 278 * e.fin(), e.rotation, 360,d);
 });
-const yggdrasilPlasmaFragmentExplosion = newEffect(40, e => {
+const yggdrasilPlasmaFragmentExplosion = Effect(40, e => {
     Draw.color(Color.valueOf("#ffff66"), Color.valueOf("#999900"), e.fin());
     Lines.stroke(e.fout() * 4);
     Draw.alpha(e.fout());
@@ -205,7 +205,7 @@ yggdrasilPlasmaFlak.status = StatusEffects.shocked;
 yggdrasilPlasmaFlak.statusDuration = 300;
 yggdrasilPlasmaFlak.fragBullet = yggdrasilPlasmaFlakFrag;
 
-const yggdrasilPlasmaSphere = newEffect(24, e => {
+const yggdrasilPlasmaSphere = Effect(24, e => {
     Draw.color(Color.valueOf("#ffffff"), Color.valueOf("#ffff00"), e.fin());
     const g = new Floatc2({get(x, y){
     Fill.circle(e.x + x, e.y + y, 9 - Math.abs(9 - (e.fin() * 18)));
@@ -229,9 +229,9 @@ const yggdrasilPlasma = extend(ArtilleryBulletType, {
     update(b){
         this.super$update(b);
         if(b.timer.get(0, 3 + b.fslope() * 2)){
-            Effects.effect(this.trailEffect, b.x, b.y);
+            Effect.effect(this.trailEffect, b.x, b.y);
         }
-		Effects.effect(yggdrasilPlasmaSphere, b.x + Mathf.random(-10,10), b.y + Mathf.random(-10,10));
+		Effect.effect(yggdrasilPlasmaSphere, b.x + Mathf.random(-10,10), b.y + Mathf.random(-10,10));
 		this.supressCollision = false;
     },
 	

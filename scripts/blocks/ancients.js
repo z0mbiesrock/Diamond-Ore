@@ -1,5 +1,5 @@
 //require("effects")
-const ancientSentinel = extendContent(ArtilleryTurret, "ancient-sentinel", {
+const ancientSentinel = extendContent(ItemTurret, "ancient-sentinel", {
 	draw(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
 	},
@@ -10,8 +10,7 @@ const ancientSentinel = extendContent(ArtilleryTurret, "ancient-sentinel", {
         ];
     }
 });
-ancientSentinel.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1), 0.3)).update(false).boost();
-const ancientBlasterShoot = newEffect(20, e => {
+const ancientBlasterShoot = Effect(20, e => {
     Draw.color(Color.white, Color.yellow, e.fin());
     Lines.stroke(e.fin() * 2);
     const d = new Floatc2({get(x, y){
@@ -19,7 +18,7 @@ const ancientBlasterShoot = newEffect(20, e => {
     }}) 
     Angles.randLenVectors(e.id, 4, 1 + 12 * e.fin(), e.rotation, 30,d);
 });
-const ancientShotgunShoot = newEffect(20, e => {
+const ancientShotgunShoot = Effect(20, e => {
     Draw.color(Color.white, Color.yellow, e.fin());
     Lines.stroke(e.fin() * 2);
     const d = new Floatc2({get(x, y){
@@ -27,7 +26,7 @@ const ancientShotgunShoot = newEffect(20, e => {
     }}) 
     Angles.randLenVectors(e.id, 8, 1 + 22 * e.fin(), e.rotation, 90,d);
 });
-const ancientBlasterAmmoUse = newEffect(20, e => {
+const ancientBlasterAmmoUse = Effect(20, e => {
     Draw.color(Color.yellow, Color.valueOf("#555500"), e.fin());
     Lines.stroke(e.fout() * 1);
     const d = new Floatc2({get(x, y){
@@ -60,7 +59,7 @@ const ancientPulser = extendContent(PowerTurret, "ancient-pulser", {
         ];
     }
 });
-const ancientBladeLaserHit = newEffect(15, e => {
+const ancientBladeLaserHit = Effect(15, e => {
     Draw.color(Color.white, Color.valueOf("a9d8ff"), e.fout());
     Lines.stroke(e.fout() * 3);
     const d = new Floatc2({get(x, y){
@@ -77,7 +76,7 @@ const ancientBladeLaser = extend(BasicBulletType, {
 	},
 	
 	/*hit: function(b, hitx, hity){
-	Effects.effect(this.hitEffect, Color.valueOf("a9d8ffaa"), hitx, hity);
+	Effect.effect(this.hitEffect, Color.valueOf("a9d8ffaa"), hitx, hity);
 		if(Mathf.chance(0.1)){
 			//Fire.create(world.tileWorld(hitx + Mathf.range(6.0), hity + Mathf.range(6.0)));
 			Damage.createIncend(hitx, hity, 6, 1);

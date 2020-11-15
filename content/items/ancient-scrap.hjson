@@ -1,6 +1,6 @@
-type: resource
 name: Ancient Scrap
-description: "The remains of derelict structures built by an unknown mysterious race. [#e5b85e]Incredibly more complex than regular scrap.[]" 
+description: "A raw material that can be used as ammo for [#e5b85e]certain turrets[], or refined into [#e5b85e]something else[]."
+details: "The remains of derelict structures built by an unknown mysterious race. [#8E733B]Incredibly more complex than regular scrap.[]" 
 hardness: 5
 radioactivity: 1.5
 explosiveness: 0.25

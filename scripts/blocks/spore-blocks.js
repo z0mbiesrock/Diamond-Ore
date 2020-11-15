@@ -2,14 +2,14 @@ const slowerregen = 1 / 55;
 const slowregen = 1 / 45;
 const normalregen = 1 / 35;
 const fastregen = 1 / 25;
-const sporeBlockDeathTrail = newEffect(45, e => {
+const sporeBlockDeathTrail = Effect(45, e => {
 	Draw.color(Color.valueOf("#6d54b7"), Color.valueOf("#995d9a"), e.fin());
     const d = new Floatc2({get(x, y){
     Fill.square(e.x + x, e.y + y, 0.25 + e.fout() * 1, 45 + e.rotation);
     }})
     Angles.randLenVectors(e.id, 3, 8 - Math.abs(8 - (e.fin() * 16)), d);
 });
-const sporeBlockDeathHit = newEffect(30, e => {
+const sporeBlockDeathHit = Effect(30, e => {
 	Draw.color(Color.valueOf("#6d54b7"), Color.valueOf("#995d9a"), e.fin());
     const d = new Floatc2({get(x, y){
     Fill.square(e.x + x, e.y + y, 0.25 + e.fout() * 1, 45 + e.rotation);
@@ -20,7 +20,7 @@ const sporeBlockDeathHit = newEffect(30, e => {
     Angles.randLenVectors(e.id, 3, 0.5 + e.fin() * 9, d);
     Angles.randLenVectors(e.id, 3, 0.5 + e.fin() * 9, f);
 });
-const sporeBlockDeathFx = newEffect(80, e => {
+const sporeBlockDeathFx = Effect(80, e => {
 	alignGrad = 1;
 	if (e.rotation < 0){
 		alignGrad = e.fin();
@@ -115,7 +115,7 @@ extendContent(Cultivator, "sporecluster", {
 		this.breakSound.at(tile);
         for(var i = 0; i < 10; i++){
             Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
-			Effects.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
+			Effect.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
 		}
 	}
 });
@@ -142,7 +142,7 @@ extendContent(Cultivator, "sporeclusterb", {
 		this.breakSound.at(tile);
         for(var i = 0; i < 10; i++){
             Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
-			Effects.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
+			Effect.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
 		}
 	}
 });
@@ -169,7 +169,7 @@ extendContent(Cultivator, "sporeclusterc", {
 		this.breakSound.at(tile);
         for(var i = 0; i < 10; i++){
             Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
-			Effects.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
+			Effect.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
 		}
 	}
 });
@@ -196,11 +196,11 @@ extendContent(Cultivator, "sporeclusterd", {
 		this.breakSound.at(tile);
         for(var i = 0; i < 10; i++){
             Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
-			Effects.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
+			Effect.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
 		}
 	}
 });
-extendContent(DoubleTurret, "spore-turret", {
+extendContent(ItemTurret, "spore-turret", {
 	draw(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
         Draw.color();
@@ -211,7 +211,7 @@ extendContent(DoubleTurret, "spore-turret", {
         ];
     }
 });
-extendContent(DoubleTurret, "spore-turret-b", {
+extendContent(ItemTurret, "spore-turret-b", {
 	draw(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
         Draw.color();
@@ -222,7 +222,7 @@ extendContent(DoubleTurret, "spore-turret-b", {
         ];
     }
 });
-extendContent(DoubleTurret, "spore-turret-c", {
+extendContent(ItemTurret, "spore-turret-c", {
 	draw(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
         Draw.color();
@@ -296,7 +296,7 @@ extendContent(ItemTurret, "spore-turret-small-dark", {
 		this.super$onDestroyed(tile);
         for(var i = 0; i < 7; i++){
             Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.75, 1.50));
-			Effects.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
+			Effect.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
 		}
 	}
 });
@@ -329,11 +329,11 @@ const sporeConveyor = extendContent(Conveyor, "spore-conveyor", {
 		this.super$onDestroyed(tile);
         for(var i = 0; i < 3; i++){
             Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.75, 1.50));
-			Effects.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
+			Effect.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
 		}
 	},
 });
-const sporeUnitBirth = newEffect(72, e => {
+const sporeUnitBirth = Effect(72, e => {
     Draw.color(Color.valueOf("#455085"), Color.valueOf("#995d9a"), e.fin());
     const d = new Floatc2({get(x, y){
     Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fslope() * 12 + 1);
@@ -349,7 +349,7 @@ const sporeUnitBirth = newEffect(72, e => {
     Draw.color(Color.valueOf("#8d69db"), Color.valueOf("#995d9a"), Mathf.random(-1,1));
     Angles.randLenVectors(e.id, 36, 1 + 24 * e.fin(), e.rotation, 360,f);
 });
-const mutatorUpdate = newEffect(45, e => {
+const mutatorUpdate = Effect(45, e => {
 	Draw.color(Color.valueOf("#9f81db"), Color.valueOf("#008fc4"), e.fin());
     const d = new Floatc2({get(x, y){
     Fill.circle(e.x + x, e.y + y, e.fout() * Mathf.random(1,2));
@@ -458,7 +458,7 @@ sporeVaultDeathLarge.bulletSprite = "shell";
 sporeVaultDeathLarge.frontColor = Color.valueOf("#42336f");
 sporeVaultDeathLarge.backColor = Color.valueOf("#6d54b7");
 
-const sporeVaultDeathExplode = newEffect(105, e => {
+const sporeVaultDeathExplode = Effect(105, e => {
 	alignGrad = 1;
 	if (e.rotation < 0){
 		alignGrad = e.fin();
@@ -482,16 +482,16 @@ const sporeVaultDeathExplode = newEffect(105, e => {
     Angles.randLenVectors(e.id, 10, 240 * e.fin() * alignAebg, e.rotation + Mathf.random(-5,5) + (40 * (alignGrad - alignBhur)), 360, fg);
 });
 
-const sporeVault = extendContent(Vault, "omnivault", {
+const sporeVault = extendContent(StorageBlock, "omnivault", {
 	
     //OVERRIDE
 	onDestroyed: function(tile){
 		this.super$onDestroyed(tile);
         for(var i = 0; i < 25; i++){
-		Effects.effect(sporeVaultDeathExplode, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
+		Effect.effect(sporeVaultDeathExplode, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
 		}
-		Effects.effect(Fx.impactShockwave, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
-		Effects.shake(1.3, 1.3, tile.drawx(), tile.drawy());
+		Effect.effect(Fx.impactShockwave, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
+		Effect.shake(1.3, 1.3, tile.drawx(), tile.drawy());
         for(var j = 0; j < 150; j++){
             Calls.createBullet(sporeVaultDeathSmall, Team.derelict, tile.drawx(), tile.drawy(), Mathf.random(360), Mathf.random(0.25, 1.0), Mathf.random(0.2, 1.0));
 		}
@@ -500,14 +500,14 @@ const sporeVault = extendContent(Vault, "omnivault", {
 		}
 	},
 })
-const darkSporePressUpdate = newEffect(27, e => {
+const darkSporePressUpdate = Effect(27, e => {
 	Draw.color(Color.valueOf("#cce9ff"), Color.valueOf("#007a96"), e.fin());
     const d = new Floatc2({get(x, y){
     Fill.square(e.x + x, e.y + y, e.fout() * 2, 45 + Mathf.random(-15,15));
     }})
     Angles.randLenVectors(e.id, 3, 1 + e.fin() * 6, d);
 });
-const darkSporePressCraft = newEffect(30, e => {
+const darkSporePressCraft = Effect(30, e => {
     Draw.color(Color.valueOf("#cce9ff"), Color.valueOf("#007a96"), e.fin());
     Lines.stroke(e.fout() * 5); //line thickness goes from 3 to 0
     Lines.circle(e.x, e.y, 10 + e.fin() * 30);
@@ -580,7 +580,7 @@ darkSporePress.craftEffect = darkSporePressCraft;
 			growTime = 0;
 			Sounds.laser.at(tile);
 			for(var k = 0; k < 7; k++){
-				Effects.effect(sporeUnitBirth, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
+				Effect.effect(sporeUnitBirth, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
 			};
 		}
 		Draw.reset();
@@ -598,7 +598,7 @@ darkSporePress.craftEffect = darkSporePressCraft;
             Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.drawx(), tile.drawy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.75, 1.50));
 		}
         for(var k = 0; k < 7; k++){
-			Effects.effect(sporeBlockDeathFx, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
+			Effect.effect(sporeBlockDeathFx, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
 		}
 	},
     generateIcons(){

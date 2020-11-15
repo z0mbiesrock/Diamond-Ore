@@ -3,11 +3,13 @@ name: Thor
 description: A large turret that fires large slow homing missiles. Extremely high range and damage, but has a very slow fire rate and ammo capacity.
 health: 1700
 size: 3
-reload: 135
+reloadTime: 135
 range: 600
-ammoUseEffect: shellEjectBig
+ammoUseEffect: casing3
 coolantMultiplier: 8
-shotWidth: 10
+coolantUsage: 0.5
+alternate: true
+spread: 10
 maxAmmo: 2
 inaccuracy: 0
 rotatespeed: 2

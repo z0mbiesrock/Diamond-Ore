@@ -3,11 +3,12 @@ name: Loki
 description: A large anti-ground gatling turret that mows down ground units with piercing projectiles.
 health: 1700
 size: 3
-reload: 3
+reloadTime: 3
 range: 240
 coolantMultiplier: 3
-ammoUseEffect: shellEjectMedium
+ammoUseEffect: casing3
 maxAmmo: 200
+coolantUsage: 0.2345
 inaccuracy: 8
 xRand: 2
 rotatespeed: 3

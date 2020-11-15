@@ -20,7 +20,7 @@ const waterDecorruptor = extendContent(GenericSmelter, "water-decorruptor", {
 	//new Func(){bars.add("liquidOutput", this => new Bar(this.outputLiquid.liquid, this.outputLiquid.liquid.color, (tile.entity.liquids.get(this.outputLiquid.liquid) / this.liquidCapacity)))}
 	//new Func(){get(entity, bar){ new Bar()}}
 })
-const decorrupting = newEffect(36, e => {
+const decorrupting = Effect(36, e => {
     Draw.color(Color.valueOf("#355085"), Color.valueOf("#596ae8"), e.fin());
     const d = new Floatc2({get(x, y){
     Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fslope() * 12 + 1);
@@ -28,7 +28,7 @@ const decorrupting = newEffect(36, e => {
     Lines.stroke(e.fout() * 1);
     Lines.circle(e.x, e.y, e.fout() * 2);
 });
-const decorrupted = newEffect(72, e => {
+const decorrupted = Effect(72, e => {
     Draw.color(Color.valueOf("#455085"), Color.valueOf("#596aff"), e.fin());
     const d = new Floatc2({get(x, y){
     Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fslope() * 12 + 1);

@@ -3,7 +3,7 @@ name: Large Diamond Turret
 description: A versatile all-around turret that converts a variety of different ammo types into projectiles that pierce multiple enemies. 
 health: 1200
 size: 2
-reload: 48
+reloadTime: 48
 range: 300
 maxAmmo: 50
 inaccuracy: 2

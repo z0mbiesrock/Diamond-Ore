@@ -1,6 +1,6 @@
 name: Diamond Vault
 description: A durable storage block.
-type: Vault
+type: StorageBlock
 itemCapacity: 3000
 hasItems: true
 health: 1000

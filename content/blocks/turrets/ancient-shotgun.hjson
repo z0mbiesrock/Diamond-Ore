@@ -3,7 +3,7 @@ name: Ancient Shotgun
 description: A larger version of the Ancient Blaster. Fires a spread of multiple bullets. Very powerful at close range.
 health: 9000
 size: 2
-reload: 75
+reloadTime: 75
 range: 220
 //ammoUseEffect: pulverizeRed
 coolantMultiplier: 3.75

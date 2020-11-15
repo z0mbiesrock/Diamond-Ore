@@ -1,6 +1,6 @@
 name: Ancient Container
 description: A very durable compact storage block with a high item capacity.
-type: Vault
+type: StorageBlock
 itemCapacity: 6000
 hasItems: true
 health: 6000

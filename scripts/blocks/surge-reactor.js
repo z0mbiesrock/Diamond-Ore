@@ -52,7 +52,7 @@ surgeReactorMeltdownShock.damage = 150;
 surgeReactorMeltdownShock.instantDisappear = true;
 surgeReactorMeltdownShock.pierce = true;
 
-const surgeReactorMeltdownFxA = newEffect(60, e => {
+const surgeReactorMeltdownFxA = Effect(60, e => {
 	Draw.color(Color.valueOf("#ffffff"), Color.valueOf("#ffff00"), e.fin());
     const d = new Floatc2({get(x, y){
     Fill.circle(e.x + x, e.y + y, e.fout() * 10);
@@ -67,7 +67,7 @@ const surgeReactorMeltdownFxA = newEffect(60, e => {
     Angles.randLenVectors(e.id, 15, 192 * e.fout(), e.rotation, 360 * e.fout(),aed);
 });
 
-const surgeReactorMeltdownFxB = newEffect(80, e => {
+const surgeReactorMeltdownFxB = Effect(80, e => {
 	alignGrad = 1;
 	if (e.rotation < 0){
 		alignGrad = e.fin();
@@ -125,11 +125,11 @@ const SurgeReactor = extendContent(NuclearReactor, "surge-reactor", {
 		this.super$onDestroyed(tile);
 		Calls.createBullet(surgeReactorMeltdown, Team.derelict, tile.drawx(), tile.drawy(), 0, 0.1, 0.1);
 		Sounds.explosionbig.at(tile.drawx(), tile.drawy());
-		Effects.shake(155, 155, tile.drawx(), tile.drawy());
+		Effect.shake(155, 155, tile.drawx(), tile.drawy());
 		try{
 			Units.all(cons(plr => {
 				if (plr.isDead() == false && plr instanceof Player){
-					Effects.shake(75, 75, plr.x, plr.y);
+					Effect.shake(75, 75, plr.x, plr.y);
 					Sounds.corexplode.at(plr.x, plr.y);
 					Sounds.explosionbig.at(plr.x, plr.y);
 					Sounds.explosionbig.at(plr.x, plr.y);
@@ -140,9 +140,9 @@ const SurgeReactor = extendContent(NuclearReactor, "surge-reactor", {
 		catch (err){
 			print(err);
 		}
-		Effects.effect(surgeReactorMeltdownFxA, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
+		Effect.effect(surgeReactorMeltdownFxA, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
         for(var lfr = 0; lfr < 15; lfr++){
-            Effects.effect(surgeReactorMeltdownFxB, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
+            Effect.effect(surgeReactorMeltdownFxB, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
 		}
         for(var i = 0; i < 45; i++){
             Calls.createBullet(surgeReactorMeltdownFlak, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.15, 1.0), Mathf.random(0.2, 1.0));

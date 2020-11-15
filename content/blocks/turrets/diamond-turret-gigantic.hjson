@@ -3,7 +3,7 @@ name: Gigantic Diamond Turret
 description: A versatile all-around turret that converts a variety of different ammo types into projectiles that pierce multiple enemies. 
 health: 4800
 size: 4
-reload: 72
+reloadTime: 72
 range: 420
 maxAmmo: 60
 inaccuracy: 2

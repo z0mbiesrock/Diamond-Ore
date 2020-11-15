@@ -3,7 +3,7 @@ name: Yggdrasil
 description: Ultimate plasma cannon of ancient origin. Requires astronomical amounts of power to charge and launch a giant ball of destructive plasma that annihilates anything it hits!
 health: 80000
 size: 4
-reload: 600
+reloadTime: 600
 range: 800
 coolantMultiplier: 7
 buildCostMultiplier: 0.33333333

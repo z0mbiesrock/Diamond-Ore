@@ -1,5 +1,5 @@
 
-const alloyRefining = newEffect(10, e => {
+const alloyRefining = Effect(10, e => {
     Draw.color(Color.valueOf("#fdeacb"), Color.valueOf("#f0985d"), e.fin());
     const d = new Floatc2({get(x, y){
     Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fslope() * 4 + 1);
@@ -10,7 +10,7 @@ const alloyRefining = newEffect(10, e => {
     Angles.randLenVectors(e.id, 4, 1 + 12 * e.fin(), e.rotation, 360,d);
 });
 
-const alloyRefined = newEffect(50, e => {
+const alloyRefined = Effect(50, e => {
     Draw.color(Color.valueOf("#fdeacb"), Color.valueOf("#f0985d"), e.fin());
     const d = new Floatc2({get(x, y){
     Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fslope() * 12 + 1);

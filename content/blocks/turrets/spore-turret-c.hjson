@@ -3,7 +3,7 @@ name: Spore Turret
 description: Spore Turret
 health: 1600
 size: 2
-reload: 185
+reloadTime: 185
 range: 200
 ammoUseEffect: smoke
 maxAmmo: 100

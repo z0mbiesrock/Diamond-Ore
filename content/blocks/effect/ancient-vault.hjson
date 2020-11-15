@@ -1,6 +1,6 @@
 name: Ancient Vault
 description: An extremely durable storage block with a very high item capacity.
-type: Vault
+type: StorageBlock
 itemCapacity: 13500
 hasItems: true
 health: 13500

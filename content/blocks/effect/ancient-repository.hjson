@@ -1,6 +1,6 @@
 name: Ancient Repository
 description: An heavily-armored durable storage block with an extremely high item capacity.
-type: Vault
+type: StorageBlock
 itemCapacity: 24000
 hasItems: true
 health: 24000

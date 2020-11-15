@@ -1,9 +1,9 @@
-type: BurstTurret
+type: ItemTurret
 name: Barrage
 description: Short range high damage burstfire turret. Durable enough to use directly on the front lines, and stores a lot of ammunition.
 health: 10200
 size: 3
-reload: 120
+reloadTime: 120
 range: 120
 ammoUseEffect: smoke
 maxAmmo: 100

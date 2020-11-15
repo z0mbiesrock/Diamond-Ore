@@ -4,7 +4,7 @@ description: Spore Turret
 health: 400
 ammoPerShot: 0
 size: 1
-reload: 20
+reloadTime: 20
 range: 120
 ammoUseEffect: smoke
 maxAmmo: 1
@@ -19,7 +19,7 @@ outlineIcon: false
 expanded: true
 shootEffect: none
 smokeEffect: none
-recoil: -4
+recoilAmount: -4
 restitution: 0.05
 ammo: {
   copper: {

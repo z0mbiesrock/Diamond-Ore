@@ -3,7 +3,7 @@ name: Diamond Turret
 description: A versatile all-around turret that converts a variety of different ammo types into projectiles that pierce multiple enemies.
 health: 300
 size: 1
-reload: 36
+reloadTime: 36
 range: 180
 maxAmmo: 40
 inaccuracy: 1

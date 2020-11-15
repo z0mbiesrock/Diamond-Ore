@@ -3,7 +3,7 @@ name: Ancient Blaster
 description: A small but sturdy turret.
 health: 2400
 size: 1
-reload: 24
+reloadTime: 24
 range: 150
 ammoEjectBack: 2.1
 //ammoUseEffect: pulverizeRed
