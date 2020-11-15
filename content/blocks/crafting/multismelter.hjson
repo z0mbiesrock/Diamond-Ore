@@ -33,8 +33,8 @@ requirements: [
 ]
 category: crafting
 research: multi-press
-activeSound: respawning
-activeSoundVolume: 0.95
-idleSound: respawning
-idleSoundVolume: 0.5
+loopSound: respawning
+loopSoundVolume: 0.95
+ambientSound: respawning
+ambientSoundVolume: 0.5
 outputItem: silicon/10

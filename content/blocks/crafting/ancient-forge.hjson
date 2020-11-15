@@ -42,8 +42,8 @@ requirements: [
 ]
 category: crafting
 research: ancient-refinery
-activeSound: machine
-activeSoundVolume: 1.75
-idleSound: respawning
-idleSoundVolume: 0.75
+loopSound: machine
+loopSoundVolume: 1.75
+ambientSound: respawning
+ambientSoundVolume: 0.75
 outputItem: ancient-alloy/2

@@ -35,8 +35,8 @@ requirements: [
 ]
 category: crafting
 research: blast-furnace
-activeSound: respawning
-activeSoundVolume: 1.15
-idleSound: machine
-idleSoundVolume: 0.35
+loopSound: respawning
+loopSoundVolume: 1.15
+ambientSound: machine
+ambientSoundVolume: 0.35
 outputLiquid: cryofluid/75

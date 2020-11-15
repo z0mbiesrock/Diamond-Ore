@@ -31,8 +31,8 @@ requirements: [
 ]
 category: crafting
 research: diamond-drill
-activeSound: machine
-activeSoundVolume: 0.95
-idleSound: respawning
-idleSoundVolume: 0.5
+loopSound: machine
+loopSoundVolume: 0.95
+ambientSound: respawning
+ambientSoundVolume: 0.5
 outputItem: diamond/1

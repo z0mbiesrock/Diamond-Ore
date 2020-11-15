@@ -32,8 +32,8 @@ requirements: [
 ]
 category: crafting
 research: advanced-cultivator
-activeSound: respawning
-activeSoundVolume: 1.45
-idleSound: machine
-idleSoundVolume: 0.125
+loopSound: respawning
+loopSoundVolume: 1.45
+ambientSound: machine
+ambientSoundVolume: 0.125
 outputItem: dark-spore-pod/1

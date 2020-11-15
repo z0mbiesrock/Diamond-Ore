@@ -23,7 +23,7 @@ requirements: [
 ]
 category: crafting
 research: cryogem-compressor
-idleSound: respawning
-idleSoundVolume: 0.5
+ambientSound: respawning
+ambientSoundVolume: 0.5
 
 

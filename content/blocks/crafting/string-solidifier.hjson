@@ -29,10 +29,10 @@ requirements: [
 ]
 category: crafting
 research: stringmaker
-activeSound: machine
-activeSoundVolume: 1.95
-idleSound: respawning
-idleSoundVolume: 0.5
+loopSound: machine
+loopSoundVolume: 1.95
+ambientSound: respawning
+ambientSoundVolume: 0.5
 results: [
 	phase-fabric/19
 ]

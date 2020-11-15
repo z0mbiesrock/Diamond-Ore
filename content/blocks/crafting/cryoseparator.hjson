@@ -27,10 +27,10 @@ requirements: [
 ]
 category: crafting
 research: separator
-activeSound: respawning
-activeSoundVolume: 1.95
-idleSound: respawning
-idleSoundVolume: 0.5
+loopSound: respawning
+loopSoundVolume: 1.95
+ambientSound: respawning
+ambientSoundVolume: 0.5
 results: [
     copper/275
     lead/250

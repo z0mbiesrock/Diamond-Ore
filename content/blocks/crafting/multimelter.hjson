@@ -15,11 +15,11 @@ craftEffect: hitMeltdown
 updateEffect: none
 updateEffectChance: 0
 craftTime: 145
-activeSound: drill
-activeSoundVolume: 1.51
+loopSound: drill
+loopSoundVolume: 1.51
 //attribute: heat
-idleSound: drill
-idleSoundVolume: 0.01
+ambientSound: drill
+ambientSoundVolume: 0.01
 consumes: {
   power: 25.35
   items: {

@@ -35,7 +35,7 @@ requirements: [
 ]
 category: crafting
 research: mutator
-activeSound: respawning
-activeSoundVolume: 1.25
-idleSound: conveyor
-idleSoundVolume: 0.5
+loopSound: respawning
+loopSoundVolume: 1.25
+ambientSound: conveyor
+ambientSoundVolume: 0.5

@@ -28,8 +28,8 @@ requirements: [
 ]
 category: crafting
 research: diamond-synthesizer
-idleSound: respawning
-idleSoundVolume: 0.5
-activeSound: machine
-activeSoundVolume: 1.05
+ambientSound: respawning
+ambientSoundVolume: 0.5
+loopSound: machine
+loopSoundVolume: 1.05
 outputItem: coal/6

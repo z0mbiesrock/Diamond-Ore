@@ -45,8 +45,8 @@ requirements: [
 ]
 category: crafting
 research: ancient-repository
-activeSound: machine
-activeSoundVolume: 4
-idleSound: respawning
-idleSoundVolume: 0.25
+loopSound: machine
+loopSoundVolume: 4
+ambientSound: respawning
+ambientSoundVolume: 0.25
 outputItem: ancient-alloy/12

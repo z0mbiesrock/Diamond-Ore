@@ -32,9 +32,9 @@ requirements: [
 ]
 category: crafting
 research: cryoseparator
-activeSound: machine
-activeSoundVolume: 1.95
-idleSound: machine
-idleSoundVolume: 0.5
+loopSound: machine
+loopSoundVolume: 1.95
+ambientSound: machine
+ambientSoundVolume: 0.5
 
 

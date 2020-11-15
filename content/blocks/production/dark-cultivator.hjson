@@ -16,11 +16,11 @@ craftEffect: purify
 updateEffect: melting
 updateEffectChance: 0.21
 craftTime: 666
-activeSound: wave
-activeSoundVolume: 0.51
+loopSound: wave
+loopSoundVolume: 0.51
 attribute: spores
-idleSound: drill
-idleSoundVolume: 0.01
+ambientSound: drill
+ambientSoundVolume: 0.01
 consumes: {
   power: 15
   liquid: {

@@ -26,8 +26,8 @@ requirements: [
 ]
 category: crafting
 research: alloy-smelter
-activeSound: respawning
-activeSoundVolume: 0.95
-idleSound: respawning
-idleSoundVolume: 0.5
+loopSound: respawning
+loopSoundVolume: 0.95
+ambientSound: respawning
+ambientSoundVolume: 0.5
 outputItem: pyratite/3

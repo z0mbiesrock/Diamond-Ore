@@ -27,8 +27,8 @@ requirements: [
 ]
 category: crafting
 research: multipyra
-activeSound: fire
-activeSoundVolume: 0.95
-idleSound: respawning
-idleSoundVolume: 0.5
+loopSound: fire
+loopSoundVolume: 0.95
+ambientSound: respawning
+ambientSoundVolume: 0.5
 outputItem: blast-compound/6

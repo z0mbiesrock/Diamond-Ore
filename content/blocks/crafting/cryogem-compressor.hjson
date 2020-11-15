@@ -26,6 +26,6 @@ requirements: [
 ]
 category: crafting
 research: alloy-smelter
-idleSound: respawning
-idleSoundVolume: 0.5
+ambientSound: respawning
+ambientSoundVolume: 0.5
 outputItem: cryogem/1

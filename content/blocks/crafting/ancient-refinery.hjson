@@ -33,8 +33,8 @@ requirements: [
 ]
 category: crafting
 research: omnivault
-activeSound: conveyor
-activeSoundVolume: 1.75
-idleSound: machine
-idleSoundVolume: 0.5
+loopSound: conveyor
+loopSoundVolume: 1.75
+ambientSound: machine
+ambientSoundVolume: 0.5
 outputItem: ancient-alloy/1
