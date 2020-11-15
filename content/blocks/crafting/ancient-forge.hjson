@@ -6,14 +6,14 @@ health: 1600
 size: 4
 hasPower: true
 hasItems: true
-craftTime: 42
+craftTime: 67
 updateEffect: overdriven
 craftEffect: bigShockwave
-buildCostMultiplier: 0.65
+buildCostMultiplier: 0.45
 drawLiquidLight: true
 updateEffectChance: 0.75
 consumes: {
-  power: 105
+  power: 325
   items: {
     items: [
       copper/4
@@ -25,25 +25,27 @@ consumes: {
       thorium/4
       phase-fabric/2
       surge-alloy/5
-      plastanium/1
-      blast-compound/1
+      plastanium/2
+      blast-compound/2
     ]
   }
 }
 requirements: [
   copper/2300
-  silicon/275
-  metaglass/750
-  thorium/350
-  diamond/1000
-  surge-alloy/450
-  phase-fabric/450
-  cryogem/400
+  lead/3750
+  graphite/2550
+  silicon/3275
+  metaglass/1750
+  thorium/3500
+  diamond/3000
+  surge-alloy/4500
+  phase-fabric/7500
+  cryogem/4300
 ]
 category: crafting
 research: ancient-refinery
-activeSound: machine
-activeSoundVolume: 1.75
+activeSound: drill
+activeSoundVolume: 2.175
 idleSound: respawning
 idleSoundVolume: 0.75
 outputItem: ancient-alloy/2

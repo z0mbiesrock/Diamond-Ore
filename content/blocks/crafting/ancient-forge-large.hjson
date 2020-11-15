@@ -9,7 +9,7 @@ hasItems: true
 craftTime: 168
 updateEffect: overdriven
 craftEffect: nuclearShockwave
-buildCostMultiplier: 0.35
+buildCostMultiplier: 0.25
 updateEffectChance: 1
 consumes: {
   power: 315
@@ -24,29 +24,29 @@ consumes: {
       thorium/20
       phase-fabric/10
       surge-alloy/25
-      plastanium/5
+      plastanium/7
       blast-compound/5
     ]
   }
 }
 requirements: [
-  copper/3000
-  lead/3000
-  graphite/1500
-  silicon/1500
-  titanium/1000
-  metaglass/2000
-  thorium/2000
-  phase-fabric/1000
-  surge-alloy/2500
-  plastanium/5000
+  copper/9000
+  lead/8000
+  graphite/7500
+  silicon/7500
+  titanium/5000
+  metaglass/6000
+  thorium/9000
+  phase-fabric/10000
+  surge-alloy/5500
+  plastanium/7000
   diamond/10000
-  ancient-alloy/1250
+  ancient-alloy/1500
 ]
 category: crafting
 research: ancient-repository
 activeSound: machine
-activeSoundVolume: 4
+activeSoundVolume: 6
 idleSound: respawning
 idleSoundVolume: 0.25
 outputItem: ancient-alloy/12
