@@ -32,7 +32,7 @@ requirements: [
   diamond/150
 ]
 category: crafting
-research: omnivault
+research: ancient-scrap
 loopSound: conveyor
 loopSoundVolume: 1.75
 ambientSound: machine

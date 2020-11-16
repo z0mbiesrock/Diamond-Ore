@@ -267,7 +267,7 @@ yggdrasilPlasma.fragVelocityMin = 1;
 yggdrasilPlasma.fragVelocityMax = 1;
 yggdrasilPlasma.status = StatusEffects.shocked;
 yggdrasilPlasma.statusDuration = 300;
-yggdrasilPlasma.hitSound = Sounds.explosionbig;
+yggdrasilPlasma.hitSound = Sounds.plasmaboom;
 yggdrasilPlasma.fragBullet = yggdrasilPlasmaFlak;
 const yggdrasilTurret = extendContent(ChargeTurret, "yggdrasil", {
 	

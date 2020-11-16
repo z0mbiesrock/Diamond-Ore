@@ -25,7 +25,7 @@ requirements: [
   diamond/225
 ]
 category: crafting
-research: alloy-smelter
+research: cryogem
 ambientSound: respawning
 ambientSoundVolume: 0.5
 outputItem: cryogem/1

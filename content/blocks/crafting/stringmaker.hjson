@@ -31,7 +31,7 @@ requirements: [
   cryogem/100
 ]
 category: crafting
-research: cryoseparator
+research: phase-string
 loopSound: machine
 loopSoundVolume: 1.95
 ambientSound: machine

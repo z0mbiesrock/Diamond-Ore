@@ -3,12 +3,12 @@ name: Pyra-Smelter
 description: An upgraded version of the Silicon Smelter. Employs water, power, pyratite, and cryogems to produce silicon quickly and efficiently.
 itemCapacity: 60
 liquidCapacity: 90
-health: 200
+health: 2400
 size: 4
 hasPower: true
 hasLiquids: true
 hasItems: true
-craftTime: 45
+craftTime: 72
 updateEffect: smeltsmoke
 updateEffectChance: 0.166666
 consumes: {
@@ -16,7 +16,7 @@ consumes: {
   items: {
     items: [
       pyratite/1
-      sand/4
+      sand/6
 	  cryogem/1
     ]
   }
@@ -32,9 +32,9 @@ requirements: [
   cryogem/5
 ]
 category: crafting
-research: multi-press
+research: silicon-crucible
 loopSound: respawning
 loopSoundVolume: 0.95
 ambientSound: respawning
 ambientSoundVolume: 0.5
-outputItem: silicon/10
+outputItem: silicon/14

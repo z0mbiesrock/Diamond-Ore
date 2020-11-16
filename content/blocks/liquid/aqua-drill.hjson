@@ -1,5 +1,6 @@
 name: Aqua Drill
-description: "Extracts groundwater. Useful in locations with no surface water available.\n\n Despite its size, it extracts groundwater much more quickly than a regular water extractor."
+description: "Extracts groundwater. Useful in locations with no surface water available."
+details: "Despite its size, it extracts groundwater much more quickly than a regular water extractor."
 type: SolidPump
 health: 150
 size: 1
@@ -21,4 +22,4 @@ requirements: [
   metaglass/15
 ]
 category: production
-research: oil-extractor
+research: water-extractor

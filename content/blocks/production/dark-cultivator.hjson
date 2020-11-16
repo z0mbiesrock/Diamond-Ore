@@ -39,4 +39,15 @@ requirements: [
   surge-alloy/255
 ]
 category: production
-research: oil-extractor
+research:{
+  parent: corrupt-water
+  requirements:[
+	  coal/6000
+	  copper/12000
+	  lead/12000
+      graphite/7500
+      surge-alloy/30000
+      diamond/2000
+      cryogem/12000
+  ]
+}

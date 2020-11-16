@@ -18,4 +18,4 @@ requirements: [
   ancient-alloy/25
 ]
 category: power
-research: ancient-refinery
+research: rtg-generator

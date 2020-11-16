@@ -2,7 +2,6 @@ name: Spore Cluster
 description: Produces spore pods passively.
 //type: Cultivator
 health: 480
-rotate: true
 breakSound: sporesplat
 size: 1
 itemCapacity: 1
@@ -17,7 +16,10 @@ recurrence: 153
 updateEffect: wet
 updateEffectChance: 0.01
 craftTime: 60
-idleSound: wave
+ambientSound: wave
+ambientSoundVolume: 0.25
+loopSound: tractorbeam
+loopSoundVolume: 0.25
 attribute: spores
 buildVisibility: debugOnly
 //consumes: {

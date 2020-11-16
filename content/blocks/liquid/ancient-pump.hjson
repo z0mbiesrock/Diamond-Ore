@@ -1,5 +1,6 @@
 name: Ancient Force Pump
-description: "A liquid extraction block built using [#e5b85e]ancient technology[]."
+description: Pumps and output liquids.
+details: "A liquid extraction block built using [#e5b85e]ancient technology[]."
 type: Pump
 health: 1200
 size: 2

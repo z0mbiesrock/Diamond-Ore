@@ -1,11 +1,13 @@
 name: Ancient Router
-description: "[#e5b85e]The ultimate router.[] Splits items to up to 15 other directions equally."
+description: Distributes input items up to 15 other directions equally.
+details: "[#e5b85e]The ultimate router.[]"
 //, and can store a small number of items as a buffer.
 //capacity: 45
 type: Router
 //ItemBuffer: 45// Doesn't work
 itemCapacity: 45// Doesn't work
 hasItems: true
+speed: 2
 //instantTransfer: true
 //unloadable: true//breaks
 health: 800
@@ -19,4 +21,4 @@ requirements: [
   ancient-alloy/5
 ]
 category: distribution
-research: ancient-metal-conveyor
+research: mass-distributer

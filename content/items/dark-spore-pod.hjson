@@ -1,9 +1,19 @@
 name: Dark Spore Pod
-//description: Incredibly unstable
-detals: "A mutated and corrupted version of the spores normally used for conversion into oil, explosives and fuel. \n\n [#5e007f]It has the potential to destroy this world if they are left to multiply unchecked.[]"
+description: "[#352D65]???[]"
+details: "A mutated and corrupted version of the spores normally used for conversion into oil, explosives and fuel. \n\n [#5e007f]It has the potential to destroy this world if they are left to multiply unchecked.[]"
 hardness: 5
 explosiveness: 420.69
 flammability: 6.66
 radioactivity: 13.37
 cost: 1
 color: 004c96
+research:{
+  parent: cultivator
+  requirements:[
+	diamond/70000
+	spore-pod/10000000
+	phase-fabric/666666
+	plastanium/80000
+	cryogem/8000
+  ]
+}

@@ -4,33 +4,34 @@
 //define ammo, which is done by assigning a bullet type per item
 ammo: {
   //re-define old types of ammo
-  water: waterShot
-  cryofluid: cryoShot
-  slag: slagShot
-  oil: oilShot
+  water: heavyWaterShot
+  cryofluid: heavyCryoShot
+  slag: heavySlagShot
+  oil: heavyOilShot
   
   //define a custom type with different properties
   phase-string: {
     type: LiquidBulletType
-    speed: 2.5
+    speed: 4.5
+	damage: 1.5
 	lifetime: 110
 	status: corroded
-	homingPower: 0.2
-	homingRange: 75
+	homingPower: 0.12
+	homingRange: 90
     liquid: phase-string
 	pierce: true
-	pierceCap: 32
+	pierceCap: 64
 	knockback: 255
   }
   corrupt-water: {
     type: LiquidBulletType
-    speed: 1.15
-	damage: 2
-	lifetime: 140
+    speed: 1.5
+	damage: 3
+	lifetime: 190
 	status: sapped
-	homingPower: 0.01
-	homingRange: 12
+	homingPower: 0.02
+	homingRange: 24
     liquid: corrupt-water
-	knockback: 1.7
+	knockback: 3
   }
 }

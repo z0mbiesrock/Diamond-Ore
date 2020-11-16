@@ -1,11 +1,12 @@
 name: Mass Distributer
-description: A large and upgraded router. Splits items to up to 11 other directions equally.
+description: Distributes input items up to 11 other directions equally.
 //, and can store a small number of items as a buffer.
 //capacity: 45
 type: Router
 //ItemBuffer: 45// Doesn't work
 itemCapacity: 45// Doesn't work
 hasItems: true
+speed: 5
 //unloadable: true//breaks
 health: 540
 size: 3

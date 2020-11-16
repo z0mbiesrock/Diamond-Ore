@@ -1,10 +1,10 @@
 //type: BurstTurret
 name: Ancient Sentinel
-description: A powerful artillery turret.
+description: Shoots huge fragmentation shells over very long distances.
 health: 8000
 size: 4
 reloadTime: 80
-range: 320
+range: 400
 ammoUseEffect: pulverizeRedder
 coolantMultiplier: 7
 coolantUsage: 0.34

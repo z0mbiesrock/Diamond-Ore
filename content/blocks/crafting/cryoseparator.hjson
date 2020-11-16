@@ -26,7 +26,7 @@ requirements: [
   cryogem/65
 ]
 category: crafting
-research: separator
+research: disassembler
 loopSound: respawning
 loopSoundVolume: 1.95
 ambientSound: respawning

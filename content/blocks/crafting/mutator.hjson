@@ -31,7 +31,7 @@ requirements: [
   phase-fabric/125
 ]
 category: crafting
-research: advanced-cultivator
+research: dark-spore-pod
 loopSound: respawning
 loopSoundVolume: 1.45
 ambientSound: machine

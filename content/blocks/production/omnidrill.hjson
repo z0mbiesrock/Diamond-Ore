@@ -1,5 +1,6 @@
 name: Omni Drill
 description: The true ultimate drill. Extremely expensive and fragile. However, its mining speed is unmatched.
+details: The true ultimate drill. Extremely expensive and fragile.
 type: Drill
 health: 200
 size: 5
@@ -9,7 +10,7 @@ drawRim: true
 rotateSpeed: 6
 liquidBoostIntensity: 3
 hardnessDrillMultiplier: 0
-baseExplosiveness: 500
+baseExplosiveness: 5000
 warmupSpeed: 1
 hasPower: true
 drillEffect: hitMeltdown
@@ -36,6 +37,7 @@ requirements: [
   metaglass/1500
   surge-alloy/250
   phase-fabric/2500
+  blast-compound/150
 ]
 category: production
 research: diamond-drill

@@ -7,7 +7,7 @@ health: 6000
 size: 6
 itemDuration: 300
 //buildVisibility: sandboxOnly
-baseExplosiveness: 500
+baseExplosiveness: 50000
 heating: 0.02
 explosionRadius: 12
 explosionDamage: 9999999999
@@ -40,7 +40,7 @@ requirements: [
 ]
 category: power
 research: thorium-reactor
-activeSound: thruster
-activeSoundVolume: 0.85
-idleSound: respawning
-idleSoundVolume: 0.25
+loopSound: thruster
+loopSoundVolume: 0.85
+ambientSound: respawning
+ambientSoundVolume: 0.25

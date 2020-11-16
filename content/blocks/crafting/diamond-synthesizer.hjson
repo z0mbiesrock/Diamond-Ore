@@ -30,7 +30,18 @@ requirements: [
   graphite/200
 ]
 category: crafting
-research: diamond-drill
+research:{
+  parent: diamond
+  requirements:[
+	  coal/600000
+	  scrap/600000
+	  lead/12000
+      surge-alloy/3000
+      silicon/7500
+      titanium/20000
+      graphite/20000
+  ]
+}
 loopSound: machine
 loopSoundVolume: 0.95
 ambientSound: respawning

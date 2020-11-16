@@ -1,6 +1,6 @@
 type: GenericSmelter
 name: Industrial Diamond Synthesizer
-description: An upgraded version of the diamond synthesizer. Uses vast amounts of power to rapidly compress huge amounts of coal into diamond.
+description: Uses vast amounts of power to rapidly compress huge amounts of coal into diamond.
 itemCapacity: 300
 liquidCapacity: 300
 health: 9000

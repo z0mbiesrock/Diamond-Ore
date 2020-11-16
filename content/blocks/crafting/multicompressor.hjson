@@ -31,7 +31,7 @@ requirements: [
   diamond/35
 ]
 category: crafting
-research: alloy-smelter
+research: plastanium-compressor
 loopSound: respawning
 loopSoundVolume: 0.95
 ambientSound: respawning

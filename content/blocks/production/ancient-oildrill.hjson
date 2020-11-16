@@ -1,5 +1,5 @@
 name: Ancient Oil Drill
-description: "A larger version of the Oil Extractor. Uses a huge amount of power and sand to extract oil from underground."
+description: "Uses a huge amount of power and sand to extract oil from underground."
 type: Fracker
 itemCapacity: 10
 health: 3200

@@ -1,6 +1,7 @@
 type: ImpactReactor
 name: Differential Reactor
 description: Utilizes the temperature difference between frozen cryogems and burning pyratite to generate almost unlimited energy. Takes a significant amount of time, resources, and initial power input to operate at maximum power.
+details: "I was a wimp before Anchor Arms! Now I'm a jerk, and eveybody loves me!"
 itemCapacity: 30
 hasLiquids: false
 insulated: true
@@ -15,7 +16,7 @@ explosionRadius: 50
 explosionDamage: 9999999999
 plasma1: c0ecff
 plasma2: ffaa5f
-plasmas: 4
+//plasmas: 4
 buildCostMultiplier: 0.3
 powerProduction: 1866.6666666666666666666666666667
 consumes: {
@@ -31,6 +32,7 @@ requirements: [
   lead/4000
   copper/4000
   titanium/4000
+  metaglass/777
   silicon/4000
   plastanium/2275
   graphite/1275
@@ -42,7 +44,7 @@ requirements: [
 ]
 category: power
 research: surge-reactor
-activeSound: thruster
-activeSoundVolume: 0.85
-idleSound: respawning
-idleSoundVolume: 0.25
+loopSound: combustion
+loopSoundVolume: 4.85
+ambientSound: hum
+ambientSoundVolume: 0.75

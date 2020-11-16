@@ -8,6 +8,7 @@ shootDuration: 60
 range: 96
 ammoUseEffect: none
 coolantMultiplier: 2.5
+coolantUsage: 0.1
 cooldown: 0.005
 rotatespeed: 9
 shootSound: flame

@@ -1,6 +1,17 @@
-type: material
 name: Cryogem
-description: A packet of highly compressed and solidified cryofluid. Mostly just a way to have prepared cryofluid for any purpose, provided you know how to decompress it.
+description: Used extensively as an easy transport method of cryofluid over immense distances.
 hardness: 5
 cost: 1
 color: aaffff
+research:{
+  parent: cryofluid
+  requirements:[
+	  coal/6000
+	  copper/120000
+	  lead/120000
+      titanium/275000
+      surge-alloy/30000
+      diamond/5000
+	  thorium/777000
+  ]
+}

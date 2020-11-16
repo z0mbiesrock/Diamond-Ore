@@ -93,6 +93,12 @@ const darkSporeBlockLarge = extendContent(Wall, "dark-spore-block-large", {
       }
 });
 extendContent(Cultivator, "sporecluster", {
+	draw(tile){
+		podnum = Mathf.round(Mathf.randomSeed(this.id, 1, 4));
+		podrot = Mathf.round(Mathf.randomSeed(this.id, 0, 360));
+		Draw.rect(Core.atlas.find(this.name + podnum), tile.drawx(), tile.drawy(), podrot);
+        Draw.color();
+	},
     generateIcons(){
         return [
             Core.atlas.find(this.name)
@@ -112,88 +118,7 @@ extendContent(Cultivator, "sporecluster", {
             }
       },
 	onDestroyed: function(tile){
-		this.breakSound.at(tile);
-        for(var i = 0; i < 10; i++){
-            Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
-			Effect.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
-		}
-	}
-});
-extendContent(Cultivator, "sporeclusterb", {
-    generateIcons(){
-        return [
-            Core.atlas.find(this.name)
-        ];
-    },
-    update(tile){
-        this.super$update(tile);
-        //when health is lower than max health
-        if ( (tile.entity.health() < tile.entity.maxHealth()) && (Mathf.chance(normalregen)) ) {
-
-                   tile.entity.health += 15;
-				   /* if (tile.entity.health() > tile.entity.maxHealth()){
-					   tile.entity.health -= tile.entity.maxHealth() - tile.entity.health();
-				   } */ // unknown if this works
-					   
-                   
-            }
-      },
-	onDestroyed: function(tile){
-		this.breakSound.at(tile);
-        for(var i = 0; i < 10; i++){
-            Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
-			Effect.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
-		}
-	}
-});
-extendContent(Cultivator, "sporeclusterc", {
-    generateIcons(){
-        return [
-            Core.atlas.find(this.name)
-        ];
-    },
-    update(tile){
-        this.super$update(tile);
-        //when health is lower than max health
-        if ( (tile.entity.health() < tile.entity.maxHealth()) && (Mathf.chance(normalregen)) ) {
-
-                   tile.entity.health += 15;
-				   /* if (tile.entity.health() > tile.entity.maxHealth()){
-					   tile.entity.health -= tile.entity.maxHealth() - tile.entity.health();
-				   } */ // unknown if this works
-					   
-                   
-            }
-      },
-	onDestroyed: function(tile){
-		this.breakSound.at(tile);
-        for(var i = 0; i < 10; i++){
-            Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
-			Effect.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
-		}
-	}
-});
-extendContent(Cultivator, "sporeclusterd", {
-    generateIcons(){
-        return [
-            Core.atlas.find(this.name)
-        ];
-    },
-    update(tile){
-        this.super$update(tile);
-        //when health is lower than max health
-        if ( (tile.entity.health() < tile.entity.maxHealth()) && (Mathf.chance(normalregen)) ) {
-
-                   tile.entity.health += 15;
-				   /* if (tile.entity.health() > tile.entity.maxHealth()){
-					   tile.entity.health -= tile.entity.maxHealth() - tile.entity.health();
-				   } */ // unknown if this works
-					   
-                   
-            }
-      },
-	onDestroyed: function(tile){
-		this.breakSound.at(tile);
+        this.super$onDestroyed(tile);
         for(var i = 0; i < 10; i++){
             Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
 			Effect.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));

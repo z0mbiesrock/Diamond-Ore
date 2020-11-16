@@ -1,6 +1,6 @@
 //type: DoubleTurret
 name: Ancient Sprayer
-description: A big rapid-fire gatling turret. 
+description: Rapidly fires bullets over long distances.
 health: 5400
 size: 3
 reloadTime: 4
