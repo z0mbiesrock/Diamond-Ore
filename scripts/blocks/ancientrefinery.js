@@ -47,14 +47,14 @@ const oldRefinery = extendContent(GenericSmelter, "ancient-refinery", {
 	
 	drawBase: function(tile){
         this.super$drawBase(tile);
-		ent = tile.ent();
+		ent = this;
 		Draw.rect(this.topRegionB, tile.drawx(), tile.drawy(), ent.totalProgress * 7);
 	},
 	
 	updateTile(){
         this.super$updateTile();
-		if(tile.ent().cons.valid() && tile.ent().cons.optionalValid()){
-			tile.ent().progress += (this.getProgressIncrease(tile.ent(), this.craftTime) * 1.25);
+		if(this.cons.valid() && this.cons.optionalValid()){
+			this.progress += (this.getProgressIncrease(this, this.craftTime) * 1.25);
 		}
 	}
 });

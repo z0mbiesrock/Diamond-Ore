@@ -115,7 +115,7 @@ const SurgeReactor = extendContent(NuclearReactor, "surge-reactor", {
 	drawBase: function(tile){
         this.super$drawBase(tile);
         Draw.color();
-		Draw.alpha(this.tile.items.total() / this.itemCapacity);
+		Draw.alpha(this.items.total() / this.itemCapacity);
 		Draw.rect(Core.atlas.find(this.name + "-top"), tile.drawx(), tile.drawy());
         Draw.reset();
 	},

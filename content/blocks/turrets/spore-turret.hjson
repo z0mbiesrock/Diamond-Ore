@@ -6,7 +6,7 @@ size: 2
 reloadTime: 190
 range: 200
 ammoUseEffect: smoke
-maxAmmo: 100
+maxammo: 100
 inaccuracy: 24
 rotatespeed: 9
 buildVisibility: debugOnly
@@ -15,7 +15,7 @@ layer2: block
 outlineIcon: false
 expanded: true
 shots: 4
-ammo: {
+ammoTypes: {
   spore-pod: {
     type: MissileBulletType
     speed: 6

@@ -309,7 +309,7 @@ const sporeMutator = extendContent(GenericCrafter, "mutator", {
 		Draw.rect(Core.atlas.find(this.name + "-input" + this.variant), tile.drawx(), tile.drawy(), this.rot1);
 		Draw.alpha(this.tile.items.get(this.outputItem.item) / this.itemCapacity);
 		Draw.rect(Core.atlas.find(this.name + "-output" + this.variant), tile.drawx(), tile.drawy(), this.rot2);
-		Draw.alpha(this.tile.liquids.get(this.tile.liquids.current()) / this.liquidCapacity);
+		Draw.alpha(this.this.liquids.get(this.this.liquids.current()) / this.liquidCapacity);
 		Draw.rect(Core.atlas.find(this.name + "-top"), tile.drawx(), tile.drawy());
 		Draw.reset();
 	},
@@ -446,7 +446,7 @@ const darkSporePress = extendContent(GenericCrafter, "dark-sporepress", {
 	drawBase(tile){
 		Draw.rect(this.region, tile.drawx(), tile.drawy());
 		Draw.color(this.outputLiquid.liquid.color);
-		Draw.alpha(this.tile.liquids.get(this.outputLiquid.liquid) / this.liquidCapacity);
+		Draw.alpha(this.this.liquids.get(this.outputLiquid.liquid) / this.liquidCapacity);
 		Draw.rect(Core.atlas.find("diamond-ore-dark-sporepress-liquid"), tile.drawx(), tile.drawy());
 		Draw.reset();
 	},

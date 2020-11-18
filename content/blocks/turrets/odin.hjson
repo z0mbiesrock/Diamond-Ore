@@ -8,7 +8,7 @@ burstSpacing: 4
 range: 294
 ammoUseEffect: none
 coolantMultiplier: 6
-maxAmmo: 80
+maxammo: 80
 coolantUsage: 0.314159
 inaccuracy: 6
 rotatespeed: 12
@@ -18,7 +18,7 @@ expanded: true
 targetGround: false
 layer: power
 shots: 12
-ammo: {
+ammoTypes: {
   graphite: {
     type: BasicBulletType
     speed: 6

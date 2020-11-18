@@ -7,7 +7,7 @@ reloadTime: 3
 range: 240
 coolantMultiplier: 3
 ammoUseEffect: casing3
-maxAmmo: 200
+maxammo: 200
 coolantUsage: 0.2345
 inaccuracy: 8
 xRand: 2
@@ -17,7 +17,7 @@ outlineIcon: false
 expanded: true
 targetAir: false
 layer: power
-ammo: {
+ammoTypes: {
   copper: {
     type: BasicBulletType
 	collidesAir: false

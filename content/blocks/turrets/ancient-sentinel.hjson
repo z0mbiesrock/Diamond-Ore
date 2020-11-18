@@ -8,13 +8,13 @@ range: 400
 ammoUseEffect: pulverizeRedder
 coolantMultiplier: 7
 coolantUsage: 0.34
-maxAmmo: 20
+maxammo: 20
 rotatespeed: 9
 cooldown: 0.01
 shootSound: shootBig
 outlineColor: 966102
 targetAir: false
-ammo: {
+ammoTypes: {
   metaglass: {
     type: ArtilleryBulletType
     speed: 6

@@ -10,7 +10,7 @@ coolantMultiplier: 8
 coolantUsage: 0.5
 alternate: true
 spread: 10
-maxAmmo: 2
+maxammo: 2
 inaccuracy: 0
 rotatespeed: 2
 cooldown: 0.0125
@@ -19,7 +19,7 @@ shootCone: 12
 layer: power
 outlineIcon: false
 expanded: true
-ammo: {
+ammoTypes: {
   blast-compound: {
     type: MissileBulletType
     speed: 2

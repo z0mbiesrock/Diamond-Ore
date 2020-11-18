@@ -11,7 +11,7 @@ const omniJunction = extendContent(Junction, "omnijunction", {
     },
 		drawBase(tile){
 		Draw.rect(this.region, tile.drawx(), tile.drawy());
-		Draw.alpha(this.tile.efficiency());
+		Draw.alpha(this.efficiency());
 		Draw.rect(Core.atlas.find(this.name + "-top"), tile.drawx(), tile.drawy());
 		Draw.reset();
 	},

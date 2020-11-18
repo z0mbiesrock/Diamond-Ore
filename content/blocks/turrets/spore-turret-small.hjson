@@ -7,7 +7,7 @@ size: 1
 reloadTime: 20
 range: 120
 ammoUseEffect: smoke
-maxAmmo: 1
+maxammo: 1
 shots: 1
 shootSound: pew
 inaccuracy: 36
@@ -21,7 +21,7 @@ shootEffect: none
 smokeEffect: none
 recoilAmount: -4
 restitution: 0.05
-ammo: {
+ammoTypes: {
   copper: {
     type: ArtilleryBulletType
     speed: 6

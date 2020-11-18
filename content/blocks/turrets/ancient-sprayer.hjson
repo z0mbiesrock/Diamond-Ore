@@ -9,14 +9,14 @@ shots: 4
 range: 320
 ammoUseEffect: casing2
 coolantMultiplier: 4
-maxAmmo: 400
+maxammo: 400
 rotatespeed: 13
 inaccuracy: 7.5
 shootSound: shoot
 outlineColor: 966102
 outlineIcon: false
 //targetGround: false
-ammo: {
+ammoTypes: {
   lead: {
     type: BasicBulletType
     speed: 11

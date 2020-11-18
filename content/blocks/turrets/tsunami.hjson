@@ -2,7 +2,7 @@
 //shootSound: swings
 
 //define ammo, which is done by assigning a bullet type per item
-ammo: {
+ammoTypes: {
   //re-define old types of ammo
   water: heavyWaterShot
   cryofluid: heavyCryoShot

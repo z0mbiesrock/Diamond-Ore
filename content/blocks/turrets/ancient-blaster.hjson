@@ -9,13 +9,13 @@ ammoEjectBack: 2.1
 //ammoUseEffect: pulverizeRed
 coolantMultiplier: 4
 cooldown: 0.01
-maxAmmo: 40
+maxammo: 40
 rotatespeed: 13
 shootSound: pew
 outlineColor: 966102
 //targetAir: false
 //targetGround: false
-ammo: {
+ammoTypes: {
   lead: {
     type: BasicBulletType
     speed: 8

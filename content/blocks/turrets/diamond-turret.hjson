@@ -5,10 +5,10 @@ health: 300
 size: 1
 reloadTime: 36
 range: 180
-maxAmmo: 40
+maxammo: 40
 inaccuracy: 1
 rotatespeed: 12
-ammo: {
+ammoTypes: {
   copper: {
     type: BasicBulletType
     speed: 8

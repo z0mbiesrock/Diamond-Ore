@@ -5,11 +5,11 @@ health: 2700
 size: 3
 reloadTime: 60
 range: 360
-maxAmmo: 60
+maxammo: 60
 inaccuracy: 2
 rotatespeed: 6
 shootCone: 14
-ammo: {
+ammoTypes: {
   copper: {
     type: BasicBulletType
     speed: 10

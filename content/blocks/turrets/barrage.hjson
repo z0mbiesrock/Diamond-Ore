@@ -6,13 +6,13 @@ size: 3
 reloadTime: 120
 range: 120
 ammoUseEffect: smoke
-maxAmmo: 100
+maxammo: 100
 inaccuracy: 0
 rotatespeed: 9
 xRand: 4
 shots: 8
 burstSpacing: 6
-ammo: {
+ammoTypes: {
   graphite: {
     type: BasicBulletType
     speed: 8

@@ -8,7 +8,7 @@ range: 200
 ammoUseEffect: none
 coolantMultiplier: 7
 cooldown: 0.01
-maxAmmo: 40
+maxammo: 40
 rotatespeed: 15
 shootSound: pew
 outlineColor: 966102
