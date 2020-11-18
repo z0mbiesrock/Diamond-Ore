@@ -1,15 +1,15 @@
 extendContent(GenericCrafter, "heavy-coal-processor", {
-	draw(tile){
+	drawBase(tile){
 		Draw.rect(this.region, tile.drawx(), tile.drawy());
-		Draw.color(tile.entity.liquids.current().color);
-		Draw.alpha(tile.entity.liquids.currentAmount() / this.liquidCapacity);
+		Draw.color(this.tile.liquids.current().color);
+		Draw.alpha(this.tile.liquids.currentAmount() / this.liquidCapacity);
 		Draw.rect(Core.atlas.find(this.name + "-liquid"), tile.drawx(), tile.drawy());
 		Draw.color();
-        Draw.rect(Core.atlas.find(this.name + "-spinner-a"),tile.drawx(),tile.drawy(), -180 * tile.entity.progress);
-        Draw.rect(Core.atlas.find(this.name + "-spinner-b"),tile.drawx(),tile.drawy(), 180 * tile.entity.progress);
+        Draw.rect(Core.atlas.find(this.name + "-spinner-a"),tile.drawx(),tile.drawy(), -180 * this.tile.progress);
+        Draw.rect(Core.atlas.find(this.name + "-spinner-b"),tile.drawx(),tile.drawy(), 180 * this.tile.progress);
 		Draw.reset();
 	},
-    generateIcons(){
+    icons(){
         return [
             Core.atlas.find(this.name),
             Core.atlas.find(this.name + "-spinner-a"),

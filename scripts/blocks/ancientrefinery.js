@@ -34,7 +34,7 @@ const oldRefinery = extendContent(GenericSmelter, "ancient-refinery", {
 		this.topRegionB = Core.atlas.find(this.name + "-topB");
 	},
 	
-	generateIcons: function(){
+	icons: function(){
 	return [
 		Core.atlas.find(this.name),
 		Core.atlas.find(this.name + "-topB")
@@ -45,14 +45,14 @@ const oldRefinery = extendContent(GenericSmelter, "ancient-refinery", {
 		this.stats.add(BlockStat.boostEffect, 2.25, StatUnit.timesSpeed);
 	},
 	
-	draw: function(tile){
-        this.super$draw(tile);
+	drawBase: function(tile){
+        this.super$drawBase(tile);
 		ent = tile.ent();
 		Draw.rect(this.topRegionB, tile.drawx(), tile.drawy(), ent.totalProgress * 7);
 	},
 	
-	update(tile){
-        this.super$update(tile);
+	updateTile(){
+        this.super$updateTile();
 		if(tile.ent().cons.valid() && tile.ent().cons.optionalValid()){
 			tile.ent().progress += (this.getProgressIncrease(tile.ent(), this.craftTime) * 1.25);
 		}

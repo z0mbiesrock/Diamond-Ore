@@ -13,22 +13,22 @@ const multiMelter = extendContent(GenericCrafter, "multimelter", {
     //OVERRIDE
 	update: function(tile){
 		
-		if(tile.entity.cons.optionalValid() && this.boostCraft != null){
+		if(this.tile.cons.optionalValid() && this.boostCraft != null){
             craftTime = this.boostCraft;
         }
 		else{
 			craftTime = this.noboostCraft;
 		}
 		
-        this.super$update(tile);
+        this.super$updateTile();
 	}, */
 	
     //OVERRIDE
-	draw: function(tile){
-        //this.super$draw(tile);
+	drawBase: function(tile){
+        //this.super$drawBase(tile);
 		Draw.rect(this.region, tile.drawx(), tile.drawy());
 		Draw.color(this.outputLiquid.liquid.color);
-		Draw.alpha(tile.entity.liquids.get(this.outputLiquid.liquid) / this.liquidCapacity);
+		Draw.alpha(this.tile.liquids.get(this.outputLiquid.liquid) / this.liquidCapacity);
 		Draw.rect(Core.atlas.find(this.name + "-liquid"), tile.drawx(), tile.drawy());
 		Draw.reset()
 	}

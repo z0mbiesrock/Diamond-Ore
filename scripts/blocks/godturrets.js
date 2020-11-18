@@ -58,7 +58,7 @@ const thorTurret = extendContent(ItemTurret, "thor", {
 		//print(this.ammo);
     },
 	
-	generateIcons: function(){
+	icons: function(){
 		return [
 			Core.atlas.find("diamond-ore-godturret-icon-base"),
 			Core.atlas.find("diamond-ore-thor-icon")
@@ -70,7 +70,7 @@ const thorTurret = extendContent(ItemTurret, "thor", {
 
 const odinTurret = extendContent(ItemTurret, "odin", {
 	
-	generateIcons: function(){
+	icons: function(){
 		return [
 			Core.atlas.find("diamond-ore-godturret-icon-base"),
 			Core.atlas.find("diamond-ore-odin-icon")
@@ -80,7 +80,7 @@ const odinTurret = extendContent(ItemTurret, "odin", {
 //odinTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.314159)).update(false).boost();
 const lokiTurret = extendContent(ItemTurret, "loki", {
 	
-	generateIcons: function(){
+	icons: function(){
 		return [
 			Core.atlas.find("diamond-ore-godturret-icon-base"),
 			Core.atlas.find("diamond-ore-loki-icon")
@@ -90,7 +90,7 @@ const lokiTurret = extendContent(ItemTurret, "loki", {
 //lokiTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.2345)).update(false).boost();
 const massdriverStrong = extendContent(MassDriver, "massdriver-strong", {
 	
-	generateIcons: function(){
+	icons: function(){
 		return [
 			Core.atlas.find("diamond-ore-massdriver-strong-icon-base"),
 			Core.atlas.find("diamond-ore-massdriver-strong-icon")
@@ -271,7 +271,7 @@ yggdrasilPlasma.hitSound = Sounds.plasmaboom;
 yggdrasilPlasma.fragBullet = yggdrasilPlasmaFlak;
 const yggdrasilTurret = extendContent(ChargeTurret, "yggdrasil", {
 	
-	generateIcons: function(){
+	icons: function(){
 		return [
 			Core.atlas.find("diamond-ore-yggdrasil-icon-base"),
 			Core.atlas.find("diamond-ore-yggdrasil-icon")

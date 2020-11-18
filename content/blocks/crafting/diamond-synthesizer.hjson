@@ -31,7 +31,7 @@ requirements: [
 ]
 category: crafting
 research:{
-  parent: diamond
+  parent: disassembler
   requirements:[
 	  coal/600000
 	  scrap/600000

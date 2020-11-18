@@ -65,13 +65,13 @@ sporeBlockDeath.backColor = Color.valueOf("#6d54b7");
 //print("testing 123");
 
 const darkSporeBlock = extendContent(Wall, "dark-spore-block", {
-    update(tile){
+    updateTile(){
         //when health is lower than max health
-        if ( (tile.entity.health() < tile.entity.maxHealth()) && (Mathf.chance(slowerregen)) ) {
+        if ( (this.tile.health() < this.tile.maxHealth()) && (Mathf.chance(slowerregen)) ) {
 
-                   tile.entity.health += 10;
-				   /* if (tile.entity.health() > tile.entity.maxHealth()){
-					   tile.entity.health() = tile.entity.maxHealth();
+                   this.tile.health += 10;
+				   /* if (this.tile.health() > this.tile.maxHealth()){
+					   this.tile.health() = this.tile.maxHealth();
 				   } */
 					   
                    
@@ -79,13 +79,13 @@ const darkSporeBlock = extendContent(Wall, "dark-spore-block", {
       }
 });
 const darkSporeBlockLarge = extendContent(Wall, "dark-spore-block-large", {
-    update(tile){
+    updateTile(){
         //when health is lower than max health
-        if ( (tile.entity.health() < tile.entity.maxHealth()) && (Mathf.chance(slowregen)) ) {
+        if ( (this.tile.health() < this.tile.maxHealth()) && (Mathf.chance(slowregen)) ) {
 
-                   tile.entity.health += 20;
-				   /* if (tile.entity.health() > tile.entity.maxHealth()){
-					   tile.entity.health -= tile.entity.maxHealth() - tile.entity.health();
+                   this.tile.health += 20;
+				   /* if (this.tile.health() > this.tile.maxHealth()){
+					   this.tile.health -= this.tile.maxHealth() - this.tile.health();
 				   } */ // unknown if this works
 					   
                    
@@ -93,25 +93,25 @@ const darkSporeBlockLarge = extendContent(Wall, "dark-spore-block-large", {
       }
 });
 extendContent(Cultivator, "sporecluster", {
-	draw(tile){
+	drawBase(tile){
 		podnum = Mathf.round(Mathf.randomSeed(this.id, 1, 4));
 		podrot = Mathf.round(Mathf.randomSeed(this.id, 0, 360));
 		Draw.rect(Core.atlas.find(this.name + podnum), tile.drawx(), tile.drawy(), podrot);
         Draw.color();
 	},
-    generateIcons(){
+    icons(){
         return [
             Core.atlas.find(this.name)
         ];
     },
-    update(tile){
-        this.super$update(tile);
+    updateTile(){
+        this.super$updateTile();
         //when health is lower than max health
-        if ( (tile.entity.health() < tile.entity.maxHealth()) && (Mathf.chance(normalregen)) ) {
+        if ( (this.tile.health() < this.tile.maxHealth()) && (Mathf.chance(normalregen)) ) {
 
-                   tile.entity.health += 15;
-				   /* if (tile.entity.health() > tile.entity.maxHealth()){
-					   tile.entity.health -= tile.entity.maxHealth() - tile.entity.health();
+                   this.tile.health += 15;
+				   /* if (this.tile.health() > this.tile.maxHealth()){
+					   this.tile.health -= this.tile.maxHealth() - this.tile.health();
 				   } */ // unknown if this works
 					   
                    
@@ -126,93 +126,93 @@ extendContent(Cultivator, "sporecluster", {
 	}
 });
 extendContent(ItemTurret, "spore-turret", {
-	draw(tile){
+	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
         Draw.color();
 	},
-    generateIcons(){
+    icons(){
         return [
             Core.atlas.find(this.name)
         ];
     }
 });
 extendContent(ItemTurret, "spore-turret-b", {
-	draw(tile){
+	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
         Draw.color();
 	},
-    generateIcons(){
+    icons(){
         return [
             Core.atlas.find(this.name)
         ];
     }
 });
 extendContent(ItemTurret, "spore-turret-c", {
-	draw(tile){
+	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
         Draw.color();
 	},
-    generateIcons(){
+    icons(){
         return [
             Core.atlas.find(this.name)
         ];
     }
 });
 /* extendContent(Floor, "spore-water", {
-    generateIcons(){
+    icons(){
         return [
             Core.atlas.find(this.name)
         ];
     }
 });
 extendContent(Floor, "spore-water-deep", {
-    generateIcons(){
+    icons(){
         return [
             Core.atlas.find(this.name)
         ];
     }
 }); */
 extendContent(ItemTurret, "spore-turret-small", {
-	draw(tile){
+	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
 	},
-    update(tile){
+    updateTile(){
         //when health is lower than max health
-        if ( (tile.entity.health() < tile.entity.maxHealth()) && (Mathf.chance(fastregen)) ){
+        if ( (this.tile.health() < this.tile.maxHealth()) && (Mathf.chance(fastregen)) ){
 
-                   tile.entity.health += 8;
-				   /* if (tile.entity.health() > tile.entity.maxHealth()){
-					   tile.entity.health -= tile.entity.maxHealth() - tile.entity.health();
+                   this.tile.health += 8;
+				   /* if (this.tile.health() > this.tile.maxHealth()){
+					   this.tile.health -= this.tile.maxHealth() - this.tile.health();
 				   } */ // unknown if this works
 					   
                    
         };
-        this.super$update(tile);
+        this.super$updateTile();
      },
-    generateIcons(){
+    icons(){
         return [
             Core.atlas.find(this.name)
         ];
     }
 });
 extendContent(ItemTurret, "spore-turret-small-dark", {
-	draw(tile){
+	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
 	},
-    update(tile){
+    updateTile(){
         //when health is lower than max health
-        if ( (tile.entity.health() < tile.entity.maxHealth()) && (Mathf.chance(fastregen)) ){
+        if ( (this.tile.health() < this.tile.maxHealth()) && (Mathf.chance(fastregen)) ){
 
-                   tile.entity.health += 10;
-				   /* if (tile.entity.health() > tile.entity.maxHealth()){
-					   tile.entity.health -= tile.entity.maxHealth() - tile.entity.health();
+                   this.tile.health += 10;
+				   /* if (this.tile.health() > this.tile.maxHealth()){
+					   this.tile.health -= this.tile.maxHealth() - this.tile.health();
 				   } */ // unknown if this works
 					   
                    
         };
-        this.super$update(tile);
+        this.super$updateTile();
      },
-    generateIcons(){
+    icons(){
         return [
             Core.atlas.find(this.name)
         ];
@@ -227,28 +227,28 @@ extendContent(ItemTurret, "spore-turret-small-dark", {
 });
 
 const sporeConveyor = extendContent(Conveyor, "spore-conveyor", {
-	draw(tile){
+	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
-        this.super$draw(tile);
+        this.super$drawBase(tile);
 	},
-    generateIcons(){
+    icons(){
         return [
             Core.atlas.find(this.name + "-base"),
             Core.atlas.find(this.name + "-0-1")
         ];
     },
-    update(tile){
+    updateTile(){
         //when health is lower than max health
-        if ( (tile.entity.health() < tile.entity.maxHealth()) && (Mathf.chance(fastregen)) ){
+        if ( (this.tile.health() < this.tile.maxHealth()) && (Mathf.chance(fastregen)) ){
 
-                   tile.entity.health += 5;
-				   /* if (tile.entity.health() > tile.entity.maxHealth()){
-					   tile.entity.health -= tile.entity.maxHealth() - tile.entity.health();
+                   this.tile.health += 5;
+				   /* if (this.tile.health() > this.tile.maxHealth()){
+					   this.tile.health -= this.tile.maxHealth() - this.tile.health();
 				   } */ // unknown if this works
 					   
                    
         };
-        this.super$update(tile);
+        this.super$updateTile();
      },
 	onDestroyed: function(tile){
 		this.super$onDestroyed(tile);
@@ -282,7 +282,7 @@ const mutatorUpdate = Effect(45, e => {
     Angles.randLenVectors(e.id, 3, -6 + e.fin() * 12, d);
 });
 const sporeMutator = extendContent(GenericCrafter, "mutator", {
-	draw(tile){
+	drawBase(tile){
 		if (this.initiate != true){
 			this.initiate = true;
 			this.variant = Math.ceil(Math.random(0,4));
@@ -305,15 +305,15 @@ const sporeMutator = extendContent(GenericCrafter, "mutator", {
 			}
 		}
 		Draw.rect(this.region, tile.drawx(), tile.drawy());
-		Draw.alpha((tile.entity.items.total() - tile.entity.items.get(this.outputItem.item)) / this.itemCapacity);
+		Draw.alpha((this.tile.items.total() - this.tile.items.get(this.outputItem.item)) / this.itemCapacity);
 		Draw.rect(Core.atlas.find(this.name + "-input" + this.variant), tile.drawx(), tile.drawy(), this.rot1);
-		Draw.alpha(tile.entity.items.get(this.outputItem.item) / this.itemCapacity);
+		Draw.alpha(this.tile.items.get(this.outputItem.item) / this.itemCapacity);
 		Draw.rect(Core.atlas.find(this.name + "-output" + this.variant), tile.drawx(), tile.drawy(), this.rot2);
-		Draw.alpha(tile.entity.liquids.get(tile.entity.liquids.current()) / this.liquidCapacity);
+		Draw.alpha(this.tile.liquids.get(this.tile.liquids.current()) / this.liquidCapacity);
 		Draw.rect(Core.atlas.find(this.name + "-top"), tile.drawx(), tile.drawy());
 		Draw.reset();
 	},
-    generateIcons(){
+    icons(){
         return [
             Core.atlas.find(this.name),
             Core.atlas.find(this.name + "-input0"),
@@ -443,10 +443,10 @@ const darkSporePressCraft = Effect(30, e => {
     Angles.randLenVectors(e.id, 5, -6 + e.fin() * 24, e.rotation + (e.fin() * Mathf.random(-45,45)), 360, rg);
 });
 const darkSporePress = extendContent(GenericCrafter, "dark-sporepress", {
-	draw(tile){
+	drawBase(tile){
 		Draw.rect(this.region, tile.drawx(), tile.drawy());
 		Draw.color(this.outputLiquid.liquid.color);
-		Draw.alpha(tile.entity.liquids.get(this.outputLiquid.liquid) / this.liquidCapacity);
+		Draw.alpha(this.tile.liquids.get(this.outputLiquid.liquid) / this.liquidCapacity);
 		Draw.rect(Core.atlas.find("diamond-ore-dark-sporepress-liquid"), tile.drawx(), tile.drawy());
 		Draw.reset();
 	},
@@ -464,10 +464,10 @@ darkSporePress.craftEffect = darkSporePressCraft;
 	init(){ 
 	this.super$init();
 	},
-	draw(tile){
+	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name), tile.drawx(), tile.drawy());
-		if (tile.entity.cons.valid()){
-		growTime += tile.entity.delta() * tile.entity.efficiency() * Vars.state.rules.unitBuildSpeedMultiplier;
+		if (this.tile.cons.valid()){
+		growTime += this.tile.delta() * this.tile.efficiency() * Vars.state.rules.unitBuildSpeedMultiplier;
 		};
 		try{
 			spawnProgress = (growTime / this.produceTime);
@@ -512,7 +512,7 @@ darkSporePress.craftEffect = darkSporePressCraft;
 	},
 	onDestroyed: function(tile){
 		this.super$onDestroyed(tile);
-		//const entity = tile.entity
+		//const entity = this.tile
 		if (growTime != null){
 			growth = Math.floor(((growTime / this.produceTime) * 30) + 8);
 		}
@@ -526,7 +526,7 @@ darkSporePress.craftEffect = darkSporePressCraft;
 			Effect.effect(sporeBlockDeathFx, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
 		}
 	},
-    generateIcons(){
+    icons(){
         return [
             Core.atlas.find(this.name)
         ];

@@ -112,10 +112,10 @@ surgeReactorMeltdown.smokeEffect = Fx.none;
 const SurgeReactor = extendContent(NuclearReactor, "surge-reactor", {
 	
     //OVERRIDE
-	draw: function(tile){
-        this.super$draw(tile);
+	drawBase: function(tile){
+        this.super$drawBase(tile);
         Draw.color();
-		Draw.alpha(tile.entity.items.total() / this.itemCapacity);
+		Draw.alpha(this.tile.items.total() / this.itemCapacity);
 		Draw.rect(Core.atlas.find(this.name + "-top"), tile.drawx(), tile.drawy());
         Draw.reset();
 	},

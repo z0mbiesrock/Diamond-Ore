@@ -9,17 +9,17 @@ const omniJunction = extendContent(Junction, "omnijunction", {
         }
         return next.block().getLiquidDestination(next, tile, liquid);
     },
-		draw(tile){
+		drawBase(tile){
 		Draw.rect(this.region, tile.drawx(), tile.drawy());
-		Draw.alpha(tile.entity.efficiency());
+		Draw.alpha(this.tile.efficiency());
 		Draw.rect(Core.atlas.find(this.name + "-top"), tile.drawx(), tile.drawy());
 		Draw.reset();
 	},
-	update(tile){
-		if(tile.entity.cons.valid()){
-			this.speed = Math.ceil(this.baseSpeed + (100 - (100 * tile.entity.efficiency())));
-			this.super$update(tile);
-			if(tile.entity.efficiency() == 1){
+	updateTile(){
+		if(this.tile.cons.valid()){
+			this.speed = Math.ceil(this.baseSpeed + (100 - (100 * this.tile.efficiency())));
+			this.super$updateTile();
+			if(this.tile.efficiency() == 1){
 				this.outputsLiquid = true;
 				try{
 				dir = tile.relativeTo(tile.x, tile.y);
@@ -37,7 +37,7 @@ const omniJunction = extendContent(Junction, "omnijunction", {
 			else{
 				this.outputsLiquid = false;
 			}
-			tile.entity.cons.trigger();
+			this.tile.cons.trigger();
 		}
 	}
 });
