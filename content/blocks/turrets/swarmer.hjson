@@ -17,8 +17,8 @@ ammoTypes: {
     //0.5x reload time, so 2x shoot speed
     reloadMultiplier: 0.9
     //visual size - does not affect hitbox
-    bulletWidth: 7
-    bulletHeight: 9
+    width: 7
+    height: 9
     shootEffect: shootSmall
     smokeEffect: shootSmallSmoke
     //2 bullets per electrum item
@@ -43,8 +43,8 @@ ammoTypes: {
       speed: 1
 	  lifetime: 2
       damage: 1
-      bulletWidth: 1
-      bulletHeight: 1
+      width: 1
+      height: 1
 	  despawnEffect: freezing
 	  hitEffect: none
 	  frontColor: 99eefe
@@ -52,7 +52,7 @@ ammoTypes: {
 	  pierce: true
 	  status: freezing
 	  statusDuration: 720
-	  bulletSprite: diamond-ore-diamondbullet
+	  sprite: diamond-ore-diamondbullet
     }
   }
 }

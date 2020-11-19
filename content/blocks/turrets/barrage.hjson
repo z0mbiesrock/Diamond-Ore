@@ -18,8 +18,8 @@ ammoTypes: {
     speed: 8
     damage: 24
 	lifetime: 30
-    bulletWidth: 5
-    bulletHeight: 6
+    width: 5
+    height: 6
 	frontColor: ddffff
 	backColor: bbeeff
 	trailColor: 88aaff
@@ -28,7 +28,7 @@ ammoTypes: {
 	hitEffect: hitLancer
     ammoMultiplier: 4
 	pierce: false
-	bulletSprite: shell
+	sprite: shell
 	trailEffect: artilleryTrail
 	trailColor: eeffff
   }
@@ -37,8 +37,8 @@ ammoTypes: {
     speed: 8
     damage: 7
 	lifetime: 30
-    bulletWidth: 3
-    bulletHeight: 6
+    width: 3
+    height: 6
 	frontColor: ddffff
 	backColor: bbeeff
 	trailColor: 88ffff
@@ -50,7 +50,7 @@ ammoTypes: {
 	pierce: false
 	homingPower: 0
 	homingRange: 0
-	bulletSprite: shell
+	sprite: shell
 	trailEffect: artilleryTrail
 	trailColor: eeffff
 	fragBullets: 20
@@ -61,15 +61,15 @@ ammoTypes: {
       speed: 1
 	  lifetime: 30
       damage: 4
-      bulletWidth: 1
-      bulletHeight: 2
+      width: 1
+      height: 2
 	  despawnEffect: none
 	  hitEffect: none
 	  frontColor: b9eafe
 	  backColor: aaffff
 	  pierce: true
 	  knockback: 30
-	  bulletSprite: diamond-ore-diamondbullet
+	  sprite: diamond-ore-diamondbullet
     }
   }
   sand: {
@@ -77,8 +77,8 @@ ammoTypes: {
     speed: 8
     damage: 7
 	lifetime: 30
-    bulletWidth: 3
-    bulletHeight: 6
+    width: 3
+    height: 6
 	frontColor: e0caaa
 	backColor: e2bb7f
     shootEffect: shootSmall
@@ -92,7 +92,7 @@ ammoTypes: {
 	inaccuracy: 2
 	weaveMag: 7
 	weaveScale: 1.3
-	bulletSprite: diamond-ore-diamondshell
+	sprite: diamond-ore-diamondshell
 	trailColor: e2bb7f
 	status: corroded
 	statusDuration: 300
@@ -105,8 +105,8 @@ ammoTypes: {
 	  lifetime: 160
 	  drag: 0.001234
       damage: 1
-      bulletWidth: 1
-      bulletHeight: 2
+      width: 1
+      height: 2
 	  despawnEffect: none
 	  hitEffect: none
 	  frontColor: e2bb7f
@@ -114,7 +114,7 @@ ammoTypes: {
 	  pierce: true
 	  status: corroded
 	  statusDuration: 300
-	  bulletSprite: diamond-ore-diamondbullet
+	  sprite: diamond-ore-diamondbullet
     }
   }
   pyratite: {
@@ -122,8 +122,8 @@ ammoTypes: {
     speed: 6
     damage: 7
 	lifetime: 20
-    bulletWidth: 4
-    bulletHeight: 7
+    width: 4
+    height: 7
 	frontColor: ffaa4e
 	backColor: ffaa88
 	trailColor: ffdd22
@@ -136,7 +136,7 @@ ammoTypes: {
 	status: burning
 	statusDuration: 300
 	trailEffect: artilleryTrail
-	bulletSprite: diamond-ore-diamondbullet
+	sprite: diamond-ore-diamondbullet
 	fragBullets: 12
 	splashDamage: 20
 	splashDamageRadius: 30
@@ -147,8 +147,8 @@ ammoTypes: {
       speed: 1
 	  lifetime: 20
       damage: 2
-      bulletWidth: 2
-      bulletHeight: 4
+      width: 2
+      height: 4
 	  despawnEffect: none
 	  hitEffect: none
 	  frontColor: b99e2e
@@ -157,7 +157,7 @@ ammoTypes: {
 	  knockback: 1
 	  status: burning
 	  statusDuration: 300
-	  bulletSprite: diamond-ore-diamondbullet
+	  sprite: diamond-ore-diamondbullet
     }
   }
   phase-fabric: {
@@ -165,8 +165,8 @@ ammoTypes: {
     speed: 10
     damage: 12
 	lifetime: 12
-    bulletWidth: 3
-    bulletHeight: 6
+    width: 3
+    height: 6
 	frontColor: ddaa77
 	backColor: bbeeff
 	trailColor: 88aaff
@@ -178,7 +178,7 @@ ammoTypes: {
 	pierce: true
 	homingPower: 0.0005
 	homingRange: 0
-	bulletSprite: shell
+	sprite: shell
 	trailEffect: artilleryTrail
 	trailColor: eeffff
   }
@@ -187,8 +187,8 @@ ammoTypes: {
     speed: 8
     damage: 12
 	lifetime: 15
-    bulletWidth: 5
-    bulletHeight: 8
+    width: 5
+    height: 8
 	frontColor: ddffff
 	backColor: ffccdd
 	trailColor: ffac99
@@ -200,7 +200,7 @@ ammoTypes: {
 	pierce: false
 	homingPower: 0.0005
 	homingRange: 0
-	bulletSprite: diamond-ore-diamondbullet
+	sprite: diamond-ore-diamondbullet
 	fragBullets: 25
 	splashDamage: 30
 	splashDamageRadius: 30
@@ -211,8 +211,8 @@ ammoTypes: {
       speed: 1
 	  lifetime: 10
       damage: 5
-      bulletWidth: 2
-      bulletHeight: 4
+      width: 2
+      height: 4
 	  despawnEffect: hitLancer
 	  hitEffect: none
 	  frontColor: f94e9e
@@ -220,7 +220,7 @@ ammoTypes: {
 	  pierce: true
 	  knockback: 3.25
 	  keepVelocity: false
-	  bulletSprite: diamond-ore-diamondbullet
+	  sprite: diamond-ore-diamondbullet
     }
   }
   cryogem: {
@@ -228,8 +228,8 @@ ammoTypes: {
     speed: 6
     damage: 15
 	lifetime: 20
-    bulletWidth: 3
-    bulletHeight: 8
+    width: 3
+    height: 8
 	frontColor: eeffff
 	backColor: bbeeff
 	trailColor: 99dd99
@@ -241,7 +241,7 @@ ammoTypes: {
 	pierce: false
 	homingPower: 0.0005
 	homingRange: 0
-	bulletSprite: diamond-ore-diamondbullet
+	sprite: diamond-ore-diamondbullet
 	splashDamage: 30
 	splashDamageRadius: 40
 	status: freezing
@@ -255,8 +255,8 @@ ammoTypes: {
 	  drag: 0.0375
 	  lifetime: 20
       damage: 0
-      bulletWidth: 1
-      bulletHeight: 4
+      width: 1
+      height: 4
 	  despawnEffect: none
 	  hitEffect: none
 	  frontColor: bbffff
@@ -265,7 +265,7 @@ ammoTypes: {
 	  status: freezing
 	  statusDuration: 300
 	  knockback: 50
-	  bulletSprite: diamond-ore-diamondbullet
+	  sprite: diamond-ore-diamondbullet
     }
   }
 }

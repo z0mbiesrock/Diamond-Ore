@@ -19,7 +19,7 @@ const waterDecorruptor = extendContent(GenericSmelter, "water-decorruptor", {
 			() => entity.liquids.get(this.outputLiquid.liquid) / this.liquidCapacity)
 		);
 	},
-	//new Func(){bars.add("liquidOutput", this => new Bar(this.outputLiquid.liquid, this.outputLiquid.liquid.color, (this.this.liquids.get(this.outputLiquid.liquid) / this.liquidCapacity)))}
+	//new Func(){bars.add("liquidOutput", this => new Bar(this.outputLiquid.liquid, this.outputLiquid.liquid.color, (this.liquids.get(this.outputLiquid.liquid) / this.liquidCapacity)))}
 	//new Func(){get(entity, bar){ new Bar()}}
 })
 const decorrupting = Effect(36, e => {

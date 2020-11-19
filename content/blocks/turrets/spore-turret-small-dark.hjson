@@ -28,8 +28,8 @@ ammoTypes: {
 	drag: 0.0045
     damage: 7
 	lifetime: 90
-    bulletWidth: 3
-    bulletHeight: 6
+    width: 3
+    height: 6
 	frontColor: 42336f
 	backColor: 6d54b7
 	hitSound: swings
@@ -38,11 +38,11 @@ ammoTypes: {
     smokeEffect: none
 	splashDamage: 20
 	splashDamageRadius: 16
-	bulletShrink: 0
+	shrinkY: 0
 	hitEffect: pulverize
     ammoMultiplier: 1
 	pierce: false
-	bulletSprite: shell
+	sprite: shell
 	homingPower: 0.00015
 	homingRange: 40
 	collides: true
@@ -55,8 +55,8 @@ ammoTypes: {
 	drag: 0.0045
     damage: 20
 	lifetime: 90
-    bulletWidth: 3
-    bulletHeight: 6
+    width: 3
+    height: 6
 	frontColor: 42336f
 	backColor: 6d54b7
 	hitSound: swings
@@ -64,11 +64,11 @@ ammoTypes: {
     shootEffect: shootSmall
     smokeEffect: none
 	splashDamageRadius: -1
-	bulletShrink: 0
+	shrinkY: 0
 	hitEffect: pulverize
     ammoMultiplier: 1
 	pierce: false
-	bulletSprite: shell
+	sprite: shell
 	homingPower: 3
 	homingRange: 40
 	collides: true
@@ -81,8 +81,8 @@ ammoTypes: {
 	drag: 0.0075
     damage: 7
 	lifetime: 90
-    bulletWidth: 4
-    bulletHeight: 6
+    width: 4
+    height: 6
 	frontColor: 42336f
 	backColor: 6d54b7
 	hitSound: swings
@@ -91,11 +91,11 @@ ammoTypes: {
     smokeEffect: none
 	splashDamage: 25
 	splashDamageRadius: 24
-	bulletShrink: 0
+	shrinkY: 0
 	hitEffect: pulverize
     ammoMultiplier: 1
 	pierce: false
-	bulletSprite: shell
+	sprite: shell
 	homingPower: 4
 	homingRange: 40
 	collides: true

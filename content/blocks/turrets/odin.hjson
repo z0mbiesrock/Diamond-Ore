@@ -24,27 +24,27 @@ ammoTypes: {
     speed: 6
     damage: 60
 	lifetime: 60
-    bulletWidth: 8
-    bulletHeight: 20
+    width: 8
+    height: 20
 	frontColor: bbbbdd
 	backColor: 8888aa
     shootEffect: shootBig
     smokeEffect: shootBigSmoke
-	bulletShrink: 0
+	shrinkY: 0
 	hitEffect: hitFuse
 	despawnEffect: hitBulletBig
     ammoMultiplier: 4
 	pierce: false
 	knockback: 45
-	bulletSprite: shell
+	sprite: shell
   }
   scrap: {
     type: BasicBulletType
     speed: 6
     damage: 45
 	lifetime: 60
-    bulletWidth: 8
-    bulletHeight: 20
+    width: 8
+    height: 20
 	frontColor: bbbbbb
 	backColor: 888888
     shootEffect: shootBig
@@ -55,8 +55,8 @@ ammoTypes: {
 	reloadMultiplier: 0.75
 	pierce: false
 	knockback: 15
-	bulletSprite: shell
-	bulletShrink: 0
+	sprite: shell
+	shrinkY: 0
 	fragBullets: 20
 	fragVelocityMin: 1.125
 	fragVelocityMax: 2.25
@@ -65,15 +65,15 @@ ammoTypes: {
       speed: 1
 	  lifetime: 20
       damage: 5
-      bulletWidth: 2
-      bulletHeight: 4
+      width: 2
+      height: 4
 	  despawnEffect: none
 	  hitEffect: none
 	  frontColor: ffa044
 	  backColor: ff6614
 	  pierce: true
 	  knockback: 10
-	  bulletSprite: diamond-ore-diamondshell
+	  sprite: diamond-ore-diamondshell
     }
   }
   silicon: {
@@ -82,20 +82,20 @@ ammoTypes: {
 	drag: 0.0035
     damage: 55
 	lifetime: 90
-    bulletWidth: 5
-    bulletHeight: 20
+    width: 5
+    height: 20
 	frontColor: bbbbdd
 	backColor: 8888aa
     shootEffect: shootBig
     smokeEffect: shootBigSmoke
-	bulletShrink: 0
+	shrinkY: 0
 	hitEffect: hitFuse
 	despawnEffect: hitBulletBig
     ammoMultiplier: 2
 	reloadMultiplier: 1.25
 	pierce: false
 	knockback: 45
-	bulletSprite: diamond-ore-diamondbullet
+	sprite: diamond-ore-diamondbullet
 	homingPower: 0.03
 	homingRange: 60
   }
@@ -104,8 +104,8 @@ ammoTypes: {
     speed: 6
     damage: 150
 	lifetime: 60
-    bulletWidth: 8
-    bulletHeight: 20
+    width: 8
+    height: 20
 	frontColor: fbbbeb
 	backColor: c878a8
     shootEffect: shootBig
@@ -116,16 +116,16 @@ ammoTypes: {
 	reloadMultiplier: 0.5
 	pierce: false
 	knockback: 200
-	bulletSprite: shell
-	bulletShrink: 0
+	sprite: shell
+	shrinkY: 0
   }
   pyratite: {
     type: BasicBulletType
     speed: 6
     damage: 150
 	lifetime: 60
-    bulletWidth: 8
-    bulletHeight: 20
+    width: 8
+    height: 20
 	frontColor: fbbb0b
 	backColor: c87808
     shootEffect: shootBig
@@ -138,16 +138,16 @@ ammoTypes: {
 	status: burning
 	statusDuration: 900
 	knockback: 90
-	bulletSprite: diamond-ore-diamondshell
-	bulletShrink: 0
+	sprite: diamond-ore-diamondshell
+	shrinkY: 0
   }
   cryogem: {
     type: BasicBulletType
     speed: 6
     damage: 150
 	lifetime: 60
-    bulletWidth: 8
-    bulletHeight: 20
+    width: 8
+    height: 20
 	frontColor: 0bbbfb
 	backColor: 48a8f8
     shootEffect: shootBig
@@ -160,16 +160,16 @@ ammoTypes: {
 	status: freezing
 	statusDuration: 900
 	knockback: 90
-	bulletSprite: diamond-ore-diamondbullet
-	bulletShrink: 0
+	sprite: diamond-ore-diamondbullet
+	shrinkY: 0
   }
   phase-fabric: {
     type: BasicBulletType
     speed: 9
     damage: 50
 	lifetime: 40
-    bulletWidth: 13
-    bulletHeight: 20
+    width: 13
+    height: 20
 	frontColor: ffd59e
 	backColor: f19583
     shootEffect: shootBig
@@ -180,8 +180,8 @@ ammoTypes: {
 	reloadMultiplier: 0.75
 	pierce: true
 	knockback: 15
-	bulletSprite: diamond-ore-diamondbullet
-	bulletShrink: 0
+	sprite: diamond-ore-diamondbullet
+	shrinkY: 0
 	fragBullets: 12
 	fragVelocityMin: 1.125
 	fragVelocityMax: 3.375
@@ -190,15 +190,15 @@ ammoTypes: {
       speed: 1
 	  lifetime: 20
       damage: 10
-      bulletWidth: 2
-      bulletHeight: 8
+      width: 2
+      height: 8
 	  despawnEffect: shootSmallSmoke
 	  hitEffect: none
 	  frontColor: ffa044
 	  backColor: ff6614
 	  pierce: false
 	  knockback: 125
-	  bulletSprite: shell
+	  sprite: shell
     }
   }
 }

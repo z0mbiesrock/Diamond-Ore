@@ -1,8 +1,8 @@
 
 const cycloneCryoFrag = extend(BasicBulletType, {});
 cycloneCryoFrag.damage = 8;
-cycloneCryoFrag.bulletWidth = 3;
-cycloneCryoFrag.bulletHeight = 6;
+cycloneCryoFrag.width = 3;
+cycloneCryoFrag.height = 6;
 cycloneCryoFrag.lifetime = 45;
 cycloneCryoFrag.drag = 0.015;
 cycloneCryoFrag.pierce = true;
@@ -27,8 +27,8 @@ spectreCryo.status = StatusEffects.freezing;
 spectreCryo.splashDamage = 20;
 spectreCryo.damage = 30;
 spectreCryo.splashDamageRadius = 16;
-spectreCryo.bulletWidth = 12;
-spectreCryo.bulletHeight = 24;
+spectreCryo.width = 12;
+spectreCryo.height = 24;
 spectreCryo.bulletSprite = "diamond-ore-diamondbullet";
 spectreCryo.frontColor = Color.valueOf("#cceeff");
 spectreCryo.backColor = Color.valueOf("#4499ee");

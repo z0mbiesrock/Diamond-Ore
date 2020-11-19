@@ -43,9 +43,9 @@ sporeBlockDeath.speed = 1.5;
 sporeBlockDeath.damage = 3;
 sporeBlockDeath.splashDamage = 3;
 sporeBlockDeath.splashDamageRadius = 5;
-sporeBlockDeath.bulletWidth = 4;
-sporeBlockDeath.bulletHeight = 5;
-sporeBlockDeath.bulletShrink = 0;
+sporeBlockDeath.width = 4;
+sporeBlockDeath.height = 5;
+sporeBlockDeath.shrinkY = 0;
 sporeBlockDeath.hitShake = 0;
 sporeBlockDeath.lifetime = 80;
 sporeBlockDeath.collidesTiles = true;
@@ -309,7 +309,7 @@ const sporeMutator = extendContent(GenericCrafter, "mutator", {
 		Draw.rect(Core.atlas.find(this.name + "-input" + this.variant), tile.drawx(), tile.drawy(), this.rot1);
 		Draw.alpha(this.tile.items.get(this.outputItem.item) / this.itemCapacity);
 		Draw.rect(Core.atlas.find(this.name + "-output" + this.variant), tile.drawx(), tile.drawy(), this.rot2);
-		Draw.alpha(this.this.liquids.get(this.this.liquids.current()) / this.liquidCapacity);
+		Draw.alpha(this.liquids.get(this.liquids.current()) / this.liquidCapacity);
 		Draw.rect(Core.atlas.find(this.name + "-top"), tile.drawx(), tile.drawy());
 		Draw.reset();
 	},
@@ -336,9 +336,9 @@ sporeVaultDeathSmall.speed = 12;
 sporeVaultDeathSmall.damage = 45;
 sporeVaultDeathSmall.splashDamage = 200;
 sporeVaultDeathSmall.splashDamageRadius = 60;
-sporeVaultDeathSmall.bulletWidth = 4;
-sporeVaultDeathSmall.bulletHeight = 5;
-sporeVaultDeathSmall.bulletShrink = 0;
+sporeVaultDeathSmall.width = 4;
+sporeVaultDeathSmall.height = 5;
+sporeVaultDeathSmall.shrinkY = 0;
 sporeVaultDeathSmall.hitShake = 0;
 sporeVaultDeathSmall.lifetime = 40;
 sporeVaultDeathSmall.collidesTiles = true;
@@ -363,9 +363,9 @@ sporeVaultDeathLarge.speed = 10;
 sporeVaultDeathLarge.damage = 125;
 sporeVaultDeathLarge.splashDamage = 800;
 sporeVaultDeathLarge.splashDamageRadius = 120;
-sporeVaultDeathLarge.bulletWidth = 10;
-sporeVaultDeathLarge.bulletHeight = 15;
-sporeVaultDeathLarge.bulletShrink = 0;
+sporeVaultDeathLarge.width = 10;
+sporeVaultDeathLarge.height = 15;
+sporeVaultDeathLarge.shrinkY = 0;
 sporeVaultDeathLarge.hitShake = 0;
 sporeVaultDeathLarge.lifetime = 50;
 sporeVaultDeathLarge.collidesTiles = true;
@@ -446,7 +446,7 @@ const darkSporePress = extendContent(GenericCrafter, "dark-sporepress", {
 	drawBase(tile){
 		Draw.rect(this.region, tile.drawx(), tile.drawy());
 		Draw.color(this.outputLiquid.liquid.color);
-		Draw.alpha(this.this.liquids.get(this.outputLiquid.liquid) / this.liquidCapacity);
+		Draw.alpha(this.liquids.get(this.outputLiquid.liquid) / this.liquidCapacity);
 		Draw.rect(Core.atlas.find("diamond-ore-dark-sporepress-liquid"), tile.drawx(), tile.drawy());
 		Draw.reset();
 	},

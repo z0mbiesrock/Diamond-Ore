@@ -24,8 +24,8 @@ ammoTypes: {
     speed: 8
     damage: 15
 	lifetime: 32
-    bulletWidth: 3
-    bulletHeight: 6
+    width: 3
+    height: 6
 	frontColor: 8a73c6
 	backColor: c878a8
     shootEffect: shootSmall
@@ -34,8 +34,8 @@ ammoTypes: {
 	despawnEffect: shootSmallSmoke
     ammoMultiplier: 2
 	pierce: false
-	bulletSprite: shell
-	bulletShrink: 0.12
+	sprite: shell
+	shrinkY: 0.12
   }
   silicon: {
     type: BasicBulletType
@@ -43,8 +43,8 @@ ammoTypes: {
     drag: 0.03
     damage: 15
 	lifetime: 38
-    bulletWidth: 3
-    bulletHeight: 6
+    width: 3
+    height: 6
 	frontColor: 888888
 	backColor: bbbbbb
 	homingPower: 0.7
@@ -56,16 +56,16 @@ ammoTypes: {
     ammoMultiplier: 2
 	reloadMultiplier: 1.06
 	pierce: false
-	bulletSprite: shell
-	bulletShrink: 0.12
+	sprite: shell
+	shrinkY: 0.12
   }
   plastanium: {
     type: BasicBulletType
     speed: 8
     damage: 15
 	lifetime: 33
-    bulletWidth: 3
-    bulletHeight: 6
+    width: 3
+    height: 6
 	frontColor: 66ff66
 	backColor: b8ff00
     shootEffect: shootSmall
@@ -75,8 +75,8 @@ ammoTypes: {
     ammoMultiplier: 1
 	reloadMultiplier: 0.6
 	pierce: false
-	bulletSprite: shell
-	bulletShrink: 0.12
+	sprite: shell
+	shrinkY: 0.12
     splashDamage: 36
     splashDamageRadius: 12
   }
@@ -85,8 +85,8 @@ ammoTypes: {
     speed: 8
     damage: 30
 	lifetime: 33
-    bulletWidth: 3
-    bulletHeight: 6
+    width: 3
+    height: 6
 	frontColor: fbbbeb
 	backColor: c878a8
     shootEffect: shootBig
@@ -97,16 +97,16 @@ ammoTypes: {
 	reloadMultiplier: 0.8
 	pierce: false
 	knockback: 20
-	bulletSprite: shell
-	bulletShrink: 0.12
+	sprite: shell
+	shrinkY: 0.12
   }
   ancient-alloy: {
     type: BasicBulletType
     speed: 8
     damage: 30
 	lifetime: 33
-    bulletWidth: 4
-    bulletHeight: 12
+    width: 4
+    height: 12
 	frontColor: f0985d
 	backColor: e2bb7f
     shootEffect: shootBig2
@@ -117,10 +117,10 @@ ammoTypes: {
 	reloadMultiplier: 0.5
 	pierce: false
 	knockback: 20
-	bulletSprite: shell
-	bulletShrink: 0.12
+	sprite: shell
+	shrinkY: 0.12
 	lightningLength: 8
-	lightining: 2
+	lightning: 2
     splashDamage: 48
     splashDamageRadius: 24
   }
@@ -129,8 +129,8 @@ ammoTypes: {
     speed: 10
     damage: 10
 	lifetime: 33
-    bulletWidth: 4
-    bulletHeight: 10
+    width: 4
+    height: 10
 	frontColor: f0ee5d
 	backColor: e2eb7f
     shootEffect: shootBig2
@@ -141,10 +141,10 @@ ammoTypes: {
 	reloadMultiplier: 0.975
 	pierce: false
 	knockback: 20
-	bulletSprite: shell
-	bulletShrink: 0.12
+	sprite: shell
+	shrinkY: 0.12
 	lightningLength: 8
-	lightining: 2
+	lightning: 2
     splashDamage: 24
     splashDamageRadius: 16
   }
@@ -153,8 +153,8 @@ ammoTypes: {
     speed: 10
     damage: 11
 	lifetime: 31
-    bulletWidth: 3
-    bulletHeight: 6
+    width: 3
+    height: 6
 	frontColor: 003d99
 	backColor: 66aaff
     shootEffect: shootBig
@@ -164,16 +164,16 @@ ammoTypes: {
     ammoMultiplier: 2
 	reloadMultiplier: 1.8
 	pierce: true
-	bulletSprite: diamond-ore-diamondbullet
-	bulletShrink: 0.12
+	sprite: diamond-ore-diamondbullet
+	shrinkY: 0.12
   }
   pyratite: {
     type: BasicBulletType
     speed: 6
     damage: 6
 	lifetime: 48
-    bulletWidth: 3
-    bulletHeight: 6
+    width: 3
+    height: 6
 	frontColor: 003d99
 	backColor: 66aaff
     shootEffect: shootBig
@@ -185,16 +185,16 @@ ammoTypes: {
 	pierce: true
 	status: burning
 	statusDuration: 300
-	bulletSprite: diamond-ore-diamondbullet
-	bulletShrink: 0.12
+	sprite: diamond-ore-diamondbullet
+	shrinkY: 0.12
   }
   ancient-scrap: {
     type: BasicBulletType
     speed: 11
     damage: 20
 	lifetime: 30
-    bulletWidth: 2
-    bulletHeight: 9
+    width: 2
+    height: 9
 	inaccuracy: 9
 	frontColor: 69501c
 	backColor: ceb404
@@ -205,8 +205,8 @@ ammoTypes: {
     ammoMultiplier: 2
     reloadMultiplier: 0.7
 	pierce: false
-	bulletSprite: diamond-ore-diamondbullet
-	bulletShrink: 0.5
+	sprite: diamond-ore-diamondbullet
+	shrinkY: 0.5
 	fragBullets: 4
 	knockback: 25
 	fragVelocityMin: 2
@@ -215,8 +215,8 @@ ammoTypes: {
       type: BasicBulletType
       damage: 10
 	  lifetime: 10
-      bulletWidth: 1
-      bulletHeight: 12
+      width: 1
+      height: 12
       collidesTiles: false
 	  frontColor: 69501c
 	  backColor: ce8404
@@ -225,8 +225,8 @@ ammoTypes: {
 	  hitEffect: none
 	  despawnEffect: none
 	  pierce: false
-	  bulletSprite: diamond-ore-diamondshell
-	  bulletShrink: 0.875
+	  sprite: diamond-ore-diamondshell
+	  shrinkY: 0.875
 	  knockback: 60
     }
   }

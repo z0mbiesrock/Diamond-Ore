@@ -21,8 +21,8 @@ shootType: {
   speed: 8
   damage: 25
   lifetime: 28
-  bulletWidth: 3
-  bulletHeight: 6
+  width: 3
+  height: 6
   frontColor: 2a83f6
   backColor: c878a8
   shootEffect: shootSmall
@@ -31,8 +31,8 @@ shootType: {
   despawnEffect: shootSmallSmoke
   knockback: 40
   pierce: false
-  bulletSprite: diamond-ore-diamondbullet
-  bulletShrink: 0.12
+  sprite: diamond-ore-diamondbullet
+  shrinkY: 0.12
 }
 requirements: [
   copper/10

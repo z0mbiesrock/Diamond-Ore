@@ -22,8 +22,8 @@ ammoTypes: {
 	drag: 0.0045
     damage: 25
 	lifetime: 240
-    bulletWidth: 12
-    bulletHeight: 14
+    width: 12
+    height: 14
 	frontColor: 995D9A
 	backColor: 7C4B80
 	trailColor: 6B4474
@@ -31,11 +31,11 @@ ammoTypes: {
     smokeEffect: shootSmallSmoke
 	splashDamage: 75
 	splashDamageRadius: 24
-	bulletShrink: 0
+	shrinkY: 0
 	hitEffect: mineBig
     ammoMultiplier: 4
 	pierce: false
-	bulletSprite: shell
+	sprite: shell
 	homingPower: 0.0002
 	homingRange: 240
 	fragBullets: 16
@@ -43,12 +43,12 @@ ammoTypes: {
 	fragVelocityMax: 0.5
 	fragBullet: {
       type: BasicBulletType
-	  bulletShrink: 0
+	  shrinkY: 0
       speed: 1
 	  lifetime: 18
       damage: 4
-      bulletWidth: 1
-      bulletHeight: 4
+      width: 1
+      height: 4
 	  despawnEffect: none
 	  hitEffect: none
 	  frontColor: 995D9A
@@ -56,7 +56,7 @@ ammoTypes: {
 	  pierce: true
 	  status: corroded
 	  statusDuration: 1200
-	  bulletSprite: diamond-ore-diamondbullet
+	  sprite: diamond-ore-diamondbullet
 	fragBullets: 1
 	fragVelocityMin: 0.4
 	fragVelocityMax: 0.45
@@ -65,9 +65,9 @@ ammoTypes: {
       speed: 1
 	  lifetime: 18
       damage: 4
-      bulletWidth: 1
-	  bulletShrink: 0
-      bulletHeight: 4
+      width: 1
+	  shrinkY: 0
+      height: 4
 	  despawnEffect: none
 	  hitEffect: none
 	  frontColor: 7C4B80
@@ -75,7 +75,7 @@ ammoTypes: {
 	  pierce: true
 	  status: corroded
 	  statusDuration: 1200
-	  bulletSprite: diamond-ore-diamondbullet
+	  sprite: diamond-ore-diamondbullet
 	fragBullets: 1
 	fragVelocityMin: 0.35
 	fragVelocityMax: 0.4
@@ -84,17 +84,17 @@ ammoTypes: {
       speed: 1
 	  lifetime: 18
       damage: 4
-      bulletWidth: 1
-      bulletHeight: 4
+      width: 1
+      height: 4
 	  despawnEffect: none
 	  hitEffect: none
-	  bulletShrink: 0
+	  shrinkY: 0
 	  frontColor: 6B4474
 	  backColor: 6B4474
 	  pierce: true
 	  status: corroded
 	  statusDuration: 1200
-	  bulletSprite: diamond-ore-diamondbullet
+	  sprite: diamond-ore-diamondbullet
 	  }
 	  }
     }

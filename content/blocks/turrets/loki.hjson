@@ -24,20 +24,20 @@ ammoTypes: {
     speed: 10
     damage: 20
 	lifetime: 24
-    bulletWidth: 6
-    bulletHeight: 12
+    width: 6
+    height: 12
 	frontColor: d99d73
 	backColor: eac2a9
     shootEffect: shootSmall
     smokeEffect: none
-	bulletShrink: 0
+	shrinkY: 0
 	hitEffect: hitBulletSmall
 	despawnEffect: shootSmallSmoke
     ammoMultiplier: 4
 	pierce: true
 	knockback: 0.8
 	inaccuracy: 2
-	bulletSprite: diamond-ore-diamondbullet
+	sprite: diamond-ore-diamondbullet
   }
   lead: {
     type: BasicBulletType
@@ -45,18 +45,18 @@ ammoTypes: {
     speed: 6
     damage: 25
 	lifetime: 40
-    bulletWidth: 6
-    bulletHeight: 12
+    width: 6
+    height: 12
 	frontColor: ab99d3
 	backColor: 8c7fa9
     shootEffect: shootBig
     smokeEffect: shootBigSmoke
-	bulletShrink: 0
+	shrinkY: 0
 	hitEffect: hitBulletSmall
 	despawnEffect: shootSmallSmoke
     ammoMultiplier: 4
 	pierce: true
-	bulletSprite: diamond-ore-diamondshell
+	sprite: diamond-ore-diamondshell
   }
   titanium: {
     type: BasicBulletType
@@ -64,20 +64,20 @@ ammoTypes: {
     speed: 8
     damage: 22
 	lifetime: 30
-    bulletWidth: 6
-    bulletHeight: 12
+    width: 6
+    height: 12
 	frontColor: a4b8fa
 	backColor: 919fe7
     shootEffect: shootBig
     smokeEffect: freezing
-	bulletShrink: 0
+	shrinkY: 0
 	hitEffect: hitBulletSmall
 	despawnEffect: shootSmallSmoke
     ammoMultiplier: 4
 	reloadMultiplier: 1.1
 	pierce: true
 	knockback: 2.7
-	bulletSprite: diamond-ore-diamondbullet
+	sprite: diamond-ore-diamondbullet
   }
   phase-fabric: {
     type: BasicBulletType
@@ -85,13 +85,13 @@ ammoTypes: {
     speed: 12
     damage: 22
 	lifetime: 20
-    bulletWidth: 6
-    bulletHeight: 12
+    width: 6
+    height: 12
 	frontColor: ffd59e
 	backColor: f19583
     shootEffect: shootBig
     smokeEffect: shootBig
-	bulletShrink: 0
+	shrinkY: 0
 	hitEffect: hitBulletSmall
 	despawnEffect: shootSmallSmoke
     ammoMultiplier: 8
@@ -99,7 +99,7 @@ ammoTypes: {
 	inaccuracy: 6
 	pierce: true
 	knockback: -0.5
-	bulletSprite: diamond-ore-diamondbullet
+	sprite: diamond-ore-diamondbullet
   }
   pyratite: {
     type: BasicBulletType
@@ -107,13 +107,13 @@ ammoTypes: {
     speed: 10
     damage: 22
 	lifetime: 24
-    bulletWidth: 6
-    bulletHeight: 12
+    width: 6
+    height: 12
 	frontColor: ffaa5f
 	backColor: d37f47
     shootEffect: shootSmallFlame
     smokeEffect: shootPyraFlame
-	bulletShrink: 0
+	shrinkY: 0
 	hitEffect: burning
 	despawnEffect: shootBigSmoke
     ammoMultiplier: 16
@@ -122,7 +122,7 @@ ammoTypes: {
 	pierce: true
 	status: burning
 	statusDuration: 720
-	bulletSprite: diamond-ore-diamondshell
+	sprite: diamond-ore-diamondshell
   }
   blast-compound: {
     type: ArtilleryBulletType
@@ -131,8 +131,8 @@ ammoTypes: {
     speed: 4
     damage: 15
 	lifetime: 60
-    bulletWidth: 5
-    bulletHeight: 20
+    width: 5
+    height: 20
 	frontColor: eebb77
 	backColor: eebb88
     trailEffect: burning
@@ -144,8 +144,8 @@ ammoTypes: {
 	reloadMultiplier: 0.6
 	pierce: true
 	knockback: 15
-	bulletSprite: shell
-	bulletShrink: 0.1
+	sprite: shell
+	shrinkY: 0.1
 	fragBullets: 4
 	fragVelocityMin: 0.25
 	fragVelocityMax: 1.25
@@ -154,8 +154,8 @@ ammoTypes: {
       speed: 1
 	  lifetime: 40
       damage: 5
-      bulletWidth: 2
-      bulletHeight: 4
+      width: 2
+      height: 4
       trailEffect: melting
 	  despawnEffect: hitBulletBig
 	  hitEffect: hitBulletBig
@@ -163,7 +163,7 @@ ammoTypes: {
 	  backColor: ff6614
 	  pierce: true
 	  knockback: 10
-	  bulletSprite: diamond-ore-diamondshell
+	  sprite: diamond-ore-diamondshell
 	  homingPower: 0.03
 	  homingRange: 60
 	  splashDamage: 15
@@ -176,13 +176,13 @@ ammoTypes: {
     speed: 10
     damage: 22
 	lifetime: 24
-    bulletWidth: 6
-    bulletHeight: 12
+    width: 6
+    height: 12
 	frontColor: 5faaff
 	backColor: 477fd3
     shootEffect: shootBig
     smokeEffect: shootBig
-	bulletShrink: 0
+	shrinkY: 0
 	hitEffect: freezing
 	despawnEffect: shootBigSmoke
     ammoMultiplier: 16
@@ -192,7 +192,7 @@ ammoTypes: {
 	status: freezing
 	statusDuration: 720
 	knockback: 0.85
-	bulletSprite: diamond-ore-diamondbullet
+	sprite: diamond-ore-diamondbullet
   }
   thorium: {
     type: BasicBulletType
@@ -200,13 +200,13 @@ ammoTypes: {
     speed: 15
     damage: 40
 	lifetime: 16
-    bulletWidth: 8
-    bulletHeight: 15
+    width: 8
+    height: 15
 	frontColor: f9a3c7
 	backColor: cb8ebf
     shootEffect: lancerLaserShoot
     smokeEffect: shootBigSmoke
-	bulletShrink: 0
+	shrinkY: 0
 	hitEffect: melting
 	despawnEffect: shootBigSmoke
     ammoMultiplier: 16
@@ -216,7 +216,7 @@ ammoTypes: {
 	status: corroded
 	statusDuration: 720
 	knockback: 2.55
-	bulletSprite: diamond-ore-diamondshell
+	sprite: diamond-ore-diamondshell
   }
 }
 requirements: [
