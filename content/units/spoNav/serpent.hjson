@@ -20,35 +20,6 @@ trailY: -5
 
 weapons:[
   {
-    name: spiroct-weapon
-    x: 3
-    y: -4.2
-    shootY: 4
-    recoil: 3
-    reload: 59
-	shots: 5
-	inaccuracy: 15
-	velocityRnd: 0.25
-	rotateSpeed: 10
-	occlusion: 6
-    rotate: true
-    soundPitchMin: 1.2
-    soundPitchMax: 1.4
-    shootSound: shotgun
-    bullet:{
-      type: BasicBulletType
-      //sapStrength: 0.5
-	  frontColor: a59bc1
-	  backColor: 837e91
-      width: 3
-      height: 7
-      speed: 10
-      sprite: diamond-ore-diamondbullet
-      lifetime: 20
-	  damage: 11
-    }
-  },
-  {
     name: serpent-arc
     x: 5
     y: 2
@@ -72,14 +43,62 @@ weapons:[
       lifetime: 1
 	  range: 184
 	  damage: 11
-	  lightningType:{
-		lifetime: 10
-		despawnEffect: none
-		hitEffect: none
-		status: sapped
-		statusDuration: 20
-		hittable: false
-	  }
+    }
+  },
+  {
+    name: serpent-arc
+    x: 0
+    y: 12
+    shootY: 4
+    recoil: 1
+    reload: 19.02
+	inaccuracy: 5
+	occlusion: 5
+	shots: 2
+    rotate: true
+    soundPitchMin: 1.7
+    soundPitchMax: 2.4
+    shootSound: spark
+    shootEffect: sparkShoot
+    bullet:{
+      type: LightningBulletType
+	  lightningColor: A387EA
+	  hitColor: 8A73C6
+      lightningLength: 13
+      lightningLengthRand: 13
+      lifetime: 1
+	  range: 184
+	  damage: 11
+    }
+  },
+  {
+    name: spiroct-weapon
+    x: 3
+    y: -4.2
+    shootY: 4
+    recoil: 3
+    reload: 59
+	shots: 8
+	inaccuracy: 15
+	velocityRnd: 0.25
+	rotateSpeed: 10
+	occlusion: 6
+    rotate: true
+    top: true
+    soundPitchMin: 1.2
+    soundPitchMax: 1.4
+    shootSound: shotgun
+    bullet:{
+      type: BasicBulletType
+      //sapStrength: 0.5
+	  frontColor: a59bc1
+	  backColor: 837e91
+      width: 3
+      height: 7
+      speed: 10
+      sprite: diamond-ore-diamondbullet
+      lifetime: 30
+	  damage: 11
     }
   }
 ]

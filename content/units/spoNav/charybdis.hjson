@@ -85,7 +85,7 @@ weapons:[
   {
     name: charybdis-missile
     x: -6
-    y: 4.2
+    y: 14.2
     shootY: 4
     recoil: 3
     reload: 59
@@ -234,8 +234,8 @@ weapons:[
   },
   {
     name: charybdis-missile
-    x: -4
-    y: -9.2
+    x: 0
+    y: 9.2
     shootY: 4
     recoil: 3
     reload: 59.5
@@ -247,6 +247,7 @@ weapons:[
 	rotateSpeed: 10
 	occlusion: 6
     rotate: true
+    mirror: false
     soundPitchMin: 0.72
     soundPitchMax: 0.94
     shootSound: missile

@@ -20,38 +20,9 @@ trailY: -15
 
 weapons:[
   {
-    name: leviathan-sapper
-    x: 0
-    y: 11
-    shootY: 4
-    recoil: -1
-    reload: 90
-    rotate: true
-    mirror: false
-	rotateSpeed: 3.25
-	//rotateLimit: 120 // TODO Make a PR to limit weapon rotations
-    soundPitchMin: 1.2
-    soundPitchMax: 1.4
-    shootSound: sap
-    bullet:{
-      type: SapBulletType
-      sapStrength: 1.5
-	  color: 7955bf
-	  backColor: 6449bf
-	  hitColor: bf92f9
-	  statusDuration: 600
-      width: 6
-      length: 400
-      lifetime: 15
-	  damage: 400
-	  knockback: -12
-	  absorbable: false
-    }
-  },
-  {
     name: large-purple-mount
     x: 5
-    y: 6
+    y: -2
     shootY: 4
     recoil: 0
     reload: 36
@@ -76,7 +47,7 @@ weapons:[
   {
     name: large-purple-mount
     x: -9.5
-    y: 3
+    y: -3
     shootY: 4
     recoil: 0
     reload: 36
@@ -101,7 +72,7 @@ weapons:[
   {
     name: large-purple-mount
     x: -5.5
-    y: -4.3
+    y: -14.3
     shootY: 4
     recoil: 0
     reload: 36
@@ -151,6 +122,35 @@ weapons:[
 	  serrationSpaceOffset: 15
 	  serrationFadeOffset: 0.1
 	  hitEffect: mine
+    }
+  },
+  {
+    name: leviathan-sapper
+    x: 0
+    y: 15
+    shootY: 4
+    recoil: -1
+    reload: 90
+    rotate: true
+    mirror: false
+	rotateSpeed: 3.25
+	//rotateLimit: 120 // TODO Make a PR to limit weapon rotations
+    soundPitchMin: 1.2
+    soundPitchMax: 1.4
+    shootSound: sap
+    bullet:{
+      type: SapBulletType
+      sapStrength: 1.5
+	  color: 7955bf
+	  backColor: 6449bf
+	  hitColor: bf92f9
+	  statusDuration: 600
+      width: 6
+      length: 400
+      lifetime: 15
+	  damage: 400
+	  knockback: -12
+	  absorbable: false
     }
   }
 ]
