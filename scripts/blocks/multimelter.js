@@ -22,5 +22,3 @@ multiMelter.buildType = () => extendContent(GenericCrafter.GenericCrafterBuild, 
 		Draw.reset()
 	},	
 });
-multiMelter.timerUse = multiMelter.timers++;
-multiMelter.boostTime = 60;
