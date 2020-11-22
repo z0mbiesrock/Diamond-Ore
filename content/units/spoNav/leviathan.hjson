@@ -36,7 +36,7 @@ weapons:[
     bullet:{
       type: SapBulletType
       sapStrength: 1.5
-	  frontColor: 7955bf
+	  7955bf: 7955bf
 	  backColor: 6449bf
 	  hitColor: bf92f9
 	  statusDuration: 600
@@ -63,6 +63,8 @@ weapons:[
     bullet:{
       type: SapBulletType
       sapStrength: 1.05
+	  color: bf92f9
+	  hitColor: bf92f9
       width: 2.5
       length: 200
       lifetime: 20
@@ -86,6 +88,8 @@ weapons:[
     bullet:{
       type: SapBulletType
       sapStrength: 1.05
+	  color: bf92f9
+	  hitColor: bf92f9
       width: 2.5
       length: 200
       lifetime: 20
@@ -109,6 +113,8 @@ weapons:[
     bullet:{
       type: SapBulletType
       sapStrength: 1.05
+	  color: bf92f9
+	  hitColor: bf92f9
       width: 2.5
       length: 200
       lifetime: 20

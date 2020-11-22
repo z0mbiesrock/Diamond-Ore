@@ -30,6 +30,8 @@ weapons:[
     shootSound: sap
     bullet:{
       type: SapBulletType
+	  color: 6449bf
+	  hitColor: 7955bf
       sapStrength: 0.5
       width: 0.7
       length: 100
@@ -52,6 +54,8 @@ weapons:[
     shootSound: sap
     bullet:{
       type: SapBulletType
+	  color: 6449bf
+	  hitColor: 7955bf
       sapStrength: 0.5
       width: 0.7
       length: 100

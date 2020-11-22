@@ -1,12 +1,12 @@
 const waterDecorruptor = extendContent(AttributeSmelter, "water-decorruptor", {
-	setBars(){
+	/* setBars(){
 		this.super$setBars();		
 		this.bars.add("Water", entity => new Bar(
 			() => this.outputLiquid.localizedName,
 			() => this.outputLiquid.barColor(),
 			() => this.liquids.get(this.outputLiquid) / this.liquidCapacity)
 		);
-	},/* 
+	}, *//* 
 	drawBase: function(tile){
         this.super$drawBase(tile);
         Draw.color(this.outputLiquid.liquid.color);
