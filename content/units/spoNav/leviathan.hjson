@@ -5,6 +5,8 @@ speed: 0.91
 drag: 0.1095
 accel: 0.064
 rotateSpeed: 2.425
+mineSpeed: 5
+mineTier: 4
 health: 16400
 armor: 30
 range: 600

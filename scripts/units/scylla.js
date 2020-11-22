@@ -10,4 +10,4 @@ SpoNavT3.constructor = () => extend(UnitWaterMove, {});
 SpoNavT3.ammoType = AmmoTypes.powerLow;
 
 var upgrade = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-serpent"), Vars.content.getByName(ContentType.unit, "diamond-ore-scylla")]);
-Blocks.additiveReconstructor.upgrades.add(upgrade.toArray(UnitType));
+Blocks.multiplicativeReconstructor.upgrades.add(upgrade.toArray(UnitType));
