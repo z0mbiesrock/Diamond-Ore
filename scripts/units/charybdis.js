@@ -2,7 +2,8 @@ const SpoNavT4 = extendContent(UnitType, "charybdis", {
 });
 SpoNavT4.constructor = () => extend(UnitWaterMove, {
 	update(){
-			this.heal(Time.delta() * 0.8);
+		this.super$update();
+		this.heal(0.8);
 	},
 });
 //SpoNavT4.abilities.add(new StatusFieldAbility(StatusEffects.overclock, 60 * 6, 60 * 9, 64));

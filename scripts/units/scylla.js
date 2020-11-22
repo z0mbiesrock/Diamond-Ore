@@ -2,7 +2,8 @@ const SpoNavT3 = extendContent(UnitType, "scylla", {
 });
 SpoNavT3.constructor = () => extend(UnitWaterMove, {
 	update(){
-			this.heal(Time.delta() * 0.7);
+		this.super$update();
+		this.heal(0.7);
 	},	
 });
 SpoNavT3.ammoType = AmmoTypes.powerLow;

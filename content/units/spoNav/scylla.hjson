@@ -3,7 +3,7 @@ description: Fires large sapping artillery shells and sapping lasers at nearby e
 commandLimit: 8
 speed: 0.8
 drag: 0.13
-accel: 0.13
+accel: 0.2
 rotateSpeed: 3.25
 //mineSpeed: 5
 //mineTier: 2
@@ -76,7 +76,7 @@ weapons:[
   {
     name: scylla-laser
     x: 0
-    y: 4
+    y: 11
     shootY: 4
     recoil: 0
     reload: 40.137

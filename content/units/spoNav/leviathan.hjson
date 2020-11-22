@@ -3,7 +3,7 @@ description: Fires a barrage of massive sapping laser beams at nearby enemies, r
 commandLimit: 8
 speed: 0.91
 drag: 0.1095
-accel: 0.064
+accel: 0.1564
 rotateSpeed: 2.425
 mineSpeed: 5
 mineTier: 4

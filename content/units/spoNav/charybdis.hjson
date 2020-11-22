@@ -2,7 +2,7 @@ localizedName: Charybdis
 description: Fires a barrage of charged missiles and flak at all nearby enemies. Regenerates health.
 commandLimit: 8
 speed: 0.7
-drag: 0.16
+drag: 0.09
 accel: 0.13
 rotateSpeed: 7.25
 mineSpeed: 5
