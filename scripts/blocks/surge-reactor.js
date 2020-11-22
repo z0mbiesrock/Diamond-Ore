@@ -114,9 +114,9 @@ const SurgeReactor = extendContent(NuclearReactor, "surge-reactor", {
     //OVERRIDE
 	drawBase: function(tile){
         this.super$drawBase(tile);
-        Draw.color();
+        /* Draw.color(); Anuke make "items.total()" private so now this is dead
 		Draw.alpha(this.items.total() / this.itemCapacity);
-		Draw.rect(Core.atlas.find(this.name + "-top"), tile.drawx(), tile.drawy());
+		Draw.rect(Core.atlas.find(this.name + "-top"), tile.drawx(), tile.drawy()); */
         Draw.reset();
 	},
 	
