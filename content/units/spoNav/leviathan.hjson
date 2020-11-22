@@ -36,7 +36,7 @@ weapons:[
     bullet:{
       type: SapBulletType
       sapStrength: 1.5
-	  7955bf: 7955bf
+	  color: 7955bf
 	  backColor: 6449bf
 	  hitColor: bf92f9
 	  statusDuration: 600
