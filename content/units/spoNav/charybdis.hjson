@@ -26,8 +26,8 @@ weapons:[
     shootY: 4
     recoil: 3
     reload: 80
-	shots: 7
-	shotDelay: 6
+	shots: 2
+	shotDelay: 3
 	inaccuracy: 15
 	rotateSpeed: 25
 	occlusion: 7
@@ -84,8 +84,8 @@ weapons:[
   },
   {
     name: charybdis-missile
-    x: -6
-    y: 14.2
+    x: -5
+    y: 18.2
     shootY: 4
     recoil: 3
     reload: 59
@@ -94,7 +94,7 @@ weapons:[
 	spacing: 2
 	inaccuracy: 2
 	velocityRnd: 0.25
-	rotateSpeed: 10
+	rotateSpeed: 4
 	occlusion: 6
     rotate: true
     soundPitchMin: 0.72
@@ -134,7 +134,7 @@ weapons:[
   },
   {
     name: charybdis-missile
-    x: 9
+    x: 5
     y: 0.2
     shootY: 4
     recoil: 3
@@ -144,7 +144,7 @@ weapons:[
 	spacing: 2
 	inaccuracy: 2
 	velocityRnd: 0.25
-	rotateSpeed: 10
+	rotateSpeed: 4
 	occlusion: 6
     rotate: true
     soundPitchMin: 0.72
@@ -194,7 +194,7 @@ weapons:[
 	spacing: 2
 	inaccuracy: 2
 	velocityRnd: 0.25
-	rotateSpeed: 10
+	rotateSpeed: 4
 	occlusion: 6
     rotate: true
     soundPitchMin: 0.72
@@ -244,7 +244,7 @@ weapons:[
 	spacing: 2
 	inaccuracy: 2
 	velocityRnd: 0.25
-	rotateSpeed: 10
+	rotateSpeed: 4
 	occlusion: 6
     rotate: true
     mirror: false

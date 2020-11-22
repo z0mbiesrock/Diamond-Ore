@@ -21,11 +21,11 @@ trailY: -15
 weapons:[
   {
     name: large-purple-mount
-    x: 5
-    y: -2
+    x: 17
+    y: 4
     shootY: 4
     recoil: 0
-    reload: 36
+    reload: 36.036
     rotate: true
 	rotateSpeed: 14
     soundPitchMin: 1.2
@@ -37,7 +37,7 @@ weapons:[
 	  color: bf92f9
 	  hitColor: bf92f9
       width: 2.5
-      length: 200
+      length: 400
       lifetime: 20
 	  damage: 75
 	  knockback: -6
@@ -46,8 +46,8 @@ weapons:[
   },
   {
     name: large-purple-mount
-    x: -9.5
-    y: -3
+    x: -17
+    y: -8
     shootY: 4
     recoil: 0
     reload: 36
@@ -62,7 +62,7 @@ weapons:[
 	  color: bf92f9
 	  hitColor: bf92f9
       width: 2.5
-      length: 200
+      length: 400
       lifetime: 20
 	  damage: 75
 	  knockback: -6
@@ -71,11 +71,11 @@ weapons:[
   },
   {
     name: large-purple-mount
-    x: -5.5
-    y: -14.3
+    x: 17
+    y: 14.3
     shootY: 4
     recoil: 0
-    reload: 36
+    reload: 36.01
     rotate: true
 	rotateSpeed: 14
     soundPitchMin: 1.2
@@ -87,7 +87,7 @@ weapons:[
 	  color: bf92f9
 	  hitColor: bf92f9
       width: 2.5
-      length: 200
+      length: 400
       lifetime: 20
 	  damage: 75
 	  knockback: -6
@@ -96,13 +96,15 @@ weapons:[
   },
   {
     name: leviathan-shrapnel
-    x: -5
-    y: 7
+    x: 0
+    y: 5
     shootY: 4
     recoil: 0
     reload: 10
+	shots: 3
+	inaccuracy: 15
     rotate: true
-    alternate: false
+    alternate: true
     soundPitchMin: 2.5
     soundPitchMax: 3.8
     shootSound: sap
@@ -112,32 +114,33 @@ weapons:[
       fromColor: bf92f9
       hitColor: bf92f9
       toColor: 6449bf
-      length: 120
+      length: 200
 	  width: 8
 	  damage: 25
 	  knockback: -2
-	  serrations: 12
+	  serrations: 20
 	  serrationWidth: 5
 	  serrationSpacing: 10
-	  serrationSpaceOffset: 15
-	  serrationFadeOffset: 0.1
+	  serrationSpaceOffset: 6
+	  serrationFadeOffset: 0.8
 	  hitEffect: mine
+	  hitLarge: true
     }
   },
   {
     name: leviathan-sapper
     x: 0
-    y: 15
+    y: 29
     shootY: 4
-    recoil: -1
+    recoil: 5
     reload: 90
     rotate: true
     mirror: false
-	rotateSpeed: 3.25
+	rotateSpeed: 0.85
 	//rotateLimit: 120 // TODO Make a PR to limit weapon rotations
-    soundPitchMin: 1.2
-    soundPitchMax: 1.4
-    shootSound: sap
+    soundPitchMin: 2.5
+    soundPitchMax: 2.5
+    shootSound: laserblast
     bullet:{
       type: SapBulletType
       sapStrength: 1.5
@@ -146,10 +149,12 @@ weapons:[
 	  hitColor: bf92f9
 	  statusDuration: 600
       width: 6
-      length: 400
+      length: 600
       lifetime: 15
 	  damage: 400
 	  knockback: -12
+	  pierce: true
+	  pierceCap: 3
 	  absorbable: false
     }
   }

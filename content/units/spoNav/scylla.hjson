@@ -21,8 +21,8 @@ trailY: -5
 weapons:[
   {
     name: scylla-laser
-    x: -5
-    y: 4
+    x: -8
+    y: 2
     shootY: 4
     recoil: 0
     reload: 40
@@ -48,8 +48,8 @@ weapons:[
   },
   {
     name: scylla-laser
-    x: 5
-    y: 4
+    x: 8
+    y: 2
     shootY: 4
     recoil: 0
     reload: 40.01
@@ -88,6 +88,8 @@ weapons:[
     bullet:{
       type: SapBulletType
       sapStrength: 0.75
+	  color: bf92f9
+	  hitColor: bf92f9
       width: 1.5
       length: 200
       lifetime: 25
@@ -98,8 +100,8 @@ weapons:[
   },
   {
     name: scylla-artillery
-    x: 3
-    y: -4.2
+    x: 0
+    y: -7.2
     shootY: 4
     recoil: 3
     reload: 80
@@ -121,11 +123,11 @@ weapons:[
 	  backColor: be4eff
 	  trailColor: be4eff
 	  lightColor: be4eff
-      width: 3
-      height: 7
+      width: 12
+      height: 12
       speed: 10
       sprite: diamond-ore-diamondshell
-      lifetime: 20
+      lifetime: 40
 	  damage: 20
 	  splashDamage: 120
 	  splashDamageRadius: 120
@@ -138,6 +140,7 @@ weapons:[
 	  fragBullet:{
         type: SapBulletType
         sapStrength: 0.5
+		color: be4eff
         width: 0.7
         length: 80
         //lengthRand: 40
