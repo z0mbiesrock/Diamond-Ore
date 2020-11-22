@@ -2,7 +2,7 @@ type: GenericSmelter
 name: Heavy Ancient Forge
 description: "A massive and extremely powerful forge, designed to synthesize [#e5b85e]Ancient Alloy[] much more easily."
 itemCapacity: 200
-health: 1600
+health: 10800
 size: 6
 hasPower: true
 hasItems: true

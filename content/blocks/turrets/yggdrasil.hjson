@@ -13,6 +13,7 @@ rotatespeed: 1
 cooldown: 0.003333
 shootSound: yggdrasilfire
 shootCone: 2
+researchCostMultiplier: 3.4
 layer: power
 outlineIcon: false
 expanded: true

@@ -6,6 +6,7 @@ maxNodes: 3
 size: 3
 health: 2160
 insulated: true
+absorbLasers: true
 requirements: [
   copper/45
   metaglass/35

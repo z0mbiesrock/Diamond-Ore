@@ -1,11 +1,13 @@
 name: Gigantic Ancient Metal Wall
 description: "Made of [#e5b85e]a mysterious alloy[], this large wall can endure massive amounts of punishment. Spans a large area."
-type: SurgeWall
+type: Wall
 health: 64000
 size: 4
 lightningChance: 0.15
 lightningDamage: 45
 lightningLength: 70
+lightningColor: DECF5B
+absorbLasers: true
 buildCostMultiplier: 0.4
 requirements: [
   ancient-alloy/160

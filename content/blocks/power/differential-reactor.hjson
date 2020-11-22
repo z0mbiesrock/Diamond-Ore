@@ -5,6 +5,7 @@ details: "I was a wimp before Anchor Arms! Now I'm a jerk, and eveybody loves me
 itemCapacity: 30
 hasLiquids: false
 insulated: true
+absorbLasers: true
 health: 9000
 baseExplosiveness: 9000
 size: 6

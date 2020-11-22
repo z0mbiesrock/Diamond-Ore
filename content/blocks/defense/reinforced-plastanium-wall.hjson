@@ -3,6 +3,7 @@ description: "A special type of wall that absorbs electric arcs and blocks autom
 type: Wall
 health: 10260
 insulated: true
+absorbLasers: true
 size: 3
 buildCostMultiplier: 6.5
 requirements: [
