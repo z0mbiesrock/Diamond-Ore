@@ -5,7 +5,7 @@ dragMultiplier: 2.5
 speedMultiplier: 0.125
 status: corroded
 statusDuration: 300
-walkEffect: melting
+walkEffect: sapped
 drownUpdateEffect: melting
 cacheLayer: water
 isLiquid: true

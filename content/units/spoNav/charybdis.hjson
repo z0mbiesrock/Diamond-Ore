@@ -1,0 +1,289 @@
+localizedName: Charybdis
+description: Fires a barrage of charged missiles and flak at all nearby enemies. Regenerates health.
+commandLimit: 8
+speed: 0.7
+drag: 0.16
+accel: 0.13
+rotateSpeed: 7.25
+mineSpeed: 5
+mineTier: 3
+health: 3200
+armor: 8
+range: 280
+itemCapacity: 150
+hitSize: 16
+rotateShooting: false
+immunities: [wet, sapped, sporeSlowed, corroded]
+trailLength: 25
+trailX: 0
+trailY: -8
+
+weapons:[
+  {
+    name: charybdis-flak
+    x: 7
+    y: -9
+    shootY: 4
+    recoil: 3
+    reload: 80
+	shots: 7
+	shotDelay: 6
+	inaccuracy: 15
+	rotateSpeed: 25
+	occlusion: 7
+    rotate: true
+    soundPitchMin: 1.2
+    soundPitchMax: 1.4
+    shootSound: sap
+    bullet:{
+      type: FlakBulletType
+      //sapStrength: 0.5
+      shootEffect: shootBig2
+	  frontColor: a59bc1
+	  backColor: 837e91
+      width: 12
+      height: 11
+	  shrinkX: 0
+	  shrinkY: 0
+      speed: 14
+      sprite: shell
+      lifetime: 25
+	  damage: 216
+	  explodeRange: 52
+      fragBullets: 18
+	  fragCone: 115
+	  fragVelocityMin: 0.9
+	  fragLifeMin: 0.5
+	  fragVelocityMax: 3.75
+	  fragLifeMax: 1.75
+	  reflectable: false
+	  hitColor: d283ff
+	  lightColor: d283ff
+	  lightningColor: bc7bfd
+	  lightningLength: 12
+	  lightningLengthRand: 6
+	  lightning: 6
+	  lightningCone: 88
+	  hitEffect: falkExplosionBig
+	  despawnEffect: falkExplosionBig
+	  fragBullet:{
+        type: BasicBulletType
+        //sapStrength: 0.5
+	    frontColor: a59bc1
+	    backColor: 837e91
+        width: 3
+        height: 7
+        speed: 10
+        sprite: diamond-ore-diamondbullet
+        lifetime: 30
+	    damage: 12
+		tileDamageMultiplier: 0.16666666666
+		reflectable: false
+      }
+    }
+  },
+  {
+    name: charybdis-missile
+    x: -6
+    y: 4.2
+    shootY: 4
+    recoil: 3
+    reload: 59
+	shots: 3
+	shotDelay: 6
+	spacing: 2
+	inaccuracy: 2
+	velocityRnd: 0.25
+	rotateSpeed: 10
+	occlusion: 6
+    rotate: true
+    soundPitchMin: 0.72
+    soundPitchMax: 0.94
+    shootSound: missile
+    bullet:{
+      type: MissileBulletType
+      //sapStrength: 0.5
+	  frontColor: e5fbc1
+	  backColor: c37eff
+      width: 6
+      height: 9
+	  shrinkX: 0
+	  shrinkY: 0
+      speed: 8
+      weaveScale: 2
+      weaveMag: 3
+	  trail: d283ff
+	  hitColor: d283ff
+	  lightColor: d283ff
+	  lightningColor: bc7bfd
+	  lightningLength: 6
+	  lightningLengthRand: 6
+	  lightning: 6
+	  homingPower: 0.066
+	  homingRange: 48
+	  homingDelay: 24
+	  hitEffect: falkExplosion
+	  despawnEffect: mine
+      sprite: diamond-ore-diamondconcus
+      lifetime: 70
+	  damage: 11
+	  reflectable: false
+	  splashDamage: 36
+	  splashDamageRadius: 36
+    }
+  },
+  {
+    name: charybdis-missile
+    x: 9
+    y: 0.2
+    shootY: 4
+    recoil: 3
+    reload: 61.03
+	shots: 3
+	shotDelay: 6
+	spacing: 2
+	inaccuracy: 2
+	velocityRnd: 0.25
+	rotateSpeed: 10
+	occlusion: 6
+    rotate: true
+    soundPitchMin: 0.72
+    soundPitchMax: 0.94
+    shootSound: missile
+    bullet:{
+      type: MissileBulletType
+      //sapStrength: 0.5
+	  frontColor: e5fbc1
+	  backColor: c37eff
+      width: 6
+      height: 9
+	  shrinkX: 0
+	  shrinkY: 0
+      speed: 8
+      weaveScale: 3
+      weaveMag: 2
+	  trail: d283ff
+	  hitColor: d283ff
+	  lightColor: d283ff
+	  lightningColor: bc7bfd
+	  lightningLength: 6
+	  lightningLengthRand: 6
+	  lightning: 6
+	  homingPower: 0.066
+	  homingRange: 48
+	  homingDelay: 24
+	  hitEffect: falkExplosion
+	  despawnEffect: mine
+      sprite: diamond-ore-diamondconcus
+      lifetime: 70
+	  damage: 11
+	  reflectable: false
+	  splashDamage: 36
+	  splashDamageRadius: 36
+    }
+  },
+  {
+    name: charybdis-missile
+    x: -11
+    y: 9.2
+    shootY: 4
+    recoil: 3
+    reload: 58.961
+	shots: 3
+	shotDelay: 6
+	spacing: 2
+	inaccuracy: 2
+	velocityRnd: 0.25
+	rotateSpeed: 10
+	occlusion: 6
+    rotate: true
+    soundPitchMin: 0.72
+    soundPitchMax: 0.94
+    shootSound: missile
+    bullet:{
+      type: MissileBulletType
+      //sapStrength: 0.5
+	  frontColor: e5fbc1
+	  backColor: c37eff
+      width: 6
+      height: 9
+	  shrinkX: 0
+	  shrinkY: 0
+      speed: 8
+      weaveScale: 3
+      weaveMag: 2
+	  trail: d283ff
+	  hitColor: d283ff
+	  lightColor: d283ff
+	  lightningColor: bc7bfd
+	  lightningLength: 6
+	  lightningLengthRand: 6
+	  lightning: 6
+	  homingPower: 0.066
+	  homingRange: 48
+	  homingDelay: 24
+	  hitEffect: falkExplosion
+	  despawnEffect: mine
+      sprite: diamond-ore-diamondconcus
+      lifetime: 70
+	  damage: 11
+	  reflectable: false
+	  splashDamage: 36
+	  splashDamageRadius: 36
+    }
+  },
+  {
+    name: charybdis-missile
+    x: -4
+    y: -9.2
+    shootY: 4
+    recoil: 3
+    reload: 59.5
+	shots: 3
+	shotDelay: 6
+	spacing: 2
+	inaccuracy: 2
+	velocityRnd: 0.25
+	rotateSpeed: 10
+	occlusion: 6
+    rotate: true
+    soundPitchMin: 0.72
+    soundPitchMax: 0.94
+    shootSound: missile
+    bullet:{
+      type: MissileBulletType
+      //sapStrength: 0.5
+	  frontColor: e5fbc1
+	  backColor: c37eff
+      width: 6
+      height: 9
+	  shrinkX: 0
+	  shrinkY: 0
+      speed: 8
+      weaveScale: 2
+      weaveMag: 3
+	  trail: d283ff
+	  hitColor: d283ff
+	  lightColor: d283ff
+	  lightningColor: bc7bfd
+	  lightningLength: 6
+	  lightningLengthRand: 6
+	  lightning: 6
+	  homingPower: 0.066
+	  homingRange: 48
+	  homingDelay: 24
+	  hitEffect: falkExplosion
+	  despawnEffect: mine
+      sprite: diamond-ore-diamondconcus
+      lifetime: 70
+	  damage: 11
+	  reflectable: false
+	  splashDamage: 36
+	  splashDamageRadius: 36
+    }
+  }
+]
+
+research: {
+  parent: siren
+}

@@ -1,0 +1,87 @@
+localizedName: Serpent
+description: Fires fast spreads of bullets and arcs of electricity at all nearby enemies. Fast turning.
+commandLimit: 8
+speed: 1.0
+drag: 0.16
+accel: 0.33
+rotateSpeed: 7.25
+//mineSpeed: 5
+//mineTier: 2
+health: 400
+armor: 3
+range: 280
+itemCapacity: 50
+hitSize: 11
+rotateShooting: false
+immunities: [wet, sapped, sporeSlowed, corroded]
+trailLength: 25
+trailX: 0
+trailY: -5
+
+weapons:[
+  {
+    name: spiroct-weapon
+    x: 3
+    y: -4.2
+    shootY: 4
+    recoil: 3
+    reload: 59
+	shots: 5
+	inaccuracy: 15
+	velocityRnd: 0.25
+	rotateSpeed: 10
+	occlusion: 6
+    rotate: true
+    soundPitchMin: 1.2
+    soundPitchMax: 1.4
+    shootSound: shotgun
+    bullet:{
+      type: BasicBulletType
+      //sapStrength: 0.5
+	  frontColor: a59bc1
+	  backColor: 837e91
+      width: 3
+      height: 7
+      speed: 10
+      sprite: diamond-ore-diamondbullet
+      lifetime: 20
+	  damage: 11
+    }
+  },
+  {
+    name: serpent-arc
+    x: 5
+    y: 2
+    shootY: 4
+    recoil: 1
+    reload: 19
+	inaccuracy: 5
+	occlusion: 5
+	shots: 2
+    rotate: true
+    soundPitchMin: 1.7
+    soundPitchMax: 2.4
+    shootSound: spark
+    shootEffect: sparkShoot
+    bullet:{
+      type: LightningBulletType
+	  lightningColor: A387EA
+	  hitColor: 8A73C6
+      lightningLength: 13
+      lightningLengthRand: 13
+      lifetime: 1
+	  range: 184
+	  damage: 11
+	  lightningType:{
+		lifetime: 10
+		status: sapped
+		statusDuration: 20
+		hittable: false
+	  }
+    }
+  }
+]
+
+research: {
+  parent: siren
+}

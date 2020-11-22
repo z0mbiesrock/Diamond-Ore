@@ -1,0 +1,68 @@
+localizedName: Siren
+description: Fires sapping laser beams at nearby enemies, repairing itself in the process. Fast turning.
+commandLimit: 8
+speed: 1.1
+drag: 0.13
+accel: 0.4
+rotateSpeed: 8.5
+health: 200
+armor: 1
+range: 100
+itemCapacity: 30
+hitSize: 9
+rotateShooting: false
+immunities: [wet, sapped, sporeSlowed, corroded]
+trailLength: 20
+trailX: 0
+trailY: -5
+
+weapons:[
+  {
+    name: spiroct-weapon
+    x: 5
+    y: 4
+    shootY: 4
+    recoil: 0
+    reload: 20
+    rotate: true
+    soundPitchMin: 1.2
+    soundPitchMax: 1.4
+    shootSound: sap
+    bullet:{
+      type: SapBulletType
+      sapStrength: 0.5
+      width: 0.7
+      length: 100
+      lifetime: 15
+	  damage: 13
+	  knockback: -2
+	  hittable: false
+    }
+  },
+  {
+    name: spiroct-weapon
+    x: -5
+    y: 4
+    shootY: 4
+    recoil: 0
+    reload: 19
+    rotate: true
+    soundPitchMin: 1.2
+    soundPitchMax: 1.4
+    shootSound: sap
+    bullet:{
+      type: SapBulletType
+      sapStrength: 0.5
+      width: 0.7
+      length: 100
+      lifetime: 15
+	  damage: 13
+	  knockback: -2
+	  hittable: false
+    }
+  }
+]
+
+research: {
+  parent: risso
+}

@@ -1,0 +1,147 @@
+localizedName: Scylla
+description: Fires large sapping artillery shells and sapping lasers at nearby enemies. Regenerates health.
+commandLimit: 8
+speed: 0.8
+drag: 0.13
+accel: 0.13
+rotateSpeed: 3.25
+//mineSpeed: 5
+//mineTier: 2
+health: 800
+armor: 6
+range: 400
+itemCapacity: 80
+hitSize: 14
+rotateShooting: false
+immunities: [wet, sapped, sporeSlowed, corroded]
+trailLength: 30
+trailX: 0
+trailY: -5
+
+weapons:[
+  {
+    name: scylla-laser
+    x: -5
+    y: 4
+    shootY: 4
+    recoil: 0
+    reload: 40
+    rotate: true
+    mirror: false
+    soundPitchMin: 0.92
+    soundPitchMax: 0.74
+    shootSound: sap
+    bullet:{
+      type: SapBulletType
+      sapStrength: 0.75
+      width: 1.5
+      length: 200
+      lifetime: 25
+	  damage: 48
+	  knockback: -4
+	  hittable: false
+    }
+  },
+  {
+    name: scylla-laser
+    x: 5
+    y: 4
+    shootY: 4
+    recoil: 0
+    reload: 40.01
+    rotate: true
+    mirror: false
+    soundPitchMin: 0.92
+    soundPitchMax: 0.74
+    shootSound: sap
+    bullet:{
+      type: SapBulletType
+      sapStrength: 0.75
+      width: 1.5
+      length: 200
+      lifetime: 25
+	  damage: 48
+	  knockback: -4
+	  hittable: false
+    }
+  },
+  {
+    name: scylla-laser
+    x: 0
+    y: 4
+    shootY: 4
+    recoil: 0
+    reload: 40.137
+    rotate: true
+    mirror: false
+    soundPitchMin: 0.92
+    soundPitchMax: 0.74
+    shootSound: sap
+    bullet:{
+      type: SapBulletType
+      sapStrength: 0.75
+      width: 1.5
+      length: 200
+      lifetime: 25
+	  damage: 48
+	  knockback: -4
+	  hittable: false
+    }
+  },
+  {
+    name: scylla-artillery
+    x: 3
+    y: -4.2
+    shootY: 4
+    recoil: 3
+    reload: 80
+	shots: 1
+	inaccuracy: 2
+	velocityRnd: 0.01
+	rotateSpeed: 8
+	occlusion: 6
+    rotate: true
+    mirror: false
+    soundPitchMin: 2.5
+    soundPitchMax: 3.75
+    shootSound: laser
+    bullet:{
+      type: ArtilleryBulletType
+      //sapStrength: 0.5
+	  frontColor: 9f43ff
+	  hitColor: 9f43ff
+	  backColor: be4eff
+	  trailColor: be4eff
+	  lightColor: be4eff
+      width: 3
+      height: 7
+      speed: 10
+      sprite: diamond-ore-diamondshell
+      lifetime: 20
+	  damage: 20
+	  splashDamage: 120
+	  splashDamageRadius: 120
+	  shake: 2.8
+	  reflectable: false
+	  absorbable: false
+	  trailEffect: overdriven
+	  trailChance: 0.8
+	  fragBullets: 18
+	  fragBullet:{
+        type: SapBulletType
+        sapStrength: 0.5
+        width: 0.7
+        length: 80
+        //lengthRand: 40
+        lifetime: 15
+	    damage: 20
+	    knockback: -2
+	    hittable: false
+      }
+    }
+  }
+]
+
+research: {
+  parent: serpent
+}
