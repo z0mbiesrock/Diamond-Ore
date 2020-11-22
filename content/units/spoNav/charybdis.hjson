@@ -64,8 +64,8 @@ weapons:[
 	  lightningLengthRand: 6
 	  lightning: 6
 	  lightningCone: 88
-	  hitEffect: falkExplosionBig
-	  despawnEffect: falkExplosionBig
+	  hitEffect: flakExplosionBig
+	  despawnEffect: flakExplosionBig
 	  fragBullet:{
         type: BasicBulletType
         //sapStrength: 0.5
@@ -122,7 +122,7 @@ weapons:[
 	  homingPower: 0.066
 	  homingRange: 48
 	  homingDelay: 24
-	  hitEffect: falkExplosion
+	  hitEffect: flakExplosion
 	  despawnEffect: mine
       sprite: diamond-ore-diamondconcus
       lifetime: 70
@@ -172,7 +172,7 @@ weapons:[
 	  homingPower: 0.066
 	  homingRange: 48
 	  homingDelay: 24
-	  hitEffect: falkExplosion
+	  hitEffect: flakExplosion
 	  despawnEffect: mine
       sprite: diamond-ore-diamondconcus
       lifetime: 70
@@ -222,7 +222,7 @@ weapons:[
 	  homingPower: 0.066
 	  homingRange: 48
 	  homingDelay: 24
-	  hitEffect: falkExplosion
+	  hitEffect: flakExplosion
 	  despawnEffect: mine
       sprite: diamond-ore-diamondconcus
       lifetime: 70
@@ -272,7 +272,7 @@ weapons:[
 	  homingPower: 0.066
 	  homingRange: 48
 	  homingDelay: 24
-	  hitEffect: falkExplosion
+	  hitEffect: flakExplosion
 	  despawnEffect: mine
       sprite: diamond-ore-diamondconcus
       lifetime: 70
