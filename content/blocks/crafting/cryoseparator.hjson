@@ -1,6 +1,7 @@
 type: Separator
 name: Cryo-Separator
-description: An upgraded separator that can separate slag into its mineral components much more efficiently. The pool of potential results is also much larger. It is recommended to use sorters to organize the output.
+description: Separates slag into a large variety of usable resources.
+details: It is recommended to use sorters to organize the output.
 itemCapacity: 30
 liquidCapacity: 30
 health: 400

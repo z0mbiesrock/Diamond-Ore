@@ -1,4 +1,4 @@
-const waterDecorruptor = extendContent(GenericSmelter, "water-decorruptor", {
+const waterDecorruptor = extendContent(AttributeSmelter, "water-decorruptor", {
 	setBars(){
 		this.super$setBars();		
 		this.bars.add("Water", entity => new Bar(
@@ -6,7 +6,7 @@ const waterDecorruptor = extendContent(GenericSmelter, "water-decorruptor", {
 			() => this.outputLiquid.barColor(),
 			() => this.liquids.get(this.outputLiquid) / this.liquidCapacity)
 		);
-	},
+	},/* 
 	drawBase: function(tile){
         this.super$drawBase(tile);
         Draw.color(this.outputLiquid.liquid.color);
@@ -17,7 +17,7 @@ const waterDecorruptor = extendContent(GenericSmelter, "water-decorruptor", {
 		Draw.alpha(this.liquids.currentAmount() / this.liquidCapacity);
 		Draw.rect(Core.atlas.find(waterDecorruptor.name + "-liquid-input"), tile.drawx(), tile.drawy());
 		Draw.reset()
-	},
+	}, */
 	//new Func(){bars.add("liquidOutput", this => new Bar(this.outputLiquid.liquid, this.outputLiquid.liquid.color, (this.liquids.get(this.outputLiquid.liquid) / this.liquidCapacity)))}
 	//new Func(){get(entity, bar){ new Bar()}}
 })

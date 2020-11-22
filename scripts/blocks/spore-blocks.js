@@ -298,7 +298,7 @@ const mutatorUpdate = Effect(45, e => {
     }})
     Angles.randLenVectors(e.id, 3, -6 + e.fin() * 12, d);
 });
-const sporeMutator = extendContent(GenericCrafter, "mutator", {
+const sporeMutator = extendContent(AttributeSmelter, "mutator", {
 	load(){
 		this.super$load();
 	},
@@ -310,8 +310,8 @@ const sporeMutator = extendContent(GenericCrafter, "mutator", {
         ];
     }
 });
-sporeMutator.buildType = () => extendContent(GenericCrafter.GenericCrafterBuild, sporeMutator, {
-	draw(){
+sporeMutator.buildType = () => extendContent(AttributeSmelter.SmelterBuild, sporeMutator, {
+	/* draw(){
 		if (this.initiate != true){
 			this.initiate = true;
 			this.variant = Math.ceil(Math.random(0,4));
@@ -341,7 +341,7 @@ sporeMutator.buildType = () => extendContent(GenericCrafter.GenericCrafterBuild,
 		Draw.alpha((this.liquids.get(this.liquids.current()) / this.liquidCapacity) * this.warmup);
 		Draw.rect(Core.atlas.find(sporeMutator.name + "-top"), this.x, this.y);
 		Draw.reset();
-	},
+	}, */
     updateTile(){
         //when health is lower than max health
         if ( (this.tile.health() < this.tile.maxHealth()) && (Mathf.chance(fastregen)) ){
@@ -478,7 +478,7 @@ const darkSporePressCraft = Effect(30, e => {
     }})
     Angles.randLenVectors(e.id, 5, -6 + e.fin() * 24, e.rotation + (e.fin() * Mathf.random(-45,45)), 360, rg);
 });
-const darkSporePress = extendContent(GenericCrafter, "dark-sporepress", {
+const darkSporePress = extendContent(AttributeSmelter, "dark-sporepress", {
 	setBars(){
 		this.super$setBars();
 		this.bars.add("Spore Water",func(entity =>
@@ -486,14 +486,14 @@ const darkSporePress = extendContent(GenericCrafter, "dark-sporepress", {
 		));
 	},
 });
-darkSporePress.buildType = () => extendContent(GenericCrafter.GenericCrafterBuild, darkSporePress, {
-	draw(){
+darkSporePress.buildType = () => extendContent(AttributeSmelter.SmelterBuild, darkSporePress, {
+	/* draw(){
 		Draw.rect(this.region, this.x, this.y);
 		Draw.color(this.outputLiquid.color);
 		Draw.alpha(this.liquids.get(this.outputLiquid) / this.liquidCapacity);
 		Draw.rect(Core.atlas.find(darkSporePress.name + "-liquid"), this.x, this.y);
 		Draw.reset();
-	},
+	}, */
 	
 });
 darkSporePress.updateEffect = darkSporePressUpdate;

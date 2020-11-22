@@ -1,6 +1,7 @@
 //type: GenericCrafter
 name: Water De-corruptor
-description: Reverse-engineers the mutant spores to purify corrupted water.
+description: Reverse-engineers the mutant spores to purify corrupted water. More efficient in certain locations.
+details: Recovered technology. Used to purify water that has been saturated with mutated spores.
 itemCapacity: 5
 liquidCapacity: 450
 health: 1980
@@ -9,6 +10,8 @@ hasPower: true
 hasItems: true
 outputsLiquid: true
 craftTime: 90
+attribute: spores
+boostScale: 0.5
 //updateEffect: freezing
 //craftEffect: purify
 buildCostMultiplier: 0.5

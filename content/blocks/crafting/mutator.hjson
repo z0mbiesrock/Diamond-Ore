@@ -1,6 +1,7 @@
-//type: GenericCrafter
+//type: AttributeSmelter
 name: Mutator
 description: Uses a huge amount of power and a small amount of phase string to controllably mutate regular spore pods into a unique but incredibly unstable building material.
+details: Recovered technology. Origins unknown.
 itemCapacity: 10
 liquidCapacity: 10
 health: 1000
@@ -9,6 +10,7 @@ hasPower: true
 hasLiquids: true
 hasItems: true
 craftTime: 30
+attribute: spores
 updateEffectChance: 0.08
 consumes: {
   power: 22.5

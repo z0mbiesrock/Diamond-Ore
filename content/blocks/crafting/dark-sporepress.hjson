@@ -1,16 +1,19 @@
-//type: GenericCrafter
+//type: AttributeSmelter
 name: Dark Spore Press
-description: A Spore Press that has been modified to compress mutated spore pods under extreme pressure to liquefy them, potentially using them to cultivate even more pods.
+description: Compresses mutated spore pods under extreme pressure to liquefy them, potentially using them to cultivate even more pods. More efficient in oily locations.
 itemCapacity: 10
 health: 900
 size: 3
 hasPower: true
 hasItems: true
 hasLiquids: true
+attribute: oil
 craftTime: 60
 buildCostMultiplier: 0.75
 drawLiquidLight: false
 liquidCapacity: 600
+boostScale: 0.3
+maxHeatBoost: 2
 updateEffectChance: 0.15
 outputLiquid: corrupt-water/60
 consumes: {
