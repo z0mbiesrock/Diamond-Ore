@@ -1,23 +1,17 @@
-name: Multi-Melter
+localizedName: Multi Melter
 description: Uses a very large amount of power to rapidly melt heaps of scrap down into slag.
-//type: GenericCrafter
 health: 360
 size: 2
 itemCapacity: 40
 liquidCapacity: 225
-outputLiquid: slag/45
 baseExplosiveness: 50
 hasItems: true
 hasLiquids: true
 floating: true
 hasPower: true
-craftEffect: hitMeltdown
-updateEffect: none
-updateEffectChance: 0
 craftTime: 145
 activeSound: drill
 activeSoundVolume: 1.51
-//attribute: heat
 idleSound: drill
 idleSoundVolume: 0.01
 consumes: {
