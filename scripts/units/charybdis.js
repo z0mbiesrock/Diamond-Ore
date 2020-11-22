@@ -1,4 +1,4 @@
-const SpoNavT4 = extendContent(UnitType, "leviathan", {
+const SpoNavT4 = extendContent(UnitType, "charybdis", {
 	update(){
 		this.super$update();
 		if(this.health < this.maxHealth()){
