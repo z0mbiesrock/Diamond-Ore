@@ -1,4 +1,4 @@
-type: liquidTank
+type: LiquidRouter
 name: Ancient Liquid Repository
 health: 18000
 size: 6

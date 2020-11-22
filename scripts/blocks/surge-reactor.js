@@ -140,9 +140,9 @@ const SurgeReactor = extendContent(NuclearReactor, "surge-reactor", {
 		catch (err){
 			print(err);
 		}
-		Effect.effect(surgeReactorMeltdownFxA, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
+		Effect.create(surgeReactorMeltdownFxA, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
         for(var lfr = 0; lfr < 15; lfr++){
-            Effect.effect(surgeReactorMeltdownFxB, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
+            Effect.create(surgeReactorMeltdownFxB, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
 		}
         for(var i = 0; i < 45; i++){
             Calls.createBullet(surgeReactorMeltdownFlak, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.15, 1.0), Mathf.random(0.2, 1.0));

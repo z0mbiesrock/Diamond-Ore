@@ -42,4 +42,5 @@ require("blocks/ancients")
 //require("units/basilisk")
 //require("units/spoilers")
 //require("mechs/illithid")
+require("blocks/vanillaammo")
 

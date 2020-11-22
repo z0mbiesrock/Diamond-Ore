@@ -9,7 +9,7 @@ shots: 4
 range: 320
 ammoUseEffect: casing2
 coolantMultiplier: 4
-maxammo: 400
+maxAmmo: 400
 rotatespeed: 13
 inaccuracy: 7.5
 shootSound: shoot

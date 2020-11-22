@@ -7,7 +7,7 @@ reloadTime: 3
 range: 240
 coolantMultiplier: 3
 ammoUseEffect: casing3
-maxammo: 200
+maxAmmo: 200
 coolantUsage: 0.2345
 inaccuracy: 8
 xRand: 2

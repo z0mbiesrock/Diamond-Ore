@@ -9,7 +9,7 @@ ammoEjectBack: 2.1
 //ammoUseEffect: pulverizeRed
 coolantMultiplier: 4
 cooldown: 0.01
-maxammo: 40
+maxAmmo: 40
 rotatespeed: 13
 shootSound: pew
 outlineColor: 966102

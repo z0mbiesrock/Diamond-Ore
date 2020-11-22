@@ -9,8 +9,8 @@ ammoUseEffect: casing3
 coolantMultiplier: 8
 coolantUsage: 0.5
 alternate: true
-spread: 10
-maxammo: 2
+spread: 8
+maxAmmo: 2
 inaccuracy: 0
 rotatespeed: 2
 cooldown: 0.0125

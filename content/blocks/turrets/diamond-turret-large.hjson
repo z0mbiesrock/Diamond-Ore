@@ -5,7 +5,7 @@ health: 1200
 size: 2
 reloadTime: 48
 range: 300
-maxammo: 50
+maxAmmo: 50
 inaccuracy: 2
 rotatespeed: 9
 ammoTypes: {
@@ -349,7 +349,7 @@ ammoTypes: {
 	backColor: 44aadd
 	trailEffect: freezing
     shootEffect: shootSmall
-    despawnEffect: ripple
+    despawnEffect: mine
 	hitEffect: shockwave
     ammoMultiplier: 1
 	shrinkY: 0

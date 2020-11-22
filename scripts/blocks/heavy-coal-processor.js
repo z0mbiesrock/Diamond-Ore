@@ -1,13 +1,9 @@
-extendContent(GenericCrafter, "heavy-coal-processor", {
-	drawBase(tile){
-		Draw.rect(this.region, tile.drawx(), tile.drawy());
-		Draw.color(this.liquids.current().color);
-		Draw.alpha(this.liquids.currentAmount() / this.liquidCapacity);
-		Draw.rect(Core.atlas.find(this.name + "-liquid"), tile.drawx(), tile.drawy());
-		Draw.color();
-        Draw.rect(Core.atlas.find(this.name + "-spinner-a"),tile.drawx(),tile.drawy(), -180 * this.progress);
-        Draw.rect(Core.atlas.find(this.name + "-spinner-b"),tile.drawx(),tile.drawy(), 180 * this.progress);
-		Draw.reset();
+const heavyCoalProc = extendContent(GenericCrafter, "heavy-coal-processor", {
+	load(){
+		this.super$load();
+		this.liquidRegion = Core.atlas.find(this.name + "-liquid");
+		this.spinnerRegionA = Core.atlas.find(this.name + "-spinner-a");
+		this.spinnerRegionB = Core.atlas.find(this.name + "-spinner-b");
 	},
     icons(){
         return [
@@ -16,4 +12,15 @@ extendContent(GenericCrafter, "heavy-coal-processor", {
             Core.atlas.find(this.name + "-spinner-b"),
         ];
     }
+});
+heavyCoalProc.buildType = () => extendContent(GenericCrafter.GenericCrafterBuild, heavyCoalProc, {
+	draw(){
+        this.super$draw();
+		Draw.color(this.liquids.current().color);
+		Draw.alpha(this.liquids.currentAmount() / heavyCoalProc.liquidCapacity);
+		Draw.rect(heavyCoalProc.liquidRegion, this.x, this.y);
+		Draw.reset();
+		Draw.rect(heavyCoalProc.spinnerRegionA, this.x, this.y, -5.4 * this.totalProgress);
+        Draw.rect(heavyCoalProc.spinnerRegionB, this.x, this.y, 5.7 * this.totalProgress);
+	},	
 });

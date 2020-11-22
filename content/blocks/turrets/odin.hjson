@@ -8,7 +8,7 @@ burstSpacing: 4
 range: 294
 ammoUseEffect: none
 coolantMultiplier: 6
-maxammo: 80
+maxAmmo: 80
 coolantUsage: 0.314159
 inaccuracy: 6
 rotatespeed: 12

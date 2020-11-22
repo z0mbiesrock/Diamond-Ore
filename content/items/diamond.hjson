@@ -5,11 +5,5 @@ hardness: 5
 cost: 3
 color: 88ccff
 research:{
-  parent: disassembler
-  requirements:[
-	  coal/6000000
-	  graphite/241800
-	  spore-pod/580000
-	  pyratite/580000
-  ]
+  parent: graphite
 }

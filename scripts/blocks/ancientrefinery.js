@@ -45,20 +45,27 @@ const oldRefinery = extendContent(GenericSmelter, "ancient-refinery", {
 		this.stats.add(BlockStat.boostEffect, 2.25, StatUnit.timesSpeed);
 	},
 	
-	drawBase: function(tile){
-        this.super$drawBase(tile);
-		ent = this;
-		Draw.rect(this.topRegionB, tile.drawx(), tile.drawy(), ent.totalProgress * 7);
+	/* drawBase(tile){
+		Draw.rect(this.topRegionB, tile.drawx(), tile.drawy());
+		this.super$drawBase(tile);
+	}, */
+});
+oldRefinery.buildType = () => extendContent(GenericSmelter.SmelterBuild, oldRefinery, {
+	
+	draw: function(){
+        this.super$draw();
+		Draw.rect(oldRefinery.topRegionB, this.x, this.y, this.totalProgress * 3.2);
 	},
 	
 	updateTile(){
         this.super$updateTile();
 		if(this.cons.valid() && this.cons.optionalValid()){
-			this.progress += (this.getProgressIncrease(this, this.craftTime) * 1.25);
+			this.progress += (this.getProgressIncrease(oldRefinery.craftTime) * 1.25);
 		}
-	}
+	},
+	
 });
 oldRefinery.craftEffect = alloyRefined;
 oldRefinery.updateEffect = alloyRefining;
 oldRefinery.spin = 0;
-oldRefinery.consumes.liquid(Liquids.slag, (5 / 18)).update(true).boost();
+oldRefinery.consumes.liquid(Liquids.slag, (3 / 18)).update(true).boost();

@@ -2,6 +2,7 @@
 const ancientSentinel = extendContent(ItemTurret, "ancient-sentinel", {
 	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
+		this.super$drawBase(tile);
 	},
     icons(){
         return [
@@ -37,6 +38,7 @@ const ancientBlasterAmmoUse = Effect(20, e => {
 const ancientBlaster = extendContent(ItemTurret, "ancient-blaster", {
 	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
+		this.super$drawBase(tile);
 	},
     icons(){
         return [
@@ -51,6 +53,7 @@ ancientBlaster.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.tempera
 const ancientPulser = extendContent(PowerTurret, "ancient-pulser", {
 	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
+		this.super$drawBase(tile);
 	},
     icons(){
         return [
@@ -76,7 +79,7 @@ const ancientBladeLaser = extend(BasicBulletType, {
 	},
 	
 	/*hit: function(b, hitx, hity){
-	Effect.effect(this.hitEffect, Color.valueOf("a9d8ffaa"), hitx, hity);
+	Effect.create(this.hitEffect, Color.valueOf("a9d8ffaa"), hitx, hity);
 		if(Mathf.chance(0.1)){
 			//Fire.create(world.tileWorld(hitx + Mathf.range(6.0), hity + Mathf.range(6.0)));
 			Damage.createIncend(hitx, hity, 6, 1);
@@ -117,6 +120,7 @@ ancientBladeLaser.smokeEffect = Fx.none;
 const ancientBlade = extendContent(LaserTurret, "ancient-blade", {
 	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
+		this.super$drawBase(tile);
 	},
     icons(){
         return [
@@ -131,6 +135,7 @@ ancientBlade.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperatu
 const ancientShotgun = extendContent(ItemTurret, "ancient-shotgun", {
 	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
+		this.super$drawBase(tile);
 	},
     icons(){
         return [
@@ -145,6 +150,7 @@ ancientShotgun.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.tempera
 const ancientSprayer = extendContent(ItemTurret, "ancient-sprayer", {
 	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
+		this.super$drawBase(tile);
 	},
     icons(){
         return [

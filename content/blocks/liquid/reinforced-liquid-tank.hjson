@@ -1,4 +1,4 @@
-type: liquidTank
+type: LiquidRouter
 name: Reinforced Liquid Tank
 health: 4000
 size: 5

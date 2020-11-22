@@ -6,7 +6,7 @@ size: 3
 reloadTime: 120
 range: 120
 ammoUseEffect: smoke
-maxammo: 100
+maxAmmo: 100
 inaccuracy: 0
 rotatespeed: 9
 xRand: 4

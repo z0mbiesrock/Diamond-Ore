@@ -8,12 +8,5 @@ radioactivity: 13.37
 cost: 1
 color: 004c96
 research:{
-  parent: cultivator
-  requirements:[
-	diamond/70000
-	spore-pod/10000000
-	phase-fabric/666666
-	plastanium/80000
-	cryogem/8000
-  ]
+  parent: spore-pod
 }

@@ -1,9 +1,19 @@
-extendContent(GenericCrafter, "multipyra", {
-	drawBase(tile){
-		Draw.rect(this.region, tile.drawx(), tile.drawy());
-		if (this.cons.valid()) {
-			Draw.rect(Core.atlas.find(this.name + "-top"), tile.drawx(), tile.drawy());
-		};
+const multiPyra = extendContent(GenericCrafter, "multipyra", {
+  load(){
+	  this.super$load();
+	  this.lightRegion = Core.atlas.find(this.name + "-top");
+  },
+	
+	/* drawBase(tile){
+		this.super$drawBase(tile);
+		Draw.rect(this.lightRegion, tile.drawx(), tile.drawy());
+	}, */
+});
+multiPyra.buildType = () => extendContent(GenericCrafter.GenericCrafterBuild, multiPyra, {
+	draw(){
+        this.super$draw();
+		Draw.alpha(this.warmup);
+		Draw.rect(multiPyra.lightRegion, this.x, this.y);
 		Draw.reset();
-	}
+	},	
 });

@@ -32,8 +32,32 @@ spectreCryo.height = 24;
 spectreCryo.bulletSprite = "diamond-ore-diamondbullet";
 spectreCryo.frontColor = Color.valueOf("#cceeff");
 spectreCryo.backColor = Color.valueOf("#4499ee");
-init(){
-	this.super$init();
-	Blocks.cyclone.put(Vars.content.getByName(ContentType.item,"diamond-ore-cryogem"),cycloneCryo);
-	Blocks.spectre.put(Vars.content.getByName(ContentType.item,"diamond-ore-cryogem"),spectreCryo);
+var hasErrord = false;
+var erRord = "h";
+var itmInd = 0;
+print("Vars.content.items().size is " + Vars.content.items().size)
+try{
+	var cryogemItem = 0;
+	for(var s = 0; s < Vars.content.items().size; s++){
+		var itmType = Vars.content.items().get(s);
+		print(itmType);
+		if (itmType == "cryogem"){
+			itmInd = s;
+			cryogemItem = itmNm;
+			break;
+		}
+	};
 }
+catch(h){
+	hasErrord = true;
+	erRord = h;
+}
+print(Vars.content.getByName(ContentType.item, itmInd));
+if (itmInd == null) hasErrord == true;
+if (hasErrord == true){
+	throw new RuntimeError(erRord);
+	
+}
+Blocks.cyclone.ammoTypes.put(cryogemItem,cycloneCryo);
+Blocks.spectre.ammoTypes.put(cryogemItem,spectreCryo);
+print("vanilla ammo script successful")

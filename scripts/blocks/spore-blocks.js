@@ -96,7 +96,7 @@ extendContent(Cultivator, "sporecluster", {
 	drawBase(tile){
 		podnum = Mathf.round(Mathf.randomSeed(this.id, 1, 4));
 		podrot = Mathf.round(Mathf.randomSeed(this.id, 0, 360));
-		Draw.rect(Core.atlas.find(this.name + podnum), tile.drawx(), tile.drawy(), podrot);
+		Draw.rect(Core.atlas.find(this.name + podnum), this.x, this.y, podrot);
         Draw.color();
 	},
     icons(){
@@ -121,42 +121,51 @@ extendContent(Cultivator, "sporecluster", {
         this.super$onDestroyed(tile);
         for(var i = 0; i < 10; i++){
             Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
-			Effect.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
+			Effect.create(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
 		}
 	}
 });
-extendContent(ItemTurret, "spore-turret", {
-	drawBase(tile){
-		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
-        Draw.color();
-	},
+const sporeTurretA = extendContent(ItemTurret, "spore-turret", {
     icons(){
         return [
             Core.atlas.find(this.name)
         ];
     }
 });
-extendContent(ItemTurret, "spore-turret-b", {
-	drawBase(tile){
-		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
+sporeTurretA.buildType = () => extendContent(ItemTurret.ItemTurretBuild, sporeTurretA, {
+	draw(){
+		Draw.rect(Core.atlas.find(this.name + "-base"), this.x, this.y);
         Draw.color();
 	},
+	
+});
+const sporeTurretB = extendContent(ItemTurret, "spore-turret-b", {
     icons(){
         return [
             Core.atlas.find(this.name)
         ];
     }
 });
-extendContent(ItemTurret, "spore-turret-c", {
-	drawBase(tile){
-		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
+sporeTurretB.buildType = () => extendContent(ItemTurret.ItemTurretBuild, sporeTurretB, {
+	draw(){
+		Draw.rect(Core.atlas.find(this.name + "-base"), this.x, this.y);
         Draw.color();
 	},
+	
+});
+const sporeTurretC = extendContent(ItemTurret, "spore-turret-c", {
     icons(){
         return [
             Core.atlas.find(this.name)
         ];
     }
+});
+sporeTurretC.buildType = () => extendContent(ItemTurret.ItemTurretBuild, sporeTurretC, {
+	draw(){
+		Draw.rect(Core.atlas.find(this.name + "-base"), this.x, this.y);
+        Draw.color();
+	},
+	
 });
 /* extendContent(Floor, "spore-water", {
     icons(){
@@ -172,9 +181,17 @@ extendContent(Floor, "spore-water-deep", {
         ];
     }
 }); */
-extendContent(ItemTurret, "spore-turret-small", {
-	drawBase(tile){
-		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
+const sporeTurretSmlA = extendContent(ItemTurret, "spore-turret-small", {
+    icons(){
+        return [
+            Core.atlas.find(this.name)
+        ];
+    }
+});
+sporeTurretSmlA.buildType = () => extendContent(ItemTurret.ItemTurretBuild, sporeTurretSmlA, {
+	draw(){
+		Draw.rect(Core.atlas.find(this.name + "-base"), this.x, this.y);
+        Draw.color();
 	},
     updateTile(){
         //when health is lower than max health
@@ -189,29 +206,9 @@ extendContent(ItemTurret, "spore-turret-small", {
         };
         this.super$updateTile();
      },
-    icons(){
-        return [
-            Core.atlas.find(this.name)
-        ];
-    }
+	
 });
-extendContent(ItemTurret, "spore-turret-small-dark", {
-	drawBase(tile){
-		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
-	},
-    updateTile(){
-        //when health is lower than max health
-        if ( (this.tile.health() < this.tile.maxHealth()) && (Mathf.chance(fastregen)) ){
-
-                   this.tile.health += 10;
-				   /* if (this.tile.health() > this.tile.maxHealth()){
-					   this.tile.health -= this.tile.maxHealth() - this.tile.health();
-				   } */ // unknown if this works
-					   
-                   
-        };
-        this.super$updateTile();
-     },
+const sporeTurretSmlB = extendContent(ItemTurret, "spore-turret-small-dark", {
     icons(){
         return [
             Core.atlas.find(this.name)
@@ -221,14 +218,34 @@ extendContent(ItemTurret, "spore-turret-small-dark", {
 		this.super$onDestroyed(tile);
         for(var i = 0; i < 7; i++){
             Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.75, 1.50));
-			Effect.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
+			Effect.create(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
 		}
 	}
+});
+sporeTurretSmlB.buildType = () => extendContent(ItemTurret.ItemTurretBuild, sporeTurretSmlB, {
+	draw(){
+		Draw.rect(Core.atlas.find(this.name + "-base"), this.x, this.y);
+        Draw.color();
+	},
+    updateTile(){
+        //when health is lower than max health
+        if ( (this.tile.health() < this.tile.maxHealth()) && (Mathf.chance(fastregen)) ){
+
+                   this.tile.health += 8;
+				   /* if (this.tile.health() > this.tile.maxHealth()){
+					   this.tile.health -= this.tile.maxHealth() - this.tile.health();
+				   } */ // unknown if this works
+					   
+                   
+        };
+        this.super$updateTile();
+     },
+	
 });
 
 const sporeConveyor = extendContent(Conveyor, "spore-conveyor", {
 	drawBase(tile){
-		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
+		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), this.drawy());
         this.super$drawBase(tile);
 	},
     icons(){
@@ -254,7 +271,7 @@ const sporeConveyor = extendContent(Conveyor, "spore-conveyor", {
 		this.super$onDestroyed(tile);
         for(var i = 0; i < 3; i++){
             Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.75, 1.50));
-			Effect.effect(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
+			Effect.create(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
 		}
 	},
 });
@@ -282,7 +299,19 @@ const mutatorUpdate = Effect(45, e => {
     Angles.randLenVectors(e.id, 3, -6 + e.fin() * 12, d);
 });
 const sporeMutator = extendContent(GenericCrafter, "mutator", {
-	drawBase(tile){
+	load(){
+		this.super$load();
+	},
+    icons(){
+        return [
+            Core.atlas.find(this.name),
+            Core.atlas.find(this.name + "-input0"),
+            Core.atlas.find(this.name + "-top"),
+        ];
+    }
+});
+sporeMutator.buildType = () => extendContent(GenericCrafter.GenericCrafterBuild, sporeMutator, {
+	draw(){
 		if (this.initiate != true){
 			this.initiate = true;
 			this.variant = Math.ceil(Math.random(0,4));
@@ -304,22 +333,29 @@ const sporeMutator = extendContent(GenericCrafter, "mutator", {
 				this.rot2 = 90 * this.angle2;
 			}
 		}
-		Draw.rect(this.region, tile.drawx(), tile.drawy());
+		Draw.rect(this.region, this.x, this.y);
 		Draw.alpha((this.tile.items.total() - this.tile.items.get(this.outputItem.item)) / this.itemCapacity);
-		Draw.rect(Core.atlas.find(this.name + "-input" + this.variant), tile.drawx(), tile.drawy(), this.rot1);
+		Draw.rect(Core.atlas.find(sporeMutator.name + "-input" + this.variant), this.x, this.y, this.rot1);
 		Draw.alpha(this.tile.items.get(this.outputItem.item) / this.itemCapacity);
-		Draw.rect(Core.atlas.find(this.name + "-output" + this.variant), tile.drawx(), tile.drawy(), this.rot2);
-		Draw.alpha(this.liquids.get(this.liquids.current()) / this.liquidCapacity);
-		Draw.rect(Core.atlas.find(this.name + "-top"), tile.drawx(), tile.drawy());
+		Draw.rect(Core.atlas.find(sporeMutator.name + "-output" + this.variant), this.x, this.y, this.rot2);
+		Draw.alpha((this.liquids.get(this.liquids.current()) / this.liquidCapacity) * this.warmup);
+		Draw.rect(Core.atlas.find(sporeMutator.name + "-top"), this.x, this.y);
 		Draw.reset();
 	},
-    icons(){
-        return [
-            Core.atlas.find(this.name),
-            Core.atlas.find(this.name + "-input0"),
-            Core.atlas.find(this.name + "-top"),
-        ];
-    }
+    updateTile(){
+        //when health is lower than max health
+        if ( (this.tile.health() < this.tile.maxHealth()) && (Mathf.chance(fastregen)) ){
+
+                   this.tile.health += 8;
+				   /* if (this.tile.health() > this.tile.maxHealth()){
+					   this.tile.health -= this.tile.maxHealth() - this.tile.health();
+				   } */ // unknown if this works
+					   
+                   
+        };
+        this.super$updateTile();
+     },
+	
 });
 sporeMutator.updateEffect = mutatorUpdate;
 sporeMutator.angle1 = 0;
@@ -413,15 +449,15 @@ const sporeVault = extendContent(StorageBlock, "omnivault", {
 	onDestroyed: function(tile){
 		this.super$onDestroyed(tile);
         for(var i = 0; i < 25; i++){
-		Effect.effect(sporeVaultDeathExplode, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
+		Effect.create(sporeVaultDeathExplode, this.x, this.y, Mathf.random(-360,360));
 		}
-		Effect.effect(Fx.impactShockwave, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
-		Effect.shake(1.3, 1.3, tile.drawx(), tile.drawy());
+		Effect.create(Fx.impactShockwave, this.x, this.y, Mathf.random(-360,360));
+		Effect.shake(1.3, 1.3, this.x, this.y);
         for(var j = 0; j < 150; j++){
-            Calls.createBullet(sporeVaultDeathSmall, Team.derelict, tile.drawx(), tile.drawy(), Mathf.random(360), Mathf.random(0.25, 1.0), Mathf.random(0.2, 1.0));
+            Calls.createBullet(sporeVaultDeathSmall, Team.derelict, this.x, this.y, Mathf.random(360), Mathf.random(0.25, 1.0), Mathf.random(0.2, 1.0));
 		}
         for(var k = 0; k < 75; k++){
-            Calls.createBullet(sporeVaultDeathLarge, Team.derelict, tile.drawx(), tile.drawy(), Mathf.random(360), Mathf.random(0.25, 1.0), Mathf.random(0.2, 1.0));
+            Calls.createBullet(sporeVaultDeathLarge, Team.derelict, this.x, this.y, Mathf.random(360), Mathf.random(0.25, 1.0), Mathf.random(0.2, 1.0));
 		}
 	},
 })
@@ -443,92 +479,22 @@ const darkSporePressCraft = Effect(30, e => {
     Angles.randLenVectors(e.id, 5, -6 + e.fin() * 24, e.rotation + (e.fin() * Mathf.random(-45,45)), 360, rg);
 });
 const darkSporePress = extendContent(GenericCrafter, "dark-sporepress", {
-	drawBase(tile){
-		Draw.rect(this.region, tile.drawx(), tile.drawy());
-		Draw.color(this.outputLiquid.liquid.color);
-		Draw.alpha(this.liquids.get(this.outputLiquid.liquid) / this.liquidCapacity);
-		Draw.rect(Core.atlas.find("diamond-ore-dark-sporepress-liquid"), tile.drawx(), tile.drawy());
-		Draw.reset();
-	},
 	setBars(){
 		this.super$setBars();
 		this.bars.add("Spore Water",func(entity =>
-			new Bar(prov(() => this.outputLiquid.liquid.localizedName), prov(() => this.outputLiquid.liquid.barColor()), floatp(() => entity.liquids.get(this.outputLiquid.liquid) / this.liquidCapacity))
+			new Bar(prov(() => this.outputLiquid.localizedName), prov(() => this.outputLiquid.barColor()), floatp(() => this.liquids.get(this.outputLiquid.liquid) / this.liquidCapacity))
 		));
 	},
 });
-darkSporePress.updateEffect = darkSporePressUpdate;
-darkSporePress.craftEffect = darkSporePressCraft;
-// UNUSED / BROKEN
-/* extendContent(UnitFactory, "spore-dagger-factory", {
-	init(){ 
-	this.super$init();
-	},
-	drawBase(tile){
-		Draw.rect(Core.atlas.find(this.name), tile.drawx(), tile.drawy());
-		if (this.tile.cons.valid()){
-		growTime += this.tile.delta() * this.tile.efficiency() * Vars.state.rules.unitBuildSpeedMultiplier;
-		};
-		try{
-			spawnProgress = (growTime / this.produceTime);
-		}
-		catch(error){
-			growTime = 0;
-			spawnProgress = 0;
-		}
-		embryo = Core.atlas.find(this.unitType);
-		if (spawnProgress > 0.1){
-			if (spawnProgress < 0.7){
-				Draw.alpha(spawnProgress * 0.7);
-			}
-			else{
-				Draw.alpha((1 - spawnProgress) * 0.3);
-			}
-			Draw.rect(Core.atlas.find(this.name + "-sludge"), tile.drawx(), tile.drawy(), (spawnProgress * 360) + Mathf.random(-9,9));
-		}
-		Draw.alpha(Math.max(((spawnProgress * 2) - 1.4), 0));
-		Draw.rect(embryo, tile.drawx(), tile.drawy());
-		Draw.alpha(1);
-		if (spawnProgress < 0.04){
-			Draw.rect(Core.atlas.find(this.name + "-bud-burst"), tile.drawx(), tile.drawy());
-		}
-		else if (spawnProgress < 0.1){
-			Draw.rect(Core.atlas.find(this.name + "-bud-young"), tile.drawx(), tile.drawy());
-		}
-		else if (spawnProgress < 0.25){
-			Draw.rect(Core.atlas.find(this.name + "-bud-immature"), tile.drawx(), tile.drawy());
-		}
-		else if (spawnProgress < 1){
-			Draw.rect(Core.atlas.find(this.name + "-bud-mature"), tile.drawx(), tile.drawy());
-		}
-		else{
-			growTime = 0;
-			Sounds.laser.at(tile);
-			for(var k = 0; k < 7; k++){
-				Effect.effect(sporeUnitBirth, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
-			};
-		}
+darkSporePress.buildType = () => extendContent(GenericCrafter.GenericCrafterBuild, darkSporePress, {
+	draw(){
+		Draw.rect(this.region, this.x, this.y);
+		Draw.color(this.outputLiquid.color);
+		Draw.alpha(this.liquids.get(this.outputLiquid) / this.liquidCapacity);
+		Draw.rect(Core.atlas.find(darkSporePress.name + "-liquid"), this.x, this.y);
 		Draw.reset();
 	},
-	onDestroyed: function(tile){
-		this.super$onDestroyed(tile);
-		//const entity = this.tile
-		if (growTime != null){
-			growth = Math.floor(((growTime / this.produceTime) * 30) + 8);
-		}
-		else{
-			growth = 8;
-		}
-        for(var i = 0; i < growth; i++){
-            Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.drawx(), tile.drawy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.75, 1.50));
-		}
-        for(var k = 0; k < 7; k++){
-			Effect.effect(sporeBlockDeathFx, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
-		}
-	},
-    icons(){
-        return [
-            Core.atlas.find(this.name)
-        ];
-    }
-}); */
+	
+});
+darkSporePress.updateEffect = darkSporePressUpdate;
+darkSporePress.craftEffect = darkSporePressCraft;

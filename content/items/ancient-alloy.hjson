@@ -6,28 +6,5 @@ radioactivity: 0.75
 cost: 5
 color: e4bc5e
 research:{
-  parent: ancient-refinery
-  requirements:[
-      copper/4000000
-      lead/4000000
-      graphite/3000000
-      silicon/3000000
-      titanium/2000000
-      metaglass/4000000
-      thorium/4000000
-      phase-fabric/2000000
-      surge-alloy/5000000
-      plastanium/1000000
-      blast-compound/1000000
-      sand/100000
-      coal/100000
-      scrap/100000
-      ancient-scrap/100000
-      pyratite/100000
-      spore-pod/100000
-      dark-spore-pod/100000
-      diamond/100000
-      cryogem/100000
-      ancient-alloy/1
-  ]
+  parent: surge-alloy
 }

@@ -9,7 +9,7 @@ range: 220
 coolantMultiplier: 3.75
 ammoEjectBack: 2.1
 cooldown: 0.01
-maxammo: 10
+maxAmmo: 10
 shots: 10
 inaccuracy: 30
 spread: 0

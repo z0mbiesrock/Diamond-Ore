@@ -229,9 +229,9 @@ const yggdrasilPlasma = extend(ArtilleryBulletType, {
     update(b){
         this.super$update(b);
         if(b.timer.get(0, 3 + b.fslope() * 2)){
-            Effect.effect(this.trailEffect, b.x, b.y);
+            this.trailEffect.at(b.x, b.y);
         }
-		Effect.effect(yggdrasilPlasmaSphere, b.x + Mathf.random(-10,10), b.y + Mathf.random(-10,10));
+		yggdrasilPlasmaSphere.at(b.x + Mathf.random(-10,10), b.y + Mathf.random(-10,10));
 		this.supressCollision = false;
     },
 	

@@ -5,13 +5,4 @@ cost: 1
 color: aaffff
 research:{
   parent: cryofluid
-  requirements:[
-	  coal/6000
-	  copper/120000
-	  lead/120000
-      titanium/275000
-      surge-alloy/30000
-      diamond/5000
-	  thorium/777000
-  ]
 }
