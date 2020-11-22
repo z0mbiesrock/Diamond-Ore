@@ -8,7 +8,7 @@ range: 200
 ammoUseEffect: smoke
 maxAmmo: 100
 inaccuracy: 24
-rotatespeed: 9
+rotateSpeed: 9
 buildVisibility: debugOnly
 layer: turret
 layer2: block
@@ -36,7 +36,7 @@ ammoTypes: {
     ammoMultiplier: 4
 	pierce: false
 	sprite: shell
-	homingPower: 0.00015
+	homingPower: 0.01
 	homingRange: 240
 	fragBullets: 16
 	fragVelocityMin: 0.45

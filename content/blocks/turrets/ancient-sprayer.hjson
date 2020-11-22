@@ -10,7 +10,7 @@ range: 320
 ammoUseEffect: casing2
 coolantMultiplier: 4
 maxAmmo: 400
-rotatespeed: 13
+rotateSpeed: 13
 inaccuracy: 7.5
 shootSound: shoot
 outlineColor: 966102

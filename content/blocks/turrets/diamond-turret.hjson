@@ -7,7 +7,8 @@ reloadTime: 36
 range: 180
 maxAmmo: 40
 inaccuracy: 1
-rotatespeed: 12
+rotateSpeed: 12
+shootSound: lasershoot
 ammoTypes: {
   copper: {
     type: BasicBulletType
@@ -335,7 +336,7 @@ ammoTypes: {
     type: ArtilleryBulletType
     speed: 9
     damage: 25
-	lifetime: 20
+	lifetime: 28
     width: 3
     height: 8
     shrinkY: 0

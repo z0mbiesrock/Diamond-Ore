@@ -4,6 +4,7 @@ description: A large turret that fires large slow homing missiles. Extremely hig
 health: 1700
 size: 3
 reloadTime: 135
+shots: 2
 range: 600
 ammoUseEffect: casing3
 coolantMultiplier: 8
@@ -12,7 +13,7 @@ alternate: true
 spread: 8
 maxAmmo: 2
 inaccuracy: 0
-rotatespeed: 2
+rotateSpeed: 2
 cooldown: 0.0125
 shootSound: shotgun
 shootCone: 12
@@ -41,7 +42,7 @@ ammoTypes: {
     ammoMultiplier: 2
 	pierce: false
 	sprite: missile
-	homingPower: 3
+	homingPower: 0.09
 	homingRange: 120
   }
   pyratite: {
@@ -67,7 +68,7 @@ ammoTypes: {
 	sprite: missile
 	status: burning
 	statusDuration: 720
-	homingPower: 1.2
+	homingPower: 0.09
 	homingRange: 120
 	fragBullets: 30
 	fragVelocityMin: 1.125
@@ -118,7 +119,7 @@ ammoTypes: {
 	sprite: missile
 	status: shocked
 	statusDuration: 120
-	homingPower: 2
+	homingPower: 0.09
 	homingRange: 120
 	lightningLength: 25
 	lightning: 3
@@ -193,7 +194,7 @@ ammoTypes: {
 	sprite: missile
 	status: freezing
 	statusDuration: 720
-	homingPower: 1
+	homingPower: 0.09
 	homingRange: 120
 	fragBullets: 20
 	fragVelocityMin: 0.75
@@ -236,7 +237,7 @@ ammoTypes: {
 	reloadMultiplier: 0.75
 	pierce: false
 	sprite: missile
-	homingPower: 12
+	homingPower: 0.29
 	homingRange: 180
   }
   silicon: {
@@ -261,7 +262,7 @@ ammoTypes: {
 	reloadMultiplier: 1.06
 	pierce: false
 	sprite: diamond-ore-diamondconcus
-	homingPower: 3
+	homingPower: 0.11
 	homingRange: 64
 	weaveScale: -2
 	weaveMag: 4
@@ -308,7 +309,7 @@ ammoTypes: {
 	reloadMultiplier: 0.65
 	pierce: true
 	sprite: diamond-ore-diamondmissile
-	homingPower: 1
+	homingPower: 0.0625
 	homingRange: 320
 	fragBullets: 3
 	fragVelocityMin: 1.25
@@ -379,7 +380,7 @@ ammoTypes: {
 	sprite: missile
 	status: melting
 	statusDuration: 2400
-	homingPower: 0.5
+	homingPower: 0.075
 	homingRange: 120
 	fragBullets: 80
 	fragVelocityMin: 1

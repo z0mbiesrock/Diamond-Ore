@@ -11,7 +11,7 @@ coolantMultiplier: 6
 maxAmmo: 80
 coolantUsage: 0.314159
 inaccuracy: 6
-rotatespeed: 12
+rotateSpeed: 12
 shootSound: artillery
 outlineIcon: false
 expanded: true

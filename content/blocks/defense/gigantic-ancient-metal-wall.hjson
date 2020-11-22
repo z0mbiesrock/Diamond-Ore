@@ -1,5 +1,5 @@
 name: Gigantic Ancient Metal Wall
-description: "Made of [#e5b85e]a mysterious alloy[], this large wall can endure massive amounts of punishment. Spans a large area."
+description: Protects structures from enemy projectiles, periodically releasing electric arcs upon contact.
 type: Wall
 health: 64000
 size: 4
@@ -14,4 +14,4 @@ requirements: [
   cryogem/16
 ]
 category: defense
-research: ancient-metal-wall-huge
+research: huge-ancient-metal-wall

@@ -9,7 +9,7 @@ range: 800
 coolantMultiplier: 7
 buildCostMultiplier: 0.33333333
 inaccuracy: 0
-rotatespeed: 1
+rotateSpeed: 1
 cooldown: 0.003333
 shootSound: yggdrasilfire
 shootCone: 2

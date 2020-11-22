@@ -1,5 +1,5 @@
 name: Large Ancient Metal Wall
-description: "Made of [#e5b85e]a mysterious alloy[], this large wall can endure massive amounts of punishment. Spans multiple tiles."
+description: Protects structures from enemy projectiles, periodically releasing electric arcs upon contact.
 type: Wall
 health: 16000
 size: 2

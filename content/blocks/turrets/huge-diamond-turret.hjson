@@ -7,8 +7,9 @@ reloadTime: 60
 range: 360
 maxAmmo: 60
 inaccuracy: 2
-rotatespeed: 6
+rotateSpeed: 6
 shootCone: 14
+shootSound: lasershoot
 ammoTypes: {
   copper: {
     type: BasicBulletType
@@ -239,8 +240,8 @@ ammoTypes: {
     damage: 36
     width: 5
     height: 9
-	weaveScale: 7.5
-	weaveMag: 6
+	weaveScale: 4
+	weaveMag: 3
 	frontColor: eeffff
 	shrinkY: 0
 	backColor: ffeecc
@@ -344,7 +345,7 @@ ammoTypes: {
     type: ArtilleryBulletType
     speed: 11
     damage: 75
-	lifetime: 36
+	lifetime: 43
     width: 5
     height: 14
     shrinkY: 0
@@ -393,4 +394,4 @@ requirements: [
   cryogem/12
 ]
 category: turret
-research: diamond-turret-large
+research: large-diamond-turret

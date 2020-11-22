@@ -33,7 +33,7 @@ requirements: [
   diamond/150
 ]
 category: crafting
-research: surge-pyraforge
+research: surge-pyra-forge
 loopSound: machine
 loopSoundVolume: 0.95
 ambientSound: respawning

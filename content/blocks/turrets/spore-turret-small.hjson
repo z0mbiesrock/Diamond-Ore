@@ -11,7 +11,7 @@ maxAmmo: 1
 shots: 1
 shootSound: pew
 inaccuracy: 36
-rotatespeed: 6
+rotateSpeed: 6
 buildVisibility: debugOnly
 layer: turret
 layer2: block

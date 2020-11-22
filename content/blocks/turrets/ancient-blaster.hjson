@@ -10,7 +10,7 @@ ammoEjectBack: 2.1
 coolantMultiplier: 4
 cooldown: 0.01
 maxAmmo: 40
-rotatespeed: 13
+rotateSpeed: 13
 shootSound: pew
 outlineColor: 966102
 //targetAir: false

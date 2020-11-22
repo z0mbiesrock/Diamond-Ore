@@ -10,10 +10,11 @@ coolantMultiplier: 3.75
 ammoEjectBack: 2.1
 cooldown: 0.01
 maxAmmo: 10
-shots: 10
-inaccuracy: 30
+shots: 12
+inaccuracy: 22
+velocityInaccuracy: 0.33
 spread: 0
-rotatespeed: 4
+rotateSpeed: 4
 shootSound: shotgun
 outlineColor: 966102
 //targetAir: false

@@ -11,7 +11,7 @@ maxAmmo: 200
 coolantUsage: 0.2345
 inaccuracy: 8
 xRand: 2
-rotatespeed: 3
+rotateSpeed: 3
 shootSound: shootBig
 outlineIcon: false
 expanded: true

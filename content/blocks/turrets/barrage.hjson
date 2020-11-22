@@ -8,7 +8,7 @@ range: 120
 ammoUseEffect: smoke
 maxAmmo: 100
 inaccuracy: 0
-rotatespeed: 9
+rotateSpeed: 9
 xRand: 4
 shots: 8
 burstSpacing: 6
@@ -90,7 +90,7 @@ ammoTypes: {
 	homingPower: 0
 	homingRange: 0
 	inaccuracy: 2
-	weaveMag: 7
+	weaveMag: 3.3
 	weaveScale: 1.3
 	sprite: diamond-ore-diamondshell
 	trailColor: e2bb7f

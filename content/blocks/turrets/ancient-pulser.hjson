@@ -9,7 +9,7 @@ ammoUseEffect: none
 coolantMultiplier: 7
 cooldown: 0.01
 maxAmmo: 40
-rotatespeed: 15
+rotateSpeed: 15
 shootSound: pew
 outlineColor: 966102
 powerUse: 1

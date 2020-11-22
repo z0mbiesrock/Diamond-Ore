@@ -10,7 +10,7 @@ ammoUseEffect: none
 coolantMultiplier: 2.5
 coolantUsage: 0.1
 cooldown: 0.005
-rotatespeed: 9
+rotateSpeed: 9
 shootSound: flame
 shootEffect: lancerLaserShoot
 smokeEffect: hitLancer
