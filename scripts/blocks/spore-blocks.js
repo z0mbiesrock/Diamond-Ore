@@ -67,11 +67,11 @@ sporeBlockDeath.backColor = Color.valueOf("#6d54b7");
 const darkSporeBlock = extendContent(Wall, "dark-spore-block", {
     updateTile(){
         //when health is lower than max health
-        if ( (this.tile.health() < this.tile.maxHealth()) && (Mathf.chance(slowerregen)) ) {
+        if ( (this.health() < this.maxHealth()) && (Mathf.chance(slowerregen)) ) {
 
-                   this.tile.health += 10;
-				   /* if (this.tile.health() > this.tile.maxHealth()){
-					   this.tile.health() = this.tile.maxHealth();
+                   this.heal(Time.delta() * 10);
+				   /* if (this.health() > this.maxHealth()){
+					   this.health() = this.maxHealth();
 				   } */
 					   
                    
@@ -81,11 +81,11 @@ const darkSporeBlock = extendContent(Wall, "dark-spore-block", {
 const darkSporeBlockLarge = extendContent(Wall, "dark-spore-block-large", {
     updateTile(){
         //when health is lower than max health
-        if ( (this.tile.health() < this.tile.maxHealth()) && (Mathf.chance(slowregen)) ) {
+        if ( (this.health() < this.maxHealth()) && (Mathf.chance(slowregen)) ) {
 
-                   this.tile.health += 20;
-				   /* if (this.tile.health() > this.tile.maxHealth()){
-					   this.tile.health -= this.tile.maxHealth() - this.tile.health();
+                   this.heal(Time.delta() * 20);
+				   /* if (this.health() > this.maxHealth()){
+					   this.health -= this.maxHealth() - this.health();
 				   } */ // unknown if this works
 					   
                    
@@ -96,7 +96,7 @@ extendContent(Cultivator, "sporecluster", {
 	drawBase(tile){
 		podnum = Mathf.round(Mathf.randomSeed(this.id, 1, 4));
 		podrot = Mathf.round(Mathf.randomSeed(this.id, 0, 360));
-		Draw.rect(Core.atlas.find(this.name + podnum), this.x, this.y, podrot);
+		Draw.rect(Core.atlas.find(this.name + podnum), tile.drawx(), tile.drawy(), podrot);
         Draw.color();
 	},
     icons(){
@@ -107,11 +107,11 @@ extendContent(Cultivator, "sporecluster", {
     updateTile(){
         this.super$updateTile();
         //when health is lower than max health
-        if ( (this.tile.health() < this.tile.maxHealth()) && (Mathf.chance(normalregen)) ) {
+        if ( (this.health() < this.maxHealth()) && (Mathf.chance(normalregen)) ) {
 
-                   this.tile.health += 15;
-				   /* if (this.tile.health() > this.tile.maxHealth()){
-					   this.tile.health -= this.tile.maxHealth() - this.tile.health();
+                   this.heal(Time.delta() * 15);
+				   /* if (this.health() > this.maxHealth()){
+					   this.health -= this.maxHealth() - this.health();
 				   } */ // unknown if this works
 					   
                    
@@ -195,11 +195,11 @@ sporeTurretSmlA.buildType = () => extendContent(ItemTurret.ItemTurretBuild, spor
 	},
     updateTile(){
         //when health is lower than max health
-        if ( (this.tile.health() < this.tile.maxHealth()) && (Mathf.chance(fastregen)) ){
+        if ( (this.health() < this.maxHealth()) && (Mathf.chance(fastregen)) ){
 
-                   this.tile.health += 8;
-				   /* if (this.tile.health() > this.tile.maxHealth()){
-					   this.tile.health -= this.tile.maxHealth() - this.tile.health();
+                   this.heal(Time.delta() * 8);
+				   /* if (this.health() > this.maxHealth()){
+					   this.health -= this.maxHealth() - this.health();
 				   } */ // unknown if this works
 					   
                    
@@ -229,11 +229,11 @@ sporeTurretSmlB.buildType = () => extendContent(ItemTurret.ItemTurretBuild, spor
 	},
     updateTile(){
         //when health is lower than max health
-        if ( (this.tile.health() < this.tile.maxHealth()) && (Mathf.chance(fastregen)) ){
+        if ( (this.health() < this.maxHealth()) && (Mathf.chance(fastregen)) ){
 
-                   this.tile.health += 8;
-				   /* if (this.tile.health() > this.tile.maxHealth()){
-					   this.tile.health -= this.tile.maxHealth() - this.tile.health();
+                   this.heal(Time.delta() * 8);
+				   /* if (this.health() > this.maxHealth()){
+					   this.health -= this.maxHealth() - this.health();
 				   } */ // unknown if this works
 					   
                    
@@ -256,11 +256,11 @@ const sporeConveyor = extendContent(Conveyor, "spore-conveyor", {
     },
     updateTile(){
         //when health is lower than max health
-        if ( (this.tile.health() < this.tile.maxHealth()) && (Mathf.chance(fastregen)) ){
+        if ( (this.health() < this.maxHealth()) && (Mathf.chance(fastregen)) ){
 
-                   this.tile.health += 5;
-				   /* if (this.tile.health() > this.tile.maxHealth()){
-					   this.tile.health -= this.tile.maxHealth() - this.tile.health();
+                   this.heal(Time.delta() * 5);
+				   /* if (this.health() > this.maxHealth()){
+					   this.health -= this.maxHealth() - this.health();
 				   } */ // unknown if this works
 					   
                    
@@ -334,9 +334,9 @@ sporeMutator.buildType = () => extendContent(AttributeSmelter.AttributeSmelterBu
 			}
 		}
 		Draw.rect(this.region, this.x, this.y);
-		Draw.alpha((this.tile.items.total() - this.tile.items.get(this.outputItem.item)) / this.itemCapacity);
+		Draw.alpha((this.items.total() - this.items.get(this.outputItem.item)) / this.itemCapacity);
 		Draw.rect(Core.atlas.find(sporeMutator.name + "-input" + this.variant), this.x, this.y, this.rot1);
-		Draw.alpha(this.tile.items.get(this.outputItem.item) / this.itemCapacity);
+		Draw.alpha(this.items.get(this.outputItem.item) / this.itemCapacity);
 		Draw.rect(Core.atlas.find(sporeMutator.name + "-output" + this.variant), this.x, this.y, this.rot2);
 		Draw.alpha((this.liquids.get(this.liquids.current()) / this.liquidCapacity) * this.warmup);
 		Draw.rect(Core.atlas.find(sporeMutator.name + "-top"), this.x, this.y);
@@ -344,11 +344,11 @@ sporeMutator.buildType = () => extendContent(AttributeSmelter.AttributeSmelterBu
 	}, */
     updateTile(){
         //when health is lower than max health
-        if ( (this.tile.health() < this.tile.maxHealth()) && (Mathf.chance(fastregen)) ){
+        if ( (this.health() < this.maxHealth()) && (Mathf.chance(fastregen)) ){
 
-                   this.tile.health += 8;
-				   /* if (this.tile.health() > this.tile.maxHealth()){
-					   this.tile.health -= this.tile.maxHealth() - this.tile.health();
+                   this.heal(Time.delta() * 8);
+				   /* if (this.health() > this.maxHealth()){
+					   this.health -= this.maxHealth() - this.health();
 				   } */ // unknown if this works
 					   
                    
@@ -479,12 +479,12 @@ const darkSporePressCraft = Effect(30, e => {
     Angles.randLenVectors(e.id, 5, -6 + e.fin() * 24, e.rotation + (e.fin() * Mathf.random(-45,45)), 360, rg);
 });
 const darkSporePress = extendContent(AttributeSmelter, "dark-sporepress", {
-	setBars(){
+	/* setBars(){
 		this.super$setBars();
 		this.bars.add("Spore Water",func(entity =>
 			new Bar(prov(() => this.outputLiquid.localizedName), prov(() => this.outputLiquid.barColor()), floatp(() => this.liquids.get(this.outputLiquid.liquid) / this.liquidCapacity))
 		));
-	},
+	}, */
 });
 darkSporePress.buildType = () => extendContent(AttributeSmelter.AttributeSmelterBuild, darkSporePress, {
 	/* draw(){

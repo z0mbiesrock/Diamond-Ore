@@ -12,8 +12,8 @@ craftTime: 60
 buildCostMultiplier: 0.75
 drawLiquidLight: false
 liquidCapacity: 600
-boostScale: 0.3
-maxHeatBoost: 2
+boostScale: 0.1
+maxHeatBoost: 1
 updateEffectChance: 0.15
 outputLiquid: corrupt-water/60
 consumes: {
