@@ -310,7 +310,7 @@ const sporeMutator = extendContent(AttributeSmelter, "mutator", {
         ];
     }
 });
-sporeMutator.buildType = () => extendContent(AttributeSmelter.SmelterBuild, sporeMutator, {
+sporeMutator.buildType = () => extendContent(AttributeSmelter.AttributeSmelterBuild, sporeMutator, {
 	/* draw(){
 		if (this.initiate != true){
 			this.initiate = true;
@@ -486,7 +486,7 @@ const darkSporePress = extendContent(AttributeSmelter, "dark-sporepress", {
 		));
 	},
 });
-darkSporePress.buildType = () => extendContent(AttributeSmelter.SmelterBuild, darkSporePress, {
+darkSporePress.buildType = () => extendContent(AttributeSmelter.AttributeSmelterBuild, darkSporePress, {
 	/* draw(){
 		Draw.rect(this.region, this.x, this.y);
 		Draw.color(this.outputLiquid.color);
