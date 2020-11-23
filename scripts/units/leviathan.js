@@ -1,9 +1,12 @@
 const SpoNavT5 = extendContent(UnitType, "leviathan", {
+	update(){
+		this.heal(2.7);
+	},
 });
 SpoNavT5.constructor = () => extend(UnitWaterMove, {
 	update(){
 		this.super$update();
-		this.heal(0.9);
+		this.heal(2.7);
 	},
 });
 SpoNavT5.abilities.add(new UnitSpawnAbility(UnitTypes.risso, 60 * 45, 0, -32));

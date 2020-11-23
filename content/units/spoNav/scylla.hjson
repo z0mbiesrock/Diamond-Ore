@@ -123,24 +123,31 @@ weapons:[
 	  backColor: be4eff
 	  trailColor: be4eff
 	  lightColor: be4eff
-      width: 12
-      height: 12
-      speed: 10
+      width: 24
+      height: 24
+	  status: sapped
+	  statusDuration: 240
+      speed: 8
       sprite: diamond-ore-diamondshell
-      lifetime: 40
+	  shrinkX: 0.5
+	  shrinkY: 0.5
+      lifetime: 50
 	  damage: 20
 	  splashDamage: 120
 	  splashDamageRadius: 120
 	  shake: 2.8
 	  reflectable: false
 	  absorbable: false
-	  trailEffect: overdriven
+	  trailEffect: hitLiquid
+	  hitEffect: sapExplosion
+	  despawnEffect: shockwave
 	  trailChance: 0.8
 	  fragBullets: 18
 	  fragBullet:{
         type: SapBulletType
         sapStrength: 0.5
 		color: be4eff
+		keepVelocity: false
         width: 0.7
         length: 80
         //lengthRand: 40

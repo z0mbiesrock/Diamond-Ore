@@ -121,8 +121,8 @@ weapons:[
 	  serrations: 20
 	  serrationWidth: 5
 	  serrationSpacing: 10
-	  serrationSpaceOffset: 6
-	  serrationFadeOffset: 0.8
+	  serrationSpaceOffset: 12
+	  serrationFadeOffset: 0.6
 	  hitEffect: mine
 	  hitLarge: true
     }
@@ -132,7 +132,7 @@ weapons:[
     x: 0
     y: 29
     shootY: 4
-    recoil: 5
+    recoil: -8
     reload: 90
     rotate: true
     mirror: false
@@ -161,5 +161,5 @@ weapons:[
 ]
 
 research: {
-  parent: risso
+  parent: charybdis
 }
