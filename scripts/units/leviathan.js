@@ -1,7 +1,4 @@
 const SpoNavT5 = extendContent(UnitType, "leviathan", {
-	update(){
-		this.heal(2.7);
-	},
 });
 SpoNavT5.constructor = () => extend(UnitWaterMove, {
 	update(){

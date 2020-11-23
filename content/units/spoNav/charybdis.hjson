@@ -175,8 +175,8 @@ weapons:[
     y: 9.2
     shootY: 4
     recoil: 3
-    reload: 59.5
-	shots: 3
+    reload: 118.5
+	shots: 6
 	shotDelay: 6
 	spacing: 2
 	inaccuracy: 2

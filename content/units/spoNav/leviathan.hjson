@@ -22,21 +22,21 @@ weapons:[
   {
     name: large-purple-mount
     x: 17
-    y: 4
+    y: -8
     shootY: 4
     recoil: 0
     reload: 36.036
     rotate: true
 	rotateSpeed: 14
-    soundPitchMin: 1.2
-    soundPitchMax: 1.4
+    soundPitchMin: 1.8
+    soundPitchMax: 1.9
     shootSound: plasmaboom
     bullet:{
       type: SapBulletType
       sapStrength: 1.05
 	  color: bf92f9
 	  hitColor: bf92f9
-      width: 2.5
+      width: 1.75
       length: 400
       lifetime: 20
 	  damage: 75
@@ -47,18 +47,18 @@ weapons:[
   {
     name: large-purple-mount
     x: -17
-    y: -8
+    y: 4
     shootY: 4
     recoil: 0
     reload: 36
     rotate: true
 	rotateSpeed: 14
-    soundPitchMin: 1.2
-    soundPitchMax: 1.4
+    soundPitchMin: 1.8
+    soundPitchMax: 1.9
     shootSound: plasmaboom
     bullet:{
       type: SapBulletType
-      sapStrength: 1.05
+      sapStrength: 1.75
 	  color: bf92f9
 	  hitColor: bf92f9
       width: 2.5
@@ -78,15 +78,15 @@ weapons:[
     reload: 36.01
     rotate: true
 	rotateSpeed: 14
-    soundPitchMin: 1.2
-    soundPitchMax: 1.4
+    soundPitchMin: 1.8
+    soundPitchMax: 1.9
     shootSound: plasmaboom
     bullet:{
       type: SapBulletType
       sapStrength: 1.05
 	  color: bf92f9
 	  hitColor: bf92f9
-      width: 2.5
+      width: 1.75
       length: 400
       lifetime: 20
 	  damage: 75
@@ -131,9 +131,12 @@ weapons:[
     name: leviathan-sapper
     x: 0
     y: 29
-    shootY: 4
+    shootY: 14
     recoil: -8
     reload: 90
+	shootCone: 0
+	cooldownTime: 90
+	heatColor: 9955cf
     rotate: true
     mirror: false
 	rotateSpeed: 0.85
@@ -148,14 +151,15 @@ weapons:[
 	  backColor: 6449bf
 	  hitColor: bf92f9
 	  statusDuration: 600
-      width: 6
+      width: 5
       length: 600
       lifetime: 15
 	  damage: 400
 	  knockback: -12
-	  pierce: true
-	  pierceCap: 3
+	  splashDamage: 600
+	  splashDamageRadius: 32
 	  absorbable: false
+	  reflectable: false
     }
   }
 ]

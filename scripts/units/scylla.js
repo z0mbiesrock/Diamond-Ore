@@ -1,7 +1,4 @@
 const SpoNavT3 = extendContent(UnitType, "scylla", {
-	update(){
-		this.heal(0.9);
-	},
 });
 SpoNavT3.constructor = () => extend(UnitWaterMove, {
 	update(){

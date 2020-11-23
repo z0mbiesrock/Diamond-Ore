@@ -123,14 +123,14 @@ weapons:[
 	  backColor: be4eff
 	  trailColor: be4eff
 	  lightColor: be4eff
-      width: 24
+      width: 12
       height: 24
 	  status: sapped
 	  statusDuration: 240
       speed: 8
       sprite: diamond-ore-diamondshell
-	  shrinkX: 0.5
-	  shrinkY: 0.5
+	  shrinkX: 0
+	  shrinkY: 0
       lifetime: 50
 	  damage: 20
 	  splashDamage: 120
@@ -138,7 +138,7 @@ weapons:[
 	  shake: 2.8
 	  reflectable: false
 	  absorbable: false
-	  trailEffect: hitLiquid
+	  trailEffect: smokeCloud
 	  hitEffect: sapExplosion
 	  despawnEffect: shockwave
 	  trailChance: 0.8
