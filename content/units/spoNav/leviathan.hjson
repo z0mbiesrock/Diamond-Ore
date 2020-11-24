@@ -127,7 +127,7 @@ weapons:[
 	  width: 8
 	  damage: 25
 	  knockback: 0.7
-	  serrations: 10
+	  serrations: 25
 	  serrationWidth: 10
 	  serrationSpacing: 8
 	  serrationSpaceOffset: 3

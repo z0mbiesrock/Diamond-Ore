@@ -1,7 +1,7 @@
 type: PowerNode
 name: Reinforced Power Distributor
 description: A very durable power node with a vast connection range.
-laserRange: 50
+laserRange: 70
 maxNodes: 3
 size: 3
 health: 2160

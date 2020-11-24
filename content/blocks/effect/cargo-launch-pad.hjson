@@ -6,7 +6,7 @@ size: 6
 launchTime: 1800
 health: 28800
 buildVisibility: campaignOnly
-podRegion: cargo-launch-pad-pod
+//podRegion: cargo-launch-pad-pod
 lightColor: ffffff
 buildCostMultiplier: 0.85
 researchCostMultiplier: 4.7
