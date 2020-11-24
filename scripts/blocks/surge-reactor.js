@@ -28,10 +28,10 @@ surgeReactorMeltdownFlak.trailColor = Color.valueOf("#ffffff");
 
 const surgeReactorMeltdownShockFork = extend(LightningBulletType, {
 });
-surgeReactorMeltdownShock.lightningLength = 10;
-surgeReactorMeltdownShock.lightningLengthRand = 10;
-surgeReactorMeltdownShock.damage = 150;
-surgeReactorMeltdownShock.pierce = true;
+surgeReactorMeltdownShockFork.lightningLength = 10;
+surgeReactorMeltdownShockFork.lightningLengthRand = 10;
+surgeReactorMeltdownShockFork.damage = 150;
+surgeReactorMeltdownShockFork.pierce = true;
 
 const surgeReactorMeltdownShockA = extend(LightningBulletType, {
 });
