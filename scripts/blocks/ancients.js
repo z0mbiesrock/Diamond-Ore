@@ -70,50 +70,14 @@ const ancientBladeLaserHit = Effect(15, e => {
     }}) 
     Angles.randLenVectors(e.id, 8, 1 + 12 * e.fin(), e.rotation, 360,d);
 });
-const ancientBladeLaser = extend(BasicBulletType, {
-	
-	update: function(b){
-		if(b.timer.get(1, 3)){
-			Damage.collideLine(b, b.getTeam(), this.hitEffect, b.x, b.y, b.rot(), 96.0, false);
-		}
-	},
-	
-	/*hit: function(b, hitx, hity){
-	Effect.create(this.hitEffect, Color.valueOf("a9d8ffaa"), hitx, hity);
-		if(Mathf.chance(0.1)){
-			//Fire.create(world.tileWorld(hitx + Mathf.range(6.0), hity + Mathf.range(6.0)));
-			Damage.createIncend(hitx, hity, 6, 1);
-		}
-	},*/
-	
-	draw: function(b){
-		
-		const colors = [Color.valueOf("a9d8ff5f"), Color.valueOf("6998ff"), Color.valueOf("ffffff")];
-		const tscales = [1, 0.8, 0.6, 0.3];
-		const strokes = [0.45, 0.3, 0.15];
-		const lenscales = [1.0, 1.18, 1.21, 1.217];
-		const tmpColor = new Color();
-
-		//Lines.lineAngle(b.x, b.y, b.rot(), baseLen);
-		for(var s = 0; s < 3; s++){
-			//Draw.color(colors[s]);
-			Draw.color(tmpColor.set(colors[s]).mul(1.0 + Mathf.absin(Time.time(), 1.5, 0.1)));
-			for(var i = 0; i < 4; i++){
-				Tmp.v1.trns(b.rot() + 180.0, (lenscales[i] - 1.0) * 25.0);
-				Lines.stroke((9 + Mathf.absin(Time.time(), 1.4, 1.5)) * b.fout() * strokes[s] * tscales[i]);
-				Lines.lineAngle(b.x + Tmp.v1.x, b.y + Tmp.v1.y, b.rot(), 96.0 * b.fout() * lenscales[i], CapStyle.none);
-			}
-		};
-		Draw.reset();
-	}
-});
-ancientBladeLaser.speed = 0.001;
+const ancientBladeLaser = extend(ContinuousLaserBulletType, {});
 ancientBladeLaser.damage = 75;
-ancientBladeLaser.lifetime = 13;
+ancientBladeLaser.length = 100;
 ancientBladeLaser.hitEffect = ancientBladeLaserHit;
 ancientBladeLaser.despawnEffect = Fx.shootBigSmoke2;
 ancientBladeLaser.hitSize = 4;
-ancientBladeLaser.drawSize = 610;
+ancientBladeLaser.drawSize = 210;
+ancientBladeLaser.incendAmount = 0;
 ancientBladeLaser.pierce = true;
 ancientBladeLaser.shootEffect = Fx.none;
 ancientBladeLaser.smokeEffect = Fx.none;
