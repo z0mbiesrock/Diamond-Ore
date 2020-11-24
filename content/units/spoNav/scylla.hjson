@@ -120,7 +120,6 @@ weapons:[
     shootSound: laser
     bullet:{
       type: ArtilleryBulletType
-      //sapStrength: 0.5
 	  frontColor: 9f43ff
 	  hitColor: 9f43ff
 	  backColor: be4eff
@@ -150,7 +149,7 @@ weapons:[
 	  fragBullet:{
         type: SapBulletType
 		collidesAir: false
-        sapStrength: 0.5
+        sapStrength: 1
 		color: be4eff
 		keepVelocity: false
         width: 0.7
