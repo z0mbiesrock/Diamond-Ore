@@ -4,7 +4,7 @@ commandLimit: 8
 speed: 1.1
 drag: 0.13
 accel: 0.4
-rotateSpeed: 17.5
+rotateSpeed: 22.5
 health: 200
 armor: 1
 range: 100

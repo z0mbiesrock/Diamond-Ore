@@ -24,7 +24,7 @@ weapons:[
     name: large-purple-mount
     x: 17
     y: -8
-    shootY: 4
+    shootY: 8
     recoil: 0
     reload: 36.036
     rotate: true
@@ -43,13 +43,15 @@ weapons:[
 	  damage: 75
 	  knockback: -2
 	  hittable: false
+	  shootEffect: railShoot
+	  smokeEffect: shootBigSmoke2
     }
   },
   {
     name: large-purple-mount
     x: -17
     y: 4
-    shootY: 4
+    shootY: 8
     recoil: 0
     reload: 36
     rotate: true
@@ -69,13 +71,15 @@ weapons:[
 	  damage: 75
 	  knockback: -2
 	  hittable: false
+	  shootEffect: railShoot
+	  smokeEffect: shootBigSmoke2
     }
   },
   {
     name: large-purple-mount
     x: 17
     y: 14.3
-    shootY: 4
+    shootY: 8
     recoil: 0
     reload: 36.01
     rotate: true
@@ -94,6 +98,8 @@ weapons:[
 	  damage: 75
 	  knockback: -2
 	  hittable: false
+	  shootEffect: railShoot
+	  smokeEffect: shootBigSmoke2
     }
   },
   {
@@ -147,7 +153,7 @@ weapons:[
     soundPitchMax: 2.5
     shootSound: laserblast
 	shootStatus: shielded
-	shootStatusDuration: 60
+	shootStatusDuration: 20
     bullet:{
       type: SapBulletType
       sapStrength: 1.5
@@ -159,11 +165,14 @@ weapons:[
       length: 600
       lifetime: 30
 	  damage: 400
-	  knockback: -3
-	  splashDamage: 600
+	  knockback: -15
+	  splashDamage: 300
+	  hitEffect: sapExplosion
 	  splashDamageRadius: 32
 	  absorbable: false
 	  reflectable: false
+	  shootEffect: instShoot
+	  smokeEffect: shootLiquid
     }
   }
 ]

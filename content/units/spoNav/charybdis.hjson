@@ -4,7 +4,7 @@ commandLimit: 8
 speed: 0.7
 drag: 0.09
 accel: 0.13
-rotateSpeed: 7.25
+rotateSpeed: 5.25
 mineSpeed: 4
 mineTier: 3
 health: 3200

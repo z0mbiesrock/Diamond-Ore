@@ -4,7 +4,7 @@ commandLimit: 8
 speed: 0.8
 drag: 0.13
 accel: 0.2
-rotateSpeed: 3.25
+rotateSpeed: 9.25
 //mineSpeed: 5
 //mineTier: 2
 health: 800
@@ -44,6 +44,7 @@ weapons:[
 	  damage: 48
 	  knockback: -4
 	  hittable: false
+      shootEffect: shootBig2
     }
   },
   {
@@ -71,6 +72,7 @@ weapons:[
 	  damage: 48
 	  knockback: -4
 	  hittable: false
+      shootEffect: shootBig2
     }
   },
   {
@@ -96,6 +98,7 @@ weapons:[
 	  damage: 48
 	  knockback: -4
 	  hittable: false
+      shootEffect: shootBig2
     }
   },
   {
@@ -131,14 +134,15 @@ weapons:[
       sprite: diamond-ore-diamondshell
 	  shrinkX: 0
 	  shrinkY: 0
-      lifetime: 50
+      lifetime: 60
 	  damage: 20
 	  splashDamage: 120
 	  splashDamageRadius: 120
 	  shake: 2.8
 	  reflectable: false
 	  absorbable: false
-	  trailEffect: hitLiquid
+	  trailEffect: shootLiquid
+	  shootEffect: sparkShoot
 	  hitEffect: sapExplosion
 	  despawnEffect: shockwave
 	  trailChance: 0.8
