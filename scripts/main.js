@@ -25,5 +25,5 @@ require("blocks/water-decorruptor")
 // Ancient Content
 require("blocks/ancientrefinery")
 require("blocks/ancients")
-//require("blocks/vanillaammo") STILL BRAZIL
+require("blocks/vanillaammo")// STILL STUCK IN BRAZIL
 
