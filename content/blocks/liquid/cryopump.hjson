@@ -10,7 +10,7 @@ hasPower: true
 drawLiquidLight: false
 updateEffect: wet
 updateEffectChance: 0.04
-pumpAmount: 4
+pumpAmount: 1
 consumes: {
   power: 1.6
 }
