@@ -149,6 +149,7 @@ weapons:[
 	  fragBullets: 30
 	  fragBullet:{
         type: SapBulletType
+		collidesAir: false
         sapStrength: 0.5
 		color: be4eff
 		keepVelocity: false
