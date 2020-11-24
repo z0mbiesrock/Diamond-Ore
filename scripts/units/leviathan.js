@@ -3,8 +3,11 @@ const SpoNavT5 = extendContent(UnitType, "leviathan", {
 SpoNavT5.constructor = () => extend(UnitWaterMove, {
 	update(){
 		this.super$update();
-		this.heal(2.7);
-	},
+		if (this.healthf() < 1){
+			this.health += 4.0;
+			this.clampHealth();
+		}
+	}
 });
 SpoNavT5.abilities.add(new UnitSpawnAbility(UnitTypes.risso, 60 * 45, 0, -32));
 SpoNavT5.ammoType = AmmoTypes.powerHigh;

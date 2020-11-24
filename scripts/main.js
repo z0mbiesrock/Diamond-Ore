@@ -1,4 +1,4 @@
-const meta = Vars.mods.locateMod("diamond-ore");
+
 // Blocks
 require("testbomb")
 require("blocks/crystal-conveyor")

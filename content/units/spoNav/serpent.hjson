@@ -105,4 +105,9 @@ weapons:[
 
 research: {
   parent: siren
+  requirements:[
+      silicon/8000
+      graphite/8000
+      diamond/1000
+  ]
 }

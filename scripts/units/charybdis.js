@@ -3,8 +3,11 @@ const SpoNavT4 = extendContent(UnitType, "charybdis", {
 SpoNavT4.constructor = () => extend(UnitWaterMove, {
 	update(){
 		this.super$update();
-		this.heal(1.8);
-	},
+		if (this.healthf() < 1){
+			this.health += 1.0;
+			this.clampHealth();
+		}
+	}
 });
 //SpoNavT4.abilities.add(new StatusFieldAbility(StatusEffects.overclock, 60 * 6, 60 * 9, 64));
 SpoNavT4.ammoType = AmmoTypes.powerHigh;

@@ -7,16 +7,17 @@ accel: 0.1564
 rotateSpeed: 2.425
 mineSpeed: 5
 mineTier: 4
-health: 16400
+health: 16000
 armor: 30
 range: 600
 itemCapacity: 320
 hitSize: 24
+hitSizeTile: 15
 rotateShooting: false
 immunities: [wet, sapped, sporeSlowed, corroded]
 trailLength: 40
 trailX: 0
-trailY: -15
+trailY: -18
 
 weapons:[
   {
@@ -38,9 +39,9 @@ weapons:[
 	  hitColor: bf92f9
       width: 1.75
       length: 400
-      lifetime: 20
+      lifetime: 30
 	  damage: 75
-	  knockback: -6
+	  knockback: -2
 	  hittable: false
     }
   },
@@ -52,6 +53,7 @@ weapons:[
     recoil: 0
     reload: 36
     rotate: true
+    flipSprite: true
 	rotateSpeed: 14
     soundPitchMin: 1.8
     soundPitchMax: 1.9
@@ -63,9 +65,9 @@ weapons:[
 	  hitColor: bf92f9
       width: 2.5
       length: 400
-      lifetime: 20
+      lifetime: 30
 	  damage: 75
-	  knockback: -6
+	  knockback: -2
 	  hittable: false
     }
   },
@@ -88,9 +90,9 @@ weapons:[
 	  hitColor: bf92f9
       width: 1.75
       length: 400
-      lifetime: 20
+      lifetime: 30
 	  damage: 75
-	  knockback: -6
+	  knockback: -2
 	  hittable: false
     }
   },
@@ -117,7 +119,7 @@ weapons:[
       length: 200
 	  width: 8
 	  damage: 25
-	  knockback: -2
+	  knockback: 0.7
 	  serrations: 20
 	  serrationWidth: 5
 	  serrationSpacing: 10
@@ -144,6 +146,8 @@ weapons:[
     soundPitchMin: 2.5
     soundPitchMax: 2.5
     shootSound: laserblast
+	shootStatus: shielded
+	shootStatusDuration: 60
     bullet:{
       type: SapBulletType
       sapStrength: 1.5
@@ -153,9 +157,9 @@ weapons:[
 	  statusDuration: 600
       width: 5
       length: 600
-      lifetime: 15
+      lifetime: 30
 	  damage: 400
-	  knockback: -12
+	  knockback: -3
 	  splashDamage: 600
 	  splashDamageRadius: 32
 	  absorbable: false
@@ -166,4 +170,13 @@ weapons:[
 
 research: {
   parent: charybdis
+  requirements:[
+      silicon/255000
+      plastanium/160000
+      surge-alloy/150000
+      phase-fabric/140000
+      diamond/5000
+      cryogem/1500
+      dark-spore-pod/500
+  ]
 }

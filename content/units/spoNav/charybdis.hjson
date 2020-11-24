@@ -5,7 +5,7 @@ speed: 0.7
 drag: 0.09
 accel: 0.13
 rotateSpeed: 7.25
-mineSpeed: 5
+mineSpeed: 4
 mineTier: 3
 health: 3200
 armor: 8
@@ -286,5 +286,13 @@ weapons:[
 ]
 
 research: {
-  parent: siren
+  parent: scylla
+  requirements:[
+      silicon/80000
+      titanium/44000
+      plastanium/16000
+      diamond/3000
+      cryogem/500
+      thorium/50000
+  ]
 }

@@ -32,6 +32,7 @@ spectreCryo.height = 24;
 spectreCryo.bulletSprite = "diamond-ore-diamondbullet";
 spectreCryo.frontColor = Color.valueOf("#cceeff");
 spectreCryo.backColor = Color.valueOf("#4499ee");
-Blocks.cyclone.ammoTypes.put(Vars.content.getByName(ContentType.item, "diamond-ore-cryogem"),cycloneCryo);
-Blocks.spectre.ammoTypes.put(Vars.content.getByName(ContentType.item, "diamond-ore-cryogem"),spectreCryo);
+const cryogemItem = Vars.content.getByName(ContentType.item, "diamond-ore-cryogem")
+Blocks.cyclone.ammoTypes.put(cryogemItem,cycloneCryo);
+Blocks.spectre.ammoTypes.put(cryogemItem,spectreCryo);
 print("vanilla ammo script successful")

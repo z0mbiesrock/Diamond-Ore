@@ -3,8 +3,11 @@ const SpoNavT3 = extendContent(UnitType, "scylla", {
 SpoNavT3.constructor = () => extend(UnitWaterMove, {
 	update(){
 		this.super$update();
-		this.heal(0.9);
-	},	
+		if (this.healthf() < 1){
+			this.health += 0.25;
+			this.clampHealth();
+		}
+	}
 });
 SpoNavT3.ammoType = AmmoTypes.powerLow;
 

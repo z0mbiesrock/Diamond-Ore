@@ -49,6 +49,7 @@ weapons:[
     recoil: 0
     reload: 19
     rotate: true
+    flipSprite: true
     soundPitchMin: 1.2
     soundPitchMax: 1.4
     shootSound: sap
@@ -61,12 +62,18 @@ weapons:[
       length: 100
       lifetime: 15
 	  damage: 13
-	  knockback: -2
+	  knockback: -6
 	  hittable: false
     }
   }
 ]
 
-research: {
+research:{
   parent: risso
+  requirements:[
+      silicon/3000
+      spore-pod/1000
+      metaglass/1000
+      diamond/1000
+  ]
 }
