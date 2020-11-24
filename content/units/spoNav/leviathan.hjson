@@ -130,8 +130,8 @@ weapons:[
 	  serrations: 10
 	  serrationWidth: 10
 	  serrationSpacing: 8
-	  serrationSpaceOffset: 8
-	  serrationFadeOffset: 0.9
+	  serrationSpaceOffset: 3
+	  serrationFadeOffset: 0.7
 	  hitEffect: mine
 	  hitLarge: true
     }

@@ -3,7 +3,7 @@ description: "An advanced phase conduit that uses [#e5b85e]ancient technology[].
 type: LiquidBridge
 health: 320
 size: 1
-range: 24
+range: 18
 buildCostMultiplier: 0.325
 baseExplosiveness: 15
 liquidCapacity: 20

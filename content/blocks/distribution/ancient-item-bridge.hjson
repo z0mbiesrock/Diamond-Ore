@@ -3,7 +3,7 @@ description: "An advanced phase conveyor that uses [#e5b85e]ancient technology[]
 type: ItemBridge
 health: 320
 size: 1
-range: 24
+range: 18
 transportTime: 1
 buildCostMultiplier: 0.325
 baseExplosiveness: 15
