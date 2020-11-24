@@ -153,6 +153,8 @@ weapons:[
 		color: be4eff
 		keepVelocity: false
         width: 0.7
+        weaveScale: 0.7
+        weaveMag: 4
         length: 80
         //lengthRand: 40
         lifetime: 15
