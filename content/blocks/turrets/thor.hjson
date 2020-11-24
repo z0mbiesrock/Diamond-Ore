@@ -267,7 +267,7 @@ ammoTypes: {
 	weaveScale: -2
 	weaveMag: 4
 	fragBullets: 200
-	knockback: 500
+	knockback: 20
 	fragVelocityMin: 0.001
 	fragVelocityMax: 4.75
 	fragBullet: {
@@ -283,7 +283,7 @@ ammoTypes: {
 	  despawnEffect: none
 	  hitEffect: none
 	  pierce: true
-	  knockback: 2222
+	  knockback: 22
 	  homingPower: 3
 	  homingRange: 11
 	  sprite: diamond-ore-diamondbullet

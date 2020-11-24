@@ -58,7 +58,7 @@ ammoTypes: {
 	shrinkY: 0
 	reloadMultiplier: 3
 	pierce: true
-	knockback: 150
+	knockback: 15
 	status: freezing
 	statusDuration: 330
 	sprite: diamond-ore-diamondbullet
@@ -179,7 +179,7 @@ ammoTypes: {
 	  frontColor: b94e9e
 	  backColor: aaffff
 	  pierce: true
-	  knockback: 30
+	  knockback: 2
 	  homingPower: 0.02
 	  sprite: diamond-ore-diamondbullet
     }

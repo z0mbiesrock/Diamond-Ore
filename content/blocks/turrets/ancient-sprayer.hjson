@@ -32,7 +32,7 @@ ammoTypes: {
 	despawnEffect: shootBig
     ammoMultiplier: 4
 	pierce: false
-	knockback: 5
+	knockback: 0.5
 	sprite: diamond-ore-diamondbullet
 	shrinkY: 0.125
   }
@@ -53,7 +53,7 @@ ammoTypes: {
     ammoMultiplier: 2
     reloadMultiplier: 0.8
 	pierce: false
-	knockback: 15
+	knockback: 1.5
 	sprite: diamond-ore-diamondbullet
 	shrinkY: 0.875
   }
@@ -74,7 +74,7 @@ ammoTypes: {
     ammoMultiplier: 3
     reloadMultiplier: 0.6
 	pierce: false
-	knockback: 45
+	knockback: 2.25
 	sprite: diamond-ore-diamondbullet
 	shrinkY: 0.9
   }
@@ -201,7 +201,7 @@ ammoTypes: {
 	shrinkY: 1
 	homingPower: 7
 	homingRange: 12
-	knockback: 25
+	knockback: 2.5
   }
   metaglass: {
     type: BasicBulletType
@@ -223,7 +223,7 @@ ammoTypes: {
 	sprite: diamond-ore-diamondbullet
 	shrinkY: 1
 	fragBullets: 4
-	knockback: 25
+	knockback: 2.5
 	fragVelocityMin: 3
 	fragVelocityMax: 6
 	fragBullet: {
@@ -242,7 +242,7 @@ ammoTypes: {
 	  pierce: false
 	  sprite: diamond-ore-diamondshell
 	  shrinkY: 0.879
-	  knockback: 25
+	  knockback: 1.25
     }
   }
   ancient-scrap: {
@@ -265,7 +265,7 @@ ammoTypes: {
 	sprite: diamond-ore-diamondbullet
 	shrinkY: 1
 	fragBullets: 7
-	knockback: 25
+	knockback: 1.25
 	fragVelocityMin: 5
 	fragVelocityMax: 12
 	fragBullet: {
@@ -284,7 +284,7 @@ ammoTypes: {
 	  pierce: false
 	  sprite: diamond-ore-diamondshell
 	  shrinkY: 0.875
-	  knockback: 60
+	  knockback: 6
     }
   }
   blast-compound: {

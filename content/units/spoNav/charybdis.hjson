@@ -227,9 +227,10 @@ weapons:[
     shootY: 4
     recoil: 3
     reload: 80
-	shots: 2
+	shots: 3
 	shotDelay: 3
-	inaccuracy: 15
+	inaccuracy: 5
+	spacing: 3
 	rotateSpeed: 25
 	occlusion: 7
     rotate: true
@@ -258,6 +259,7 @@ weapons:[
 	  fragVelocityMax: 3.75
 	  fragLifeMax: 1.75
 	  reflectable: false
+	  scaleVelocity: true
 	  hitColor: d283ff
 	  lightColor: d283ff
 	  lightningColor: bc7bfd

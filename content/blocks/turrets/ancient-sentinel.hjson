@@ -293,11 +293,12 @@ ammoTypes: {
 	knockback: 15
 	sprite: diamond-ore-diamondbomb
 	fragBullets: 20
-	fragVelocityMin: 3
+	fragVelocityMin: 1
 	fragVelocityMax: 4.5
 	fragBullet: {
       type: ArtilleryBulletType
       drag: 0.08
+      speed: 10
 	  lifetime: 30
       damage: 15
       width: 7.5

@@ -28,7 +28,7 @@ weapons:[
     recoil: 0
     reload: 36.036
     rotate: true
-	rotateSpeed: 14
+	rotateSpeed: 5
     soundPitchMin: 1.8
     soundPitchMax: 1.9
     shootSound: plasmaboom
@@ -43,8 +43,8 @@ weapons:[
 	  damage: 75
 	  knockback: -2
 	  hittable: false
-	  shootEffect: railShoot
-	  smokeEffect: shootBigSmoke2
+	  shootEffect: shootSmall
+	  smokeEffect: shootLiquid
     }
   },
   {
@@ -56,7 +56,7 @@ weapons:[
     reload: 36
     rotate: true
     flipSprite: true
-	rotateSpeed: 14
+	rotateSpeed: 5
     soundPitchMin: 1.8
     soundPitchMax: 1.9
     shootSound: plasmaboom
@@ -71,8 +71,8 @@ weapons:[
 	  damage: 75
 	  knockback: -2
 	  hittable: false
-	  shootEffect: railShoot
-	  smokeEffect: shootBigSmoke2
+	  shootEffect: shootSmall
+	  smokeEffect: shootLiquid
     }
   },
   {
@@ -83,7 +83,7 @@ weapons:[
     recoil: 0
     reload: 36.01
     rotate: true
-	rotateSpeed: 14
+	rotateSpeed: 5
     soundPitchMin: 1.8
     soundPitchMax: 1.9
     shootSound: plasmaboom
@@ -98,8 +98,8 @@ weapons:[
 	  damage: 75
 	  knockback: -2
 	  hittable: false
-	  shootEffect: railShoot
-	  smokeEffect: shootBigSmoke2
+	  shootEffect: shootSmall
+	  smokeEffect: shootLiquid
     }
   },
   {
@@ -112,6 +112,7 @@ weapons:[
 	shots: 3
 	inaccuracy: 15
     rotate: true
+	rotateSpeed: 15
     alternate: true
     soundPitchMin: 2.5
     soundPitchMax: 3.8
@@ -126,11 +127,11 @@ weapons:[
 	  width: 8
 	  damage: 25
 	  knockback: 0.7
-	  serrations: 20
-	  serrationWidth: 5
-	  serrationSpacing: 10
-	  serrationSpaceOffset: 12
-	  serrationFadeOffset: 0.6
+	  serrations: 10
+	  serrationWidth: 10
+	  serrationSpacing: 8
+	  serrationSpaceOffset: 8
+	  serrationFadeOffset: 0.9
 	  hitEffect: mine
 	  hitLarge: true
     }
@@ -167,11 +168,12 @@ weapons:[
 	  damage: 400
 	  knockback: -15
 	  splashDamage: 300
-	  hitEffect: sapExplosion
 	  splashDamageRadius: 32
+	  hitEffect: sapExplosion
+	  hitSize: 4
 	  absorbable: false
 	  reflectable: false
-	  shootEffect: instShoot
+	  shootEffect: shootLiquid
 	  smokeEffect: shootLiquid
     }
   }

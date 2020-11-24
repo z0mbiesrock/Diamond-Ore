@@ -43,7 +43,7 @@ ammoTypes: {
     ammoMultiplier: 4
 	shrinkY: 0
 	pierce: true
-	knockback: 600
+	knockback: 12
 	sprite: diamond-ore-diamondbullet
   }
   titanium: {
@@ -62,7 +62,7 @@ ammoTypes: {
 	reloadMultiplier: 1.65
 	shrinkY: 0
 	pierce: true
-	knockback: 150
+	knockback: 25
 	status: freezing
 	statusDuration: 1320
 	sprite: diamond-ore-diamondbullet
@@ -192,7 +192,7 @@ ammoTypes: {
 	  frontColor: b94e9e
 	  backColor: aaffff
 	  pierce: true
-	  knockback: 30
+	  knockback: 12
 	  homingPower: 0.02
 	  sprite: diamond-ore-diamondbullet
     }

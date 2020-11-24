@@ -141,12 +141,12 @@ weapons:[
 	  shake: 2.8
 	  reflectable: false
 	  absorbable: false
-	  trailEffect: shootLiquid
+	  trailEffect: nuclearsmoke
 	  shootEffect: sparkShoot
 	  hitEffect: sapExplosion
 	  despawnEffect: shockwave
 	  trailChance: 0.8
-	  fragBullets: 18
+	  fragBullets: 30
 	  fragBullet:{
         type: SapBulletType
         sapStrength: 0.5

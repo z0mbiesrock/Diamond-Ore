@@ -35,7 +35,7 @@ ammoTypes: {
 	despawnEffect: hitBulletBig
     ammoMultiplier: 4
 	pierce: false
-	knockback: 45
+	knockback: 4.5
 	sprite: shell
   }
   scrap: {
@@ -54,7 +54,7 @@ ammoTypes: {
     ammoMultiplier: 3
 	reloadMultiplier: 0.75
 	pierce: false
-	knockback: 15
+	knockback: 1.5
 	sprite: shell
 	shrinkY: 0
 	fragBullets: 20
@@ -72,7 +72,7 @@ ammoTypes: {
 	  frontColor: ffa044
 	  backColor: ff6614
 	  pierce: true
-	  knockback: 10
+	  knockback: 1.0
 	  sprite: diamond-ore-diamondshell
     }
   }
@@ -94,7 +94,7 @@ ammoTypes: {
     ammoMultiplier: 2
 	reloadMultiplier: 1.25
 	pierce: false
-	knockback: 45
+	knockback: 4.5
 	sprite: diamond-ore-diamondbullet
 	homingPower: 0.03
 	homingRange: 60
@@ -115,7 +115,7 @@ ammoTypes: {
     ammoMultiplier: 1
 	reloadMultiplier: 0.5
 	pierce: false
-	knockback: 200
+	knockback: 20.0
 	sprite: shell
 	shrinkY: 0
   }
@@ -137,7 +137,7 @@ ammoTypes: {
 	pierce: false
 	status: burning
 	statusDuration: 900
-	knockback: 90
+	knockback: 9.0
 	sprite: diamond-ore-diamondshell
 	shrinkY: 0
   }
@@ -159,7 +159,7 @@ ammoTypes: {
 	pierce: false
 	status: freezing
 	statusDuration: 900
-	knockback: 90
+	knockback: 9.0
 	sprite: diamond-ore-diamondbullet
 	shrinkY: 0
   }
@@ -179,7 +179,7 @@ ammoTypes: {
     ammoMultiplier: 3
 	reloadMultiplier: 0.75
 	pierce: true
-	knockback: 15
+	knockback: 1.5
 	sprite: diamond-ore-diamondbullet
 	shrinkY: 0
 	fragBullets: 12
@@ -197,7 +197,7 @@ ammoTypes: {
 	  frontColor: ffa044
 	  backColor: ff6614
 	  pierce: false
-	  knockback: 125
+	  knockback: 12.5
 	  sprite: shell
     }
   }
