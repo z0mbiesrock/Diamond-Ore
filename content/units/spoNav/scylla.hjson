@@ -33,6 +33,7 @@ weapons:[
     shootSound: sap
     bullet:{
       type: SapBulletType
+	  shootEffect: sparkShoot
 	  frontColor: 7955bf
 	  backColor: 6449bf
 	  color: bf92f9
@@ -61,6 +62,7 @@ weapons:[
     shootSound: sap
     bullet:{
       type: SapBulletType
+	  shootEffect: sparkShoot
 	  frontColor: 7955bf
 	  backColor: 6449bf
 	  color: bf92f9
@@ -89,6 +91,7 @@ weapons:[
     shootSound: sap
     bullet:{
       type: SapBulletType
+	  shootEffect: sparkShoot
       sapStrength: 0.75
 	  color: bf92f9
 	  hitColor: bf92f9
@@ -142,6 +145,7 @@ weapons:[
 	  absorbable: false
 	  trailEffect: nuclearsmoke
 	  shootEffect: sparkShoot
+	  sokeEffect: shootLiquid
 	  hitEffect: sapExplosion
 	  despawnEffect: shockwave
 	  trailChance: 0.8
@@ -158,7 +162,7 @@ weapons:[
         length: 80
         //lengthRand: 40
         lifetime: 15
-	    damage: 20
+	    damage: 8
 	    knockback: -12
 	    hittable: false
       }

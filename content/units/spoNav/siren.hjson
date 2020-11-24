@@ -47,7 +47,7 @@ weapons:[
     y: 4
     shootY: 4
     recoil: 0
-    reload: 19
+    reload: 19.95
     rotate: true
     flipSprite: true
     soundPitchMin: 1.2

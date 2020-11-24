@@ -51,11 +51,12 @@ weapons:[
     y: 12
     shootY: 4
     recoil: 1
-    reload: 19.02
-	inaccuracy: 5
+    reload: 38
+	inaccuracy: 4
 	occlusion: 5
-	shots: 2
+	shots: 4
     rotate: true
+    mirror: false
     soundPitchMin: 1.7
     soundPitchMax: 2.4
     shootSound: spark
@@ -64,7 +65,7 @@ weapons:[
       type: LightningBulletType
 	  lightningColor: A387EA
 	  hitColor: 8A73C6
-      lightningLength: 13
+      lightningLength: 18
       lightningLengthRand: 13
       lifetime: 1
 	  range: 184

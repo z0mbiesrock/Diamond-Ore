@@ -253,7 +253,7 @@ weapons:[
 	  damage: 216
 	  explodeRange: 52
       fragBullets: 18
-	  fragCone: 115
+	  fragCone: 57
 	  fragVelocityMin: 0.9
 	  fragLifeMin: 0.5
 	  fragVelocityMax: 3.75
