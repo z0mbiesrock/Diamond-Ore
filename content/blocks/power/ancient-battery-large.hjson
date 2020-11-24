@@ -1,5 +1,6 @@
 name: Large Ancient Battery
-description: A larger version of the Ancient Battery, with a very massive storage capacity.
+description: Stores power in times of surplus energy. Outputs power in times of deficit.
+details: A larger version of the Ancient Battery, with a very massive storage capacity.
 type: Battery
 health: 2800
 size: 2

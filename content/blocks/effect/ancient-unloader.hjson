@@ -1,5 +1,6 @@
 name: Ancient Unloader
-description: "An unloader that has been reinforced with [#e5b85e]ancient technology[]."
+description: Unloads the selected item from nearby blocks.
+details: "An unloader that has been reinforced with [#e5b85e]ancient technology[]."
 type: Unloader
 health: 1500
 size: 1

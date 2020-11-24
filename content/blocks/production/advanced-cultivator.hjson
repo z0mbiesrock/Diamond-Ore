@@ -1,5 +1,6 @@
 name: Advanced Cultivator
-description: An advanced cultivator, capable of growing spore pods more efficiently.
+description: Cultivates tiny concentrations of atmospheric spores into spore pods.
+details: An advanced cultivator, capable of growing spore pods more efficiently.
 type: Cultivator
 health: 450
 size: 3
@@ -29,4 +30,13 @@ requirements: [
   diamond/50
 ]
 category: production
-research: omnidrill
+research:{
+  parent: cultivator
+  requirements:[
+	  copper/100000
+	  lead/100000
+	  silicon/72000
+      spore-pod/3000
+      diamond/1500
+  ]
+}

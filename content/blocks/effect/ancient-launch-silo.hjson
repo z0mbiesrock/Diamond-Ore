@@ -1,12 +1,15 @@
 name: Ancient Launch Silo
-description: "A Launch Pad that has been modified using [#e5b85e]ancient technology[] to launch vast amounts of items at a time without need for a core launch.\n\nEspecially useful for when stationed in an area for a really, really long time."
+description: Launches massive batches of items to selected sectors.
 type: LaunchPad
 health: 12500
 buildVisibility: campaignOnly
+podRegion: ancient-launch-silo-pod
+lightColor: eeeeaa
 itemCapacity: 3000
 size: 5
 launchTime: 3600
 buildCostMultiplier: 0.65
+researchCostMultiplier: 2
 consumes: {
   power: 25
 }

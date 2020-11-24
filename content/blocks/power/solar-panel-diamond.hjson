@@ -1,6 +1,7 @@
 type: SolarGenerator
 name: Diamond Solar Panel
-description: Using diamonds as a lens, this solar panel concentrates and intensifies the power output of collected solar energy.
+description: Provides a small amount of power from the sun. High efficiency.
+details: Using diamonds as a lens, this solar panel concentrates and intensifies the power output of collected solar energy.
 health: 300
 size: 3
 powerProduction: 3.6

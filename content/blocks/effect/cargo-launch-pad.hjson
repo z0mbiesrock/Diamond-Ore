@@ -1,12 +1,18 @@
 name: Cargo Launch Pad
-description: A launch pad with a very large storage capacity.
+description: Launches large batches of items to selected sectors.
 type: LaunchPad
-health: 28800
-buildVisibility: campaignOnly
 itemCapacity: 800
 size: 6
 launchTime: 1800
+health: 28800
+buildVisibility: campaignOnly
+podRegion: cargo-launch-pad-pod
+lightColor: ffffff
 buildCostMultiplier: 0.85
+researchCostMultiplier: 4.7
+consumes: {
+  power: 16
+}
 requirements: [
   diamond/400
   lead/800

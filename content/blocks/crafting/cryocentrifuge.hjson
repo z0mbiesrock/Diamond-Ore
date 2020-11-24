@@ -1,4 +1,4 @@
-type: AttributeSmelter
+//type: AttributeSmelter
 name: Cryofluid Centrifuge
 description: Uses a large amount of power to thoroughly mix pulverized titanium powder and lots of water together in order to quickly produce cryofluid. More efficient in cool locations.
 itemCapacity: 20

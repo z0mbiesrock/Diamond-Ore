@@ -7,15 +7,16 @@ const cryoCent = extendContent(GenericCrafter, "cryocentrifuge", {
         ];
     }
 });
+const cryoLiquid = Liquids.cryofluid;
 cryoCent.buildType = () => extendContent(GenericCrafter.GenericCrafterBuild, cryoCent, {
 	draw(){
-		Draw.rect(this.region, this.x, this.y);
-
-		Draw.color(this.outputLiquid.color);
-		Draw.alpha(this.liquids.total() / this.liquidCapacity);
+		Draw.rect(cryoCent.region, this.x, this.y);
+		Draw.color(cryoLiquid.color);
+		Draw.alpha(this.liquids.get(cryoLiquid) / cryoCent.liquidCapacity);
 		Draw.rect(Core.atlas.find(cryoCent.name + "-liquid"), this.x, this.y);
 		Draw.color();
-        Draw.rect(Core.atlas.find(cryoCent.name + "-rotator"),this.drawx(),this.drawy(), this.totalProgress);
+        Draw.rect(Core.atlas.find(cryoCent.name + "-rotator"), this.x, this.y, this.totalProgress);
 		Draw.rect(Core.atlas.find(cryoCent.name + "-top"), this.x, this.y);
+		Draw.reset();
 	},
 });

@@ -1,6 +1,7 @@
 type: SolarGenerator
 name: Ancient Solar Generator
-description: A sturdy reliable generator. Absorbs solar energy and converts it into power.
+description: Provides a small amount of power from the sun. High efficiency.
+details: A sturdy reliable generator.
 health: 1200
 size: 2
 powerProduction: 2

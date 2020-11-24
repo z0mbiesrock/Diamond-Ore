@@ -1,5 +1,6 @@
 name: Ancient Battery
-description: A compact battery with a high storage capacity.
+description: Stores power in times of surplus energy. Outputs power in times of deficit.
+details: A compact battery with a high storage capacity.
 type: Battery
 health: 600
 size: 1

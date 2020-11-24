@@ -11,7 +11,8 @@ canOverdrive: true
 phaseUseTime: 270
 phaseRadiusBoost: 174
 radius: 174
-breakage: 4800
+shieldHealth: 3600
+phaseShieldBoost: 2400
 cooldownNormal: 7.5
 cooldownLiquid: 37.5
 cooldownBrokenBase: 3.75

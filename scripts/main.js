@@ -5,10 +5,10 @@ require("blocks/crystal-conveyor")
 require("blocks/godturrets")
 require("blocks/surge-reactor")
 require("blocks/surge-battery")
-//require("blocks/cryogem-dissipator")
-//require("blocks/cryocentrifuge")
-//require("blocks/multimelter")
-//require("blocks/multipyra")
+require("blocks/cryogem-dissipator")
+require("blocks/cryocentrifuge")
+require("blocks/multimelter")
+require("blocks/multipyra")
 require("blocks/heavy-coal-processor")
 require("blocks/omnijunction")
 require("blocks/commandcenter")
@@ -25,5 +25,5 @@ require("blocks/water-decorruptor")
 // Ancient Content
 require("blocks/ancientrefinery")
 require("blocks/ancients")
-require("blocks/vanillaammo")// STILL STUCK IN BRAZIL
+require("blocks/vanillaammo")// NOW OUT OF BRAZIL
 

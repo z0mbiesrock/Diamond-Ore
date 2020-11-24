@@ -247,13 +247,13 @@ weapons:[
       height: 11
 	  shrinkX: 0
 	  shrinkY: 0
-      speed: 14
+      speed: 9
       sprite: shell
-      lifetime: 25
+      lifetime: 75
 	  damage: 216
 	  explodeRange: 52
       fragBullets: 18
-	  fragCone: 57
+	  fragCone: 54
 	  fragVelocityMin: 0.9
 	  fragLifeMin: 0.5
 	  fragVelocityMax: 3.75
@@ -264,9 +264,9 @@ weapons:[
 	  lightColor: d283ff
 	  lightningColor: bc7bfd
 	  lightningLength: 12
-	  lightningLengthRand: 6
-	  lightning: 6
-	  lightningCone: 88
+	  lightningLengthRand: 12
+	  lightning: 5
+	  lightningCone: 44
 	  hitEffect: flakExplosionBig
 	  despawnEffect: flakExplosionBig
 	  fragBullet:{
@@ -276,12 +276,13 @@ weapons:[
 	    backColor: 837e91
         width: 3
         height: 7
-        speed: 10
+        speed: 6
         sprite: diamond-ore-diamondbullet
         lifetime: 30
 	    damage: 12
 		tileDamageMultiplier: 0.16666666666
 		reflectable: false
+		hittable: false
       }
     }
   }

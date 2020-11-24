@@ -1,5 +1,6 @@
 name: Surge Battery
-description: A large high-tech battery with a huge storage capacity.
+description: Stores power in times of surplus energy. Outputs power in times of deficit.
+details: A large high-tech battery with a huge storage capacity.
 //type: Battery
 health: 8000
 size: 4

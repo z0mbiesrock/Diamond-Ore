@@ -143,7 +143,7 @@ weapons:[
 	  shake: 2.8
 	  reflectable: false
 	  absorbable: false
-	  trailEffect: nuclearsmoke
+	  trailEffect: melting
 	  shootEffect: sparkShoot
 	  sokeEffect: shootLiquid
 	  hitEffect: sapExplosion

@@ -22,5 +22,6 @@ heavyCoalProc.buildType = () => extendContent(GenericCrafter.GenericCrafterBuild
 		Draw.reset();
 		Draw.rect(heavyCoalProc.spinnerRegionA, this.x, this.y, -5.4 * this.totalProgress);
         Draw.rect(heavyCoalProc.spinnerRegionB, this.x, this.y, 5.7 * this.totalProgress);
+		Draw.reset();
 	},	
 });
