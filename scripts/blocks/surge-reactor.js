@@ -35,19 +35,19 @@ surgeReactorMeltdownShock.pierce = true;
 
 const surgeReactorMeltdownShockA = extend(LightningBulletType, {
 });
-surgeReactorMeltdownShock.lightningLength = 35;
-surgeReactorMeltdownShock.lightningLengthRand = 35;
-surgeReactorMeltdownShock.damage = 150;
-surgeReactorMeltdownShock.pierce = true;
-surgeReactorMeltdownShock.lightningType = surgeReactorMeltdownShockFork;
-surgeReactorMeltdownShock.lightningTypeChance = 0.1;
+surgeReactorMeltdownShockA.lightningLength = 35;
+surgeReactorMeltdownShockA.lightningLengthRand = 35;
+surgeReactorMeltdownShockA.damage = 150;
+surgeReactorMeltdownShockA.pierce = true;
+surgeReactorMeltdownShockA.lightningType = surgeReactorMeltdownShockFork;
+surgeReactorMeltdownShockA.lightningTypeChance = 0.1;
 
 const surgeReactorMeltdownShockB = extend(LightningBulletType, {
 });
-surgeReactorMeltdownShock.lightningLength = 35;
-surgeReactorMeltdownShock.lightningLengthRand = 35;
-surgeReactorMeltdownShock.damage = 150;
-surgeReactorMeltdownShock.pierce = true;
+surgeReactorMeltdownShockB.lightningLength = 35;
+surgeReactorMeltdownShockB.lightningLengthRand = 35;
+surgeReactorMeltdownShockB.damage = 150;
+surgeReactorMeltdownShockB.pierce = true;
 
 const surgeReactorMeltdownFxA = Effect(60, e => {
 	Draw.color(Color.valueOf("#ffffff"), Color.valueOf("#ffff00"), e.fin());
