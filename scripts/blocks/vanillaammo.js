@@ -1,7 +1,7 @@
 
-const cryogemItem = new Item("cryogem")
-const phaseStringLiquid = new Liquid("phase-string")
-const sporeWaterLiquid = new Liquid("corrupt-water")
+const cryogemItem = Vars.content.getByName(ContentType.item, "diamond-ore-cryogem");
+const phaseStringLiquid = Vars.content.getByName(ContentType.liquid, "diamond-ore-phase-string");
+const sporeWaterLiquid = Vars.content.getByName(ContentType.liquid, "diamond-ore-corrupt-water");
 const cycloneCryoFrag = extend(BasicBulletType, {});
 cycloneCryoFrag.damage = 8;
 cycloneCryoFrag.width = 3;

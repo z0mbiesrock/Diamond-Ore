@@ -1,7 +1,7 @@
 name: Gigantic Ancient Metal Wall
 description: Protects structures from enemy projectiles, periodically releasing electric arcs upon contact.
 type: Wall
-health: 64000
+health: 32000
 size: 4
 lightningChance: 0.15
 lightningDamage: 45

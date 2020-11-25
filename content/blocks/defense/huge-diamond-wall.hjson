@@ -1,7 +1,7 @@
 name: Huge Diamond Wall
-description: A huge wall made of pure diamond. Extremely hard to destroy. Spans many tiles.
-type: Wall
-health: 28125
+description: Protects structures from enemy projectiles. Shatters when destroyed, damaging nearby enemies.
+//type: Wall
+health: 13500
 size: 3
 buildCostMultiplier: 1.2
 requirements: [

@@ -3,19 +3,18 @@ name: Ancient Blade
 description: Small but durable, this short-range turret fires a powerful beam.
 health: 3600
 size: 1
-reloadTime: 60
+reloadTime: 4
 lightColor: ffffff
 shootDuration: 60
 range: 96
 ammoUseEffect: none
-shootY: 5
 coolantMultiplier: 2.5
 //coolantUsage: 0.1
 cooldown: 0.05
-rotateSpeed: 9
+rotateSpeed: 7
 shootSound: flame
-shootEffect: lancerLaserShoot
-smokeEffect: hitLancer
+shootEffect: shootSmall
+smokeEffect: shootBig
 firingMoveFract: 0.666
 powerUse: 4
 recoilAmount: 0

@@ -2,7 +2,7 @@
 name: Yggdrasil
 description: Uses astronomical amounts of power to charge and launch a giant ball of destructive plasma that annihilates anything it hits!
 details: Ultimate plasma cannon of ancient origin.
-health: 80000
+health: 32000
 size: 4
 reloadTime: 600
 range: 800
@@ -12,7 +12,7 @@ inaccuracy: 0
 rotateSpeed: 1
 cooldown: 0.003333
 shootSound: yggdrasilfire
-shootCone: 0
+shootCone: 0.1
 researchCostMultiplier: 3.4
 layer: power
 outlineIcon: false

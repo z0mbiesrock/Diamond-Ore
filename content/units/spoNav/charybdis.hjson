@@ -49,7 +49,7 @@ weapons:[
       speed: 5
       weaveScale: 2
       weaveMag: 3
-	  trail: d283ff
+	  trailColor: d283ff
 	  hitColor: d283ff
 	  lightColor: d283ff
 	  lightningColor: bc7bfd
@@ -99,7 +99,7 @@ weapons:[
       speed: 5
       weaveScale: 3
       weaveMag: 2
-	  trail: d283ff
+	  trailColor: d283ff
 	  hitColor: d283ff
 	  lightColor: d283ff
 	  lightningColor: bc7bfd
@@ -149,7 +149,7 @@ weapons:[
       speed: 5
       weaveScale: 3
       weaveMag: 2
-	  trail: d283ff
+	  trailColor: d283ff
 	  hitColor: d283ff
 	  lightColor: d283ff
 	  lightningColor: bc7bfd
@@ -200,7 +200,7 @@ weapons:[
       speed: 5
       weaveScale: 2
       weaveMag: 3
-	  trail: d283ff
+	  trailColor: d283ff
 	  hitColor: d283ff
 	  lightColor: d283ff
 	  lightningColor: bc7bfd

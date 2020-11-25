@@ -6,6 +6,7 @@ size: 3
 reloadTime: 4
 shots: 4
 //spread: 0.5
+xRand: 9
 range: 320
 ammoUseEffect: casing2
 coolantMultiplier: 4

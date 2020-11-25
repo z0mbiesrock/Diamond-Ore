@@ -1,7 +1,7 @@
 name: Gigantic Diamond Wall
-description: A massive wall made of pure diamond. Extremely hard to destroy. Capable of surviving a thorium reactor exploson by itself. Spans a large area.
-type: Wall
-health: 50000
+description: Protects structures from enemy projectiles. Shatters when destroyed, damaging nearby enemies.
+//type: Wall
+health: 24000
 size: 4
 buildCostMultiplier: 0.85
 requirements: [

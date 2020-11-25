@@ -70,24 +70,25 @@ const ancientBladeLaserHit = Effect(15, e => {
     }}) 
     Angles.randLenVectors(e.id, 8, 1 + 12 * e.fin(), e.rotation, 360,d);
 });
-const ancientBladeLaser = extend(LaserBulletType, {});
+const ancientBladeLaser = extend(ContinuousLaserBulletType, {});
 ancientBladeLaser.damage = 75;
-ancientBladeLaser.length = 100;
+ancientBladeLaser.length = 120;
 ancientBladeLaser.hitEffect = ancientBladeLaserHit;
 ancientBladeLaser.despawnEffect = Fx.shootBigSmoke2;
 ancientBladeLaser.hitSize = 3;
 ancientBladeLaser.frontColor = Color.valueOf("#ffffff");
 ancientBladeLaser.backColor = Color.valueOf("#ffffff");
 ancientBladeLaser.colors = [Color.valueOf("ffffff88"), Color.valueOf("feed00aa"), Color.valueOf("ffee5a"), Color.white];
-ancientBladeLaser.width = 4;
+ancientBladeLaser.width = 2;
+ancientBladeLaser.strokes = [2, 1.5, 1, 0.5];
 ancientBladeLaser.drawSize = 210;
-ancientBladeLaser.oscScl = 0.4;
-ancientBladeLaser.oscMag = 0.95;
+ancientBladeLaser.oscScl = 1;
+ancientBladeLaser.oscMag = 2.15;
 ancientBladeLaser.incendAmount = 0;
 ancientBladeLaser.shake = 0;
 ancientBladeLaser.pierce = true;
-ancientBladeLaser.shootEffect = Fx.none;
-ancientBladeLaser.smokeEffect = Fx.none;
+ancientBladeLaser.shootEffect = Fx.shootBigSmoke2;
+ancientBladeLaser.smokeEffect = Fx.shootBigSmoke2;
 const ancientBlade = extendContent(LaserTurret, "ancient-blade", {
 	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());

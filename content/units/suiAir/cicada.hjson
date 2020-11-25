@@ -1,0 +1,133 @@
+localizedName: Cicada
+description: Fires massive cluster-missiles and a barrage of large armor-piercing bullets at all nearby enemies. Explodes upon destruction. Capable of carrying most ground units.
+commandLimit: 0
+speed: 0.5
+drag: 0.05
+accel: 0.084
+rotateSpeed: 1.5
+health: 31000
+armor: 25
+range: 240
+itemCapacity: 150
+hitSize: 9
+payloadCapacity: 35
+rotateShooting: false
+immunities: [wet, tarred, sapped, sporeSlowed, corroded, burning, melting]
+engineOffset: 14
+engineSize: 24
+hovering: true
+
+weapons:[
+  {
+    name: cicada-weapon-mount
+    x: 7
+    y: 14
+    shootY: 4
+    recoil: 0
+    reload: 20
+    rotate: true
+    rotateSpeed: 8
+    soundPitchMin: 0.7
+    soundPitchMax: 0.8
+    shootSound: bigshot
+    bullet:{
+      type: BasicBulletType
+	  frontColor: b28768
+	  hitColor: eab678
+      shootEffect: shootBig2
+      width: 15
+      height: 27
+	  shrinkX: 0.2
+	  shrinkY: 0.4
+	  range: 320
+      speed: 8
+	  damage: 13
+	  hittable: false
+    }
+  },
+  {
+    name: cicada-cannon
+    x: 0
+    y: -15
+    shootY: 28
+    recoil: 4
+    reload: 260
+	inaccuracy: 2
+	rotateSpeed: 2.3
+	cooldown: 160
+    rotate: true
+    soundPitchMin: 1.72
+    soundPitchMax: 1.94
+    shootSound: missile
+    bullet:{
+      type: FlakBulletType
+	  frontColor: b28768
+	  backColor: b28768
+	  explodeRange: 64
+      width: 12
+      height: 26
+	  shrinkX: 0
+	  shrinkY: 0
+      speed: 8
+	  range: 480
+	  trailColor: b28768
+	  trailChance: 0.9
+	  trailEffect: absorb
+	  hitColor: c9a58f
+	  lightColor: b28768
+	  homingPower: 0.046
+	  homingRange: 160
+	  hitEffect: sapExplosion
+	  shootEffect: shootLiquid
+	  despawnEffect: mineHuge
+      sprite: diamond-ore-diamondconcus
+      lifetime: 220
+	  damage: 64
+	  splashDamage: 256
+	  splashDamageRadius: 128
+	  fragBullets: 15
+	  fragVelocityMin: 0.6
+	  fragVelocityMax: 1.4
+	  fragCone: 45
+	  reflectable: false
+	  hittable: false
+	  fragBullet:{
+        type: MissileBulletType
+        //sapStrength: 0.5
+	    frontColor: c9a58f
+	    trailColor: c9a58f
+	    backColor: b28768
+	    hitColor: b28768
+        width: 2
+        height: 6
+        speed: 5
+	    shrinkX: 0
+	    shrinkY: 0
+        sprite: missile
+	    despawnEffect: hitBulletBig
+	    hitEffect: hitBulletBig
+        lifetime: 68
+	    damage: 12
+	    homingPower: 0.086
+	    homingRange: 60
+	    splashDamage: 18
+	    splashDamageRadius: 18
+		hittable: false
+      }
+    }
+  }
+]
+
+research: {
+  parent: charybdis
+  requirements:[
+      silicon/255000
+      plastanium/160000
+      surge-alloy/150000
+      phase-fabric/140000
+      spore-pod/140000
+      diamond/5000
+      cryogem/1500
+      dark-spore-pod/500
+  ]
+}

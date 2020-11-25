@@ -1,0 +1,98 @@
+localizedName: Beetle
+description: Fires fast fragmentation missiles at all nearby enemies. Explodes upon destruction.
+commandLimit: 0
+speed: 2.1
+drag: 0.05
+accel: 0.084
+rotateSpeed: 4.5
+health: 400
+armor: 15
+range: 240
+itemCapacity: 150
+hitSize: 9
+rotateShooting: false
+immunities: [wet, tarred, sapped, sporeSlowed, corroded, burning, melting]
+engineOffset: 11
+engineSize: 7
+lowAltitude: true
+
+weapons:[
+  {
+    name: beetle-missile
+    x: -4
+    y: 0
+    shootY: 4
+    recoil: 3
+    reload: 40
+	spacing: 2
+	inaccuracy: 2
+	velocityRnd: 0.25
+	rotateSpeed: 4
+	occlusion: 6
+    rotate: true
+    soundPitchMin: 1.72
+    soundPitchMax: 1.94
+    shootSound: missile
+    bullet:{
+      type: MissileBulletType
+	  frontColor: b28768
+	  backColor: b28768
+	  explodeRange: 18
+      width: 6
+      height: 12
+	  shrinkX: 0
+	  shrinkY: 0
+      speed: 11
+      weaveScale: -2
+      weaveMag: 3
+	  trailColor: b28768
+	  trailChance: 0.7
+	  hitColor: c9a58f
+	  lightColor: b28768
+	  homingPower: 0.066
+	  homingRange: 120
+	  hitEffect: blastExplosion
+	  shootEffect: shootSmall
+	  despawnEffect: mine
+      sprite: diamond-ore-diamondmissile
+      lifetime: 70
+	  damage: 8
+	  splashDamage: 36
+	  splashDamageRadius: 36
+	  fragBullets: 12
+	  fragBullet:{
+        type: BasicBulletType
+        //sapStrength: 0.5
+	    frontColor: c9a58f
+	    trailColor: c9a58f
+	    backColor: b28768
+	    hitColor: b28768
+        width: 2
+        height: 6
+        speed: 6
+	    shrinkX: 0.3
+	    shrinkY: 0.1
+        sprite: diamond-ore-diamondshard
+	    despawnEffect: shootSmallSmoke
+	    hitEffect: shootSmall
+        lifetime: 30
+	    damage: 12
+	    homingPower: 0.086
+	    homingRange: 60
+		reflectable: false
+		hittable: false
+      }
+    }
+  },
+]
+
+research: {
+  parent: firefly
+  requirements:[
+      silicon/48000
+      titanium/36000
+      metaglass/20000
+      diamond/3000
+      cryogem/500
+  ]
+}

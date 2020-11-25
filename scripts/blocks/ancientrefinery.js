@@ -42,7 +42,7 @@ const oldRefinery = extendContent(GenericSmelter, "ancient-refinery", {
 	
 	setStats(){
         this.super$setStats();
-		this.stats.add(BlockStat.boostEffect, 2.25, StatUnit.timesSpeed);
+		this.stats.add(Stat.boostEffect, 2.25, StatUnit.timesSpeed);
 	},
 	
 	/* drawBase(tile){

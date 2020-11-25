@@ -1,0 +1,105 @@
+localizedName: Firefly
+description: Flies toward enemies and explodes, releasing incendiary sludge.
+commandLimit: 0
+speed: 1.1
+drag: 0.1
+accel: 0.2
+rotateSpeed: 3.5
+health: 400
+armor: 10
+range: 240
+itemCapacity: 100
+hitSize: 9
+rotateShooting: false
+immunities: [wet, tarred, sapped, sporeSlowed, corroded, burning, melting]
+engineOffset: 8
+engineSize: 11
+targetAir: false
+destructibleWreck: false
+
+weapons:[
+  {
+    name: firefly-weapon
+    x: 0
+    y: 0
+    shootY: 0
+    recoil: 0
+    reload: 120
+    rotate: false
+    mirror: false
+	ignoreRotation: true
+    soundPitchMin: 1.5
+    soundPitchMax: 1.5
+    velocityRnd: 1
+    lengthRand: 1
+    shots: 20
+    shootSound: explosionbig
+    bullet: {
+    type: BombBulletType
+    speed: 3
+	drag: 0.0125
+	lifetime: 15
+	incendAmount: 6
+	incendSpread: 20
+	incendChance: 1
+	killShooter: true
+	keepVelocity: true
+    damage: 25
+    bulletWidth: 14
+    bulletHeight: 18
+	frontColor: ffcc44
+	backColor: ea690f
+	//trailColor: 666666
+    shootEffect: flakExplosion
+    smokeEffect: shockwave
+    despawnEffect: flakExplosion
+	hitEffect: hitLancer
+	pierce: false
+	knockback: 1
+	bulletSprite: shell
+	inaccuracy: 360
+	fragBullets: 4
+	splashDamage: 40
+	splashDamageRadius: 36
+	status: burning
+	statusDuration: 600
+	fragBullets: 6
+	fragVelocityMin: 0.15
+	fragVelocityMax: 0.75
+	fragBullet: {
+        type: LiquidBulletType
+        //keepVelocity: true
+		drag: 0.075
+	    lifetime: 150
+        damage: 3
+		incendAmount: 6
+		incendSpread: 20
+		incendChance: 0.6
+	    collidesAir: false
+        bulletWidth: 15
+        bulletHeight: 15
+	    despawnEffect: none
+	    hitEffect: none
+	    frontColor: f0511d
+	    backColor: f0511d
+	    pierce: true
+		status: burning
+		statusDuration: 900
+		liquid: oil
+	    //bulletSprite: shell
+	    //knockback: 7.5
+      }
+    }
+  }
+]
+
+research:{
+  parent: horizon
+  requirements:[
+      silicon/3000
+      spore-pod/1000
+      blast-compound/10000
+      metaglass/1000
+      diamond/1000
+  ]
+}
