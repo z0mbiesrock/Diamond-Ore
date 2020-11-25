@@ -70,16 +70,19 @@ const ancientBladeLaserHit = Effect(15, e => {
     }}) 
     Angles.randLenVectors(e.id, 8, 1 + 12 * e.fin(), e.rotation, 360,d);
 });
-const ancientBladeLaser = extend(ContinuousLaserBulletType, {});
+const ancientBladeLaser = extend(LaserBulletType, {});
 ancientBladeLaser.damage = 75;
 ancientBladeLaser.length = 100;
 ancientBladeLaser.hitEffect = ancientBladeLaserHit;
 ancientBladeLaser.despawnEffect = Fx.shootBigSmoke2;
-ancientBladeLaser.hitSize = 4;
+ancientBladeLaser.hitSize = 3;
 ancientBladeLaser.frontColor = Color.valueOf("#ffffff");
 ancientBladeLaser.backColor = Color.valueOf("#ffffff");
+ancientBladeLaser.colors = [Color.valueOf("ffffff88"), Color.valueOf("feed00aa"), Color.valueOf("ffee5a"), Color.white];
 ancientBladeLaser.width = 4;
 ancientBladeLaser.drawSize = 210;
+ancientBladeLaser.oscScl = 0.4;
+ancientBladeLaser.oscMag = 0.95;
 ancientBladeLaser.incendAmount = 0;
 ancientBladeLaser.shake = 0;
 ancientBladeLaser.pierce = true;

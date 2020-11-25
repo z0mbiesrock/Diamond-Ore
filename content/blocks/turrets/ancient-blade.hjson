@@ -8,9 +8,10 @@ lightColor: ffffff
 shootDuration: 60
 range: 96
 ammoUseEffect: none
+shootY: 5
 coolantMultiplier: 2.5
 //coolantUsage: 0.1
-cooldown: 0.005
+cooldown: 0.05
 rotateSpeed: 9
 shootSound: flame
 shootEffect: lancerLaserShoot
