@@ -11,10 +11,12 @@ range: 100
 itemCapacity: 50
 hitSize: 5
 rotateShooting: false
+lowAltitude: true
 destructibleWreck: false
 immunities: [wet, tarred, sapped, sporeSlowed, corroded]
 engineOffset: 5
-engineSize: 4
+engineSize: 2
+flying: true
 
 weapons:[
   {
@@ -24,12 +26,13 @@ weapons:[
     shootY: 0
     recoil: 0
     reload: 20
+    shootCone: 360
     rotate: false
     mirror: false
 	ignoreRotation: true
     soundPitchMin: 3
     soundPitchMax: 3
-    shootSound: explosionbig
+    shootSound: explosion
     bullet:{
       type: BombBulletType
 	  instantDisappear: true
@@ -55,7 +58,7 @@ weapons:[
 	    backColor: c9a58f
         width: 6
         height: 6
-        speed: 6
+        speed: 1.5
         shrinkX: 0.36
         shrinkY: 0.36
         sprite: diamond-ore-diamondshard

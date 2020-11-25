@@ -185,9 +185,9 @@ surgeReactor.buildType = () => extendContent(NuclearReactor.NuclearReactorBuild,
         for(var i = 0; i < 45; i++){
 			surgeReactorMeltdownFlak.weaveScale = Mathf.range(4); 
 			surgeReactorMeltdownFlak.weaveMag = Mathf.range(4); 
-            Calls.createBullet(surgeReactorMeltdownFlak, Team.derelict, this.y, this.y, Mathf.random(360), Mathf.random(0.15, 1.0), Mathf.random(0.2, 1.0));
-            //Calls.createBullet(surgeReactorMeltdownShockA, Team.derelict, this.y, this.y, Mathf.random(360), 1, 1);
-            Calls.createBullet(surgeReactorMeltdownShockB, Team.derelict, this.y, this.y, Mathf.random(360), 1, 1);
+            surgeReactorMeltdownFlak.create(this, Team.derelict, this.y, this.y, Mathf.random(360), Mathf.random(0.15, 1.0), Mathf.random(0.2, 1.0));
+            //surgeReactorMeltdownShockA, Team.derelict, this.y, this.y, Mathf.random(360), 1, 1);
+            surgeReactorMeltdownShockB.create(this, Team.derelict, this.y, this.y, Mathf.random(360), 1, 1);
 		}
 	},
 });

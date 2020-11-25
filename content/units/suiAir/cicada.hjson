@@ -1,48 +1,90 @@
 localizedName: Cicada
 description: Fires massive cluster-missiles and a barrage of large armor-piercing bullets at all nearby enemies. Explodes upon destruction. Capable of carrying most ground units.
-commandLimit: 0
-speed: 0.5
-drag: 0.05
-accel: 0.084
+commandLimit: 10
+speed: 0.4
+drag: 0.015
+accel: 0.024
 rotateSpeed: 1.5
 health: 31000
 armor: 25
 range: 240
-itemCapacity: 150
-hitSize: 9
+aimDst: 240
+itemCapacity: 500
+hitSize: 32
 payloadCapacity: 35
+payload: true
 rotateShooting: false
+lowAltitude: true
+destructibleWreck: false
 immunities: [wet, tarred, sapped, sporeSlowed, corroded, burning, melting]
-engineOffset: 14
-engineSize: 24
+engineOffset: 0
+engineSize: 16
 hovering: true
+flying: true
 
 weapons:[
   {
     name: cicada-weapon-mount
-    x: 7
+    x: 14
     y: 14
-    shootY: 4
+    shootY: 11
     recoil: 0
-    reload: 20
+    reload: 9.99
     rotate: true
     rotateSpeed: 8
     soundPitchMin: 0.7
     soundPitchMax: 0.8
-    shootSound: bigshot
+	occlusion: 16
+    shootSound: boom
     bullet:{
       type: BasicBulletType
 	  frontColor: b28768
 	  hitColor: eab678
       shootEffect: shootBig2
+      hitEffect: shootBig2
+      despawnEffect: shootBig
       width: 15
       height: 27
 	  shrinkX: 0.2
 	  shrinkY: 0.4
 	  range: 320
       speed: 8
-	  damage: 13
+	  damage: 60
 	  hittable: false
+	  pierce: true
+	  pierceCap: 4
+    }
+  },
+  {
+    name: cicada-weapon-mount
+    x: 19
+    y: -5
+    shootY: 11
+    recoil: 0
+    reload: 10
+    rotate: true
+	occlusion: 16
+    rotateSpeed: 8
+    soundPitchMin: 0.7
+    soundPitchMax: 0.8
+    shootSound: boom
+    bullet:{
+      type: BasicBulletType
+	  frontColor: b28768
+	  hitColor: eab678
+      shootEffect: shootBig2
+      hitEffect: shootBig2
+      despawnEffect: shootBig
+      width: 15
+      height: 27
+	  shrinkX: 0.2
+	  shrinkY: 0.4
+	  range: 320
+      speed: 8
+	  damage: 60
+	  hittable: false
+	  pierce: true
+	  pierceCap: 4
     }
   },
   {
@@ -53,12 +95,14 @@ weapons:[
     recoil: 4
     reload: 260
 	inaccuracy: 2
-	rotateSpeed: 2.3
-	cooldown: 160
+	rotateSpeed: 3.3
+	cooldownTime: 160
+	occlusion: 30
     rotate: true
-    soundPitchMin: 1.72
-    soundPitchMax: 1.94
-    shootSound: missile
+    mirror: false
+    soundPitchMin: 0.72
+    soundPitchMax: 0.94
+    shootSound: coreexplode
     bullet:{
       type: FlakBulletType
 	  frontColor: b28768
@@ -75,10 +119,11 @@ weapons:[
 	  trailEffect: absorb
 	  hitColor: c9a58f
 	  lightColor: b28768
-	  homingPower: 0.046
+	  homingPower: 0.0246
 	  homingRange: 160
 	  hitEffect: sapExplosion
 	  shootEffect: shootLiquid
+	  smokeEffect: shootLiquid
 	  despawnEffect: mineHuge
       sprite: diamond-ore-diamondconcus
       lifetime: 220
@@ -91,6 +136,7 @@ weapons:[
 	  fragCone: 45
 	  reflectable: false
 	  hittable: false
+	  collidesGround: true
 	  fragBullet:{
         type: MissileBulletType
         //sapStrength: 0.5

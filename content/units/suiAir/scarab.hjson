@@ -1,21 +1,23 @@
 localizedName: Beetle
 description: Fires salvos of small fast homing missiles and a barrage of strange flammable fluids at all nearby enemies. Explodes upon destruction.
-commandLimit: 0
-speed: 2.1
+commandLimit: 8
+speed: 0.6
 drag: 0.05
 accel: 0.084
-rotateSpeed: 4.5
+rotateSpeed: 2.5
 health: 400
 armor: 20
 range: 240
-itemCapacity: 150
-hitSize: 9
+itemCapacity: 250
+hitSize: 17
 rotateShooting: true
 immunities: [wet, tarred, sapped, sporeSlowed, corroded, burning, melting]
 engineOffset: 16
 engineSize: 5
 hovering: true
 lowAltitude: true
+destructibleWreck: false
+flying: true
 
 weapons:[
   {
@@ -31,8 +33,9 @@ weapons:[
 	inaccuracy: 2
 	velocityRnd: 0.05
 	rotateSpeed: 4
-	occlusion: 6
+	occlusion: 9
     rotate: true
+    top: true
     soundPitchMin: 2.12
     soundPitchMax: 2.74
     shootSound: missile
@@ -42,7 +45,7 @@ weapons:[
 	  trailColor: b28768
 	  backColor: c9a58f
 	  hitColor: b28768
-      width: 2
+      width: 3
       height: 6
       speed: 10
 	  shrinkX: 0
@@ -62,7 +65,7 @@ weapons:[
   },
   {
     name: beetle-missile
-    x: 8
+    x: -8
     y: -1
     shootY: 4
     recoil: 3
@@ -73,8 +76,9 @@ weapons:[
 	inaccuracy: 2
 	velocityRnd: 0.05
 	rotateSpeed: 4
-	occlusion: 6
+	occlusion: 9
     rotate: true
+    top: true
     soundPitchMin: 2.12
     soundPitchMax: 2.74
     shootSound: missile
@@ -84,7 +88,7 @@ weapons:[
 	  trailColor: b28768
 	  backColor: c9a58f
 	  hitColor: b28768
-      width: 2
+      width: 3
       height: 6
       speed: 10
 	  shrinkX: 0
@@ -108,9 +112,9 @@ weapons:[
     y: 17
     shootY: 0
     recoil: 0
-    reload: 59
+    reload: 30
 	shootCone: 15
-	shots: 30
+	shots: 15
 	top: false
 	shotDelay: 1
 	spacing: 0
@@ -128,9 +132,9 @@ weapons:[
     y: 17
     shootY: 0
     recoil: 0
-    reload: 59
+    reload: 30
 	shootCone: 15
-	shots: 30
+	shots: 15
 	top: false
 	shotDelay: 1
 	spacing: 0

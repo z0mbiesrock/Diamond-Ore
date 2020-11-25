@@ -249,6 +249,7 @@ weapons:[
 	  shrinkY: 0
       speed: 9
       sprite: shell
+      collidesGround: true
       lifetime: 75
 	  damage: 216
 	  explodeRange: 52

@@ -1,5 +1,5 @@
 localizedName: Firefly
-description: Flies toward enemies and explodes, releasing incendiary sludge.
+description: Flies toward ground enemies and explodes, releasing incendiary sludge.
 commandLimit: 0
 speed: 1.1
 drag: 0.1
@@ -10,12 +10,15 @@ armor: 10
 range: 240
 itemCapacity: 100
 hitSize: 9
+crashDamageMultiplier: 9
 rotateShooting: false
 immunities: [wet, tarred, sapped, sporeSlowed, corroded, burning, melting]
 engineOffset: 8
-engineSize: 11
+engineSize: 7
 targetAir: false
+lowAltitude: true
 destructibleWreck: false
+flying: true
 
 weapons:[
   {
@@ -34,9 +37,12 @@ weapons:[
     lengthRand: 1
     shots: 20
     shootSound: explosionbig
+	inaccuracy: 360
+	shootCone: 360
     bullet: {
     type: BombBulletType
     speed: 3
+	range: 24
 	drag: 0.0125
 	lifetime: 15
 	incendAmount: 6
@@ -57,7 +63,6 @@ weapons:[
 	pierce: false
 	knockback: 1
 	bulletSprite: shell
-	inaccuracy: 360
 	fragBullets: 4
 	splashDamage: 40
 	splashDamageRadius: 36

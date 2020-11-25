@@ -6,7 +6,7 @@ size: 3
 reloadTime: 4
 shots: 4
 //spread: 0.5
-xRand: 9
+xRand: 4
 range: 320
 ammoUseEffect: casing2
 coolantMultiplier: 4
@@ -15,7 +15,6 @@ rotateSpeed: 13
 inaccuracy: 7.5
 shootSound: shoot
 outlineColor: 966102
-outlineIcon: false
 //targetGround: false
 ammoTypes: {
   lead: {

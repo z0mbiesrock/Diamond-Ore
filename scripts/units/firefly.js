@@ -1,6 +1,13 @@
 const SuiAirT2 = extendContent(UnitType, "firefly", {
 });
-SuiAirT2.constructor = () => extend(UnitEntity, {});
+SuiAirT2.constructor = () => extend(UnitEntity, {
+	update(){
+		this.super$update();
+		if (this.dead || this.health <= 0){
+			this.destroy();
+		}
+	}
+});
 SuiAirT2.ammoType = AmmoTypes.power;
 
 var upgrade = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-gnat"), Vars.content.getByName(ContentType.unit, "diamond-ore-firefly")]);

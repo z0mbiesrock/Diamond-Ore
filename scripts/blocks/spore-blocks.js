@@ -92,7 +92,7 @@ const darkSporeBlockLarge = extendContent(Wall, "dark-spore-block-large", {
             }
       }
 });
-extendContent(Cultivator, "sporecluster", {
+const sporeCluster = extendContent(Cultivator, "sporecluster", {
 	drawBase(tile){
 		podnum = Mathf.round(Mathf.randomSeed(this.id, 1, 4));
 		podrot = Mathf.round(Mathf.randomSeed(this.id, 0, 360));
@@ -103,7 +103,9 @@ extendContent(Cultivator, "sporecluster", {
         return [
             Core.atlas.find(this.name)
         ];
-    },
+    }
+});
+sporeCluster.buildType = () => extendContent(Cultivator.CultivatorBuild, sporeCluster, {
     updateTile(){
         this.super$updateTile();
         //when health is lower than max health
@@ -120,10 +122,11 @@ extendContent(Cultivator, "sporecluster", {
 	onDestroyed: function(tile){
         this.super$onDestroyed(tile);
         for(var i = 0; i < 10; i++){
-            Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
-			Effect.create(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
+            Calls.createBullet(sporeBlockDeath, this.team, this.x, this.y, Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
+			sporeBlockDeathFx.at(this.x, this.y, Mathf.random(-360,360));
 		}
 	}
+	
 });
 const sporeTurretA = extendContent(ItemTurret, "spore-turret", {
     icons(){
@@ -217,7 +220,7 @@ const sporeTurretSmlB = extendContent(ItemTurret, "spore-turret-small-dark", {
 	onDestroyed: function(tile){
 		this.super$onDestroyed(tile);
         for(var i = 0; i < 7; i++){
-            Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.75, 1.50));
+            sporeBlockDeath.create(null, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.75, 1.50));
 			Effect.create(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
 		}
 	}
@@ -253,27 +256,22 @@ const sporeConveyor = extendContent(Conveyor, "spore-conveyor", {
             Core.atlas.find(this.name + "-base"),
             Core.atlas.find(this.name + "-0-1")
         ];
-    },
+    }
+});
+sporeConveyor.buildType = () => extendContent(Conveyor.ConveyorBuild, sporeConveyor, {
     updateTile(){
+        this.super$updateTile();
         //when health is lower than max health
-        if ( (this.health < this.maxHealth) && (Mathf.chance(fastregen)) ){
+        if ( (this.health < this.maxHealth) && (Mathf.chance(normalregen)) ) {
 
-                   this.heal(Time.delta() * 5);
+                   this.heal(Time.delta() * 15);
 				   /* if (this.health > this.maxHealth){
 					   this.health -= this.maxHealth - this.health;
 				   } */ // unknown if this works
 					   
                    
-        };
-        this.super$updateTile();
-     },
-	onDestroyed: function(tile){
-		this.super$onDestroyed(tile);
-        for(var i = 0; i < 3; i++){
-            Calls.createBullet(sporeBlockDeath, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.75, 1.50));
-			Effect.create(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
-		}
-	},
+            }
+      }	
 });
 const sporeUnitBirth = Effect(72, e => {
     Draw.color(Color.valueOf("#455085"), Color.valueOf("#995d9a"), e.fin());

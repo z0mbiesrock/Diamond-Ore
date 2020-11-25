@@ -1,28 +1,30 @@
 localizedName: Beetle
 description: Fires fast fragmentation missiles at all nearby enemies. Explodes upon destruction.
-commandLimit: 0
-speed: 2.1
+commandLimit: 8
+speed: 0.81
 drag: 0.05
 accel: 0.084
 rotateSpeed: 4.5
 health: 400
 armor: 15
-range: 240
-itemCapacity: 150
-hitSize: 9
+range: 440
+itemCapacity: 200
+hitSize: 12
 rotateShooting: false
 immunities: [wet, tarred, sapped, sporeSlowed, corroded, burning, melting]
-engineOffset: 11
+engineOffset: 8
 engineSize: 7
 lowAltitude: true
+destructibleWreck: false
+flying: true
 
 weapons:[
   {
     name: beetle-missile
-    x: -4
-    y: 0
+    x: 0
+    y: 2
     shootY: 4
-    recoil: 3
+    recoil: 0
     reload: 40
 	spacing: 2
 	inaccuracy: 2
@@ -30,6 +32,7 @@ weapons:[
 	rotateSpeed: 4
 	occlusion: 6
     rotate: true
+    top: true
     soundPitchMin: 1.72
     soundPitchMax: 1.94
     shootSound: missile
@@ -40,6 +43,7 @@ weapons:[
 	  explodeRange: 18
       width: 6
       height: 12
+	  range: 300
 	  shrinkX: 0
 	  shrinkY: 0
       speed: 11
@@ -69,7 +73,7 @@ weapons:[
 	    hitColor: b28768
         width: 2
         height: 6
-        speed: 6
+        speed: 2
 	    shrinkX: 0.3
 	    shrinkY: 0.1
         sprite: diamond-ore-diamondshard
