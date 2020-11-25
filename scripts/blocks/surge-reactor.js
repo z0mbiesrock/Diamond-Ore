@@ -160,8 +160,8 @@ const surgeReactor = extendContent(NuclearReactor, "surge-reactor", {
 surgeReactor.buildType = () => extendContent(NuclearReactor.NuclearReactorBuild, surgeReactor, {
 	
     //OVERRIDE
-	onDestroyed: function(tile){
-		this.super$onDestroyed(tile);
+	onDestroyed(){
+		this.super$onDestroyed();
 		Sounds.explosionbig.at(this.x, this.y);
 		Effect.shake(155, 155, this.x, this.y);
 		try{

@@ -1,13 +1,13 @@
-const surgeBattery = extendContent(Battery, "surgebattery", {
+const surgeBattery = extendContent(Battery, "surgebattery", {});
+surgeBattery.buildType = () => extendContent(Battery.BatteryBuild, surgeBattery, {
     //OVERRIDE
-	onDestroyed: function(tile){
-		this.super$onDestroyed(tile);
+	onDestroyed(){
+		this.super$onDestroyed();
         for(var i = 0; i < 55; i++){
-            Calls.createBullet(Bullets.cryoShot, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.15, 1.0), Mathf.random(0.2, 3.0));
+            Calls.createBullet(Bullets.cryoShot, Team.derelict, this.x, this.y, Mathf.random(360), Mathf.random(0.15, 1.0), Mathf.random(0.2, 3.0));
 		}
         for(var i = 0; i < 15; i++){
-            Calls.createBullet(Bullets.flakSurge, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.15, 1.0), Mathf.random(0.2, 1.0));
+            Calls.createBullet(Bullets.flakSurge, Team.derelict, this.x, this.y, Mathf.random(360), Mathf.random(0.15, 1.0), Mathf.random(0.2, 1.0));
 		}
 	},
-	
-})
+});

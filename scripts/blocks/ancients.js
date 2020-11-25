@@ -129,12 +129,6 @@ const ancientSprayer = extendContent(ItemTurret, "ancient-sprayer", {
             Core.atlas.find(this.name + "-base"),
             Core.atlas.find(this.name)
         ];
-    },
-    updateShooting(tile){
-        this.super$updateShooting(tile);
-        this.xRand += 1;
-		this.xRand = Math.max(1, this.xRand % 5);
-		this.region = Core.atlas.find(this.name + this.xRand);
     }
 });
 ancientSprayer.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1), 0.4)).update(false).boost();
