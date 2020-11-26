@@ -52,6 +52,7 @@ ammoTypes: {
 	  frontColor: 999999
 	  backColor: ffffff
 	  pierce: true
+	  pierceBuilding: true
 	  knockback: 10
 	  sprite: shell
     }
@@ -91,6 +92,7 @@ ammoTypes: {
 	  frontColor: ffa044
 	  backColor: ff6614
 	  pierce: true
+	  pierceBuilding: true
 	  knockback: 10
 	  sprite: diamond-ore-diamondshell
     }
@@ -186,6 +188,7 @@ ammoTypes: {
 	  weaveScale: 1.364
 	  weaveMag: 2.66
 	  pierce: true
+	  pierceBuilding: true
 	  knockback: 10
 	  sprite: diamond-ore-diamondshell
     }
@@ -232,7 +235,8 @@ ammoTypes: {
 	despawnEffect: flakExplosionBig
     ammoMultiplier: 3
 	reloadMultiplier: 0.975
-	lightningLength: 18
+	lightningLength: 14
+	lightningLengthRand: 9
 	lightning: 4
 	hitShake: 5
 	pierce: false
@@ -261,8 +265,9 @@ ammoTypes: {
 	despawnEffect: flakExplosionBig
     ammoMultiplier: 1
 	reloadMultiplier: 0.575
-	lightningLength: 32
-	lightning: 6
+	lightningLength: 24
+	lightningLengthRand: 24
+	lightning: 9
 	hitShake: 12
 	status: shocked
 	statusDuration: 120
@@ -297,7 +302,7 @@ ammoTypes: {
 	fragVelocityMax: 4.5
 	fragBullet: {
       type: ArtilleryBulletType
-      drag: 0.08
+      drag: 0.02
       speed: 10
 	  lifetime: 30
       damage: 15
@@ -391,6 +396,7 @@ ammoTypes: {
 	  frontColor: 44ffff
 	  backColor: ffffff
 	  pierce: true
+	  pierceBuilding: true
 	  knockback: 600
 	  status: freezing
 	  statusDuration: 300
@@ -437,6 +443,7 @@ ammoTypes: {
 	  frontColor: e7885c
 	  backColor: ff9c3a
 	  pierce: true
+	  pierceBuilding: true
 	  knockback: 600
 	  status: burning
 	  statusDuration: 300

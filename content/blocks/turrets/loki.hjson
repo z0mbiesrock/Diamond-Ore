@@ -35,6 +35,7 @@ ammoTypes: {
 	despawnEffect: shootSmallSmoke
     ammoMultiplier: 4
 	pierce: true
+	pierceBuilding: true
 	knockback: 0.8
 	inaccuracy: 2
 	sprite: diamond-ore-diamondbullet
@@ -56,6 +57,7 @@ ammoTypes: {
 	despawnEffect: shootSmallSmoke
     ammoMultiplier: 4
 	pierce: true
+	pierceBuilding: true
 	sprite: diamond-ore-diamondshell
   }
   titanium: {
@@ -76,6 +78,7 @@ ammoTypes: {
     ammoMultiplier: 4
 	reloadMultiplier: 1.1
 	pierce: true
+	pierceBuilding: true
 	knockback: 2.7
 	sprite: diamond-ore-diamondbullet
   }
@@ -98,6 +101,7 @@ ammoTypes: {
 	reloadMultiplier: 1.5
 	inaccuracy: 6
 	pierce: true
+	pierceBuilding: true
 	knockback: -0.5
 	sprite: diamond-ore-diamondbullet
   }
@@ -120,6 +124,7 @@ ammoTypes: {
 	reloadMultiplier: 0.95
 	inaccuracy: -4
 	pierce: true
+	pierceBuilding: true
 	status: burning
 	statusDuration: 720
 	sprite: diamond-ore-diamondshell
@@ -143,6 +148,7 @@ ammoTypes: {
     ammoMultiplier: 1
 	reloadMultiplier: 0.6
 	pierce: true
+	pierceBuilding: true
 	knockback: 15
 	sprite: shell
 	shrinkY: 0.1
@@ -189,6 +195,7 @@ ammoTypes: {
 	reloadMultiplier: 0.95
 	inaccuracy: -4
 	pierce: true
+	pierceBuilding: true
 	status: freezing
 	statusDuration: 720
 	knockback: 0.85
@@ -213,6 +220,7 @@ ammoTypes: {
 	reloadMultiplier: 0.85
 	inaccuracy: -4
 	pierce: true
+	pierceBuilding: true
 	status: corroded
 	statusDuration: 720
 	knockback: 2.55

@@ -7,9 +7,4 @@ explosiveness: 0.25
 color: 8e5811
 research:{
   parent: scrap
-  requirements:[
-	scrap/6553512
-	diamond/69000
-	cryogem/69000
-  ]
 }

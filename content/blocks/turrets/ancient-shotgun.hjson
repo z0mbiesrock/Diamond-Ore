@@ -165,6 +165,7 @@ ammoTypes: {
     ammoMultiplier: 2
 	reloadMultiplier: 1.8
 	pierce: true
+	pierceBuilding: true
 	sprite: diamond-ore-diamondbullet
 	shrinkY: 0.12
   }

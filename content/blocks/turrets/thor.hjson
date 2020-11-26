@@ -105,6 +105,7 @@ ammoTypes: {
     width: 12
     height: 25
 	frontColor: ffff44
+	hitColor: ffff44
 	backColor: ffffff
 	trailColor: ffaa4a
     shootEffect: shootBig
@@ -225,6 +226,7 @@ ammoTypes: {
     height: 8
 	frontColor: bbbbbb
 	backColor: 38a8a8
+	hitColor: 38a8a8
 	trailColor: bba84A
     shootEffect: shootBig2
     smokeEffect: shootBigSmoke
@@ -258,6 +260,7 @@ ammoTypes: {
 	shrinkY: 0.4
 	hitEffect: shockwave
 	despawnEffect: flakExplosionBig
+	hitsound: plasmaboom
     ammoMultiplier: 2
 	reloadMultiplier: 1.06
 	pierce: false
@@ -387,6 +390,7 @@ ammoTypes: {
 	hitSound: explosionbig
 	fragVelocityMax: 3
 	hitShake: 15
+	reflectable: false
 	fragBullet: {
       type: MissileBulletType
 	  homingPower: 0
@@ -403,6 +407,7 @@ ammoTypes: {
 	  frontColor: ffa044
 	  backColor: ff6614
 	  pierce: true
+	  pierceBuilding: true
 	  weaveScale: 4.53
 	  weaveMag: 4.5
 	  knockback: 1
@@ -412,6 +417,7 @@ ammoTypes: {
 	  fragBullets: 1
 	  fragVelocityMin: 2.25
 	  fragVelocityMax: 9.0
+	  reflectable: false
 	  fragBullet: {
         type: MissileBulletType
 	    homingPower: 0
@@ -428,12 +434,14 @@ ammoTypes: {
 	    frontColor: ffa044
 	    backColor: ff6614
 	    pierce: true
+	    pierceBuilding: true
 	    weaveScale: 4.53
 	    weaveMag: 4.5
 	    knockback: 1
 	    status: corroded
 	    statusDuration: 1200
 	    sprite: shell
+	    reflectable: false
       }
     }
   }

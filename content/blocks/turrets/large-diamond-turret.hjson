@@ -82,6 +82,7 @@ ammoTypes: {
 	shrinkY: 0
 	reloadMultiplier: 1.9
 	pierce: true
+	pierceBuilding: true
 	status: corroded
 	statusDuration: 840
 	sprite: diamond-ore-diamondbullet
@@ -124,6 +125,7 @@ ammoTypes: {
 	reloadMultiplier: 10
 	shrinkY: 0
 	pierce: true
+	pierceBuilding: true
 	homingPower: 5
 	homingRange: 100
 	sprite: diamond-ore-diamondshell
@@ -147,6 +149,7 @@ ammoTypes: {
 	homingPower: 0
 	homingRange: 0
 	pierce: true
+	pierceBuilding: true
 	sprite: diamond-ore-diamondbullet
   }
   blast-compound: {

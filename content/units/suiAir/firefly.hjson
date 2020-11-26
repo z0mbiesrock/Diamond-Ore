@@ -99,9 +99,10 @@ weapons:[
 ]
 
 research:{
-  parent: horizon
+  parent: gnat
   requirements:[
       silicon/3000
+      graphite/3000
       spore-pod/1000
       blast-compound/10000
       metaglass/1000
