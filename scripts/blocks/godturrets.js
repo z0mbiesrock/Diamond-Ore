@@ -167,46 +167,25 @@ const yggdrasilPlasmaFragmentExplosion = Effect(40, e => {
     Angles.randLenVectors(e.id, 3, -20 + 170 * e.fin(), e.rotation, 45,d);
 });
 
-const yggdrasilPlasmaFlakFrag = extend(MissileBulletType, {});
-yggdrasilPlasmaFlakFrag.lifetime = 20;
-yggdrasilPlasmaFlakFrag.damage = 300;
-yggdrasilPlasmaFlakFrag.width = 25;
-yggdrasilPlasmaFlakFrag.height = 200;
-yggdrasilPlasmaFlakFrag.shrinkY = 0.75;
-yggdrasilPlasmaFlakFrag.despawnEffect = yggdrasilPlasmaFragmentExplosion;
-yggdrasilPlasmaFlakFrag.hitEffect = Fx.none;
-yggdrasilPlasmaFlakFrag.frontColor = Color.valueOf("#ffff77");
-yggdrasilPlasmaFlakFrag.trailColor = Color.valueOf("#ffff00");
-yggdrasilPlasmaFlakFrag.backColor = Color.valueOf("#ffff77");
-yggdrasilPlasmaFlakFrag.pierce = true;
-yggdrasilPlasmaFlakFrag.pierceBuilding = true;
-yggdrasilPlasmaFlakFrag.status = StatusEffects.shocked;
-yggdrasilPlasmaFlakFrag.statusDuration = 300;
-yggdrasilPlasmaFlakFrag.bulletSprite = "bullet";
-yggdrasilPlasmaFlakFrag.homingPower = 0;
-yggdrasilPlasmaFlakFrag.homingRange = 0;
-yggdrasilPlasmaFlakFrag.hitSound = Sounds.none;
-
-const yggdrasilPlasmaFlak = extend(BasicBulletType, {});
-yggdrasilPlasmaFlak.instantDisappear = true;
-yggdrasilPlasmaFlak.fragBullets = 20;
-yggdrasilPlasmaFlak.fragVelocityMin = 0.72;
-yggdrasilPlasmaFlak.fragVelocityMax = 12;
-yggdrasilPlasmaFlak.width = 0;
-yggdrasilPlasmaFlak.height = 0;
-yggdrasilPlasmaFlak.hitSound = Sounds.none;
-yggdrasilPlasmaFlak.despawnEffect = yggdrasilPlasmaExplosionSpark;
-yggdrasilPlasmaFlak.hitEffect = Fx.nuclearShockwave;
-yggdrasilPlasmaFlak.frontColor = Color.valueOf("#ffff77");
-yggdrasilPlasmaFlak.backColor = Color.valueOf("#ffff77");
-yggdrasilPlasmaFlak.pierce = false;
-yggdrasilPlasmaFlak.lightningLength = 45;
-yggdrasilPlasmaFlak.lightningLength = 45;
-yggdrasilPlasmaFlak.lightningCone = 0;
-yggdrasilPlasmaFlak.lightning = 1;
-yggdrasilPlasmaFlak.status = StatusEffects.shocked;
-yggdrasilPlasmaFlak.statusDuration = 300;
-yggdrasilPlasmaFlak.fragBullet = yggdrasilPlasmaFlakFrag;
+const yggdrasilPlasmaFrag = extend(MissileBulletType, {});
+yggdrasilPlasmaFrag.lifetime = 20;
+yggdrasilPlasmaFrag.damage = 300;
+yggdrasilPlasmaFrag.width = 25;
+yggdrasilPlasmaFrag.height = 200;
+yggdrasilPlasmaFrag.shrinkY = 0.75;
+yggdrasilPlasmaFrag.despawnEffect = yggdrasilPlasmaFragmentExplosion;
+yggdrasilPlasmaFrag.hitEffect = Fx.none;
+yggdrasilPlasmaFrag.frontColor = Color.valueOf("#ffff77");
+yggdrasilPlasmaFrag.trailColor = Color.valueOf("#ffff00");
+yggdrasilPlasmaFrag.backColor = Color.valueOf("#ffff77");
+yggdrasilPlasmaFrag.pierce = true;
+yggdrasilPlasmaFrag.pierceBuilding = true;
+yggdrasilPlasmaFrag.status = StatusEffects.shocked;
+yggdrasilPlasmaFrag.statusDuration = 300;
+yggdrasilPlasmaFrag.bulletSprite = "bullet";
+yggdrasilPlasmaFrag.homingPower = 0;
+yggdrasilPlasmaFrag.homingRange = 0;
+yggdrasilPlasmaFrag.hitSound = Sounds.none;
 
 const yggdrasilPlasmaSphere = Effect(24, e => {
     Draw.color(Color.valueOf("#ffffff"), Color.valueOf("#ffff00"), e.fin());
@@ -219,16 +198,6 @@ const yggdrasilPlasmaSphere = Effect(24, e => {
 });
 
 const yggdrasilPlasma = extend(ArtilleryBulletType, {
-	
-	/*
-	// It is impossible to prevent abullet from being absorbed by a force projector.
-	canBeAbsorbed(){
-        return false;
-	},
-	absorb(){
-		print("fuck");
-        this.despawned(this);
-	},	 */
     update(b){
         this.super$update(b);
         if(b.timer.get(0, 3 + b.fslope() * 2)){
@@ -258,7 +227,7 @@ yggdrasilPlasma.hittable = false;
 yggdrasilPlasma.absorbable = false;
 yggdrasilPlasma.reflectable = false;
 yggdrasilPlasma.splashDamage = 9000;
-yggdrasilPlasma.splashDamageRadius = 120;
+yggdrasilPlasma.splashDamageRadius = 200;
 yggdrasilPlasma.shrinkY = 0;
 yggdrasilPlasma.hitShake = 15;
 yggdrasilPlasma.hitEffect = yggdrasilPlasmaExplosion;
@@ -270,13 +239,15 @@ yggdrasilPlasma.pierce = false;
 yggdrasilPlasma.bulletSprite = "diamond-ore-diamondbullet";
 yggdrasilPlasma.homingPower = 0;
 yggdrasilPlasma.homingRange = 0;
-yggdrasilPlasma.fragBullets = 10;
-yggdrasilPlasma.fragVelocityMin = 1;
-yggdrasilPlasma.fragVelocityMax = 1;
+yggdrasilPlasma.fragBullets = 100;
+yggdrasilPlasma.fragVelocityMin = 0.7;
+yggdrasilPlasma.fragVelocityMax = 12;
+yggdrasilPlasma.fragLifeMin = 1;
+yggdrasilPlasma.fragLifeMax = 2;
 yggdrasilPlasma.status = StatusEffects.shocked;
 yggdrasilPlasma.statusDuration = 300;
 yggdrasilPlasma.hitSound = Sounds.plasmaboom;
-yggdrasilPlasma.fragBullet = yggdrasilPlasmaFlak;
+yggdrasilPlasma.fragBullet = yggdrasilPlasmaFrag;
 const yggdrasilTurret = extendContent(ChargeTurret, "yggdrasil", {
 	
 	icons: function(){
