@@ -126,7 +126,7 @@ ammoTypes: {
 	shrinkY: 0
 	pierce: true
 	pierceBuilding: true
-	homingPower: 5
+	homingPower: 0.125
 	homingRange: 100
 	sprite: diamond-ore-diamondshell
 	inaccuracy: 9

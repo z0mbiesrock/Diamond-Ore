@@ -120,7 +120,7 @@ ammoTypes: {
 	reloadMultiplier: 10
 	pierce: true
 	pierceBuilding: true
-	homingPower: 5
+	homingPower: 0.05
 	homingRange: 75
 	sprite: diamond-ore-diamondshell
 	inaccuracy: 9
