@@ -1,11 +1,11 @@
-localizedName: Beetle
+localizedName: Scarab
 description: Fires salvos of small fast homing missiles and a barrage of strange flammable fluids at all nearby enemies. Explodes upon destruction.
 commandLimit: 8
 speed: 0.6
 drag: 0.05
 accel: 0.084
 rotateSpeed: 2.5
-health: 400
+health: 6400
 armor: 20
 range: 240
 itemCapacity: 250

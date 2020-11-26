@@ -11,7 +11,7 @@ range: 240
 aimDst: 240
 itemCapacity: 500
 hitSize: 32
-payloadCapacity: 35
+payloadCapacity: 2176
 payload: true
 rotateShooting: false
 lowAltitude: true
@@ -95,38 +95,38 @@ weapons:[
     recoil: 4
     reload: 260
 	inaccuracy: 2
-	rotateSpeed: 3.3
+	rotateSpeed: 1.73
 	cooldownTime: 160
 	occlusion: 30
     rotate: true
     mirror: false
     soundPitchMin: 0.72
     soundPitchMax: 0.94
-    shootSound: coreexplode
+    shootSound: corexplode
     bullet:{
       type: FlakBulletType
 	  frontColor: b28768
 	  backColor: b28768
-	  explodeRange: 64
+	  explodeRange: 80
       width: 12
       height: 26
 	  shrinkX: 0
 	  shrinkY: 0
-      speed: 8
+      speed: 7
 	  range: 480
 	  trailColor: b28768
-	  trailChance: 0.9
+	  trailChance: 1
 	  trailEffect: absorb
 	  hitColor: c9a58f
 	  lightColor: b28768
 	  homingPower: 0.0246
-	  homingRange: 160
+	  homingRange: 184
 	  hitEffect: sapExplosion
 	  shootEffect: shootLiquid
 	  smokeEffect: shootLiquid
 	  despawnEffect: mineHuge
       sprite: diamond-ore-diamondconcus
-      lifetime: 220
+      lifetime: 110
 	  damage: 64
 	  splashDamage: 256
 	  splashDamageRadius: 128
@@ -144,7 +144,7 @@ weapons:[
 	    trailColor: c9a58f
 	    backColor: b28768
 	    hitColor: b28768
-        width: 2
+        width: 4
         height: 6
         speed: 5
 	    shrinkX: 0
@@ -154,8 +154,8 @@ weapons:[
 	    hitEffect: hitBulletBig
         lifetime: 68
 	    damage: 12
-	    homingPower: 0.086
-	    homingRange: 60
+	    homingPower: 0.0967
+	    homingRange: 256
 	    splashDamage: 18
 	    splashDamageRadius: 18
 		hittable: false

@@ -65,7 +65,7 @@ const surgeReactorMeltdownFxA = Effect(60, e => {
 });
 
 const surgeReactorMeltdownFxB = Effect(80, e => {
-	alignGrad = 1;
+	var alignGrad = 1;
 	if (e.rotation < 0){
 		alignGrad = e.fin();
 	}
@@ -166,7 +166,7 @@ surgeReactor.buildType = () => extendContent(NuclearReactor.NuclearReactorBuild,
 		Effect.shake(155, 155, this.x, this.y);
 		try{
 			Units.all(cons(plr => {
-				if (plr.isDead() == false && plr instanceof Player){
+				if (plr.isDead() == false && plr.controller().isBeingControlled(PlayerComp.unit())){
 					Effect.shake(75, 75, plr.x, plr.y);
 					Sounds.corexplode.at(plr.x, plr.y);
 					Sounds.explosionbig.at(plr.x, plr.y);

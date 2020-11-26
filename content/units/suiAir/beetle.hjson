@@ -5,7 +5,7 @@ speed: 0.81
 drag: 0.05
 accel: 0.084
 rotateSpeed: 4.5
-health: 400
+health: 1200
 armor: 15
 range: 440
 itemCapacity: 200
@@ -25,13 +25,14 @@ weapons:[
     y: 2
     shootY: 4
     recoil: 0
-    reload: 40
+    reload: 20
 	spacing: 2
 	inaccuracy: 2
 	velocityRnd: 0.25
 	rotateSpeed: 4
 	occlusion: 6
     rotate: true
+    mirror: false
     top: true
     soundPitchMin: 1.72
     soundPitchMax: 1.94
@@ -59,7 +60,7 @@ weapons:[
 	  shootEffect: shootSmall
 	  despawnEffect: mine
       sprite: diamond-ore-diamondmissile
-      lifetime: 70
+      lifetime: 30
 	  damage: 8
 	  splashDamage: 36
 	  splashDamageRadius: 36

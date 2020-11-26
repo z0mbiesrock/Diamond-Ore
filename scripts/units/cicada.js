@@ -38,7 +38,7 @@ SuiAirT5.constructor = () => extend(UnitEntity, {
 		if (this.dead || this.health <= 0){
 			cicadaExplosion.at(this.x, this.y)
 			Effect.shake(15, 15, this.x, this.y);
-			Fx.shockwaveBig.at(this.x, this.y);
+			Fx.bigShockwave.at(this.x, this.y);
 			for(var i = 0; i < 16; i++){
 				cicadaExplosionShard.create(this, this.team, this.x, this.y, Mathf.random(360), Mathf.random(0.5, 1.0), 1);
 			}
@@ -47,6 +47,12 @@ SuiAirT5.constructor = () => extend(UnitEntity, {
 			}
 			for(var k = 0; k < 48; k++){
 				Bullets.standardIncendiary.create(this, this.team, this.x, this.y, Mathf.random(360), Mathf.random(0.5, 1.5), Mathf.random(0.5, 1.0));
+			}
+			for(var kr = 0; kr < 60; kr++){
+				Bullets.standardThorium.create(this, this.team, this.x, this.y, Mathf.random(360), Mathf.random(0.25, 1.25), Mathf.random(0.5, 1.0));
+			}
+			for(var nm = 0; nm < 40; nm++){
+				Bullets.standardThoriumBig.create(this, this.team, this.x, this.y, Mathf.random(360), Mathf.random(0.25, 1.25), Mathf.random(0.5, 1.0));
 			}
 			this.destroy();
 		}
