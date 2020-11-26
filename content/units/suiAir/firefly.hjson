@@ -13,7 +13,7 @@ hitSize: 9
 crashDamageMultiplier: 9
 rotateShooting: false
 immunities: [wet, tarred, sapped, sporeSlowed, corroded, burning, melting]
-engineOffset: 8
+engineOffset: 7
 engineSize: 7
 targetAir: false
 lowAltitude: true
@@ -51,8 +51,8 @@ weapons:[
 	killShooter: true
 	keepVelocity: true
     damage: 25
-    bulletWidth: 14
-    bulletHeight: 18
+    width: 14
+    height: 18
 	frontColor: ffcc44
 	backColor: ea690f
 	//trailColor: 666666
@@ -81,8 +81,8 @@ weapons:[
 		incendSpread: 20
 		incendChance: 0.6
 	    collidesAir: false
-        bulletWidth: 15
-        bulletHeight: 15
+        width: 15
+        height: 15
 	    despawnEffect: none
 	    hitEffect: none
 	    frontColor: f0511d

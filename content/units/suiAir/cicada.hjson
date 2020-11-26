@@ -8,12 +8,14 @@ rotateSpeed: 1.5
 health: 31000
 armor: 25
 range: 240
-aimDst: 240
+maxRange: 480
+aimDst: 36
 itemCapacity: 500
-hitSize: 32
-payloadCapacity: 2176
+hitSize: 22
+payloadCapacity: 2200
 payload: true
 rotateShooting: false
+singleTarget: false
 lowAltitude: true
 destructibleWreck: false
 immunities: [wet, tarred, sapped, sporeSlowed, corroded, burning, melting]
@@ -108,25 +110,26 @@ weapons:[
 	  frontColor: b28768
 	  backColor: b28768
 	  explodeRange: 80
-      width: 12
-      height: 26
+      width: 21
+      height: 31
 	  shrinkX: 0
 	  shrinkY: 0
-      speed: 7
+      speed: 8
 	  range: 480
+	  drag: 0.0039
 	  trailColor: b28768
 	  trailChance: 1
 	  trailEffect: absorb
 	  hitColor: c9a58f
 	  lightColor: b28768
-	  homingPower: 0.0246
+	  homingPower: 0.0546
 	  homingRange: 184
 	  hitEffect: sapExplosion
 	  shootEffect: shootLiquid
 	  smokeEffect: shootLiquid
 	  despawnEffect: mineHuge
       sprite: diamond-ore-diamondconcus
-      lifetime: 110
+      lifetime: 180
 	  damage: 64
 	  splashDamage: 256
 	  splashDamageRadius: 128
@@ -147,14 +150,16 @@ weapons:[
         width: 4
         height: 6
         speed: 5
+        weaveMag: 2
+        weaveScale: 2
 	    shrinkX: 0
 	    shrinkY: 0
         sprite: missile
 	    despawnEffect: hitBulletBig
 	    hitEffect: hitBulletBig
-        lifetime: 68
+        lifetime: 110
 	    damage: 12
-	    homingPower: 0.0967
+	    homingPower: 0.13967
 	    homingRange: 256
 	    splashDamage: 18
 	    splashDamageRadius: 18

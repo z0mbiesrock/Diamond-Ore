@@ -13,7 +13,7 @@ hitSize: 12
 rotateShooting: false
 immunities: [wet, tarred, sapped, sporeSlowed, corroded, burning, melting]
 engineOffset: 8
-engineSize: 7
+engineSize: 6
 lowAltitude: true
 destructibleWreck: false
 flying: true
@@ -22,7 +22,7 @@ weapons:[
   {
     name: beetle-missile
     x: 0
-    y: 2
+    y: -7.82
     shootY: 4
     recoil: 0
     reload: 20
