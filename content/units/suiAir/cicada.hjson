@@ -109,14 +109,13 @@ weapons:[
       type: FlakBulletType
 	  frontColor: b28768
 	  backColor: b28768
-	  explodeRange: 80
+	  explodeRange: 140
       width: 21
       height: 31
 	  shrinkX: 0
 	  shrinkY: 0
-      speed: 8
+      speed: 6
 	  range: 480
-	  drag: 0.0039
 	  trailColor: b28768
 	  trailChance: 1
 	  trailEffect: absorb
@@ -124,12 +123,12 @@ weapons:[
 	  lightColor: b28768
 	  homingPower: 0.0546
 	  homingRange: 184
-	  hitEffect: sapExplosion
+	  hitEffect: massiveExplosion
 	  shootEffect: shootLiquid
 	  smokeEffect: shootLiquid
-	  despawnEffect: mineHuge
+	  despawnEffect: flakExplosionBig
       sprite: diamond-ore-diamondconcus
-      lifetime: 180
+      lifetime: 80
 	  damage: 64
 	  splashDamage: 256
 	  splashDamageRadius: 128
