@@ -169,7 +169,7 @@ weapons:[
 ]
 
 research: {
-  parent: charybdis
+  parent: scarab
   requirements:[
       silicon/255000
       plastanium/160000
