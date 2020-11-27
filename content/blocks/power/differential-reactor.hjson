@@ -45,7 +45,5 @@ requirements: [
 ]
 category: power
 research: surge-reactor
-ambientSound: combustion
-ambientSoundVolume: 5.8
-//ambientSound: hum
-//ambientSoundVolume: 0.75
+loopSound: fire
+loopSoundVolume: 3
