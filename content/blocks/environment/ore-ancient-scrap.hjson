@@ -4,4 +4,4 @@ playerUnmineable: true
 oreDefault: true
 variants: 6
 oreScale: 20
-oreThreshold: 0.90
+oreThreshold: 0.80

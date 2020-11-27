@@ -3,6 +3,7 @@ localizedName: Ancient Debris
 name: Ancient Debris
 itemDrop: ancient-alloy
 playerUnmineable: true
+oreDefault: true
 variants: 8
-oreScale: 8
-oreThreshold: 0.97
+oreScale: 9
+oreThreshold: 0.89
