@@ -1,6 +1,7 @@
 //type: NuclearReactor
 name: Surge Reactor
-description: A massive and incredibly unstable reactor which converts surge alloy directly into energy. It will explode violently if insufficient amounts of coolant are supplied. Power output depends on fullness, with base power generated at full capacity.
+description: Generates humongous amounts of power from surge alloy. Requires constant cooling. Will explode violently if insufficient amounts of coolant are supplied.
+details: A massive and incredibly unstable reactor which converts surge alloy directly into energy. Power output depends on fullness, with base power generated at full capacity.
 itemCapacity: 100
 liquidCapacity: 100
 health: 6000

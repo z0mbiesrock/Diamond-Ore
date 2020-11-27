@@ -6,7 +6,7 @@ floating: true
 liquidCapacity: 20
 liquidPressure: 2
 buildCostMultiplier: 0.5
-description: A much stronger conduit block. Very leak-resistant.
+description: Moves liquids forward. Does not accept input from the sides. Does not leak.
 requirements: [
   metaglass/4
   graphite/4

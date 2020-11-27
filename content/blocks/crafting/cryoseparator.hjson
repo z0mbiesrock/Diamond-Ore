@@ -15,7 +15,7 @@ consumes: {
   power: 7.2
   liquid: {
     liquid: slag
-    amount: 0.083333333333
+    amount: 0.108333333333
   }
 }
 requirements: [

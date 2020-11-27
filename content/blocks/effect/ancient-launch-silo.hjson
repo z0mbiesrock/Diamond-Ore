@@ -1,8 +1,8 @@
 name: Ancient Launch Silo
 description: Launches massive batches of items to selected sectors.
-type: LaunchPad
+//type: LaunchPad
 health: 12500
-buildVisibility: debugOnly
+buildVisibility: campaignOnly
 //podRegion: ancient-launch-silo-pod
 lightColor: eeeeaa
 itemCapacity: 3000

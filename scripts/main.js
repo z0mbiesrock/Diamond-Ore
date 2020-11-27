@@ -6,6 +6,10 @@ new Item("ancient-scrap");
 new Item("ancient-alloy");
 new Liquid("phase-string");
 new Liquid("corrupt-water");
+const cLP = new LaunchPad("cargo-launch-pad");
+cLP.podRegion = Core.atlas.find(cLP.name + "-pod");
+const aLS = new LaunchPad("ancient-launch-silo");
+aLS.podRegion = Core.atlas.find(aLS.name + "-pod");
 // Blocks
 require("testbomb")
 require("blocks/crystal-conveyor")

@@ -3,9 +3,10 @@ health: 500
 name: Crystal Conduit
 solid: true
 floating: true
-liquidCapacity: 5
-liquidPressure: 3
-description: A stronger conduit block. Although it has a lower storage capacity than regular conduits, it transports liquids much faster.
+placeableLiquid: true
+liquidCapacity: 8
+liquidPressure: 6
+description: Moves liquids forward. Transports even faster but has a smaller capacity.
 requirements: [
   metaglass/2
   silicon/2
