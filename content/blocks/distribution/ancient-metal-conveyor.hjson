@@ -1,11 +1,12 @@
 type: ArmoredConveyor
-health: 1250
+health: 1800
 name: Ancient Metal Conveyor
 solid: true
 floating: true
 insulated: true
+absorbLasers: true
 buildCostMultiplier: 0.3
-description: An extremely durable armored conveyor belt.
+description: Transports items forward. Does not accept inputs from the sides. Absorbs lasers and electric arcs. Blocks automatic power connections.
 requirements: [
   phase-fabric/1
   plastanium/2

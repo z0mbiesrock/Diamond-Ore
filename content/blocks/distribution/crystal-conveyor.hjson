@@ -1,8 +1,8 @@
 //type: Conveyor
-health: 450
+health: 600
 name: Crystal Conveyor
 solid: true
-description: A fast conveyor block reinforced with diamond plating.
+description: Transports items forward.
 requirements: [
   graphite/3
   silicon/2

@@ -1,11 +1,11 @@
 //type: Conveyor
-health: 1100
+health: 1200
 name: Spore Conveyor
 solid: true
 update: true
 floating: true
-canOverdrive: false
-description: An organic way of transporting items. Not as fast as other conveyors, but very durable and can regenerate health.
+description: Transports items forward.
+details: An organic way of transporting items.
 requirements: [
   plastanium/3
   dark-spore-pod/1

@@ -1,0 +1,14 @@
+type: StackConveyor
+health: 150
+name: Mass Conveyor
+solid: true
+description: Transports items forward in batches. Faster than plastanium conveyors.
+recharge: 1
+requirements: [
+  diamond/1
+  surge-alloy/1
+  dark-spore-pod/1
+]
+category: distribution
+speed: 0.105
+research: spore-conveyor
