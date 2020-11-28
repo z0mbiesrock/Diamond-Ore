@@ -36,7 +36,7 @@ requirements: [
   metaglass/1500
   plastanium/1500
   surge-alloy/2500
-  ancient-alloy/2500
+  ancient-alloy/125
   blast-compound/15
 ]
 category: production
