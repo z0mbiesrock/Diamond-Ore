@@ -248,7 +248,7 @@ yggdrasilPlasma.status = StatusEffects.shocked;
 yggdrasilPlasma.statusDuration = 300;
 yggdrasilPlasma.hitSound = Sounds.plasmaboom;
 yggdrasilPlasma.fragBullet = yggdrasilPlasmaFrag;
-const yggdrasilTurret = extendContent(ChargeTurret, "yggdrasil", {
+const yggdrasilTurret = extendContent(PowerTurret, "yggdrasil", {
 	
 	icons: function(){
 		return [

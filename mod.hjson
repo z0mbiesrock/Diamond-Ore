@@ -3,4 +3,4 @@ displayName: "[cyan]Diamond Ore[] Mod" //what displays in the mod selection menu
 author: "z0mbiesrock"
 description: "Adds the [cyan]Diamond[] resource. \n\nInitial port to V6.0\n\n\n\n[scarlet]NOT STABLE AT ALL[]"
 version: "[#9cb6f4]2.0.1[]"
-minGameVersion: "114"
+minGameVersion: "118"
