@@ -4,6 +4,7 @@ commandLimit: 8
 speed: 0.6
 drag: 0.05
 accel: 0.084
+buildSpeed: 2.5
 rotateSpeed: 2.5
 health: 6400
 armor: 20

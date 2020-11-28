@@ -1,6 +1,6 @@
 //type: ItemTurret
 name: Loki
-description: A large anti-ground gatling turret that mows down ground units with piercing projectiles.
+description: Mows down ground enemies with piercing projectiles.
 health: 1700
 size: 3
 reloadTime: 3

@@ -4,6 +4,7 @@ commandLimit: 10
 speed: 0.4
 drag: 0.015
 accel: 0.024
+buildSpeed: 3.75
 rotateSpeed: 1.5
 health: 31000
 armor: 25
@@ -13,7 +14,6 @@ aimDst: 36
 itemCapacity: 500
 hitSize: 22
 payloadCapacity: 2200
-payload: true
 rotateShooting: false
 singleTarget: false
 lowAltitude: true

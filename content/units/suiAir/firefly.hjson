@@ -1,6 +1,6 @@
 localizedName: Firefly
 description: Flies toward ground enemies and explodes, releasing incendiary sludge.
-commandLimit: 0
+commandLimit: 4
 speed: 1.1
 drag: 0.1
 accel: 0.2

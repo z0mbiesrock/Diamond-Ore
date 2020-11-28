@@ -4,6 +4,7 @@ commandLimit: 8
 speed: 0.81
 drag: 0.05
 accel: 0.084
+buildSpeed: 1.25
 rotateSpeed: 4.5
 health: 1200
 armor: 15
@@ -13,7 +14,7 @@ hitSize: 12
 rotateShooting: false
 immunities: [wet, tarred, sapped, sporeSlowed, corroded, burning, melting]
 engineOffset: 8
-engineSize: 6
+engineSize: 4
 lowAltitude: true
 destructibleWreck: false
 flying: true

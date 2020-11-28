@@ -1,6 +1,6 @@
 //type: DoubleTurret
 name: Thor
-description: A large turret that fires large slow homing missiles. Extremely high range and damage, but has a very slow fire rate and ammo capacity.
+description: Fires large slow homing missiles.
 health: 1700
 size: 3
 reloadTime: 135
