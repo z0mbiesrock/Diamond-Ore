@@ -1,6 +1,7 @@
 type: Boulder
 name: Spore Cluster Dark
 variants: 6
+buildVisibility: editorOnly
 requirements: [
   dark-spore-pod/8
 ]

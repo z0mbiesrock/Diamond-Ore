@@ -2,7 +2,8 @@ type: Boulder
 name: Ancient Wreckage
 variants: 5
 alwaysReplace: false
-buildCostMultiplier: 21
+buildCostMultiplier: 60
+buildVisibility: editorOnly
 requirements: [
   ancient-scrap/12
 ]
