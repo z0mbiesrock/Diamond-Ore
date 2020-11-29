@@ -12,4 +12,4 @@ isLiquid: true
 liquidDrop: corrupt-water
 blendGroup: water
 edge: spore-water-edge
-attributes: {array: [0, 0.75, 0, 0.2]}
+attributes: {array: [0, 0.75, 0, 0.2, 0]}

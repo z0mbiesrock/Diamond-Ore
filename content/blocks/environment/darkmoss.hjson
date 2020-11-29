@@ -4,4 +4,6 @@ variants: 6
 dragMultiplier: 1.5
 speedMultiplier: 0.95
 walkEffect: none
-attributes: {array: [0, 0.25, -0.125, 0.1]}
+attributes: {array: [0, 0.25, -0.125, 0.1, 0]}
+wall: darkmossrocks
+decoration: spore-cluster-dark

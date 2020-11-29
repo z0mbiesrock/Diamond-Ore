@@ -3,10 +3,10 @@ name: Ancient Decay Generator
 description: Durable radiation-powered generator. Can handle the explosiveness of even the most volatile compounds as fuel.
 health: 400
 size: 1
-powerProduction: 5
+powerProduction: 8
 hasItems: true
 itemCapacity: 10
-itemDuration: 120
+itemDuration: 240
 randomlyExplode: false
 generateEffect: smelt
 heatColor: 66a8ff

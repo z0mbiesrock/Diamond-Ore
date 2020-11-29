@@ -13,4 +13,4 @@ liquidDrop: corrupt-water
 blendGroup: water
 edge: spore-water-deep-edge
 drownTime: 90
-attributes: {array: [0, 1.0, 0, 0]}
+attributes: {array: [0, 1.0, 0, 0, 0]}

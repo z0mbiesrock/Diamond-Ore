@@ -2,3 +2,5 @@ type: Floor
 name: Damaged Ancient Metal Tile
 blendGroup: ancient-metal-tile
 variants: 9
+decoration: ancient-wreckage
+wall: ancient-metal-decay

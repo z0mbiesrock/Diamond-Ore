@@ -2,7 +2,5 @@ type: Floor
 name: Ancient Vent
 variants: 0
 walkEffect: none
-updateEffect: burning
-updateEffectChance: 0.005
 blendGroup: ancient-metal-tile
-attributes: {array: [1, 0, -0.1, 0]}
+attributes: {array: [1, 0, -1, 0, 0]}
