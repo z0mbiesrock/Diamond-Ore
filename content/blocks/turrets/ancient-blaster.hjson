@@ -54,7 +54,7 @@ ammoTypes: {
 	sprite: diamond-ore-diamondbullet
 	shrinkY: 0.5
 	fragBullets: 4
-	knockback: 25
+	knockback: 2
 	fragVelocityMin: 2
 	fragVelocityMax: 4
 	fragBullet: {
@@ -73,7 +73,7 @@ ammoTypes: {
 	  pierce: false
 	  sprite: diamond-ore-diamondshell
 	  shrinkY: 0.875
-	  knockback: 60
+	  knockback: 0.9604
     }
   }
   silicon: {
@@ -135,7 +135,7 @@ ammoTypes: {
     ammoMultiplier: 2
 	reloadMultiplier: 0.8
 	pierce: false
-	knockback: 20
+	knockback: 2
 	sprite: shell
 	shrinkY: 0.12
   }
@@ -155,7 +155,7 @@ ammoTypes: {
     ammoMultiplier: 2
 	reloadMultiplier: 0.5
 	pierce: false
-	knockback: 20
+	knockback: 2
 	sprite: shell
 	shrinkY: 0.12
 	lightningLength: 8
@@ -179,7 +179,7 @@ ammoTypes: {
     ammoMultiplier: 3
 	reloadMultiplier: 0.975
 	pierce: false
-	knockback: 20
+	knockback: 0.6
 	sprite: shell
 	shrinkY: 0.12
 	lightningLength: 8

@@ -367,12 +367,12 @@ ammoTypes: {
 	pierce: true
 	sprite: diamond-ore-diamondbullet
 	fragBullets: 40
-	fragVelocityMin: 5
+	fragVelocityMin: 3
 	fragVelocityMax: 5
 	fragBullet: {
       type: BasicBulletType
       speed: 1
-	  drag: 0.12
+	  drag: 0.02
 	  lifetime: 20
       damage: 1
       width: 1.5
@@ -382,7 +382,7 @@ ammoTypes: {
 	  frontColor: 00aabb
 	  backColor: 44aadd
 	  pierce: false
-	  knockback: 80
+	  knockback: 2.10
 	  sprite: diamond-ore-diamondbullet
     }
   }

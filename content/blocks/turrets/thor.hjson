@@ -141,7 +141,7 @@ ammoTypes: {
 	  backColor: ffff77
 	  pierce: false
 	  sprite: bullet
-	  knockback: 15
+	  knockback: 4.5
 	  fragBullets: 3
 	  fragVelocityMin: 4.5
 	  fragVelocityMax: 9
@@ -163,7 +163,7 @@ ammoTypes: {
 	    backColor: ffff77
 	    pierce: false
 	    sprite: shell
-	    knockback: 7.5
+	    knockback: 3.75
 		lightning: 1
 		lightningLength: 10
 	    status: shocked
@@ -270,7 +270,7 @@ ammoTypes: {
 	weaveScale: -2
 	weaveMag: 4
 	fragBullets: 200
-	knockback: 20
+	knockback: 10
 	fragVelocityMin: 0.001
 	fragVelocityMax: 4.75
 	fragBullet: {
@@ -287,7 +287,7 @@ ammoTypes: {
 	  hitEffect: none
 	  pierce: true
 	  knockback: 22
-	  homingPower: 3
+	  homingPower: 0.123
 	  homingRange: 11
 	  sprite: diamond-ore-diamondbullet
     }

@@ -68,7 +68,7 @@ ammoTypes: {
 	  frontColor: b9eafe
 	  backColor: aaffff
 	  pierce: true
-	  knockback: 30
+	  knockback: 1
 	  sprite: diamond-ore-diamondbullet
     }
   }
@@ -213,7 +213,7 @@ ammoTypes: {
       damage: 5
       width: 2
       height: 4
-	  despawnEffect: hitLancer
+	  despawnEffect: shootSmallSmoke
 	  hitEffect: none
 	  frontColor: f94e9e
 	  backColor: aa6607
@@ -264,7 +264,7 @@ ammoTypes: {
 	  pierce: true
 	  status: freezing
 	  statusDuration: 300
-	  knockback: 50
+	  knockback: 0.703
 	  sprite: diamond-ore-diamondbullet
     }
   }

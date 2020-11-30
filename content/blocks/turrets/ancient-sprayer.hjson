@@ -178,7 +178,7 @@ ammoTypes: {
 	despawnEffect: shootBig
     ammoMultiplier: 4
 	pierce: false
-	knockback: 40
+	knockback: 4
 	sprite: diamond-ore-diamondbullet
 	shrinkY: 1
   }
