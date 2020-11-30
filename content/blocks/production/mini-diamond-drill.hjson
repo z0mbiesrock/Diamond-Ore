@@ -13,6 +13,7 @@ drillEffect: freezing
 updateEffect: pulverizeSmall
 heatColor: eeffff
 itemCapacity: 1
+liquidCapacity: 15
 drawRim: true
 consumes: {
   power: 1

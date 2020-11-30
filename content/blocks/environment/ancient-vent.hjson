@@ -3,4 +3,7 @@ name: Ancient Vent
 variants: 0
 walkEffect: none
 blendGroup: ancient-metal-tile
-attributes: {array: [1, 0, -0.1, 0, 0]}
+attributes: {
+	heat: 1
+	water: -1
+	}

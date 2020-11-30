@@ -1,6 +1,6 @@
 type: LiquidRouter
 name: Reinforced Liquid Tank
-health: 4000
+health: 12500
 size: 5
 description: Stores a massive amount of liquids. Useful for creating buffers in situations with non-constant demand of materials or as a safeguard for cooling vital blocks.
 liquidCapacity: 6000

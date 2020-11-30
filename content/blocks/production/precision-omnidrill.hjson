@@ -1,7 +1,8 @@
 name: Precision Omni Drill
-description: "Miniature version of the Omni Drill, utilizing [#e5b85e]ancient technology[] to rapidly mine any ore. Uses Phase String as fuel and does not require power."
+description: "Infinitely mines any ore it is placed on. Uses Phase String as fuel instead of power."
+details: "Miniature version of the Omni Drill, utilizing [#e5b85e]ancient technology[] to rapidly mine any ore."
 type: Drill
-health: 300
+health: 400
 size: 1
 tier: 99999
 drillTime: 4
@@ -14,7 +15,7 @@ warmupSpeed: 1
 hasPower: false
 drillEffect: hitBulletSmall
 updateEffect: overclocked
-buildCostMultiplier: 0.07
+buildCostMultiplier: 0.03
 heatColor: f3e979
 drawLiquidLight: true
 updateEffectChance: 0.5
@@ -23,7 +24,7 @@ itemCapacity: 30
 consumes: {
   liquid: {
     liquid: phase-string
-    amount: 0.125
+    amount: 0.075
     booster: false
 	optional: false
   }

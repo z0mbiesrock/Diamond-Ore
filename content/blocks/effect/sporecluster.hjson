@@ -21,13 +21,12 @@ ambientSoundVolume: 0.25
 loopSound: tractorbeam
 loopSoundVolume: 0.25
 attribute: spores
-buildVisibility: debugOnly
+buildVisibility: editorOnly
 //consumes: {
   //power: 0.1
 //}
 requirements: [
-  copper/54
-  graphite/32
+  spore-pod/8
 ]
 category: production
 //research: oil-extractor

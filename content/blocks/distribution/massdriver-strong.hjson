@@ -12,7 +12,7 @@ expanded: true
 minDistribute: 10
 shootEffect: shootBig2
 smokeEffect: lancerLaserShoot
-recieveEffect: mineHuge
+receiveEffect: mineHuge
 knockback: 10
 translation: 14
 shake: 6

@@ -42,7 +42,6 @@ weapons:[
       type: MissileBulletType
 	  frontColor: b28768
 	  backColor: b28768
-	  explodeRange: 18
       width: 6
       height: 12
 	  range: 300

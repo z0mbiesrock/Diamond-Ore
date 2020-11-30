@@ -3,7 +3,7 @@ name: Surge Reactor
 description: Generates humongous amounts of power from surge alloy. Requires constant cooling. Will explode violently if insufficient amounts of coolant are supplied.
 details: A massive and incredibly unstable reactor which converts surge alloy directly into energy. Power output depends on fullness, with base power generated at full capacity.
 itemCapacity: 100
-liquidCapacity: 100
+liquidCapacity: 300
 health: 6000
 size: 6
 itemDuration: 300
@@ -26,7 +26,7 @@ consumes: {
   }
   liquid: {
     liquid: cryofluid
-    amount: 1.25
+    amount: 1.225
   }
 }
 requirements: [

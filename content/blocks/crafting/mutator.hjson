@@ -9,6 +9,7 @@ size: 2
 hasPower: true
 hasLiquids: true
 hasItems: true
+floating: true
 craftTime: 30
 attribute: spores
 updateEffectChance: 0.08

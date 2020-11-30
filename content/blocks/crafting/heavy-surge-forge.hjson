@@ -6,7 +6,7 @@ health: 400
 size: 6
 hasPower: true
 hasItems: true
-craftTime: 90
+craftTime: 100
 updateEffect: pulverizeRedder
 buildCostMultiplier: 0.5
 drawLiquidLight: true

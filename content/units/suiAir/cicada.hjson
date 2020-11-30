@@ -1,5 +1,5 @@
 localizedName: Cicada
-description: Fires massive cluster-missiles and a barrage of large armor-piercing bullets at all nearby enemies. Explodes upon destruction. Capable of carrying most ground units.
+description: Fires massive cluster-missiles and a barrage of large armor-piercing bullets at all nearby enemies. Explodes upon destruction.
 commandLimit: 10
 speed: 0.4
 drag: 0.015

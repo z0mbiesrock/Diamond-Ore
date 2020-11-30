@@ -2,6 +2,7 @@ type: StackConveyor
 health: 150
 name: Mass Conveyor
 solid: true
+floating: true
 description: Transports items forward in batches. Faster than plastanium conveyors.
 recharge: 1
 unloadEffect: smelt

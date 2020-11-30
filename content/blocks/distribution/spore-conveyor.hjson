@@ -4,6 +4,7 @@ name: Spore Conveyor
 solid: true
 update: true
 floating: true
+//placeableLiquid: true
 description: Transports items forward.
 details: An organic way of transporting items.
 requirements: [

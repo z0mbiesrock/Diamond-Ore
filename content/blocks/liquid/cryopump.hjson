@@ -4,7 +4,7 @@ details: "A unique type of pump that freezes liquid under it and, through unknow
 type: Pump
 health: 320
 size: 4
-liquidCapacity: 45
+liquidCapacity: 300
 rotateSpeed: 3
 hasPower: true
 drawLiquidLight: false
