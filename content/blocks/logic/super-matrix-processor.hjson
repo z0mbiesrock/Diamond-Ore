@@ -1,0 +1,21 @@
+name: Super Matrix Processor
+description: Runs a sequence of logic instructions in a loop. Can be used to control units and buildings. Requires power.
+type: LogicBlock
+health: 1200
+size: 2
+instructionsPerTick: 30
+buildCostMultiplier: 0.325
+range: 300
+consumes: {
+  power: 9
+}
+requirements: [
+  copper/900
+  lead/1300
+  silicon/450
+  surge-alloy/325
+  diamond/170
+  cryogem/200
+]
+category: logic
+research: matrix-processor

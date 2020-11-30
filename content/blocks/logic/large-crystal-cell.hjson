@@ -1,0 +1,20 @@
+name: Large Memory Crystal
+description: Stores information for a logic processor. High durability snd capacity.
+type: MemoryBlock
+health: 1600
+size: 2
+memoryCapacity: 768
+buildCostMultiplier: 0.55
+requirements: [
+  metaglass/250
+  graphite/250
+  titanium/75
+  plastanium/75
+  silicon/500
+  phase-fabric/75
+  surge-alloy/25
+  diamond/150
+  cryogem/45
+]
+category: logic
+research: crystal-cell

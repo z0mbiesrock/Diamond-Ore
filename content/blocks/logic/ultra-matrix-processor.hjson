@@ -1,0 +1,22 @@
+name: Ultra Matrix Processor
+description: Runs a sequence of logic instructions in a loop. Can be used to control units and buildings. Requires power.
+type: LogicBlock
+health: 2700
+size: 3
+instructionsPerTick: 60
+buildCostMultiplier: 0.325
+range: 750
+consumes: {
+  power: 22
+}
+requirements: [
+  copper/1400
+  lead/2200
+  silicon/975
+  surge-alloy/550
+  phase-fabric/325
+  diamond/400
+  cryogem/500
+]
+category: logic
+research: super-matrix-processor

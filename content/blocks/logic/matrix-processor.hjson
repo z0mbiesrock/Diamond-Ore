@@ -1,0 +1,20 @@
+name: Matrix Processor
+description: Runs a sequence of logic instructions in a loop. Can be used to control units and buildings. Requires power.
+type: LogicBlock
+health: 300
+size: 1
+instructionsPerTick: 5
+buildCostMultiplier: 0.325
+range: 120
+consumes: {
+  power: 2
+}
+requirements: [
+  lead/800
+  silicon/200
+  surge-alloy/105
+  diamond/55
+  cryogem/35
+]
+category: logic
+research: cryodrive-projector

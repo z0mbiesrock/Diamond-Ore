@@ -1,0 +1,17 @@
+name: Memory Crystal
+description: Stores information for a logic processor. High durability.
+type: MemoryBlock
+health: 400
+size: 1
+memoryCapacity: 96
+requirements: [
+  metaglass/50
+  graphite/50
+  titanium/15
+  plastanium/15
+  silicon/100
+  phase-fabric/15
+  diamond/30
+]
+category: logic
+research: memory-bank
