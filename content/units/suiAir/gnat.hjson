@@ -2,9 +2,11 @@ localizedName: Gnat
 description: Flies toward enemies and explodes, releasing explosive fragments.
 commandLimit: 0
 speed: 2.1
-drag: 0.05
+drag: 0.025
 accel: 0.084
 rotateSpeed: 4.5
+mineSpeed: 9
+mineTier: 3
 health: 100
 //armor: 1
 range: 100
@@ -56,20 +58,21 @@ weapons:[
         drag: 0.0125
 	    frontColor: b28768
 	    backColor: c9a58f
-        width: 6
+        width: 11
         height: 6
-        speed: 1.5
-        shrinkX: 0.36
+        speed: 1.85
+        shrinkX: 0.75
         shrinkY: 0.36
         sprite: diamond-ore-diamondshard
         lifetime: 30
-        splashDamage: 120
-        splashDamageRadius: 80
+        splashDamage: 70
+        splashDamageRadius: 40
 		hitEffect: mine
 		despawnEffect: pulverizeSmall
 		tileDamageMultiplier: 0.16666666666
 		reflectable: false
 		hittable: false
+		collidesAir: true
       }
     }
   }

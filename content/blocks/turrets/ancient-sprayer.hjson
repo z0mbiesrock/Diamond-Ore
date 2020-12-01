@@ -114,8 +114,8 @@ ammoTypes: {
 	hitEffect: shootBig2
 	despawnEffect: shootBig
     ammoMultiplier: 4
-	homingPower: 7
-	homingRange: 12
+	homingPower: 0.125
+	homingRange: 24
 	pierce: true
 	pierceBuilding: true
 	status: corroded
@@ -200,9 +200,9 @@ ammoTypes: {
 	pierce: false
 	sprite: shell
 	shrinkY: 1
-	homingPower: 7
+	homingPower: 1
 	homingRange: 12
-	knockback: 2.5
+	knockback: 0.125
   }
   metaglass: {
     type: BasicBulletType

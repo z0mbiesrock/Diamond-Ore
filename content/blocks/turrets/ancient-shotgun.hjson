@@ -46,9 +46,10 @@ ammoTypes: {
 	lifetime: 38
     width: 3
     height: 6
+    shrinkY: 0
 	frontColor: 888888
 	backColor: bbbbbb
-	homingPower: 0.7
+	homingPower: 1
 	homingRange: 20
     shootEffect: shootSmall
     smokeEffect: none
@@ -117,7 +118,7 @@ ammoTypes: {
     ammoMultiplier: 1
 	reloadMultiplier: 0.5
 	pierce: false
-	knockback: 0.9604
+	knockback: 0.5
 	sprite: shell
 	shrinkY: 0.12
 	lightningLength: 8
@@ -141,7 +142,7 @@ ammoTypes: {
     ammoMultiplier: 2
 	reloadMultiplier: 0.975
 	pierce: false
-	knockback: 2
+	knockback: 1
 	sprite: shell
 	shrinkY: 0.12
 	lightningLength: 8
@@ -210,7 +211,7 @@ ammoTypes: {
 	sprite: diamond-ore-diamondbullet
 	shrinkY: 0.5
 	fragBullets: 4
-	knockback: 2
+	knockback: 1
 	fragVelocityMin: 2
 	fragVelocityMax: 4
 	fragBullet: {

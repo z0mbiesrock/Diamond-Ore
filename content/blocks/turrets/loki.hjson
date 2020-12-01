@@ -149,7 +149,7 @@ ammoTypes: {
 	reloadMultiplier: 0.6
 	pierce: true
 	pierceBuilding: true
-	knockback: 15
+	knockback: 3
 	sprite: shell
 	shrinkY: 0.1
 	fragBullets: 4
@@ -168,7 +168,7 @@ ammoTypes: {
 	  frontColor: ffa044
 	  backColor: ff6614
 	  pierce: true
-	  knockback: 10
+	  knockback: 1.1
 	  sprite: diamond-ore-diamondshell
 	  homingPower: 0.03
 	  homingRange: 60
