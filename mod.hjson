@@ -2,5 +2,5 @@ name: "diamond-ore"
 displayName: "[cyan]Diamond Ore[] Mod" //what displays in the mod selection menu
 author: "z0mbiesrock"
 description: "Adds the [cyan]Diamond[] resource."
-version: "[#9cb6f4]2.0.1[]"
+version: "[#9cb6f4]2.0.2[]"
 minGameVersion: "118"
