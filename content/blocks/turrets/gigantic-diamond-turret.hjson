@@ -353,6 +353,8 @@ ammoTypes: {
     type: ArtilleryBulletType
     speed: 12
     damage: 100
+    splashDamage: 100
+    splashDamageRadius: 62.5
 	lifetime: 49
     width: 5
     height: 14
@@ -379,7 +381,7 @@ ammoTypes: {
       speed: 1
 	  drag: 0.05
 	  lifetime: 20
-      damage: 2
+      damage: 5
       width: 2
       height: 4.5
 	  despawnEffect: none
@@ -387,7 +389,7 @@ ammoTypes: {
 	  frontColor: 00aabb
 	  backColor: 44aadd
 	  pierce: false
-	  knockback: 2.4
+	  knockback: 0.24
 	  sprite: diamond-ore-diamondbullet
     }
   }
