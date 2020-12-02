@@ -13,6 +13,7 @@ landShake: 0.619
 mineSpeed: 15
 buildSpeed: 1.1
 mineTier: 4
+aimDist: 5
 health: 1400
 armor: 20
 range: 40
@@ -42,12 +43,12 @@ weapons:[
 	  hitColor: 2CB2B2
       width: 0
       length: 30
-      lifetime: 15
+      lifetime: 12
 	  serrations: 3
 	  serrationWidth: 25
-	  serrationSpacing: 6
+	  serrationSpacing: 8
 	  serrationSpaceOffset: 10
-	  serrationFadeOffset: 0.34
+	  serrationFadeOffset: 0.4
 	  damage: 55
 	  knockback: 0
 	  hittable: false
