@@ -65,7 +65,9 @@ const mleGndMinerAI = prov(() => {
 	
     updateTargeting(){
 		if(this.unit.hasEffect(minerAngeredStatus)){
-			AIController.updateTargeting();
+			if(this.unit.hasWeapons()){
+				this.updateWeapons();
+			}
 		}		
 	}
   });
