@@ -9,7 +9,7 @@ rotateSpeed: 5.5
 baseRotateSpeed: 6.5
 mechFrontSway: 0.14
 mechSideSway: 0.32
-mineSpeed: 8
+mineSpeed: 9
 buildSpeed: 0.75
 mineTier: 3
 health: 570

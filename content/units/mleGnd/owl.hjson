@@ -10,13 +10,13 @@ baseRotateSpeed: 6.5
 mechFrontSway: 0.04
 mechSideSway: 0.19
 landShake: 0.619
-mineSpeed: 11
+mineSpeed: 15
 buildSpeed: 1.1
 mineTier: 4
 health: 1400
 armor: 20
 range: 40
-itemCapacity: 60
+itemCapacity: 170
 hitSize: 16
 rotateShooting: true
 singleTarget: true
@@ -28,9 +28,9 @@ weapons:[
   {
     name: owl-weapon
     x: 9
-    y: -3
+    y: -5
     shootY: 3
-    recoil: -15
+    recoil: -10
     reload: 20
     rotate: true
     soundPitchMin: 0.72
@@ -45,7 +45,7 @@ weapons:[
       lifetime: 15
 	  serrations: 3
 	  serrationWidth: 25
-	  serrationSpacing: 9
+	  serrationSpacing: 6
 	  serrationSpaceOffset: 10
 	  serrationFadeOffset: 0.34
 	  damage: 55
@@ -53,7 +53,7 @@ weapons:[
 	  hittable: false
 	  reflectable: false
 	  absorbable: false
-	  hitLarge: false
+	  hitLarge: true
     }
   }
   ]

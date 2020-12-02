@@ -27,10 +27,10 @@ const mleGndMinerAI = prov(() => {
 			}
 		}
 		else if(this.unit.hasEffect(minerAngeredStatus)){
-			var nearestfoe = Units.closestTarget(this.unit.team, this.unit.x, this.unit.y, 160);
+			var nearestfoe = Units.closestTarget(this.unit.team, this.unit.x, this.unit.y, 400);
 			var vec = Vec2(this.unit.x, this.unit.y);
 			if(nearestfoe != null){
-				this.unit.moveAt(vec.trns(Mathf.lerp(this.unit.rotation, this.unit.angleTo(nearestfoe) + 180 + Mathf.range(120), 0.0686), this.unit.speed()));
+				this.unit.moveAt(vec.trns(this.unit.angleTo(nearestfoe)), this.unit.speed());
 			}
 			else{
 				this.super$updateMovement();
@@ -109,12 +109,12 @@ const mleGndT3 = extendContent(UnitType, "owl", {
 mleGndT3.constructor = () => extend(MechUnit, {
 	update(){
 		this.super$update();
-		if(this.hasEffect(minerAngeredStatus) == false){
-			if (this.hitTime > 0 && this.health > 0 && this.damaged()){
+		if (this.hitTime > 0 && this.health > 0 && this.damaged()){
+			if(this.hasEffect(minerAngeredStatus) == false){
 				Fx.shockwave.at(this.x, this.y);
 				Fx.formsmoke.at(this.x, this.y);
-				this.apply(minerAngeredStatus, Mathf.random(60,240));
 			}
+			this.apply(minerAngeredStatus, Mathf.random(120,360));
 		}
 	},
 
