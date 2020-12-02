@@ -41,7 +41,7 @@ const mleGndMinerAI = prov(() => {
 		}
 		var boost = false;
 		var lookCone = Mathf.range(60);
-		var blocked = Vars.world.raycast(this.unit.tileX(), this.unit.tileY(), this.unit.tileX() + Angles.trnsx(this.unit.rotation + lookRng, 2), this.unit.tileY() + Angles.trnsy(this.unit.rotation + lookRng, 2), (x, y) => {
+		var blocked = Vars.world.raycast(this.unit.tileX(), this.unit.tileY(), this.unit.tileX() + Angles.trnsx(this.unit.rotation + lookCone, 2), this.unit.tileY() + Angles.trnsy(this.unit.rotation + lookCone, 2), (x, y) => {
 			var tile = Vars.world.tile(x, y);
 			var floor = Vars.world.floor(x, y);
 			if(tile != null){
