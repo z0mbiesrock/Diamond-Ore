@@ -1,3 +1,4 @@
+const register = require("diamond-ore/units/unitReg");
 const SuiAirT4 = extendContent(UnitType, "scarab", {
 });
 SuiAirT4.constructor = () => extend(UnitEntity, {
@@ -17,8 +18,11 @@ SuiAirT4.constructor = () => extend(UnitEntity, {
 			}
 			this.destroy();
 		}
-	}
+	},
+
+	classId: () => SuiAirT4.classId
 });
+register(SuiAirT4);
 SuiAirT4.ammoType = AmmoTypes.power;
 
 var upgrade = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-beetle"), Vars.content.getByName(ContentType.unit, "diamond-ore-scarab")]);

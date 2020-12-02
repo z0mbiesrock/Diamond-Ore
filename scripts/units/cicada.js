@@ -1,3 +1,4 @@
+const register = require("diamond-ore/units/unitReg");
 const cicadaExplosion = Effect(75, e => {
 	Draw.color(Color.valueOf("#b28768"), Color.valueOf("#eab678"), e.fin());
     const d = new Floatc2({get(x, y){
@@ -32,7 +33,7 @@ cicadaExplosionShard.sprite = "diamond-ore-diamondshard";
 
 const SuiAirT5 = extendContent(UnitType, "cicada", {
 });
-SuiAirT5.constructor = () => extend(UnitEntity, {
+SuiAirT5.constructor = () => extend(PayloadUnit, {
 	update(){
 		this.super$update();
 		if (this.dead || this.health <= 0){
@@ -56,8 +57,11 @@ SuiAirT5.constructor = () => extend(UnitEntity, {
 			}
 			this.destroy();
 		}
-	}
+	},
+
+	classId: () => SuiAirT5.classId
 });
+register(SuiAirT5);
 SuiAirT5.ammoType = AmmoTypes.powerHigh;
 SuiAirT5.targetFlag = BlockFlag.reactor;
 SuiAirT5.payloadCapacity = 2200;
