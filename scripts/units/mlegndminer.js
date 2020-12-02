@@ -110,7 +110,7 @@ mleGndT3.constructor = () => extend(MechUnit, {
 		if(this.hasEffect(minerAngeredStatus) == false){
 			if (this.hitTime > 0 && this.health > 0 && this.damaged()){
 				Fx.shockwave.at(this.x, this.y);
-				Fx.formSmoke.at(this.x, this.y);
+				Fx.formsmoke.at(this.x, this.y);
 				this.apply(minerAngeredStatus, Mathf.random(60,240));
 			}
 		}
