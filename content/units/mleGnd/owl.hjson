@@ -31,7 +31,7 @@ weapons:[
     y: -5
     shootY: 3
     recoil: -10
-    reload: 20
+    reload: 15
     rotate: true
     soundPitchMin: 0.42
     soundPitchMax: 0.54

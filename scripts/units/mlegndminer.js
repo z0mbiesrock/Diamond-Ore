@@ -30,7 +30,7 @@ const mleGndMinerAI = prov(() => {
 			var nearestfoe = Units.closestTarget(this.unit.team, this.unit.x, this.unit.y, 400);
 			var vec = Vec2(this.unit.x, this.unit.y);
 			if(nearestfoe != null){
-				this.unit.moveAt(this.unit.angleTo(nearestfoe), this.unit.speed()));
+				this.unit.moveAt(this.unit.angleTo(nearestfoe), this.unit.speed());
 			}
 			else{
 				this.super$updateMovement();
