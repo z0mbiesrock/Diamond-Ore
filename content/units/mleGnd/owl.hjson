@@ -33,7 +33,7 @@ weapons:[
     recoil: -10
     reload: 20
     rotate: true
-    soundPitchMin: 0.72
+    soundPitchMin: 0.42
     soundPitchMax: 0.54
     shootSound: sap
     bullet:{
