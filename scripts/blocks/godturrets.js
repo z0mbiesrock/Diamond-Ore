@@ -150,12 +150,12 @@ const yggdrasilPlasmaExplosion = Effect(60, e => {
     Draw.color(Color.valueOf("#ffff66"), Color.valueOf("#bbbb00"), e.fin());
     Angles.randLenVectors(e.id, 25, -20 + 250 * e.fin(), e.rotation, 360,h);
 });
-const yggdrasilPlasmaExplosionSpark = Effect(120, e => {
+const yggdrasilPlasmaExplosionSpark = Effect(195, e => {
     Draw.color(Color.gold, Color.white, e.fin());
     const d = new Floatc2({get(x, y){
     Fill.square(e.x + x, e.y + y, e.fout() * Math.abs(2 + Mathf.random(-1,1) * 2), 45 + e.rotation);
     }}) 
-    Angles.randLenVectors(e.id, 20, 10 + 278 * e.fin(), e.rotation, 360,d);
+    Angles.randLenVectors(e.id, 20, 10 + 391 * e.fin(), e.rotation, 360,d);
 });
 const yggdrasilPlasmaFragmentExplosion = Effect(40, e => {
     Draw.color(Color.valueOf("#ffff66"), Color.valueOf("#999900"), e.fin());
@@ -206,6 +206,10 @@ const yggdrasilPlasma = extend(ArtilleryBulletType, {
 		yggdrasilPlasmaSphere.at(b.x + Mathf.random(-10,10), b.y + Mathf.random(-10,10));
 		this.supressCollision = false;
     },
+	hit(b, x, y){
+		this.super$hit(b, b.x, b.y);
+		yggdrasilPlasmaExplosionSpark.at(b.x, b.y);
+	}
 	
 });
 yggdrasilPlasma.collidesAir = true;

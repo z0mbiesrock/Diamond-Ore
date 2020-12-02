@@ -1,13 +1,15 @@
+const register = require("diamond-ore/units/unitReg");
 const sparrowScaredStatus = new StatusEffect("sparrow-scared");
 sparrowScaredStatus.speedMultiplier = 2;
+sparrowScaredStatus.healthMultiplier = 2;
 sparrowScaredStatus.effect = Fx.none;
 const sparrowMinerAI = prov(() => {
   var u = extend(MinerAI, {
-    setEffectsC(){
-		this.attacked = false;
-    },
     updateMovement(){
 		if(this.unit.hasEffect(sparrowScaredStatus)){
+			var nearestfoe = Units.closestTarget(this.unit.getTeam(), this.unit.x, this.unit.y, 160);
+			var vec = Vec2(this.unit.x, this.unit.y);
+			this.unit.moveAt(vec.trns(this.unit.angleTo(nearestfoe) + 180 + Mathf.range(120), this.unit.speed()));
 		}
 		else{
 			this.super$updateMovement();
@@ -33,16 +35,25 @@ const sparrowMinerAI = prov(() => {
         }
     }
   });
-  u.setEffectsC();
   
   return u;
 });
-const MleGnd1 = extendContent(UnitType, "sparrow", {
+const MleGndT5 = extendContent(UnitType, "vulture", {
 });
-MleGnd1.constructor = () => extend(MechUnit, {});
-MleGnd1.defaultController = sparrowMinerAI;
-//SpoNavT4.abilities.add(new StatusFieldAbility(StatusEffects.overclock, 60 * 6, 60 * 9, 64));
+
+MleGndT5.constructor = () => extend(MechUnit, {
+	update(){
+		this.super$update();
+		if (this.health < currentHealth || this.health > 0){
+			this.apply(sparrowScaredStatus, Mathf.random(60,240));
+		}
+		var currentHealth = this.health;
+	},
+
+	classId: () => MleGndT5.classId});
+register(MleGndT5);
+MleGndT5.defaultController = sparrowMinerAI;
+SpoNavT4.abilities.add(new StatusFieldAbility(StatusEffects.shielded, 60 * 6, 60 * 9, 64));
 //MleGnd1.ammoType = AmmoTypes.power;
-const diamondItem = Vars.content.getByName(ContentType.item, "diamond-ore-diamond");
-const cryogemItem = Vars.content.getByName(ContentType.item, "diamond-ore-cryogem");
-Blocks.groundFactory.plans.add(new UnitFactory.UnitPlan(MleGnd1, 60 * 25, ItemStack.with(Items.silicon, 60, cryogemItem, 5, diamondItem, 5)));
+var upgrade = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-falcon"), Vars.content.getByName(ContentType.unit, "diamond-ore-vulture")]);
+Blocks.tetrativeReconstructor.upgrades.add(upgrade.toArray(UnitType));

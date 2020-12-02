@@ -1,0 +1,69 @@
+localizedName: Owl
+description: Automatically mines copper, lead, titanium, and thorium, depositing it into the core. Capable of flight. Attacks nearby enemies when harmed.
+commandLimit: 10
+speed: 2.0
+boostMultiplier: 0.75
+drag: 0.07
+accel: 0.08
+rotateSpeed: 6.5
+baseRotateSpeed: 6.5
+mechFrontSway: 0.04
+mechSideSway: 0.19
+landShake: 0.619
+mineSpeed: 11
+buildSpeed: 1.1
+mineTier: 4
+health: 1400
+armor: 20
+range: 40
+itemCapacity: 60
+hitSize: 16
+rotateShooting: true
+singleTarget: true
+engineOffset: 9
+engineSize: 5
+canBoost: true
+
+weapons:[
+  {
+    name: owl-weapon
+    x: 9
+    y: -3
+    shootY: 3
+    recoil: -15
+    reload: 20
+    rotate: true
+    soundPitchMin: 0.72
+    soundPitchMax: 0.54
+    shootSound: sap
+    bullet:{
+      type: ShrapnelBulletType
+	  color: 2CB2B2
+	  hitColor: 2CB2B2
+      width: 0
+      length: 30
+      lifetime: 15
+	  serrations: 3
+	  serrationWidth: 25
+	  serrationSpacing: 9
+	  serrationSpaceOffset: 10
+	  serrationFadeOffset: 0.34
+	  damage: 55
+	  knockback: 0
+	  hittable: false
+	  reflectable: false
+	  absorbable: false
+	  hitLarge: false
+    }
+  }
+  ]
+
+research:{
+  parent: quad
+  requirements:[
+      silicon/12000
+      graphite/12000
+      diamond/2000
+      cryogem/2000
+  ]
+}

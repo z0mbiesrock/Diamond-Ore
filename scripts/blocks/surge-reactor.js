@@ -162,9 +162,12 @@ surgeReactor.buildType = () => extendContent(NuclearReactor.NuclearReactorBuild,
     //OVERRIDE
 	onDestroyed(){
 		this.super$onDestroyed();
+		Sounds.corexplode.at(this.x, this.y);
+		Sounds.explosionbig.at(this.x, this.y);
+		Sounds.explosionbig.at(this.x, this.y);
 		Sounds.explosionbig.at(this.x, this.y);
 		Effect.shake(155, 155, this.x, this.y);
-		try{
+		/* try{
 			Units.all(cons(plr => {
 				if (plr.isDead() == false && plr.isPlayer()){
 					Effect.shake(75, 75, plr.x, plr.y);
@@ -177,7 +180,7 @@ surgeReactor.buildType = () => extendContent(NuclearReactor.NuclearReactorBuild,
 		}
 		catch (err){
 			print(err);
-		}
+		} */
 		surgeReactorMeltdownFxA.at(this.x, this.y, Mathf.random(-360,360));
         for(var lfr = 0; lfr < 15; lfr++){
             surgeReactorMeltdownFxB.at(this.x, this.y, Mathf.random(-360,360));

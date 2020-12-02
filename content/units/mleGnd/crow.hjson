@@ -1,0 +1,38 @@
+localizedName: Crow
+description: Automatically mines copper, lead, and titanium, depositing it into the core. Capable of flight. Flees when harmed.
+commandLimit: 8
+speed: 1.5
+boostMultiplier: 1.65
+drag: 0.11
+accel: 0.135
+rotateSpeed: 5.5
+baseRotateSpeed: 6.5
+mechFrontSway: 0.14
+mechSideSway: 0.32
+mineSpeed: 8
+buildSpeed: 0.75
+mineTier: 3
+health: 570
+armor: 7
+range: 40
+itemCapacity: 100
+hitSize: 11
+rotateShooting: false
+engineOffset: 5
+engineSize: 4
+canBoost: true
+
+weapons:[]
+
+research:{
+  parent: quad
+  requirements:[
+      silicon/12000
+      graphite/12000
+	  copper/18000
+	  lead/18000
+	  titanium/18000
+      diamond/2000
+      cryogem/2000
+  ]
+}

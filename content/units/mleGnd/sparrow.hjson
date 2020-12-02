@@ -1,15 +1,16 @@
 localizedName: Sparrow
-description: Automatically mines copper and lead, depositing it into the core. Capable of flight. Flees when attacked.
+description: Automatically mines copper and lead, depositing it into the core. Capable of flight. Flees when harmed.
 commandLimit: 6
 speed: 1.0
 boostMultiplier: 2.15
-drag: 0.1
-accel: 0.11
-rotateSpeed: 5.5
-mechFrontSway: 0
-mechSideSway: 0
+drag: 0.2
+accel: 0.21
+rotateSpeed: 3.5
+baseRotateSpeed: 2.5
+mechFrontSway: 0.04
+mechSideSway: 0.19
 mineSpeed: 6
-builsSpeed: 6
+buildSpeed: 0.375
 mineTier: 1
 health: 160
 armor: 2
@@ -27,6 +28,8 @@ research:{
   parent: quad
   requirements:[
       silicon/12000
+      copper/6000
+      lead/6000
       diamond/2000
       cryogem/2000
   ]
