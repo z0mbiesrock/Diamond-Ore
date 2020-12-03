@@ -55,7 +55,7 @@ MleGndT5.constructor = () => extend(MechUnit, {
 	classId: () => MleGndT5.classId
 });
 register(MleGndT5);
-//MleGndT5.defaultController = vultureAI;
+MleGndT5.defaultController = vultureAI;
 MleGndT5.abilities.add(new StatusFieldAbility(StatusEffects.shielded, 60 * 12, 60 * 13, 40));
 MleGndT5.targetFlag = BlockFlag.core;
 //MleGnd1.ammoType = AmmoTypes.power;

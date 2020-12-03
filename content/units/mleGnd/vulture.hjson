@@ -7,7 +7,7 @@ accel: 0.085
 boostMultiplier: 6.3
 mineSpeed: 28
 mineTier: 12
-rotateSpeed: 1.795
+rotateSpeed: 2.795
 baseRotateSpeed: 1.777
 mechFrontSway: 2.24
 mechSideSway: 1.879
@@ -47,7 +47,7 @@ weapons:[
     reload: 25
     rotate: true
     top: false
-    rotateSpeed: 1.2
+    rotateSpeed: 1.7
 	//rotateLimit: 120 // TODO Make a PR to limit weapon rotations
     soundPitchMin: 0.5
     soundPitchMax: 0.5
