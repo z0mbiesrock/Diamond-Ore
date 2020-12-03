@@ -42,8 +42,8 @@ weapons:[
     shootSound: swings
     bullet:{
       type: ShrapnelBulletType
-	  fromColor: 2CB2B2
-	  toColor: 1f7f7f
+	  fromColor: 3Cffff
+	  toColor: 2CB2B2
 	  hitColor: 2CB2B2
 	  shootEffect: none
 	  smokeEffect: none
@@ -53,8 +53,9 @@ weapons:[
 	  serrations: 3
 	  serrationWidth: 25
 	  serrationSpacing: 8
-	  serrationSpaceOffset: 10
+	  serrationSpaceOffset: 4
 	  serrationFadeOffset: 0.2
+	  hitEffect: lancerLaserShoot
 	  hitSound: place
 	  damage: 80
 	  knockback: 0

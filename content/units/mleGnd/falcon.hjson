@@ -14,7 +14,7 @@ mechStepShake: 1
 mineSpeed: 17
 //buildSpeed: 1.1
 mineTier: 7
-aimDist: 5
+aimDist: 9
 health: 12000
 armor: 60
 range: 40
@@ -23,13 +23,51 @@ hitSize: 21
 rotateShooting: true
 singleTarget: true
 engineOffset: 9
-engineSize: 5
+engineSize: 10
 canBoost: true
 
 weapons:[
   {
+    name: owl-weapon
+    x: 9
+    y: -1
+    shootY: 3
+    recoil: -10
+    reload: 15
+    rotate: true
+    rotateSpeed: 60
+    soundPitchMin: 0.42
+    soundPitchMax: 1.74
+    shootSound: swings
+    bullet:{
+      type: ShrapnelBulletType
+	  fromColor: 3Cffff
+	  toColor: 2CB2B2
+	  hitColor: 2CB2B2
+	  shootEffect: none
+	  smokeEffect: none
+      width: 0
+      length: 30
+      lifetime: 12
+	  serrations: 3
+	  serrationWidth: 25
+	  serrationSpacing: 8
+	  serrationLenScl: 20
+	  serrationSpaceOffset: 10
+	  serrationFadeOffset: 0.2
+	  hitEffect: lancerLaserShoot
+	  hitSound: place
+	  damage: 120
+	  knockback: 0
+	  hittable: false
+	  reflectable: false
+	  absorbable: false
+	  hitLarge: false
+    }
+  },
+  {
     name: falcon-weapon
-    x: 11
+    x: 15
     y: -1
     shootY: 3
     recoil: -10
@@ -41,20 +79,21 @@ weapons:[
     shootSound: swings
     bullet:{
       type: ShrapnelBulletType
-	  fromColor: 2CB2B2
-	  toColor: 1f7f7f
+	  fromColor: 3Cffff
+	  toColor: 2CB2B2
 	  hitColor: 2CB2B2
 	  shootEffect: none
 	  smokeEffect: none
+	  hitEffect: lancerLaserShoot
       width: 4
       length: 30
       lifetime: 12
 	  serrations: 4
-	  serrationWidth: 12.5
-	  serrationSpacing: 7
-	  serrationSpaceOffset: 2
-	  serrationLenScl: 12
-	  serrationFadeOffset: 0.2
+	  serrationWidth: 4.5
+	  serrationSpacing: 4
+	  serrationSpaceOffset: 18
+	  serrationLenScl: 28
+	  serrationFadeOffset: 0.8
 	  hitSound: place
 	  damage: 80
 	  knockback: 0
