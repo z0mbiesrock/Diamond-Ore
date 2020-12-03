@@ -60,10 +60,6 @@ const mleGndMinerAI = prov(() => {
 		this.unit.elevation = Mathf.approachDelta(this.unit.elevation, Mathf.num(boost || this.unit.onSolid() || this.unit.hasEffect(minerScaredStatus)), 0.08 + (Mathf.num(this.unit.hasEffect(minerScaredStatus)) * 0.16));
 		if(this.unit.moving()){
             this.unit.lookAt(this.unit.vel.angle());
-			if(this.unit.hasWeapons() && this.unit.hasEffect(minerAngeredStatus) == false){
-				var vecm = Vec2(this.unit.x, this.unit.y);
-				this.unit.aim(vecm.trns(this.unit.rotation, this.unit.speed()));
-			}
         }
     },
 	
