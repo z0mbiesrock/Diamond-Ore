@@ -54,7 +54,7 @@ weapons:[
 	  serrationSpacing: 8
 	  serrationLenScl: 20
 	  serrationSpaceOffset: 10
-	  serrationFadeOffset: 0.9
+	  serrationFadeOffset: 0
 	  hitEffect: lancerLaserShoot
 	  //hitSound: place
 	  damage: 120
@@ -93,7 +93,7 @@ weapons:[
 	  serrationSpacing: 4
 	  serrationSpaceOffset: 18
 	  serrationLenScl: 7
-	  serrationFadeOffset: 0.8
+	  serrationFadeOffset: 0
 	  //hitSound: place
 	  damage: 80
 	  knockback: 0

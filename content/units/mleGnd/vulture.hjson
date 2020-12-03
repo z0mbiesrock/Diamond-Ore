@@ -58,7 +58,7 @@ weapons:[
 	  fromColor: ffffff
 	  toColor: 1fbbbb
 	  hitColor: 2cf5f5
-	  hitEffect: instHit
+	  hitEffect: none
 	  shootEffect: none
 	  smokeEffect: none
 	  //hitSound: vultureAttackHit
@@ -68,9 +68,9 @@ weapons:[
 	  serrations: 3
 	  serrationWidth: 5
 	  serrationSpacing: 11
-	  serrationSpaceOffset: 0
-	  serrationLenScl: 70
-	  serrationFadeOffset: 0.4
+	  serrationSpaceOffset: 48
+	  serrationLenScl: 8
+	  serrationFadeOffset: 0
 	  damage: 1250
 	  splashDamage: 1250
 	  splashDamageRadius: 24
