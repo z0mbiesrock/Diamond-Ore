@@ -10,16 +10,16 @@ mineTier: 12
 rotateSpeed: 1.795
 baseRotateSpeed: 1.777
 mechFrontSway: 2.24
-mechSideSway: 1.49
+mechSideSway: 1.879
 health: 32750
 mineSound: beam
 armor: 105
 range: 240
 maxRange: 480
 aimDst: 27
-mechStepShake: 3
+mechStepShake: 5
 mechStride: -1.2
-landShake: 7
+landShake: 21
 itemCapacity: 3000
 hitSize: 39
 rotateShooting: true
@@ -41,9 +41,9 @@ weapons:[
   {
     name: vulture-weapon
     x: 17
-    y: -2
+    y: -6
     shootY: 29
-    recoil: -12
+    recoil: -19
     reload: 25
     rotate: true
     top: false
