@@ -30,7 +30,8 @@ const mleGndMinerAI = prov(() => {
 			var nearestfoe = Units.closestTarget(this.unit.team, this.unit.x, this.unit.y, 400);
 			var vec = Vec2(this.unit.x, this.unit.y);
 			if(nearestfoe != null){
-				this.unit.moveAt(vec.trns(this.unit.angleTo(nearestfoe), this.unit.speed()));
+				//this.unit.moveAt(vec.trns(this.unit.angleTo(nearestfoe), this.unit.speed()));
+				this.moveTo(nearestfoe, 10);
 			}
 			else{
 				this.super$updateMovement();
@@ -65,6 +66,13 @@ const mleGndMinerAI = prov(() => {
 	
     updateTargeting(){
 		if(this.unit.hasEffect(minerAngeredStatus)){
+			  var ret = this.retarget();
+			  if(ret){
+				this.target = this.findTarget(this.unit.x, this.unit.y, this.unit.range(), this.unit.type.targetAir, this.unit.type.targetGround);
+			  }
+			  if(this.invalid(this.target)){
+				this.target = null;
+			  }
 			if(this.unit.hasWeapons()){
 				this.updateWeapons();
 			}

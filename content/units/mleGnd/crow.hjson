@@ -25,7 +25,7 @@ canBoost: true
 weapons:[]
 
 research:{
-  parent: quad
+  parent: sparrow
   requirements:[
       silicon/12000
       graphite/12000

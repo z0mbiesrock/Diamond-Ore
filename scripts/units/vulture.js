@@ -1,12 +1,27 @@
+const register = require("diamond-ore/units/unitReg");
+const vultureRageStatus = new StatusEffect("ground-miner-angered");
+vultureRageStatus.speedMultiplier = 1.7;
+vultureRageStatus.healthMultiplier = 2;
+vultureRageStatus.damageMultiplier = 2;
+vultureRageStatus.reloadMultiplier = 1.32;
 const vultureAI = prov(() => {
   var u = extend(GroundAI, {
     updateMovement(){
-		this.super$updateMovement();
+		var nearestfoe = Units.closestTarget(this.unit.team, this.unit.x, this.unit.y, 280);
+		var vec = Vec2(this.unit.x, this.unit.y);
+		if(nearestfoe != null){
+			this.target = nearestfoe;
+			this.attack(32);
+		}
+		else{
+			this.super$updateMovement();
+		}
 		var boost = false;
-		var blocked = Vars.world.raycast(this.unit.tileX(), this.unit.tileY(), this.unit.tileX() + Angles.trnsx(this.unit.rotation, 1), this.unit.tileY() + Angles.trnsy(this.unit.rotation, 1), (x, y) => {
+		var lookCone = Mathf.range(60);
+		var blocked = Vars.world.raycast(this.unit.tileX(), this.unit.tileY(), this.unit.tileX() + Angles.trnsx(this.unit.rotation + lookCone, 2), this.unit.tileY() + Angles.trnsy(this.unit.rotation + lookCone, 2), (x, y) => {
 			var tile = Vars.world.tile(x, y);
 			var floor = Vars.world.floor(x, y);
-			return (tile.solid() || floor.isDeep());
+			return (tile.solid());
 		});
 		if(blocked){
 			boost = true;
@@ -29,12 +44,18 @@ const MleGndT5 = extendContent(UnitType, "vulture", {
 MleGndT5.constructor = () => extend(MechUnit, {
 	update(){
 		this.super$update();
+		if (this.hitTime > 0 && this.health > 0 && this.healthf() < 0.25 && this.hasEffect(vultureRageStatus) == false){
+			Fx.bigShockwave.at(this.x, this.y);
+			Fx.impactsmoke.at(this.x, this.y);
+			Fx.nuclearsmoke.at(this.x, this.y);
+			this.apply(vultureRageStatus, Mathf.random(60,240));
+		}
 	},
 
 	classId: () => MleGndT5.classId
 });
 register(MleGndT5);
-//MleGndT5.defaultController = sparrowMinerAI;
+//MleGndT5.defaultController = vultureAI;
 MleGndT5.abilities.add(new StatusFieldAbility(StatusEffects.shielded, 60 * 12, 60 * 13, 40));
 MleGndT5.targetFlag = BlockFlag.core;
 //MleGnd1.ammoType = AmmoTypes.power;

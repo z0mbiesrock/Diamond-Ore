@@ -1,24 +1,25 @@
-localizedName: Owl
-description: Automatically mines copper, lead, titanium, and thorium, depositing it into the core. Capable of flight. Attacks nearby enemies when harmed.
+localizedName: Falcon
+description: Charges toward ground enemies, striking them at close range. Capable of flight.
 commandLimit: 10
-speed: 2.0
+speed: 0.606
 boostMultiplier: 0.75
 drag: 0.07
 accel: 0.08
 rotateSpeed: 6.5
 baseRotateSpeed: 6.5
-mechFrontSway: 0.04
-mechSideSway: 0.19
-landShake: 0.619
-mineSpeed: 15
-buildSpeed: 1.1
-mineTier: 4
+mechFrontSway: 0.24
+mechSideSway: 0.49
+landShake: 3
+mechStepShake: 1
+mineSpeed: 17
+//buildSpeed: 1.1
+mineTier: 7
 aimDist: 5
-health: 1400
-armor: 20
+health: 12000
+armor: 60
 range: 40
 itemCapacity: 170
-hitSize: 16
+hitSize: 21
 rotateShooting: true
 singleTarget: true
 engineOffset: 9
@@ -27,18 +28,16 @@ canBoost: true
 
 weapons:[
   {
-    name: owl-weapon
-    x: 9
+    name: falcon-weapon
+    x: 11
     y: -1
     shootY: 3
     recoil: -10
-    reload: 15
-	shots: 3
-	spacing: 22.5
+    reload: 7
     rotate: true
     rotateSpeed: 60
-    soundPitchMin: 0.42
-    soundPitchMax: 1.74
+    soundPitchMin: 0.32
+    soundPitchMax: 1.14
     shootSound: swings
     bullet:{
       type: ShrapnelBulletType
@@ -47,13 +46,14 @@ weapons:[
 	  hitColor: 2CB2B2
 	  shootEffect: none
 	  smokeEffect: none
-      width: 0
+      width: 4
       length: 30
       lifetime: 12
-	  serrations: 3
-	  serrationWidth: 25
-	  serrationSpacing: 8
-	  serrationSpaceOffset: 10
+	  serrations: 4
+	  serrationWidth: 12.5
+	  serrationSpacing: 7
+	  serrationSpaceOffset: 2
+	  serrationLenScl: 12
 	  serrationFadeOffset: 0.2
 	  hitSound: place
 	  damage: 80
@@ -61,13 +61,13 @@ weapons:[
 	  hittable: false
 	  reflectable: false
 	  absorbable: false
-	  hitLarge: false
+	  hitLarge: true
     }
   }
   ]
 
 research:{
-  parent: crow
+  parent: owl
   requirements:[
       silicon/40000
       copper/40000

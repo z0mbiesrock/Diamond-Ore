@@ -36,6 +36,8 @@ require("units/beetle")
 require("units/scarab")
 require("units/cicada")
 require("units/mlegndminer")
+require("units/falcon")
+require("units/vulture")
 // Spore content
 require("blocks/spore-blocks")
 require("blocks/water-decorruptor")
