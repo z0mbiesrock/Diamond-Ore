@@ -32,7 +32,7 @@ research:{
 	  copper/18000
 	  lead/18000
 	  titanium/18000
-      diamond/2000
-      cryogem/2000
+      diamond/4000
+      cryogem/4000
   ]
 }
