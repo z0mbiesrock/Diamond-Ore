@@ -26,7 +26,7 @@ const falconAI = prov(() => {
 			boost = false;
 		}
 		this.unit.elevation = Mathf.approachDelta(this.unit.elevation, Mathf.num((boost || this.unit.onSolid()) && (nearestfoe == null || this.unit.dst(this.target) > 40)), 0.08);
-		if(this.unit.moving() && nearestfoe == null){
+		if(this.unit.moving()){
             this.unit.lookAt(this.unit.vel.angle());
         }
     }
