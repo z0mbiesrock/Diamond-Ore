@@ -54,32 +54,52 @@ weapons:[
 	occlusion: 16
     shootSound: vultureAttack
     bullet:{
-      type: ShrapnelBulletType
-	  fromColor: ffffff
-	  toColor: 1fbbbb
-	  hitColor: 2cf5f5
+      type: BombBulletType
+	  instantDisappear: true
+	  hitColor: c9a58f
+      splashDamage: 1250
+      splashDamageRadius: 28
+	  range: 16
+	  damage: 8000
+	  keepVelocity: false
+	  collidesAir: true
 	  hitEffect: none
-	  shootEffect: none
-	  smokeEffect: none
-	  //hitSound: vultureAttackHit
-      width: 0
-      length: 25
-      lifetime: 20
-	  serrations: 3
-	  serrationWidth: 5
-	  serrationSpacing: 11
-	  serrationSpaceOffset: 48
-	  serrationLenScl: 8
-	  serrationFadeOffset: 0
-	  damage: 1250
-	  splashDamage: 1250
-	  splashDamageRadius: 24
-	  knockback: 0
 	  hittable: false
 	  reflectable: false
-	  absorbable: false
-	  hitLarge: true
-    }
+	  shootEffect: none
+	  smokeEffect: none
+	  fragBullets: 1
+	  fragVelocityMin: 1
+	  fragVelocityMax: 1
+	  fragCone: 0
+      fragBullet:{
+        type: ShrapnelBulletType
+	    fromColor: ffffff
+	    toColor: 1fbbbb
+	    hitColor: 2cf5f5
+	    hitEffect: instHit
+	    shootEffect: none
+	    smokeEffect: none
+	    //hitSound: vultureAttackHit
+	    keepVelocity: false
+        width: 0
+        length: 25
+        lifetime: 20
+	    serrations: 3
+	    serrationWidth: 5
+	    serrationSpacing: 11
+	    serrationSpaceOffset: 48
+	    serrationLenScl: -12
+	    serrationFadeOffset: 0
+	    damage: 3000
+	    knockback: 0
+	    hittable: false
+	    reflectable: false
+	    absorbable: false
+	    hitLarge: true
+	    pierceBuilding: true
+      }
+	}
   }
 ]
 
