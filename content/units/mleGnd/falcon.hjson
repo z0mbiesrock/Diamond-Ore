@@ -89,10 +89,10 @@ weapons:[
       length: 20
       lifetime: 12
 	  serrations: 4
-	  serrationWidth: 5
+	  serrationWidth: 11
 	  serrationSpacing: 4
 	  serrationSpaceOffset: 9
-	  serrationLenScl: -4
+	  serrationLenScl: 6
 	  serrationFadeOffset: 0
 	  //hitSound: place
 	  damage: 80
