@@ -29,10 +29,12 @@ weapons:[
   {
     name: owl-weapon
     x: 9
-    y: -5
+    y: -1
     shootY: 3
     recoil: -10
     reload: 15
+	shots: 3
+	spacing: 22.5
     rotate: true
     rotateSpeed: 60
     soundPitchMin: 0.42
@@ -49,8 +51,8 @@ weapons:[
 	  serrationWidth: 25
 	  serrationSpacing: 8
 	  serrationSpaceOffset: 10
-	  serrationFadeOffset: 0.4
-	  damage: 55
+	  serrationFadeOffset: 0.2
+	  damage: 80
 	  knockback: 0
 	  hittable: false
 	  reflectable: false
