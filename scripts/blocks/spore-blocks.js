@@ -248,7 +248,7 @@ sporeTurretSmlB.buildType = () => extendContent(ItemTurret.ItemTurretBuild, spor
 
 const sporeConveyor = extendContent(Conveyor, "spore-conveyor", {
 	drawBase(tile){
-		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), this.drawy());
+		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
         this.super$drawBase(tile);
 	},
     icons(){
