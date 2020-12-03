@@ -64,6 +64,7 @@ weapons:[
 	  keepVelocity: false
 	  collidesAir: true
 	  hitEffect: none
+	  despawnEffect: none
 	  hittable: false
 	  reflectable: false
 	  shootEffect: none
