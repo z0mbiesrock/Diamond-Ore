@@ -69,13 +69,11 @@ weapons:[
 research:{
   parent: owl
   requirements:[
-      silicon/40000
-      copper/40000
-      lead/40000
-      titanium/80000
-      thorium/40000
-      metaglass/40000
-      diamond/8000
-      cryogem/8000
+      silicon/80000
+	  plastanium/40000
+      titanium/50000
+      surge-alloy/25000
+      diamond/20000
+      cryogem/10000
   ]
 }
