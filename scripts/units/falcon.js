@@ -7,7 +7,7 @@ const falconAI = prov(() => {
 		var vec = Vec2(this.unit.x, this.unit.y);
 		if(nearestfoe != null){
 			this.target = nearestfoe;
-			this.attack(24);
+			this.moveTo(nearestfoe, 16);
 		}
 		else{
 			this.super$updateMovement();

@@ -1,5 +1,5 @@
 localizedName: Falcon
-description: Charges toward ground enemies, striking them at close range. Capable of flight.
+description: Charges toward ground enemies, pummeling them at close range. Capable of flight.
 commandLimit: 10
 speed: 0.606
 boostMultiplier: 0.75
@@ -17,7 +17,8 @@ mineTier: 7
 aimDist: 9
 health: 12000
 armor: 60
-range: 40
+range: 200
+maxRange: 200
 itemCapacity: 170
 hitSize: 21
 rotateShooting: true
@@ -49,13 +50,13 @@ weapons:[
       width: 0
       length: 30
       lifetime: 12
-	  serrations: 3
-	  serrationWidth: 25
-	  serrationSpacing: 8
-	  serrationLenScl: 20
-	  serrationSpaceOffset: 10
+	  serrations: 4
+	  serrationWidth: 11
+	  serrationSpacing: 4
+	  serrationSpaceOffset: 9
+	  serrationLenScl: 6
 	  serrationFadeOffset: 0
-	  hitEffect: lancerLaserShoot
+	  hitEffect: mine
 	  //hitSound: place
 	  damage: 120
 	  knockback: 0
@@ -84,15 +85,15 @@ weapons:[
 	  hitColor: 2CB2B2
 	  shootEffect: none
 	  smokeEffect: none
-	  hitEffect: lancerLaserShoot
+	  hitEffect: mine
       width: 0
       length: 20
       lifetime: 12
-	  serrations: 4
-	  serrationWidth: 11
-	  serrationSpacing: 4
-	  serrationSpaceOffset: 9
-	  serrationLenScl: 6
+	  serrations: 3
+	  serrationWidth: 25
+	  serrationSpacing: 8
+	  serrationLenScl: 20
+	  serrationSpaceOffset: 10
 	  serrationFadeOffset: 0
 	  //hitSound: place
 	  damage: 80

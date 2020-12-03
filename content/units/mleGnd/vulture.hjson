@@ -78,7 +78,7 @@ weapons:[
 	    fromColor: ffffff
 	    toColor: 1fbbbb
 	    hitColor: 2cf5f5
-	    hitEffect: instHit
+	    hitEffect: lancerLaserShoot
 	    shootEffect: none
 	    smokeEffect: none
 	    //hitSound: vultureAttackHit

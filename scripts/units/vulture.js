@@ -3,7 +3,7 @@ const vultureRageStatus = new StatusEffect("vulture-enraged");
 vultureRageStatus.speedMultiplier = 1.7;
 vultureRageStatus.healthMultiplier = 2;
 vultureRageStatus.damageMultiplier = 2;
-vultureRageStatus.reloadMultiplier = 1.32;
+vultureRageStatus.reloadMultiplier = 1.52;
 const vultureAI = prov(() => {
   var u = extend(GroundAI, {
     updateMovement(){
@@ -11,7 +11,7 @@ const vultureAI = prov(() => {
 		var vec = Vec2(this.unit.x, this.unit.y);
 		if(nearestfoe != null){
 			this.target = nearestfoe;
-			this.moveTo(nearestfoe, 10);
+			this.moveTo(nearestfoe, 20);
 		}
 		else{
 			this.super$updateMovement();
