@@ -64,11 +64,11 @@ const mleGndMinerAI = prov(() => {
     },
 	
     updateTargeting(){
-		//if(this.unit.hasEffect(minerAngeredStatus)){
+		if(this.unit.hasEffect(minerAngeredStatus)){
 			if(this.unit.hasWeapons()){
 				this.updateWeapons();
 			}
-		//}		
+		}		
 	}
   });
   
