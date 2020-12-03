@@ -69,7 +69,7 @@ weapons:[
     name: falcon-weapon
     x: 15
     y: -1
-    shootY: 3
+    shootY: 11
     recoil: -10
     reload: 7
     rotate: true
@@ -86,13 +86,13 @@ weapons:[
 	  smokeEffect: none
 	  hitEffect: lancerLaserShoot
       width: 0
-      length: 30
+      length: 20
       lifetime: 12
 	  serrations: 4
-	  serrationWidth: 4.5
+	  serrationWidth: 5
 	  serrationSpacing: 4
-	  serrationSpaceOffset: 18
-	  serrationLenScl: 7
+	  serrationSpaceOffset: 9
+	  serrationLenScl: -4
 	  serrationFadeOffset: 0
 	  //hitSound: place
 	  damage: 80
