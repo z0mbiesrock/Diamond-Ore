@@ -56,7 +56,7 @@ weapons:[
 	  serrationSpaceOffset: 4
 	  serrationFadeOffset: 0.2
 	  hitEffect: lancerLaserShoot
-	  hitSound: place
+	  //hitSound: place
 	  damage: 80
 	  knockback: 0
 	  hittable: false

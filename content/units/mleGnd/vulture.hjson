@@ -42,7 +42,7 @@ weapons:[
     name: vulture-weapon
     x: 17
     y: -2
-    shootY: 18
+    shootY: 29
     recoil: -12
     reload: 25
     rotate: true
@@ -63,59 +63,22 @@ weapons:[
 	  smokeEffect: none
 	  //hitSound: vultureAttackHit
       width: 0
-      length: 45
+      length: 25
       lifetime: 20
 	  serrations: 3
 	  serrationWidth: 5
-	  serrationSpacing: 4
+	  serrationSpacing: 11
 	  serrationSpaceOffset: 0
-	  serrationLenScl: 80
-	  serrationFadeOffset: 0.6
+	  serrationLenScl: 70
+	  serrationFadeOffset: 0.4
 	  damage: 1250
+	  splashDamage: 1250
+	  splashDamageRadius: 24
 	  knockback: 0
 	  hittable: false
 	  reflectable: false
 	  absorbable: false
 	  hitLarge: true
-    }
-  },
-  {
-    name: vulture-weapon
-    x: 17
-    y: -2
-    shootY: 15
-    recoil: -12
-    reload: 25
-	shots: 9
-    rotate: true
-	//rotateLimit: 120 // TODO Make a PR to limit weapon rotations
-    top: false
-    rotateSpeed: 1.2
-    soundPitchMin: 0.5
-    soundPitchMax: 0.5
-	occlusion: 16
-    velocityRnd: 1
-    shootSound: vultureAttack
-    bullet:{
-      type: BasicBulletType
-	  hitColor: 2Cffff
-      shootEffect: none
-      smokeEffect: none
-      hitEffect: lancerLaserShoot
-      despawnEffect: none
-      width: 0
-      height: 0
-	  shrinkX: 1
-	  shrinkY: 1
-	  range: 320
-      speed: 8
-	  damage: 60
-	  lifetime: 3
-	  hittable: false
-	  reflectable: false
-	  absorbable: false
-	  pierce: true
-	  pierceBuilding: true
     }
   }
 ]
