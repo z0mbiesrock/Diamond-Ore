@@ -22,8 +22,8 @@ itemCapacity: 170
 hitSize: 21
 rotateShooting: true
 singleTarget: true
-engineOffset: 9
-engineSize: 10
+engineOffset: 13
+engineSize: 8
 canBoost: true
 
 weapons:[
@@ -85,14 +85,14 @@ weapons:[
 	  shootEffect: none
 	  smokeEffect: none
 	  hitEffect: lancerLaserShoot
-      width: 4
+      width: 0
       length: 30
       lifetime: 12
 	  serrations: 4
 	  serrationWidth: 4.5
 	  serrationSpacing: 4
 	  serrationSpaceOffset: 18
-	  serrationLenScl: 28
+	  serrationLenScl: 7
 	  serrationFadeOffset: 0.8
 	  hitSound: place
 	  damage: 80

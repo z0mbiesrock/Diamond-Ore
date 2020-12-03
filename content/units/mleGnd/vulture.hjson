@@ -2,13 +2,13 @@ localizedName: Vulture
 description: Charges toward enemies, slaughtering anything that gets close. Capable of flight.
 commandLimit: 10
 speed: 0.3125
-drag: 0.0039
-accel: 0.005
+drag: 0.08
+accel: 0.085
 boostMultiplier: 6.3
 mineSpeed: 28
 mineTier: 12
-rotateSpeed: 1.195
-baseRotateSpeed: 1.197
+rotateSpeed: 1.795
+baseRotateSpeed: 1.777
 mechFrontSway: 2.24
 mechSideSway: 1.49
 health: 32750
@@ -16,8 +16,8 @@ mineSound: beam
 armor: 105
 range: 240
 maxRange: 480
-aimDst: 17
-mechStepShake: 2
+aimDst: 27
+mechStepShake: 3
 mechStride: -1.2
 landShake: 7
 itemCapacity: 3000
@@ -29,11 +29,11 @@ lowAltitude: true
 canBoost: true
 destructibleWreck: false
 canDrown: false
-mechFrontSway: 0.31
+mechFrontSway: -0.1
 mechSideSway: 1.2
 immunities: [wet, tarred, sapped, sporeSlowed, corroded, burning, melting, freezing, tarred, muddy, slow, unmoving]
 engineOffset: 20
-engineSize: 25
+engineSize: 15
 lowAltitude: true
 flying: false
 
@@ -48,27 +48,28 @@ weapons:[
     rotate: true
     top: false
     rotateSpeed: 1.2
+	//rotateLimit: 120 // TODO Make a PR to limit weapon rotations
     soundPitchMin: 0.5
     soundPitchMax: 0.5
 	occlusion: 16
     shootSound: vultureAttack
     bullet:{
       type: ShrapnelBulletType
-	  fromColor: 2CB2B2
-	  toColor: 1f7f7f
+	  fromColor: ffffff
+	  toColor: 1fbbbb
 	  hitColor: 2cf5f5
 	  hitEffect: instHit
 	  shootEffect: none
 	  smokeEffect: none
-	  hitSound: vultureAttackHit
+	  //hitSound: vultureAttackHit
       width: 0
       length: 45
-      lifetime: 10
-	  serrations: 5
-	  serrationWidth: 8
-	  serrationSpacing: 12
+      lifetime: 20
+	  serrations: 3
+	  serrationWidth: 5
+	  serrationSpacing: 4
 	  serrationSpaceOffset: 0
-	  serrationLenScl: 60
+	  serrationLenScl: 80
 	  serrationFadeOffset: 0.6
 	  damage: 1250
 	  knockback: 0
@@ -76,30 +77,45 @@ weapons:[
 	  reflectable: false
 	  absorbable: false
 	  hitLarge: true
-	  fragBullets: 16
-	  fragVelocityMin: 0.25
-	  fragVelocityMax: 1.5
-	  fragCone: 60
-      fragBullet:{
-        type: BasicBulletType
-	    hitColor: 2cf5f5
-        shootEffect: shootBig2
-        hitEffect: lancerLaserShoot
-        hitSound: pew
-        despawnEffect: none
-        width: 0
-        height: 27
-	    shrinkX: 0.2
-	    shrinkY: 0.4
-        speed: 8
-	    damage: 60
-	    lifetime: 2
-	    hittable: false
-	    reflectable: false
-	    absorbable: false
-	    pierce: true
-	    pierceBuilding: true
-      }
+    }
+  },
+  {
+    name: vulture-weapon
+    x: 17
+    y: -2
+    shootY: 15
+    recoil: -12
+    reload: 25
+	shots: 9
+    rotate: true
+	//rotateLimit: 120 // TODO Make a PR to limit weapon rotations
+    top: false
+    rotateSpeed: 1.2
+    soundPitchMin: 0.5
+    soundPitchMax: 0.5
+	occlusion: 16
+    velocityRnd: 1
+    shootSound: vultureAttack
+    bullet:{
+      type: BasicBulletType
+	  hitColor: 2Cffff
+      shootEffect: none
+      smokeEffect: none
+      hitEffect: lancerLaserShoot
+      despawnEffect: none
+      width: 0
+      height: 0
+	  shrinkX: 1
+	  shrinkY: 1
+	  range: 320
+      speed: 8
+	  damage: 60
+	  lifetime: 3
+	  hittable: false
+	  reflectable: false
+	  absorbable: false
+	  pierce: true
+	  pierceBuilding: true
     }
   }
 ]
