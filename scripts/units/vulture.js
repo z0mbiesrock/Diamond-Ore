@@ -1,5 +1,5 @@
 const register = require("diamond-ore/units/unitReg");
-const vultureRageStatus = new StatusEffect("ground-miner-angered");
+const vultureRageStatus = new StatusEffect("vulture-enraged");
 vultureRageStatus.speedMultiplier = 1.7;
 vultureRageStatus.healthMultiplier = 2;
 vultureRageStatus.damageMultiplier = 2;
