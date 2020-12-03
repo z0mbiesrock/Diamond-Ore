@@ -14,8 +14,8 @@ mechSideSway: 1.879
 health: 32750
 mineSound: beam
 armor: 105
-range: 240
-maxRange: 480
+range: 110
+maxRange: 280
 aimDst: 27
 mechStepShake: 5
 mechStride: -1.2
