@@ -40,10 +40,10 @@ flying: false
 weapons:[
   {
     name: vulture-weapon
-    x: 17
-    y: -6
+    x: 14
+    y: -5
     shootY: 29
-    recoil: -19
+    recoil: -15
     reload: 25
     rotate: true
     top: false
