@@ -1,6 +1,6 @@
 type: GenericSmelter
 name: Blast Furnace
-description: An upgraded version of the Kiln. Using blast compound as a catalyst, it efficiently combines a decent amount of lead and sand to make a large batch of metaglass.
+description: Efficiently combines a decent amount of lead and sand to make a large batch of metaglass using blast compound as a catalyst.
 itemCapacity: 20
 health: 900
 size: 3
@@ -20,7 +20,7 @@ consumes: {
     items: [
       sand/15
       lead/15
-	  blast-compound/5
+	  blast-compound/4
     ]
   }
 }

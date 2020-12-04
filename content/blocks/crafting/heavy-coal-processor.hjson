@@ -1,6 +1,6 @@
 //type: GenericCrafter
 name: Heavy Coal Processor
-description: A larger and more efficient Coal Centrifuge. Uses a lot of power to efficiently solidify oil into chunks of coal.
+description: Solidifies oil into chunks of coal.
 itemCapacity: 30
 liquidCapacity: 150
 health: 1200

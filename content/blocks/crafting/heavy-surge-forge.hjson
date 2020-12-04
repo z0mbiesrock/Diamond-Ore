@@ -1,6 +1,6 @@
 type: GenericSmelter
 name: Heavy Surge Forge
-description: An upgraded version of the Alloy Smelter.
+description: Fuses titanium, lead, silicon and copper into surge alloy.
 itemCapacity: 60
 health: 400
 size: 6

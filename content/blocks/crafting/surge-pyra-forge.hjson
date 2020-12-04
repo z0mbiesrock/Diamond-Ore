@@ -1,6 +1,6 @@
 type: GenericSmelter
 name: Surge Pyra-Forge
-description: An upgraded Alloy Smelter that mixes surge alloy directly from scrap quickly and efficiently. Requires pyratite to fuel the conversion process.
+description: Mixes surge alloy directly from scrap quickly and efficiently. Requires pyratite to fuel the conversion process.
 itemCapacity: 20
 health: 160
 size: 4

@@ -1,6 +1,6 @@
 type: GenericSmelter
 name: Pyra-Smelter
-description: An upgraded version of the Silicon Smelter. Employs water, power, pyratite, and cryogems to produce silicon quickly and efficiently.
+description: Employs water, power, pyratite, and cryogems to produce silicon quickly and efficiently.
 itemCapacity: 60
 liquidCapacity: 90
 health: 2400

@@ -5,7 +5,7 @@ health: 360
 size: 2
 itemCapacity: 40
 liquidCapacity: 225
-outputLiquid: slag/45
+outputLiquid: slag/50
 baseExplosiveness: 50
 hasItems: true
 hasLiquids: true

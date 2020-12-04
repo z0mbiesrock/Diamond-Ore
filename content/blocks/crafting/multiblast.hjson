@@ -1,6 +1,6 @@
 type: GenericSmelter
 name: Blast Compund Multi-Mixer
-description: A larger, sturdier, and more efficient Blast Mixer.
+description: Produces blast compound from pyratite and spore pods, using coal as a supplement.
 itemCapacity: 30
 health: 2000
 size: 3

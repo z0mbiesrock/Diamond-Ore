@@ -44,7 +44,7 @@ requirements: [
   ancient-alloy/1250
 ]
 category: crafting
-research: ancient-repository
+research: ancient-sentinel
 loopSound: machine
 loopSoundVolume: 4
 ambientSound: respawning

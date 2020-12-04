@@ -9,7 +9,7 @@ ammoUseEffect: smoke
 maxAmmo: 100
 inaccuracy: 24
 rotateSpeed: 9
-buildVisibility: debugOnly
+buildVisibility: editorOnly
 layer: turret
 layer2: block
 outlineIcon: false

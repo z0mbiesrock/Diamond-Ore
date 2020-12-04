@@ -1,6 +1,6 @@
 //type: GenericCrafter
 name: Multi-Pyra Mixer
-description: A larger, sturdier, and more efficient Pyratite mixer.
+description: Mixes coal, lead and sand into pyratite.
 itemCapacity: 20
 health: 700
 size: 3
