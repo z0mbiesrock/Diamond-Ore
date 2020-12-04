@@ -247,10 +247,6 @@ sporeTurretSmlB.buildType = () => extendContent(ItemTurret.ItemTurretBuild, spor
 });
 
 const sporeConveyor = extendContent(Conveyor, "spore-conveyor", {
-	drawBase(tile){
-		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
-        this.super$drawBase(tile);
-	},
     icons(){
         return [
             Core.atlas.find(this.name + "-base"),
@@ -259,6 +255,10 @@ const sporeConveyor = extendContent(Conveyor, "spore-conveyor", {
     }
 });
 sporeConveyor.buildType = () => extendContent(Conveyor.ConveyorBuild, sporeConveyor, {
+    draw(){
+		Draw.rect(Core.atlas.find(sporeConveyor.name+"-base"), this.x, this.y);
+        this.super$draw();
+    },
     updateTile(){
         this.super$updateTile();
         //when health is lower than max health
