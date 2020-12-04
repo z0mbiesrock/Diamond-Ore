@@ -5,6 +5,7 @@ health: 12500
 buildVisibility: campaignOnly
 //podRegion: ancient-launch-silo-pod
 lightColor: eeeeaa
+podEngineColor: aaddff
 itemCapacity: 3000
 size: 5
 launchTime: 3600

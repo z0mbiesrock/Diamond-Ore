@@ -8,6 +8,7 @@ health: 28800
 buildVisibility: campaignOnly
 //podRegion: cargo-launch-pad-pod
 lightColor: ffffff
+podEngineColor: ccffff
 buildCostMultiplier: 0.85
 researchCostMultiplier: 4.7
 consumes: {
