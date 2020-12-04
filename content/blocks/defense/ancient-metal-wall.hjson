@@ -1,4 +1,4 @@
-name: Ancient Metal Wall
+localizedName: Ancient Metal Wall
 description: Protects structures from enemy projectiles, periodically releasing electric arcs upon contact.
 type: Wall
 health: 2000

@@ -1,4 +1,4 @@
-name: Gigantic Ancient Metal Wall
+localizedName: Gigantic Ancient Metal Wall
 description: Protects structures from enemy projectiles, periodically releasing electric arcs upon contact.
 type: Wall
 health: 32000

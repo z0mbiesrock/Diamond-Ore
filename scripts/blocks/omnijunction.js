@@ -12,7 +12,7 @@ const omniJunction = extendContent(Junction, "omnijunction", {
 });
 omniJunction.buildType = () => extendContent(Junction.JunctionBuild, omniJunction, {
 	draw(){
-		Draw.rect(omniJunction.region, this.x, this.y);
+		this.super$draw();
 		Draw.alpha(this.efficiency());
 		Draw.rect(Core.atlas.find(omniJunction.name + "-top"), this.x, this.y);
 		Draw.reset();
@@ -22,7 +22,6 @@ omniJunction.buildType = () => extendContent(Junction.JunctionBuild, omniJunctio
 			this.speed = Math.ceil(this.baseSpeed + (100 - (100 * this.efficiency())));
 			this.super$updateTile();
 			if(this.efficiency() == 1){
-				this.outputsLiquid = true;
 				try{
 				dir = tile.relativeTo(tile.x, tile.y);
 				dir = (dir + 4) % 4;
@@ -35,9 +34,6 @@ omniJunction.buildType = () => extendContent(Junction.JunctionBuild, omniJunctio
 				catch(error){
 					//print(error); Does not crash, but now 
 				}
-			}
-			else{
-				this.outputsLiquid = false;
 			}
 			this.cons.trigger();
 		}
