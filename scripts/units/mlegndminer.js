@@ -20,7 +20,7 @@ const mleGndMinerAI = prov(() => {
 			var nearestfoe = Units.closestTarget(this.unit.team, this.unit.x, this.unit.y, 400);
 			var vec = Vec2(this.unit.x, this.unit.y);
 			if(nearestfoe != null){
-				this.unit.moveAt(vec.trns(Mathf.lerp(this.unit.rotation, this.unit.angleTo(nearestfoe) + 180, 0.2686), this.unit.speed()));
+				this.unit.moveAt(vec.trns(this.unit.angleTo(nearestfoe) + 180 + Mathf.range(12)), this.unit.speed());
 			}
 			else{
 				this.unit.moveAt(vec.trns(Mathf.lerp(this.unit.rotation, Mathf.random(360), 0.1275), this.unit.speed()));
@@ -89,7 +89,7 @@ mleGndT1.constructor = () => extend(MechUnit, {
 		this.super$update();
 		if (this.hitTime > 0 && this.health > 0 && this.damaged() && this.hasEffect(minerScaredStatus) == false){
 			Fx.shockwave.at(this.x, this.y);
-			this.apply(minerScaredStatus, Mathf.random(60,240));
+			this.apply(minerScaredStatus, Mathf.random(140,440));
 		}
 	},
 

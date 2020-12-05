@@ -11,6 +11,7 @@ hasItems: true
 craftTime: 30
 updateEffect: mineBig
 flameColor: ccffff
+researchCostMultiplier: 2.1
 consumes: {
   power: 2
   liquid: {
@@ -25,7 +26,7 @@ requirements: [
   diamond/225
 ]
 category: crafting
-research: cryogem
+research: diamond-synthesizer
 ambientSound: respawning
 ambientSoundVolume: 0.5
 outputItem: cryogem/1

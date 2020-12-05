@@ -5,6 +5,8 @@ speed: 1.1
 drag: 0.1
 accel: 0.2
 rotateSpeed: 3.5
+lightRadius: 200
+lightOpacity: 0.874
 health: 400
 armor: 10
 range: 240

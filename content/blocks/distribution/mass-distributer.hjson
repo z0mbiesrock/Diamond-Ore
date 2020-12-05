@@ -4,7 +4,7 @@ description: Distributes input items up to 11 other directions equally.
 //capacity: 45
 type: Router
 //ItemBuffer: 45// Doesn't work
-itemCapacity: 45// Doesn't work
+//itemCapacity: 45// Doesn't work
 hasItems: true
 speed: 5
 //unloadable: true//breaks

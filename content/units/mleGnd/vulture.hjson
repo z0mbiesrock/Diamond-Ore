@@ -9,6 +9,9 @@ mineSpeed: 28
 mineTier: 12
 rotateSpeed: 2.795
 baseRotateSpeed: 1.777
+lightRadius: 90
+lightColor: 20c3ed
+lightOpacity: 0.3
 mechFrontSway: 2.24
 mechSideSway: 1.879
 health: 32750

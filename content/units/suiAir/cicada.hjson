@@ -1,11 +1,14 @@
 localizedName: Cicada
 description: Fires massive cluster-missiles and a barrage of large armor-piercing bullets at all nearby enemies. Explodes upon destruction. Capable of carrying most ground units.
-commandLimit: 10
+commandLimit: 11
 speed: 0.4
 drag: 0.015
 accel: 0.024
 buildSpeed: 3.75
 rotateSpeed: 1.5
+lightColor: ffe367
+lightRadius: 120
+lightOpacity: 0.4
 health: 31000
 armor: 25
 range: 240

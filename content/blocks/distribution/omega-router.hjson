@@ -5,7 +5,7 @@ details: "[#e5b85e]The ultimate router.[]"
 //capacity: 45
 type: Router
 //ItemBuffer: 45// Doesn't work
-itemCapacity: 45// Doesn't work
+//itemCapacity: 45// Doesn't work
 hasItems: true
 speed: 2
 //instantTransfer: true

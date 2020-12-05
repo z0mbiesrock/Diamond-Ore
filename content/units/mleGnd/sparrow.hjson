@@ -7,6 +7,8 @@ drag: 0.2
 accel: 0.21
 rotateSpeed: 3.5
 baseRotateSpeed: 2.5
+lightRadius: 10
+lightColor: 2093ed
 mechFrontSway: 0.04
 mechSideSway: 0.19
 mineSpeed: 6

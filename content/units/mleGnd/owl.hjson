@@ -6,7 +6,9 @@ boostMultiplier: 0.75
 drag: 0.07
 accel: 0.08
 rotateSpeed: 6.5
-baseRotateSpeed: 6.5
+baseRotateSpeed: 7.5
+lightRadius: 35
+lightColor: 2093ed
 mechFrontSway: 0.04
 mechSideSway: 0.19
 landShake: 0.619
