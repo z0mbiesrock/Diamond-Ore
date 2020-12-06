@@ -267,8 +267,8 @@ ammoTypes: {
 	sprite: diamond-ore-diamondconcus
 	homingPower: 0.11
 	homingRange: 64
-	weaveScale: -2
-	weaveMag: 4
+	weaveScale: 1
+	weaveMag: 3
 	fragBullets: 200
 	knockback: 10
 	fragVelocityMin: 0.001

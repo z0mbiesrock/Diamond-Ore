@@ -272,7 +272,7 @@ ammoTypes: {
 	reloadMultiplier: 0.1
 	pierce: false
 	sprite: diamond-ore-diamondshell
-	homingPower: 2
+	homingPower: 0.1492
 	homingRange: 240
 	fragBullets: 16
 	fragVelocityMin: 0.45
