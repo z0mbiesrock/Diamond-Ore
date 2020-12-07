@@ -21,7 +21,7 @@ const sporeBlockDeathHit = Effect(30, e => {
     Angles.randLenVectors(e.id, 3, 0.5 + e.fin() * 9, f);
 });
 const sporeBlockDeathFx = Effect(80, e => {
-	alignGrad = 1;
+	var alignGrad = 1;
 	if (e.rotation < 0){
 		alignGrad = e.fin();
 	}
@@ -411,18 +411,18 @@ sporeVaultDeathLarge.frontColor = Color.valueOf("#42336f");
 sporeVaultDeathLarge.backColor = Color.valueOf("#6d54b7");
 
 const sporeVaultDeathExplode = Effect(105, e => {
-	var alignGrad = 1;
+	var alignXryg = 1;
 	if (e.rotation < 0){
-		alignGrad = e.fin();
+		alignXryg = e.fin();
 		var alignBhur = e.fout();
 		var alignAebg = 1;
 	}
 	else{
-		alignGrad = e.fout();
+		alignXryg = e.fout();
 		alignBhur = e.fin();
 		alignAebg = -1;
 	}
-	Draw.color(Color.valueOf("#6d54b7"), Color.valueOf("#995d9a"), alignGrad);
+	Draw.color(Color.valueOf("#6d54b7"), Color.valueOf("#995d9a"), alignXryg);
     const d = new Floatc2({get(x, y){
     Fill.square(e.x + x, e.y + y, 0.25 + e.fout() * 4, 45 + e.rotation);
     }})
@@ -431,7 +431,7 @@ const sporeVaultDeathExplode = Effect(105, e => {
     const fg = new Floatc2({get(x, y){
     Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fslope() * 32 + 1);
     }})
-    Angles.randLenVectors(e.id, 10, 240 * e.fin() * alignAebg, e.rotation + Mathf.random(-5,5) + (40 * (alignGrad - alignBhur)), 360, fg);
+    Angles.randLenVectors(e.id, 10, 240 * e.fin() * alignAebg, e.rotation + Mathf.random(-5,5) + (40 * (alignXryg - alignBhur)), 360, fg);
 });
 
 const sporeVault = extendContent(StorageBlock, "omnivault", {
