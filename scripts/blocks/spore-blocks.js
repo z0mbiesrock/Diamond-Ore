@@ -114,7 +114,7 @@ sporeCluster.buildType = () => extendContent(Cultivator.CultivatorBuild, sporeCl
 	onDestroyed: function(){
         this.super$onDestroyed();
         for(var i = 0; i < 10; i++){
-            Calls.createBullet(sporeBlockDeath, this.team, this.x, this.y, Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
+            sporeBlockDeath.create(this this.team, this.x, this.y, Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
 			sporeBlockDeathFx.at(this.x, this.y, Mathf.random(-360,360));
 		}
 	}
@@ -445,10 +445,10 @@ const sporeVault = extendContent(StorageBlock, "omnivault", {
 		Effect.create(Fx.impactShockwave, this.x, this.y, Mathf.random(-360,360));
 		Effect.shake(1.3, 1.3, this.x, this.y);
         for(var j = 0; j < 150; j++){
-            Calls.createBullet(sporeVaultDeathSmall, Team.derelict, this.x, this.y, Mathf.random(360), Mathf.random(0.25, 1.0), Mathf.random(0.2, 1.0));
+            sporeVaultDeathSmall.create(this, Team.derelict, this.x, this.y, Mathf.random(360), Mathf.random(0.25, 1.0), Mathf.random(0.2, 1.0));
 		}
         for(var k = 0; k < 75; k++){
-            Calls.createBullet(sporeVaultDeathLarge, Team.derelict, this.x, this.y, Mathf.random(360), Mathf.random(0.25, 1.0), Mathf.random(0.2, 1.0));
+            sporeVaultDeathLarge.create(this, Team.derelict, this.x, this.y, Mathf.random(360), Mathf.random(0.25, 1.0), Mathf.random(0.2, 1.0));
 		}
 	},
 })
