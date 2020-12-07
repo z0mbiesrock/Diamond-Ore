@@ -65,39 +65,31 @@ sporeBlockDeath.backColor = Color.valueOf("#6d54b7");
 //print("testing 123");
 
 const darkSporeBlock = extendContent(Wall, "dark-spore-block", {
+});
+darkSporeBlock.buildType = () => extendContent(Wall.WallBuild, darkSporeBlock, {
     updateTile(){
         //when health is lower than max health
-        if ( (this.health < this.maxHealth) && (Mathf.chance(slowerregen)) ) {
-
+        if ( (this.healthf() < 1) && (Mathf.chance(slowerregen)) ) {
                    this.heal(Time.delta() * 10);
-				   /* if (this.health > this.maxHealth){
-					   this.health = this.maxHealth;
-				   } */
-					   
-                   
-            }
-      }
+		}
+	},
 });
 const darkSporeBlockLarge = extendContent(Wall, "dark-spore-block-large", {
+});
+darkSporeBlockLarge.buildType = () => extendContent(Wall.WallBuild, darkSporeBlockLarge, {
     updateTile(){
         //when health is lower than max health
-        if ( (this.health < this.maxHealth) && (Mathf.chance(slowregen)) ) {
-
-                   this.heal(Time.delta() * 20);
-				   /* if (this.health > this.maxHealth){
-					   this.health -= this.maxHealth - this.health;
-				   } */ // unknown if this works
-					   
-                   
-            }
-      }
+        if ( (this.healthf() < 1) && (Mathf.chance(slowerregen)) ) {
+                   this.heal(Time.delta() * 10);
+		}
+	},
 });
 const sporeCluster = extendContent(Cultivator, "sporecluster", {
 	drawBase(tile){
 		podnum = Mathf.round(Mathf.randomSeed(this.id, 1, 4));
 		podrot = Mathf.round(Mathf.randomSeed(this.id, 0, 360));
 		Draw.rect(Core.atlas.find(this.name + podnum), tile.drawx(), tile.drawy(), podrot);
-        Draw.color();
+        Draw.reset();
 	},
     icons(){
         return [
@@ -109,16 +101,13 @@ sporeCluster.buildType = () => extendContent(Cultivator.CultivatorBuild, sporeCl
     updateTile(){
         this.super$updateTile();
         //when health is lower than max health
-        if ( (this.health < this.maxHealth) && (Mathf.chance(normalregen)) ) {
-
+        if ( (this.healthf() < 1) && (Mathf.chance(normalregen)) ) {
                    this.heal(Time.delta() * 15);
-				   /* if (this.health > this.maxHealth){
-					   this.health -= this.maxHealth - this.health;
-				   } */ // unknown if this works
-					   
-                   
-            }
-      },
+		}
+        if ( Vars.state.rules.isCampaign() && this.team = Team.derelict ) {
+                   this.team = Team.crux;
+		}
+	},
 	onDestroyed: function(tile){
         this.super$onDestroyed(tile);
         for(var i = 0; i < 10; i++){
@@ -129,6 +118,10 @@ sporeCluster.buildType = () => extendContent(Cultivator.CultivatorBuild, sporeCl
 	
 });
 const sporeTurretA = extendContent(ItemTurret, "spore-turret", {
+	drawBase(tile){
+		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
+		this.super$drawBase(tile);
+	},
     icons(){
         return [
             Core.atlas.find(this.name)
@@ -139,10 +132,13 @@ sporeTurretA.buildType = () => extendContent(ItemTurret.ItemTurretBuild, sporeTu
 	draw(){
 		Draw.rect(Core.atlas.find(this.name + "-base"), this.x, this.y);
         Draw.color();
-	},
-	
+	},	
 });
 const sporeTurretB = extendContent(ItemTurret, "spore-turret-b", {
+	drawBase(tile){
+		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
+		this.super$drawBase(tile);
+	},
     icons(){
         return [
             Core.atlas.find(this.name)
@@ -198,7 +194,7 @@ sporeTurretSmlA.buildType = () => extendContent(ItemTurret.ItemTurretBuild, spor
 	},
     updateTile(){
         //when health is lower than max health
-        if ( (this.health < this.maxHealth) && (Mathf.chance(fastregen)) ){
+        if ( (this.healthf() < 1) && (Mathf.chance(fastregen)) ){
 
                    this.heal(Time.delta() * 8);
 				   /* if (this.health > this.maxHealth){
@@ -217,13 +213,6 @@ const sporeTurretSmlB = extendContent(ItemTurret, "spore-turret-small-dark", {
             Core.atlas.find(this.name)
         ];
     },
-	onDestroyed: function(tile){
-		this.super$onDestroyed(tile);
-        for(var i = 0; i < 7; i++){
-            sporeBlockDeath.create(null, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.75, 1.50));
-			Effect.create(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
-		}
-	}
 });
 sporeTurretSmlB.buildType = () => extendContent(ItemTurret.ItemTurretBuild, sporeTurretSmlB, {
 	draw(){
@@ -232,17 +221,17 @@ sporeTurretSmlB.buildType = () => extendContent(ItemTurret.ItemTurretBuild, spor
 	},
     updateTile(){
         //when health is lower than max health
-        if ( (this.health < this.maxHealth) && (Mathf.chance(fastregen)) ){
-
-                   this.heal(Time.delta() * 8);
-				   /* if (this.health > this.maxHealth){
-					   this.health -= this.maxHealth - this.health;
-				   } */ // unknown if this works
-					   
-                   
+        if ( (this.healthf() < 1) && (Mathf.chance(fastregen)) ){
         };
         this.super$updateTile();
-     },
+	},
+	onDestroyed: function(tile){
+		this.super$onDestroyed(tile);
+        for(var i = 0; i < 7; i++){
+            sporeBlockDeath.create(null, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.75, 1.50));
+			Effect.create(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
+		}
+	}
 	
 });
 
@@ -262,16 +251,17 @@ sporeConveyor.buildType = () => extendContent(Conveyor.ConveyorBuild, sporeConve
     updateTile(){
         this.super$updateTile();
         //when health is lower than max health
-        if ( (this.health < this.maxHealth) && (Mathf.chance(normalregen)) ) {
-
+        if ( (this.healthf() < 1) && (Mathf.chance(normalregen)) ) {
                    this.heal(Time.delta() * 15);
-				   /* if (this.health > this.maxHealth){
-					   this.health -= this.maxHealth - this.health;
-				   } */ // unknown if this works
-					   
-                   
-            }
-      }	
+        }
+    },
+	onDestroyed: function(tile){
+		this.super$onDestroyed(tile);
+        for(var i = 0; i < 7; i++){
+            sporeBlockDeath.create(null, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.75, 1.50));
+			Effect.create(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
+		}
+	}
 });
 const sporeUnitBirth = Effect(72, e => {
     Draw.color(Color.valueOf("#455085"), Color.valueOf("#995d9a"), e.fin());
@@ -342,7 +332,7 @@ sporeMutator.buildType = () => extendContent(AttributeSmelter.AttributeSmelterBu
 	}, */
     updateTile(){
         //when health is lower than max health
-        if ( (this.health < this.maxHealth) && (Mathf.chance(fastregen)) ){
+        if ( (this.healthf() < 1) && (Mathf.chance(fastregen)) ){
 
                    this.heal(Time.delta() * 8);
 				   /* if (this.health > this.maxHealth){
