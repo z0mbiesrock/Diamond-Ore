@@ -92,12 +92,17 @@ const sporeCluster = extendContent(Cultivator, "sporecluster", {
     }
 });
 sporeCluster.buildType = () => extendContent(Cultivator.CultivatorBuild, sporeCluster, {
+	//OVERRIDE
 	draw(){
 		var podnum = Mathf.round(Mathf.randomSeed(this.id, 1, 4));
-		var podrot = Mathf.round(Mathf.randomSeed(this.id, 0, 360));
+		var podrot = Mathf.round(Mathf.randomSeed(this.id, -15, 15));
 		Draw.rect(Core.atlas.find(sporeCluster.name + podnum), this.x, this.y, podrot);
         Draw.reset();
 	},
+	//OVERRIDE
+	drawTeam(){
+	},
+	//OVERRIDE
     updateTile(){
         
 		/* 
