@@ -104,9 +104,6 @@ sporeCluster.buildType = () => extendContent(Cultivator.CultivatorBuild, sporeCl
         if ( (this.healthf() < 1) && (Mathf.chance(normalregen)) ) {
                    this.heal(Time.delta() * 15);
 		}
-        if ( Vars.state.rules.isCampaign() && this.team = Team.derelict ) {
-                   this.team = Team.crux;
-		}
 	},
 	onDestroyed: function(tile){
         this.super$onDestroyed(tile);
