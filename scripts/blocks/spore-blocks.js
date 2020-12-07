@@ -411,11 +411,11 @@ sporeVaultDeathLarge.frontColor = Color.valueOf("#42336f");
 sporeVaultDeathLarge.backColor = Color.valueOf("#6d54b7");
 
 const sporeVaultDeathExplode = Effect(105, e => {
-	alignGrad = 1;
+	var alignGrad = 1;
 	if (e.rotation < 0){
 		alignGrad = e.fin();
-		alignBhur = e.fout();
-		alignAebg = 1;
+		var alignBhur = e.fout();
+		var alignAebg = 1;
 	}
 	else{
 		alignGrad = e.fout();
