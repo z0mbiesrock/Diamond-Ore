@@ -70,7 +70,7 @@ darkSporeBlock.buildType = () => extendContent(Wall.WallBuild, darkSporeBlock, {
     updateTile(){
         //when health is lower than max health
         if ( (this.healthf() < 1) && (Mathf.chance(slowerregen)) ) {
-                   this.heal(Time.delta() * 10);
+                   this.heal(10);
 		}
 	},
 });
@@ -80,14 +80,14 @@ darkSporeBlockLarge.buildType = () => extendContent(Wall.WallBuild, darkSporeBlo
     updateTile(){
         //when health is lower than max health
         if ( (this.healthf() < 1) && (Mathf.chance(slowerregen)) ) {
-                   this.heal(Time.delta() * 10);
+                   this.heal(10);
 		}
 	},
 });
 const sporeCluster = extendContent(Cultivator, "sporecluster", {
 	drawBase(tile){
-		podnum = Mathf.round(Mathf.randomSeed(this.id, 1, 4));
-		podrot = Mathf.round(Mathf.randomSeed(this.id, 0, 360));
+		var podnum = Mathf.round(Mathf.randomSeed(this.id, 1, 4));
+		var podrot = Mathf.round(Mathf.randomSeed(this.id, 0, 360));
 		Draw.rect(Core.atlas.find(this.name + podnum), tile.drawx(), tile.drawy(), podrot);
         Draw.reset();
 	},
@@ -102,7 +102,7 @@ sporeCluster.buildType = () => extendContent(Cultivator.CultivatorBuild, sporeCl
         this.super$updateTile();
         //when health is lower than max health
         if ( (this.healthf() < 1) && (Mathf.chance(normalregen)) ) {
-                   this.heal(Time.delta() * 15);
+                   this.heal(15);
 		}
 	},
 	onDestroyed: function(tile){
@@ -193,7 +193,7 @@ sporeTurretSmlA.buildType = () => extendContent(ItemTurret.ItemTurretBuild, spor
         //when health is lower than max health
         if ( (this.healthf() < 1) && (Mathf.chance(fastregen)) ){
 
-                   this.heal(Time.delta() * 8);
+                   this.heal(8);
 				   /* if (this.health > this.maxHealth){
 					   this.health -= this.maxHealth - this.health;
 				   } */ // unknown if this works
@@ -249,7 +249,7 @@ sporeConveyor.buildType = () => extendContent(Conveyor.ConveyorBuild, sporeConve
         this.super$updateTile();
         //when health is lower than max health
         if ( (this.healthf() < 1) && (Mathf.chance(normalregen)) ) {
-                   this.heal(Time.delta() * 15);
+                   this.heal(15);
         }
     },
 	onDestroyed: function(tile){
@@ -331,7 +331,7 @@ sporeMutator.buildType = () => extendContent(AttributeSmelter.AttributeSmelterBu
         //when health is lower than max health
         if ( (this.healthf() < 1) && (Mathf.chance(fastregen)) ){
 
-                   this.heal(Time.delta() * 8);
+                   this.heal(8);
 				   /* if (this.health > this.maxHealth){
 					   this.health -= this.maxHealth - this.health;
 				   } */ // unknown if this works
