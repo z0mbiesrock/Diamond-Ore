@@ -85,12 +85,6 @@ darkSporeBlockLarge.buildType = () => extendContent(Wall.WallBuild, darkSporeBlo
 	},
 });
 const sporeCluster = extendContent(Cultivator, "sporecluster", {
-	drawBase(tile){
-		var podnum = Mathf.round(Mathf.randomSeed(this.id, 1, 4));
-		var podrot = Mathf.round(Mathf.randomSeed(this.id, 0, 360));
-		Draw.rect(Core.atlas.find(this.name + podnum), tile.drawx(), tile.drawy(), podrot);
-        Draw.reset();
-	},
     icons(){
         return [
             Core.atlas.find(this.name)
@@ -98,15 +92,27 @@ const sporeCluster = extendContent(Cultivator, "sporecluster", {
     }
 });
 sporeCluster.buildType = () => extendContent(Cultivator.CultivatorBuild, sporeCluster, {
+	draw(){
+		var podnum = Mathf.round(Mathf.randomSeed(this.id, 1, 4));
+		var podrot = Mathf.round(Mathf.randomSeed(this.id, 0, 360));
+		Draw.rect(Core.atlas.find(sporeCluster.name + podnum), this.x, this.y, podrot);
+        Draw.reset();
+	},
     updateTile(){
+        
+		/* 
+		// SoyjakException: setTeam is PRIVATE XDDDDDDDD
+		if ( Vars.state.rules.isCampaign() && this.team == Team.derelict ) {
+                   this.team = Team.crux;
+		} */
         this.super$updateTile();
         //when health is lower than max health
         if ( (this.healthf() < 1) && (Mathf.chance(normalregen)) ) {
                    this.heal(15);
 		}
 	},
-	onDestroyed: function(tile){
-        this.super$onDestroyed(tile);
+	onDestroyed: function(){
+        this.super$onDestroyed();
         for(var i = 0; i < 10; i++){
             Calls.createBullet(sporeBlockDeath, this.team, this.x, this.y, Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
 			sporeBlockDeathFx.at(this.x, this.y, Mathf.random(-360,360));
@@ -222,8 +228,8 @@ sporeTurretSmlB.buildType = () => extendContent(ItemTurret.ItemTurretBuild, spor
         };
         this.super$updateTile();
 	},
-	onDestroyed: function(tile){
-		this.super$onDestroyed(tile);
+	onDestroyed: function(){
+		this.super$onDestroyed();
         for(var i = 0; i < 7; i++){
             sporeBlockDeath.create(null, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.75, 1.50));
 			Effect.create(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
@@ -252,8 +258,8 @@ sporeConveyor.buildType = () => extendContent(Conveyor.ConveyorBuild, sporeConve
                    this.heal(15);
         }
     },
-	onDestroyed: function(tile){
-		this.super$onDestroyed(tile);
+	onDestroyed: function(){
+		this.super$onDestroyed();
         for(var i = 0; i < 7; i++){
             sporeBlockDeath.create(null, tile.getTeam(), tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.75, 1.50));
 			Effect.create(sporeBlockDeathFx, tile.worldx(), tile.worldy(), Mathf.random(-360,360));
@@ -431,8 +437,8 @@ const sporeVaultDeathExplode = Effect(105, e => {
 const sporeVault = extendContent(StorageBlock, "omnivault", {
 	
     //OVERRIDE
-	onDestroyed: function(tile){
-		this.super$onDestroyed(tile);
+	onDestroyed: function(){
+		this.super$onDestroyed();
         for(var i = 0; i < 25; i++){
 		Effect.create(sporeVaultDeathExplode, this.x, this.y, Mathf.random(-360,360));
 		}
