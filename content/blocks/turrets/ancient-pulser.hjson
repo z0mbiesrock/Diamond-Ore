@@ -1,6 +1,6 @@
 //type: PowerTurret
 name: Ancient Pulser
-description: A small mid-range anti-air turret. Only needs power.
+description: Shoots high-knockback bullets at air targets. Only needs power.
 health: 500
 size: 1
 reloadTime: 20
@@ -29,8 +29,9 @@ shootType: {
   smokeEffect: none
   hitEffect: hitBulletSmall
   despawnEffect: shootSmallSmoke
-  knockback: 40
+  knockback: 20
   pierce: false
+  collidesGround: false
   sprite: diamond-ore-diamondbullet
   shrinkY: 0.12
 }

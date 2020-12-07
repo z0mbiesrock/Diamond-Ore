@@ -3,7 +3,7 @@ name: Barrage
 description: Fires a rapid burst of fast projectiles at close range. High durability.
 health: 10200
 size: 3
-reloadTime: 120
+reloadTime: 190
 range: 120
 ammoUseEffect: smoke
 maxAmmo: 100
@@ -28,6 +28,25 @@ ammoTypes: {
 	hitEffect: hitLancer
     ammoMultiplier: 4
 	pierce: false
+	sprite: shell
+	trailEffect: artilleryTrail
+	trailColor: eeffff
+  }
+  lead: {
+    type: BasicBulletType
+    speed: 8
+    damage: 17
+	lifetime: 30
+    width: 5
+    height: 6
+	frontColor: 7457CE
+	backColor: 7457CE
+	trailColor: 7457CE
+    shootEffect: shootSmall
+    smokeEffect: shootSmallSmoke
+	hitEffect: hitLancer
+    ammoMultiplier: 4
+	pierceCap: 3
 	sprite: shell
 	trailEffect: artilleryTrail
 	trailColor: eeffff
@@ -68,7 +87,51 @@ ammoTypes: {
 	  frontColor: b9eafe
 	  backColor: aaffff
 	  pierce: true
-	  knockback: 1
+	  knockback: 0.4
+	  sprite: diamond-ore-diamondbullet
+    }
+  }
+  metaglass: {
+    type: MissileBulletType
+    speed: 5
+    damage: 12
+	lifetime: 90
+    width: 7
+    height: 6
+	frontColor: ffffff
+	backColor: ffffff
+	trailColor: 88ffff
+    shootEffect: shootBig
+    smokeEffect: shootSmallSmoke
+	hitEffect: blastExplosion
+	homingPower: 0.07
+	homingRange: 30
+    ammoMultiplier: 4
+    inaccuracy: 4
+	reloadMultiplier: 0.71
+	pierce: false
+	splashDamage: 22
+	splashDamageRadius: 27
+	sprite: shell
+	trailEffect: artilleryTrail
+	trailColor: eeffff
+	fragBullets: 20
+	fragVelocityMin: 0.175
+	fragVelocityMax: 0.7
+	fragBullet: {
+      type: BasicBulletType
+      speed: 1
+	  lifetime: 30
+      damage: 14
+      width: 3
+      height: 3
+	  shrinkX: 0
+	  shrinkY: 0
+	  despawnEffect: none
+	  hitEffect: none
+	  frontColor: ffffff
+	  backColor: ffffff
+	  knockback: 0.4
 	  sprite: diamond-ore-diamondbullet
     }
   }
@@ -96,22 +159,26 @@ ammoTypes: {
 	trailColor: e2bb7f
 	status: corroded
 	statusDuration: 300
-	fragBullets: 10
+	fragBullets: 24
 	fragVelocityMin: 0.1
 	fragVelocityMax: 0.4
+	fragLifeMin: 0.3
+	fragLifeMax: 2
 	fragBullet: {
       type: BasicBulletType
-      speed: 1
+      speed: 0.9
 	  lifetime: 160
 	  drag: 0.001234
       damage: 1
       width: 1
       height: 2
 	  despawnEffect: none
+	  lightRadius: 0
 	  hitEffect: none
 	  frontColor: e2bb7f
 	  backColor: e2bb7f
 	  pierce: true
+	  pierceBuilding: true
 	  status: corroded
 	  statusDuration: 300
 	  sprite: diamond-ore-diamondbullet
@@ -173,9 +240,10 @@ ammoTypes: {
     shootEffect: shootSmall
     smokeEffect: shootSmallSmoke
 	hitEffect: hitLancer
-    ammoMultiplier: 4
+    ammoMultiplier: 40
 	reloadMultiplier: 1.2
 	pierce: true
+	pierceBuilding: true
 	homingPower: 0.0005
 	homingRange: 0
 	sprite: shell
@@ -198,13 +266,15 @@ ammoTypes: {
     ammoMultiplier: 1
 	reloadMultiplier: 0.5
 	pierce: false
-	homingPower: 0.0005
+	homingPower: 0
 	homingRange: 0
 	sprite: diamond-ore-diamondbullet
 	fragBullets: 25
 	splashDamage: 30
 	splashDamageRadius: 30
 	fragVelocityMin: 0.175
+	fragLifeMin: 0.175
+	fragLifeMax: 1.375
 	fragVelocityMax: 1.55
 	fragBullet: {
       type: BasicBulletType
@@ -218,6 +288,7 @@ ammoTypes: {
 	  frontColor: f94e9e
 	  backColor: aa6607
 	  pierce: true
+	  pierceBuilding: true
 	  knockback: 3.25
 	  keepVelocity: false
 	  sprite: diamond-ore-diamondbullet

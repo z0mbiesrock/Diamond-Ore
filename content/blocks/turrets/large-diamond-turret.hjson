@@ -4,7 +4,7 @@ description: A versatile all-around turret that converts a variety of different 
 health: 1200
 size: 2
 reloadTime: 48
-range: 300
+range: 170
 maxAmmo: 50
 inaccuracy: 2
 rotateSpeed: 9
@@ -52,9 +52,11 @@ ammoTypes: {
     width: 12
     height: 19
 	frontColor: 99eefe
+	hitColor: 99eefe
 	backColor: 002fff
-    shootEffect: pulverizeMedium
+    shootEffect: shootSmall
     smokeEffect: shootSmallSmoke
+    despawnEffect: shootLiquid
 	hitEffect: hitLancer
     ammoMultiplier: 5
 	reloadMultiplier: 0.5

@@ -4,7 +4,7 @@ description: A versatile all-around turret that converts a variety of different 
 health: 2700
 size: 3
 reloadTime: 60
-range: 360
+range: 210
 maxAmmo: 60
 inaccuracy: 2
 rotateSpeed: 6
@@ -49,14 +49,16 @@ ammoTypes: {
   titanium: {
     type: BasicBulletType
     speed: 10
-    damage: 45
+    damage: 70
 	hitSize: 11
     width: 20
     height: 30
 	frontColor: 99eefe
+	hitColor: 99eefe
 	backColor: 002fff
-    shootEffect: pulverizeMedium
-    smokeEffect: shootSmallSmoke
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
+    despawnEffect: shootLiquid
 	hitEffect: hitLancer
     ammoMultiplier: 3
 	shrinkY: 0
@@ -69,7 +71,7 @@ ammoTypes: {
   silicon: {
     type: BasicBulletType
     speed: 5
-	lifetime: 105
+	lifetime: 80
     damage: 20
 	hitSize: 11
     width: 20
@@ -92,6 +94,7 @@ ammoTypes: {
   pyratite: {
     type: BasicBulletType
     speed: 12
+	lifetime: 30
     damage: 23
 	hitSize: 5
     width: 15
@@ -170,7 +173,7 @@ ammoTypes: {
     ammoMultiplier: 2
 	reloadMultiplier: 0.21
 	pierce: false
-	homingPower: 0.0005
+	homingPower: 0
 	homingRange: 0
 	shrinkY: 0
 	sprite: diamond-ore-diamondbullet
@@ -191,7 +194,7 @@ ammoTypes: {
 	  frontColor: b94e9e
 	  backColor: aaffff
 	  pierce: true
-	  knockback: 30
+	  knockback: 12
 	  homingPower: 0.02
 	  sprite: diamond-ore-diamondbullet
     }

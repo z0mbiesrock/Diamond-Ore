@@ -267,10 +267,10 @@ ammoTypes: {
 	sprite: diamond-ore-diamondconcus
 	homingPower: 0.11
 	homingRange: 64
-	weaveScale: 1
-	weaveMag: 3
+	weaveScale: 5
+	weaveMag: 4
 	fragBullets: 200
-	knockback: 10
+	knockback: 3.40
 	fragVelocityMin: 0.001
 	fragVelocityMax: 4.75
 	fragBullet: {
@@ -286,7 +286,7 @@ ammoTypes: {
 	  despawnEffect: none
 	  hitEffect: none
 	  pierce: true
-	  knockback: 22
+	  knockback: 2.922
 	  homingPower: 0.123
 	  homingRange: 11
 	  sprite: diamond-ore-diamondbullet

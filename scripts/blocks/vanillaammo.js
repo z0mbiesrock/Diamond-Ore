@@ -139,9 +139,9 @@ standardCryo.inaccuracy = 3;
 standardCryo.reloadMultiplier = 0.8;
 standardCryo.status = StatusEffects.freezing;
 standardCryo.statusDuration = 367;
-cycloneCryoFrag.frontColor = Color.valueOf("#4496bb");
-cycloneCryoFrag.backColor = Color.valueOf("#4499ee");
-cycloneCryoFrag.sprite = "diamond-ore-diamondbullet";
+standardCryo.frontColor = Color.valueOf("#4496bb");
+standardCryo.backColor = Color.valueOf("#4499ee");
+standardCryo.sprite = "diamond-ore-diamondbullet";
 Blocks.cyclone.ammoTypes.put(cryogemItem,cycloneCryo);
 Blocks.spectre.ammoTypes.put(cryogemItem,spectreCryo);
 Blocks.spectre.ammoTypes.put(diamondItem,standardDiamondBig);
@@ -155,42 +155,14 @@ Blocks.salvo.ammoTypes.put(diamondItem,standardDiamond);
 Blocks.duo.ammoTypes.put(cryogemItem,standardCryo);
 Blocks.salvo.ammoTypes.put(cryogemItem,standardCryo);
 const scorchSporeFx = Effect(30, e => {
-    Draw.color(Color.valueOf("#995D9A"), Color.valueOf("#007a96"), e.fin());
     Lines.stroke(e.fout() * 0.75);
     const d = new Floatc2({get(x, y){
-    Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fout() * 3 + 1);
+		Draw.color(Color.valueOf("#b95DcA").shiftHue(Mathf.range(2)), Color.valueOf("#00aae6").shiftHue(Mathf.range(2)), Mathf.random());
+		Drawf.tri(e.x + x, e.y + y, 3 * e.fout(), 8 * e.fout(), e.rotation);
+		Drawf.tri(e.x + x, e.y + y, 3 * e.fout(), 3 * e.fout(), e.rotation + 180);
     }}) 
-    Angles.randLenVectors(e.id, 2, 36 * e.fin(), e.rotation, 15,d);
-    Angles.randLenVectors(e.id, 2, 36 * e.fin(), e.rotation, 30,d);
-    Angles.randLenVectors(e.id, 2, 16 * e.fin(), e.rotation, 45,d);
-    const dg = new Floatc2({get(x, y){
-	Draw.color(Color.valueOf("#673D7A").shiftHue(Mathf.range(6)), Color.valueOf("#355085").shiftHue(Mathf.range(6)), Mathf.random());
-    Fill.circle(e.x + x, e.y + y, e.fout() * 2);
-    }}) 
-    Angles.randLenVectors(e.id, 5, 49 * e.fin(), e.rotation, 15,dg);
-    Angles.randLenVectors(e.id, 5, 34.5 * e.fin(), e.rotation, 22.5,dg);
-    Angles.randLenVectors(e.id, 5, 23 * e.fin(), e.rotation, 30,dg);
+    Angles.randLenVectors(e.id, 24, 5 + 108 * e.fin(), e.rotation, 10,d);
 });
-const scorchSporeSap = extend(BasicBulletType, {});
-scorchSporeSap.damage = 6;
-scorchSporeSap.width = 3;
-scorchSporeSap.height = 3;
-scorchSporeSap.shrinkX = 1;
-scorchSporeSap.shrinkY = 1;
-scorchSporeSap.lifetime = 20;
-scorchSporeSap.drag = 0.009;
-scorchSporeSap.speed = 2;
-scorchSporeSap.pierce = true;
-scorchSporeSap.pierceBuilding = true;
-scorchSporeSap.collidesAir = false;
-scorchSporeSap.ammoMultiplier = 30;
-scorchSporeSap.hitEffect = Fx.hitLiquid;
-scorchSporeSap.despawnEffect = Fx.none;
-scorchSporeSap.sprite = "diamond-ore-diamondbullet";
-scorchSporeSap.hitColor = Color.valueOf("#007ab6");
-scorchSporeSap.frontColor = Color.valueOf("#355085");
-scorchSporeSap.backColor = Color.valueOf("#007ab6");
-scorchSporeSap.status = StatusEffects.sapped;
 const scorchSpore = extend(BasicBulletType, {});
 scorchSpore.damage = 18;
 scorchSpore.width = 0;
@@ -198,21 +170,66 @@ scorchSpore.length = 0;
 scorchSpore.lifetime = 18;
 scorchSpore.speed = 3.35;
 scorchSpore.makeFire = true;
-scorchSpore.instantDisappear = true;
+scorchSpore.pierce = true;
+scorchSpore.pierceBuilding = true;
 scorchSpore.collidesAir = false;
 scorchSpore.shootEffect = scorchSporeFx;
-scorchSpore.smokeEffect = Fx.shootSmallFlame;
+scorchSpore.smokeEffect = Fx.none;
 scorchSpore.hittable = false;
 scorchSpore.ammoMultiplier = 30;
-scorchSpore.fragBullet = scorchSporeSap;
-scorchSpore.fragBullets = 6;
-scorchSpore.fragVelocityMin = 0.25;
-scorchSpore.fragVelocityMax = 1.65;
-scorchSpore.fragCone = 6;
-scorchSpore.hitEffect = Fx.none;
+scorchSpore.reloadMultiplier = 1.5;
+scorchSpore.hitEffect = Fx.hitLiquid;
 scorchSpore.despawnEffect = Fx.none;
 scorchSpore.hitColor = Color.valueOf("#007a96");
-scorchSpore.fromColor = Color.valueOf("#007a96");
-scorchSpore.toColor = Color.valueOf("#995D9A");
 scorchSpore.status = StatusEffects.sapped;
 Blocks.scorch.ammoTypes.put(darkSporePodItem,scorchSpore);
+const scorchCryoFx = Effect(20, e => {
+    const dg = new Floatc2({get(x, y){
+	Draw.color(Color.valueOf("#cceeff").shiftHue(Mathf.range(2)), Color.valueOf("#4499ee").shiftHue(Mathf.range(2)), Mathf.random());
+    Fill.circle(e.x + x, e.y + y, e.fout() * 3);
+    }})
+    Angles.randLenVectors(e.id, 5, 80 * e.finpow(), e.rotation, 6 + 4 * e.fout(),dg);
+    const dh = new Floatc2({get(x, y){
+	Draw.color(Color.valueOf("#cceeff").shiftHue(Mathf.range(2)), Color.valueOf("#4499ee").shiftHue(Mathf.range(2)), Mathf.random());
+    Fill.circle(e.x + x, e.y + y, e.fout() * 2);
+    }})
+    Angles.randLenVectors(e.id, 7, 75 * e.finpow(), e.rotation, 8 + 5 * e.fout(),dh);
+    const di = new Floatc2({get(x, y){
+	Draw.color(Color.valueOf("#cceeff").shiftHue(Mathf.range(2)), Color.valueOf("#4499ee").shiftHue(Mathf.range(2)), Mathf.random());
+    Fill.circle(e.x + x, e.y + y, e.fout() * 1);
+    }})
+    Angles.randLenVectors(e.id, 9, 70 * e.finpow(), e.rotation, 10 + 6 * e.fout(),dg);
+});
+const scorchCryoSmokeFx = Effect(36, e => {
+    Draw.color(Color.valueOf("#cceeff"), Color.valueOf("#4499ee"), e.fin());
+    Lines.stroke(e.fout() * 1.25);
+    const dq = new Floatc2({get(x, y){
+    Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fout() * 7 + 1);
+    }}) 
+    Angles.randLenVectors(e.id, 2, 80 * e.fin(), e.rotation, 7,dq);
+    const dw = new Floatc2({get(x, y){
+    Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fout() * 5 + 1);
+    }}) 
+    Angles.randLenVectors(e.id, 3, 70 * e.fin(), e.rotation, 11,dw);
+    const de = new Floatc2({get(x, y){
+    Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fout() * 3 + 1);
+    }}) 
+    Angles.randLenVectors(e.id, 4, 60 * e.fin(), e.rotation, 15,de);
+});
+const scorchCryo = extend(BasicBulletType, {});
+scorchCryo.damage = 18;
+scorchCryo.width = 0;
+scorchCryo.length = 0;
+scorchCryo.lifetime = 18;
+scorchCryo.speed = 3.35;
+scorchCryo.collidesAir = false;
+scorchCryo.pierce = true;
+scorchCryo.shootEffect = scorchCryoFx;
+scorchCryo.smokeEffect = scorchCryoSmokeFx;
+scorchCryo.hittable = false;
+scorchCryo.ammoMultiplier = 6;
+scorchCryo.hitEffect = Fx.hitLiquid;
+scorchCryo.despawnEffect = Fx.none;
+scorchCryo.hitColor = Color.valueOf("#cceeff");
+scorchCryo.status = StatusEffects.freezing;
+Blocks.scorch.ammoTypes.put(cryogemItem,scorchCryo);

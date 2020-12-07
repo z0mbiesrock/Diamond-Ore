@@ -165,7 +165,7 @@ ammoTypes: {
     ammoMultiplier: 4
 	reloadMultiplier: 0.85
 	pierce: false
-	knockback: 200
+	knockback: 5
 	sprite: diamond-ore-diamondbomb
     splashDamage: 80
     splashDamageRadius: 40
@@ -212,7 +212,7 @@ ammoTypes: {
     ammoMultiplier: 1
 	reloadMultiplier: 0.5
 	pierce: false
-	knockback: 200
+	knockback: 4
 	sprite: diamond-ore-diamondbomb
     splashDamage: 200
     splashDamageRadius: 50
@@ -272,7 +272,7 @@ ammoTypes: {
 	status: shocked
 	statusDuration: 120
 	pierce: false
-	knockback: 200
+	knockback: 2
 	sprite: diamond-ore-diamondshell
     splashDamage: 120
     splashDamageRadius: 32
@@ -295,7 +295,7 @@ ammoTypes: {
     ammoMultiplier: 3
 	reloadMultiplier: 0.7
 	pierce: false
-	knockback: 15
+	knockback: .15
 	sprite: diamond-ore-diamondbomb
 	fragBullets: 20
 	fragVelocityMin: 1
@@ -312,7 +312,7 @@ ammoTypes: {
 	  hitEffect: hitBulletBig
 	  frontColor: 44a044
 	  backColor: 116614
-	  knockback: 10
+	  knockback: .10
 	  keepVelocity: false
 	  splashDamage: 38
 	  splashDamageRadius: 24
@@ -337,7 +337,7 @@ ammoTypes: {
 	despawnEffect: bigShockwave
     ammoMultiplier: 2
 	pierce: false
-	knockback: 15
+	knockback: .15
 	sprite: missile
 	fragBullets: 40
 	fragVelocityMin: 1.125
@@ -355,7 +355,7 @@ ammoTypes: {
 	  frontColor: 44aaff
 	  backColor: 0000ff
 	  pierce: false
-	  knockback: 600
+	  knockback: 6
 	  sprite: diamond-ore-diamondshell
     }
   }
@@ -378,7 +378,7 @@ ammoTypes: {
     ammoMultiplier: 2
     reloadMultiplier: 0.85
 	pierce: false
-	knockback: 15
+	knockback: .15
 	sprite: missile
 	fragBullets: 30
 	fragVelocityMin: 1.125
@@ -397,7 +397,7 @@ ammoTypes: {
 	  backColor: ffffff
 	  pierce: true
 	  pierceBuilding: true
-	  knockback: 600
+	  knockback: 6
 	  status: freezing
 	  statusDuration: 300
 	  sprite: diamond-ore-diamondshell
@@ -422,7 +422,7 @@ ammoTypes: {
     ammoMultiplier: 2
     reloadMultiplier: 0.85
 	pierce: false
-	knockback: 15
+	knockback: .15
 	incendSpread: 30
 	incendAmount: 15
 	incendChance: 0.8
@@ -444,7 +444,7 @@ ammoTypes: {
 	  backColor: ff9c3a
 	  pierce: true
 	  pierceBuilding: true
-	  knockback: 600
+	  knockback: 6
 	  status: burning
 	  statusDuration: 300
 	  sprite: diamond-ore-diamondshell
