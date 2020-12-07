@@ -114,7 +114,7 @@ sporeCluster.buildType = () => extendContent(Cultivator.CultivatorBuild, sporeCl
 	onDestroyed: function(){
         this.super$onDestroyed();
         for(var i = 0; i < 10; i++){
-            sporeBlockDeath.create(this this.team, this.x, this.y, Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
+            sporeBlockDeath.create(this, this.team, this.x, this.y, Mathf.random(360), Mathf.random(0.45, 1.0), Mathf.random(0.25, 1.10));
 			sporeBlockDeathFx.at(this.x, this.y, Mathf.random(-360,360));
 		}
 	}
