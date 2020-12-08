@@ -18,7 +18,7 @@ health: 32750
 mineSound: beam
 armor: 105
 range: 110
-maxRange: 280
+maxRange: 40
 aimDst: 27
 mechStepShake: 5
 mechStride: -1.2
@@ -62,7 +62,9 @@ weapons:[
 	  hitColor: c9a58f
       splashDamage: 1250
       splashDamageRadius: 28
-	  range: 16
+	  speed: 1
+	  lifetime: 32
+	  maxRange: 16
 	  damage: 8000
 	  keepVelocity: false
 	  collidesAir: true

@@ -20,7 +20,7 @@ aimDist: 9
 health: 12000
 armor: 60
 range: 200
-maxRange: 200
+maxRange: 32
 itemCapacity: 200
 hitSize: 21
 rotateShooting: true
@@ -50,6 +50,7 @@ weapons:[
 	  shootEffect: none
 	  smokeEffect: none
       width: 0
+	  maxRange: 32
       length: 30
       lifetime: 12
 	  serrations: 4
@@ -88,8 +89,9 @@ weapons:[
 	  shootEffect: none
 	  smokeEffect: none
 	  hitEffect: mine
-      width: 0
+      width: 0.5
       length: 20
+	  maxRange: 32
       lifetime: 12
 	  serrations: 3
 	  serrationWidth: 25
