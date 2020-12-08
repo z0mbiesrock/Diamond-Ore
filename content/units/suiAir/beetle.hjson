@@ -8,7 +8,7 @@ buildSpeed: 1.25
 rotateSpeed: 4.5
 health: 1200
 armor: 15
-range: 440
+range: 300
 itemCapacity: 200
 hitSize: 12
 rotateShooting: false
