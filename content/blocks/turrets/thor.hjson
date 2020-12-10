@@ -17,7 +17,6 @@ rotateSpeed: 2
 cooldown: 0.0125
 shootSound: shotgun
 shootCone: 12
-layer: power
 outlineIcon: false
 expanded: true
 ammoTypes: {
@@ -330,6 +329,7 @@ ammoTypes: {
 	  pierce: true
 	  collides: false
 	  knockback: 1
+	  lightRadius: 0
 	  homingPower: 0.7
 	  homingRange: 40
 	  weaveScale: 2.53

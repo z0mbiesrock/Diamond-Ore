@@ -9,5 +9,5 @@ decoration: spore-cluster-dark
 attributes: {
 	spores: 0.25
 	water: -0.125
-	oil: 0.45
+	oil: 0.9
 	}

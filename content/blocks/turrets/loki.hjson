@@ -16,7 +16,6 @@ shootSound: shootBig
 outlineIcon: false
 expanded: true
 targetAir: false
-layer: power
 ammoTypes: {
   copper: {
     type: BasicBulletType

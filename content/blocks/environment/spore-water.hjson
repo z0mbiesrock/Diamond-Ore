@@ -14,5 +14,5 @@ blendGroup: water
 edge: spore-water-edge
 attributes: {
 	spores: 0.75
-	oil: 2.5
+	oil: 4
 	}

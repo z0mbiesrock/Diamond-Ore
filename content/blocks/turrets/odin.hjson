@@ -16,7 +16,6 @@ shootSound: artillery
 outlineIcon: false
 expanded: true
 targetGround: false
-layer: power
 shots: 12
 ammoTypes: {
   graphite: {

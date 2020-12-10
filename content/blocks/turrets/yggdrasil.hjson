@@ -13,8 +13,7 @@ rotateSpeed: 1
 cooldown: 0.003333
 shootSound: yggdrasilfire
 shootCone: 0.1
-researchCostMultiplier: 3.4
-layer: power
+//layer: power
 outlineIcon: false
 expanded: true
 powerUse: 150
@@ -40,11 +39,12 @@ research:{
   requirements:[
 	diamond/400000
 	cryogem/125000
-	thorium/225000
-	surge-alloy/250000
-	plastanium/300000
-	phase-fabric/100000
-	graphite/150000
+	silicon/400000
+	thorium/2250000
+	surge-alloy/1250000
+	plastanium/1300000
+	phase-fabric/1100000
+	graphite/1050000
 	ancient-alloy/12500
   ]
 }

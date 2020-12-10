@@ -2,6 +2,7 @@ type: floor
 name: Deep Corrupted Water
 variants: 6
 dragMultiplier: 2.5
+liquidMultiplier: 1.8
 speedMultiplier: 0.125
 status: corroded
 statusDuration: 300
