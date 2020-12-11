@@ -183,18 +183,20 @@ ammoTypes: {
 	fragLifeMax: 1.53
 	fragBullet: {
       type: MissileBulletType
-      speed: 1
-	  lifetime: 40
+      speed: 2
+	  lifetime: 20
       damage: 10
       width: 16
       height: 32
       shrinkX: 0.875
       shrinkY: 0.875
 	  despawnEffect: none
-	  hitEffect: none
+	  hitEffect: mine
+	  hitSound: none
 	  frontColor: ffa0ee
 	  backColor: ff66ff
 	  trailColor: c878a8
+	  hitColor: c878a8
 	  weaveScale: 1.364
 	  weaveMag: 2.66
 	  pierce: true
@@ -386,7 +388,7 @@ ammoTypes: {
 	backColor: 33b8e8
     shootEffect: shootBig2
     smokeEffect: shootBigSmoke
-    trailEffect: smeltsmoke
+    trailEffect: mine
     trailChance: 1
 	hitEffect: mineHuge
 	despawnEffect: bigShockwave
@@ -432,7 +434,7 @@ ammoTypes: {
 	backColor: e7885c
     shootEffect: shootBig2
     smokeEffect: shootSmallFlame
-    trailEffect: smeltsmoke
+    trailEffect: mine
     trailChance: 1
 	hitEffect: mineHuge
 	despawnEffect: bigShockwave
