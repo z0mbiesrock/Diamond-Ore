@@ -1,5 +1,5 @@
 name: Diamond Drill
-description: A fast, durable, and highly efficient drill. Optionally uses cryofluid to greatly increase mining speed.
+description: Uses diamond blades to rapidly cut out chunks of ore for processing. Optionally uses cryofluid to greatly increase mining speed.
 type: Drill
 health: 600
 size: 2

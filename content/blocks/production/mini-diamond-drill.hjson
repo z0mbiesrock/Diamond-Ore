@@ -1,5 +1,5 @@
 name: Precision Diamond Drill
-description: A fast, durable, and highly efficient drill. It's smaller and cheaper. Optionally uses cryofluid to drastically increase mining speed.
+description: Uses diamond blades to rapidly cut out chunks of ore for processing. Sacrifices speed for compact form. Optionally uses cryofluid to drastically increase mining speed.
 type: Drill
 health: 150
 size: 1

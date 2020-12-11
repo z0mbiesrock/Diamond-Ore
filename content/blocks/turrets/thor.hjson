@@ -170,6 +170,54 @@ ammoTypes: {
       }
     }
   }
+  plastanium: {
+    type: FlakBulletType
+    speed: 3
+	drag: 0.001
+    damage: 120
+	lifetime: 240
+    width: 24
+    height: 40
+	frontColor: 84F491
+	backColor: d8d97f
+	trailColor: fffac6
+	trailEffect: smeltsmoke
+    shootEffect: shootBig2
+    smokeEffect: shootBigSmoke
+	splashDamage: 175
+	explodeRange: 80
+	splashDamageRadius: 24
+	weaveScale: 2
+	weaveMag: 5
+	shrinkY: 0
+	hitEffect: massiveExplosion
+	despawnEffect: plasticExplosion
+    ammoMultiplier: 2
+	reloadMultiplier: 0.9
+	pierce: false
+	sprite: diamond-ore-diamondshard
+	homingPower: 0.09
+	homingRange: 120
+	fragBullets: 28
+	fragVelocityMin: 0.75
+	fragVelocityMax: 2.4
+	fragCone: 45
+	fragBullet: {
+      type: BasicBulletType
+	  frontColor: 84F491
+	  backColor: d8d97f
+	  hitColor: fffac6
+      speed: 4
+	  lifetime: 40
+      damage: 15
+      width: 4
+      height: 8
+	  despawnEffect: shootSmallSmoke
+	  hitEffect: hitLiquid
+	  knockback: 2
+	  sprite: diamond-ore-diamondshard
+    }
+  }
   cryogem: {
     type: MissileBulletType
     speed: 2
@@ -212,7 +260,7 @@ ammoTypes: {
 	  knockback: 1
 	  status: freezing
 	  statusDuration: 300
-	  sprite: shell
+	  sprite: diamond-ore-diamondshard
     }
   }
   graphite: {
@@ -223,6 +271,8 @@ ammoTypes: {
 	lifetime: 200
     width: 16
     height: 8
+	weaveScale: 5
+	weaveMag: 2
 	frontColor: bbbbbb
 	backColor: 38a8a8
 	hitColor: 38a8a8
@@ -302,10 +352,13 @@ ammoTypes: {
 	frontColor: ffd59e
 	backColor: f19583
 	trailColor: fff3d6
+	hitColor: fff3d6
     shootEffect: shootBig2
     smokeEffect: shootBigSmoke
 	shrinkY: 0
-	hitEffect: hitFuse
+	weaveScale: 2.53
+	weaveMag: 2.5
+	hitEffect: mineBig
 	despawnEffect: hitFuse
     ammoMultiplier: 1
 	reloadMultiplier: 0.65
@@ -388,6 +441,8 @@ ammoTypes: {
 	fragBullets: 80
 	fragVelocityMin: 1
 	hitSound: explosionbig
+	weaveScale: 4.53
+	weaveMag: 2.5
 	fragVelocityMax: 3
 	hitShake: 15
 	reflectable: false
@@ -424,6 +479,8 @@ ammoTypes: {
 	    homingRange: 0
         speed: 1
 	    lifetime: 20
+	    lightRadius: 300
+	    lightOpacity: 1
         damage: 50
 	    hitSound: none
         width: 6
@@ -432,6 +489,7 @@ ammoTypes: {
 	    despawnEffect: shootPyraFlame
 	    hitEffect: none
 	    frontColor: ffa044
+	    lightColor: ffa0d4
 	    backColor: ff6614
 	    pierce: true
 	    pierceBuilding: true

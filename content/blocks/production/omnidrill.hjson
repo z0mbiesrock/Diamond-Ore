@@ -1,10 +1,10 @@
 name: Omni Drill
-description: The true ultimate drill. Extremely expensive and fragile. However, its mining speed is unmatched.
+description: Infinitely mines any ore it is placed on.
 details: The true ultimate drill. Extremely expensive and fragile.
 type: Drill
 health: 200
 size: 5
-tier: 99999
+tier: 999999
 drillTime: 25
 drawRim: true
 rotateSpeed: 6
@@ -24,7 +24,7 @@ consumes: {
   power: 25
   liquid: {
     liquid: phase-string
-    amount: 1.6
+    amount: 0.9
     booster: true
 	optional: true
   }

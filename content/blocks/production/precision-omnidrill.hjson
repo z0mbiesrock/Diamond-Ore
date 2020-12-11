@@ -24,7 +24,7 @@ itemCapacity: 30
 consumes: {
   liquid: {
     liquid: phase-string
-    amount: 0.075
+    amount: 0.055
     booster: false
 	optional: false
   }

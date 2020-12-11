@@ -166,7 +166,7 @@ ammoTypes: {
     smokeEffect: shootBigSmoke
 	hitSound: explosionbig
     trailEffect: melting
-	hitEffect: bigShockwave
+	hitEffect: nuclearShockwave
 	despawnEffect: flakExplosionBig
     ammoMultiplier: 4
 	reloadMultiplier: 0.85
@@ -176,7 +176,7 @@ ammoTypes: {
     splashDamage: 80
     splashDamageRadius: 40
 	hitShake: 3
-	fragBullets: 40
+	fragBullets: 50
 	fragVelocityMin: 0.2
 	fragVelocityMax: 3
 	fragLifeMin: 0.7
@@ -186,8 +186,10 @@ ammoTypes: {
       speed: 1
 	  lifetime: 40
       damage: 10
-      width: 2
-      height: 4
+      width: 16
+      height: 32
+      shrinkX: 0.875
+      shrinkY: 0.875
 	  despawnEffect: none
 	  hitEffect: none
 	  frontColor: ffa0ee
@@ -384,7 +386,8 @@ ammoTypes: {
 	backColor: 33b8e8
     shootEffect: shootBig2
     smokeEffect: shootBigSmoke
-    trailEffect: ripple
+    trailEffect: smeltsmoke
+    trailChance: 1
 	hitEffect: mineHuge
 	despawnEffect: bigShockwave
     ammoMultiplier: 2
@@ -429,7 +432,8 @@ ammoTypes: {
 	backColor: e7885c
     shootEffect: shootBig2
     smokeEffect: shootSmallFlame
-    trailEffect: ripple
+    trailEffect: smeltsmoke
+    trailChance: 1
 	hitEffect: mineHuge
 	despawnEffect: bigShockwave
     ammoMultiplier: 2
