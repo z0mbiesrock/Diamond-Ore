@@ -19,6 +19,7 @@ expanded: true
 powerUse: 150
 //chargeEffect: yggdrasilCharge
 chargeBeginEffect: shockwave
+chargeSound: laserbig
 chargeEffects: 60
 chargeTime: 300
 chargeMaxDelay: 300

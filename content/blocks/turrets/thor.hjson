@@ -189,12 +189,14 @@ ammoTypes: {
 	splashDamageRadius: 24
 	shrinkY: 0
 	hitEffect: massiveExplosion
+	hitSound: plasmaboom
 	despawnEffect: plasticExplosion
+	reflectable: false
     ammoMultiplier: 2
-	reloadMultiplier: 0.9
+	reloadMultiplier: 0.7
 	pierce: false
 	sprite: diamond-ore-diamondshard
-	homingPower: 0.09
+	homingPower: 0.07
 	homingRange: 120
 	fragBullets: 28
 	fragVelocityMin: 0.75
@@ -208,11 +210,15 @@ ammoTypes: {
       speed: 4
 	  lifetime: 40
       damage: 15
+	  splashDamage: 25
+	  splashDamageRadius: 8
       width: 4
       height: 8
-	  despawnEffect: shootSmallSmoke
-	  hitEffect: hitLiquid
-	  knockback: 2
+	  despawnEffect: hitLiquid
+	  hitEffect: mine
+	  reflectable: false
+	  absorbable: false
+	  knockback: 3
 	  sprite: diamond-ore-diamondshard
     }
   }
