@@ -216,7 +216,9 @@ ammoTypes: {
       width: 4
       height: 8
 	  despawnEffect: hitLiquid
-	  hitEffect: mine
+	  homingPower: 0.025
+	  homingRange: 30
+	  hitEffect: hitLiquid
 	  reflectable: false
 	  absorbable: false
 	  knockback: 3
@@ -429,26 +431,27 @@ ammoTypes: {
 	backColor: ff66dd
 	trailColor: ffffff
     shootEffect: shootBig2
-    trailEffect: smeltsmoke
+    trailEffect: plasticburn
+    trailChance: 1
     smokeEffect: shootPyraFlame
 	splashDamage: 600
-	splashDamageRadius: 80
+	splashDamageRadius: 100
 	shrinkY: 0
 	hitEffect: impactShockwave
-	despawnEffect: nuclearShockwave
+	despawnEffect: impactShockwave
     ammoMultiplier: 1
 	reloadMultiplier: 0.125
 	pierce: false
 	sprite: missile
-	status: melting
+	status: sapped
 	statusDuration: 2400
 	homingPower: 0.075
 	homingRange: 120
 	fragBullets: 80
 	fragVelocityMin: 1
 	hitSound: explosionbig
-	weaveScale: 7.53
-	weaveMag: 2.5
+	weaveScale: 3.53
+	weaveMag: 12.5
 	fragVelocityMax: 3
 	hitShake: 15
 	reflectable: false
@@ -459,6 +462,8 @@ ammoTypes: {
       speed: 1
 	  lifetime: 1
 	  hitSound: none
+	  lightRadius: 50
+	  lightOpacity: 1
       damage: 50
       width: 6
       height: 6
@@ -471,7 +476,7 @@ ammoTypes: {
 	  pierceBuilding: true
 	  weaveScale: 4.53
 	  weaveMag: 4.5
-	  knockback: 1
+	  knockback: 0.41
 	  status: melting
 	  statusDuration: 1800
 	  sprite: shell
@@ -486,7 +491,7 @@ ammoTypes: {
         speed: 1
 	    lifetime: 20
 	    lightRadius: 300
-	    lightOpacity: 1
+	    lightOpacity: 0.41
         damage: 50
 	    hitSound: none
         width: 6
@@ -498,13 +503,14 @@ ammoTypes: {
 	    lightColor: ffa0d4
 	    backColor: ff6614
 	    pierce: true
+	    reflectable: false
 	    pierceBuilding: true
 	    weaveScale: 4.53
 	    weaveMag: 4.5
-	    knockback: 1
+	    knockback: 0.6
 	    status: corroded
 	    statusDuration: 1200
-	    sprite: shell
+	    sprite: diamond-ore-diamondshard
 	    reflectable: false
       }
     }

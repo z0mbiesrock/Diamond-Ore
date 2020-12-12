@@ -155,9 +155,9 @@ ammoTypes: {
   }
   thorium: {
     type: ArtilleryBulletType
-    speed: 6
+    speed: 5
     damage: 50
-	lifetime: 40
+	lifetime: 80
     width: 20
     height: 32
 	frontColor: fbbbeb
@@ -169,14 +169,15 @@ ammoTypes: {
 	hitEffect: nuclearShockwave
 	despawnEffect: flakExplosionBig
     ammoMultiplier: 4
-	reloadMultiplier: 0.85
+    lightRadius: 64
+	reloadMultiplier: 0.15
 	pierce: false
 	knockback: 5
 	sprite: diamond-ore-diamondbomb
-    splashDamage: 80
-    splashDamageRadius: 40
-	hitShake: 3
-	fragBullets: 50
+    splashDamage: 170
+    splashDamageRadius: 70
+	hitShake: 7
+	fragBullets: 90
 	fragVelocityMin: 0.2
 	fragVelocityMax: 3
 	fragLifeMin: 0.7
@@ -195,6 +196,9 @@ ammoTypes: {
 	  hitSound: none
 	  frontColor: ffa0ee
 	  backColor: ff66ff
+	  lightColor: ff66ff
+	  lightRadius: 90
+	  lightOpacity: 1
 	  trailColor: c878a8
 	  hitColor: c878a8
 	  weaveScale: 1.364
@@ -385,6 +389,7 @@ ammoTypes: {
     width: 18
     height: 22
 	frontColor: 99ffff
+	trailColor: 99ffff
 	backColor: 33b8e8
     shootEffect: shootBig2
     smokeEffect: shootBigSmoke
@@ -430,6 +435,7 @@ ammoTypes: {
     width: 18
     height: 22
 	frontColor: ff9c3a
+	trailColor: ff9c3a
 	hitColor: ff9c3a
 	backColor: e7885c
     shootEffect: shootBig2
