@@ -192,12 +192,13 @@ ammoTypes: {
 	hitSound: plasmaboom
 	despawnEffect: plasticExplosion
 	reflectable: false
+	collidesGround: true
     ammoMultiplier: 2
 	reloadMultiplier: 0.7
 	pierce: false
 	sprite: diamond-ore-diamondshard
-	homingPower: 0.07
-	homingRange: 120
+	homingPower: 0.035
+	homingRange: 200
 	fragBullets: 28
 	fragVelocityMin: 0.75
 	fragVelocityMax: 2.4
