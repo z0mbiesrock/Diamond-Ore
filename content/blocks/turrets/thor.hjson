@@ -201,6 +201,7 @@ ammoTypes: {
 	homingRange: 200
 	fragBullets: 28
 	fragVelocityMin: 0.75
+	fragLifeMin: 0.25
 	fragVelocityMax: 2.4
 	fragCone: 45
 	fragBullet: {
@@ -209,15 +210,15 @@ ammoTypes: {
 	  backColor: d8d97f
 	  hitColor: fffac6
       speed: 4
-	  lifetime: 40
+	  lifetime: 80
       damage: 15
 	  splashDamage: 25
 	  splashDamageRadius: 8
-      width: 4
-      height: 8
+      width: 6
+      height: 12
 	  despawnEffect: hitLiquid
 	  homingPower: 0.025
-	  homingRange: 30
+	  homingRange: 48
 	  hitEffect: hitLiquid
 	  reflectable: false
 	  absorbable: false
@@ -450,8 +451,8 @@ ammoTypes: {
 	fragBullets: 80
 	fragVelocityMin: 1
 	hitSound: explosionbig
-	weaveScale: 3.53
-	weaveMag: 12.5
+	weaveScale: 2.53
+	weaveMag: 1.105
 	fragVelocityMax: 3
 	hitShake: 15
 	reflectable: false

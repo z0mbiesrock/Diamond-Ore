@@ -1,7 +1,7 @@
 name: Reinforced Battery
-description: A much more durable battery.
+description: Stores power in times of surplus energy. Outputs power in times of deficit. High durability.
 type: Battery
-health: 1200
+health: 2400
 size: 2
 buildCostMultiplier: 6
 consumes: {

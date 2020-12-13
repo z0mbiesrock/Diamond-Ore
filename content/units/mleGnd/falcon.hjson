@@ -84,12 +84,12 @@ weapons:[
     bullet:{
       type: ShrapnelBulletType
 	  fromColor: 3Cffff
-	  toColor: 2CB2B2
+	  toColor: 2C8282
 	  hitColor: 2CB2B2
 	  shootEffect: none
 	  smokeEffect: none
 	  hitEffect: mine
-      width: 0.5
+      width: 0
       length: 20
 	  maxRange: 32
       lifetime: 12

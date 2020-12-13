@@ -1,5 +1,5 @@
 name: Organic Drill
-description: "A smaller and more compact Oil Extractor. It's slow, but only needs a small amount of power."
+description: "Uses a small amount of power to slowly extract oil."
 type: SolidPump
 health: 150
 size: 1
