@@ -7,10 +7,12 @@ accel: 0.0205
 rotateSpeed: 4.5
 health: 1000
 armor: 35
-range: 600
+range: 200
+maxRange: 600
 itemCapacity: 150
 hitSize: 12
 rotateShooting: false
+circleTarget: false
 fallEffect: blastExplosion
 fallThrusterEffect: nuclearsmoke
 fallSpeed: 0.0161064

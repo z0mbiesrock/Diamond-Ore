@@ -9,10 +9,12 @@ health: 200
 armor: 8
 range: 800
 itemCapacity: 30
-aimDist: 80
+aimDst: 80
 hitSize: 5
 rotateShooting: false
 lowAltitude: false
+circleTarget: true
+omniMovement: false
 destructibleWreck: false
 engineOffset: 5
 engineSize: 2
@@ -30,7 +32,7 @@ weapons:[
     shootY: 2
     recoil: 2
     reload: 9
-    shootCone: 40
+    shootCone: 80
     shots: 3
     shotDelay: 3
     spacing: 0

@@ -11,11 +11,14 @@ lightRadius: 120
 lightOpacity: 0.14
 health: 25000
 armor: 80
-range: 800
+range: 400
+maxRange: 800
 aimDst: 70
 itemCapacity: 1500
 hitSize: 42
 rotateShooting: false
+omniMovement: false
+circleTarget: false
 singleTarget: false
 lowAltitude: true
 destructibleWreck: false

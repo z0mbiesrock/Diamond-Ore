@@ -8,10 +8,13 @@ buildSpeed: 4
 rotateSpeed: 2.5
 health: 8500
 armor: 50
-range: 400
+range: 200
+maxRange: 400
 itemCapacity: 400
 hitSize: 17
 rotateShooting: false
+omniMovement: false
+circleTarget: false
 fallEffect: flakExplosion
 fallThrusterEffect: melting
 fallSpeed: 0.0071064

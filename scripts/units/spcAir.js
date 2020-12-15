@@ -6,11 +6,10 @@ const spcAirAI = prov(() => {
   var u = extend(FlyingAI, {
     updateMovement(){
 		this.super$updateMovement();
-		/* if(this.unit.moving()){
+		if(this.unit.moving()){
 			var thrustvec = Vec2(this.unit.x, this.unit.y);
 			this.unit.moveAt(thrustvec.trns(this.unit.rotation, this.unit.speed()));
-            this.unit.lookAt(this.unit.vel.angle());
-        } */
+        }
     }
   });
   

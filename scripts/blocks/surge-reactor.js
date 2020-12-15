@@ -164,23 +164,18 @@ surgeReactor.buildType = () => extendContent(NuclearReactor.NuclearReactorBuild,
 		this.super$onDestroyed();
 		Sounds.corexplode.at(this.x, this.y);
 		Sounds.explosionbig.at(this.x, this.y);
-		Sounds.explosionbig.at(this.x, this.y);
-		Sounds.explosionbig.at(this.x, this.y);
 		Effect.shake(155, 155, this.x, this.y);
-		/* try{
-			Units.all(cons(plr => {
-				if (plr.isDead() == false && plr.isPlayer()){
-					Effect.shake(75, 75, plr.x, plr.y);
-					Sounds.corexplode.at(plr.x, plr.y);
-					Sounds.explosionbig.at(plr.x, plr.y);
-					Sounds.explosionbig.at(plr.x, plr.y);
-					Sounds.explosionbig.at(plr.x, plr.y);
-				}
-			}));
+		try{
+			var playerU = Vars.player.unit();
+			Effect.shake(75, 75, playerU.x, playerU.y);
+			Sounds.corexplode.at(playerU.x, playerU.y);
+			Sounds.explosionbig.at(playerU.x, playerU.y);
+			Sounds.explosionbig.at(playerU.x, playerU.y);
+			Sounds.explosionbig.at(playerU.x, playerU.y);
 		}
 		catch (err){
 			print(err);
-		} */
+		}
 		surgeReactorMeltdownFxA.at(this.x, this.y, Mathf.random(-360,360));
         for(var lfr = 0; lfr < 15; lfr++){
             surgeReactorMeltdownFxB.at(this.x, this.y, Mathf.random(-360,360));
@@ -188,9 +183,9 @@ surgeReactor.buildType = () => extendContent(NuclearReactor.NuclearReactorBuild,
         for(var i = 0; i < 45; i++){
 			surgeReactorMeltdownFlak.weaveScale = Mathf.range(4); 
 			surgeReactorMeltdownFlak.weaveMag = Mathf.range(4); 
-            surgeReactorMeltdownFlak.create(this, Team.derelict, this.y, this.y, Mathf.random(360), Mathf.random(0.15, 1.0), Mathf.random(0.2, 1.0));
+            surgeReactorMeltdownFlak.create(this, Team.derelict, this.x, this.y, Mathf.random(360), Mathf.random(0.15, 1.0), Mathf.random(0.2, 1.0));
             //surgeReactorMeltdownShockA, Team.derelict, this.y, this.y, Mathf.random(360), 1, 1);
-            surgeReactorMeltdownShockB.create(this, Team.derelict, this.y, this.y, Mathf.random(360), 1, 1);
+            surgeReactorMeltdownShockB.create(this, Team.derelict, this.x, this.y, Mathf.random(360), 1, 1);
 		}
 	},
 });
