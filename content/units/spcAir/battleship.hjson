@@ -343,17 +343,17 @@ weapons:[
     shootY: 9
 	shots: 2
 	inaccuracy: 18
-	//velocityRnd: 0.12
+	velocityRnd: 0.12
     recoil: 0
-    reload: 3.01
+    reload: 4
     rotate: true
     rotateSpeed: 5
     rotateLimit: 120
     soundPitchMin: 2.7
     soundPitchMax: 3.8
-    shootCone: 1
+    shootCone: 6
 	occlusion: 4
-    shootSound: pew
+    shootSound: artillery
     top: false
     bullet: {
       type: FlakBulletType
@@ -375,7 +375,7 @@ weapons:[
 	  explodeRange: 60
 	  splashDamage: 60
 	  splashDamageRadius: 80
-	  fragBullets: 8
+	  fragBullets: 11
 	  fragLifeMin: 0
 	  fragBullet:{
         type: BasicBulletType
@@ -388,7 +388,7 @@ weapons:[
 		shrinkY: 0
 		shrinkX: 0.6666
         speed: 2
-        sprite: diamond-ore-diamondShard
+        sprite: diamond-ore-diamondshard
         lifetime: 30
 	    damage: 12
 		tileDamageMultiplier: 0.16666666666
@@ -404,18 +404,18 @@ weapons:[
     shootY: 9
 	shots: 2
 	inaccuracy: 18
-	//velocityRnd: 0.12
+	velocityRnd: 0.12
     recoil: 0
-    reload: 6
+    reload: 8
     rotate: true
     mirror: false
     rotateSpeed: 5
     rotateLimit: 90
     soundPitchMin: 2.7
     soundPitchMax: 3.8
-    shootCone: 1
+    shootCone: 6
 	occlusion: 4
-    shootSound: pew
+    shootSound: artillery
     top: false
     bullet: {
       type: FlakBulletType
@@ -437,7 +437,7 @@ weapons:[
 	  explodeRange: 60
 	  splashDamage: 60
 	  splashDamageRadius: 80
-	  fragBullets: 8
+	  fragBullets: 11
 	  fragLifeMin: 0
 	  fragBullet:{
         type: BasicBulletType
