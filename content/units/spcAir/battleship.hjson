@@ -371,11 +371,11 @@ weapons:[
 	  despawnEffect: hitFuse
 	  hitEffect: mineHuge
       lifetime: 45
-	  damage: 30
+	  damage: 13
 	  explodeRange: 60
 	  splashDamage: 60
 	  splashDamageRadius: 80
-	  fragBullets: 20
+	  fragBullets: 8
 	  fragLifeMin: 0
 	  fragBullet:{
         type: BasicBulletType
@@ -433,11 +433,11 @@ weapons:[
 	  despawnEffect: hitFuse
 	  hitEffect: mineHuge
       lifetime: 45
-	  damage: 30
+	  damage: 13
 	  explodeRange: 60
 	  splashDamage: 60
 	  splashDamageRadius: 80
-	  fragBullets: 20
+	  fragBullets: 8
 	  fragLifeMin: 0
 	  fragBullet:{
         type: BasicBulletType
