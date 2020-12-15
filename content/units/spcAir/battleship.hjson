@@ -1,0 +1,421 @@
+localizedName: Battleship
+description: Fires barrages of bullets, missiles, and flak at all nearby enemies. Equipped with long range plasma cannon.
+commandLimit: 20
+speed: 0.237
+drag: 0.0095
+accel: 0.0134
+buildSpeed: 8
+rotateSpeed: 0.6375
+lightColor: ffe367
+lightRadius: 120
+lightOpacity: 0.14
+health: 25000
+armor: 80
+range: 800
+aimDst: 70
+itemCapacity: 1500
+hitSize: 42
+rotateShooting: false
+singleTarget: false
+lowAltitude: true
+destructibleWreck: false
+fallEffect: flakExplosionBig
+fallThrusterEffect: impactsmoke
+fallSpeed: 0.00214
+engineOffset: 70
+engineSize: 4
+hovering: true
+flying: true
+trailLength: 0
+trailX: 0
+trailY: 70
+trailScl: 0
+
+weapons:[
+  {
+    name: battleship-plasma
+    x: 0
+    y: 0
+    shootY: 65
+    recoil: 0
+	reload: 300
+	shots: 5
+	inaccuracy: 0
+	velocityRnd: 0
+	cooldownTime: 250
+    chargeSound: lasercharge2
+	firstShotDelay: 59
+	shootStatusDuration: 60
+	shootStatus: unmoving
+	heatColor: ffeedd
+    rotate: false
+    mirror: false
+    rotateSpeed: 1
+    rotateLimit: 175
+    soundPitchMin: 0.5
+    soundPitchMax: 0.8
+    shootCone: 30
+	occlusion: 4
+    shootSound: battleshipPlasma
+    bullet:{
+      type: BasicBulletType
+	  frontColor: 888888
+	  backColor: 88bbff
+	  trailColor: 88ccff
+	  hitColor: 66ccff
+      hitEffect: massiveExplosion
+      hitSound: explosionbig
+      trailEffect: mineBig
+      trailChance: 1
+      despawnEffect: massiveExplosion
+      shootEffect: lancerLaserChargeBegin
+      smokeEffect: impactsmoke
+      width: 20
+      height: 20
+      sprite: diamond-ore-diamondbullet
+	  shrinkX: 0
+	  shrinkY: 0
+      speed: 10
+      lifetime: 120
+	  damage: 200
+	  splashDamage: 600
+	  splashDamageRadius: 200
+	  hittable: false
+	  pierce: true
+	  pierceBuilding: true
+	  pierceCap: 6
+	  lightning: 20
+	  lightningLength: 4
+	  lightningLengthRand: 50
+	  lightningColor: 66ccff
+	  lightningDamage: 40
+	  fragVelocityMin: 0.01
+	  fragVelocityMax: 1.91
+	  fragLifeMin: 0
+	  fragLifeMax: 3
+	  fragBullets: 25
+	  fragBullet:{
+        type: BasicBulletType
+        //sapStrength: 0.5
+	    frontColor: 88ffff
+	    backColor: 88ffff
+        width: 9
+        height: -14
+		shrinkX: 1
+		shrinkY: 1
+		drag: 0.015
+        speed: 9
+        sprite: diamond-ore-diamondshard
+        lifetime: 10
+	    damage: 50
+		tileDamageMultiplier: 0.16666666666
+		reflectable: false
+		hittable: false
+	    pierce: true
+	    pierceBuilding: true
+		despawnEffect: none
+		hitEffect: none
+      }
+    }
+  },
+  {
+    name: battleship-missile
+    x: 28
+    y: -21
+    shootY: 9
+	xRand: 3
+	shots: 6
+	shotDelay: 4
+    recoil: 0
+    reload: 40
+    rotate: true
+    rotateSpeed: 5
+    rotateLimit: 120
+    soundPitchMin: 0.7
+    soundPitchMax: 0.8
+    shootCone: 1
+	occlusion: 4
+    shootSound: missile
+    bullet: missileExplosive
+    top: false
+  },
+  {
+    name: battleship-missile
+    x: 28
+    y: -6
+    shootY: 9
+	xRand: 3
+	shots: 6
+	shotDelay: 4
+    recoil: 0
+    reload: 40
+    rotate: true
+    rotateSpeed: 5
+    rotateLimit: 120
+    soundPitchMin: 0.7
+    soundPitchMax: 0.8
+    shootCone: 1
+	occlusion: 4
+    shootSound: missile
+    bullet: missileExplosive
+    top: false
+  },
+  {
+    name: battleship-missile
+    x: 28
+    y: 9
+    shootY: 9
+	xRand: 3
+	shots: 6
+	shotDelay: 4
+    recoil: 0
+    reload: 40
+    rotate: true
+    rotateSpeed: 5
+    rotateLimit: 120
+    soundPitchMin: 0.7
+    soundPitchMax: 0.8
+    shootCone: 1
+	occlusion: 4
+    shootSound: missile
+    bullet: missileExplosive
+    top: false
+  },
+  {
+    name: battleship-blaster
+    x: 18
+    y: 46
+    shootY: 9
+    recoil: 0
+    reload: 40.03
+    rotate: true
+    rotateSpeed: 4
+    rotateLimit: 124
+    soundPitchMin: 2.7
+    soundPitchMax: 3.8
+    shootCone: 1
+	occlusion: 4
+    shootSound: boom
+    bullet:{
+      type: BasicBulletType
+	  frontColor: ffffff
+	  backColor: ffffff
+	  hitColor: ffffff
+      shootEffect: shootBig2
+      hitEffect: mine
+      despawnEffect: hitLiquid
+      width: 10
+      height: -40
+      sprite: diamond-ore-diamondshard
+	  shrinkX: 0.2
+	  shrinkY: 0.8
+	  range: 320
+      speed: 16
+      lifetime: 40
+	  damage: 80
+	  hittable: false
+	  pierce: true
+	  pierceBuilding: true
+	  pierceCap: 6
+    }
+  },
+  {
+    name: battleship-blaster
+    x: 18
+    y: 26
+    shootY: 9
+    recoil: 0
+    reload: 40.02
+    rotate: true
+    rotateSpeed: 4
+    rotateLimit: 124
+    soundPitchMin: 6
+    soundPitchMax: 8.8
+    shootCone: 1
+	occlusion: 4
+    shootSound: boom
+    bullet:{
+      type: BasicBulletType
+	  frontColor: ffffff
+	  backColor: ffffff
+	  hitColor: ffffff
+      shootEffect: shootBig2
+      hitEffect: mine
+      despawnEffect: hitLiquid
+      width: 10
+      height: -40
+      sprite: diamond-ore-diamondshard
+	  shrinkX: 0.2
+	  shrinkY: 0.8
+	  range: 320
+      speed: 16
+      lifetime: 40
+	  damage: 80
+	  hittable: false
+	  pierce: true
+	  pierceBuilding: true
+	  pierceCap: 6
+    }
+  },
+  {
+    name: battleship-blaster
+    x: 18
+    y: 6
+    shootY: 9
+    recoil: 0
+    reload: 40.01
+    rotate: true
+    rotateSpeed: 4
+    rotateLimit: 124
+    soundPitchMin: 6
+    soundPitchMax: 8.8
+    shootCone: 1
+	occlusion: 4
+    shootSound: boom
+    bullet:{
+      type: BasicBulletType
+	  frontColor: ffffff
+	  backColor: ffffff
+	  hitColor: ffffff
+      shootEffect: shootBig2
+      hitEffect: mine
+      despawnEffect: hitLiquid
+      width: 10
+      height: -40
+      sprite: diamond-ore-diamondshard
+	  shrinkX: 0.2
+	  shrinkY: 0.8
+	  range: 320
+      speed: 16
+      lifetime: 40
+	  damage: 80
+	  hittable: false
+	  pierce: true
+	  pierceBuilding: true
+	  pierceCap: 6
+    }
+  },
+  {
+    name: battleship-blaster
+    x: 18
+    y: -14
+    shootY: 9
+    recoil: 0
+    reload: 40
+    rotate: true
+    rotateSpeed: 4
+    rotateLimit: 124
+    soundPitchMin: 6
+    soundPitchMax: 8.8
+    shootCone: 1
+	occlusion: 4
+    shootSound: boom
+    bullet:{
+      type: BasicBulletType
+	  frontColor: ffffff
+	  backColor: ffffff
+	  hitColor: ffffff
+      shootEffect: shootBig2
+      hitEffect: mine
+      despawnEffect: hitLiquid
+      width: 10
+      height: -40
+      sprite: diamond-ore-diamondshard
+	  shrinkX: 0.2
+	  shrinkY: 0.8
+	  range: 320
+      speed: 16
+      lifetime: 40
+	  damage: 80
+	  hittable: false
+	  pierce: true
+	  pierceBuilding: true
+	  pierceCap: 6
+    }
+  },
+  {
+    name: battleship-flak
+    x: 27
+    y: -46
+    shootY: 9
+	shots: 2
+	inaccuracy: 18
+	//velocityRnd: 0.12
+    recoil: 0
+    reload: 3.01
+    rotate: true
+    mirror: false
+    rotateSpeed: 5
+    rotateLimit: 120
+    soundPitchMin: 2.7
+    soundPitchMax: 3.8
+    shootCone: 1
+	occlusion: 4
+    shootSound: pew
+    bullet: fragPlastic
+    top: false
+  },
+  {
+    name: battleship-flak
+    x: -27
+    y: -46
+    shootY: 9
+	shots: 2
+	inaccuracy: 18
+	//velocityRnd: 0.12
+    recoil: 0
+    reload: 2.999
+    rotate: true
+    flipSprite: true
+    mirror: false
+    rotateSpeed: 5
+    rotateLimit: 120
+    soundPitchMin: 2.7
+    soundPitchMax: 3.8
+    shootCone: 1
+	occlusion: 4
+    shootSound: pew
+    bullet: fragPlastic
+    top: false
+  },
+  {
+    name: battleship-flak
+    x: 0
+    y: -62
+    shootY: 9
+	shots: 2
+	inaccuracy: 18
+	//velocityRnd: 0.12
+    recoil: 0
+    reload: 6
+    rotate: true
+    mirror: false
+    rotateSpeed: 5
+    rotateLimit: 90
+    soundPitchMin: 2.7
+    soundPitchMax: 3.8
+    shootCone: 1
+	occlusion: 4
+    shootSound: pew
+    bullet: fragPlastic
+    top: false
+  },
+]
+
+research: {
+  parent: cruiser
+  requirements:[
+      silicon/6666000
+      thorium/599000
+      metaglass/1000000
+      blast-compound/1000000
+      plastanium/2000000
+      surge-alloy/1000000
+      phase-fabric/512000
+      titanium/1240000
+      diamond/5000000
+      cryogem/1500000
+      dark-spore-pod/500000
+      ancient-alloy/500000
+  ]
+}

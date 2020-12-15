@@ -7,3 +7,4 @@ oreDefault: true
 variants: 8
 oreScale: 9
 oreThreshold: 0.96
+color: e4bc5e

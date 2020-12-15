@@ -1,0 +1,159 @@
+localizedName: Destroyer
+description: Fires salvos of homing missiles at all nearby enemies.
+commandLimit: 8
+speed: 1.081
+drag: 0.02
+accel: 0.0205
+rotateSpeed: 4.5
+health: 1000
+armor: 35
+range: 600
+itemCapacity: 150
+hitSize: 12
+rotateShooting: false
+fallEffect: blastExplosion
+fallThrusterEffect: nuclearsmoke
+fallSpeed: 0.0161064
+immunities: [wet, tarred, sapped, sporeSlowed, corroded, burning, melting]
+engineOffset: 13
+engineSize: 7
+lowAltitude: true
+destructibleWreck: false
+flying: true
+hovering: true
+trailLength: 0
+trailX: 0
+trailY: 0
+trailScl: 0
+
+weapons:[
+  {
+    name: destroyer-missile
+    x: 9
+    y: -10
+    shootY: 7
+    recoil: 0
+    reload: 20
+	shots: 3
+	shotDelay: 7
+	spacing: 1
+	inaccuracy: 0
+	velocityRnd: 0.125
+	rotateSpeed: 2
+	occlusion: 6
+    rotate: true
+    rotateLimit: 135
+    top: true
+    soundPitchMin: 0.72
+    soundPitchMax: 0.94
+    shootSound: missile
+    bullet:{
+      type: MissileBulletType
+	  frontColor: b28768
+	  backColor: b28768
+      width: 4
+      height: 8
+	  shrinkX: 0
+	  shrinkY: 0
+      speed: 5
+      weaveScale: 2
+      weaveMag: 3
+	  trailColor: b28768
+	  trailChance: 0.7
+	  hitColor: c9a58f
+	  lightColor: b28768
+	  homingPower: 0.066
+	  homingRange: 120
+	  hitEffect: blastExplosion
+	  shootEffect: shootSmall
+	  despawnEffect: mine
+      sprite: diamond-ore-diamondmissile
+      lifetime: 90
+	  damage: 8
+	  splashDamage: 36
+	  splashDamageRadius: 36
+    }
+  },
+  {
+    name: spcair-blaster
+    x: 9
+    y: -2
+    shootY: 4
+    recoil: 0
+    reload: 40
+	shots: 3
+	shotDelay: 7
+	spacing: 0
+	inaccuracy: 0
+	velocityRnd: 0.125
+	rotateSpeed: 14
+	occlusion: 6
+    rotate: true
+    rotateLimit: 135
+    top: true
+    soundPitchMin: 1.72
+    soundPitchMax: 1.94
+    shootSound: oldpew
+    bullet:{
+      type: BasicBulletType
+	  hitColor: 888888
+	  despawnEffect: hitLiquid
+	  frontColor: ffffff
+	  backColor: ffffff
+      damage: 9
+	  width: 2
+	  height: -9
+	  shrinkY: 0.5
+	  speed: 10
+	  lifetime: 20
+	  sprite: diamond-ore-diamondshard
+    }
+  },
+  {
+    name: spcair-blaster
+    x: 9
+    y: 8
+    shootY: 4
+    recoil: 0
+    reload: 40.4
+	shots: 3
+	shotDelay: 7
+	spacing: 0
+	inaccuracy: 0
+	velocityRnd: 0.125
+	rotateSpeed: 14
+	occlusion: 6
+    rotate: true
+    rotateLimit: 135
+    top: true
+    soundPitchMin: 1.72
+    soundPitchMax: 1.94
+    shootSound: oldpew
+    bullet:{
+      type: BasicBulletType
+	  hitColor: 888888
+	  despawnEffect: hitLiquid
+	  frontColor: ffffff
+	  backColor: ffffff
+      damage: 9
+	  width: 2
+	  height: -9
+	  shrinkY: 0.5
+	  speed: 10
+	  lifetime: 20
+	  sprite: diamond-ore-diamondshard
+    }
+  }
+]
+
+research: {
+  parent: fighter
+  requirements:[
+      silicon/96000
+      titanium/72000
+      metaglass/40000
+      surge-alloy/10000
+      diamond/6000
+      cryogem/2500
+  ]
+}

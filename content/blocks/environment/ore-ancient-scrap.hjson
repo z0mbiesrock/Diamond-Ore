@@ -5,3 +5,4 @@ oreDefault: true
 variants: 6
 oreScale: 20
 oreThreshold: 0.90
+color: 8e5811
