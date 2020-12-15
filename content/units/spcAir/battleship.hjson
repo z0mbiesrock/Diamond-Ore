@@ -347,7 +347,6 @@ weapons:[
     recoil: 0
     reload: 3.01
     rotate: true
-    mirror: false
     rotateSpeed: 5
     rotateLimit: 120
     soundPitchMin: 2.7
@@ -355,31 +354,48 @@ weapons:[
     shootCone: 1
 	occlusion: 4
     shootSound: pew
-    bullet: fragPlastic
     top: false
-  },
-  {
-    name: battleship-flak
-    x: -27
-    y: -46
-    shootY: 9
-	shots: 2
-	inaccuracy: 18
-	//velocityRnd: 0.12
-    recoil: 0
-    reload: 2.999
-    rotate: true
-    flipSprite: true
-    mirror: false
-    rotateSpeed: 5
-    rotateLimit: 120
-    soundPitchMin: 2.7
-    soundPitchMax: 3.8
-    shootCone: 1
-	occlusion: 4
-    shootSound: pew
-    bullet: fragPlastic
-    top: false
+    bullet: {
+      type: FlakBulletType
+	  frontColor: 999999
+	  hitColor: 444444
+	  backColor: bbbbbb
+	  hitColor: b28768
+      width: 10
+      height: -12
+      speed: 9
+	  shrinkX: -0.5
+	  shrinkY: -0.25
+      collidesGround: true
+      sprite: bullet
+	  despawnEffect: hitFuse
+	  hitEffect: mineHuge
+      lifetime: 45
+	  damage: 30
+	  explodeRange: 60
+	  splashDamage: 60
+	  splashDamageRadius: 80
+	  fragBullets: 20
+	  fragLifeMin: 0
+	  fragBullet:{
+        type: BasicBulletType
+        //sapStrength: 0.5
+	    frontColor: ffffff
+	    backColor: ffffff
+	    despawnEffect: none
+        width: 6
+        height: 3
+		shrinkY: 0
+		shrinkX: 0.6666
+        speed: 2
+        sprite: diamond-ore-diamondShard
+        lifetime: 30
+	    damage: 12
+		tileDamageMultiplier: 0.16666666666
+		reflectable: false
+		hittable: false
+      }
+    }
   },
   {
     name: battleship-flak
@@ -400,8 +416,48 @@ weapons:[
     shootCone: 1
 	occlusion: 4
     shootSound: pew
-    bullet: fragPlastic
     top: false
+    bullet: {
+      type: FlakBulletType
+	  frontColor: 999999
+	  hitColor: 444444
+	  backColor: bbbbbb
+	  hitColor: b28768
+      width: 10
+      height: -12
+      speed: 9
+	  shrinkX: -0.5
+	  shrinkY: -0.25
+      collidesGround: true
+      sprite: bullet
+	  despawnEffect: hitFuse
+	  hitEffect: mineHuge
+      lifetime: 45
+	  damage: 30
+	  explodeRange: 60
+	  splashDamage: 60
+	  splashDamageRadius: 80
+	  fragBullets: 20
+	  fragLifeMin: 0
+	  fragBullet:{
+        type: BasicBulletType
+        //sapStrength: 0.5
+	    frontColor: ffffff
+	    backColor: ffffff
+	    despawnEffect: none
+        width: 6
+        height: 3
+		shrinkY: 0
+		shrinkX: 0.6666
+        speed: 2
+        sprite: diamond-ore-diamondShard
+        lifetime: 30
+	    damage: 12
+		tileDamageMultiplier: 0.16666666666
+		reflectable: false
+		hittable: false
+      }
+    }
   },
 ]
 
