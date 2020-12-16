@@ -105,7 +105,7 @@ ammoTypes: {
     splashDamage: 45
     splashDamageRadius: 36
 	lifetime: 60
-    width: 15
+    width: 20
     height: 40
 	frontColor: 69501c
 	backColor: ce8404
@@ -118,17 +118,18 @@ ammoTypes: {
     ammoMultiplier: 3
 	pierce: false
 	knockback: 15
-	sprite: shell
+	sprite: diamond-ore-diamondshell
 	fragBullets: 30
 	fragVelocityMin: 2
 	fragVelocityMax: 18
 	fragLifeMin: 0.8
-	fragLifeMax: 1.9
+	fragLifeMax: 3.9
 	fragBullet: {
       type: BasicBulletType
       drag: 0.1
       damage: 10
 	  lifetime: 300
+	  lightRadius: 0
       width: 2
       height: 2
       hitsTiles: false
@@ -139,7 +140,7 @@ ammoTypes: {
 	  backColor: ff6614
       shootEffect: none
       smokeEffect: none
-	  hitEffect: hitBulletBig
+	  hitEffect: mine
 	  hitColor: ff6614
 	  despawnEffect: pulverizeSmall
       ammoMultiplier: 4
@@ -293,7 +294,7 @@ ammoTypes: {
 	statusDuration: 120
 	pierce: false
 	knockback: 2
-	sprite: diamond-ore-diamondshell
+	sprite: large-bomb
     splashDamage: 120
     splashDamageRadius: 32
   }
