@@ -15,6 +15,7 @@ hitSize: 5
 rotateShooting: false
 lowAltitude: true
 destructibleWreck: false
+circleTarget: true
 immunities: [wet, tarred, sapped, sporeSlowed, corroded]
 engineOffset: 5
 engineSize: 2

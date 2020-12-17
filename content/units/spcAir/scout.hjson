@@ -12,7 +12,7 @@ maxRange: 80
 itemCapacity: 30
 aimDst: 80
 hitSize: 5
-rotateShooting: false
+rotateShooting: true
 fallThrusterEffect: coreBurn
 lowAltitude: false
 circleTarget: true
