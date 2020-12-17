@@ -1,14 +1,5 @@
 
 const omniJunction = extendContent(Junction, "omnijunction", {
-	getLiquidDestination(tile, source, liquid){
-        dir = source.relativeTo(tile.x, tile.y);
-        dir = (dir + 4) % 4;
-        next = tile.getNearbyLink(dir);
-        if(next == null || !next.block().acceptLiquid(next, tile, liquid, 0) && !(next.block() instanceof LiquidJunction)){
-            return tile;
-        }
-        return next.block().getLiquidDestination(next, tile, liquid);
-    },
 });
 omniJunction.buildType = () => extendContent(Junction.JunctionBuild, omniJunction, {
 	draw(){
@@ -17,6 +8,15 @@ omniJunction.buildType = () => extendContent(Junction.JunctionBuild, omniJunctio
 		Draw.rect(Core.atlas.find(omniJunction.name + "-top"), this.x, this.y);
 		Draw.reset();
 	},
+	getLiquidDestination(tile, source, liquid){
+        var dir = source.relativeTo(tile.x, tile.y);
+        dir = (dir + 4) % 4;
+        var next = tile.getNearbyLink(dir);
+        if(next == null || !next.block().acceptLiquid(next, tile, liquid, 0) && !(next.block() instanceof LiquidJunction)){
+            return tile;
+        }
+        return next.block().getLiquidDestination(next, tile, liquid);
+    },
 	updateTile(){
 		if(this.cons.valid()){
 			this.speed = Math.ceil(this.baseSpeed + (100 - (100 * this.efficiency())));

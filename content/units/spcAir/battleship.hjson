@@ -15,7 +15,8 @@ range: 400
 maxRange: 800
 aimDst: 70
 itemCapacity: 1500
-hitSize: 42
+visualElevation: 1.2
+hitSize: 50
 rotateShooting: false
 omniMovement: false
 circleTarget: false
@@ -23,7 +24,8 @@ singleTarget: false
 lowAltitude: false
 destructibleWreck: false
 fallEffect: flakExplosionBig
-fallThrusterEffect: impactsmoke
+fallThrusterEffect: none
+immunities: [wet, tarred, sapped, sporeSlowed, corroded, burning, melting, freezing, tarred, muddy, slow]
 fallSpeed: 0.00214
 engineOffset: 70
 engineSize: 4

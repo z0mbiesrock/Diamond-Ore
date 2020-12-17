@@ -10,8 +10,9 @@ lightOpacity: 0.174
 health: 400
 armor: 20
 range: 600
-maxRange: 640
+maxRange: 120
 itemCapacity: 70
+fallThrusterEffect: coreBurn
 aimDst: 80
 hitSize: 9
 crashDamageMultiplier: 3

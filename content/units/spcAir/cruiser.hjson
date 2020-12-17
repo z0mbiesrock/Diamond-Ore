@@ -224,7 +224,7 @@ weapons:[
   },
   {
     name: spcair-blaster-big
-    x: 4
+    x: -4
     y: -16
     shootY: 4
     recoil: 0
@@ -236,6 +236,7 @@ weapons:[
 	rotateLimit: 105
 	occlusion: 0
     rotate: true
+    flipSprite: true
     top: true
     soundPitchMin: 2.12
     soundPitchMax: 2.74

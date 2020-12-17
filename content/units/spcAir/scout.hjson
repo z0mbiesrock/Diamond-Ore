@@ -8,10 +8,12 @@ rotateSpeed: 2.5
 health: 200
 armor: 8
 range: 800
+maxRange: 80
 itemCapacity: 30
 aimDst: 80
 hitSize: 5
 rotateShooting: false
+fallThrusterEffect: coreBurn
 lowAltitude: false
 circleTarget: true
 omniMovement: false
