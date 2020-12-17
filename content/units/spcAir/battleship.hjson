@@ -20,7 +20,7 @@ rotateShooting: false
 omniMovement: false
 circleTarget: false
 singleTarget: false
-lowAltitude: true
+lowAltitude: false
 destructibleWreck: false
 fallEffect: flakExplosionBig
 fallThrusterEffect: impactsmoke
