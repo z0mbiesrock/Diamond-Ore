@@ -265,6 +265,7 @@ weapons:[
 	  lightColor: d283ff
 	  lightningColor: bc7bfd
 	  lightningLength: 12
+	  lightningDamage: 30
 	  lightningLengthRand: 12
 	  lightning: 5
 	  lightningCone: 44

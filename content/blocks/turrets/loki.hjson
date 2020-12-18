@@ -104,6 +104,101 @@ ammoTypes: {
 	knockback: -0.5
 	sprite: diamond-ore-diamondbullet
   }
+  metaglass: {
+    type: BasicBulletType
+	collides: false
+    speed: 1
+    damage: 66
+	lifetime: 24
+    width: 0
+    height: 0
+	instantDisappear: true
+	frontColor: ffaa5f
+	backColor: d37f47
+    shootEffect: hitBulletBig
+    smokeEffect: hitBulletBig
+	shrinkY: 0
+	fragBullets: 3
+	fragCone: 6
+	fragVelocityMax: 1
+	fragVelocityMin: 1
+	hitEffect: none
+	despawnEffect: hitBulletBig
+    ammoMultiplier: 4
+	reloadMultiplier: 0.95
+	inaccuracy: -8
+	pierce: true
+	pierceBuilding: true
+	fragBullet: {
+      type: BasicBulletType
+	  collidesAir: false
+      speed: 12
+      damage: 22
+	  lifetime: 20
+      width: 3
+      height: 12
+	  frontColor: ffffff
+	  hitColor: ffffff
+	  backColor: eeeeee
+      shootEffect: shootBig
+      smokeEffect: shootBigSmoke
+	  shrinkY: 0.8
+	  shrinkX: 0.8
+	  hitEffect: mine
+	  despawnEffect: shootSmallSmoke
+	  pierce: true
+	  pierceBuilding: true
+	  sprite: diamond-ore-diamondbullet
+    }
+  }
+  sand: {
+    type: BasicBulletType
+	collides: false
+    speed: 1
+    damage: 33
+	lifetime: 24
+    width: 0
+    height: 0
+	instantDisappear: true
+	hitColor: e0caaa
+    shootEffect: shootBig
+    smokeEffect: hitFuse
+	shrinkY: 0
+	fragBullets: 15
+	fragCone: 7
+	fragVelocityMax: 0.5
+	fragVelocityMin: 2.4
+	hitEffect: shootLiquid
+	hitSound: flame2
+	despawnEffect: none
+    ammoMultiplier: 24
+	reloadMultiplier: 0.8
+	inaccuracy: -8
+	pierce: true
+	pierceBuilding: true
+	fragBullet: {
+      type: BasicBulletType
+	  collidesAir: false
+      speed: 6
+      damage: 3
+      lightRadius: 0
+	  lifetime: 30
+      width: 2
+      height: 2
+	  frontColor: e0caaa
+	  hitColor: e2bb7f
+	  backColor: e2bb7f
+      shootEffect: shootBig
+      smokeEffect: shootBigSmoke
+	  shrinkY: 1
+	  shrinkX: 1
+	  hitEffect: mine
+	  despawnEffect: none
+	  pierce: true
+	  pierceBuilding: true
+	  sprite: large-bomb
+    }
+  }
   pyratite: {
     type: BasicBulletType
 	collidesAir: false
