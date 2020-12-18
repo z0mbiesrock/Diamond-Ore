@@ -8,7 +8,7 @@ const spcAirAI = prov(() => {
 		this.super$updateMovement();
 		if(this.unit.moving()){
 			var thrustvec = Vec2(this.unit.x, this.unit.y);
-			this.unit.moveAt(thrustvec.trns(this.unit.rotation, this.unit.speed() * 0.7));
+			this.unit.moveAt(thrustvec.trns(this.unit.rotation, this.unit.speed()));
         }
     }
   });
