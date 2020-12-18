@@ -2,14 +2,14 @@ localizedName: Fighter
 description: Fires salvos of fragmenting bullets at all nearby enemies.
 commandLimit: 6
 speed: 3
-drag: 0.015
-accel: 0.0174
-rotateSpeed: 3.5
+drag: 0.04
+accel: 0.045
+rotateSpeed: 1.25
 lightRadius: 70
-lightOpacity: 0.174
+lightOpacity: 0.474
 health: 400
 armor: 20
-range: 600
+range: 1200
 maxRange: 120
 itemCapacity: 70
 fallThrusterEffect: coreBurn

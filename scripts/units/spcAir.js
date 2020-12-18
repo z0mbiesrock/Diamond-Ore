@@ -8,7 +8,7 @@ const spcAirAI = prov(() => {
 		this.super$updateMovement();
 		if(this.unit.moving()){
 			var thrustvec = Vec2(this.unit.x, this.unit.y);
-			this.unit.moveAt(thrustvec.trns(this.unit.rotation, this.unit.speed()));
+			this.unit.moveAt(thrustvec.trns(this.unit.rotation, this.unit.speed() * 0.7));
         }
     }
   });
@@ -58,6 +58,7 @@ const spcAirT5 = extendContent(UnitType, "battleship", {
 spcAirT5.constructor = () => extend(UnitWaterMove, {});
 //register(spcAirT5);
 spcAirT5.defaultController = spcAirAI;
+spcAirT1.targetFlag = BlockFlag.core;
 
 var upgradeD = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-cruiser"), Vars.content.getByName(ContentType.unit, "diamond-ore-battleship")]);
 Blocks.tetrativeReconstructor.upgrades.add(upgradeD.toArray(UnitType));

@@ -5,6 +5,7 @@ speed: 0.7
 drag: 0.09
 accel: 0.13
 rotateSpeed: 5.25
+lightColor: bf92f9
 mineSpeed: 4
 mineTier: 3
 health: 3200
@@ -247,10 +248,10 @@ weapons:[
       height: 11
 	  shrinkX: 0
 	  shrinkY: 0
-      speed: 9
+      speed: 7
       sprite: shell
       collidesGround: true
-      lifetime: 75
+      lifetime: 60
 	  damage: 216
 	  explodeRange: 52
       fragBullets: 18

@@ -5,6 +5,7 @@ speed: 0.8
 drag: 0.13
 accel: 0.2
 rotateSpeed: 9.25
+lightColor: bf92f9
 //mineSpeed: 5
 //mineTier: 2
 health: 800

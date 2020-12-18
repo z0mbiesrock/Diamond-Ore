@@ -53,15 +53,15 @@ weapons:[
       type: MissileBulletType
 	  frontColor: b28768
 	  backColor: b28768
-      width: 4
-      height: 8
+      width: 8
+      height: 12
 	  shrinkX: 0
 	  shrinkY: 0
       speed: 5
       weaveScale: 2
       weaveMag: 3
 	  trailColor: b28768
-	  trailChance: 0.7
+	  trailChance: 0.8
 	  hitColor: c9a58f
 	  lightColor: b28768
 	  homingPower: 0.066

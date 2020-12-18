@@ -8,6 +8,8 @@ rotateSpeed: 2.425
 mineSpeed: 5
 mineTier: 4
 health: 16000
+lightRadius: 120
+lightColor: bf92f9
 armor: 30
 range: 600
 itemCapacity: 320

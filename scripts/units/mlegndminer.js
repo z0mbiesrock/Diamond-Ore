@@ -97,6 +97,7 @@ mleGndT1.constructor = () => extend(MechUnit, {
 });
 register(mleGndT1);
 mleGndT1.defaultController = mleGndMinerAI;
+mleGndT1.targetFlag = BlockFlag.reactor;
 const mleGndT2 = extendContent(UnitType, "crow", {
 });
 mleGndT2.constructor = () => extend(MechUnit, {
@@ -112,6 +113,7 @@ mleGndT2.constructor = () => extend(MechUnit, {
 });
 register(mleGndT2);
 mleGndT2.defaultController = mleGndMinerAI;
+mleGndT2.targetFlag = BlockFlag.reactor;
 const mleGndT3 = extendContent(UnitType, "owl", {
 });
 mleGndT3.constructor = () => extend(MechUnit, {
@@ -130,6 +132,7 @@ mleGndT3.constructor = () => extend(MechUnit, {
 });
 register(mleGndT3);
 mleGndT3.defaultController = mleGndMinerAI;
+mleGndT3.targetFlag = BlockFlag.reactor;
 const diamondItem = Vars.content.getByName(ContentType.item, "diamond-ore-diamond");
 const cryogemItem = Vars.content.getByName(ContentType.item, "diamond-ore-cryogem");
 Blocks.groundFactory.plans.add(new UnitFactory.UnitPlan(mleGndT1, 60 * 25, ItemStack.with(Items.silicon, 60, cryogemItem, 5, diamondItem, 5)));
