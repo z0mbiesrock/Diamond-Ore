@@ -10,7 +10,7 @@ coolantMultiplier: 7
 cooldown: 0.01
 maxAmmo: 40
 rotateSpeed: 15
-shootSound: pew
+shootSound: oldpew
 outlineColor: 966102
 powerUse: 1
 recoilAmount: 0
@@ -29,7 +29,7 @@ shootType: {
   smokeEffect: none
   hitEffect: hitBulletSmall
   despawnEffect: shootSmallSmoke
-  knockback: 20
+  knockback: 3
   pierce: false
   collidesGround: false
   sprite: diamond-ore-diamondbullet
