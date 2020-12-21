@@ -2,15 +2,15 @@ localizedName: Scout
 description: Fires salvos of standard bullets at all nearby enemies.
 commandLimit: 3
 speed: 4
-drag: 0.045
+drag: 0.0225
 accel: 0.08
-rotateSpeed: 2.5
+rotateSpeed: 3.5
 health: 200
 armor: 8
 range: 1600
 maxRange: 80
 itemCapacity: 30
-aimDst: 80
+aimDst: 12
 hitSize: 5
 rotateShooting: true
 fallThrusterEffect: coreBurn

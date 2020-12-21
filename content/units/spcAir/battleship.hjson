@@ -1,11 +1,11 @@
 localizedName: Battleship
 description: Fires barrages of bullets, missiles, and flak at all nearby enemies. Equipped with long range plasma cannon.
 commandLimit: 20
-speed: 0.237
+speed: 0.125
 drag: 0.0095
 accel: 0.0134
 buildSpeed: 8
-rotateSpeed: 0.6375
+rotateSpeed: 0.31875
 lightColor: ffffff
 lightRadius: 300
 lightOpacity: 0.5
@@ -15,7 +15,6 @@ range: 400
 maxRange: 800
 aimDst: 70
 itemCapacity: 1500
-visualElevation: 1.2
 hitSize: 50
 rotateShooting: false
 crashDamageMultiplier: 32
@@ -29,7 +28,7 @@ fallThrusterEffect: none
 immunities: [wet, tarred, sapped, sporeSlowed, corroded, burning, melting, freezing, tarred, muddy, slow]
 fallSpeed: 0.00214
 engineOffset: 70
-engineSize: 4
+engineSize: 6
 hovering: true
 flying: true
 trailLength: 0

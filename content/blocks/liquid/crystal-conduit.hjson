@@ -5,7 +5,7 @@ solid: true
 floating: true
 placeableLiquid: true
 liquidCapacity: 8
-liquidPressure: 6
+liquidPressure: 20
 description: Moves liquids forward. Transports even faster but has a smaller capacity.
 requirements: [
   metaglass/2

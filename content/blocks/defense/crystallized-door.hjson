@@ -1,7 +1,7 @@
 name: Crystallized Door
 description: A very durable door. Can be opened or closed by tapping.
 type: Door
-health: 2000
+health: 1200
 size: 1
 buildCostMultiplier: 3.75
 requirements: [

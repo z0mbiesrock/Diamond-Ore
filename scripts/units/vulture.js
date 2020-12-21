@@ -45,10 +45,12 @@ MleGndT5.constructor = () => extend(MechUnit, {
 	update(){
 		this.super$update();
 		if (this.hitTime > 0 && this.health > 0 && this.healthf() < 0.25 && this.hasEffect(vultureRageStatus) == false){
-			Fx.bigShockwave.at(this.x, this.y);
-			Fx.impactsmoke.at(this.x, this.y);
-			Fx.nuclearsmoke.at(this.x, this.y);
-			this.apply(vultureRageStatus, Mathf.random(60,240));
+			if (this.hasEffect(vultureRageStatus) == false){
+				Fx.bigShockwave.at(this.x, this.y);
+				Fx.impactsmoke.at(this.x, this.y);
+				Fx.nuclearsmoke.at(this.x, this.y);
+			}
+			this.apply(vultureRageStatus, Mathf.random(120,480));
 		}
 	},
 

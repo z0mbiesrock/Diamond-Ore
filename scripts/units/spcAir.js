@@ -58,7 +58,7 @@ const spcAirT5 = extendContent(UnitType, "battleship", {
 spcAirT5.constructor = () => extend(UnitWaterMove, {});
 //register(spcAirT5);
 spcAirT5.defaultController = spcAirAI;
-spcAirT1.targetFlag = BlockFlag.core;
+spcAirT5.targetFlag = BlockFlag.core;
 
 var upgradeD = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-cruiser"), Vars.content.getByName(ContentType.unit, "diamond-ore-battleship")]);
 Blocks.tetrativeReconstructor.upgrades.add(upgradeD.toArray(UnitType));

@@ -1,9 +1,10 @@
 type: ThermalGenerator
 name: Ancient Heat Panel
-description: A small and reliable thermal generator. Used by a long forgotten civilization to make use of geothermal vents to power their colonies.
+description: Generates power when placed in hot locations
+details: A small and reliable thermal generator. Used by a long forgotten civilization to make use of geothermal vents to power their colonies.
 health: 100
 size: 1
-powerProduction: 4
+powerProduction: 5
 hasItems: true
 generateEffect: burning
 requirements: [
