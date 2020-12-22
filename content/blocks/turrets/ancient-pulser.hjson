@@ -10,7 +10,7 @@ coolantMultiplier: 7
 cooldown: 0.01
 maxAmmo: 40
 rotateSpeed: 15
-shootSound: oldpew
+shootSound: lasershoot
 outlineColor: 966102
 powerUse: 1
 recoilAmount: 0

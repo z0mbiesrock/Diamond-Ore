@@ -34,7 +34,7 @@ weapons:[
     shootY: 2
     recoil: 2
     reload: 9
-    shootCone: 80
+    shootCone: 20
     shots: 3
     shotDelay: 3
     spacing: 0
@@ -42,7 +42,7 @@ weapons:[
     rotate: false
     soundPitchMin: 2
     soundPitchMax: 3
-    shootSound: oldpew
+    shootSound: lasershoot
     bullet:{
       type: BasicBulletType
 	  hitColor: 888888

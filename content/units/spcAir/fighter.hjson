@@ -45,7 +45,7 @@ weapons:[
     velocityRnd: 0.251
     shootSound: shootSnap
 	inaccuracy: 7.5
-	shootCone: 60
+	shootCone: 15
     bullet: {
     type: BasicBulletType
     speed: 9
