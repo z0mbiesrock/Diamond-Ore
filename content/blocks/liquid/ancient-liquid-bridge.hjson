@@ -1,6 +1,7 @@
 name: Ancient Liquid Bridge
 description: "An advanced phase conduit that uses [#e5b85e]ancient technology[]. Requires extremely high amounts of power."
 type: LiquidBridge
+canOverdrive: true
 health: 320
 size: 1
 range: 18

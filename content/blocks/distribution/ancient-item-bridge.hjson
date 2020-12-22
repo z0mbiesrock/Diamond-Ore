@@ -5,6 +5,7 @@ health: 320
 size: 1
 range: 18
 transportTime: 1
+canOverdrive: true
 buildCostMultiplier: 0.325
 baseExplosiveness: 15
 itemCapacity: 20

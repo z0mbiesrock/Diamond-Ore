@@ -5,7 +5,7 @@ speed: 0.6
 drag: 0.05
 accel: 0.084
 buildSpeed: 4
-rotateSpeed: 2.5
+rotateSpeed: 1.25
 health: 8500
 armor: 50
 range: 200
