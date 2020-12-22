@@ -95,7 +95,7 @@ weapons:[
     top: true
     soundPitchMin: 1.72
     soundPitchMax: 1.94
-    shootSound: oldpew
+    shootSound: lasershoot
     bullet:{
       type: BasicBulletType
 	  hitColor: 888888
@@ -130,7 +130,7 @@ weapons:[
     top: true
     soundPitchMin: 1.72
     soundPitchMax: 1.94
-    shootSound: oldpew
+    shootSound: lasershoot
     bullet:{
       type: BasicBulletType
 	  hitColor: 888888
