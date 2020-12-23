@@ -4,7 +4,7 @@ commandLimit: 3
 speed: 4
 drag: 0.0225
 accel: 0.08
-rotateSpeed: 3.5
+rotateSpeed: 5.5
 health: 200
 armor: 8
 range: 1600
@@ -12,7 +12,7 @@ maxRange: 80
 itemCapacity: 30
 aimDst: 12
 hitSize: 5
-rotateShooting: true
+rotateShooting: false
 fallThrusterEffect: coreBurn
 lowAltitude: false
 circleTarget: true
@@ -42,7 +42,7 @@ weapons:[
     rotate: false
     soundPitchMin: 0.9
     soundPitchMax: 1.1
-    shootSound: scoutSalvo
+    shootSound: scouttSalvo
     bullet:{
       type: BasicBulletType
 	  hitColor: 888888

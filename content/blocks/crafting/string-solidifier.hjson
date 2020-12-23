@@ -31,7 +31,7 @@ category: crafting
 research: stringmaker
 loopSound: stringsolid
 loopSoundVolume: 1.95
-ambientSound: respawning
+ambientSound: stringsolid
 ambientSoundVolume: 0.5
 results: [
 	phase-fabric/19

@@ -16,7 +16,7 @@ fallThrusterEffect: coreBurn
 aimDst: 30
 hitSize: 9
 crashDamageMultiplier: 3
-rotateShooting: true
+rotateShooting: false
 omniMovement: false
 circleTarget: true
 engineOffset: 6

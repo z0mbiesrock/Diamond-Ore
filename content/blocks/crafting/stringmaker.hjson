@@ -34,7 +34,7 @@ category: crafting
 research: phase-string
 loopSound: stringmake
 loopSoundVolume: 1.95
-ambientSound: machine
+ambientSound: stringmake
 ambientSoundVolume: 0.5
 
 
