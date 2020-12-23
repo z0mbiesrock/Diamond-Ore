@@ -32,7 +32,7 @@ requirements: [
 ]
 category: crafting
 research: phase-string
-loopSound: machine
+loopSound: stringmake
 loopSoundVolume: 1.95
 ambientSound: machine
 ambientSoundVolume: 0.5

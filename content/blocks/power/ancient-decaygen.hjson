@@ -19,3 +19,7 @@ requirements: [
 ]
 category: power
 research: rtg-generator
+loopSound: ancientDecay
+loopSoundVolume: 1.95
+ambientSound: machine
+ambientSoundVolume: 0.5

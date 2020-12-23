@@ -33,16 +33,16 @@ weapons:[
     y: 0
     shootY: 2
     recoil: 2
-    reload: 9
+    reload: 28
     shootCone: 20
-    shots: 3
-    shotDelay: 3
+    shots: 4
+    shotDelay: 4
     spacing: 0
     inaccuracy: 3
     rotate: false
-    soundPitchMin: 2
-    soundPitchMax: 3
-    shootSound: lasershoot
+    soundPitchMin: 0.9
+    soundPitchMax: 1.1
+    shootSound: scoutSalvo
     bullet:{
       type: BasicBulletType
 	  hitColor: 888888
@@ -50,7 +50,7 @@ weapons:[
 	  despawnEffect: none
 	  frontColor: ffffff
 	  backColor: ffffff
-      damage: 9
+      damage: 11
 	  width: 4.5
 	  height: -9
 	  shrinkY: 0

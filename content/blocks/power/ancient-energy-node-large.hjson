@@ -3,8 +3,8 @@ name: Large Ancient Energy Node
 description: Compact durable power node.
 laserRange: 15
 maxNodes: 25
-//laserColor1:
-laserColor2: C2BFFB
+laserColor2: 595872
+laserColor1: C2BFFB
 size: 2
 health: 1400
 insulated: false

@@ -29,7 +29,7 @@ requirements: [
 ]
 category: crafting
 research: stringmaker
-loopSound: machine
+loopSound: stringsolid
 loopSoundVolume: 1.95
 ambientSound: respawning
 ambientSoundVolume: 0.5
