@@ -46,4 +46,4 @@ requirements: [
 category: power
 research: surge-reactor
 ambientSound: fire
-ambientSoundVolume: 3
+ambientSoundVolume: 8

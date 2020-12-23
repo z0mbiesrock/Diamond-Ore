@@ -22,4 +22,4 @@ research: rtg-generator
 loopSound: ancientDecay
 loopSoundVolume: 1.95
 ambientSound: ancientDecay
-ambientSoundVolume: 0.85
+ambientSoundVolume: 0.25

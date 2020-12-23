@@ -4,7 +4,7 @@ commandLimit: 6
 speed: 3
 drag: 0.0375
 accel: 0.045
-rotateSpeed: 2.75
+rotateSpeed: 3.75
 lightRadius: 70
 lightOpacity: 0.474
 health: 400

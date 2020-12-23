@@ -2,8 +2,8 @@ localizedName: Scout
 description: Fires salvos of standard bullets at all nearby enemies.
 commandLimit: 3
 speed: 4
-drag: 0.0225
-accel: 0.08
+drag: 0.14
+accel: 0.18
 rotateSpeed: 5.5
 health: 200
 armor: 8
@@ -39,7 +39,7 @@ weapons:[
     shotDelay: 4
     spacing: 0
     inaccuracy: 3
-    rotate: false
+    rotate: true
     soundPitchMin: 0.9
     soundPitchMax: 1.1
     shootSound: scoutSalvo

@@ -35,6 +35,6 @@ research: phase-string
 loopSound: stringmake
 loopSoundVolume: 1.95
 ambientSound: stringmake
-ambientSoundVolume: 0.5
+ambientSoundVolume: 0.25
 
 

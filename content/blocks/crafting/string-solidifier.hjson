@@ -32,7 +32,7 @@ research: stringmaker
 loopSound: stringsolid
 loopSoundVolume: 1.95
 ambientSound: stringsolid
-ambientSoundVolume: 0.5
+ambientSoundVolume: 0.25
 results: [
 	phase-fabric/19
 ]
