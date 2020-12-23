@@ -42,7 +42,7 @@ weapons:[
     rotate: false
     soundPitchMin: 0.9
     soundPitchMax: 1.1
-    shootSound: scouttSalvo
+    shootSound: scoutSalvo
     bullet:{
       type: BasicBulletType
 	  hitColor: 888888
