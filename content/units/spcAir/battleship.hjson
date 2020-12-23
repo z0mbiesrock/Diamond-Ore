@@ -9,6 +9,7 @@ rotateSpeed: 0.31875
 lightColor: ffffff
 lightRadius: 300
 lightOpacity: 0.5
+visualElevation: 1.15
 health: 25000
 armor: 80
 range: 400
@@ -21,7 +22,7 @@ crashDamageMultiplier: 32
 omniMovement: false
 circleTarget: false
 singleTarget: false
-lowAltitude: false
+lowAltitude: true
 destructibleWreck: false
 fallEffect: flakExplosionBig
 fallThrusterEffect: none

@@ -15,7 +15,7 @@ maxAmmo: 2
 inaccuracy: 0
 rotateSpeed: 2
 cooldown: 0.0125
-shootSound: shotgun
+shootSound: thorShoot
 shootCone: 12
 outlineIcon: false
 expanded: true
@@ -115,6 +115,7 @@ ammoTypes: {
 	splashDamageRadius: 40
 	shrinkY: 0
 	hitEffect: mineBig
+	hitSound: shockMissile
 	despawnEffect: mineHuge
     ammoMultiplier: 2
 	pierce: false
@@ -147,6 +148,7 @@ ammoTypes: {
 	  fragVelocityMin: 4.5
 	  fragVelocityMax: 9
 	  lightningLength: 15
+	  lightningCone: 22.5
 	  lightning: 2 
 	  status: shocked
 	  statusDuration: 120
@@ -167,6 +169,7 @@ ammoTypes: {
 	    knockback: 3.75
 		lightning: 1
 		lightningLength: 10
+	    lightningCone: 22.5
 	    status: shocked
 	    statusDuration: 120
       }
@@ -299,6 +302,7 @@ ammoTypes: {
 	shrinkY: 0
 	hitEffect: shockwave
 	despawnEffect: flakExplosion
+	hitSound: artilleryHit
     ammoMultiplier: 2
 	reloadMultiplier: 0.75
 	pierce: false
@@ -463,6 +467,7 @@ ammoTypes: {
 	fragVelocityMax: 3
 	hitShake: 15
 	reflectable: false
+	hittable: false
 	fragBullet: {
       type: MissileBulletType
 	  homingPower: 0
@@ -492,6 +497,7 @@ ammoTypes: {
 	  fragVelocityMin: 2.25
 	  fragVelocityMax: 9.0
 	  reflectable: false
+	  hittable: false
 	  fragBullet: {
         type: MissileBulletType
 	    homingPower: 0
@@ -520,6 +526,7 @@ ammoTypes: {
 	    statusDuration: 1200
 	    sprite: diamond-ore-diamondshard
 	    reflectable: false
+	    hittable: false
       }
     }
   }

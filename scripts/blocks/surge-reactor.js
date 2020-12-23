@@ -106,6 +106,8 @@ surgeReactorMeltdown.instantDisappear = true;
 surgeReactorMeltdown.shootEffect = Fx.none;
 surgeReactorMeltdown.smokeEffect = Fx.none;
 
+const surgeReactorOverloadSound = loadSound("surgeReactorOverheat");
+
 const surgeReactor = extendContent(NuclearReactor, "surge-reactor", {
 	
     //OVERRIDE
@@ -115,47 +117,7 @@ const surgeReactor = extendContent(NuclearReactor, "surge-reactor", {
 		Draw.alpha(this.items.total() / this.itemCapacity);
 		Draw.rect(Core.atlas.find(this.name + "-top"), tile.drawx(), tile.drawy()); */
         Draw.reset();
-	},/* 
-	
-    //OVERRIDE
-	onDestroyed: function(tile){
-		this.super$onDestroyed(tile);
-		Calls.createBullet(surgeReactorMeltdown, Team.derelict, tile.drawx(), tile.drawy(), 0, 0.1, 0.1);
-		Sounds.explosionbig.at(tile.drawx(), tile.drawy());
-		Effect.shake(155, 155, tile.drawx(), tile.drawy());
-		try{
-			Units.all(cons(plr => {
-				if (plr.isDead() == false && plr instanceof Player){
-					Effect.shake(75, 75, plr.x, plr.y);
-					Sounds.corexplode.at(plr.x, plr.y);
-					Sounds.explosionbig.at(plr.x, plr.y);
-					Sounds.explosionbig.at(plr.x, plr.y);
-					Sounds.explosionbig.at(plr.x, plr.y);
-				}
-			}));
-		}
-		catch (err){
-			print(err);
-		}
-		Effect.create(surgeReactorMeltdownFxA, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
-        for(var lfr = 0; lfr < 15; lfr++){
-            Effect.create(surgeReactorMeltdownFxB, tile.drawx(), tile.drawy(), Mathf.random(-360,360));
-		}
-        for(var i = 0; i < 45; i++){
-            Calls.createBullet(surgeReactorMeltdownFlak, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.15, 1.0), Mathf.random(0.2, 1.0));
-		}
-		surgeReactorMeltdownBlast.lightningLength = 25;
-        Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0));
-		surgeReactorMeltdownBlast.lightningLength = 35;
-        Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0));
-		surgeReactorMeltdownBlast.lightningLength = 45;
-        Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0));
-		surgeReactorMeltdownBlast.lightningLength = 55;
-        Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0));
-		surgeReactorMeltdownBlast.lightningLength = 65;
-        Calls.createBullet(surgeReactorMeltdownBlast, Team.derelict, tile.worldx(), tile.worldy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0));
-		surgeReactorMeltdownBlast.lightningLength = 75;
-	}, */
+	},
 })
 surgeReactor.buildType = () => extendContent(NuclearReactor.NuclearReactorBuild, surgeReactor, {
 	
@@ -164,14 +126,14 @@ surgeReactor.buildType = () => extendContent(NuclearReactor.NuclearReactorBuild,
 		this.super$onDestroyed();
 		Sounds.corexplode.at(this.x, this.y);
 		Sounds.explosionbig.at(this.x, this.y);
+		surgeReactorOverloadSound.at(this.x, this.y);
 		Effect.shake(155, 155, this.x, this.y);
 		try{
 			var playerU = Vars.player.unit();
 			Effect.shake(75, 75, playerU.x, playerU.y);
 			Sounds.corexplode.at(playerU.x, playerU.y);
 			Sounds.explosionbig.at(playerU.x, playerU.y);
-			Sounds.explosionbig.at(playerU.x, playerU.y);
-			Sounds.explosionbig.at(playerU.x, playerU.y);
+			surgeReactorOverloadSound.at(playerU.x, playerU.y);
 		}
 		catch (err){
 			print(err);

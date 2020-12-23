@@ -2,5 +2,9 @@ type: Floor
 name: Ancient Metal Panel
 blendGroup: ancient-metal-tile
 variants: 0
+walkSound: ancientMetalStep
+walkSoundVolume: 0.8
+walkSoundPitchMin: 0.6
+walkSoundPitchMax: 1.5
 decoration: ancient-wreckage
 wall: ancient-metal

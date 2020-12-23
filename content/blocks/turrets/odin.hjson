@@ -12,7 +12,7 @@ maxAmmo: 80
 coolantUsage: 0.314159
 inaccuracy: 6
 rotateSpeed: 12
-shootSound: artillery
+shootSound: odinShoot
 outlineIcon: false
 expanded: true
 targetGround: false

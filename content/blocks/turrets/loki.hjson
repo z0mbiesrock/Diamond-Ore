@@ -12,7 +12,7 @@ coolantUsage: 0.2345
 inaccuracy: 8
 xRand: 2
 rotateSpeed: 3
-shootSound: shootBig
+shootSound: lokiShoot
 outlineIcon: false
 expanded: true
 targetAir: false

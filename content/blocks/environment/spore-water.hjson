@@ -8,6 +8,7 @@ statusDuration: 150
 walkEffect: sapped
 drownUpdateEffect: melting
 cacheLayer: water
+walkSound: sporeWaterWalk
 isLiquid: true
 liquidDrop: corrupt-water
 blendGroup: water

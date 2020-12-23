@@ -67,6 +67,7 @@ ammoTypes: {
 	lifetime: 60
     width: 14
     height: 28
+	hitSound: artilleryHit
 	frontColor: bbbbbb
 	backColor: 888888
     shootEffect: shootBig
@@ -226,6 +227,7 @@ ammoTypes: {
     trailEffect: melting
     trailChance: 1
 	hitEffect: bigShockwave
+	hitSound: artilleryHit
 	despawnEffect: flakExplosionBig
     ammoMultiplier: 1
 	reloadMultiplier: 0.5
@@ -277,7 +279,7 @@ ammoTypes: {
 	backColor: ffffff
     splashDamage: 120
     splashDamageRadius: 24
-    hitSound: explosionbig
+    hitSound: ancientShockArtillery
     shootEffect: shootBig
     smokeEffect: shootBigSmoke
     trailEffect: overdriven

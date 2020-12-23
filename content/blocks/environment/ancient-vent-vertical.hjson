@@ -3,6 +3,10 @@ name: Ancient Vent
 variants: 0
 walkEffect: none
 blendGroup: ancient-metal-tile
+walkSound: ancientMetalStep
+walkSoundVolume: 0.8
+walkSoundPitchMin: 0.6
+walkSoundPitchMax: 1.5
 attributes: {
 	heat: 1
 	water: -1
