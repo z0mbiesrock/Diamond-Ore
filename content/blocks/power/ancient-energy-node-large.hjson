@@ -4,7 +4,7 @@ description: Compact durable power node.
 laserRange: 15
 maxNodes: 25
 laserColor2: 595872
-laserColor1: C2BFFB
+laserColor1: C8C6FF
 size: 2
 health: 1400
 insulated: false
