@@ -13,8 +13,8 @@ hardnessDrillMultiplier: 0
 baseExplosiveness: 500
 warmupSpeed: 1
 hasPower: false
-drillEffect: ripple
-updateEffect: overclocked
+drillEffect: pointHit
+updateEffect: none
 buildCostMultiplier: 0.03
 heatColor: f3e979
 drawLiquidLight: true
