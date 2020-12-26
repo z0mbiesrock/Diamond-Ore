@@ -461,7 +461,7 @@ ammoTypes: {
 	homingRange: 120
 	fragBullets: 80
 	fragVelocityMin: 1
-	hitSound: explosionbig
+	hitSound: thorThorKaboom
 	weaveScale: 2.53
 	weaveMag: 1.105
 	fragVelocityMax: 3
