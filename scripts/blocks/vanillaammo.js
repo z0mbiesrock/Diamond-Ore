@@ -2,6 +2,7 @@
 const cryogemItem = Vars.content.getByName(ContentType.item, "diamond-ore-cryogem");
 const diamondItem = Vars.content.getByName(ContentType.item, "diamond-ore-diamond");
 const darkSporePodItem = Vars.content.getByName(ContentType.item, "diamond-ore-dark-spore-pod");
+const ancientAlloyItem = Vars.content.getByName(ContentType.item, "diamond-ore-ancient-alloy");
 const phaseStringLiquid = Vars.content.getByName(ContentType.liquid, "diamond-ore-phase-string");
 const sporeWaterLiquid = Vars.content.getByName(ContentType.liquid, "diamond-ore-corrupt-water");
 const cycloneCryoFrag = extend(BasicBulletType, {});
@@ -45,8 +46,8 @@ spectreCryo.splashDamage = 70;
 spectreCryo.ammoMultiplier = 4;
 spectreCryo.damage = 30;
 spectreCryo.splashDamageRadius = 16;
-spectreCryo.hitEffect = Fx.mineBig;
-spectreCryo.despawnEffect = Fx.mineHuge;
+spectreCryo.despawnEffect = Fx.mineBig;
+spectreCryo.hitEffect = Fx.mineHuge;
 spectreCryo.shootEffect = Fx.shootLiquid;
 spectreCryo.width = 12;
 spectreCryo.height = 24;
@@ -72,7 +73,7 @@ const waveString = extend(LiquidBulletType, {});
 waveString.speed = 2.5;
 waveString.status = StatusEffects.corroded;
 waveString.lifetime = 110;
-waveString.knockback = 2.55;
+waveString.knockback = 1.09;
 waveString.homingRange = 75;
 waveString.homingPower = 0.2;
 waveString.pierceCap = 32;
@@ -82,7 +83,7 @@ const waveSpore = extend(LiquidBulletType, {});
 waveSpore.speed = 1.15;
 waveSpore.status = StatusEffects.sapped;
 waveSpore.lifetime = 140;
-waveSpore.knockback = 1.7;
+waveSpore.knockback = 1.25;
 waveSpore.homingRange = 16;
 waveSpore.homingPower = 0.01;
 waveSpore.damage = 2.2;
@@ -91,7 +92,7 @@ const tsunString = extend(LiquidBulletType, {});
 tsunString.speed = 4.5;
 tsunString.status = StatusEffects.corroded;
 tsunString.lifetime = 110;
-tsunString.knockback = 2.55;
+tsunString.knockback = 1.09;
 tsunString.homingRange = 75;
 tsunString.homingPower = 0.2;
 tsunString.pierceCap = 64;
@@ -101,7 +102,7 @@ const tsunSpore = extend(LiquidBulletType, {});
 tsunSpore.speed = 1.5;
 tsunSpore.status = StatusEffects.sapped;
 tsunSpore.lifetime = 190;
-tsunSpore.knockback = 3;
+tsunSpore.knockback = 1.5;
 tsunSpore.homingRange = 28;
 tsunSpore.homingPower = 0.02;
 tsunSpore.damage = 2.2;
@@ -233,3 +234,73 @@ scorchCryo.despawnEffect = Fx.none;
 scorchCryo.hitColor = Color.valueOf("#cceeff");
 scorchCryo.status = StatusEffects.freezing;
 Blocks.scorch.ammoTypes.put(cryogemItem,scorchCryo);
+const ancientInstShoot = Effect(21, e => {
+    Draw.color(Color.valueOf("#DCD659"), Color.valueOf("#E3C161"), e.fin());
+    Lines.stroke(e.fout() * 2);
+	Drawf.tri(e.x, e.y, 44 * e.fout(), 132 * e.fout(), e.rotation);
+	Drawf.tri(e.x, e.y, 44 * e.fout(), 66 * e.fout(), e.rotation + 180);
+    const rgh = new Floatc2({get(x, y){
+    Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fout() * 5 + 1);
+    }}) 
+    Angles.randLenVectors(e.id, 4, 80 * e.fin(), e.rotation, 30 * e.finpow(),rgh);
+});
+const ancientInstSmoke = Effect(47, e => {
+    Draw.color(Color.valueOf("#DCD659"), Color.valueOf("#E3C161"), e.fin());
+    Lines.stroke(e.fout() * 4);
+    const dq = new Floatc2({get(x, y){
+    Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fout() * 12 + 1);
+    }}) 
+    Angles.randLenVectors(e.id, 2, 80 * e.fin(), e.rotation, 15 * e.fout(),dq);
+    const dw = new Floatc2({get(x, y){
+    Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fout() * 9 + 1);
+    }}) 
+    Angles.randLenVectors(e.id, 3, 70 * e.fin(), e.rotation, 20 * e.fout(),dw);
+    const de = new Floatc2({get(x, y){
+    Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fout() * 6 + 1);
+    }}) 
+    Angles.randLenVectors(e.id, 4, 60 * e.fin(), e.rotation, 30 * e.fout(),de);
+});
+const ancientInstHit = Effect(18, e => {
+    Draw.color(Color.valueOf("#DCD659"), Color.valueOf("#f3f181"), e.fin());
+    Lines.stroke(e.fout() * 2);
+	for(var lfr = 0; lfr < 4; lfr++){
+		var sdtfe = e.id + lfr;
+		var xtrvy = Mathf.randomSeedRange(sdtfe, 20);
+		const da = new Floatc2({get(x, y){
+			Drawf.tri(e.x + x, e.y + y, 11 * e.fout(), (40 + xtrvy) * e.fout(), e.rotation);
+			Drawf.tri(e.x + x, e.y + y, 11 * e.fout(), 15 * e.fout(), e.rotation + 180);
+		}}) 
+		Angles.randLenVectors(sdtfe, 2, 160 * e.fin(), e.rotation + Mathf.randomSeedRange(sdtfe, 3), 6 + Mathf.randomSeedRange(sdtfe, 4),da);
+	}
+});
+const ancientInstDesp = Effect(27, e => {
+	Draw.color(Color.valueOf("#E3C161"), Color.valueOf("#DCD659"), e.fin());
+	Fill.circle(e.x, e.y, e.fout() * 12);
+    Lines.stroke(e.fout() * 2);
+    Lines.circle(e.x, e.y, e.finpow() * 24);
+});
+const ancientInstTrail = Effect(15, e => {
+	Draw.color(Color.valueOf("#f3f181"), Color.valueOf("#DCD659"), e.fin());
+	Drawf.tri(e.x, e.y, 11 * e.fout(), 33 * e.fout(), e.rotation);
+	Drawf.tri(e.x, e.y, 11 * e.fout(), 33 * e.fout(), e.rotation + 180);
+	Fill.circle(e.x, e.y, e.fout() * 5.5);
+});
+const ancientAlloyForeshadow = extend(PointBulletType, {});
+ancientAlloyForeshadow.damage = 2250;
+ancientAlloyForeshadow.trailSpacing = 10;
+ancientAlloyForeshadow.lightning = 5;
+ancientAlloyForeshadow.lightningLength = 8;
+ancientAlloyForeshadow.lightningLengthRand = 12;
+ancientAlloyForeshadow.lightningCone = 45;
+ancientAlloyForeshadow.lightningDamage = 120;
+ancientAlloyForeshadow.lightningColor = Color.valueOf("#FA8257");
+ancientAlloyForeshadow.shootEffect = ancientInstShoot;
+ancientAlloyForeshadow.smokeEffect = ancientInstSmoke;
+ancientAlloyForeshadow.trailEffect = ancientInstTrail;
+ancientAlloyForeshadow.ammoMultiplier = 1;
+ancientAlloyForeshadow.reloadMultiplier = 0.4;
+ancientAlloyForeshadow.hitSound = loadSound("ancientForeshadowHit");
+ancientAlloyForeshadow.hitEffect = ancientInstHit;
+ancientAlloyForeshadow.despawnEffect = ancientInstDesp;
+ancientAlloyForeshadow.hitColor = Color.valueOf("#E3C161");
+Blocks.foreshadow.ammoTypes.put(ancientAlloyItem,ancientAlloyForeshadow);

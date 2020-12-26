@@ -9,6 +9,7 @@ rotateSpeed: 6.5
 baseRotateSpeed: 6.5
 lightRadius: 50
 lightColor: 2093ed
+lightOpacity: 0.4
 mechFrontSway: 0.24
 mechSideSway: 0.49
 landShake: 3

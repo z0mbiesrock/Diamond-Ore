@@ -9,6 +9,7 @@ const vultureAI = prov(() => {
     updateMovement(){
 		var nearestfoe = Units.closestTarget(this.unit.team, this.unit.x, this.unit.y, 280);
 		var vec = Vec2(this.unit.x, this.unit.y);
+		var boost = false;
 		if(nearestfoe != null){
 			this.target = nearestfoe;
 			this.moveTo(nearestfoe, 20);
@@ -16,7 +17,6 @@ const vultureAI = prov(() => {
 		else{
 			this.super$updateMovement();
 		}
-		var boost = false;
 		var lookCone = Mathf.range(60);
 		var blocked = Vars.world.raycast(this.unit.tileX(), this.unit.tileY(), this.unit.tileX() + Angles.trnsx(this.unit.rotation + lookCone, 2), this.unit.tileY() + Angles.trnsy(this.unit.rotation + lookCone, 2), (x, y) => {
 			var tile = Vars.world.tile(x, y);

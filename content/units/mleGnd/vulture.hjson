@@ -97,7 +97,7 @@ weapons:[
 	    serrationLenScl: -12
 	    serrationFadeOffset: 0
 	    damage: 3000
-	    knockback: 0
+	    knockback: -0.6
 	    hittable: false
 	    reflectable: false
 	    absorbable: false

@@ -90,7 +90,7 @@ ammoTypes: {
 	  pierce: true
 	  weaveScale: 3
 	  weaveMag: 2.25
-	  knockback: 1
+	  knockback: 0.3
 	  status: burning
 	  hitSound: none
 	  statusDuration: 300
@@ -275,7 +275,7 @@ ammoTypes: {
 	  despawnEffect: freezing
 	  hitEffect: freezing
 	  pierce: true
-	  knockback: 1
+	  knockback: 0.3
 	  status: freezing
 	  statusDuration: 300
 	  sprite: diamond-ore-diamondshard

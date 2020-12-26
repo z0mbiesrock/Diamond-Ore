@@ -8,7 +8,8 @@ accel: 0.21
 rotateSpeed: 3.5
 baseRotateSpeed: 2.5
 lightRadius: 10
-lightColor: 2093ed
+lightColor: 20a3fd
+lightOpacity: 0.9
 mechFrontSway: 0.04
 mechSideSway: 0.19
 mineSpeed: 6
@@ -18,6 +19,7 @@ health: 160
 armor: 2
 range: 40
 itemCapacity: 60
+mechStride: -0.66
 hitSize: 5
 rotateShooting: false
 engineOffset: 5
