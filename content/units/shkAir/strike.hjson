@@ -1,0 +1,39 @@
+localizedName: Strike
+description: Fires instantaneous electron bolts at nearby enemies. Strafes.
+commandLimit: 4
+speed: 1.8
+drag: 0.1
+accel: 0.12
+strafePenalty: 1
+rotateSpeed: 5.25
+lightRadius: 13
+lightOpacity: 1.174
+lightColor: ffff00
+health: 80
+armor: 0
+range: 280
+itemCapacity: 20
+hitSize: 9
+crashDamageMultiplier: 4
+fallEffect: coreBurn
+fallThrusterEffect: none
+rotateShooting: true
+circleTarget: false
+immunities: [wet, shocked, sapped, sporeSlowed]
+engineOffset: 0
+engineSize: 0
+lowAltitude: true
+destructibleWreck: false
+flying: true
+
+
+
+research:{
+  parent: antumbra
+  requirements:[
+      silicon/3000
+      surge-alloy/12000
+      diamond/4000
+      cryogem/4000
+  ]
+}

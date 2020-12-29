@@ -159,8 +159,8 @@ const scorchSporeFx = Effect(30, e => {
     Lines.stroke(e.fout() * 0.75);
     const d = new Floatc2({get(x, y){
 		Draw.color(Color.valueOf("#b95DcA").shiftHue(Mathf.range(2)), Color.valueOf("#00aae6").shiftHue(Mathf.range(2)), Mathf.random());
-		Drawf.tri(e.x + x, e.y + y, 3 * e.fout(), 8 * e.fout(), e.rotation);
-		Drawf.tri(e.x + x, e.y + y, 3 * e.fout(), 3 * e.fout(), e.rotation + 180);
+		Drawf.tri(e.x + x, e.y + y, 3 * e.fout(), 8 * e.fout(), Mathf.angle(x, y));
+		Drawf.tri(e.x + x, e.y + y, 3 * e.fout(), 3 * e.fout(), Mathf.angle(x, y) + 180);
     }}) 
     Angles.randLenVectors(e.id, 24, 5 + 108 * e.fin(), e.rotation, 10,d);
 });
@@ -194,12 +194,12 @@ const scorchCryoFx = Effect(20, e => {
 	Draw.color(Color.valueOf("#cceeff").shiftHue(Mathf.range(2)), Color.valueOf("#4499ee").shiftHue(Mathf.range(2)), Mathf.random());
     Fill.circle(e.x + x, e.y + y, e.fout() * 2);
     }})
-    Angles.randLenVectors(e.id, 7, 75 * e.finpow(), e.rotation, 8 + 5 * e.fout(),dh);
+    Angles.randLenVectors(e.id + 1, 7, 75 * e.finpow(), e.rotation, 8 + 5 * e.fout(),dh);
     const di = new Floatc2({get(x, y){
 	Draw.color(Color.valueOf("#cceeff").shiftHue(Mathf.range(2)), Color.valueOf("#4499ee").shiftHue(Mathf.range(2)), Mathf.random());
     Fill.circle(e.x + x, e.y + y, e.fout() * 1);
     }})
-    Angles.randLenVectors(e.id, 9, 70 * e.finpow(), e.rotation, 10 + 6 * e.fout(),dg);
+    Angles.randLenVectors(e.id + 2, 9, 70 * e.finpow(), e.rotation, 10 + 6 * e.fout(),dg);
 });
 const scorchCryoSmokeFx = Effect(36, e => {
     Draw.color(Color.valueOf("#cceeff"), Color.valueOf("#4499ee"), e.fin());
@@ -211,11 +211,11 @@ const scorchCryoSmokeFx = Effect(36, e => {
     const dw = new Floatc2({get(x, y){
     Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fout() * 5 + 1);
     }}) 
-    Angles.randLenVectors(e.id, 3, 70 * e.fin(), e.rotation, 11,dw);
+    Angles.randLenVectors(e.id + 1, 3, 70 * e.fin(), e.rotation, 11,dw);
     const de = new Floatc2({get(x, y){
     Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fout() * 3 + 1);
     }}) 
-    Angles.randLenVectors(e.id, 4, 60 * e.fin(), e.rotation, 15,de);
+    Angles.randLenVectors(e.id + 2, 4, 60 * e.fin(), e.rotation, 15,de);
 });
 const scorchCryo = extend(BasicBulletType, {});
 scorchCryo.damage = 18;
@@ -287,6 +287,7 @@ const ancientInstTrail = Effect(15, e => {
 });
 const ancientAlloyForeshadow = extend(PointBulletType, {});
 ancientAlloyForeshadow.damage = 2250;
+ancientAlloyForeshadow.speed = Blocks.foreshadow.range;
 ancientAlloyForeshadow.trailSpacing = 10;
 ancientAlloyForeshadow.lightning = 5;
 ancientAlloyForeshadow.lightningLength = 8;

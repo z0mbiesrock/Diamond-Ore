@@ -195,7 +195,7 @@ const yggdrasilPlasmaSphere = Effect(24, e => {
     }})
     Angles.randLenVectors(e.id, 2, -10 + 20 * e.fin(), e.rotation + Mathf.random(-15,15), 360 * e.fin(),g);
     Draw.color(Color.valueOf("#ffffff"), Color.valueOf("#ffff00"), e.fout());
-    Angles.randLenVectors(e.id, 2, -10 + 20 * e.fin(), e.rotation + Mathf.random(-15,15), 360 * e.fin(),g);
+    Angles.randLenVectors(e.id + 2, 2, -10 + 20 * e.fin(), e.rotation + Mathf.random(-15,15), 360 * e.fin(),g);
 });
 
 const yggdrasilPlasma = extend(ArtilleryBulletType, {
@@ -241,6 +241,7 @@ yggdrasilPlasma.hitShake = 20;
 yggdrasilPlasma.hitEffect = yggdrasilPlasmaExplosion;
 yggdrasilPlasma.despawnEffect = Fx.none;
 yggdrasilPlasma.lightningLength = 40;
+yggdrasilPlasma.lightningDamage = 400;
 yggdrasilPlasma.lightningLengthRand = 40;
 yggdrasilPlasma.lightning = 14;
 yggdrasilPlasma.pierce = false;
@@ -254,7 +255,7 @@ yggdrasilPlasma.fragLifeMin = 0.75;
 yggdrasilPlasma.fragLifeMax = 1.375;
 yggdrasilPlasma.status = StatusEffects.shocked;
 yggdrasilPlasma.statusDuration = 300;
-yggdrasilPlasma.hitSound = Sounds.plasmaboom;
+yggdrasilPlasma.hitSound = loadSound("yggdrasilPlasmaExplode");;
 yggdrasilPlasma.fragBullet = yggdrasilPlasmaFrag;
 const yggdrasilTurret = extendContent(PowerTurret, "yggdrasil", {
 	

@@ -493,8 +493,9 @@ ammoTypes: {
 	  status: melting
 	  statusDuration: 1800
 	  sprite: shell
-	  fragBullets: 1
-	  fragVelocityMin: 2.25
+	  fragBullets: 2
+	  fragCone: 30
+	  fragVelocityMin: 1.25
 	  fragVelocityMax: 9.0
 	  reflectable: false
 	  hittable: false

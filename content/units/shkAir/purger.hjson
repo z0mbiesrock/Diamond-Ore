@@ -1,0 +1,41 @@
+localizedName: Purger
+description: Fires massive exploding homing lightning balls at all nearby enemies.
+commandLimit: 8
+speed: 0.71
+drag: 0.2
+accel: 0.205
+strafePenalty: 1
+rotateSpeed: 0.9
+lightRadius: 125
+lightOpacity: 1.174
+lightColor: ffff00
+health: 22500
+armor: 20
+range: 300
+itemCapacity: 220
+hitSize: 31
+crashDamageMultiplier: 20
+fallEffect: coreBurn
+fallThrusterEffect: none
+rotateShooting: true
+circleTarget: false
+immunities: [wet, shocked, sapped, sporeSlowed]
+engineOffset: 0
+engineSize: 0
+lowAltitude: true
+destructibleWreck: false
+flying: true
+hovering: true
+
+
+research:{
+  parent: hurricane
+  requirements:[
+      silicon/555000
+      surge-alloy/1320000
+      phase-fabric/232000
+      plastanium/317000
+      cryogem/120000
+      ancient-alloy/125000
+  ]
+}

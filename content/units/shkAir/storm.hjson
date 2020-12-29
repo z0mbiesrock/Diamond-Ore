@@ -1,0 +1,85 @@
+localizedName: Storm
+description: Fires salvos of charged bullets at all nearby enemies.
+commandLimit: 6
+speed: 1.1
+drag: 0.1
+accel: 0.108
+strafePenalty: 1
+rotateSpeed: 1.965
+lightRadius: 25
+lightOpacity: 1.174
+lightColor: ffff00
+health: 400
+armor: 3
+range: 300
+itemCapacity: 40
+hitSize: 14
+crashDamageMultiplier: 8
+fallEffect: coreBurn
+fallThrusterEffect: none
+rotateShooting: true
+circleTarget: false
+immunities: [wet, shocked, sapped, sporeSlowed]
+engineOffset: 0
+engineSize: 0
+lowAltitude: true
+destructibleWreck: false
+flying: true
+
+weapons:[
+  {
+    name: storm-weapon
+    x: 4
+    y: -4
+    shootY: 4
+    recoil: 3
+    reload: 45
+	shots: 3
+	shotDelay: 5
+	spacing: 2
+	inaccuracy: 2
+	velocityRnd: 0.05
+	rotateSpeed: 8
+	rotateLimit: 60
+	occlusion: 6
+    rotate: true
+    soundPitchMin: 0.92
+    soundPitchMax: 1.04
+    shootSound: stormSalvo
+    bullet:{
+      type: BasicBulletType
+      //sapStrength: 0.5
+	  frontColor: edff77
+	  backColor: ffff00
+      width: 5
+      height: 9
+	  shrinkX: 0
+	  shrinkY: 0
+      speed: 4
+	  hitColor: 999999
+	  lightColor: ffff00
+	  lightningColor: ffff00
+	  lightningLength: 4
+	  lightningLengthRand: 6
+	  lightningDamage: 9
+	  lightning: 6
+	  hitEffect: mineBig
+	  despawnEffect: none
+      sprite: shell
+      lifetime: 75
+	  damage: 14
+	  reflectable: false
+    }
+  },
+]
+
+research:{
+  parent: strike
+  requirements:[
+      silicon/15000
+      surge-alloy/22000
+      graphite/22000
+      diamond/6000
+      cryogem/4000
+  ]
+}

@@ -1,0 +1,170 @@
+localizedName: Tempest
+description: Fires explosive lightning balls and salvos of charged homing missiles at all nearby enemies.
+commandLimit: 8
+speed: 1.1
+drag: 0.1
+accel: 0.108
+strafePenalty: 1
+rotateSpeed: 0.8
+lightRadius: 45
+lightOpacity: 1.174
+lightColor: ffff00
+health: 800
+armor: 7
+range: 300
+itemCapacity: 70
+hitSize: 19
+crashDamageMultiplier: 12
+fallEffect: coreBurn
+fallThrusterEffect: none
+rotateShooting: true
+circleTarget: false
+immunities: [wet, shocked, sapped, sporeSlowed]
+engineOffset: 0
+engineSize: 0
+lowAltitude: true
+destructibleWreck: false
+flying: true
+hovering: true
+
+weapons:[
+  {
+    name: tempest-weapon
+    x: 0
+    y: 2
+    shootY: 7
+    recoil: 3
+    reload: 77
+	shots: 4
+	shotDelay: 2
+	spacing: 0
+	inaccuracy: 4
+	velocityRnd: 0.05
+	rotateSpeed: 8
+	rotateLimit: 60
+	occlusion: 6
+    rotate: true
+    mirror: false
+    soundPitchMin: 0.92
+    soundPitchMax: 1.04
+    shootSound: tempestShoot
+    bullet:{
+      type: MissileBulletType
+      //sapStrength: 0.5
+	  frontColor: edff77
+	  backColor: eeee00
+	  trailColor: ffff00
+      width: 11
+      height: 9
+	  shrinkX: 0
+	  shrinkY: 0
+      speed: 6
+	  hitColor: ddff99
+	  hitSound: tempestShockBullet
+	  lightColor: ffff00
+	  lightningColor: ffff00
+	  lightningLength: 3
+	  lightningLengthRand: 4
+	  lightningDamage: 14
+	  lightning: 4
+	  hitEffect: flakExplosion
+	  despawnEffect: flakExplosion
+      sprite: bullet
+      lifetime: 50
+	  damage: 22
+	  reflectable: false
+	  splashDamage: 40
+	  splashDamageRadius: 40
+    }
+  },
+  {
+    name: tempest-plasma
+    x: 0
+    y: 13
+    shootY: 7
+    recoil: 3
+    reload: 77
+	shots: 1
+	spacing: 0
+	occlusion: 6
+    rotate: false
+    mirror: false
+    soundPitchMin: 0.92
+    soundPitchMax: 1.04
+    shootSound: plasmaBallShoot2
+    bullet:{
+      type: BasicBulletType
+      //sapStrength: 0.5
+	  frontColor: edff77
+	  backColor: eeee00
+      width: 18
+      height: 18
+	  shrinkX: 0
+	  shrinkY: 0
+      speed: 8
+	  spin: 8
+	  hitColor: ddff99
+	  hitSound: tempestShockBullet
+	  lightColor: ffff00
+	  trailColor: ffff00
+	  trailEffect: mine
+	  trailChance: 1
+	  lightningColor: ffff00
+	  lightningLength: 3
+	  lightningLengthRand: 12
+	  lightningDamage: 14
+	  lightning: 4
+	  hitEffect: flakExplosionBig
+	  shootEffect: instHit
+	  smokeEffect: hitFuse
+	  despawnEffect: flakExplosionBig
+      sprite: diamond-ore-plasma-sphere
+      lifetime: 40
+	  damage: 60
+	  splashDamage: 90
+	  splashDamageRadius: 45
+	  reflectable: false
+	  fragBullets: 36
+	  fragVelocityMin: 0.01
+	  fragVelocityMax: 1.45
+	  fragLifeMin: 0.125
+	  fragLifeMax: 1.25
+	  fragBullet:{
+        type: BasicBulletType
+        //sapStrength: 0.5
+	    frontColor: edff77
+	    backColor: ffff00
+	    hitColor: b28768
+        width: 6
+        height: 18
+        speed: 1.7
+	    shrinkX: 1
+	    shrinkY: 1
+	    lightRadius: 0
+        sprite: diamond-ore-diamondbullet
+	    despawnEffect: none
+	    hitEffect: none
+        lifetime: 30
+	    damage: 12
+		pierce: true
+		pierceBuilding: true
+		status: shocked
+		statusDuration: 45
+		reflectable: false
+		hittable: false
+      }
+    }
+  },
+]
+
+research:{
+  parent: storm
+  requirements:[
+      silicon/55000
+      surge-alloy/32000
+      titanium/32000
+      metaglass/32000
+      diamond/12000
+      cryogem/9000
+  ]
+}

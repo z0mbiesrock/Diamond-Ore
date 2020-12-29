@@ -1,0 +1,41 @@
+localizedName: Hurricane
+description: Fires explosive lightning balls and instantaneous electron bolts at all nearby enemies.
+details: Weapon sprites are a bit finicky, but the unit works nonetheless.
+commandLimit: 8
+speed: 1.1
+drag: 0.1
+accel: 0.108
+strafePenalty: 1
+rotateSpeed: 1.8
+lightRadius: 75
+lightOpacity: 1.174
+lightColor: ffff00
+health: 5700
+armor: 13
+range: 300
+itemCapacity: 140
+hitSize: 23
+crashDamageMultiplier: 16
+fallEffect: coreBurn
+fallThrusterEffect: none
+rotateShooting: true
+circleTarget: false
+immunities: [wet, shocked, sapped, sporeSlowed]
+engineOffset: 0
+engineSize: 0
+lowAltitude: true
+destructibleWreck: false
+flying: true
+hovering: true
+research:{
+  parent: tempest
+  requirements:[
+      silicon/220000
+      surge-alloy/120000
+      titanium/155000
+      plastanium/32000
+      diamond/25000
+      cryogem/12500
+      thorium/12500
+  ]
+}
