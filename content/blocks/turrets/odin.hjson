@@ -35,7 +35,7 @@ ammoTypes: {
     ammoMultiplier: 4
 	pierce: false
 	collidesGround: false
-	knockback: 4.5
+	knockback: 2.5
 	sprite: shell
   }
   scrap: {
@@ -96,7 +96,7 @@ ammoTypes: {
     ammoMultiplier: 2
 	reloadMultiplier: 1.25
 	pierce: false
-	knockback: 4.5
+	knockback: 2.5
 	sprite: diamond-ore-diamondbullet
 	collidesGround: false
 	homingPower: 0.03
@@ -119,7 +119,7 @@ ammoTypes: {
 	reloadMultiplier: 0.5
 	collidesGround: false
 	pierce: false
-	knockback: 20.0
+	knockback: 5.0
 	sprite: shell
 	shrinkY: 0
   }
@@ -142,7 +142,7 @@ ammoTypes: {
 	pierce: false
 	status: burning
 	statusDuration: 900
-	knockback: 9.0
+	knockback: 1.02
 	sprite: diamond-ore-diamondshell
 	shrinkY: 0
   }
@@ -164,7 +164,7 @@ ammoTypes: {
 	pierce: false
 	status: freezing
 	statusDuration: 900
-	knockback: 9.0
+	knockback: 1.02
 	sprite: diamond-ore-diamondbullet
 	collidesGround: false
 	shrinkY: 0

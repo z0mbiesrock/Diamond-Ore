@@ -233,13 +233,6 @@ shkStrikeBoltBig.despawnEffect = shkBoltDespBig;
 shkStrikeBoltBig.status = StatusEffects.shocked;
 shkStrikeBoltBig.statusDuration = 30;
 
-/* const shkAirT4weapon = extendContent(Weapon, "hurricane-bolt", {
-	load(){
-		this.region = Core.atlas.find(this.name);
-		this.outlineRegion = Core.atlas.find(this.name + "-outline");
-	}
-}); */
-//Nobody wants to bother helping me fix this...
 const shkAirT4weaponA = extend(Weapon, {
 	name: "diamond-ore-hurricane-bolt",
 	reload: 55,
@@ -248,38 +241,7 @@ const shkAirT4weaponA = extend(Weapon, {
 	x: 12,
 	y: 13,
 	shootCone: 0,
-	rotateSpeed: 11,
-	rotate: true,
-	mirror: true,
-	soundPitchMin: 0.5,
-	soundPitchMax: 1.03,
-	top: true,
-	shootSound: loadSound("strikeZapBig"),
-	bullet: shkStrikeBoltBig});
-/* shkAirT4weaponA.reload = 55;
-shkAirT4weaponA.shots = 1;
-shkAirT4weaponA.inaccuracy = 0;
-shkAirT4weaponA.x = 12;
-shkAirT4weaponA.y = 13;
-shkAirT4weaponA.shootY = 6;
-shkAirT4weaponA.shootCone = 0;
-shkAirT4weaponA.rotateSpeed = 11;
-shkAirT4weaponA.rotate = true;
-shkAirT4weaponA.mirror = true;
-shkAirT4weaponA.soundPitchMin = 0.5;
-shkAirT4weaponA.soundPitchMax = 1.03;
-shkAirT4weaponA.top = true;
-shkAirT4weaponA.shootSound = loadSound("strikeZapBig");
-shkAirT4weaponA.bullet = shkStrikeBoltBig; */
-const shkAirT4weaponB = extend(Weapon, {
-	name: "diamond-ore-hurricane-bolt",
-	reload: 55,
-	shots: 1,
-	inaccuracy: 0,
-	x: 7,
-	y: -11,
-	shootCone: 0,
-	rotateSpeed: 11,
+	rotateSpeed: 5,
 	rotate: true,
 	mirror: true,
 	soundPitchMin: 0.5,
@@ -287,26 +249,27 @@ const shkAirT4weaponB = extend(Weapon, {
 	top: true,
 	shootSound: loadSound("strikeZapBig"),
 	bullet: shkStrikeBoltBig
-	});
-/* shkAirT4weaponB.reload = 55;
-shkAirT4weaponB.shots = 1;
-shkAirT4weaponB.inaccuracy = 0;
-shkAirT4weaponB.x = 7;
-shkAirT4weaponB.y = -11;
-shkAirT4weaponB.shootY = 6;
-shkAirT4weaponB.shootCone = 0;
-shkAirT4weaponB.rotateSpeed = 11;
-shkAirT4weaponB.rotate = true;
-shkAirT4weaponB.mirror = true;
-shkAirT4weaponB.soundPitchMin = 0.5;
-shkAirT4weaponB.soundPitchMax = 1.03;
-shkAirT4weaponB.top = true;
-shkAirT4weaponB.shootSound = loadSound("strikeZapBig");
-shkAirT4weaponB.bullet = shkStrikeBoltBig; */
+});
+const shkAirT4weaponB = extend(Weapon, {
+	name: "diamond-ore-hurricane-bolt",
+	reload: 55,
+	shots: 1,
+	inaccuracy: 0,
+	x: 7,
+	y: -3,
+	shootCone: 0,
+	rotateSpeed: 5,
+	rotate: true,
+	mirror: true,
+	soundPitchMin: 0.5,
+	soundPitchMax: 1.03,
+	top: true,
+	shootSound: loadSound("strikeZapBig"),
+	bullet: shkStrikeBoltBig
+});
 
 
 const shkAirT4plasma = extend(Weapon, "hurricane-plasma", {});
-//shkAirT4plasma.name = "hurricane-bolt";
 shkAirT4plasma.reload = 65;
 shkAirT4plasma.shots = 1;
 shkAirT4plasma.inaccuracy = 0;

@@ -29,8 +29,8 @@ flying: true
 weapons:[
   {
     name: storm-weapon
-    x: 4
-    y: -4
+    x: 7
+    y: 0
     shootY: 4
     recoil: 3
     reload: 45

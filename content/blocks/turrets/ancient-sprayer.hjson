@@ -32,7 +32,7 @@ ammoTypes: {
 	despawnEffect: shootBig
     ammoMultiplier: 4
 	pierce: false
-	knockback: 0.5
+	knockback: 0.25
 	sprite: diamond-ore-diamondbullet
 	shrinkY: 0.125
   }
@@ -53,7 +53,7 @@ ammoTypes: {
     ammoMultiplier: 2
     reloadMultiplier: 0.8
 	pierce: false
-	knockback: 1.5
+	knockback: 0.75
 	sprite: diamond-ore-diamondbullet
 	shrinkY: 0.875
   }
@@ -74,7 +74,7 @@ ammoTypes: {
     ammoMultiplier: 3
     reloadMultiplier: 0.6
 	pierce: false
-	knockback: 2.25
+	knockback: 1.05
 	sprite: diamond-ore-diamondbullet
 	shrinkY: 0.9
   }
@@ -95,7 +95,7 @@ ammoTypes: {
 	pierce: false
 	status: corroded
 	statusDuration: 150
-	knockback: 2.9
+	knockback: 0.49
 	sprite: bullet
 	shrinkY: 1
   }
@@ -178,7 +178,7 @@ ammoTypes: {
 	despawnEffect: shootBig
     ammoMultiplier: 4
 	pierce: false
-	knockback: 4
+	knockback: 3
 	sprite: diamond-ore-diamondbullet
 	shrinkY: 1
   }
@@ -224,7 +224,7 @@ ammoTypes: {
 	sprite: diamond-ore-diamondbullet
 	shrinkY: 1
 	fragBullets: 4
-	knockback: 2.5
+	knockback: 1.25
 	fragVelocityMin: 3
 	fragVelocityMax: 6
 	fragBullet: {

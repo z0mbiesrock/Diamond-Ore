@@ -1,6 +1,5 @@
 localizedName: Hurricane
 description: Fires explosive lightning balls and instantaneous electron bolts at all nearby enemies.
-details: Weapon sprites are a bit finicky, but the unit works nonetheless.
 commandLimit: 8
 speed: 1.1
 drag: 0.1
