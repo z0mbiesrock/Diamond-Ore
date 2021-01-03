@@ -113,46 +113,79 @@ ammoTypes: {
     shootEffect: shootBig
     smokeEffect: shootBigSmoke
     trailEffect: smelt
+    trailChance: 1
 	hitEffect: hitFuse
 	despawnEffect: pulverizeRed
     reloadMultiplier: 0.35
     ammoMultiplier: 3
 	pierce: false
-	knockback: 15
+	knockback: 3
+	inaccuracy: 3
 	sprite: diamond-ore-diamondshell
 	fragBullets: 30
 	fragVelocityMin: 2
 	fragVelocityMax: 18
 	fragLifeMin: 0.8
-	fragLifeMax: 3.9
+	fragLifeMax: 2.5
 	fragBullet: {
-      type: BasicBulletType
-      drag: 0.1
-      damage: 10
-	  lifetime: 300
-	  lightRadius: 0
+      type: ArtilleryBulletType
+      drag: 0.06
+	  lifetime: 20
+      damage: 15
       width: 2
-      height: 2
-      hitsTiles: false
-      hitSound: explosion
-      collides: true
-      collidesAir: true
-	  frontColor: 69501c
-	  backColor: ff6614
-      shootEffect: none
-      smokeEffect: none
-	  hitEffect: mine
+      height: 8
+	  shrinkY: 0.75
+	  shrinkX: 0.75
+	  despawnEffect: none
+      collidesAir: false
+      collidesGround: false
+	  hitEffect: pointHit
+	  hitSound: place
+	  trailEffect: artilleryTrail
+	  trailChance: 1
 	  hitColor: ff6614
-	  despawnEffect: pulverizeSmall
-      ammoMultiplier: 4
-	  pierce: false
-	  sprite: diamond-ore-diamondshell
-	  shrinkY: 0
-	  splashDamage: 20
-	  status: corroded
-	  statusDuration: 5
-	  splashDamageRadius: 10
-	  knockback: 25
+	  trailColor: 69501c
+	  frontColor: 69501c
+	  backColor: 69501c
+	  knockback: .10
+	  keepVelocity: false
+	  sprite: diamond-ore-diamondbullet
+	  fragVelocityMin: 0
+	  fragVelocityMax: 0
+	  fragLifeMin: 0.8
+	  fragLifeMax: 3.9
+	  fragBullets: 1
+	  fragCone: 0
+	  lightRadius: 5
+	  fragBullet: {
+        type: BasicBulletType
+        drag: 1
+        speed: 0
+        damage: 10
+	    lifetime: 300
+	    lightRadius: 0
+        width: 2
+        height: 2
+        hitsTiles: false
+        hitSound: explosion
+        collides: true
+        collidesAir: true
+	    frontColor: 69501c
+	    backColor: ff6614
+        shootEffect: none
+        smokeEffect: none
+	    hitEffect: mine
+	    hitColor: ff6614
+	    despawnEffect: pulverizeSmall
+	    pierce: false
+	    sprite: diamond-ore-diamondshell
+	    shrinkY: 0
+	    splashDamage: 30
+	    status: corroded
+	    statusDuration: 5
+	    splashDamageRadius: 14
+	    knockback: 1
+      }
     }
   }
   thorium: {
@@ -174,7 +207,7 @@ ammoTypes: {
     lightRadius: 64
 	reloadMultiplier: 0.15
 	pierce: false
-	knockback: 5
+	knockback: 1
 	sprite: diamond-ore-diamondbomb
     splashDamage: 170
     splashDamageRadius: 70
@@ -207,7 +240,7 @@ ammoTypes: {
 	  weaveMag: 2.66
 	  pierce: true
 	  pierceBuilding: true
-	  knockback: 10
+	  knockback: 0.2
 	  sprite: diamond-ore-diamondshard
     }
   }

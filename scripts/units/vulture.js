@@ -12,7 +12,7 @@ const vultureAI = prov(() => {
 		var boost = false;
 		if(nearestfoe != null){
 			this.target = nearestfoe;
-			this.moveTo(nearestfoe, 20);
+			this.moveTo(nearestfoe, 3);
 		}
 		else{
 			this.super$updateMovement();
