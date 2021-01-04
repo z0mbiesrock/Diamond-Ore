@@ -1,6 +1,6 @@
 type: ItemTurret
 name: Diamond Turret
-description: A versatile all-around turret that converts a variety of different ammo types into projectiles that pierce multiple enemies.
+description: Fires piercing projectiles at enemies.
 health: 300
 size: 1
 reloadTime: 36
@@ -378,6 +378,54 @@ ammoTypes: {
 	  backColor: 44aadd
 	  pierce: false
 	  knockback: 0.15
+	  sprite: diamond-ore-diamondbullet
+    }
+  }
+  metaglass: {
+    type: BasicBulletType
+    speed: 7
+    damage: 24
+	lifetime: 20
+    width: 0
+    height: 0
+    shrinkY: 0
+	frontColor: ffffff
+	backColor: dddddd
+    shootEffect: shootSmall
+    shootEffect: shootBigSmoke
+    despawnEffect: shootBig
+	hitEffect: shootBig
+    ammoMultiplier: 1
+    reloadMultiplier: 1.3
+	shrinkY: 0
+	reloadMultiplier: 0.6
+	collides: true
+	collidesTiles: true
+	collidesAir: true
+	instantDisappear: true
+	pierce: true
+	pierceCap: 3
+	sprite: diamond-ore-diamondbullet
+	fragBullets: 3
+	fragVelocityMin: 1
+	fragVelocityMax: 1
+	fragCone: 6
+	inaccuracy: -1
+	knockback: 0.3
+	fragBullet: {
+      type: BasicBulletType
+      speed: 7
+	  lifetime: 20
+      damage: 8
+      width: 2
+      height: 8
+	  despawnEffect: none
+	  hitEffect: hitLancer
+	  frontColor: ffffff
+	  backColor: dddddd
+	  pierce: true
+	  pierceBuilding: true
+	  knockback: 0.3
 	  sprite: diamond-ore-diamondbullet
     }
   }

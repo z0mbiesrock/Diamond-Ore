@@ -5,7 +5,7 @@ health: 8000
 size: 4
 reloadTime: 80
 range: 400
-ammoUseEffect: pulverizeRedder
+ammoUseEffect: casing4
 coolantMultiplier: 7
 coolantUsage: 0.34
 maxAmmo: 20
@@ -184,7 +184,7 @@ ammoTypes: {
 	    status: corroded
 	    statusDuration: 5
 	    splashDamageRadius: 14
-	    knockback: 1
+	    knockback: 4
       }
     }
   }

@@ -1,6 +1,6 @@
 type: ItemTurret
 name: Gigantic Diamond Turret
-description: A versatile all-around turret that converts a variety of different ammo types into projectiles that pierce multiple enemies. 
+description: Fires piercing projectiles at enemies.
 health: 4800
 size: 4
 reloadTime: 72
@@ -393,6 +393,54 @@ ammoTypes: {
 	  backColor: 44aadd
 	  pierce: false
 	  knockback: 0.24
+	  sprite: diamond-ore-diamondbullet
+    }
+  }
+  metaglass: {
+    type: BasicBulletType
+    speed: 10
+    damage: 24
+	lifetime: 29
+    width: 0
+    height: 0
+    shrinkY: 0
+	frontColor: ffffff
+	backColor: dddddd
+    shootEffect: shootSmall
+    shootEffect: shootBigSmoke
+    despawnEffect: shootBig
+	hitEffect: shootBig
+    ammoMultiplier: 1
+    reloadMultiplier: 1.3
+	shrinkY: 0
+	reloadMultiplier: 0.6
+	collides: true
+	collidesTiles: true
+	collidesAir: true
+	instantDisappear: true
+	pierce: true
+	pierceCap: 6
+	sprite: diamond-ore-diamondbullet
+	fragBullets: 6
+	fragVelocityMin: 1
+	fragVelocityMax: 1
+	fragCone: 9
+	inaccuracy: -2
+	knockback: 0.6
+	fragBullet: {
+      type: BasicBulletType
+      speed: 10
+	  lifetime: 29
+      damage: 21
+      width: 5
+      height: 20
+	  despawnEffect: none
+	  hitEffect: hitLancer
+	  frontColor: ffffff
+	  backColor: dddddd
+	  pierce: true
+	  pierceBuilding: true
+	  knockback: 0.6
 	  sprite: diamond-ore-diamondbullet
     }
   }
