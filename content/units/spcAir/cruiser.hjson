@@ -41,7 +41,6 @@ weapons:[
 	inaccuracy: 2
 	velocityRnd: 0.05
 	rotateSpeed: 4
-	rotateLimit: 105
 	occlusion: 0
     rotate: true
     top: true
@@ -98,7 +97,6 @@ weapons:[
 	inaccuracy: 2
 	velocityRnd: 0.05
 	rotateSpeed: 4
-	rotateLimit: 105
 	occlusion: 0
     rotate: true
     top: true
@@ -155,7 +153,6 @@ weapons:[
 	inaccuracy: 2
 	velocityRnd: 0.05
 	rotateSpeed: 4
-	rotateLimit: 105
 	occlusion: 0
     rotate: true
     top: true
@@ -213,7 +210,6 @@ weapons:[
 	shots: 3
 	shotDelay: 7
 	rotateSpeed: 7
-	rotateLimit: 105
 	occlusion: 0
     rotate: true
     top: true
@@ -233,7 +229,6 @@ weapons:[
 	shots: 3
 	shotDelay: 7
 	rotateSpeed: 7
-	rotateLimit: 105
 	occlusion: 0
     rotate: true
     flipSprite: true

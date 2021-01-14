@@ -51,7 +51,6 @@ weapons:[
     rotate: true
     top: false
     rotateSpeed: 1.7
-	//rotateLimit: 70 // Made a PR to limit weapon rotations. A merge is pending
     soundPitchMin: 0.5
     soundPitchMax: 0.5
 	occlusion: 16

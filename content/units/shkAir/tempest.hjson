@@ -41,7 +41,6 @@ weapons:[
 	inaccuracy: 4
 	velocityRnd: 0.05
 	rotateSpeed: 8
-	rotateLimit: 60
 	occlusion: 6
     rotate: true
     mirror: false

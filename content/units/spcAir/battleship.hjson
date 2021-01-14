@@ -57,7 +57,6 @@ weapons:[
     rotate: false
     mirror: false
     rotateSpeed: 1
-    rotateLimit: 175
     soundPitchMin: 0.5
     soundPitchMax: 0.8
     shootCone: 30
@@ -136,7 +135,6 @@ weapons:[
     reload: 40
     rotate: true
     rotateSpeed: 5
-    rotateLimit: 120
     soundPitchMin: 0.7
     soundPitchMax: 0.8
     shootCone: 1
@@ -157,7 +155,6 @@ weapons:[
     reload: 40
     rotate: true
     rotateSpeed: 5
-    rotateLimit: 120
     soundPitchMin: 0.7
     soundPitchMax: 0.8
     shootCone: 1
@@ -178,7 +175,6 @@ weapons:[
     reload: 40
     rotate: true
     rotateSpeed: 5
-    rotateLimit: 120
     soundPitchMin: 0.7
     soundPitchMax: 0.8
     shootCone: 1
@@ -196,7 +192,6 @@ weapons:[
     reload: 40.03
     rotate: true
     rotateSpeed: 4
-    rotateLimit: 124
     soundPitchMin: 2.7
     soundPitchMax: 3.8
     shootCone: 1
@@ -234,7 +229,6 @@ weapons:[
     reload: 40.02
     rotate: true
     rotateSpeed: 4
-    rotateLimit: 124
     soundPitchMin: 6
     soundPitchMax: 8.8
     shootCone: 1
@@ -272,7 +266,6 @@ weapons:[
     reload: 40.01
     rotate: true
     rotateSpeed: 4
-    rotateLimit: 124
     soundPitchMin: 6
     soundPitchMax: 8.8
     shootCone: 1
@@ -310,7 +303,6 @@ weapons:[
     reload: 40
     rotate: true
     rotateSpeed: 4
-    rotateLimit: 124
     soundPitchMin: 6
     soundPitchMax: 8.8
     shootCone: 1
@@ -351,7 +343,6 @@ weapons:[
     reload: 4
     rotate: true
     rotateSpeed: 5
-    rotateLimit: 120
     soundPitchMin: 2.7
     soundPitchMax: 3.8
     shootCone: 6
@@ -413,7 +404,6 @@ weapons:[
     rotate: true
     mirror: false
     rotateSpeed: 5
-    rotateLimit: 90
     soundPitchMin: 2.7
     soundPitchMax: 3.8
     shootCone: 6

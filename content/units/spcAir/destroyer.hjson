@@ -44,7 +44,6 @@ weapons:[
 	rotateSpeed: 2
 	occlusion: 6
     rotate: true
-    rotateLimit: 135
     top: true
     soundPitchMin: 0.72
     soundPitchMax: 0.94
@@ -91,7 +90,6 @@ weapons:[
 	rotateSpeed: 14
 	occlusion: 6
     rotate: true
-    rotateLimit: 135
     top: true
     soundPitchMin: 1.72
     soundPitchMax: 1.94
@@ -126,7 +124,6 @@ weapons:[
 	rotateSpeed: 14
 	occlusion: 6
     rotate: true
-    rotateLimit: 135
     top: true
     soundPitchMin: 1.72
     soundPitchMax: 1.94
