@@ -13,6 +13,7 @@ coolantMultiplier: 2.5
 cooldown: 0.05
 rotateSpeed: 7
 shootSound: flame
+loopSound: medBeam3
 shootEffect: shootSmall
 smokeEffect: shootBig
 firingMoveFract: 0.666

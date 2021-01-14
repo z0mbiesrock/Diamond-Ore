@@ -381,18 +381,21 @@ ammoTypes: {
 	despawnEffect: hitFuse
     ammoMultiplier: 1
 	reloadMultiplier: 0.65
-	pierce: true
+	pierce: false
 	sprite: diamond-ore-diamondmissile
 	homingPower: 0.0625
 	homingRange: 320
-	fragBullets: 3
-	fragVelocityMin: 1.25
-	fragVelocityMax: 2.50
+	fragBullets: 24
+	fragVelocityMin: 0.45
+	fragVelocityMax: 1.907
+	fragLifeMin: 0.8
+	fragLifeMax: 1.75
 	weaveScale: 1.53
 	weaveMag: 3.5
 	fragBullet: {
       type: BasicBulletType
 	  lifetime: 60
+	  speed: 1.4
       damage: 15
       width: 0
       height: 0
@@ -402,6 +405,7 @@ ammoTypes: {
 	  collides: false
 	  knockback: 1
 	  lightRadius: 0
+	  drag: 0.01
 	  homingPower: 0.7
 	  homingRange: 40
 	  weaveScale: 2.53
@@ -421,8 +425,8 @@ ammoTypes: {
 	    hitEffect: hitBulletBig
 	    pierce: false
 	    knockback: 1
-	    homingPower: 0.007
-	    homingRange: 400
+	    homingPower: 0.034
+	    homingRange: 120
 	    weaveScale: 2.53
 	    weaveMag: 2.5
 	    sprite: diamond-ore-diamondmissile

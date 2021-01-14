@@ -1,0 +1,54 @@
+localizedName: Goblin
+description: Fires a barrage of fragmenting energy torpedoes and massive artillery bombs that damage enemies and repair allies. Can step over most terrain.
+commandLimit: 8
+speed: 0.87
+boostMultiplier: 0.95
+drag: 0.4
+accel: 0.5
+rotateSpeed: 0.75
+baseRotateSpeed: 1.25
+buildSpeed: 6
+buildBeamOffset: 0
+lightRadius: 60
+lightColor: a2f32d
+lightOpacity: 0.9
+health: 15000
+armor: 220
+aimDst: 0
+range: 900
+itemCapacity: 300
+legCount: 8
+rippleScale: 2.5
+legLength: 80
+legTrns: 0.64
+legExtension: 7
+legMoveSpace: 0.9
+legGroupSize: 3
+visualElevation: 0.55
+maxStretch: 2.1
+legSpeed: 0.15
+hitSize: 35
+legSplashDamage: 100
+legSplashRange: 25
+rotateShooting: false
+allowLegStep: true
+engineOffset: 5
+engineSize: 2
+canBoost: false
+hovering: true
+
+//weapons:[] this unit has scripted weaponry
+
+research:{
+  parent: nymph
+  requirements:[
+      silicon/650000
+      plastanium/620000
+      surge-alloy/290000
+      sand/3000000
+      phase-fabric/220000
+      diamond/15000
+      cryogem/200000
+      dark-spore-pod/200000
+  ]
+}

@@ -1,0 +1,45 @@
+localizedName: Sprite
+//internally named "spriite" as a variable conflict countermeasure
+description: Repairs nearby damaged units more efficiently than a Repair Field ability, but can only repair one unit at a time. Can step over most terrain. Does not attack.
+commandLimit: 8
+speed: 0.7
+boostMultiplier: 1.25
+drag: 0.4
+accel: 0.5
+rotateSpeed: 3.5
+baseRotateSpeed: 2.5
+lightRadius: 15
+lightColor: a2f32d
+lightOpacity: 0.9
+health: 100
+armor: 9
+range: 74
+itemCapacity: 30
+legCount: 4
+legGroupSize: 3
+legLength: 10
+legTrns: 1.28
+legExtension: -5.2
+visualElevation: 0.15
+maxStretch: 1.1
+legSpeed: 0.17
+hitSize: 9
+rotateShooting: false
+allowLegStep: true
+engineOffset: 5
+engineSize: 2
+canBoost: false
+hovering: true
+
+//weapons:[] this unit has scripted weaponry
+
+research:{
+  parent: spiroct
+  requirements:[
+      silicon/15000
+      sand/50000
+      phase-fabric/6000
+      diamond/500
+      cryogem/200
+  ]
+}

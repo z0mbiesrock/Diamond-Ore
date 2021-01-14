@@ -51,6 +51,7 @@ weapons:[
 	  shootEffect: none
 	  smokeEffect: none
       width: 0
+	  recoil: -0.35
 	  maxRange: 32
       length: 30
       lifetime: 12
@@ -91,6 +92,7 @@ weapons:[
 	  smokeEffect: none
 	  hitEffect: mine
       width: 0
+	  recoil: -0.7
       length: 20
 	  maxRange: 32
       lifetime: 12

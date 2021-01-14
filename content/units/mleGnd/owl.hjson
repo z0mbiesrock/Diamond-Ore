@@ -54,6 +54,7 @@ weapons:[
       length: 30
       lifetime: 12
 	  serrations: 3
+	  recoil: -0.7
 	  serrationWidth: 25
 	  serrationSpacing: 8
 	  serrationSpaceOffset: 4

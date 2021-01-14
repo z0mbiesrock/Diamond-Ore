@@ -1,0 +1,51 @@
+localizedName: Pixie
+description: Fires piercing energy torpedoes that damage enemies and repair allies. Can step over most terrain.
+commandLimit: 8
+speed: 0.45
+boostMultiplier: 2.25
+drag: 0.4
+accel: 0.5
+rotateSpeed: 3.5
+baseRotateSpeed: 4.2
+buildSpeed: 2
+buildBeamOffset: 0
+lightRadius: 45
+lightColor: a2f32d
+lightOpacity: 0.9
+health: 670
+armor: 27
+aimDst: 0
+range: 172
+itemCapacity: 90
+legCount: 6
+legGroupSize: 4
+legLength: 30
+//legExtension: 24
+legTrns: 0.9
+legMoveSpace: 0.7
+visualElevation: 0.25
+maxStretch: 1.85
+legMoveSpace: 1.2
+legSpeed: 0.22
+hitSize: 17
+rotateShooting: false
+allowLegStep: true
+engineOffset: 7
+engineSize: 3
+canBoost: false
+hovering: true
+
+//weapons:[] this unit has scripted weaponry
+
+research:{
+  parent: gnome
+  requirements:[
+      silicon/90000
+      titanium/45000
+      metaglass/25000
+      sand/30000
+      phase-fabric/12000
+      diamond/1500
+      cryogem/2000
+  ]
+}

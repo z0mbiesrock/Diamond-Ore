@@ -1,0 +1,47 @@
+localizedName: Gnome
+description: Repairs nearby damaged units more efficiently than a Repair Field ability, but can only repair one unit at a time. Can step over most terrain. Can target and destroy enemy projectiles.
+commandLimit: 8
+speed: 0.55
+boostMultiplier: 1.25
+drag: 0.4
+accel: 0.5
+rotateSpeed: 3.5
+baseRotateSpeed: 4.2
+buildSpeed: 1
+buildBeamOffset: 0
+lightRadius: 30
+lightColor: a2f32d
+lightOpacity: 0.9
+health: 250
+armor: 18
+range: 144
+itemCapacity: 60
+legCount: 4
+legGroupSize: 4
+legLength: 24
+legTrns: 0.9
+legMoveSpace: 0.7
+visualElevation: 0.21
+maxStretch: 1.2
+legSpeed: 0.24
+hitSize: 14
+rotateShooting: false
+allowLegStep: true
+engineOffset: 7
+engineSize: 3
+canBoost: false
+hovering: true
+
+//weapons:[] this unit has scripted weaponry
+
+research:{
+  parent: spriite
+  requirements:[
+      silicon/30000
+      graphite/15000
+      sand/20000
+      phase-fabric/9000
+      diamond/800
+      cryogem/600
+  ]
+}

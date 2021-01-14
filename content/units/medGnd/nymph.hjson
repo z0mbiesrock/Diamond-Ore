@@ -1,0 +1,52 @@
+localizedName: Nymph
+description: Fires large explosive energy shells that damage ground enemies and repair allies. Can step over most terrain.
+commandLimit: 8
+speed: 0.67
+boostMultiplier: 1.25
+drag: 0.4
+accel: 0.5
+rotateSpeed: 3.5
+baseRotateSpeed: 2.5
+buildSpeed: 4
+buildBeamOffset: 0
+lightRadius: 60
+lightColor: a2f32d
+lightOpacity: 0.9
+health: 8000
+armor: 36
+aimDst: 0
+range: 80
+itemCapacity: 150
+rippleScale: 1.25
+legCount: 4
+legTrns: 0.44
+legGroupSize: 2
+legLength: 50
+//legExtension: 40
+legMoveSpace: 0.7
+visualElevation: 0.35
+maxStretch: 1.48
+legSpeed: 0.4
+hitSize: 26
+rotateShooting: false
+targetAir: false
+allowLegStep: true
+engineOffset: 5
+engineSize: 2
+canBoost: false
+hovering: true
+
+//weapons:[] this unit has scripted weaponry
+
+research:{
+  parent: pixie
+  requirements:[
+      silicon/150000
+      plastanium/120000
+      titanium/90000
+      sand/300000
+      phase-fabric/22000
+      diamond/15000
+      cryogem/20000
+  ]
+}

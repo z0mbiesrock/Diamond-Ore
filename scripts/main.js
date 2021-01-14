@@ -40,6 +40,7 @@ require("units/falcon")
 require("units/vulture")
 require("units/spcAir")
 require("units/shkAir")
+require("units/medGnd")
 // Spore content
 require("blocks/spore-blocks")
 require("blocks/water-decorruptor")
