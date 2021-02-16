@@ -17,12 +17,13 @@ range: 74
 itemCapacity: 30
 legCount: 4
 legGroupSize: 3
-legLength: 10
-legTrns: 1.28
-legExtension: -5.2
+legMoveSpace: 2.7
+legLength: 14
+legTrns: 0.8
+legExtension: 0.6
 visualElevation: 0.15
 maxStretch: 1.1
-legSpeed: 0.17
+legSpeed: 0.33
 hitSize: 9
 rotateShooting: false
 allowLegStep: true

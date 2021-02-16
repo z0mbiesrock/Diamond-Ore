@@ -25,6 +25,8 @@ legLength: 50
 //legExtension: 40
 legMoveSpace: 0.7
 visualElevation: 0.35
+legSplashDamage: 60
+legSplashRange: 6.25
 maxStretch: 1.48
 legSpeed: 0.4
 hitSize: 26

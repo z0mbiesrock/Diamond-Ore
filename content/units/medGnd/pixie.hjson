@@ -21,7 +21,7 @@ legCount: 6
 legGroupSize: 4
 legLength: 30
 //legExtension: 24
-legTrns: 0.9
+legTrns: 0.8
 legMoveSpace: 0.7
 visualElevation: 0.25
 maxStretch: 1.85

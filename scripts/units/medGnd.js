@@ -2,44 +2,46 @@
 /* "medGnd" Unit path
 */
 const register = require("diamond-ore/units/unitReg");
-const medGndT1AI = prov(() => {
+const medGndHealerAI = prov(() => {
   var u = extend(GroundAI, {
     setAIVars(){
       this._injuredFound = false;
-    },
-    updateMovement(){
-		if(this._injuredFound && this.target != null){
-			var shoot = false;
-			if(this.unit.inRange(this.target)){
-				this.unit.aim(this.target);
-				shoot = true;
-			}			
-			this.unit.controlWeapons(shoot);
-		}else if (!this._injuredFound){
-		this.super$updateMovement();
-		}
+      this._healTarget = null;
     },
     updateTargeting(){
-		if(this.timer.get(this.timerTarget2, 40)){
-			var target = Units.closest(this.unit.team, this.unit.x, this.unit.y, this.unit.range * 1.5, boolf(unit => unit.health < unit.maxHealth() && unit != this && unit.dead == false));
-			if(target != null){
-				if(this.target != null){
-					if((target.healthf() < this.target.healthf()) && Mathf.chance(1 / 3)){
-						this.target = target;
-						this._injuredFound = true;
-					}
-				}
-				else{
-					this.target = target;
-					this._injuredFound = true;
-				}				
+		if(this._healTarget != null){
+			if(!(this._healTarget.isValid()) || this.unit.dst(this._healTarget) >= this.unit.type.range * 2.5 || this._healTarget.healthf() >= 1){
+				this._healTarget = null;
 			}
 		}
-		if(this.invalid(this.target)){
-			this._injuredFound = false;
-			this.target = null;
+		var target = Units.closest(this.unit.team, this.unit.x, this.unit.y, this.unit.type.range * 1.5, boolf(unit => unit.healthf() < 1 && unit != this.unit && this.unit.dst(unit) > 0));
+		//print(target);
+		if(target != null){
+			if(this._healTarget != null){
+				if((target.healthf() < this._healTarget.healthf()) && Mathf.chance(1 / 20)){
+					this._healTarget = target;
+				}
+			}
+			else{
+				this._healTarget = target;
+			}				
 		}
-	}
+	},
+    updateMovement(){
+		if(this._healTarget != null){
+			//print("arc");
+			this.moveTo(this._healTarget, (this.unit.type.range * 0.3 + (this._healTarget.hitSize / 2)));
+			var shoot = false;
+			if(this.unit.inRange(this._healTarget)){
+				this.unit.aim(this._healTarget);
+				shoot = true;
+			}
+			this.unit.controlWeapons(shoot);
+		}else{
+			this.super$updateMovement();
+		}
+		this.updateTargeting();
+    }
   });
   u.setAIVars();
   
@@ -48,7 +50,7 @@ const medGndT1AI = prov(() => {
 const medGndT1bulletTrail = Effect(6, e => {	
     const dergtx = new Floatc2({get(x, y){
 		Draw.color(Color.valueOf("#99ff00"), Color.valueOf("#EDF3A9"), Mathf.randomSeed(e.id + Mathf.angle(x, y)));
-		Fill.circle(e.x + x, e.y + y, e.fout() * (1 - Mathf.randomSeed(e.id + Mathf.angle(x, y) + 1)));
+		Fill.circle(e.x + x, e.y + y, e.fout() * (2 - Mathf.randomSeed(e.id + Mathf.angle(x, y) + 1)));
     }}) 
     Angles.randLenVectors(e.id, 2, 1 + 2.5 * e.fout(), e.rotation + (Mathf.randomSeed(e.id, -90, 90) * e.finpow()), 360,dergtx);
 });
@@ -58,32 +60,34 @@ const medGndT1bullet = extend(BulletType, {
 			this.super$init(b);
 			var px = b.x + b.lifetime * b.vel.x;
 			var py = b.y + b.lifetime * b.vel.y;
-			var hx = 0;
-			var hy = 0;
 			var rot = b.rotation();
 			var healFound = false;
 			b.time = b.lifetime;
-			b.set(px, py);
-			Units.closestOverlap(b.team, px, py, 1, boolf(unit => {
-				if(unit.healthf() < 1 && unit != b.owner && !unit.dead){
+
+			b.vel.setZero();
+			//b.set(px, py);
+			var healTar = Units.closestOverlap(b.team, px, py, 1, boolf(unit => {
+				if(unit.healthf() < 1 && unit != b.owner && !unit.dead && !healFound){
 					unit.health += Math.abs(b.damage / 60);
 					unit.clampHealth();
 					if (unit.healthf() == 1){
 						Fx.healWaveDynamic.at(unit.x, unit.y, unit.hitSize);
 					}
-					hx = unit.x;
-					hx = unit.y;
 					healFound = true;
+					return unit;
 				}
 			}));
 			if(healFound){
-				Geometry.iterateLine(0, b.x, b.y, px, py, 6, (x, y) => {
+				Geometry.iterateLine(0, b.x, b.y, healTar.x, healTar.y, 3, (x, y) => {
 				medGndT1bulletTrail.at(x, y, rot);
 				});
+				//Lock player aim onto the unit being repaired; BROKEN
+				/* if (b.owner.isPlayer()){
+					b.isPlayer().mouseX = healTar.x;
+					b.isPlayer().mouseY = healTar.y;
+				} */
 			}
 			b.remove();
-
-			b.vel.setZero();
 		}
     },
 	
@@ -118,9 +122,9 @@ const medGndT1weapon = extend(Weapon, {
 	continuous: true,
 	mirror: false,
 	soundPitchMin: 0.67,
-	soundPitchMax: 0.83,
+	soundPitchMax: 1.83,
 	top: false,
-	shootSound: loadSound("medBeam2"),
+	shootSound: loadSound("medBeam1"),
 	bullet: medGndT1bullet
 });
 
@@ -130,17 +134,17 @@ medGndT1.constructor = () => extend(LegsUnit, {
 });
 register(medGndT1);
 medGndT1.weapons.add(medGndT1weapon);
-//medGndT1.defaultController = medGndAI;
+medGndT1.defaultController = medGndHealerAI;
 const diamondItem = Vars.content.getByName(ContentType.item, "diamond-ore-diamond");
 const cryogemItem = Vars.content.getByName(ContentType.item, "diamond-ore-cryogem");
 Blocks.groundFactory.plans.add(new UnitFactory.UnitPlan(medGndT1, 60 * 40, ItemStack.with(Items.silicon, 5, Items.sand, 20, Items.phaseFabric, 1, Items.copper, 10, cryogemItem, 10, diamondItem, 5)));
 
-const medGndT2bulletTrail = Effect(6, e => {	
+const medGndT2bulletTrail = Effect(8, e => {	
     const dergtx = new Floatc2({get(x, y){
 		Draw.color(Color.valueOf("#99ff00"), Color.valueOf("#EDF3A9"), Mathf.randomSeed(e.id + Mathf.angle(x, y)));
-		Fill.circle(e.x + x, e.y + y, e.fout() * (1.5 - Mathf.randomSeed(e.id + Mathf.angle(x, y) + 1)));
+		Fill.circle(e.x + x, e.y + y, e.fout() * (3 - Mathf.randomSeed(e.id + Mathf.angle(x, y) + 1)));
     }}) 
-    Angles.randLenVectors(e.id, 4, 1 + 3.75 * e.fout(), e.rotation + (Mathf.randomSeed(e.id, -90, 90) * e.finpow()), 360,dergtx);
+    Angles.randLenVectors(e.id, 6, 1 + 3.75 * e.fout(), e.rotation + (Mathf.randomSeed(e.id, -90, 90) * e.finpow()), 360,dergtx);
 });
 
 const medGndT2bullet = extend(BulletType, {
@@ -149,32 +153,29 @@ const medGndT2bullet = extend(BulletType, {
 			this.super$init(b);
 			var px = b.x + b.lifetime * b.vel.x;
 			var py = b.y + b.lifetime * b.vel.y;
-			var hx = 0;
-			var hy = 0;
 			var rot = b.rotation();
 			var healFound = false;
 			b.time = b.lifetime;
-			b.set(px, py);
-			Units.closestOverlap(b.team, px, py, 1, boolf(unit => {
-				if(unit.healthf() < 1 && unit != b.owner && !unit.dead){
+
+			b.vel.setZero();
+			//b.set(px, py);
+			var healTar = Units.closestOverlap(b.team, px, py, 1, boolf(unit => {
+				if(unit.healthf() < 1 && unit != b.owner && !unit.dead && !healFound){
 					unit.health += Math.abs(b.damage / 60);
 					unit.clampHealth();
 					if (unit.healthf() == 1){
 						Fx.healWaveDynamic.at(unit.x, unit.y, unit.hitSize);
 					}
-					hx = unit.x;
-					hx = unit.y;
 					healFound = true;
+					return unit;
 				}
 			}));
 			if(healFound){
-				Geometry.iterateLine(0, b.x, b.y, px, py, 6, (x, y) => {
-				medGndT2bulletTrail.at(x, y, rot);
+				Geometry.iterateLine(0, b.x, b.y, healTar.x, healTar.y, 3, (x, y) => {
+				medGndT1bulletTrail.at(x, y, rot);
 				});
 			}
 			b.remove();
-
-			b.vel.setZero();
 		}
     },
 	
@@ -211,9 +212,9 @@ const medGndT2weapon = extend(Weapon, {
 	continuous: true,
 	mirror: false,
 	soundPitchMin: 0.67,
-	soundPitchMax: 0.83,
+	soundPitchMax: 1.83,
 	top: false,
-	shootSound: loadSound("medBeam1"),
+	shootSound: loadSound("medBeam2"),
 	bullet: medGndT2bullet
 });
 
@@ -223,7 +224,8 @@ medGndT2.constructor = () => extend(LegsUnit, {
 });
 //register(medGndT2);
 medGndT2.weapons.add(medGndT2weapon);
-//medGndT2.defaultController = medGndAI;
+medGndT2.abilities.add(new StatusFieldAbility(StatusEffects.shielded, 6, 6, 23));
+medGndT2.defaultController = medGndHealerAI;
 
 var upgradeA = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-spriite"), Vars.content.getByName(ContentType.unit, "diamond-ore-gnome")]);
 Blocks.additiveReconstructor.upgrades.add(upgradeA.toArray(UnitType));

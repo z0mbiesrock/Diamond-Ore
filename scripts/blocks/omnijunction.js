@@ -1,5 +1,13 @@
 
 const omniJunction = extendContent(Junction, "omnijunction", {
+	setStats(){
+		this.super$setStats();
+		this.stats.remove(Stat.liquidCapacity);
+	},
+	setBars(){
+		this.super$setBars();
+		this.bars.remove("liquid");
+	},
 });
 omniJunction.buildType = () => extendContent(Junction.JunctionBuild, omniJunction, {
 	draw(){
@@ -8,35 +16,43 @@ omniJunction.buildType = () => extendContent(Junction.JunctionBuild, omniJunctio
 		Draw.rect(Core.atlas.find(omniJunction.name + "-top"), this.x, this.y);
 		Draw.reset();
 	},
-	getLiquidDestination(tile, source, liquid){
-        var dir = source.relativeTo(tile.x, tile.y);
-        dir = (dir + 4) % 4;
-        var next = tile.getNearbyLink(dir);
-        if(next == null || !next.block().acceptLiquid(next, tile, liquid, 0) && !(next.block() instanceof LiquidJunction)){
-            return tile;
-        }
-        return next.block().getLiquidDestination(next, tile, liquid);
+	getLiquidDestination(source, liquid){
+		if(this.efficiency() == 1){
+			//LiquidJunction$LiquidJunctionBuild.getLiquidDestination(source, liquid);
+			var liquid = this.liquids.current();
+			var dir = source.relativeTo(this.tile.x, this.tile.y);
+			dir = (dir + 4) % 4;
+			var next = this.nearby(dir);
+			try{
+				if(next == null || (!next.acceptLiquid(this, liquid) && !(next instanceof LiquidJunction))){
+					return this;
+				}
+				return next.getLiquidDestination(this, liquid);
+			}
+			catch(error){
+				print(error);//acceptLiquid CANNOT be accessed by conveyors and results in an instant FUCK YOU CRASH HAHAHAHHAHAHAHAHAHAHA
+			}
+		}
+		else{
+			return this;
+		}
     },
 	updateTile(){
 		if(this.cons.valid()){
-			this.speed = Math.ceil(this.baseSpeed + (100 - (100 * this.efficiency())));
+			omniJunction.speed = Math.ceil(1 + (100 - (100 * this.efficiency())));
 			this.super$updateTile();
-			if(this.efficiency() == 1){
+			/* if(this.efficiency() == 1){
 				try{
-				dir = tile.relativeTo(tile.x, tile.y);
-				dir = (dir + 4) % 4;
-				next = tile.getNearbyLink(dir);
-				if(next == null || !next.block().acceptLiquid(next, tile, liquid, 0) && !(next.block() instanceof LiquidJunction)){
-					return tile;
-				}
-				return next.block().getLiquidDestination(next, tile, liquid);
+				this.getLiquidDestination(this, this.liquids.current());
 				}
 				catch(error){
-					//print(error); Does not crash, but now 
+					print(error);//Does not crash, but if there
+					ohno = true;
 				}
-			}
+			} */
 			this.cons.trigger();
 		}
 	}
 });
 omniJunction.baseSpeed = 1;
+omniJunction.outputsLiquid = true;

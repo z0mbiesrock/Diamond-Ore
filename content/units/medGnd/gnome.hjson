@@ -1,5 +1,5 @@
 localizedName: Gnome
-description: Repairs nearby damaged units more efficiently than a Repair Field ability, but can only repair one unit at a time. Can step over most terrain. Can target and destroy enemy projectiles.
+description: Repairs nearby damaged units more efficiently than a Repair Field ability, but can only repair one unit at a time. Can step over most terrain. Does not attack.
 commandLimit: 8
 speed: 0.55
 boostMultiplier: 1.25
@@ -17,10 +17,10 @@ armor: 18
 range: 144
 itemCapacity: 60
 legCount: 4
-legGroupSize: 4
+legGroupSize: 2
 legLength: 24
-legTrns: 0.9
-legMoveSpace: 0.7
+legTrns: 0.7
+legMoveSpace: 1.7
 visualElevation: 0.21
 maxStretch: 1.2
 legSpeed: 0.24
