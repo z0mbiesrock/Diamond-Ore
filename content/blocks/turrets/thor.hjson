@@ -23,7 +23,7 @@ ammoTypes: {
   blast-compound: {
     type: MissileBulletType
     speed: 2
-	drag: -0.04
+	drag: -0.0004
     damage: 125
 	lifetime: 300
     width: 12
@@ -47,7 +47,7 @@ ammoTypes: {
   pyratite: {
     type: MissileBulletType
     speed: 2
-	drag: -0.04
+	drag: -0.00014
     damage: 120
 	lifetime: 300
     width: 12
@@ -100,7 +100,7 @@ ammoTypes: {
   surge-alloy: {
     type: MissileBulletType
     speed: 2
-	drag: -0.04
+	drag: -0.0000104
     damage: 75
 	lifetime: 300
     width: 12
@@ -236,7 +236,7 @@ ammoTypes: {
   cryogem: {
     type: MissileBulletType
     speed: 2
-	drag: -0.04
+	drag: -0.0014
     damage: 120
 	lifetime: 300
     width: 12
@@ -284,7 +284,7 @@ ammoTypes: {
   graphite: {
     type: MissileBulletType
     speed: 3
-	drag: -0.06
+	drag: -0.0006
     damage: 400
 	lifetime: 200
     width: 16
@@ -363,7 +363,7 @@ ammoTypes: {
   phase-fabric: {
     type: MissileBulletType
     speed: 3.9
-	drag: -0.06
+	drag: -0.0001
     damage: 10
 	lifetime: 200
     width: 14
@@ -438,7 +438,7 @@ ammoTypes: {
   thorium: {
     type: MissileBulletType
     speed: 1
-	drag: -0.02
+	drag: -0.00002
     damage: 500
 	lifetime: 600
     width: 12
