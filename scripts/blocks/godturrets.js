@@ -50,7 +50,7 @@ thorConcussAmmo.hitSound = Sounds.explosionbig;
 thorConcussAmmo.shootEffect = Fx.shootBigSmoke2;
 thorConcussAmmo.smokeEffect = Fx.hitFuse;
 
-const thorTurret = extendContent(ItemTurret, "thor", {
+const thorTurret = extend(ItemTurret, "thor", {
 	
     init(){
         this.super$init();
@@ -68,7 +68,7 @@ const thorTurret = extendContent(ItemTurret, "thor", {
 //thorTurret.ammo.add(Items.silicon, thorConcussAmmo);
 //thorTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.5)).update(false).boost();
 
-const odinTurret = extendContent(ItemTurret, "odin", {
+const odinTurret = extend(ItemTurret, "odin", {
 	
 	icons: function(){
 		return [
@@ -78,7 +78,7 @@ const odinTurret = extendContent(ItemTurret, "odin", {
 	}
 });
 //odinTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.314159)).update(false).boost();
-const lokiTurret = extendContent(ItemTurret, "loki", {
+const lokiTurret = extend(ItemTurret, "loki", {
 	
 	icons: function(){
 		return [
@@ -88,7 +88,7 @@ const lokiTurret = extendContent(ItemTurret, "loki", {
 	}
 });
 //lokiTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.2345)).update(false).boost();
-const massdriverStrong = extendContent(MassDriver, "massdriver-strong", {
+const massdriverStrong = extend(MassDriver, "massdriver-strong", {
 	
 	icons: function(){
 		return [
@@ -257,7 +257,7 @@ yggdrasilPlasma.status = StatusEffects.shocked;
 yggdrasilPlasma.statusDuration = 300;
 yggdrasilPlasma.hitSound = loadSound("yggdrasilPlasmaExplode");;
 yggdrasilPlasma.fragBullet = yggdrasilPlasmaFrag;
-const yggdrasilTurret = extendContent(PowerTurret, "yggdrasil", {
+const yggdrasilTurret = extend(PowerTurret, "yggdrasil", {
 	
 	icons: function(){
 		return [

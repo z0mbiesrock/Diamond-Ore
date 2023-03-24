@@ -1,5 +1,5 @@
 const register = require("diamond-ore/units/unitReg");
-const SuiAirT3 = extendContent(UnitType, "beetle", {
+const SuiAirT3 = extend(UnitType, "beetle", {
 });
 SuiAirT3.constructor = () => extend(UnitEntity, {
 	update(){

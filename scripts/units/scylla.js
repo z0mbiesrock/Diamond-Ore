@@ -1,5 +1,5 @@
 const register = require("diamond-ore/units/unitReg");
-const SpoNavT3 = extendContent(UnitType, "scylla", {
+const SpoNavT3 = extend(UnitType, "scylla", {
 });
 SpoNavT3.constructor = () => extend(UnitWaterMove, {
 	update(){

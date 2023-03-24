@@ -1,4 +1,4 @@
-const gemDissipator = extendContent(GenericCrafter, "cryogem-dissipator", {
+const gemDissipator = extend(GenericCrafter, "cryogem-dissipator", {
 	/* drawBase: function(tile){
         this.super$drawBase(tile);
         Draw.color(this.outputLiquid.liquid.color);
@@ -10,7 +10,7 @@ const gemDissipator = extendContent(GenericCrafter, "cryogem-dissipator", {
 	}, */
 });
 const cryoLiquid = Liquids.cryofluid;
-gemDissipator.buildType = () => extendContent(GenericCrafter.GenericCrafterBuild, gemDissipator, {
+gemDissipator.buildType = () => extend(GenericCrafter.GenericCrafterBuild, gemDissipator, {
 	draw(){
 		Draw.rect(gemDissipator.region, this.x, this.y);
 		Draw.color(cryoLiquid.color);

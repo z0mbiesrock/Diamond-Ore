@@ -1,4 +1,4 @@
-const SpoNavT2 = extendContent(UnitType, "serpent", {
+const SpoNavT2 = extend(UnitType, "serpent", {
 });
 SpoNavT2.constructor = () => extend(UnitWaterMove, {});
 SpoNavT2.abilities.add(new ShieldRegenFieldAbility(10, 200, 60 * 10, 64));

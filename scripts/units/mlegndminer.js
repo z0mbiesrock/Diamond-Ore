@@ -82,7 +82,7 @@ const mleGndMinerAI = prov(() => {
   
   return u;
 });
-const mleGndT1 = extendContent(UnitType, "sparrow", {
+const mleGndT1 = extend(UnitType, "sparrow", {
 });
 mleGndT1.constructor = () => extend(MechUnit, {
 	update(){
@@ -98,7 +98,7 @@ mleGndT1.constructor = () => extend(MechUnit, {
 register(mleGndT1);
 mleGndT1.defaultController = mleGndMinerAI;
 mleGndT1.targetFlag = BlockFlag.reactor;
-const mleGndT2 = extendContent(UnitType, "crow", {
+const mleGndT2 = extend(UnitType, "crow", {
 });
 mleGndT2.constructor = () => extend(MechUnit, {
 	update(){
@@ -114,7 +114,7 @@ mleGndT2.constructor = () => extend(MechUnit, {
 register(mleGndT2);
 mleGndT2.defaultController = mleGndMinerAI;
 mleGndT2.targetFlag = BlockFlag.reactor;
-const mleGndT3 = extendContent(UnitType, "owl", {
+const mleGndT3 = extend(UnitType, "owl", {
 });
 mleGndT3.constructor = () => extend(MechUnit, {
 	update(){

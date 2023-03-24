@@ -10,7 +10,7 @@ const shkAirAI = prov(() => {
   
   return u;
 });
-const shkAirT1 = extendContent(UnitType, "strike", {
+const shkAirT1 = extend(UnitType, "strike", {
 });
 shkAirT1.constructor = () => extend(UnitEntity, {
 });
@@ -96,7 +96,7 @@ const diamondItem = Vars.content.getByName(ContentType.item, "diamond-ore-diamon
 const cryogemItem = Vars.content.getByName(ContentType.item, "diamond-ore-cryogem");
 Blocks.airFactory.plans.add(new UnitFactory.UnitPlan(shkAirT1, 60 * 20, ItemStack.with(Items.silicon, 40, Items.surgeAlloy, 15, cryogemItem, 15, diamondItem, 15)));
 
-const shkAirT2 = extendContent(UnitType, "storm", {
+const shkAirT2 = extend(UnitType, "storm", {
 });
 shkAirT2.constructor = () => extend(UnitEntity, {});
 shkAirT2.ammoType = AmmoTypes.powerHigh;
@@ -104,7 +104,7 @@ shkAirT2.ammoType = AmmoTypes.powerHigh;
 var upgradeA = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-strike"), Vars.content.getByName(ContentType.unit, "diamond-ore-storm")]);
 Blocks.additiveReconstructor.upgrades.add(upgradeA.toArray(UnitType));
 
-const shkAirT3 = extendContent(UnitType, "tempest", {
+const shkAirT3 = extend(UnitType, "tempest", {
 });
 shkAirT3.constructor = () => extend(UnitEntity, {});
 shkAirT3.ammoType = AmmoTypes.powerHigh;
@@ -112,7 +112,7 @@ shkAirT3.ammoType = AmmoTypes.powerHigh;
 var upgradeB = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-storm"), Vars.content.getByName(ContentType.unit, "diamond-ore-tempest")]);
 Blocks.multiplicativeReconstructor.upgrades.add(upgradeB.toArray(UnitType));
 
-const shkAirT4 = extendContent(UnitType, "hurricane", {
+const shkAirT4 = extend(UnitType, "hurricane", {
 });
 shkAirT4.constructor = () => extend(UnitEntity, {});
 shkAirT4.ammoType = AmmoTypes.powerHigh;
@@ -295,7 +295,7 @@ shkAirT4plasma
 var upgradeC = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-tempest"), Vars.content.getByName(ContentType.unit, "diamond-ore-hurricane")]);
 Blocks.exponentialReconstructor.upgrades.add(upgradeC.toArray(UnitType));
 
-const shkAirT5 = extendContent(UnitType, "purger", {
+const shkAirT5 = extend(UnitType, "purger", {
 });
 shkAirT5.constructor = () => extend(UnitEntity, {});
 //register(shkAirT5);

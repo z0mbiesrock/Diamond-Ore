@@ -18,7 +18,7 @@ circleTarget: false
 fallEffect: flakExplosion
 fallThrusterEffect: melting
 fallSpeed: 0.0071064
-immunities: [wet, tarred, sapped, sporeSlowed, corroded, burning, melting]
+immunities: [wet, tarred, sapped, spore-slowed, corroded, burning, melting]
 engineOffset: 30
 engineSize: 5
 hovering: true

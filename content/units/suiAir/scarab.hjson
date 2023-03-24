@@ -12,7 +12,7 @@ range: 240
 itemCapacity: 250
 hitSize: 17
 rotateShooting: true
-immunities: [wet, tarred, sapped, sporeSlowed, corroded, burning, melting]
+immunities: [wet, tarred, sapped, spore-slowed, corroded, burning, melting]
 engineOffset: 16
 engineSize: 5
 hovering: true

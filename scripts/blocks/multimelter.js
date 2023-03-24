@@ -1,4 +1,4 @@
-const multiMelter = extendContent(AttributeSmelter, "multi-melter", {
+const multiMelter = extend(AttributeSmelter, "multi-melter", {
 	/* drawBase: function(tile){
         this.super$drawBase(tile);
         Draw.color(this.outputLiquid.liquid.color);
@@ -10,7 +10,7 @@ const multiMelter = extendContent(AttributeSmelter, "multi-melter", {
 	}, */
 });
 const slagLiquid = Liquids.slag;
-multiMelter.buildType = () => extendContent(AttributeSmelter.AttributeSmelterBuild, multiMelter, {
+multiMelter.buildType = () => extend(AttributeSmelter.AttributeSmelterBuild, multiMelter, {
 	draw(){
 		Draw.rect(multiMelter.region, this.x, this.y);
 		Draw.color(slagLiquid.color);

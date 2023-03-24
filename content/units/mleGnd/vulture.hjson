@@ -34,7 +34,7 @@ destructibleWreck: false
 canDrown: false
 mechFrontSway: -0.1
 mechSideSway: 1.2
-immunities: [wet, tarred, sapped, sporeSlowed, corroded, burning, melting, freezing, tarred, muddy, slow, unmoving]
+immunities: [wet, tarred, sapped, spore-slowed, corroded, burning, melting, freezing, tarred, muddy, slow, unmoving]
 engineOffset: 20
 engineSize: 15
 lowAltitude: true

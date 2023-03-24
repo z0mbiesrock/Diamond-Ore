@@ -21,7 +21,7 @@ rotateShooting: false
 singleTarget: false
 lowAltitude: true
 destructibleWreck: false
-immunities: [wet, tarred, sapped, sporeSlowed, corroded, burning, melting]
+immunities: [wet, tarred, sapped, spore-slowed, corroded, burning, melting]
 engineOffset: 0
 engineSize: 16
 hovering: true

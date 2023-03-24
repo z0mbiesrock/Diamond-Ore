@@ -128,7 +128,7 @@ const medGndT1weapon = extend(Weapon, {
 	bullet: medGndT1bullet
 });
 
-const medGndT1 = extendContent(UnitType, "spriite", {
+const medGndT1 = extend(UnitType, "spriite", {
 });
 medGndT1.constructor = () => extend(LegsUnit, {
 });
@@ -218,7 +218,7 @@ const medGndT2weapon = extend(Weapon, {
 	bullet: medGndT2bullet
 });
 
-const medGndT2 = extendContent(UnitType, "gnome", {
+const medGndT2 = extend(UnitType, "gnome", {
 });
 medGndT2.constructor = () => extend(LegsUnit, {
 });
@@ -230,7 +230,7 @@ medGndT2.defaultController = medGndHealerAI;
 var upgradeA = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-spriite"), Vars.content.getByName(ContentType.unit, "diamond-ore-gnome")]);
 Blocks.additiveReconstructor.upgrades.add(upgradeA.toArray(UnitType));
 
-const medGndT3 = extendContent(UnitType, "pixie", {
+const medGndT3 = extend(UnitType, "pixie", {
 });
 medGndT3.constructor = () => extend(LegsUnit, {});
 //register(medGndT3);
@@ -330,7 +330,7 @@ medGndT3weaponB
 var upgradeB = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-gnome"), Vars.content.getByName(ContentType.unit, "diamond-ore-pixie")]);
 Blocks.multiplicativeReconstructor.upgrades.add(upgradeB.toArray(UnitType));
 
-const medGndT4 = extendContent(UnitType, "nymph", {
+const medGndT4 = extend(UnitType, "nymph", {
 });
 medGndT4.constructor = () => extend(LegsUnit, {});
 //register(medGndT4);
@@ -443,7 +443,7 @@ medGndT4.weapons.add(medGndT4weaponA, medGndT4weaponB);
 var upgradeC = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-pixie"), Vars.content.getByName(ContentType.unit, "diamond-ore-nymph")]);
 Blocks.exponentialReconstructor.upgrades.add(upgradeC.toArray(UnitType));
 
-const medGndT5 = extendContent(UnitType, "goblin", {
+const medGndT5 = extend(UnitType, "goblin", {
 });
 medGndT5.constructor = () => extend(LegsUnit, {});
 //register(medGndT5);

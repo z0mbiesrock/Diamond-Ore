@@ -30,8 +30,8 @@ diamondWallShard.hitColor = Color.valueOf("#4499ee");
 diamondWallShard.backColor = Color.valueOf("#a1cce9");
 diamondWallShard.sprite = "diamond-ore-diamondshard";
 
-const diamondWall = extendContent(Wall, "diamond-wall", {});
-diamondWall.buildType = () => extendContent(Wall.WallBuild, diamondWall, {
+const diamondWall = extend(Wall, "diamond-wall", {});
+diamondWall.buildType = () => extend(Wall.WallBuild, diamondWall, {
     //OVERRIDE
 	onDestroyed(){
 		this.super$onDestroyed();
@@ -43,8 +43,8 @@ diamondWall.buildType = () => extendContent(Wall.WallBuild, diamondWall, {
 	},
 });
 
-const diamondWallLarge = extendContent(Wall, "large-diamond-wall", {});
-diamondWallLarge.buildType = () => extendContent(Wall.WallBuild, diamondWallLarge, {
+const diamondWallLarge = extend(Wall, "large-diamond-wall", {});
+diamondWallLarge.buildType = () => extend(Wall.WallBuild, diamondWallLarge, {
     //OVERRIDE
 	onDestroyed(){
 		this.super$onDestroyed();
@@ -56,8 +56,8 @@ diamondWallLarge.buildType = () => extendContent(Wall.WallBuild, diamondWallLarg
 	},
 });
 
-const diamondWallHuge = extendContent(Wall, "huge-diamond-wall", {});
-diamondWallHuge.buildType = () => extendContent(Wall.WallBuild, diamondWallHuge, {
+const diamondWallHuge = extend(Wall, "huge-diamond-wall", {});
+diamondWallHuge.buildType = () => extend(Wall.WallBuild, diamondWallHuge, {
     //OVERRIDE
 	onDestroyed(){
 		this.super$onDestroyed();
@@ -69,8 +69,8 @@ diamondWallHuge.buildType = () => extendContent(Wall.WallBuild, diamondWallHuge,
 	},
 });
 
-const diamondWallGigantic = extendContent(Wall, "gigantic-diamond-wall", {});
-diamondWallGigantic.buildType = () => extendContent(Wall.WallBuild, diamondWallGigantic, {
+const diamondWallGigantic = extend(Wall, "gigantic-diamond-wall", {});
+diamondWallGigantic.buildType = () => extend(Wall.WallBuild, diamondWallGigantic, {
     //OVERRIDE
 	onDestroyed(){
 		this.super$onDestroyed();

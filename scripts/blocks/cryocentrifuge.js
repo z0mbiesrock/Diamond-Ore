@@ -1,4 +1,4 @@
-const cryoCent = extendContent(GenericCrafter, "cryocentrifuge", {
+const cryoCent = extend(GenericCrafter, "cryocentrifuge", {
     icons(){
         return [
             Core.atlas.find(this.name),
@@ -8,7 +8,7 @@ const cryoCent = extendContent(GenericCrafter, "cryocentrifuge", {
     }
 });
 const cryoLiquid = Liquids.cryofluid;
-cryoCent.buildType = () => extendContent(GenericCrafter.GenericCrafterBuild, cryoCent, {
+cryoCent.buildType = () => extend(GenericCrafter.GenericCrafterBuild, cryoCent, {
 	draw(){
 		Draw.rect(cryoCent.region, this.x, this.y);
 		Draw.color(cryoLiquid.color);

@@ -453,8 +453,8 @@ ammoTypes: {
 	splashDamage: 600
 	splashDamageRadius: 100
 	shrinkY: 0
-	hitEffect: impactShockwave
-	despawnEffect: impactShockwave
+	hitEffect: Shockwave
+	despawnEffect: Shockwave
     ammoMultiplier: 1
 	reloadMultiplier: 0.125
 	pierce: false

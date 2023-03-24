@@ -27,7 +27,7 @@ const alloyRefined = Effect(50, e => {
 });
 
 
-const oldRefinery = extendContent(GenericSmelter, "ancient-refinery", {	
+const oldRefinery = extend(GenericSmelter, "ancient-refinery", {	
 	load: function(){
 		this.region = Core.atlas.find(this.name);
 		this.topRegion = Core.atlas.find(this.name + "-top");
@@ -50,7 +50,7 @@ const oldRefinery = extendContent(GenericSmelter, "ancient-refinery", {
 		this.super$drawBase(tile);
 	}, */
 });
-oldRefinery.buildType = () => extendContent(GenericSmelter.SmelterBuild, oldRefinery, {
+oldRefinery.buildType = () => extend(GenericSmelter.SmelterBuild, oldRefinery, {
 	
 	draw: function(){
         this.super$draw();
