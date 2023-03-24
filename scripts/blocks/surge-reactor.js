@@ -108,7 +108,7 @@ surgeReactorMeltdown.smokeEffect = Fx.none;
 
 const surgeReactorOverloadSound = loadSound("surgeReactorOverheat");
 
-const surgeReactor = extend(NuclearReactor, "surge-reactor", {
+const surgeReactor = extendContent(NuclearReactor, "surge-reactor", {
 	
     //OVERRIDE
 	drawBase: function(tile){
@@ -119,7 +119,7 @@ const surgeReactor = extend(NuclearReactor, "surge-reactor", {
         Draw.reset();
 	},
 })
-surgeReactor.buildType = () => extend(NuclearReactor.NuclearReactorBuild, surgeReactor, {
+surgeReactor.buildType = () => extendContent(NuclearReactor.NuclearReactorBuild, surgeReactor, {
 	
     //OVERRIDE
 	onDestroyed(){
@@ -152,7 +152,7 @@ surgeReactor.buildType = () => extend(NuclearReactor.NuclearReactorBuild, surgeR
 	},
 });
 
-/* const SurgeBattery = extend(Battery, "surgebattery", {
+/* const SurgeBattery = extendContent(Battery, "surgebattery", {
     //OVERRIDE
 	onDestroyed: function(tile){
 		this.super$onDestroyed(tile);

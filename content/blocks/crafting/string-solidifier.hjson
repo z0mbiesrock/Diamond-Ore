@@ -1,38 +1,39 @@
-type: Separator
-name: Phase String Solidifier
-description: Weaves loose phase string into solid phase fabric.
-itemCapacity: 20
-liquidCapacity: 30
-health: 800
-size: 4
-hasPower: true
-hasLiquids: true
-hasItems: true
-craftTime: 30
-spinnerSpeed: 8
-updateEffect: melting
-updateEffectChance: 0.25
-consumes: {
-  power: 9
-  liquid: {
-    liquid: phase-string
-    amount: 0.2
-  }
+{
+  "type": "Separator",
+  "name": "Phase String Solidifier",
+  "description": "Weaves loose phase string into solid phase fabric.",
+  "itemCapacity": 20,
+  "liquidCapacity": 30,
+  "health": 800,
+  "size": 4,
+  "hasPower": true,
+  "hasLiquids": true,
+  "hasItems": true,
+  "craftTime": 30,
+  "spinnerSpeed": 8,
+  "updateEffect": "melting",
+  "updateEffectChance": 0.25,
+  "consumes": {
+    "power": 9,
+    "liquids": [
+      {"liquid": "phase-string", "amount": 0.2}
+    ]
+  },
+  "requirements": [
+    {"item": "silicon", "amount": 275},
+    {"item": "thorium", "amount": 75},
+    {"item": "plastanium", "amount": 75},
+    {"item": "surge-alloy", "amount": 75},
+    {"item": "diamond", "amount": 125},
+    {"item": "cryogem", "amount": 150}
+  ],
+  "category": "crafting",
+  "research": {"parent": "stringmaker"},
+  "loopSound": "stringsolid",
+  "loopSoundVolume": 1.95,
+  "ambientSound": "stringsolid",
+  "ambientSoundVolume": 0.25,
+  "results": [
+    {"item": "phase-fabric", "amount": 19}
+  ]
 }
-requirements: [
-  silicon/275
-  thorium/75
-  plastanium/75
-  surge-alloy/75
-  diamond/125
-  cryogem/150
-]
-category: crafting
-research: stringmaker
-loopSound: stringsolid
-loopSoundVolume: 1.95
-ambientSound: stringsolid
-ambientSoundVolume: 0.25
-results: [
-	phase-fabric/19
-]

@@ -1,4 +1,4 @@
-const heavyCoalProc = extend(GenericCrafter, "heavy-coal-processor", {
+const heavyCoalProc = extendContent(GenericCrafter, "heavy-coal-processor", {
 	load(){
 		this.super$load();
 		this.liquidRegion = Core.atlas.find(this.name + "-liquid");
@@ -13,7 +13,7 @@ const heavyCoalProc = extend(GenericCrafter, "heavy-coal-processor", {
         ];
     }
 });
-heavyCoalProc.buildType = () => extend(GenericCrafter.GenericCrafterBuild, heavyCoalProc, {
+heavyCoalProc.buildType = () => extendContent(GenericCrafter.GenericCrafterBuild, heavyCoalProc, {
 	draw(){
         this.super$draw();
 		Draw.color(this.liquids.current().color);

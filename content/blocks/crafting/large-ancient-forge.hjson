@@ -1,52 +1,53 @@
-type: GenericSmelter
-name: Heavy Ancient Forge
-description: "A massive and extremely powerful forge, designed to synthesize [#e5b85e]Ancient Alloy[] much more easily."
-itemCapacity: 200
-health: 10800
-size: 6
-hasPower: true
-hasItems: true
-craftTime: 168
-updateEffect: overdriven
-craftEffect: nuclearShockwave
-buildCostMultiplier: 0.35
-updateEffectChance: 1
-consumes: {
-  power: 315
-  items: {
-    items: [
-      copper/20
-      lead/20
-      graphite/15
-      silicon/15
-      titanium/10
-      metaglass/20
-      thorium/20
-      phase-fabric/10
-      surge-alloy/25
-      plastanium/5
-      blast-compound/5
-    ]
+{
+  type: GenericCrafter
+  name: Heavy Ancient Forge
+  description: "A massive and extremely powerful forge, designed to synthesize [#e5b85e]Ancient Alloy[] much more easily."
+  itemCapacity: 200
+  health: 10800
+  size: 6
+  hasPower: true
+  hasItems: true
+  craftTime: 168
+  updateEffect: overdriven
+  buildCostMultiplier: 0.35
+  updateEffectChance: 1
+  consumes: {
+    power: 315
+    items: {
+      items: [
+        copper/20
+        lead/20
+        graphite/15
+        silicon/15
+        titanium/10
+        metaglass/20
+        thorium/20
+        phase-fabric/10
+        surge-alloy/25
+        plastanium/5
+        blast-compound/5
+      ]
+    }
   }
-}
-requirements: [
-  copper/3000
-  lead/3000
-  graphite/1500
-  silicon/1500
-  titanium/1000
-  metaglass/2000
-  thorium/2000
-  phase-fabric/1000
-  surge-alloy/2500
-  plastanium/5000
-  diamond/10000
-  ancient-alloy/1250
-]
-category: crafting
-research: ancient-sentinel
-loopSound: machine
-loopSoundVolume: 4
-ambientSound: respawning
-ambientSoundVolume: 0.25
-outputItem: ancient-alloy/12
+  requirements: [
+    copper/3000
+    lead/3000
+    graphite/1500
+    silicon/1500
+    titanium/1000
+    metaglass/2000
+    thorium/2000
+    phase-fabric/1000
+    surge-alloy/2500
+    plastanium/5000
+    diamond/10000
+    ancient-alloy/1250
+  ]
+  category: crafting
+  research: ancient-sentinel
+  loopSound: machine
+  loopSoundVolume: 4
+  ambientSound: respawning
+  ambientSoundVolume: 0.25
+  outputItem: ancient-alloy/12
+  }

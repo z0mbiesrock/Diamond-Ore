@@ -1,5 +1,5 @@
 
-const omniJunction = extend(Junction, "omnijunction", {
+const omniJunction = extendContent(Junction, "omnijunction", {
 	setStats(){
 		this.super$setStats();
 		this.stats.remove(Stat.liquidCapacity);
@@ -9,7 +9,7 @@ const omniJunction = extend(Junction, "omnijunction", {
 		this.bars.remove("liquid");
 	},
 });
-omniJunction.buildType = () => extend(Junction.JunctionBuild, omniJunction, {
+omniJunction.buildType = () => extendContent(Junction.JunctionBuild, omniJunction, {
 	draw(){
 		this.super$draw();
 		Draw.alpha(this.efficiency());

@@ -1,39 +1,41 @@
-type: GenericSmelter
-name: Multi-Compressor
-description: A larger and more efficient version of the Plastanium Compressor.
-itemCapacity: 50
-liquidCapacity: 50
-health: 1000
-size: 3
-hasPower: true
-hasLiquids: true
-hasItems: true
-craftTime: 30
-updateEffect: mine
-consumes: {
-  power: 3
-  items: {
-    items: [
-      titanium/4
-    ]
+{
+  type: GenericCrafter
+  name: Multi-Compressor
+  description: A larger and more efficient version of the Plastanium Compressor.
+  itemCapacity: 50
+  liquidCapacity: 50
+  health: 1000
+  size: 3
+  hasPower: true
+  hasLiquids: true
+  hasItems: true
+  craftTime: 30
+  updateEffect: mine
+  consumes: {
+    power: 3
+    items: {
+      items: [
+        titanium/4
+      ]
+    }
+    liquid: {
+      liquid: oil
+      amount: 0.4
+    }
   }
-  liquid: {
-    liquid: oil
-    amount: 0.4
+  requirements: [
+    lead/300
+    graphite/130
+    silicon/175
+    titanium/200
+    surge-alloy/35
+    diamond/35
+  ]
+  category: crafting
+  research: plastanium-compressor
+  loopSound: respawning
+  loopSoundVolume: 0.95
+  ambientSound: respawning
+  ambientSoundVolume: 0.5
+  outputItem: plastanium/4
   }
-}
-requirements: [
-  lead/300
-  graphite/130
-  silicon/175
-  titanium/200
-  surge-alloy/35
-  diamond/35
-]
-category: crafting
-research: plastanium-compressor
-loopSound: respawning
-loopSoundVolume: 0.95
-ambientSound: respawning
-ambientSoundVolume: 0.5
-outputItem: plastanium/4

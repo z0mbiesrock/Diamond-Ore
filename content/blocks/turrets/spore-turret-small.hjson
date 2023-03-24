@@ -1,4 +1,4 @@
-//type: DoubleTurret
+type: ItemTurret
 name: Small Spore Turret
 description: Spore Turret
 health: 400

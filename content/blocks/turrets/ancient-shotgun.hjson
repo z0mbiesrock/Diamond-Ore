@@ -1,4 +1,4 @@
-//type: BurstTurret
+type: ItemTurret
 name: Ancient Shotgun
 description: Fires a spread of multiple bullets. Very powerful at close range.
 health: 9000

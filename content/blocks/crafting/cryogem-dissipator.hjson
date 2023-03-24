@@ -1,29 +1,29 @@
-//type: GenericCrafter
-name: Cryogem Dissipator
-health: 540
-size: 3
-description: Uses a large amount of power to disassemble cryogems back into pure cryofluid.
-liquidCapacity: 600
-hasPower: true
-hasLiquids: true
-hasItems: true
-craftTime: 15
-updateEffect: smelt
-outputLiquid: cryofluid/60
-consumes: {
-  power: 4
-  item: cryogem
-}
-requirements: [
-  lead/350
-  silicon/180
-  titanium/320
-  phase-fabric/150
-  diamond/100
-]
-category: crafting
-research: cryogem-compressor
-ambientSound: respawning
-ambientSoundVolume: 0.5
-
-
+{
+  type: GenericCrafter
+  name: Cryogem Dissipator
+  health: 540
+  size: 3
+  description: Uses a large amount of power to disassemble cryogems back into pure cryofluid.
+  liquidCapacity: 600
+  hasPower: true
+  hasLiquids: true
+  hasItems: true
+  craftTime: 60
+  updateEffect: smeltsmoke 
+  outputLiquid: cryofluid/0.5
+  consumes: {
+    power: 4
+    item: cryogem
+  }
+  requirements: [
+    lead/350
+    silicon/180
+    titanium/320
+    phase-fabric/150
+    diamond/100
+  ]
+  category: crafting
+  research: cryogem-compressor
+  ambientSound: respawning
+  ambientSoundVolume: 0.5
+  }

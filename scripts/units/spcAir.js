@@ -15,7 +15,7 @@ const spcAirAI = prov(() => {
   
   return u;
 });
-const spcAirT1 = extend(UnitType, "scout", {
+const spcAirT1 = extendContent(UnitType, "scout", {
 });
 spcAirT1.constructor = () => extend(UnitWaterMove, {
 });
@@ -25,7 +25,7 @@ const diamondItem = Vars.content.getByName(ContentType.item, "diamond-ore-diamon
 const cryogemItem = Vars.content.getByName(ContentType.item, "diamond-ore-cryogem");
 Blocks.airFactory.plans.add(new UnitFactory.UnitPlan(spcAirT1, 60 * 20, ItemStack.with(Items.silicon, 30, Items.titanium, 25, cryogemItem, 15, diamondItem, 15)));
 
-const spcAirT2 = extend(UnitType, "fighter", {
+const spcAirT2 = extendContent(UnitType, "fighter", {
 });
 spcAirT2.constructor = () => extend(UnitWaterMove, {});
 //register(spcAirT2);
@@ -34,7 +34,7 @@ spcAirT2.defaultController = spcAirAI;
 var upgradeA = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-scout"), Vars.content.getByName(ContentType.unit, "diamond-ore-fighter")]);
 Blocks.additiveReconstructor.upgrades.add(upgradeA.toArray(UnitType));
 
-const spcAirT3 = extend(UnitType, "destroyer", {
+const spcAirT3 = extendContent(UnitType, "destroyer", {
 });
 spcAirT3.constructor = () => extend(UnitWaterMove, {});
 //register(spcAirT3);
@@ -44,7 +44,7 @@ spcAirT3.defaultController = spcAirAI;
 var upgradeB = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-fighter"), Vars.content.getByName(ContentType.unit, "diamond-ore-destroyer")]);
 Blocks.multiplicativeReconstructor.upgrades.add(upgradeB.toArray(UnitType));
 
-const spcAirT4 = extend(UnitType, "cruiser", {
+const spcAirT4 = extendContent(UnitType, "cruiser", {
 });
 spcAirT4.constructor = () => extend(UnitWaterMove, {});
 //register(spcAirT4);
@@ -53,7 +53,7 @@ spcAirT4.defaultController = spcAirAI;
 var upgradeC = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-destroyer"), Vars.content.getByName(ContentType.unit, "diamond-ore-cruiser")]);
 Blocks.exponentialReconstructor.upgrades.add(upgradeC.toArray(UnitType));
 
-const spcAirT5 = extend(UnitType, "battleship", {
+const spcAirT5 = extendContent(UnitType, "battleship", {
 });
 spcAirT5.constructor = () => extend(UnitWaterMove, {});
 //register(spcAirT5);

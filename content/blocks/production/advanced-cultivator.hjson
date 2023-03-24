@@ -1,42 +1,57 @@
-name: Advanced Cultivator
-description: Cultivates tiny concentrations of atmospheric spores into spore pods.
-details: An advanced cultivator, capable of growing spore pods more efficiently.
-type: Cultivator
-health: 450
-size: 3
-itemCapacity: 20
-liquidCapacity: 45
-outputItem: spore-pod/2
-hasItems: true
-hasLiquids: true
-floating: true
-hasPower: true
-craftTime: 150
-attribute: spores
-consumes: {
-  power: 3.225
-  liquid: {
-    liquid: water
-    amount: 0.2
-    booster: false
-	optional: false
+{
+  type: GenericCrafter
+  name: Advanced Cultivator
+  description: Cultivates tiny concentrations of atmospheric spores into spore pods.
+  details: An advanced cultivator, capable of growing spore pods more efficiently.
+  health: 450
+  size: 3
+  itemCapacity: 20
+  liquidCapacity: 45
+  hasItems: true
+  hasLiquids: true
+  floating: true
+  hasPower: true
+  craftTime: 120
+  consumes: {
+    power: 3.25
+    liquid: {
+      liquid: water
+      amount: 0.3 // 18 per second
+    }
   }
-}
-requirements: [
-  copper/200
-  lead/500
-  silicon/200
-  thorium/50
-  diamond/50
-]
-category: production
-research:{
-  parent: cultivator
-  requirements:[
-	  copper/100000
-	  lead/100000
-	  silicon/72000
-      spore-pod/3000
-      diamond/1500
+  outputItem: spore-pod/4
+  attribute: spores
+  requirements: [
+    lead/500
+    copper/200
+    silicon/200
+    thorium/50
+    diamond/50
   ]
+  category: production
+  research: cultivator
+  researchCostMultiplier: 1.5
+  drawer: {
+   "type": "DrawMulti",
+   "drawers": [
+      {
+          "type": "DrawDefault"
+      },
+      {
+         "type": "DrawLiquidTile",
+         "drawLiquid": "water"
+      },
+      {
+           "type": "DrawCultivator"
+      },
+      {
+          "type": "DrawRegion",
+          "suffix": "-middle"
+      },
+      {
+          "type": "DrawRegion",
+          "suffix": "-top"
+      }
+   ]
+  }
 }

@@ -1,40 +1,40 @@
-//type: GenericSmelter
-name: Ancient Refinery
-description: "Smelts ancient scrap together in order to restore it to [#e5b85e]its original form[]. Requires vast amounts of power, and can optionally use Slag to speed up refinement."
-itemCapacity: 20
-liquidCapacity: 30
-health: 2500
-baseExplosiveness: 2500
-size: 5
-hasPower: true
-hasItems: true
-craftTime: 90
-//craftEffect: pulverizeRedder
-//updateEffect: mine
-buildCostMultiplier: 0.5
-drawLiquidLight: true
-updateEffectChance: 0.05
-flameColor: ffffcb
-consumes: {
-  power: 200
-  items: {
-    items: [
-      ancient-scrap/4
-    ]
+{
+  type: GenericCrafter
+  name: Ancient Refinery
+  description: "Smelts ancient scrap together in order to restore it to [#e5b85e]its original form[]. Requires vast amounts of power, and can optionally use Slag to speed up refinement."
+  itemCapacity: 20
+  liquidCapacity: 30
+  health: 2500
+  baseExplosiveness: 2500
+  size: 5
+  hasPower: true
+  hasItems: true
+  craftTime: 90
+  buildCostMultiplier: 0.5
+  drawLiquidLight: true
+  updateEffectChance: 0.05
+  flameColor: ffffcb
+  consumes: {
+    power: 200
+    items: {
+      items: [
+        ancient-scrap/4
+      ]
+    }
   }
+  requirements: [
+    graphite/500
+    silicon/500
+    titanium/900
+    surge-alloy/1500
+    plastanium/150
+    diamond/150
+  ]
+  category: crafting
+  research: ancient-scrap
+  loopSound: conveyor
+  loopSoundVolume: 1.75
+  ambientSound: machine
+  ambientSoundVolume: 0.5
+  outputItem: ancient-alloy/1
 }
-requirements: [
-  graphite/500
-  silicon/500
-  titanium/900
-  surge-alloy/1500
-  plastanium/150
-  diamond/150
-]
-category: crafting
-research: ancient-scrap
-loopSound: conveyor
-loopSoundVolume: 1.75
-ambientSound: machine
-ambientSoundVolume: 0.5
-outputItem: ancient-alloy/1

@@ -34,7 +34,7 @@ const falconAI = prov(() => {
   
   return u;
 });
-const MleGndT4 = extend(UnitType, "falcon", {
+const MleGndT4 = extendContent(UnitType, "falcon", {
 });
 
 MleGndT4.constructor = () => extend(MechUnit, {

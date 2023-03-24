@@ -1,4 +1,4 @@
-const waterDecorruptor = extend(AttributeSmelter, "water-decorruptor", {
+const waterDecorruptor = extendContent(AttributeSmelter, "water-decorruptor", {
 	/* setBars(){
 		this.super$setBars();		
 		this.bars.add("Water", entity => new Bar(
@@ -21,7 +21,7 @@ const waterDecorruptor = extend(AttributeSmelter, "water-decorruptor", {
 	//new Func(){bars.add("liquidOutput", this => new Bar(this.outputLiquid.liquid, this.outputLiquid.liquid.color, (this.liquids.get(this.outputLiquid.liquid) / this.liquidCapacity)))}
 	//new Func(){get(entity, bar){ new Bar()}}
 })
-/* waterDecorruptor.buildType = () => extend(GenericSmelter.SmelterBuild, waterDecorruptor, {
+/* waterDecorruptor.buildType = () => extendContent(GenericSmelter.SmelterBuild, waterDecorruptor, {
 	draw(){
         this.super$draw();
 		Draw.color(this.outputLiquid.color);

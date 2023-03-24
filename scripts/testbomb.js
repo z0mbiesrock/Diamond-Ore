@@ -9,7 +9,7 @@ surgeReactorMeltdownBlast.damage = 500;
 surgeReactorMeltdownBlast.drawSize = 480;
 surgeReactorMeltdownBlast.lifetime = 1;
 surgeReactorMeltdownBlast.hitEffect = Fx.hitMeltdown;
-surgeReactorMeltdownBlast.despawnEffect = Fx.bigShockwave;
+surgeReactorMeltdownBlast.despawnEffect = Fx.nuclearShockwave;
 surgeReactorMeltdownBlast.hitSize = 5;
 surgeReactorMeltdownBlast.lightining = 5;
 surgeReactorMeltdownBlast.lightningLength = 25;
@@ -37,7 +37,7 @@ const siloLaunchEffect = Effect(20, e => {
 });
 
 //create the block type
-const silo = extend(Block, "testbomb", {
+const silo = extendContent(Block, "testbomb", {
     //override the method to build configuration
     buildConfiguration(tile, table){
         table.addImageButton(Icon.upOpen, Styles.clearTransi, run(() => {
@@ -53,7 +53,7 @@ const silo = extend(Block, "testbomb", {
         if(tile.entity.cons.valid()){
             //make this effect occur at the tile location
             Effect.effect(siloLaunchEffect, tile)
-            Effect.effect(Fx.bigShockwave, tile)
+            Effect.effect(Fx.nuclearShockwave, tile)
 
             for(var i = 0; i < 15; i++){
 				//this also doesnt do anything. drawSize is the distance where bullets stopped rendering.

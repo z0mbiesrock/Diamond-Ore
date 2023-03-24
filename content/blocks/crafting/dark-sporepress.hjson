@@ -1,44 +1,46 @@
-//type: AttributeSmelter
-name: Dark Spore Press
-description: Compresses mutated spore pods under extreme pressure to liquefy them, potentially using them to cultivate even more pods. More efficient in oily locations.
-itemCapacity: 10
-health: 900
-size: 3
-hasPower: true
-hasItems: true
-hasLiquids: true
-attribute: oil
-craftTime: 60
-buildCostMultiplier: 0.75
-drawLiquidLight: false
-liquidCapacity: 600
-boostScale: 0.05
-maxHeatBoost: 2
-updateEffectChance: 0.15
-outputLiquid: corrupt-water/60
-consumes: {
-  power: 14
-  items: {
-    items: [
-      dark-spore-pod/1
-    ]
+{
+  type: GenericCrafter
+  name: Dark Spore Press
+  description: Compresses mutated spore pods under extreme pressure to liquefy them, potentially using them to cultivate even more pods. More efficient in oily locations.
+  itemCapacity: 10
+  health: 900
+  size: 3
+  hasPower: true
+  hasItems: true
+  hasLiquids: true
+  attribute: oil
+  craftTime: 60
+  buildCostMultiplier: 0.75
+  drawLiquidLight: false
+  liquidCapacity: 600
+  boostScale: 0.05
+  maxHeatBoost: 2
+  updateEffectChance: 0.15
+  consumes: {
+    power: 14
+    items: {
+      items: [
+        dark-spore-pod/1
+      ]
+    }
+    liquid: {
+      liquid: oil
+      amount: 1
+    }
   }
-  liquid: {
-    liquid: oil
-    amount: 1
-  }
+  outputLiquid: corrupt-water/60
+  requirements: [
+    copper/600
+    titanium/300
+    silicon/300
+    metaglass/125
+    plastanium/900
+    dark-spore-pod/150
+  ]
+  category: crafting
+  research: mutator
+  loopSound: respawning
+  loopSoundVolume: 1.25
+  ambientSound: conveyor
+  ambientSoundVolume: 0.5
 }
-requirements: [
-  copper/600
-  titanium/300
-  silicon/300
-  metaglass/125
-  plastanium/900
-  dark-spore-pod/150
-]
-category: crafting
-research: mutator
-loopSound: respawning
-loopSoundVolume: 1.25
-ambientSound: conveyor
-ambientSoundVolume: 0.5

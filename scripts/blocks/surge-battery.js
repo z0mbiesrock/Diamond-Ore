@@ -1,5 +1,5 @@
-const surgeBattery = extend(Battery, "surgebattery", {});
-surgeBattery.buildType = () => extend(Battery.BatteryBuild, surgeBattery, {
+const surgeBattery = extendContent(Battery, "surgebattery", {});
+surgeBattery.buildType = () => extendContent(Battery.BatteryBuild, surgeBattery, {
     //OVERRIDE
 	onDestroyed(){
 		this.super$onDestroyed();

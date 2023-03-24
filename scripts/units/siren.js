@@ -1,5 +1,5 @@
 
-const SpoNavT1 = extend(UnitType, "siren", {
+const SpoNavT1 = extendContent(UnitType, "siren", {
 });
 SpoNavT1.constructor = () => extend(UnitWaterMove, {});
 //SpoNavT4.abilities.add(new StatusFieldAbility(StatusEffects.overclock, 60 * 6, 60 * 9, 64));

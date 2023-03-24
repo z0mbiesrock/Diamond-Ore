@@ -1,41 +1,42 @@
-type: GenericSmelter
-name: Blast Furnace
-description: Efficiently combines a decent amount of lead and sand to make a large batch of metaglass using blast compound as a catalyst.
-itemCapacity: 20
-health: 900
-size: 3
-hasPower: true
-hasItems: true
-craftTime: 380
-craftEffect: pulverizeRedder
-updateEffect: mine
-buildCostMultiplier: 0.5
-drawLiquidLight: true
-itemCapacity: 60
-updateEffectChance: 0.05
-flameColor: ffe9cc
-consumes: {
-  power: 16.66666666666
-  items: {
-    items: [
-      sand/15
-      lead/15
-	  blast-compound/4
-    ]
+{
+  type: GenericCrafter
+  name: Blast Furnace
+  description: Efficiently combines a decent amount of lead and sand to make a large batch of metaglass using blast compound as a catalyst.
+  itemCapacity: 20
+  health: 900
+  size: 3
+  hasPower: true
+  hasItems: true
+  craftTime: 380
+  updateEffect: mine
+  buildCostMultiplier: 0.5
+  drawLiquidLight: true
+  itemCapacity: 60
+  updateEffectChance: 0.05
+  flameColor: ffe9cc
+  consumes: {
+    power: 16.66666666666
+    items: {
+      items: [
+        sand/15
+        lead/15
+        blast-compound/4
+      ]
+    }
   }
+  requirements: [
+    metaglass/900
+    copper/600
+    lead/300
+    graphite/300
+    plastanium/150
+    diamond/150
+  ]
+  category: crafting
+  research: kiln
+  loopSound: machine
+  loopSoundVolume: 0.95
+  ambientSound: respawning
+  ambientSoundVolume: 0.5
+  outputItem: metaglass/30
 }
-requirements: [
-  copper/600
-  lead/300
-  graphite/300
-  metaglass/900
-  plastanium/150
-  diamond/150
-]
-category: crafting
-research: surge-pyra-forge
-loopSound: machine
-loopSoundVolume: 0.95
-ambientSound: respawning
-ambientSoundVolume: 0.5
-outputItem: metaglass/30

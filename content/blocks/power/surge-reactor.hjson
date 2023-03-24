@@ -1,47 +1,53 @@
-//type: NuclearReactor
-name: Surge Reactor
-description: Generates humongous amounts of power from surge alloy. Requires constant cooling. Will explode violently if insufficient amounts of coolant are supplied.
-details: A massive and incredibly unstable reactor which converts surge alloy directly into energy. Power output depends on fullness, with base power generated at full capacity.
-itemCapacity: 100
-liquidCapacity: 300
-health: 6000
-size: 6
-itemDuration: 300
-//buildVisibility: sandboxOnly
-baseExplosiveness: 50000
-heating: 0.02
-explosionRadius: 12
-explosionDamage: 9999999999
-smokeThreshold: 0.5
-flashThreshold: 0.75
-coolantPower: 0.225
-buildCostMultiplier: 0.73227
-powerProduction: 166.66666666666666666666666666667
-consumes: {
-  
-  items: {
+{
+  type: NuclearReactor
+  name: Surge Reactor
+  description: Generates huge amounts of power from surge alloy. Requires constant cooling. Will explode violently if insufficient amounts of coolant are supplied.
+  details: A massive and incredibly unstable reactor which converts surge alloy directly into energy. Power output depends on fullness, with base power generated at full capacity.
+  health: -1
+  size: 6
+  heating: 0.02
+  explosionRadius: 16
+  explosionDamage: 240000
+  explosionPuddles: 12
+  explosionPuddlesRange: 24
+  explodeEffect: massiveExplosion 
+  smokeThreshold: 0.5
+  flashThreshold: 0.75
+  coolantPower: 0.225
+  buildCostMultiplier: 0.73227
+  hasPower: true
+  hasLiquids: true
+  hasItems: true
+  consumesPower: false
+  outputsPower: true
+  powerProduction: 166.66666666666666666666666666667
+  itemCapacity: 100
+  liquidCapacity: 180
+  fuelItem: surge-alloy
+  itemDuration: 300
+  consumes: {
     items: [
       surge-alloy/1
     ]
+    liquid: {
+      liquid: cryofluid
+      amount: 1
+    }
   }
-  liquid: {
-    liquid: cryofluid
-    amount: 1.225
+  requirements: [
+    thorium/1050
+    surge-alloy/550
+    silicon/275
+    metaglass/275
+    graphite/275
+    cryogem/150
+    diamond/150
+    phase-fabric/80
+  ]
+  category: power
+  research: thorium-reactor
+  loopSound: thruster
+  loopSoundVolume: 0.85
+  ambientSound: respawning
+  ambientSoundVolume: 0.25
   }
-}
-requirements: [
-  silicon/275
-  metaglass/275
-  graphite/275
-  surge-alloy/550
-  phase-fabric/80
-  thorium/1050
-  cryogem/150
-  diamond/150
-]
-category: power
-research: thorium-reactor
-loopSound: thruster
-loopSoundVolume: 0.85
-ambientSound: respawning
-ambientSoundVolume: 0.25

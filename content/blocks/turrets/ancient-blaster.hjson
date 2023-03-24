@@ -1,4 +1,4 @@
-//type: BurstTurret
+type: ItemTurret
 name: Ancient Blaster
 description: A small but sturdy turret.
 health: 2400

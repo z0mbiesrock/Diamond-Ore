@@ -1,5 +1,5 @@
 //require("effects")
-const ancientSentinel = extend(ItemTurret, "ancient-sentinel", {
+const ancientSentinel = extendContent(ItemTurret, "ancient-sentinel", {
 	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
 		this.super$drawBase(tile);
@@ -35,7 +35,7 @@ const ancientBlasterAmmoUse = Effect(20, e => {
     }}) 
     Angles.randLenVectors(e.id, 3, 1 + 28 * e.fin(), e.rotation + 180, 30,d);
 });
-const ancientBlaster = extend(ItemTurret, "ancient-blaster", {
+const ancientBlaster = extendContent(ItemTurret, "ancient-blaster", {
 	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
 		this.super$drawBase(tile);
@@ -50,7 +50,7 @@ const ancientBlaster = extend(ItemTurret, "ancient-blaster", {
 ancientBlaster.ammoUseEffect = ancientBlasterAmmoUse;
 ancientBlaster.shootEffect = ancientBlasterShoot;
 ancientBlaster.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1), 0.1)).update(false).boost();
-const ancientPulser = extend(PowerTurret, "ancient-pulser", {
+const ancientPulser = extendContent(PowerTurret, "ancient-pulser", {
 	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
 		this.super$drawBase(tile);
@@ -89,7 +89,7 @@ ancientBladeLaser.shake = 0;
 ancientBladeLaser.pierce = true;
 ancientBladeLaser.shootEffect = Fx.shootBigSmoke2;
 ancientBladeLaser.smokeEffect = Fx.shootBigSmoke2;
-const ancientBlade = extend(LaserTurret, "ancient-blade", {
+const ancientBlade = extendContent(LaserTurret, "ancient-blade", {
 	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
 		this.super$drawBase(tile);
@@ -104,7 +104,7 @@ const ancientBlade = extend(LaserTurret, "ancient-blade", {
 ancientBlade.shootType = ancientBladeLaser;
 ancientBlade.update = true;
 ancientBlade.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1), 0.11)).update(false);
-const ancientShotgun = extend(ItemTurret, "ancient-shotgun", {
+const ancientShotgun = extendContent(ItemTurret, "ancient-shotgun", {
 	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
 		this.super$drawBase(tile);
@@ -119,7 +119,7 @@ const ancientShotgun = extend(ItemTurret, "ancient-shotgun", {
 ancientShotgun.ammoUseEffect = ancientBlasterAmmoUse;
 ancientShotgun.shootEffect = ancientShotgunShoot;
 ancientShotgun.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1), 0.15)).update(false).boost();
-const ancientSprayer = extend(ItemTurret, "ancient-sprayer", {
+const ancientSprayer = extendContent(ItemTurret, "ancient-sprayer", {
 	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
 		this.super$drawBase(tile);

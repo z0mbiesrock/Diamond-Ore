@@ -1,52 +1,60 @@
-//type: ChargeTurret
-name: Yggdrasil
-description: Uses astronomical amounts of power to charge and launch a giant ball of destructive plasma that annihilates anything it hits!
-details: Ultimate plasma cannon of ancient origin.
-health: 32000
-size: 4
-reloadTime: 600
-range: 800
-coolantMultiplier: 7
-liquidCapacity: 40
-buildCostMultiplier: 0.33333333
-inaccuracy: 0
-rotateSpeed: 1
-cooldown: 0.003333
-shootSound: yggdrasilfire
-shootCone: 0.1
-//layer: power
-outlineIcon: false
-expanded: true
-powerUse: 150
-//chargeEffect: yggdrasilCharge
-chargeBeginEffect: shockwave
-chargeSound: YggdrasilCharge
-chargeEffects: 60
-chargeTime: 300
-chargeMaxDelay: 300
-shootShake: 9
+{
+  type: ItemTurret
+  name: Yggdrasil
+  description: *NOT WORKING FOR NOW* Uses astronomical amounts of power to charge and launch a giant ball of destructive plasma that annihilates anything it hits!
+  details: *NOT WORKING FOR NOW* Ultimate plasma cannon of ancient origin.
+  health: 32000
+  size: 4
+  reload: 600
+  range: 800
+  coolantMultiplier: 7
+  liquidCapacity: 40
+  buildCostMultiplier: 0.33333333
+  inaccuracy: 0
+  rotateSpeed: 1
+  cooldown: 0.003333
+  ammoTypes: {
+    surge-alloy: {
+      type: BasicBulletType
+      speed: 9
+      damage: 32
+      width: 7
+      height: 7
+    frontColor: aaffff
+    backColor: ffffff
+      shootEffect: shootSmall
+      smokeEffect: shootSmallSmoke
+    hitEffect: hitLancer
+    shrinkY: 0
+    pierce: true
+    sprite: diamond-ore-diamondbullet
+    }
+  }
+  shootSound: yggdrasilfire
+  shootCone: 0.1
+  //layer: power
+  outlineIcon: false
+  expanded: true
+  powerUse: 150
+  chargeEffect: yggdrasilCharge
+  chargeBeginEffect: shockwave
+  chargeSound: YggdrasilCharge
+  chargeEffects: 60
+  chargeTime: 300
+  chargeMaxDelay: 300
+  shootShake: 9
 
-requirements: [
-  diamond/4000
-  cryogem/1250
-  thorium/2250
-  surge-alloy/2500
-  plastanium/3000
-  phase-fabric/1000
-  graphite/1500
-]
-category: turret
-research:{
-  parent: spectre
-  requirements:[
-	diamond/400000
-	cryogem/125000
-	silicon/400000
-	thorium/2250000
-	surge-alloy/1250000
-	plastanium/1300000
-	phase-fabric/1100000
-	graphite/1050000
-	ancient-alloy/12500
+  requirements: [
+    diamond/4000
+    cryogem/1250
+    thorium/2250
+    surge-alloy/2500
+    plastanium/3000
+    phase-fabric/1000
+    graphite/1500
   ]
+  category: turret
+  research:{
+    parent: spectre
+  }
 }

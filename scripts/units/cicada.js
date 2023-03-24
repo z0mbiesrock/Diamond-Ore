@@ -31,7 +31,7 @@ cicadaExplosionShard.hitColor = Color.valueOf("#b28768");
 cicadaExplosionShard.backColor = Color.valueOf("#eab678");
 cicadaExplosionShard.sprite = "diamond-ore-diamondshard";
 
-const SuiAirT5 = extend(UnitType, "cicada", {
+const SuiAirT5 = extendContent(UnitType, "cicada", {
 });
 SuiAirT5.constructor = () => extend(PayloadUnit, {
 	update(){

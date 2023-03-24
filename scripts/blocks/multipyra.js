@@ -1,4 +1,4 @@
-const multiPyra = extend(GenericCrafter, "multipyra", {
+const multiPyra = extendContent(GenericCrafter, "multipyra", {
   load(){
 	  this.super$load();
 	  this.lightRegion = Core.atlas.find(this.name + "-top");
@@ -9,7 +9,7 @@ const multiPyra = extend(GenericCrafter, "multipyra", {
 		Draw.rect(this.lightRegion, tile.drawx(), tile.drawy());
 	}, */
 });
-multiPyra.buildType = () => extend(GenericCrafter.GenericCrafterBuild, multiPyra, {
+multiPyra.buildType = () => extendContent(GenericCrafter.GenericCrafterBuild, multiPyra, {
 	draw(){
         this.super$draw();
 		Draw.alpha(this.warmup);

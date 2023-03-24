@@ -1,40 +1,41 @@
-type: GenericSmelter
-name: Heavy Surge Forge
-description: Fuses titanium, lead, silicon and copper into surge alloy.
-itemCapacity: 60
-health: 400
-size: 6
-hasPower: true
-hasItems: true
-craftTime: 100
-updateEffect: pulverizeRedder
-buildCostMultiplier: 0.5
-drawLiquidLight: true
-updateEffectChance: 0.12
-consumes: {
-  power: 12
-  items: {
-    items: [
-      lead/9
-      copper/9
-      titanium/6
-      silicon/3
-    ]
+{
+  type: GenericCrafter
+  name: Heavy Surge Forge
+  description: Fuses titanium, lead, silicon and copper into surge alloy.
+  itemCapacity: 60
+  health: 400
+  size: 6
+  hasPower: true
+  hasItems: true
+  craftTime: 100
+  buildCostMultiplier: 0.5
+  drawLiquidLight: true
+  updateEffectChance: 0.12
+  consumes: {
+    power: 12
+    items: {
+      items: [
+        lead/9
+        copper/9
+        titanium/6
+        silicon/3
+      ]
+    }
   }
+  requirements: [
+    lead/240
+    graphite/120
+    silicon/240
+    copper/240
+    titanium/240
+    thorium/210
+    cryogem/15
+  ]
+  category: crafting
+  research: surge-smelter
+  loopSound: machine
+  loopSoundVolume: 0.95
+  ambientSound: respawning
+  ambientSoundVolume: 0.5
+  outputItem: surge-alloy/5
 }
-requirements: [
-  lead/240
-  graphite/120
-  silicon/240
-  copper/240
-  titanium/240
-  thorium/210
-  cryogem/15
-]
-category: crafting
-research: diamond-synthesizer
-loopSound: machine
-loopSoundVolume: 0.95
-ambientSound: respawning
-ambientSoundVolume: 0.5
-outputItem: surge-alloy/5

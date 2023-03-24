@@ -64,9 +64,9 @@ sporeBlockDeath.frontColor = Color.valueOf("#42336f");
 sporeBlockDeath.backColor = Color.valueOf("#6d54b7");
 //print("testing 123");
 
-const darkSporeBlock = extend(Wall, "dark-spore-block", {
+const darkSporeBlock = extendContent(Wall, "dark-spore-block", {
 });
-darkSporeBlock.buildType = () => extend(Wall.WallBuild, darkSporeBlock, {
+darkSporeBlock.buildType = () => extendContent(Wall.WallBuild, darkSporeBlock, {
     updateTile(){
         //when health is lower than max health
         if ( (this.healthf() < 1) && (Mathf.chance(slowerregen)) ) {
@@ -74,9 +74,9 @@ darkSporeBlock.buildType = () => extend(Wall.WallBuild, darkSporeBlock, {
 		}
 	},
 });
-const darkSporeBlockLarge = extend(Wall, "dark-spore-block-large", {
+const darkSporeBlockLarge = extendContent(Wall, "dark-spore-block-large", {
 });
-darkSporeBlockLarge.buildType = () => extend(Wall.WallBuild, darkSporeBlockLarge, {
+darkSporeBlockLarge.buildType = () => extendContent(Wall.WallBuild, darkSporeBlockLarge, {
     updateTile(){
         //when health is lower than max health
         if ( (this.healthf() < 1) && (Mathf.chance(slowerregen)) ) {
@@ -84,14 +84,14 @@ darkSporeBlockLarge.buildType = () => extend(Wall.WallBuild, darkSporeBlockLarge
 		}
 	},
 });
-const sporeCluster = extend(Cultivator, "sporecluster", {
+const sporeCluster = extendContent(Cultivator, "sporecluster", {
     icons(){
         return [
             Core.atlas.find(this.name)
         ];
     }
 });
-sporeCluster.buildType = () => extend(Cultivator.CultivatorBuild, sporeCluster, {
+sporeCluster.buildType = () => extendContent(Cultivator.CultivatorBuild, sporeCluster, {
 	//OVERRIDE
 	draw(){
 		var podnum = Mathf.round(Mathf.randomSeed(this.id, 1, 4));
@@ -125,7 +125,7 @@ sporeCluster.buildType = () => extend(Cultivator.CultivatorBuild, sporeCluster, 
 	}
 	
 });
-const sporeTurretA = extend(ItemTurret, "spore-turret", {
+const sporeTurretA = extendContent(ItemTurret, "spore-turret", {
 	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
 		this.super$drawBase(tile);
@@ -136,13 +136,13 @@ const sporeTurretA = extend(ItemTurret, "spore-turret", {
         ];
     }
 });
-sporeTurretA.buildType = () => extend(ItemTurret.ItemTurretBuild, sporeTurretA, {
+sporeTurretA.buildType = () => extendContent(ItemTurret.ItemTurretBuild, sporeTurretA, {
 	draw(){
 		Draw.rect(Core.atlas.find(this.name + "-base"), this.x, this.y);
         Draw.color();
 	},	
 });
-const sporeTurretB = extend(ItemTurret, "spore-turret-b", {
+const sporeTurretB = extendContent(ItemTurret, "spore-turret-b", {
 	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
 		this.super$drawBase(tile);
@@ -153,49 +153,49 @@ const sporeTurretB = extend(ItemTurret, "spore-turret-b", {
         ];
     }
 });
-sporeTurretB.buildType = () => extend(ItemTurret.ItemTurretBuild, sporeTurretB, {
+sporeTurretB.buildType = () => extendContent(ItemTurret.ItemTurretBuild, sporeTurretB, {
 	draw(){
 		Draw.rect(Core.atlas.find(this.name + "-base"), this.x, this.y);
         Draw.color();
 	},
 	
 });
-const sporeTurretC = extend(ItemTurret, "spore-turret-c", {
+const sporeTurretC = extendContent(ItemTurret, "spore-turret-c", {
     icons(){
         return [
             Core.atlas.find(this.name)
         ];
     }
 });
-sporeTurretC.buildType = () => extend(ItemTurret.ItemTurretBuild, sporeTurretC, {
+sporeTurretC.buildType = () => extendContent(ItemTurret.ItemTurretBuild, sporeTurretC, {
 	draw(){
 		Draw.rect(Core.atlas.find(this.name + "-base"), this.x, this.y);
         Draw.color();
 	},
 	
 });
-/* extend(Floor, "spore-water", {
+/* extendContent(Floor, "spore-water", {
     icons(){
         return [
             Core.atlas.find(this.name)
         ];
     }
 });
-extend(Floor, "spore-water-deep", {
+extendContent(Floor, "spore-water-deep", {
     icons(){
         return [
             Core.atlas.find(this.name)
         ];
     }
 }); */
-const sporeTurretSmlA = extend(ItemTurret, "spore-turret-small", {
+const sporeTurretSmlA = extendContent(ItemTurret, "spore-turret-small", {
     icons(){
         return [
             Core.atlas.find(this.name)
         ];
     }
 });
-sporeTurretSmlA.buildType = () => extend(ItemTurret.ItemTurretBuild, sporeTurretSmlA, {
+sporeTurretSmlA.buildType = () => extendContent(ItemTurret.ItemTurretBuild, sporeTurretSmlA, {
 	draw(){
 		Draw.rect(Core.atlas.find(this.name + "-base"), this.x, this.y);
         Draw.color();
@@ -215,14 +215,14 @@ sporeTurretSmlA.buildType = () => extend(ItemTurret.ItemTurretBuild, sporeTurret
      },
 	
 });
-const sporeTurretSmlB = extend(ItemTurret, "spore-turret-small-dark", {
+const sporeTurretSmlB = extendContent(ItemTurret, "spore-turret-small-dark", {
     icons(){
         return [
             Core.atlas.find(this.name)
         ];
     },
 });
-sporeTurretSmlB.buildType = () => extend(ItemTurret.ItemTurretBuild, sporeTurretSmlB, {
+sporeTurretSmlB.buildType = () => extendContent(ItemTurret.ItemTurretBuild, sporeTurretSmlB, {
 	draw(){
 		Draw.rect(Core.atlas.find(this.name + "-base"), this.x, this.y);
         Draw.color();
@@ -243,7 +243,7 @@ sporeTurretSmlB.buildType = () => extend(ItemTurret.ItemTurretBuild, sporeTurret
 	
 });
 
-const sporeConveyor = extend(Conveyor, "spore-conveyor", {
+const sporeConveyor = extendContent(Conveyor, "spore-conveyor", {
     icons(){
         return [
             Core.atlas.find(this.name + "-base"),
@@ -251,7 +251,7 @@ const sporeConveyor = extend(Conveyor, "spore-conveyor", {
         ];
     }
 });
-sporeConveyor.buildType = () => extend(Conveyor.ConveyorBuild, sporeConveyor, {
+sporeConveyor.buildType = () => extendContent(Conveyor.ConveyorBuild, sporeConveyor, {
     draw(){
 		Draw.rect(Core.atlas.find(sporeConveyor.name+"-base"), this.x, this.y);
         this.super$draw();
@@ -294,7 +294,7 @@ const mutatorUpdate = Effect(45, e => {
     }})
     Angles.randLenVectors(e.id, 3, -6 + e.fin() * 12, d);
 });
-const sporeMutator = extend(AttributeSmelter, "mutator", {
+const sporeMutator = extendContent(AttributeSmelter, "mutator", {
 	load(){
 		this.super$load();
 	},
@@ -306,7 +306,7 @@ const sporeMutator = extend(AttributeSmelter, "mutator", {
         ];
     }
 });
-sporeMutator.buildType = () => extend(AttributeSmelter.AttributeSmelterBuild, sporeMutator, {
+sporeMutator.buildType = () => extendContent(AttributeSmelter.AttributeSmelterBuild, sporeMutator, {
 	/* draw(){
 		if (this.initiate != true){
 			this.initiate = true;
@@ -439,7 +439,7 @@ const sporeVaultDeathExplode = Effect(105, e => {
     Angles.randLenVectors(e.id, 10, 240 * e.fin() * alignAebg, e.rotation + Mathf.random(-5,5) + (40 * (alignXryg - alignBhur)), 360, fg);
 });
 
-const sporeVault = extend(StorageBlock, "omnivault", {
+const sporeVault = extendContent(StorageBlock, "omnivault", {
 	
     //OVERRIDE
 	onDestroyed: function(){
@@ -474,7 +474,7 @@ const darkSporePressCraft = Effect(30, e => {
     }})
     Angles.randLenVectors(e.id, 5, -6 + e.fin() * 24, e.rotation + (e.fin() * Mathf.random(-45,45)), 360, rg);
 });
-const darkSporePress = extend(AttributeSmelter, "dark-sporepress", {
+const darkSporePress = extendContent(AttributeSmelter, "dark-sporepress", {
 	/* setBars(){
 		this.super$setBars();
 		this.bars.add("Spore Water",func(entity =>
@@ -482,7 +482,7 @@ const darkSporePress = extend(AttributeSmelter, "dark-sporepress", {
 		));
 	}, */
 });
-darkSporePress.buildType = () => extend(AttributeSmelter.AttributeSmelterBuild, darkSporePress, {
+darkSporePress.buildType = () => extendContent(AttributeSmelter.AttributeSmelterBuild, darkSporePress, {
 	/* draw(){
 		Draw.rect(this.region, this.x, this.y);
 		Draw.color(this.outputLiquid.color);

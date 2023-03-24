@@ -1,42 +1,43 @@
-type: GenericSmelter
-name: Industrial Diamond Synthesizer
-description: Uses vast amounts of power to rapidly compress huge amounts of coal into diamond.
-itemCapacity: 300
-liquidCapacity: 300
-health: 9000
-size: 4
-hasPower: true
-hasLiquids: true
-hasItems: true
-craftTime: 200
-updateEffect: pulverizeRedder
-buildCostMultiplier: 0.7777777777
-updateEffectChance: 0.12
-consumes: {
-  power: 37.63
-  items: {
-    items: [
-      coal/30
-    ]
+{
+  type: GenericCrafter
+  name: Industrial Diamond Synthesizer
+  description: Uses vast amounts of power to rapidly compress huge amounts of coal into diamond.
+  itemCapacity: 300
+  liquidCapacity: 300
+  health: 9000
+  size: 4
+  hasPower: true
+  hasLiquids: true
+  hasItems: true
+  craftTime: 100
+  researchCostMultiplier: 1
+  updateEffectChance: 0.12
+  consumes: {
+    power: 37.63
+    items: {
+      items: [
+        coal/15
+      ]
+    }
+    liquid: {
+      liquid: slag
+      amount: 0.1
+    }
   }
-  liquid: {
-    liquid: slag
-    amount: 0.15
-  }
+  requirements: [
+    lead/550
+    surge-alloy/120
+    silicon/275
+    titanium/400
+    graphite/200
+    thorium/200
+    cryogem/150
+  ]
+  category: crafting
+  research: diamond-synthesizer
+  loopSound: machine
+  loopSoundVolume: 0.95
+  ambientSound: respawning
+  ambientSoundVolume: 0.5
+  outputItem: diamond/5
 }
-requirements: [
-  lead/550
-  surge-alloy/120
-  silicon/275
-  titanium/400
-  graphite/200
-  thorium/200
-  cryogem/150
-]
-category: crafting
-research: diamond-synthesizer
-loopSound: machine
-loopSoundVolume: 0.95
-ambientSound: respawning
-ambientSoundVolume: 0.5
-outputItem: diamond/5

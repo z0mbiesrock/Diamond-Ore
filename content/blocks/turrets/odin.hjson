@@ -1,221 +1,223 @@
-//type: BurstTurret
-name: Odin
-description: Fires concussive high-knockback shells at air targets.
-health: 1700
-size: 3
-reloadTime: 200
-burstSpacing: 4
-range: 294
-ammoUseEffect: none
-coolantMultiplier: 6
-maxAmmo: 80
-coolantUsage: 0.314159
-inaccuracy: 6
-rotateSpeed: 12
-shootSound: odinShoot
-outlineIcon: false
-expanded: true
-targetGround: false
-shots: 12
-ammoTypes: {
-  graphite: {
-    type: BasicBulletType
-    speed: 6
-    damage: 60
-	lifetime: 60
-    width: 8
-    height: 20
-	frontColor: bbbbdd
-	backColor: 8888aa
-    shootEffect: shootBig
-    smokeEffect: shootBigSmoke
-	shrinkY: 0
-	hitEffect: hitFuse
-	despawnEffect: hitBulletBig
-    ammoMultiplier: 4
-	pierce: false
-	collidesGround: false
-	knockback: 2.5
-	sprite: shell
-  }
-  scrap: {
-    type: BasicBulletType
-    speed: 6
-    damage: 45
-	lifetime: 60
-    width: 8
-    height: 20
-	frontColor: bbbbbb
-	backColor: 888888
-    shootEffect: shootBig
-    smokeEffect: shootBigSmoke
-	hitEffect: hitFuse
-	despawnEffect: hitBulletBig
-    ammoMultiplier: 3
-	reloadMultiplier: 0.75
-	pierce: false
-	knockback: 1.5
-	sprite: shell
-	shrinkY: 0
-	fragBullets: 20
-	fragVelocityMin: 1.125
-	fragVelocityMax: 2.25
-	collidesGround: false
-	fragBullet: {
-      type: BasicBulletType
-      speed: 1
-	  lifetime: 20
-      damage: 5
-      width: 2
-      height: 4
-	  despawnEffect: none
-	  hitEffect: none
-	  frontColor: ffa044
-	  backColor: ff6614
-	  pierce: true
-	  collidesGround: false
-	  knockback: 1.0
-	  sprite: diamond-ore-diamondshell
-    }
-  }
-  silicon: {
-    type: BasicBulletType
-    speed: 5.3
-	drag: 0.0035
-    damage: 55
-	lifetime: 90
-    width: 5
-    height: 20
-	frontColor: bbbbdd
-	backColor: 8888aa
-    shootEffect: shootBig
-    smokeEffect: shootBigSmoke
-	shrinkY: 0
-	hitEffect: hitFuse
-	despawnEffect: hitBulletBig
-    ammoMultiplier: 2
-	reloadMultiplier: 1.25
-	pierce: false
-	knockback: 2.5
-	sprite: diamond-ore-diamondbullet
-	collidesGround: false
-	homingPower: 0.03
-	homingRange: 60
-  }
-  thorium: {
-    type: BasicBulletType
-    speed: 6
-    damage: 150
-	lifetime: 60
-    width: 8
-    height: 20
-	frontColor: fbbbeb
-	backColor: c878a8
-    shootEffect: shootBig
-    smokeEffect: shootBigSmoke
-	hitEffect: bigShockwave
-	despawnEffect: hitFuse
-    ammoMultiplier: 1
-	reloadMultiplier: 0.5
-	collidesGround: false
-	pierce: false
-	knockback: 5.0
-	sprite: shell
-	shrinkY: 0
-  }
-  pyratite: {
-    type: BasicBulletType
-    speed: 6
-    damage: 150
-	lifetime: 60
-    width: 8
-    height: 20
-	frontColor: fbbb0b
-	backColor: c87808
-    shootEffect: shootBig
-    smokeEffect: shootBigSmoke
-	hitEffect: bigShockwave
-	despawnEffect: hitFuse
-    ammoMultiplier: 2
-	reloadMultiplier: 1.1
-	collidesGround: false
-	pierce: false
-	status: burning
-	statusDuration: 900
-	knockback: 1.02
-	sprite: diamond-ore-diamondshell
-	shrinkY: 0
-  }
-  cryogem: {
-    type: BasicBulletType
-    speed: 6
-    damage: 150
-	lifetime: 60
-    width: 8
-    height: 20
-	frontColor: 0bbbfb
-	backColor: 48a8f8
-    shootEffect: shootBig
-    smokeEffect: shootBigSmoke
-	hitEffect: bigShockwave
-	despawnEffect: hitFuse
-    ammoMultiplier: 2
-	reloadMultiplier: 1.1
-	pierce: false
-	status: freezing
-	statusDuration: 900
-	knockback: 1.02
-	sprite: diamond-ore-diamondbullet
-	collidesGround: false
-	shrinkY: 0
-  }
-  phase-fabric: {
-    type: BasicBulletType
-    speed: 9
-    damage: 50
-	lifetime: 40
-    width: 13
-    height: 20
-	frontColor: ffd59e
-	backColor: f19583
-    shootEffect: shootBig
-    smokeEffect: shootBigSmoke
-	hitEffect: hitFuse
-	despawnEffect: hitBulletBig
-    ammoMultiplier: 3
-	reloadMultiplier: 0.75
-	pierce: true
-	knockback: 1.5
-	sprite: diamond-ore-diamondbullet
-	shrinkY: 0
-	fragBullets: 12
-	fragVelocityMin: 1.125
-	fragVelocityMax: 3.375
-	collidesGround: false
-	fragBullet: {
-      type: BasicBulletType
-      speed: 1
-	  lifetime: 20
-      damage: 10
-      width: 2
-      height: 8
-	  despawnEffect: shootSmallSmoke
-	  collidesGround: false
-	  hitEffect: none
-	  frontColor: ffa044
-	  backColor: ff6614
-	  pierce: false
-	  knockback: 12.5
-	  sprite: shell
-    }
-  }
+{
+	type: ItemTurret
+	name: Odin
+	description: Fires concussive high-knockback shells at air targets.
+	health: 1700
+	size: 3
+	reloadTime: 200
+	burstSpacing: 4
+	range: 294
+	ammoUseEffect: none
+	coolantMultiplier: 6
+	maxAmmo: 80
+	coolantUsage: 0.314159
+	inaccuracy: 6
+	rotateSpeed: 12
+	shootSound: odinShoot
+	outlineIcon: false
+	expanded: true
+	targetGround: false
+	shots: 12
+	ammoTypes: {
+	graphite: {
+		type: BasicBulletType
+		speed: 6
+		damage: 60
+		lifetime: 60
+		width: 8
+		height: 20
+		frontColor: bbbbdd
+		backColor: 8888aa
+		shootEffect: shootBig
+		smokeEffect: shootBigSmoke
+		shrinkY: 0
+		hitEffect: hitFuse
+		despawnEffect: hitBulletBig
+		ammoMultiplier: 4
+		pierce: false
+		collidesGround: false
+		knockback: 2.5
+		sprite: shell
+	}
+	scrap: {
+		type: BasicBulletType
+		speed: 6
+		damage: 45
+		lifetime: 60
+		width: 8
+		height: 20
+		frontColor: bbbbbb
+		backColor: 888888
+		shootEffect: shootBig
+		smokeEffect: shootBigSmoke
+		hitEffect: hitFuse
+		despawnEffect: hitBulletBig
+		ammoMultiplier: 3
+		reloadMultiplier: 0.75
+		pierce: false
+		knockback: 1.5
+		sprite: shell
+		shrinkY: 0
+		fragBullets: 20
+		fragVelocityMin: 1.125
+		fragVelocityMax: 2.25
+		collidesGround: false
+		fragBullet: {
+		type: BasicBulletType
+		speed: 1
+		lifetime: 20
+		damage: 5
+		width: 2
+		height: 4
+		despawnEffect: none
+		hitEffect: none
+		frontColor: ffa044
+		backColor: ff6614
+		pierce: true
+		collidesGround: false
+		knockback: 1.0
+		sprite: diamond-ore-diamondshell
+		}
+	}
+	silicon: {
+		type: BasicBulletType
+		speed: 5.3
+		drag: 0.0035
+		damage: 55
+		lifetime: 90
+		width: 5
+		height: 20
+		frontColor: bbbbdd
+		backColor: 8888aa
+		shootEffect: shootBig
+		smokeEffect: shootBigSmoke
+		shrinkY: 0
+		hitEffect: hitFuse
+		despawnEffect: hitBulletBig
+		ammoMultiplier: 2
+		reloadMultiplier: 1.25
+		pierce: false
+		knockback: 2.5
+		sprite: diamond-ore-diamondbullet
+		collidesGround: false
+		homingPower: 0.03
+		homingRange: 60
+	}
+	thorium: {
+		type: BasicBulletType
+		speed: 6
+		damage: 150
+		lifetime: 60
+		width: 8
+		height: 20
+		frontColor: fbbbeb
+		backColor: c878a8
+		shootEffect: shootBig
+		smokeEffect: shootBigSmoke
+		hitEffect: bigShockwave
+		despawnEffect: hitFuse
+		ammoMultiplier: 1
+		reloadMultiplier: 0.5
+		collidesGround: false
+		pierce: false
+		knockback: 5.0
+		sprite: shell
+		shrinkY: 0
+	}
+	pyratite: {
+		type: BasicBulletType
+		speed: 6
+		damage: 150
+		lifetime: 60
+		width: 8
+		height: 20
+		frontColor: fbbb0b
+		backColor: c87808
+		shootEffect: shootBig
+		smokeEffect: shootBigSmoke
+		hitEffect: bigShockwave
+		despawnEffect: hitFuse
+		ammoMultiplier: 2
+		reloadMultiplier: 1.1
+		collidesGround: false
+		pierce: false
+		status: burning
+		statusDuration: 900
+		knockback: 1.02
+		sprite: diamond-ore-diamondshell
+		shrinkY: 0
+	}
+	cryogem: {
+		type: BasicBulletType
+		speed: 6
+		damage: 150
+		lifetime: 60
+		width: 8
+		height: 20
+		frontColor: 0bbbfb
+		backColor: 48a8f8
+		shootEffect: shootBig
+		smokeEffect: shootBigSmoke
+		hitEffect: bigShockwave
+		despawnEffect: hitFuse
+		ammoMultiplier: 2
+		reloadMultiplier: 1.1
+		pierce: false
+		status: freezing
+		statusDuration: 900
+		knockback: 1.02
+		sprite: diamond-ore-diamondbullet
+		collidesGround: false
+		shrinkY: 0
+	}
+	phase-fabric: {
+		type: BasicBulletType
+		speed: 9
+		damage: 50
+		lifetime: 40
+		width: 13
+		height: 20
+		frontColor: ffd59e
+		backColor: f19583
+		shootEffect: shootBig
+		smokeEffect: shootBigSmoke
+		hitEffect: hitFuse
+		despawnEffect: hitBulletBig
+		ammoMultiplier: 3
+		reloadMultiplier: 0.75
+		pierce: true
+		knockback: 1.5
+		sprite: diamond-ore-diamondbullet
+		shrinkY: 0
+		fragBullets: 12
+		fragVelocityMin: 1.125
+		fragVelocityMax: 3.375
+		collidesGround: false
+		fragBullet: {
+		type: BasicBulletType
+		speed: 1
+		lifetime: 20
+		damage: 10
+		width: 2
+		height: 8
+		despawnEffect: shootSmallSmoke
+		collidesGround: false
+		hitEffect: none
+		frontColor: ffa044
+		backColor: ff6614
+		pierce: false
+		knockback: 12.5
+		sprite: shell
+		}
+	}
+	}
+	requirements: [
+	copper/400
+	graphite/125
+	thorium/225
+	surge-alloy/250
+	diamond/300
+	]
+	category: turret
+	research: fuse
 }
-requirements: [
-  copper/400
-  graphite/125
-  thorium/225
-  surge-alloy/250
-  diamond/300
-]
-category: turret
-research: fuse
