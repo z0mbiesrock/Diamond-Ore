@@ -1,40 +1,39 @@
-type: GenericSmelter
-name: Phase String Maker
-health: 440
-size: 3
-description: Synthesizes phase fabric much more efficiently than a regular phase weaver but as a soup of unstable strings, using cryogems as a catalyst. Requires a huge amount of power to function optimally.
-itemCapacity: 40
-liquidCapacity: 300
-craftTime: 60
-hasPower: true
-hasLiquids: true
-hasItems: true
-updateEffect: purify
-updateEffectChance: 0.25
-outputLiquid: phase-string/60
-consumes: {
-  power: 7.5
-  items: {
-    items: [
-      sand/20
-	  thorium/10
-	  cryogem/1
-    ]
+{
+  type: GenericCrafter
+  name: Phase String Maker
+  health: 440
+  size: 3
+  description: Synthesizes phase fabric much more efficiently than a regular phase weaver but as a soup of unstable strings, using cryogems as a catalyst. Requires a huge amount of power to function optimally.
+  itemCapacity: 40
+  liquidCapacity: 300
+  craftTime: 60
+  hasPower: true
+  hasLiquids: true
+  hasItems: true
+  updateEffectChance: 0.25
+  outputLiquid: phase-string/60
+  consumes: {
+    power: 7.5
+    items: {
+      items: [
+        sand/20
+      thorium/10
+      cryogem/1
+      ]
+    }
   }
+  requirements: [
+    copper/350
+    metaglass/600
+    plastanium/320
+    phase-fabric/15
+    diamond/100
+    cryogem/100
+  ]
+  category: crafting
+  research: phase-weaver
+  loopSound: stringmake
+  loopSoundVolume: 1.95
+  ambientSound: stringmake
+  ambientSoundVolume: 0.25
 }
-requirements: [
-  copper/350
-  metaglass/600
-  plastanium/320
-  phase-fabric/15
-  diamond/100
-  cryogem/100
-]
-category: crafting
-research: phase-string
-loopSound: stringmake
-loopSoundVolume: 1.95
-ambientSound: stringmake
-ambientSoundVolume: 0.25
-
-

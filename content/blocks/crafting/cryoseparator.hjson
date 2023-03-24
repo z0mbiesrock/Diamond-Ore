@@ -1,46 +1,49 @@
-type: Separator
-name: Cryo-Separator
-description: Separates slag into a large variety of usable resources.
-details: It is recommended to use sorters to organize the output.
-itemCapacity: 30
-liquidCapacity: 30
-health: 400
-size: 3
-hasPower: true
-hasLiquids: true
-hasItems: true
-craftTime: 12
-spinnerSpeed: 16
-consumes: {
-  power: 7.2
-  liquid: {
-    liquid: slag
-    amount: 0.108333333333
+{
+  type: Separator
+  name: Cryo-Separator
+  description: Separates slag into a large variety of usable resources.
+  details: It is recommended to use sorters to organize the output.
+  itemCapacity: 30
+  liquidCapacity: 30
+  health: 400
+  size: 3
+  hasPower: true
+  hasLiquids: true
+  hasItems: true
+  craftTime: 12
+  spinnerSpeed: 16
+  researchCostMultiplier: 1.5
+  consumes: {
+    power: 7.2
+    liquid: {
+      liquid: slag
+      amount: 0.108333333333
+    }
   }
+  requirements: [
+    copper/120
+    lead/75
+    graphite/105
+    silicon/75
+    diamond/65
+    cryogem/25
+  ]
+  category: crafting
+  research: disassembler
+  loopSound: respawning
+  loopSoundVolume: 1.95
+  ambientSound: respawning
+  ambientSoundVolume: 0.5
+  results: [
+      copper/275
+      lead/250
+      titanium/200
+      plastanium/100
+      metaglass/150
+      graphite/75
+      silicon/150
+      thorium/25
+      surge-alloy/50
+      phase-fabric/1
+  ]
 }
-requirements: [
-  copper/120
-  lead/75
-  graphite/105
-  silicon/75
-  diamond/25
-  cryogem/65
-]
-category: crafting
-research: disassembler
-loopSound: respawning
-loopSoundVolume: 1.95
-ambientSound: respawning
-ambientSoundVolume: 0.5
-results: [
-    copper/275
-    lead/250
-    titanium/200
-    plastanium/100
-    metaglass/150
-    graphite/75
-    silicon/150
-    thorium/25
-    surge-alloy/50
-	phase-fabric/1
-]

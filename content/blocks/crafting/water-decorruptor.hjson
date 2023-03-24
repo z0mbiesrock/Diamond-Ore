@@ -1,47 +1,49 @@
-//type: GenericCrafter
-name: Water De-corruptor
-description: Reverse-engineers the mutant spores to purify corrupted water. More efficient in certain locations.
-details: Recovered technology. Used to purify water that has been saturated with mutated spores.
-itemCapacity: 5
-liquidCapacity: 450
-health: 1980
-size: 3
-hasPower: true
-hasItems: true
-outputsLiquid: true
-craftTime: 90
-attribute: spores
-boostScale: 0.5
-//updateEffect: freezing
-//craftEffect: purify
-buildCostMultiplier: 0.5
-drawLiquidLight: true
-updateEffectChance: 0.25
-flameColor: 441177
-consumes: {
-  power: 18.25
-  items: {
-    items: [
-      dark-spore-pod/1
-    ]
+{
+  type: GenericCrafter
+  name: Water De-corruptor
+  description: Reverse-engineers the mutant spores to purify corrupted water. More efficient in certain locations.
+  details: Recovered technology. Used to purify water that has been saturated with mutated spores.
+  itemCapacity: 5
+  liquidCapacity: 450
+  health: 1980
+  size: 3
+  hasPower: true
+  hasItems: true
+  outputsLiquid: true
+  craftTime: 90
+  attribute: spores
+  boostScale: 0.5
+  //updateEffect: freezing
+  //craftEffect: purify
+  buildCostMultiplier: 0.5
+  drawLiquidLight: true
+  updateEffectChance: 0.25
+  flameColor: 441177
+  consumes: {
+    power: 18.25
+    items: {
+      items: [
+        dark-spore-pod/1
+      ]
+    }
+    liquid: {
+      liquid: corrupt-water
+      amount: 1
+    }
   }
-  liquid: {
-    liquid: corrupt-water
-    amount: 1
-  }
+  requirements: [
+    metaglass/550
+    plastanium/250
+    thorium/150
+    diamond/125
+    cryogem/150
+    dark-spore-pod/300
+  ]
+  category: crafting
+  research: dark-spore-block-large
+  loopSound: respawning
+  loopSoundVolume: 1.15
+  ambientSound: machine
+  ambientSoundVolume: 0.35
+  outputLiquid: water/75
 }
-requirements: [
-  metaglass/550
-  plastanium/250
-  thorium/150
-  diamond/125
-  cryogem/150
-  dark-spore-pod/300
-]
-category: crafting
-research: dark-spore-block-large
-loopSound: respawning
-loopSoundVolume: 1.15
-ambientSound: machine
-ambientSoundVolume: 0.35
-outputLiquid: water/75

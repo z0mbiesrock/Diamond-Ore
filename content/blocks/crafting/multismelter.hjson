@@ -1,40 +1,42 @@
-type: GenericSmelter
-name: Pyra-Smelter
-description: Employs water, power, pyratite, and cryogems to produce silicon quickly and efficiently.
-itemCapacity: 60
-liquidCapacity: 90
-health: 2400
-size: 4
-hasPower: true
-hasLiquids: true
-hasItems: true
-craftTime: 72
-updateEffect: smeltsmoke
-updateEffectChance: 0.166666
-consumes: {
-  power: 3.8
-  items: {
-    items: [
-      pyratite/1
-      sand/6
-	  cryogem/1
-    ]
+{
+  type: GenericCrafter
+  name: Pyra-Smelter
+  description: Employs water, power, pyratite, and cryogems to produce silicon quickly and efficiently.
+  itemCapacity: 60
+  liquidCapacity: 90
+  health: 2400
+  size: 4
+  hasPower: true
+  hasLiquids: true
+  hasItems: true
+  craftTime: 72
+  updateEffect: smeltsmoke
+  updateEffectChance: 0.166666
+  consumes: {
+    power: 3.8
+    items: {
+      items: [
+        pyratite/1
+        sand/6
+      cryogem/1
+      ]
+    }
+    liquid: {
+      liquid: water
+      amount: 0.1
+    }
   }
-  liquid: {
-    liquid: water
-    amount: 0.1
-  }
+  requirements: [
+    copper/175
+    lead/175
+    graphite/75
+    cryogem/5
+  ]
+  category: crafting
+  research: silicon-crucible
+  loopSound: respawning
+  loopSoundVolume: 0.95
+  ambientSound: respawning
+  ambientSoundVolume: 0.5
+  outputItem: silicon/14
 }
-requirements: [
-  copper/175
-  lead/175
-  graphite/75
-  cryogem/5
-]
-category: crafting
-research: silicon-crucible
-loopSound: respawning
-loopSoundVolume: 0.95
-ambientSound: respawning
-ambientSoundVolume: 0.5
-outputItem: silicon/14

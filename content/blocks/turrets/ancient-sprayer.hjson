@@ -1,11 +1,11 @@
-//type: DoubleTurret
+type: ItemTurret
 name: Ancient Sprayer
 description: Rapidly fires bullets over long distances.
 health: 5400
 size: 3
 reloadTime: 4
 shots: 4
-//spread: 0.5
+spread: 0.5
 xRand: 4
 range: 320
 ammoUseEffect: casing2

@@ -1,20 +1,16 @@
-name: Phase String
-description: Used as a very powerful turret coolant or for solidifying into phase fabric.
-details: Phase Fabric, but in a loose liquid form.
-heatCapacity: 2.7
-explosiveness: 3.14
-temperature: 0.5
-viscosity: 0.01
-effect: corroded
-color: fff3d6
-barColor: f19583
-lightColor: ffd59388
-research:{
-  parent: phase-weaver
-  requirements:[
-      thorium/75000
-      surge-alloy/30000
-      sand/2000000
-      cryogem/12000
-  ]
+{
+  name: Phase String
+  description: Used as a very powerful turret coolant or for solidifying into phase fabric.
+  details: Phase Fabric, but in a loose liquid form.
+  heatCapacity: 2.7
+  explosiveness: 3.14
+  temperature: 0.5
+  viscosity: 0.01
+  effect: corroded
+  color: fff3d6
+  barColor: f19583
+  lightColor: ffd59388
+  research:{
+    parent: cryofluid
+  }
 }

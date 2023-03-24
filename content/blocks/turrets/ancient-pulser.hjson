@@ -1,4 +1,4 @@
-//type: PowerTurret
+type: PowerTurret
 name: Ancient Pulser
 description: Shoots high-knockback bullets at air targets. Only needs power.
 health: 500

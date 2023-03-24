@@ -1,6 +1,10 @@
-name: "diamond-ore"
-displayName: "[#33eeee]Diamond Ore[] Mod" //what displays in the mod selection menu
-author: "z0mbiesrock"
-description: "Adds the [#33eeee]Diamond[] resource.\n\nThis mod also adds more than just diamonds. It also adds enhanced versions of vanilla production blocks, as well as units, technology, and more."
-version: "[#9cb6f4]2.6.0[]"
-minGameVersion: "120"
+{
+    "name": "ReDiamond",
+    "displayName": "[blue]ReDiamond",
+    "version": "1.0",
+    "author": "THEdarkkman",
+    "description": "This mod is a revive attempt of z0mbiesrock's Diamond mod. It adds a new resource called Diamond, which is used to make new blocks and items.",
+    "minGameVersion": "142",
+  }
+
+  

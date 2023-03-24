@@ -14,7 +14,7 @@ range: 280
 itemCapacity: 50
 hitSize: 11
 rotateShooting: false
-immunities: [wet, sapped, sporeSlowed, corroded, shocked]
+immunities: [wet, sapped, spore-slowed, corroded, shocked]
 trailLength: 25
 trailX: 0
 trailY: -5

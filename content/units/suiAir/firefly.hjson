@@ -15,7 +15,7 @@ hitSize: 9
 crashDamageMultiplier: 9
 rotateShooting: false
 circleTarget: true
-immunities: [wet, tarred, sapped, sporeSlowed, corroded, burning, melting]
+immunities: [wet, tarred, sapped, spore-slowed, corroded, burning, melting]
 engineOffset: 7
 engineSize: 7
 targetAir: false

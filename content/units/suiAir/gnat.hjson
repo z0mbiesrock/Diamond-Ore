@@ -16,7 +16,7 @@ rotateShooting: false
 lowAltitude: true
 destructibleWreck: false
 circleTarget: true
-immunities: [wet, tarred, sapped, sporeSlowed, corroded]
+immunities: [wet, tarred, sapped, spore-slowed, corroded]
 engineOffset: 5
 engineSize: 2
 flying: true

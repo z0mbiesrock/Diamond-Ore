@@ -1,49 +1,51 @@
-type: ImpactReactor
-name: Differential Reactor
-description: Utilizes the temperature difference between frozen cryogems and burning pyratite to generate almost unlimited energy. Takes a significant amount of time, resources, and initial power input to operate at maximum power.
-details: "I was a wimp before Anchor Arms! Now I'm a jerk, and eveybody loves me!"
-itemCapacity: 30
-hasLiquids: false
-insulated: true
-absorbLasers: true
-health: 9000
-baseExplosiveness: 9000
-size: 6
-warmupSpeed: 0.00025
-//buildVisibility: sandboxOnly
-baseExplosiveness: 5000
-itemDuration: 48
-explosionRadius: 50
-explosionDamage: 9999999999
-plasma1: c0ecff
-plasma2: ffaa5f
-//plasmas: 4
-buildCostMultiplier: 0.3
-powerProduction: 1866.6666666666666666666666666667
-consumes: {
-  power: 200  
-  items: {
-    items: [
-      pyratite/1
-      cryogem/1
-    ]
+{
+  type: ImpactReactor
+  name: Differential Reactor
+  description: Utilizes the temperature difference between frozen cryogems and burning pyratite to generate almost unlimited energy. Takes a significant amount of time, resources, and initial power input to operate at maximum power.
+  details: "I was a wimp before Anchor Arms! Now I'm a jerk, and eveybody loves me!"
+  itemCapacity: 30
+  hasLiquids: false
+  insulated: true
+  absorbLasers: true
+  health: 9000
+  baseExplosiveness: 9000
+  size: 6
+  warmupSpeed: 0.002
+  //buildVisibility: sandboxOnly
+  baseExplosiveness: 5000
+  itemDuration: 48
+  explosionRadius: 50
+  explosionDamage: 9999999999
+  plasma1: c0ecff
+  plasma2: ffaa5f
+  //plasmas: 4
+  buildCostMultiplier: 0.3
+  powerProduction: 1866.6666666666666666666666666667
+  consumes: {
+    power: 200  
+    items: {
+      items: [
+        pyratite/1
+        cryogem/1
+      ]
+    }
   }
-}
-requirements: [
-  lead/4000
-  copper/4000
-  titanium/4000
-  metaglass/777
-  silicon/4000
-  plastanium/2275
-  graphite/1275
-  surge-alloy/1500
-  phase-fabric/1000
-  thorium/3000
-  cryogem/5000
-  diamond/1250
-]
-category: power
-research: surge-reactor
-ambientSound: fire
-ambientSoundVolume: 8
+  requirements: [
+    lead/4000
+    copper/4000
+    titanium/4000
+    metaglass/777
+    silicon/4000
+    plastanium/2275
+    graphite/1275
+    surge-alloy/1500
+    phase-fabric/1000
+    thorium/3000
+    cryogem/5000
+    diamond/1250
+  ]
+  category: power
+  research: surge-reactor
+  ambientSound: fire
+  ambientSoundVolume: 8
+  }

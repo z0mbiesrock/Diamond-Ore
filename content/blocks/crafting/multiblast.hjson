@@ -1,34 +1,36 @@
-type: GenericSmelter
-name: Blast Compund Multi-Mixer
-description: Produces blast compound from pyratite and spore pods, using coal as a supplement.
-itemCapacity: 30
-health: 2000
-size: 3
-hasPower: true
-hasItems: true
-craftTime: 48
-updateEffect: mineBig
-consumes: {
-  power: 3.76
-  items: {
-    items: [
-      coal/1
-      pyratite/4
-      spore-pod/2
-    ]
+{
+  type: GenericCrafter
+  name: Blast Compound Multi-Mixer
+  description: Produces blast compound from pyratite and spore pods, using coal as a supplement.
+  health: 2000
+  size: 3
+  hasPower: true
+  hasItems: true
+  itemCapacity: 30
+  craftTime: 48
+  consumes: {
+    power: 3.666667
+    items: {
+      items: [
+        coal/1
+        pyratite/4
+        spore-pod/2
+      ]
+    }
   }
+  outputItem: blast-compound/4
+  requirements: [
+    lead/200
+    titanium/130
+    thorium/35
+    diamond/35
+    cryogem/15
+  ]
+  category: crafting
+  research: blast-mixer
+  updateEffect: mineBig
+  loopSound: fire
+  loopSoundVolume: 0.95
+  ambientSound: respawning
+  ambientSoundVolume: 0.5
 }
-requirements: [
-  lead/200
-  titanium/130
-  thorium/35
-  diamond/35
-  cryogem/15
-]
-category: crafting
-research: multipyra
-loopSound: fire
-loopSoundVolume: 0.95
-ambientSound: respawning
-ambientSoundVolume: 0.5
-outputItem: blast-compound/6

@@ -1,42 +1,44 @@
-//type: AttributeSmelter
-name: Mutator
-description: Uses a huge amount of power and a small amount of phase string to controllably mutate regular spore pods into a unique but incredibly unstable building material.
-details: Recovered technology. Origins unknown.
-itemCapacity: 10
-liquidCapacity: 10
-health: 1000
-size: 2
-hasPower: true
-hasLiquids: true
-hasItems: true
-floating: true
-craftTime: 30
-attribute: spores
-updateEffectChance: 0.08
-consumes: {
-  power: 22.5
-  items: {
-    items: [
-      spore-pod/1
-    ]
+{
+  type: GenericCrafter
+  name: Mutator
+  description: Uses a huge amount of power and a small amount of phase string to controllably mutate regular spore pods into a unique but incredibly unstable building material.
+  details: Recovered technology. Origins unknown.
+  itemCapacity: 10
+  liquidCapacity: 10
+  health: 1000
+  size: 2
+  hasPower: true
+  hasLiquids: true
+  hasItems: true
+  floating: true
+  craftTime: 30
+  attribute: spores
+  updateEffectChance: 0.08
+  consumes: {
+    power: 22.5
+    items: {
+      items: [
+        spore-pod/1
+      ]
+    }
+    liquid: {
+      liquid: phase-string
+      amount: 0.03333333333
+    }
   }
-  liquid: {
-    liquid: phase-string
-    amount: 0.03333333333
-  }
+  outputItem: dark-spore-pod/1
+  requirements: [
+    copper/455
+    metaglass/130
+    plastanium/255
+    thorium/155
+    cryogem/35
+    phase-fabric/125
+  ]
+  category: crafting
+  research: dark-spore-pod
+  loopSound: respawning
+  loopSoundVolume: 1.45
+  ambientSound: machine
+  ambientSoundVolume: 0.125
 }
-requirements: [
-  copper/455
-  metaglass/130
-  plastanium/255
-  thorium/155
-  cryogem/35
-  phase-fabric/125
-]
-category: crafting
-research: dark-spore-pod
-loopSound: respawning
-loopSoundVolume: 1.45
-ambientSound: machine
-ambientSoundVolume: 0.125
-outputItem: dark-spore-pod/1

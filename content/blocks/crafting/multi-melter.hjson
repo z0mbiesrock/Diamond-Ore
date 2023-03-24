@@ -1,39 +1,41 @@
-name: Multi Melter
-description: Uses a very large amount of power to rapidly melt heaps of scrap down into slag. More efficient in hot locations.
-//type: AttributeSmelter
-health: 360
-size: 2
-itemCapacity: 40
-liquidCapacity: 225
-outputLiquid: slag/50
-baseExplosiveness: 50
-hasItems: true
-hasLiquids: true
-floating: true
-hasPower: true
-craftEffect: hitMeltdown
-updateEffect: none
-updateEffectChance: 0
-craftTime: 145
-loopSound: drill
-loopSoundVolume: 1.51
-boostScale: 0.4
-ambientSound: drill
-ambientSoundVolume: 0.01
-consumes: {
-  power: 25.35
-  items: {
-    items: [
-      scrap/20
-    ]
+{
+  type: GenericCrafter
+  name: Multi Melter
+  description: Uses a very large amount of power to rapidly melt heaps of scrap down into slag. More efficient in hot locations.
+  health: 360
+  size: 2
+  baseExplosiveness: 50
+  hasItems: true
+  hasLiquids: true
+  floating: true
+  hasPower: true
+  itemCapacity: 40
+  liquidCapacity: 225
+  craftTime: 180
+  consumes: {
+    power: 4
+    items: {
+      items: [
+        scrap/8
+      ]
+    }
   }
+  outputLiquid: slag/1.5
+  requirements: [
+    graphite/225
+    lead/175
+    copper/150
+    surge-alloy/75
+    diamond/25
+  ]
+  category: crafting
+  research: melter
+  craftEffect: hitMeltdown
+  updateEffect: none
+  updateEffectChance: 0
+  loopSound: drill
+  loopSoundVolume: 1.51
+  boostScale: 0.4
+  ambientSound: drill
+  ambientSoundVolume: 0.01
 }
-requirements: [
-  copper/150
-  lead/175
-  graphite/225
-  diamond/25
-  surge-alloy/75
-]
-category: crafting
-research: blast-furnace

@@ -1,32 +1,36 @@
-type: GenericSmelter
-name: Cryogem Compressor
-description: Uses power to assemble cryogems from pure cryofluid.
-itemCapacity: 25
-liquidCapacity: 150
-health: 630
-size: 3
-hasPower: true
-hasLiquids: true
-hasItems: true
-craftTime: 30
-updateEffect: mineBig
-flameColor: ccffff
-researchCostMultiplier: 2.1
-consumes: {
-  power: 2
-  liquid: {
-    liquid: cryofluid
-    amount: 2
+{
+  type: GenericCrafter
+  name: Cryogem Compressor
+  description: Uses power to assemble cryogems from pure cryofluid.
+  itemCapacity: 25
+  liquidCapacity: 150
+  health: 630
+  size: 3
+  hasPower: true
+  hasLiquids: true
+  hasItems: true
+  craftTime: 60
+  updateEffect: mineBig
+  flameColor: ccffff
+  researchCostMultiplier: 2
+  consumes: {
+    power: 2
+    liquid: {
+      liquid: cryofluid
+      amount: 0.5
+    }
   }
-}
-requirements: [
-  lead/400
-  graphite/175
-  silicon/150
-  diamond/225
-]
-category: crafting
-research: diamond-synthesizer
-ambientSound: respawning
-ambientSoundVolume: 0.5
-outputItem: cryogem/1
+  requirements: [
+    lead/400
+    graphite/175
+    titanium/150
+    silicon/150
+    diamond/100
+  ]
+  researchCostMultiplier: 1
+  category: crafting
+  research: diamond-synthesizer
+  ambientSound: respawning
+  ambientSoundVolume: 0.5
+  outputItem: cryogem/1
+  }

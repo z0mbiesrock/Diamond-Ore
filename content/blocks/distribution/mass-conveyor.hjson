@@ -5,7 +5,6 @@ solid: true
 floating: true
 description: Transports items forward in batches. Faster than plastanium conveyors.
 recharge: 1
-unloadEffect: smelt
 loadEffect: absorb
 requirements: [
   diamond/1

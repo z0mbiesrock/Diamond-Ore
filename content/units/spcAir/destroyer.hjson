@@ -16,7 +16,7 @@ circleTarget: false
 fallEffect: blastExplosion
 fallThrusterEffect: nuclearsmoke
 fallSpeed: 0.0161064
-immunities: [wet, tarred, sapped, sporeSlowed, corroded, burning, melting]
+immunities: [wet, tarred, sapped, spore-slowed, corroded, burning, melting]
 engineOffset: 13
 engineSize: 7
 lowAltitude: true

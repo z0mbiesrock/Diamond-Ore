@@ -1,75 +1,52 @@
-type: GenericSmelter
-name: Ancient Forge
-description: "Combines many different items using lots and lots of power in order to synthesize the mysterious [#e5b85e]Ancient Alloy[]."
-details: After deciphering the recipe for the alloy itself, it was realized that the recipe was also for a structure capable of forging the alloy itself.
-itemCapacity: 60
-health: 4800
-size: 4
-hasPower: true
-hasItems: true
-craftTime: 42
-updateEffect: overdriven
-craftEffect: bigShockwave
-buildCostMultiplier: 0.65
-drawLiquidLight: true
-updateEffectChance: 0.75
-consumes: {
-  power: 105
-  items: {
-    items: [
-      copper/4
-      lead/4
-      graphite/3
-      silicon/3
-      titanium/2
-      metaglass/4
-      thorium/4
-      phase-fabric/2
-      surge-alloy/5
-      plastanium/1
-      blast-compound/1
-    ]
+{
+  type: GenericCrafter
+  name: Ancient Forge
+  description: "Combines many different items using lots and lots of power in order to synthesize the mysterious [#e5b85e]Ancient Alloy[]."
+  details: After deciphering the recipe for the alloy itself, it was realized that the recipe was also for a structure capable of forging the alloy itself.
+  health: 4800
+  size: 4
+  drawLiquidLight: true
+  hasPower: true
+  hasItems: true
+  craftTime: 42
+  itemCapacity: 60
+  consumes: {
+    power: 105
+    items: {
+      items: [
+        surge-alloy/5
+        copper/4
+        lead/4
+        metaglass/4
+        thorium/4
+        graphite/3
+        silicon/3
+        titanium/2
+        phase-fabric/2
+        plastanium/1
+        blast-compound/1
+      ]
+    }
   }
-}
-requirements: [
-  copper/2300
-  silicon/275
-  metaglass/750
-  thorium/350
-  diamond/1000
-  surge-alloy/450
-  phase-fabric/450
-  cryogem/400
-]
-category: crafting
-research: ancient-refinery
-loopSound: machine
-loopSoundVolume: 1.75
-ambientSound: respawning
-ambientSoundVolume: 0.75
-outputItem: ancient-alloy/2
-research:{
-  parent: ancient-alloy
-  requirements:[
-      copper/40000
-      lead/40000
-      graphite/30000
-      silicon/30000
-      titanium/20000
-      metaglass/40000
-      thorium/40000
-      phase-fabric/20000
-      surge-alloy/50000
-      plastanium/10000
-      blast-compound/10000
-      sand/10000
-      coal/10000
-      scrap/10000
-      ancient-scrap/10000
-      pyratite/10000
-      spore-pod/10000
-      dark-spore-pod/10000
-      diamond/10000
-      cryogem/10000
+  outputItem: ancient-alloy/2
+  requirements: [
+    copper/2300
+    diamond/1000
+    metaglass/750
+    surge-alloy/450
+    phase-fabric/450
+    cryogem/400
+    thorium/350
+    silicon/275
   ]
-}
+  buildCostMultiplier: 0.65
+  category: crafting
+  research: ancient-refinery
+  loopSound: machine
+  loopSoundVolume: 1.75
+  ambientSound: respawning
+  ambientSoundVolume: 0.75
+  updateEffect: overdriven
+  craftEffect: bigShockwave
+  updateEffectChance: 0.75
+  }

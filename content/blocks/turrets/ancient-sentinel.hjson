@@ -1,4 +1,4 @@
-//type: BurstTurret
+type: ItemTurret
 name: Ancient Sentinel
 description: Shoots huge fragmentation shells over very long distances.
 health: 8000
@@ -72,7 +72,7 @@ ammoTypes: {
 	backColor: 888888
     shootEffect: shootBig
     smokeEffect: shootBigSmoke
-    trailEffect: smelt
+    trailEffect: smeltsmoke 
 	hitEffect: hitFuse
 	despawnEffect: pulverize
     ammoMultiplier: 3
@@ -112,7 +112,7 @@ ammoTypes: {
 	backColor: ce8404
     shootEffect: shootBig
     smokeEffect: shootBigSmoke
-    trailEffect: smelt
+    trailEffect: smeltsmoke
     trailChance: 1
 	hitEffect: hitFuse
 	despawnEffect: pulverizeRed
@@ -201,7 +201,7 @@ ammoTypes: {
     smokeEffect: shootBigSmoke
 	hitSound: explosionbig
     trailEffect: melting
-	hitEffect: nuclearShockwave
+	hitEffect: reactorExplosion 
 	despawnEffect: flakExplosionBig
     ammoMultiplier: 4
     lightRadius: 64

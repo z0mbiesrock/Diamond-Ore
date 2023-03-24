@@ -1,9 +1,11 @@
-name: Diamond
-description: Used for making highly efficient drills or for building extremely durable structures.
-details: Pure crystallized carbon in an isotropic form. Nearly impossible to scratch, but vulnerable to blunt force.
-hardness: 5
-cost: 3
-color: 88ccff
-research:{
-  parent: graphite
+{
+  name: Diamond
+  description: Used for making highly efficient drills or for building extremely durable structures.
+  details: Pure crystallized carbon in an isotropic form. Nearly impossible to scratch, but vulnerable to blunt force.
+  hardness: 5
+  cost: 3
+  color: 88ccff
+  research:{
+    parent: graphite
+  }
 }

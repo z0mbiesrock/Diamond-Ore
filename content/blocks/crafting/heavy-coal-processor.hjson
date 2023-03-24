@@ -1,35 +1,37 @@
-//type: GenericCrafter
-name: Heavy Coal Processor
-description: Solidifies oil into chunks of coal.
-itemCapacity: 30
-liquidCapacity: 150
-health: 1200
-size: 4
-hasPower: true
-hasLiquids: true
-hasItems: true
-craftTime: 60
-craftEffect: steam
-updateEffect: oily
-consumes: {
-  power: 6.7
-  liquid: {
-    liquid: oil
-    amount: 0.12
+{
+  type: GenericCrafter
+  name: Heavy Coal Processor
+  description: Solidifies oil more efficently into coal chunks at the cost of more power.
+  itemCapacity: 30
+  liquidCapacity: 150
+  health: 1200
+  size: 4
+  hasPower: true
+  hasLiquids: true
+  hasItems: true
+  craftTime: 60
+  craftEffect: steam
+  updateEffect: oily
+  consumes: {
+    power: 6.7
+    liquid: {
+      liquid: oil
+      amount: 0.12
+    }
   }
+  outputItem: coal/8
+  requirements: [
+    lead/200
+    graphite/100
+    silicon/15
+    titanium/85
+    diamond/125
+    cryogem/5
+  ]
+  category: crafting
+  research: coal-centrifuge
+  ambientSound: respawning
+  ambientSoundVolume: 0.5
+  loopSound: machine
+  loopSoundVolume: 1.05
 }
-requirements: [
-  lead/200
-  graphite/100
-  silicon/15
-  titanium/85
-  diamond/125
-  cryogem/5
-]
-category: crafting
-research: diamond-synthesizer
-ambientSound: respawning
-ambientSoundVolume: 0.5
-loopSound: machine
-loopSoundVolume: 1.05
-outputItem: coal/6

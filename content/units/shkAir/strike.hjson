@@ -19,7 +19,7 @@ fallEffect: coreBurn
 fallThrusterEffect: none
 rotateShooting: true
 circleTarget: false
-immunities: [wet, shocked, sapped, sporeSlowed]
+immunities: [wet, shocked, sapped, spore-slowed]
 engineOffset: 0
 engineSize: 0
 lowAltitude: true

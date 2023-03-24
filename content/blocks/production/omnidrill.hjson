@@ -1,43 +1,45 @@
-name: Omni Drill
-description: Infinitely mines any ore it is placed on.
-details: The true ultimate drill. Extremely expensive and fragile.
-type: Drill
-health: 200
-size: 5
-tier: 999999
-drillTime: 25
-drawRim: true
-rotateSpeed: 6
-liquidBoostIntensity: 3
-hardnessDrillMultiplier: 0
-baseExplosiveness: 5000
-warmupSpeed: 1
-hasPower: true
-drillEffect: hitMeltdown
-updateEffect: overdriven
-buildCostMultiplier: 0.43227
-heatColor: aacccc
-updateEffectChance: 0.5
-liquidCapacity: 120
-itemCapacity: 120
-consumes: {
-  power: 25
-  liquid: {
-    liquid: phase-string
-    amount: 0.9
-    booster: true
-	optional: true
+{
+  type: Drill
+  name: Omni Drill
+  description: Infinitely mines any ore it is placed on.
+  details: The true ultimate drill. Extremely expensive and fragile.
+  health: 200
+  size: 5
+  tier: 999999
+  drillTime: 60
+  drawRim: true
+  hasPower: true
+  rotateSpeed: 6
+  liquidBoostIntensity: 1.5
+  hardnessDrillMultiplier: 0
+  baseExplosiveness: 5000
+  warmupSpeed: 1
+  buildCostMultiplier: 0.43227
+  liquidCapacity: 120
+  itemCapacity: 120
+  consumes: {
+    power: 25
+    liquid: {
+      liquid: phase-string
+      amount: 0.9
+      booster: true
+    optional: true
+    }
   }
-}
-requirements: [
-  diamond/500
-  cryogem/2500
-  silicon/1100
-  thorium/1500
-  metaglass/1500
-  surge-alloy/250
-  phase-fabric/2500
-  blast-compound/150
-]
-category: production
-research: diamond-drill
+  requirements: [
+    diamond/500
+    cryogem/2500
+    silicon/1100
+    thorium/1500
+    metaglass/1500
+    surge-alloy/250
+    phase-fabric/2500
+    blast-compound/150
+  ]
+  category: production
+  research: diamond-drill
+  drillEffect: hitMeltdown
+  updateEffect: overdriven
+  heatColor: aacccc
+  updateEffectChance: 0.5
+  }

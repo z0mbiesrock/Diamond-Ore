@@ -1,35 +1,37 @@
-name: Precision Diamond Drill
-description: Uses diamond blades to rapidly cut out chunks of ore for processing. Sacrifices speed for compact form. Optionally uses cryofluid to drastically increase mining speed.
-type: Drill
-health: 150
-size: 1
-tier: 6
-drillTime: 36
-liquidBoostIntensity: 4
-hardnessDrillMultiplier: 24
-warmupSpeed: 0.005
-hasPower: true
-drillEffect: freezing
-updateEffect: pulverizeSmall
-heatColor: eeffff
-itemCapacity: 1
-liquidCapacity: 15
-drawRim: true
-consumes: {
-  power: 1
-  liquid: {
-    liquid: cryofluid
-    amount: 0.25
-    booster: true
-	optional: true
+{
+  name: Precision Diamond Drill
+  description: Uses diamond blades to rapidly cut out chunks of ore for processing. Sacrifices speed for compact form. Optionally uses cryofluid to drastically increase mining speed.
+  type: Drill
+  health: 150
+  size: 1
+  tier: 6
+  drawRim: true
+  hasPower: true
+  warmupSpeed: 0.005
+  itemCapacity: 1
+  liquidCapacity: 15
+  liquidBoostIntensity: 4
+  hardnessDrillMultiplier: 24
+  drillTime: 192
+  consumes: {
+    power: 1
+    liquid: {
+      liquid: cryofluid
+      amount: 0.25
+      booster: true
+    optional: true
+    }
   }
-}
-requirements: [
-  diamond/5
-  silicon/25
-  titanium/25
-  thorium/1
-  cryogem/1
-]
-category: production
-research: blast-drill
+  requirements: [
+    diamond/5
+    silicon/25
+    titanium/25
+    thorium/1
+    cryogem/1
+  ]
+  category: production
+  research: blast-drill
+  drillEffect: freezing
+  updateEffect: pulverizeSmall
+  heatColor: eeffff
+  }

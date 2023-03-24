@@ -1,33 +1,35 @@
-//type: GenericCrafter
-name: Multi-Pyra Mixer
-description: Mixes coal, lead and sand into pyratite.
-itemCapacity: 20
-health: 700
-size: 3
-hasPower: true
-hasItems: true
-craftTime: 40
-updateEffect: mine
-consumes: {
-  power: 1.65
-  items: {
-    items: [
-      coal/2
-      sand/4
-      lead/4
-    ]
+{
+  type: GenericCrafter
+  name: Multi-Pyra Mixer
+  description: Mixes coal, lead and sand into pyratite.
+  itemCapacity: 20
+  health: 700
+  size: 3
+  hasPower: true
+  hasItems: true
+  craftTime: 48
+  updateEffect: mine
+  consumes: {
+    power: 1.65
+    items: {
+      items: [
+        coal/2
+        sand/4
+        lead/4
+      ]
+    }
   }
-}
-requirements: [
-  copper/200
-  lead/130
-  silicon/35
-  diamond/15
-]
-category: crafting
-research: alloy-smelter
-loopSound: respawning
-loopSoundVolume: 0.95
-ambientSound: respawning
-ambientSoundVolume: 0.5
-outputItem: pyratite/3
+  outputItem: pyratite/4
+  requirements: [
+    copper/200
+    lead/130
+    silicon/35
+    diamond/15
+  ]
+  category: crafting
+  research: pyratite-mixer
+  loopSound: respawning
+  loopSoundVolume: 0.95
+  ambientSound: respawning
+  ambientSoundVolume: 0.5
+  }

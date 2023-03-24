@@ -1,49 +1,41 @@
-type: GenericSmelter
-name: Diamond Synthesizer
-description: A slow snd sturdy smeltery that compresses large amounts of coal using the heat of slag and converts it into diamond.
-itemCapacity: 50
-liquidCapacity: 50
-health: 2000
-size: 2
-hasPower: true
-hasLiquids: true
-hasItems: true
-craftTime: 600
-updateEffect: pulverizeRed
-consumes: {
-  power: 1.8
-  items: {
-    items: [
-      coal/20
-    ]
+{
+  type: GenericCrafter
+  name: Diamond Synthesizer
+  description: A slow snd sturdy smeltery that compresses large amounts of coal using the heat of slag and converts it into diamond.
+  itemCapacity: 50
+  liquidCapacity: 50
+  health: 1000
+  size: 2
+  hasPower: true
+  hasLiquids: true
+  hasItems: true
+  craftTime: 100
+  updateEffect: pulverizeRed
+  consumes: {
+    power: 1.8
+    items: {
+      items: [
+        coal/15
+      ]
+    }
+    liquid: {
+      liquid: slag
+      amount: 0.0416666666666666666
+    }
   }
-  liquid: {
-    liquid: slag
-    amount: 0.0416666666666666666
-  }
-}
-requirements: [
-  lead/120
-  surge-alloy/30
-  silicon/75
-  titanium/200
-  graphite/200
-]
-category: crafting
-research:{
-  parent: disassembler
-  requirements:[
-	  coal/600000
-	  scrap/600000
-	  lead/12000
-      surge-alloy/3000
-      silicon/7500
-      titanium/20000
-      graphite/20000
+  outputItem: diamond/1
+  requirements: [
+    lead/120
+    silicon/75
+    titanium/75
+    graphite/75
+    surge-alloy/30
   ]
+  category: crafting
+  research: disassembler
+  researchCostMultiplier: 3
+  loopSound: machine
+  loopSoundVolume: 0.95
+  idleSound: respawning
+  idleSoundVolume: 0.5
 }
-loopSound: machine
-loopSoundVolume: 0.95
-ambientSound: respawning
-ambientSoundVolume: 0.5
-outputItem: diamond/1
