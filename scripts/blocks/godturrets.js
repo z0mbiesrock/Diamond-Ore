@@ -255,7 +255,7 @@ yggdrasilPlasma.fragLifeMin = 0.75;
 yggdrasilPlasma.fragLifeMax = 1.375;
 yggdrasilPlasma.status = StatusEffects.shocked;
 yggdrasilPlasma.statusDuration = 300;
-yggdrasilPlasma.hitSound = loadSound("yggdrasilPlasmaExplode");;
+yggdrasilPlasma.hitSound = Vars.tree.loadSound("yggdrasilPlasmaExplode");;
 yggdrasilPlasma.fragBullet = yggdrasilPlasmaFrag;
 const yggdrasilTurret = extend(PowerTurret, "yggdrasil", {
 	
@@ -269,5 +269,5 @@ const yggdrasilTurret = extend(PowerTurret, "yggdrasil", {
 yggdrasilTurret.chargeEffect = yggdrasilCharge;
 yggdrasilTurret.shootEffect = yggdrasilShoot;
 yggdrasilTurret.shootType = yggdrasilPlasma;
-yggdrasilTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.375)).update(false).boost();
+//yggdrasilTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.375)).update(false).boost();
 //yggdrasilTurret.shootSound = Sounds.yggdrasilfire;

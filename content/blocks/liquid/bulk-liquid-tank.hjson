@@ -1,5 +1,5 @@
 type: LiquidRouter
-name: Reinforced Liquid Tank
+name: Bulk Liquid Tank
 health: 12500
 size: 5
 description: Stores a massive amount of liquids. Useful for creating buffers in situations with non-constant demand of materials or as a safeguard for cooling vital blocks.

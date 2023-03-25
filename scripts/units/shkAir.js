@@ -68,7 +68,7 @@ shkStrikeBolt.tileDamageMultiplier = 0.6;
 shkStrikeBolt.smokeEffect = Fx.hitFuse;
 shkStrikeBolt.shootEffect = shkBoltShoot;
 shkStrikeBolt.hitEffect = shkBoltHit;
-shkStrikeBolt.hitSound = loadSound("strikeZap");
+shkStrikeBolt.hitSound = Vars.tree.loadSound("strikeZap");
 shkStrikeBolt.despawnEffect = shkBoltDesp;
 shkStrikeBolt.status = StatusEffects.shocked;
 shkStrikeBolt.statusDuration = 30;
@@ -86,7 +86,7 @@ shkAirT1weapon.mirror = false;
 shkAirT1weapon.soundPitchMin = 0.7;
 shkAirT1weapon.soundPitchMax = 1.3;
 shkAirT1weapon.top = true;
-shkAirT1weapon.shootSound = loadSound("strikeZap");
+shkAirT1weapon.shootSound = Vars.tree.loadSound("strikeZap");
 shkAirT1weapon.bullet = shkStrikeBolt;
 
 shkAirT1.weapons.add(shkAirT1weapon);
@@ -216,7 +216,7 @@ hurricanePlasma.absorbable = false;
 hurricanePlasma.status = StatusEffects.shocked;
 hurricanePlasma.statusDuration = 15;
 hurricanePlasma.sprite = "diamond-ore-plasma-sphere";
-hurricanePlasma.hitSound = loadSound("tempestShockBullet");
+hurricanePlasma.hitSound = Vars.tree.loadSound("tempestShockBullet");
 
 const shkStrikeBoltBig = extend(PointBulletType, {});
 shkStrikeBoltBig.damage = 80;
@@ -247,7 +247,7 @@ const shkAirT4weaponA = extend(Weapon, {
 	soundPitchMin: 0.5,
 	soundPitchMax: 1.03,
 	top: true,
-	shootSound: loadSound("strikeZapBig"),
+	shootSound: Vars.tree.loadSound("strikeZapBig"),
 	bullet: shkStrikeBoltBig
 });
 const shkAirT4weaponB = extend(Weapon, {
@@ -264,7 +264,7 @@ const shkAirT4weaponB = extend(Weapon, {
 	soundPitchMin: 0.5,
 	soundPitchMax: 1.03,
 	top: true,
-	shootSound: loadSound("strikeZapBig"),
+	shootSound: Vars.tree.loadSound("strikeZapBig"),
 	bullet: shkStrikeBoltBig
 });
 
@@ -283,7 +283,7 @@ shkAirT4plasma.mirror = false;
 shkAirT4plasma.soundPitchMin = 0.5;
 shkAirT4plasma.soundPitchMax = 1.03;
 shkAirT4plasma.top = true;
-shkAirT4plasma.shootSound = loadSound("strikeZapBig");
+shkAirT4plasma.shootSound = Vars.tree.loadSound("strikeZapBig");
 shkAirT4plasma.bullet = hurricanePlasma;
 
 shkAirT4.weapons.add(
@@ -405,7 +405,7 @@ purgerPlasma.sprite = "diamond-ore-plasma-sphere";
 purgerPlasma.homingPower = 0.0925;
 purgerPlasma.homingRange = 180;
 purgerPlasma.homingDelay = 55;
-purgerPlasma.hitSound = loadSound("purgerPlasmaBoom");
+purgerPlasma.hitSound = Vars.tree.loadSound("purgerPlasmaBoom");
 const purgerPlasmaCharge = Effect(64, e => {
 	Draw.color(Color.valueOf("#ffff00"));
     const ctdf = new Floatc2({get(x, y){
@@ -439,8 +439,8 @@ const shkAirT5weapon = extend(Weapon, {
 	soundPitchMin: 0.95,
 	soundPitchMax: 1.05,
 	top: true,
-	shootSound: loadSound("plasmaBallShoot"),
-	chargeSound: loadSound("purgerCharge"),
+	shootSound: Vars.tree.loadSound("plasmaBallShoot"),
+	chargeSound: Vars.tree.loadSound("purgerCharge"),
 	shootStatus: StatusEffects.unmoving,
 	shootStatusDuration: 70,
 	bullet: purgerPlasma

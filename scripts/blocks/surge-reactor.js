@@ -106,7 +106,7 @@ surgeReactorMeltdown.instantDisappear = true;
 surgeReactorMeltdown.shootEffect = Fx.none;
 surgeReactorMeltdown.smokeEffect = Fx.none;
 
-const surgeReactorOverloadSound = loadSound("surgeReactorOverheat");
+const surgeReactorOverloadSound = Vars.tree.loadSound("surgeReactorOverheat");
 
 const surgeReactor = extend(NuclearReactor, "surge-reactor", {
 	

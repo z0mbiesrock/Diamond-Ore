@@ -105,7 +105,7 @@ medGndT1bullet.tileDamageMultiplier = 0.6;
 medGndT1bullet.smokeEffect = Fx.none;
 medGndT1bullet.shootEffect = Fx.none;
 medGndT1bullet.hitEffect = Fx.none;
-//medGndT1bullet.hitSound = loadSound("strikeZap");
+//medGndT1bullet.hitSound = Vars.tree.loadSound("strikeZap");
 const medGndT1weapon = extend(Weapon, {
 	name: "diamond-ore-spriite-beam",
 	reload: 1,
@@ -124,7 +124,7 @@ const medGndT1weapon = extend(Weapon, {
 	soundPitchMin: 0.67,
 	soundPitchMax: 1.83,
 	top: false,
-	shootSound: loadSound("medBeam1"),
+	shootSound: Vars.tree.loadSound("medBeam1"),
 	bullet: medGndT1bullet
 });
 
@@ -193,7 +193,7 @@ medGndT2bullet.tileDamageMultiplier = 0.6;
 medGndT2bullet.smokeEffect = Fx.none;
 medGndT2bullet.shootEffect = Fx.none;
 medGndT2bullet.hitEffect = Fx.none;
-//medGndT2bullet.hitSound = loadSound("strikeZap");
+//medGndT2bullet.hitSound = Vars.tree.loadSound("strikeZap");
 medGndT2bullet.status = StatusEffects.shocked;
 medGndT2bullet.statusDuration = 30;
 const medGndT2weapon = extend(Weapon, {
@@ -214,7 +214,7 @@ const medGndT2weapon = extend(Weapon, {
 	soundPitchMin: 0.67,
 	soundPitchMax: 1.83,
 	top: false,
-	shootSound: loadSound("medBeam2"),
+	shootSound: Vars.tree.loadSound("medBeam2"),
 	bullet: medGndT2bullet
 });
 
@@ -284,7 +284,7 @@ pixieBolt.pierceBuilding = true;
 pixieBolt.reflectable = false;
 //pixieBolt.absorbable = false;
 pixieBolt.sprite = "diamond-ore-diamondbullet";
-//pixieBolt.hitSound = loadSound("tempestShockBullet");
+//pixieBolt.hitSound = Vars.tree.loadSound("tempestShockBullet");
 const medGndT3weaponA = extend(Weapon, {
 	name: "diamond-ore-pixie-bolt",
 	reload: 27,
@@ -301,7 +301,7 @@ const medGndT3weaponA = extend(Weapon, {
 	soundPitchMin: 0.67,
 	soundPitchMax: 0.83,
 	top: false,
-	shootSound: loadSound("blasterShot"),
+	shootSound: Vars.tree.loadSound("blasterShot"),
 	bullet: pixieBolt
 });
 const medGndT3weaponB = extend(Weapon, {
@@ -320,7 +320,7 @@ const medGndT3weaponB = extend(Weapon, {
 	soundPitchMin: 0.67,
 	soundPitchMax: 0.83,
 	top: false,
-	shootSound: loadSound("blasterShot"),
+	shootSound: Vars.tree.loadSound("blasterShot"),
 	bullet: pixieBolt
 });
 medGndT3.weapons.add(
@@ -739,7 +739,7 @@ goblinBombHeal.keepVelocity = false;
 goblinBombHeal.hittable = false;
 goblinBombHeal.reflectable = false;
 goblinBombHeal.absorbable = false;
-goblinBombHeal.hitSound = loadSound("goblinHealBombBoom");
+goblinBombHeal.hitSound = Vars.tree.loadSound("goblinHealBombBoom");
 goblinBombHeal.sprite = "diamond-ore-diamondshell";
 goblinBombHeal.splashDamage = 300;
 goblinBombHeal.splashDamageRadius = 144;
@@ -811,7 +811,7 @@ goblinBomb.shrinkY = 0;
 goblinBomb.shrinkX = 0.75;
 goblinBomb.despawnEffect = Fx.greenBomb;
 goblinBomb.hitEffect = goblinBombExplosion;
-goblinBomb.hitSound = loadSound("goblinPlasmaBoom");
+goblinBomb.hitSound = Vars.tree.loadSound("goblinPlasmaBoom");
 goblinBomb.trailEffect = goblinBombTrail;
 goblinBomb.shootEffect = Fx.healWave;
 goblinBomb.smokeEffect = Fx.nuclearsmoke;
