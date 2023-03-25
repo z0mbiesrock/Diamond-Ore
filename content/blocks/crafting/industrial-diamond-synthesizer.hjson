@@ -9,7 +9,7 @@ hasPower: true
 hasLiquids: true
 hasItems: true
 craftTime: 200
-updateEffect: pulverizeRedder
+updateEffect: mineBig
 buildCostMultiplier: 0.7777777777
 updateEffectChance: 0.12
 consumes: {

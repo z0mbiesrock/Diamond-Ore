@@ -216,7 +216,16 @@ weapons:[
     soundPitchMin: 2.12
     soundPitchMax: 2.74
     shootSound: boom
-    bullet:fragSurge
+    bullet:{
+      type: FlakBulletType
+	  collidesGround: true
+	  splashDamage: 75
+	  splashDamageRadius: 38
+	  explodeRange: 20
+	  shootEffect: shootBig
+	  lightning: 2
+	  lightningLength: 7
+	  }
   },
   {
     name: spcair-blaster-big
@@ -236,7 +245,16 @@ weapons:[
     soundPitchMin: 2.12
     soundPitchMax: 2.74
     shootSound: boom
-    bullet:fragSurge
+    bullet:{
+      type: FlakBulletType
+	  collidesGround: true
+	  splashDamage: 75
+	  splashDamageRadius: 38
+	  explodeRange: 20
+	  shootEffect: shootBig
+	  lightning: 2
+	  lightningLength: 7
+	  }
   }
 ]
 

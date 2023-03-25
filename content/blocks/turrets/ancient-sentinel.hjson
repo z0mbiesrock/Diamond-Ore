@@ -201,7 +201,7 @@ ammoTypes: {
     smokeEffect: shootBigSmoke
 	hitSound: explosionbig
     trailEffect: melting
-	hitEffect: nuclearShockwave
+	hitEffect: bigShockwave
 	despawnEffect: flakExplosionBig
     ammoMultiplier: 4
     lightRadius: 64

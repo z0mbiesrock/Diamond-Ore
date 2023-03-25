@@ -125,7 +125,17 @@ weapons:[
     soundPitchMin: 0.52
     soundPitchMax: 0.74
     shootSound: flame
-    bullet: heavyOilShot
+    bullet: {
+	    type: LiquidBulletType
+		liquid: oil
+		speed: 4
+		knockback: 1.3
+		damage: 4
+		drag: 0.004
+		lifetime: 50
+		puddleSize: 7
+		orbSize: 4
+	}
   },
   {
     name: scarab-vomit-slag
@@ -145,7 +155,17 @@ weapons:[
     soundPitchMin: 0.52
     soundPitchMax: 0.74
     shootSound: flame2
-    bullet: heavySlagShot
+    bullet: {
+	    type: LiquidBulletType
+		liquid: slag
+		speed: 4
+		knockback: 1.3
+		damage: 4
+		drag: 0.004
+		lifetime: 50
+		puddleSize: 7
+		orbSize: 4
+	}
   }
 ]
 

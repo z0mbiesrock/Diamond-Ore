@@ -7,7 +7,7 @@ size: 3
 hasPower: true
 hasItems: true
 craftTime: 380
-craftEffect: pulverizeRedder
+craftEffect: mineBig
 updateEffect: mine
 buildCostMultiplier: 0.5
 drawLiquidLight: true

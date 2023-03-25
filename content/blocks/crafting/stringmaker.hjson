@@ -9,7 +9,7 @@ craftTime: 60
 hasPower: true
 hasLiquids: true
 hasItems: true
-updateEffect: purify
+updateEffect: heatReactorSmoke
 updateEffectChance: 0.25
 outputLiquid: phase-string/60
 consumes: {

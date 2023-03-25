@@ -8,7 +8,7 @@ hasPower: true
 hasItems: true
 craftTime: 168
 updateEffect: overdriven
-craftEffect: nuclearShockwave
+craftEffect: bigShockwave
 buildCostMultiplier: 0.35
 updateEffectChance: 1
 consumes: {

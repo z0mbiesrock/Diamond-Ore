@@ -74,7 +74,7 @@ weapons:[
       trailChance: 1
       despawnEffect: massiveExplosion
       shootEffect: lancerLaserChargeBegin
-      smokeEffect: impactsmoke
+      smokeEffect: surgeCruciSmoke
       width: 20
       height: 20
       sprite: diamond-ore-diamondbullet
@@ -140,7 +140,32 @@ weapons:[
     shootCone: 1
 	occlusion: 4
     shootSound: missile
-    bullet: missileExplosive
+    bullet: {
+      type: MissileBulletType
+	  frontColor: b28768
+	  backColor: b28768
+      width: 8
+      height: 12
+	  shrinkX: 0
+	  shrinkY: 0
+      speed: 5
+      weaveScale: 2
+      weaveMag: 3
+	  trailColor: b28768
+	  trailChance: 0.8
+	  hitColor: c9a58f
+	  lightColor: b28768
+	  homingPower: 0.066
+	  homingRange: 120
+	  hitEffect: blastExplosion
+	  shootEffect: shootSmall
+	  despawnEffect: mine
+      sprite: diamond-ore-diamondmissile
+      lifetime: 90
+	  damage: 8
+	  splashDamage: 36
+	  splashDamageRadius: 36
+    }
     top: false
   },
   {
@@ -160,7 +185,32 @@ weapons:[
     shootCone: 1
 	occlusion: 4
     shootSound: missile
-    bullet: missileExplosive
+    bullet: {
+      type: MissileBulletType
+	  frontColor: b28768
+	  backColor: b28768
+      width: 8
+      height: 12
+	  shrinkX: 0
+	  shrinkY: 0
+      speed: 5
+      weaveScale: 2
+      weaveMag: 3
+	  trailColor: b28768
+	  trailChance: 0.8
+	  hitColor: c9a58f
+	  lightColor: b28768
+	  homingPower: 0.066
+	  homingRange: 120
+	  hitEffect: blastExplosion
+	  shootEffect: shootSmall
+	  despawnEffect: mine
+      sprite: diamond-ore-diamondmissile
+      lifetime: 90
+	  damage: 8
+	  splashDamage: 36
+	  splashDamageRadius: 36
+    }
     top: false
   },
   {
@@ -180,7 +230,32 @@ weapons:[
     shootCone: 1
 	occlusion: 4
     shootSound: missile
-    bullet: missileExplosive
+    bullet: {
+      type: MissileBulletType
+	  frontColor: b28768
+	  backColor: b28768
+      width: 8
+      height: 12
+	  shrinkX: 0
+	  shrinkY: 0
+      speed: 5
+      weaveScale: 2
+      weaveMag: 3
+	  trailColor: b28768
+	  trailChance: 0.8
+	  hitColor: c9a58f
+	  lightColor: b28768
+	  homingPower: 0.066
+	  homingRange: 120
+	  hitEffect: blastExplosion
+	  shootEffect: shootSmall
+	  despawnEffect: mine
+      sprite: diamond-ore-diamondmissile
+      lifetime: 90
+	  damage: 8
+	  splashDamage: 36
+	  splashDamageRadius: 36
+    }
     top: false
   },
   {
