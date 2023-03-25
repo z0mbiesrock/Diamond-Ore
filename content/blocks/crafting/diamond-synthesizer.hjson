@@ -1,4 +1,4 @@
-type: GenericSmelter
+type: GenericCrafter
 name: Diamond Synthesizer
 description: A slow snd sturdy smeltery that compresses large amounts of coal using the heat of slag and converts it into diamond.
 itemCapacity: 50

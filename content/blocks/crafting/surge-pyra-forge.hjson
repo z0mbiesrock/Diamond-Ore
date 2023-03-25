@@ -1,4 +1,4 @@
-type: GenericSmelter
+type: GenericCrafter
 name: Surge Pyra-Forge
 description: Mixes surge alloy directly from scrap quickly and efficiently. Requires pyratite to fuel the conversion process.
 itemCapacity: 20

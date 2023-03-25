@@ -1,4 +1,4 @@
-type: GenericSmelter
+type: GenericCrafter
 name: Phase String Maker
 health: 440
 size: 3

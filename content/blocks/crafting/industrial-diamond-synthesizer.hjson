@@ -1,4 +1,4 @@
-type: GenericSmelter
+type: GenericCrafter
 name: Industrial Diamond Synthesizer
 description: Uses vast amounts of power to rapidly compress huge amounts of coal into diamond.
 itemCapacity: 300

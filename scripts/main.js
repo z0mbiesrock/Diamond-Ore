@@ -21,8 +21,8 @@ require("blocks/cryocentrifuge")
 require("blocks/multimelter")
 require("blocks/multipyra")
 require("blocks/heavy-coal-processor")
-require("blocks/omnijunction")
-require("blocks/commandcenter")
+//require("blocks/omnijunction") OBSOLETE
+//require("blocks/commandcenter") OBSOLETE
 require("blocks/diamondwalls")
 // Regular Units
 require("units/siren")

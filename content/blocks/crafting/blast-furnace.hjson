@@ -1,4 +1,4 @@
-type: GenericSmelter
+type: GenericCrafter
 name: Blast Furnace
 description: Efficiently combines a decent amount of lead and sand to make a large batch of metaglass using blast compound as a catalyst.
 itemCapacity: 20

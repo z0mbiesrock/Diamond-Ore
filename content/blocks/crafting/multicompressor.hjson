@@ -1,4 +1,4 @@
-type: GenericSmelter
+type: GenericCrafter
 name: Multi-Compressor
 description: A larger and more efficient version of the Plastanium Compressor.
 itemCapacity: 50

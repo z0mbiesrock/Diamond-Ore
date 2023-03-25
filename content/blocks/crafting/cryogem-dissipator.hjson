@@ -8,7 +8,7 @@ hasPower: true
 hasLiquids: true
 hasItems: true
 craftTime: 15
-updateEffect: smelt
+updateEffect: wet
 outputLiquid: cryofluid/60
 consumes: {
   power: 4

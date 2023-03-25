@@ -1,4 +1,4 @@
-type: GenericSmelter
+type: GenericCrafter
 name: Heavy Surge Forge
 description: Fuses titanium, lead, silicon and copper into surge alloy.
 itemCapacity: 60

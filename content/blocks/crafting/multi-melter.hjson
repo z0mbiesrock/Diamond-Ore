@@ -1,6 +1,6 @@
 name: Multi Melter
 description: Uses a very large amount of power to rapidly melt heaps of scrap down into slag. More efficient in hot locations.
-//type: AttributeSmelter
+//type: AttributeCrafter
 health: 360
 size: 2
 itemCapacity: 40

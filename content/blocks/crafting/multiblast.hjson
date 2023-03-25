@@ -1,4 +1,4 @@
-type: GenericSmelter
+type: GenericCrafter
 name: Blast Compund Multi-Mixer
 description: Produces blast compound from pyratite and spore pods, using coal as a supplement.
 itemCapacity: 30

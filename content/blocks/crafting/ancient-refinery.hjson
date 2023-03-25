@@ -1,4 +1,4 @@
-//type: GenericSmelter
+//type: GenericCrafter
 name: Ancient Refinery
 description: "Smelts ancient scrap together in order to restore it to [#e5b85e]its original form[]. Requires vast amounts of power, and can optionally use Slag to speed up refinement."
 itemCapacity: 20

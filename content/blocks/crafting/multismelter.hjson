@@ -1,4 +1,4 @@
-type: GenericSmelter
+type: GenericCrafter
 name: Pyra-Smelter
 description: Employs water, power, pyratite, and cryogems to produce silicon quickly and efficiently.
 itemCapacity: 60
