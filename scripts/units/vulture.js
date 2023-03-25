@@ -1,5 +1,6 @@
 const register = require("diamond-ore/units/unitReg");
 const vultureRageStatus = new StatusEffect("vulture-enraged");
+//vultureRageStatus.hidden = true;
 vultureRageStatus.speedMultiplier = 1.7;
 vultureRageStatus.healthMultiplier = 2;
 vultureRageStatus.damageMultiplier = 2;
@@ -47,8 +48,8 @@ MleGndT5.constructor = () => extend(MechUnit, {
 		if (this.hitTime > 0 && this.health > 0 && this.healthf() < 0.25 && this.hasEffect(vultureRageStatus) == false){
 			if (this.hasEffect(vultureRageStatus) == false){
 				Fx.bigShockwave.at(this.x, this.y);
-				Fx.impactsmoke.at(this.x, this.y);
-				Fx.nuclearsmoke.at(this.x, this.y);
+				Fx.heatReactorSmoke.at(this.x, this.y);
+				Fx.smeltsmoke.at(this.x, this.y);
 			}
 			this.apply(vultureRageStatus, Mathf.random(120,480));
 		}

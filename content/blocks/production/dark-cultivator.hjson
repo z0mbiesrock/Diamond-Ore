@@ -1,6 +1,6 @@
 name: Dark Cultivator
 description: A massive production facility that purifies and concentrates the spores in corrupted water, synthesizing highly infectious pods. Requires massive amounts of liquid and power.
-type: Cultivator
+type: AttributeCrafter
 health: 660
 size: 4
 itemCapacity: 10

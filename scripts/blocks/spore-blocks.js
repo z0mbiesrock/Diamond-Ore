@@ -84,14 +84,14 @@ darkSporeBlockLarge.buildType = () => extend(Wall.WallBuild, darkSporeBlockLarge
 		}
 	},
 });
-const sporeCluster = extend(Cultivator, "sporecluster", {
+const sporeCluster = extend(AttributeCrafter, "sporecluster", {
     icons(){
         return [
             Core.atlas.find(this.name)
         ];
     }
 });
-sporeCluster.buildType = () => extend(Cultivator.CultivatorBuild, sporeCluster, {
+sporeCluster.buildType = () => extend(AttributeCrafter.AttributeCrafterBuild, sporeCluster, {
 	//OVERRIDE
 	draw(){
 		var podnum = Mathf.round(Mathf.randomSeed(this.id, 1, 4));

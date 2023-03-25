@@ -1,7 +1,7 @@
 name: Advanced Cultivator
 description: Cultivates tiny concentrations of atmospheric spores into spore pods.
 details: An advanced cultivator, capable of growing spore pods more efficiently.
-type: Cultivator
+type: AttributeCrafter
 health: 450
 size: 3
 itemCapacity: 20
