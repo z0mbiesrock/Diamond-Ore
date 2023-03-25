@@ -2,5 +2,5 @@ name: "diamond-ore"
 displayName: "[#33eeee]Diamond Ore[] Mod" //what displays in the mod selection menu
 author: "z0mbiesrock"
 description: "Adds the [#33eeee]Diamond[] resource.\n\nThis mod also adds more than just diamonds. It also adds enhanced versions of vanilla production blocks, as well as units, technology, and more."
-version: "[#9cb6f4]3.0.0[]"
+version: "[#9cb6f4]4.0.0[]"
 minGameVersion: "140"
