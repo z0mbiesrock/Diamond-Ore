@@ -1,7 +1,7 @@
 
 const SpoNavT1 = extend(UnitType, "siren", {
 });
-SpoNavT1.constructor = () => extend(UnitWaterMove, {});
+SpoNavT1.constructor = () => extend(WaterMovec, {});
 //SpoNavT4.abilities.add(new StatusFieldAbility(StatusEffects.overclock, 60 * 6, 60 * 9, 64));
 //SpoNavT1.ammoType = AmmoType.PowerAmmoType;
 const diamondItem = Vars.content.getByName(ContentType.item, "diamond-ore-diamond");

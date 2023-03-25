@@ -17,7 +17,7 @@ const spcAirAI = prov(() => {
 });
 const spcAirT1 = extend(UnitType, "scout", {
 });
-spcAirT1.constructor = () => extend(UnitWaterMove, {
+spcAirT1.constructor = () => extend(WaterMovec, {
 });
 //register(spcAirT1);
 spcAirT1.defaultController = spcAirAI;
@@ -27,7 +27,7 @@ Blocks.airFactory.plans.add(new UnitFactory.UnitPlan(spcAirT1, 60 * 20, ItemStac
 
 const spcAirT2 = extend(UnitType, "fighter", {
 });
-spcAirT2.constructor = () => extend(UnitWaterMove, {});
+spcAirT2.constructor = () => extend(WaterMovec, {});
 //register(spcAirT2);
 spcAirT2.defaultController = spcAirAI;
 
@@ -36,7 +36,7 @@ Blocks.additiveReconstructor.upgrades.add(upgradeA.toArray(UnitType));
 
 const spcAirT3 = extend(UnitType, "destroyer", {
 });
-spcAirT3.constructor = () => extend(UnitWaterMove, {});
+spcAirT3.constructor = () => extend(WaterMovec, {});
 //register(spcAirT3);
 spcAirT3.abilities.add(new ShieldRegenFieldAbility(30, 600, 60 * 12, 88));
 spcAirT3.defaultController = spcAirAI;
@@ -46,7 +46,7 @@ Blocks.multiplicativeReconstructor.upgrades.add(upgradeB.toArray(UnitType));
 
 const spcAirT4 = extend(UnitType, "cruiser", {
 });
-spcAirT4.constructor = () => extend(UnitWaterMove, {});
+spcAirT4.constructor = () => extend(WaterMovec, {});
 //register(spcAirT4);
 spcAirT4.defaultController = spcAirAI;
 
@@ -55,7 +55,7 @@ Blocks.exponentialReconstructor.upgrades.add(upgradeC.toArray(UnitType));
 
 const spcAirT5 = extend(UnitType, "battleship", {
 });
-spcAirT5.constructor = () => extend(UnitWaterMove, {});
+spcAirT5.constructor = () => extend(WaterMovec, {});
 //register(spcAirT5);
 spcAirT5.defaultController = spcAirAI;
 spcAirT5.targetFlag = BlockFlag.core;

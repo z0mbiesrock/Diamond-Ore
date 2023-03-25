@@ -42,7 +42,7 @@ const vultureAI = prov(() => {
 const MleGndT5 = extend(UnitType, "vulture", {
 });
 
-MleGndT5.constructor = () => extend(MechUnit, {
+MleGndT5.constructor = () => extend(Mechc, {
 	update(){
 		this.super$update();
 		if (this.hitTime > 0 && this.health > 0 && this.healthf() < 0.25 && this.hasEffect(vultureRageStatus) == false){

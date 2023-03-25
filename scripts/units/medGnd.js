@@ -130,7 +130,7 @@ const medGndT1weapon = extend(Weapon, {
 
 const medGndT1 = extend(UnitType, "spriite", {
 });
-medGndT1.constructor = () => extend(LegsUnit, {
+medGndT1.constructor = () => extend(Legsc, {
 });
 register(medGndT1);
 medGndT1.weapons.add(medGndT1weapon);
@@ -220,7 +220,7 @@ const medGndT2weapon = extend(Weapon, {
 
 const medGndT2 = extend(UnitType, "gnome", {
 });
-medGndT2.constructor = () => extend(LegsUnit, {
+medGndT2.constructor = () => extend(Legsc, {
 });
 //register(medGndT2);
 medGndT2.weapons.add(medGndT2weapon);
@@ -232,7 +232,7 @@ Blocks.additiveReconstructor.upgrades.add(upgradeA.toArray(UnitType));
 
 const medGndT3 = extend(UnitType, "pixie", {
 });
-medGndT3.constructor = () => extend(LegsUnit, {});
+medGndT3.constructor = () => extend(Legsc, {});
 //register(medGndT3);
 //medGndT3.abilities.add(new ShieldRegenFieldAbility(30, 600, 60 * 12, 88));
 //medGndT3.defaultController = medGndAI;
@@ -332,7 +332,7 @@ Blocks.multiplicativeReconstructor.upgrades.add(upgradeB.toArray(UnitType));
 
 const medGndT4 = extend(UnitType, "nymph", {
 });
-medGndT4.constructor = () => extend(LegsUnit, {});
+medGndT4.constructor = () => extend(Legsc, {});
 //register(medGndT4);
 medGndT4.abilities.add(new ShieldRegenFieldAbility(50, 1000, 60 * 13, 44));
 //medGndT4.defaultController = medGndAI;
@@ -445,7 +445,7 @@ Blocks.exponentialReconstructor.upgrades.add(upgradeC.toArray(UnitType));
 
 const medGndT5 = extend(UnitType, "goblin", {
 });
-medGndT5.constructor = () => extend(LegsUnit, {});
+medGndT5.constructor = () => extend(Legsc, {});
 //register(medGndT5);
 //medGndT5.defaultController = medGndAI;
 medGndT5.targetFlag = BlockFlag.core;

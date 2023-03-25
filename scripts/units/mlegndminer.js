@@ -84,7 +84,7 @@ const mleGndMinerAI = prov(() => {
 });
 const mleGndT1 = extend(UnitType, "sparrow", {
 });
-mleGndT1.constructor = () => extend(MechUnit, {
+mleGndT1.constructor = () => extend(Mechc, {
 	update(){
 		this.super$update();
 		if (this.hitTime > 0 && this.health > 0 && this.damaged() && this.hasEffect(minerScaredStatus) == false){
@@ -100,7 +100,7 @@ mleGndT1.defaultController = mleGndMinerAI;
 mleGndT1.targetFlag = BlockFlag.reactor;
 const mleGndT2 = extend(UnitType, "crow", {
 });
-mleGndT2.constructor = () => extend(MechUnit, {
+mleGndT2.constructor = () => extend(Mechc, {
 	update(){
 		this.super$update();
 		if (this.hitTime > 0 && this.health > 0 && this.damaged() && this.hasEffect(minerScaredStatus) == false){
@@ -116,7 +116,7 @@ mleGndT2.defaultController = mleGndMinerAI;
 mleGndT2.targetFlag = BlockFlag.reactor;
 const mleGndT3 = extend(UnitType, "owl", {
 });
-mleGndT3.constructor = () => extend(MechUnit, {
+mleGndT3.constructor = () => extend(Mechc, {
 	update(){
 		this.super$update();
 		if (this.hitTime > 0 && this.health > 0 && this.damaged()){

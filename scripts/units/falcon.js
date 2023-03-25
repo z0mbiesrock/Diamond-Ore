@@ -37,7 +37,7 @@ const falconAI = prov(() => {
 const MleGndT4 = extend(UnitType, "falcon", {
 });
 
-MleGndT4.constructor = () => extend(MechUnit, {
+MleGndT4.constructor = () => extend(Mechc, {
 });
 MleGndT4.defaultController = falconAI;
 MleGndT4.targetFlag = BlockFlag.reactor;

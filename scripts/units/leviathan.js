@@ -1,7 +1,7 @@
 const register = require("diamond-ore/units/unitReg");
 const SpoNavT5 = extend(UnitType, "leviathan", {
 });
-SpoNavT5.constructor = () => extend(UnitWaterMove, {
+SpoNavT5.constructor = () => extend(WaterMovec, {
 	update(){
 		this.super$update();
 		if (this.healthf() < 1){
