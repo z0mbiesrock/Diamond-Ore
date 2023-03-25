@@ -20,7 +20,7 @@ SuiAirT3.constructor = () => extend(UnitEntity, {
 	classId: () => SuiAirT3.classId
 });
 register(SuiAirT3);
-SuiAirT3.ammoType = AmmoTypes.power;
+//SuiAirT3.ammoType = AmmoType.PowerAmmoType;
 
 var upgrade = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-firefly"), Vars.content.getByName(ContentType.unit, "diamond-ore-beetle")]);
 Blocks.multiplicativeReconstructor.upgrades.add(upgrade.toArray(UnitType));

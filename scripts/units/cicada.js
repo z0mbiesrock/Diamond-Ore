@@ -62,7 +62,7 @@ SuiAirT5.constructor = () => extend(PayloadUnit, {
 	classId: () => SuiAirT5.classId
 });
 register(SuiAirT5);
-SuiAirT5.ammoType = AmmoTypes.powerHigh;
+//SuiAirT5.ammoType = AmmoType.PowerAmmoType;
 SuiAirT5.targetFlag = BlockFlag.reactor;
 
 var upgrade = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-scarab"), Vars.content.getByName(ContentType.unit, "diamond-ore-cicada")]);

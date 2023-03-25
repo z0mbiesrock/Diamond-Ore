@@ -90,7 +90,7 @@ shkAirT1weapon.shootSound = Vars.tree.loadSound("strikeZap");
 shkAirT1weapon.bullet = shkStrikeBolt;
 
 shkAirT1.weapons.add(shkAirT1weapon);
-shkAirT1.ammoType = AmmoTypes.powerHigh;
+//shkAirT1.ammoType = AmmoType.PowerAmmoType;
 
 const diamondItem = Vars.content.getByName(ContentType.item, "diamond-ore-diamond");
 const cryogemItem = Vars.content.getByName(ContentType.item, "diamond-ore-cryogem");
@@ -99,7 +99,7 @@ Blocks.airFactory.plans.add(new UnitFactory.UnitPlan(shkAirT1, 60 * 20, ItemStac
 const shkAirT2 = extend(UnitType, "storm", {
 });
 shkAirT2.constructor = () => extend(UnitEntity, {});
-shkAirT2.ammoType = AmmoTypes.powerHigh;
+//shkAirT2.ammoType = AmmoType.PowerAmmoType;
 
 var upgradeA = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-strike"), Vars.content.getByName(ContentType.unit, "diamond-ore-storm")]);
 Blocks.additiveReconstructor.upgrades.add(upgradeA.toArray(UnitType));
@@ -107,7 +107,7 @@ Blocks.additiveReconstructor.upgrades.add(upgradeA.toArray(UnitType));
 const shkAirT3 = extend(UnitType, "tempest", {
 });
 shkAirT3.constructor = () => extend(UnitEntity, {});
-shkAirT3.ammoType = AmmoTypes.powerHigh;
+//shkAirT3.ammoType = AmmoType.PowerAmmoType;
 
 var upgradeB = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-storm"), Vars.content.getByName(ContentType.unit, "diamond-ore-tempest")]);
 Blocks.multiplicativeReconstructor.upgrades.add(upgradeB.toArray(UnitType));
@@ -115,7 +115,7 @@ Blocks.multiplicativeReconstructor.upgrades.add(upgradeB.toArray(UnitType));
 const shkAirT4 = extend(UnitType, "hurricane", {
 });
 shkAirT4.constructor = () => extend(UnitEntity, {});
-shkAirT4.ammoType = AmmoTypes.powerHigh;
+//shkAirT4.ammoType = AmmoType.PowerAmmoType;
 const shkBoltTrailBig = Effect(15, e => {
 	Draw.color(Color.valueOf("#ffff00"), Color.valueOf("#ffffff"), e.fin());
 	Drawf.tri(e.x, e.y, 9 * e.fout(), 15 + 20 * (1 - e.finpow()), e.rotation);
@@ -300,7 +300,7 @@ const shkAirT5 = extend(UnitType, "purger", {
 shkAirT5.constructor = () => extend(UnitEntity, {});
 //register(shkAirT5);
 shkAirT5.targetFlag = BlockFlag.core;
-shkAirT5.ammoType = AmmoTypes.powerHigh;
+//shkAirT5.ammoType = AmmoType.PowerAmmoType;
 const purgerPlasmaTrail = Effect(28, e => {
 	Draw.color(Color.valueOf("#ffff00"), Color.valueOf("#ffffff"), e.fin());
     const ctdf = new Floatc2({get(x, y){

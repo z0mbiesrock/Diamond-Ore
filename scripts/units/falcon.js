@@ -41,6 +41,6 @@ MleGndT4.constructor = () => extend(MechUnit, {
 });
 MleGndT4.defaultController = falconAI;
 MleGndT4.targetFlag = BlockFlag.reactor;
-//MleGnd1.ammoType = AmmoTypes.power;
+//MleGnd1.ammoType = AmmoType.PowerAmmoType;
 var upgrade = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-owl"), Vars.content.getByName(ContentType.unit, "diamond-ore-falcon")]);
 Blocks.exponentialReconstructor.upgrades.add(upgrade.toArray(UnitType));

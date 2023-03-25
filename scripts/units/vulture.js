@@ -60,6 +60,6 @@ register(MleGndT5);
 MleGndT5.defaultController = vultureAI;
 MleGndT5.abilities.add(new StatusFieldAbility(StatusEffects.shielded, 60 * 12, 60 * 13, 40));
 MleGndT5.targetFlag = BlockFlag.core;
-//MleGnd1.ammoType = AmmoTypes.power;
+//MleGnd1.ammoType = AmmoType.PowerAmmoType;
 var upgrade = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-falcon"), Vars.content.getByName(ContentType.unit, "diamond-ore-vulture")]);
 Blocks.tetrativeReconstructor.upgrades.add(upgrade.toArray(UnitType));
