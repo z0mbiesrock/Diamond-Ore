@@ -1,7 +1,7 @@
 const register = require("diamond-ore/units/unitReg");
 const SpoNavT5 = extend(UnitType, "leviathan", {
 });
-SpoNavT5.constructor = () => extend(WaterMovec, {
+SpoNavT5.constructor = () => extend(WaterMoveUnit, {
 	update(){
 		this.super$update();
 		if (this.healthf() < 1){
@@ -10,9 +10,9 @@ SpoNavT5.constructor = () => extend(WaterMovec, {
 		}
 	},
 
-	classId: () => SpoNavT5.classId
+	//classId: () => SpoNavT5.classId
 });
-register(SpoNavT5);
+//register(SpoNavT5);
 SpoNavT5.abilities.add(new UnitSpawnAbility(UnitTypes.risso, 60 * 45, 0, -32));
 //SpoNavT5.targetFlag = BlockFlag.rally;
 //SpoNavT5.ammoType = AmmoType.PowerAmmoType;

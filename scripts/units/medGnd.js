@@ -130,9 +130,9 @@ const medGndT1weapon = extend(Weapon, {
 
 const medGndT1 = extend(UnitType, "spriite", {
 });
-medGndT1.constructor = () => extend(Legsc, {
+medGndT1.constructor = () => extend(LegsUnit, {
 });
-register(medGndT1);
+//register(medGndT1);
 medGndT1.weapons.add(medGndT1weapon);
 medGndT1.defaultController = medGndHealerAI;
 const diamondItem = Vars.content.getByName(ContentType.item, "diamond-ore-diamond");
@@ -220,9 +220,9 @@ const medGndT2weapon = extend(Weapon, {
 
 const medGndT2 = extend(UnitType, "gnome", {
 });
-medGndT2.constructor = () => extend(Legsc, {
+medGndT2.constructor = () => extend(LegsUnit, {
 });
-//register(medGndT2);
+////register(medGndT2);
 medGndT2.weapons.add(medGndT2weapon);
 medGndT2.abilities.add(new StatusFieldAbility(StatusEffects.shielded, 6, 6, 23));
 medGndT2.defaultController = medGndHealerAI;
@@ -232,8 +232,8 @@ Blocks.additiveReconstructor.upgrades.add(upgradeA.toArray(UnitType));
 
 const medGndT3 = extend(UnitType, "pixie", {
 });
-medGndT3.constructor = () => extend(Legsc, {});
-//register(medGndT3);
+medGndT3.constructor = () => extend(LegsUnit, {});
+////register(medGndT3);
 //medGndT3.abilities.add(new ShieldRegenFieldAbility(30, 600, 60 * 12, 88));
 //medGndT3.defaultController = medGndAI;
 const pixieBoltTrail = Effect(15, e => {
@@ -332,8 +332,8 @@ Blocks.multiplicativeReconstructor.upgrades.add(upgradeB.toArray(UnitType));
 
 const medGndT4 = extend(UnitType, "nymph", {
 });
-medGndT4.constructor = () => extend(Legsc, {});
-//register(medGndT4);
+medGndT4.constructor = () => extend(LegsUnit, {});
+////register(medGndT4);
 medGndT4.abilities.add(new ShieldRegenFieldAbility(50, 1000, 60 * 13, 44));
 //medGndT4.defaultController = medGndAI;
 const nymphShellTrail = Effect(25, e => {
@@ -445,8 +445,8 @@ Blocks.exponentialReconstructor.upgrades.add(upgradeC.toArray(UnitType));
 
 const medGndT5 = extend(UnitType, "goblin", {
 });
-medGndT5.constructor = () => extend(Legsc, {});
-//register(medGndT5);
+medGndT5.constructor = () => extend(LegsUnit, {});
+////register(medGndT5);
 //medGndT5.defaultController = medGndAI;
 medGndT5.targetFlag = BlockFlag.core;
 

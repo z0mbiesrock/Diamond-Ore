@@ -1,7 +1,7 @@
 const register = require("diamond-ore/units/unitReg");
 const SpoNavT4 = extend(UnitType, "charybdis", {
 });
-SpoNavT4.constructor = () => extend(WaterMovec, {
+SpoNavT4.constructor = () => extend(WaterMoveUnit, {
 	update(){
 		this.super$update();
 		if (this.healthf() < 1){
@@ -10,9 +10,9 @@ SpoNavT4.constructor = () => extend(WaterMovec, {
 		}
 	},
 
-	classId: () => SpoNavT4.classId
+	//classId: () => SpoNavT4.classId
 });
-register(SpoNavT4);
+//register(SpoNavT4);
 //SpoNavT4.abilities.add(new StatusFieldAbility(StatusEffects.overclock, 60 * 6, 60 * 9, 64));
 //SpoNavT4.ammoType = AmmoType.PowerAmmoType;
 

@@ -59,9 +59,9 @@ SuiAirT5.constructor = () => extend(PayloadUnit, {
 		}
 	},
 
-	classId: () => SuiAirT5.classId
+	//classId: () => SuiAirT5.classId UnitReg is unneeded now?
 });
-register(SuiAirT5);
+//register(SuiAirT5);
 //SuiAirT5.ammoType = AmmoType.PowerAmmoType;
 SuiAirT5.targetFlag = BlockFlag.reactor;
 

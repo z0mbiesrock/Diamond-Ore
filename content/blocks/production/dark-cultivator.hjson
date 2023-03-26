@@ -12,7 +12,7 @@ hasLiquids: true
 recurrence: 75
 floating: true
 hasPower: true
-craftEffect: purify
+craftEffect: melting
 updateEffect: melting
 updateEffectChance: 0.21
 craftTime: 666

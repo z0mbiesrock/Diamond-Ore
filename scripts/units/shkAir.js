@@ -14,7 +14,7 @@ const shkAirT1 = extend(UnitType, "strike", {
 });
 shkAirT1.constructor = () => extend(UnitEntity, {
 });
-//register(shkAirT1);
+////register(shkAirT1);
 const shkBoltTrail = Effect(15, e => {
 	Draw.color(Color.valueOf("#ffff00"), Color.valueOf("#ffffff"), e.fin());
 	Drawf.tri(e.x, e.y, 7 * e.fout(), 10 + 15 * (1 - e.finpow()), e.rotation);
@@ -298,7 +298,7 @@ Blocks.exponentialReconstructor.upgrades.add(upgradeC.toArray(UnitType));
 const shkAirT5 = extend(UnitType, "purger", {
 });
 shkAirT5.constructor = () => extend(UnitEntity, {});
-//register(shkAirT5);
+////register(shkAirT5);
 shkAirT5.targetFlag = BlockFlag.core;
 //shkAirT5.ammoType = AmmoType.PowerAmmoType;
 const purgerPlasmaTrail = Effect(28, e => {

@@ -42,9 +42,9 @@ require("units/spcAir")
 require("units/shkAir")
 require("units/medGnd")
 // Ancient Content
+require("blocks/vanillaammo")// NOW OUT OF BRAZIL
 require("blocks/ancientrefinery")
 require("blocks/ancients")
-require("blocks/vanillaammo")// NOW OUT OF BRAZIL
 // Spore content
 require("blocks/spore-blocks")
 require("blocks/water-decorruptor")

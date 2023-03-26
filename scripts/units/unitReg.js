@@ -1,6 +1,6 @@
 //Don't ask where I stol-copied this code from.
 /* Registers a unit's class for I/O stuff (saves and net)
-   Requires unit.constructor.get() to have classId: () => unit.classId */
+   Requires unit.constructor.get() to have //classId: () => unit.classId */
 module.exports = unit => {
 	// Register unit's name
 	EntityMapping.nameMap.put(unit.name, unit.constructor);

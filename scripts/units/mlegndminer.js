@@ -84,7 +84,7 @@ const mleGndMinerAI = prov(() => {
 });
 const mleGndT1 = extend(UnitType, "sparrow", {
 });
-mleGndT1.constructor = () => extend(Mechc, {
+mleGndT1.constructor = () => extend(MechUnit, {
 	update(){
 		this.super$update();
 		if (this.hitTime > 0 && this.health > 0 && this.damaged() && this.hasEffect(minerScaredStatus) == false){
@@ -93,14 +93,14 @@ mleGndT1.constructor = () => extend(Mechc, {
 		}
 	},
 
-	classId: () => mleGndT1.classId
+	//classId: () => mleGndT1.classId
 });
-register(mleGndT1);
+//register(mleGndT1);
 mleGndT1.defaultController = mleGndMinerAI;
 mleGndT1.targetFlag = BlockFlag.reactor;
 const mleGndT2 = extend(UnitType, "crow", {
 });
-mleGndT2.constructor = () => extend(Mechc, {
+mleGndT2.constructor = () => extend(MechUnit, {
 	update(){
 		this.super$update();
 		if (this.hitTime > 0 && this.health > 0 && this.damaged() && this.hasEffect(minerScaredStatus) == false){
@@ -109,14 +109,14 @@ mleGndT2.constructor = () => extend(Mechc, {
 		}
 	},
 
-	classId: () => mleGndT2.classId
+	//classId: () => mleGndT2.classId
 });
-register(mleGndT2);
+//register(mleGndT2);
 mleGndT2.defaultController = mleGndMinerAI;
 mleGndT2.targetFlag = BlockFlag.reactor;
 const mleGndT3 = extend(UnitType, "owl", {
 });
-mleGndT3.constructor = () => extend(Mechc, {
+mleGndT3.constructor = () => extend(MechUnit, {
 	update(){
 		this.super$update();
 		if (this.hitTime > 0 && this.health > 0 && this.damaged()){
@@ -128,9 +128,9 @@ mleGndT3.constructor = () => extend(Mechc, {
 		}
 	},
 
-	classId: () => mleGndT3.classId
+	//classId: () => mleGndT3.classId
 });
-register(mleGndT3);
+//register(mleGndT3);
 mleGndT3.defaultController = mleGndMinerAI;
 mleGndT3.targetFlag = BlockFlag.reactor;
 const diamondItem = Vars.content.getByName(ContentType.item, "diamond-ore-diamond");

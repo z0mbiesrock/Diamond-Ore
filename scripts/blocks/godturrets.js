@@ -66,7 +66,7 @@ const thorTurret = extend(ItemTurret, "thor", {
 	}
 });
 //thorTurret.ammo.add(Items.silicon, thorConcussAmmo);
-//thorTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.5)).update(false).boost();
+//thorTurret.coolant.add(new ConsumeCoolant(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.5)).update(false).boost();
 
 const odinTurret = extend(ItemTurret, "odin", {
 	
@@ -77,7 +77,7 @@ const odinTurret = extend(ItemTurret, "odin", {
 		];
 	}
 });
-//odinTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.314159)).update(false).boost();
+//odinTurret.coolant.add(new ConsumeCoolant(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.314159)).update(false).boost();
 const lokiTurret = extend(ItemTurret, "loki", {
 	
 	icons: function(){
@@ -87,7 +87,7 @@ const lokiTurret = extend(ItemTurret, "loki", {
 		];
 	}
 });
-//lokiTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.2345)).update(false).boost();
+//lokiTurret.coolant.add(new ConsumeCoolant(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.2345)).update(false).boost();
 const massdriverStrong = extend(MassDriver, "massdriver-strong", {
 	
 	icons: function(){
@@ -269,5 +269,5 @@ const yggdrasilTurret = extend(PowerTurret, "yggdrasil", {
 yggdrasilTurret.chargeEffect = yggdrasilCharge;
 yggdrasilTurret.shootEffect = yggdrasilShoot;
 yggdrasilTurret.shootType = yggdrasilPlasma;
-//yggdrasilTurret.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.375)).update(false).boost();
+//yggdrasilTurret.coolant.add(new ConsumeCoolant(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1&&liquid.heatCapacity>0.5), 0.375)).update(false).boost();
 //yggdrasilTurret.shootSound = Sounds.yggdrasilfire;

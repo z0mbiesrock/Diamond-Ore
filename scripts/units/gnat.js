@@ -9,9 +9,9 @@ SuiAirT1.constructor = () => extend(UnitEntity, {
 		}
 	},
 
-	classId: () => SuiAirT1.classId
+	//classId: () => SuiAirT1.classId
 });
-register(SuiAirT1);
+//register(SuiAirT1);
 //SuiAirT1.ammoType = AmmoType.PowerAmmoType;
 const diamondItem = Vars.content.getByName(ContentType.item, "diamond-ore-diamond");
 Blocks.airFactory.plans.add(new UnitFactory.UnitPlan(SuiAirT1, 60 * 5, ItemStack.with(Items.silicon, 5, Items.blastCompound, 1, Items.plastanium, 1, diamondItem, 1)));

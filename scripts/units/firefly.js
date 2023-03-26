@@ -9,9 +9,9 @@ SuiAirT2.constructor = () => extend(UnitEntity, {
 		}
 	},
 
-	classId: () => SuiAirT2.classId
+	//classId: () => SuiAirT2.classId
 });
-register(SuiAirT2);
+//register(SuiAirT2);
 //SuiAirT2.ammoType = AmmoType.PowerAmmoType;
 
 var upgrade = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-gnat"), Vars.content.getByName(ContentType.unit, "diamond-ore-firefly")]);

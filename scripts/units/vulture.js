@@ -42,7 +42,7 @@ const vultureAI = prov(() => {
 const MleGndT5 = extend(UnitType, "vulture", {
 });
 
-MleGndT5.constructor = () => extend(Mechc, {
+MleGndT5.constructor = () => extend(MechUnit, {
 	update(){
 		this.super$update();
 		if (this.hitTime > 0 && this.health > 0 && this.healthf() < 0.25 && this.hasEffect(vultureRageStatus) == false){
@@ -55,9 +55,9 @@ MleGndT5.constructor = () => extend(Mechc, {
 		}
 	},
 
-	classId: () => MleGndT5.classId
+	//classId: () => MleGndT5.classId
 });
-register(MleGndT5);
+//register(MleGndT5);
 MleGndT5.defaultController = vultureAI;
 MleGndT5.abilities.add(new StatusFieldAbility(StatusEffects.shielded, 60 * 12, 60 * 13, 40));
 MleGndT5.targetFlag = BlockFlag.core;

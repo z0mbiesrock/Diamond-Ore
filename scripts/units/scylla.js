@@ -1,7 +1,7 @@
 const register = require("diamond-ore/units/unitReg");
 const SpoNavT3 = extend(UnitType, "scylla", {
 });
-SpoNavT3.constructor = () => extend(WaterMovec, {
+SpoNavT3.constructor = () => extend(WaterMoveUnit, {
 	update(){
 		this.super$update();
 		if (this.healthf() < 1){
@@ -10,9 +10,9 @@ SpoNavT3.constructor = () => extend(WaterMovec, {
 		}
 	},
 
-	classId: () => SpoNavT3.classId
+	//classId: () => SpoNavT3.classId
 });
-register(SpoNavT3);
+//register(SpoNavT3);
 SpoNavT3.ammoType = new ItemAmmoType(Items.sporePod);
 
 var upgrade = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-serpent"), Vars.content.getByName(ContentType.unit, "diamond-ore-scylla")]);

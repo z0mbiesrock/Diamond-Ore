@@ -68,4 +68,4 @@ oldRefinery.buildType = () => extend(GenericCrafter.SmelterBuild, oldRefinery, {
 oldRefinery.craftEffect = alloyRefined;
 oldRefinery.updateEffect = alloyRefining;
 oldRefinery.spin = 0;
-oldRefinery.consumes.liquid(Liquids.slag, (3 / 18)).update(true).boost();
+//oldRefinery.consumes.liquid(Liquids.slag, (3 / 18)).update(true).boost(); //Apparently Liquids is no longer public?

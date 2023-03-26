@@ -49,7 +49,7 @@ const ancientBlaster = extend(ItemTurret, "ancient-blaster", {
 });
 ancientBlaster.ammoUseEffect = ancientBlasterAmmoUse;
 ancientBlaster.shootEffect = ancientBlasterShoot;
-ancientBlaster.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1), 0.1)).update(false).boost();
+ancientBlaster.coolant.add(new ConsumeCoolant(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1), 0.1)).update(false).boost();
 const ancientPulser = extend(PowerTurret, "ancient-pulser", {
 	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
@@ -103,7 +103,7 @@ const ancientBlade = extend(LaserTurret, "ancient-blade", {
 });
 ancientBlade.shootType = ancientBladeLaser;
 ancientBlade.update = true;
-ancientBlade.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1), 0.11)).update(false);
+ancientBlade.coolant.add(new ConsumeCoolant(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1), 0.11)).update(false);
 const ancientShotgun = extend(ItemTurret, "ancient-shotgun", {
 	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
@@ -118,7 +118,7 @@ const ancientShotgun = extend(ItemTurret, "ancient-shotgun", {
 });
 ancientShotgun.ammoUseEffect = ancientBlasterAmmoUse;
 ancientShotgun.shootEffect = ancientShotgunShoot;
-ancientShotgun.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1), 0.15)).update(false).boost();
+ancientShotgun.coolant.add(new ConsumeCoolant(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1), 0.15)).update(false).boost();
 const ancientSprayer = extend(ItemTurret, "ancient-sprayer", {
 	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
@@ -131,4 +131,4 @@ const ancientSprayer = extend(ItemTurret, "ancient-sprayer", {
         ];
     }
 });
-ancientSprayer.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1), 0.4)).update(false).boost();
+ancientSprayer.coolant.add(new ConsumeCoolant(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1), 0.4)).update(false).boost();

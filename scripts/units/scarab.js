@@ -20,9 +20,9 @@ SuiAirT4.constructor = () => extend(UnitEntity, {
 		}
 	},
 
-	classId: () => SuiAirT4.classId
+	//classId: () => SuiAirT4.classId
 });
-register(SuiAirT4);
+//register(SuiAirT4);
 //SuiAirT4.ammoType = AmmoType.PowerAmmoType;
 
 var upgrade = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-beetle"), Vars.content.getByName(ContentType.unit, "diamond-ore-scarab")]);

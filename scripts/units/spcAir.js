@@ -17,9 +17,9 @@ const spcAirAI = prov(() => {
 });
 const spcAirT1 = extend(UnitType, "scout", {
 });
-spcAirT1.constructor = () => extend(WaterMovec, {
+spcAirT1.constructor = () => extend(WaterMoveUnit, {
 });
-//register(spcAirT1);
+////register(spcAirT1);
 spcAirT1.defaultController = spcAirAI;
 const diamondItem = Vars.content.getByName(ContentType.item, "diamond-ore-diamond");
 const cryogemItem = Vars.content.getByName(ContentType.item, "diamond-ore-cryogem");
@@ -27,8 +27,8 @@ Blocks.airFactory.plans.add(new UnitFactory.UnitPlan(spcAirT1, 60 * 20, ItemStac
 
 const spcAirT2 = extend(UnitType, "fighter", {
 });
-spcAirT2.constructor = () => extend(WaterMovec, {});
-//register(spcAirT2);
+spcAirT2.constructor = () => extend(WaterMoveUnit, {});
+////register(spcAirT2);
 spcAirT2.defaultController = spcAirAI;
 
 var upgradeA = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-scout"), Vars.content.getByName(ContentType.unit, "diamond-ore-fighter")]);
@@ -36,8 +36,8 @@ Blocks.additiveReconstructor.upgrades.add(upgradeA.toArray(UnitType));
 
 const spcAirT3 = extend(UnitType, "destroyer", {
 });
-spcAirT3.constructor = () => extend(WaterMovec, {});
-//register(spcAirT3);
+spcAirT3.constructor = () => extend(WaterMoveUnit, {});
+////register(spcAirT3);
 spcAirT3.abilities.add(new ShieldRegenFieldAbility(30, 600, 60 * 12, 88));
 spcAirT3.defaultController = spcAirAI;
 
@@ -46,8 +46,8 @@ Blocks.multiplicativeReconstructor.upgrades.add(upgradeB.toArray(UnitType));
 
 const spcAirT4 = extend(UnitType, "cruiser", {
 });
-spcAirT4.constructor = () => extend(WaterMovec, {});
-//register(spcAirT4);
+spcAirT4.constructor = () => extend(WaterMoveUnit, {});
+////register(spcAirT4);
 spcAirT4.defaultController = spcAirAI;
 
 var upgradeC = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-destroyer"), Vars.content.getByName(ContentType.unit, "diamond-ore-cruiser")]);
@@ -55,8 +55,8 @@ Blocks.exponentialReconstructor.upgrades.add(upgradeC.toArray(UnitType));
 
 const spcAirT5 = extend(UnitType, "battleship", {
 });
-spcAirT5.constructor = () => extend(WaterMovec, {});
-//register(spcAirT5);
+spcAirT5.constructor = () => extend(WaterMoveUnit, {});
+////register(spcAirT5);
 spcAirT5.defaultController = spcAirAI;
 spcAirT5.targetFlag = BlockFlag.core;
 
