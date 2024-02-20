@@ -1,6 +1,6 @@
-const register = require("diamond-ore/units/unitReg");
+//const register = require("diamond-ore/units/unitReg");
 const vultureRageStatus = new StatusEffect("vulture-enraged");
-//vultureRageStatus.hidden = true;
+vultureRageStatus.hidden = true;
 vultureRageStatus.speedMultiplier = 1.7;
 vultureRageStatus.healthMultiplier = 2;
 vultureRageStatus.damageMultiplier = 2;
@@ -40,9 +40,20 @@ const vultureAI = prov(() => {
   return u;
 });
 const MleGndT5 = extend(UnitType, "vulture", {
+	update(){
+		this.super$update();
+		if (this.hitTime > 0 && this.health > 0 && this.healthf() < 0.25 && this.hasEffect(vultureRageStatus) == false){
+			if (this.hasEffect(vultureRageStatus) == false){
+				Fx.bigShockwave.at(this.x, this.y);
+				Fx.heatReactorSmoke.at(this.x, this.y);
+				Fx.smeltsmoke.at(this.x, this.y);
+			}
+			this.apply(vultureRageStatus, Mathf.random(120,480));
+		}
+	},
 });
 
-MleGndT5.constructor = () => extend(MechUnit, {
+/* MleGndT5.constructor = () => extend(MechUnit, {
 	update(){
 		this.super$update();
 		if (this.hitTime > 0 && this.health > 0 && this.healthf() < 0.25 && this.hasEffect(vultureRageStatus) == false){
@@ -56,7 +67,7 @@ MleGndT5.constructor = () => extend(MechUnit, {
 	},
 
 	//classId: () => MleGndT5.classId
-});
+}); */
 //register(MleGndT5);
 MleGndT5.defaultController = vultureAI;
 MleGndT5.abilities.add(new StatusFieldAbility(StatusEffects.shielded, 60 * 12, 60 * 13, 40));

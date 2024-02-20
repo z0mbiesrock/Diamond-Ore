@@ -1,4 +1,7 @@
 //require("effects")
+ancientturretcoolant = new ConsumeCoolant();
+ancientturretcoolant.maxTemp = 0.5;
+ancientturretcoolant.maxFlammability = 0.0;
 const ancientSentinel = extend(ItemTurret, "ancient-sentinel", {
 	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());
@@ -49,7 +52,7 @@ const ancientBlaster = extend(ItemTurret, "ancient-blaster", {
 });
 ancientBlaster.ammoUseEffect = ancientBlasterAmmoUse;
 ancientBlaster.shootEffect = ancientBlasterShoot;
-ancientBlaster.coolant.add(new ConsumeCoolant(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1), 0.1)).update(false).boost();
+ancientBlaster.coolant.add(new ConsumeCoolant());
 const ancientPulser = extend(PowerTurret, "ancient-pulser", {
 	drawBase(tile){
 		Draw.rect(Core.atlas.find(this.name + "-base"), tile.drawx(), tile.drawy());

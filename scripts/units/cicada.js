@@ -32,8 +32,20 @@ cicadaExplosionShard.backColor = Color.valueOf("#eab678");
 cicadaExplosionShard.sprite = "diamond-ore-diamondshard";
 
 const SuiAirT5 = extend(UnitType, "cicada", {
+	update(){
+		this.super$update();
+		if (this.dead || this.health <= 0){
+			cicadaExplosion.at(this.x, this.y)
+			Effect.shake(15, 15, this.x, this.y);
+			Fx.bigShockwave.at(this.x, this.y);
+			for(var i = 0; i < 50; i++){
+				cicadaExplosionShard.create(this, this.team, this.x, this.y, Mathf.random(360), Mathf.random(0.3, 1.5), 1);
+			}
+			this.destroy();
+		}
+	},
 });
-SuiAirT5.constructor = () => extend(PayloadUnit, {
+/* SuiAirT5.constructor = () => extend(PayloadUnit, {
 	update(){
 		this.super$update();
 		if (this.dead || this.health <= 0){
@@ -60,7 +72,7 @@ SuiAirT5.constructor = () => extend(PayloadUnit, {
 	},
 
 	//classId: () => SuiAirT5.classId UnitReg is unneeded now?
-});
+}); */
 //register(SuiAirT5);
 //SuiAirT5.ammoType = AmmoType.PowerAmmoType;
 SuiAirT5.targetFlag = BlockFlag.reactor;

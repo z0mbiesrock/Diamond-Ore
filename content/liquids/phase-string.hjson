@@ -6,6 +6,7 @@ explosiveness: 3.14
 temperature: 0.5
 viscosity: 0.01
 effect: corroded
+coolant: true
 color: fff3d6
 barColor: f19583
 lightColor: ffd59388

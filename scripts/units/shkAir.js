@@ -12,7 +12,7 @@ const shkAirAI = prov(() => {
 });
 const shkAirT1 = extend(UnitType, "strike", {
 });
-shkAirT1.constructor = () => extend(UnitEntity, {
+shkAirT1.constructor = () => extend(UnitType, {
 });
 ////register(shkAirT1);
 const shkBoltTrail = Effect(15, e => {
@@ -98,7 +98,7 @@ Blocks.airFactory.plans.add(new UnitFactory.UnitPlan(shkAirT1, 60 * 20, ItemStac
 
 const shkAirT2 = extend(UnitType, "storm", {
 });
-shkAirT2.constructor = () => extend(UnitEntity, {});
+shkAirT2.constructor = () => extend(UnitType, {});
 //shkAirT2.ammoType = AmmoType.PowerAmmoType;
 
 var upgradeA = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-strike"), Vars.content.getByName(ContentType.unit, "diamond-ore-storm")]);
@@ -106,7 +106,7 @@ Blocks.additiveReconstructor.upgrades.add(upgradeA.toArray(UnitType));
 
 const shkAirT3 = extend(UnitType, "tempest", {
 });
-shkAirT3.constructor = () => extend(UnitEntity, {});
+shkAirT3.constructor = () => extend(UnitType, {});
 //shkAirT3.ammoType = AmmoType.PowerAmmoType;
 
 var upgradeB = new Seq([Vars.content.getByName(ContentType.unit, "diamond-ore-storm"), Vars.content.getByName(ContentType.unit, "diamond-ore-tempest")]);
@@ -114,7 +114,7 @@ Blocks.multiplicativeReconstructor.upgrades.add(upgradeB.toArray(UnitType));
 
 const shkAirT4 = extend(UnitType, "hurricane", {
 });
-shkAirT4.constructor = () => extend(UnitEntity, {});
+shkAirT4.constructor = () => extend(UnitType, {});
 //shkAirT4.ammoType = AmmoType.PowerAmmoType;
 const shkBoltTrailBig = Effect(15, e => {
 	Draw.color(Color.valueOf("#ffff00"), Color.valueOf("#ffffff"), e.fin());
@@ -297,7 +297,7 @@ Blocks.exponentialReconstructor.upgrades.add(upgradeC.toArray(UnitType));
 
 const shkAirT5 = extend(UnitType, "purger", {
 });
-shkAirT5.constructor = () => extend(UnitEntity, {});
+shkAirT5.constructor = () => extend(UnitType, {});
 ////register(shkAirT5);
 shkAirT5.targetFlag = BlockFlag.core;
 //shkAirT5.ammoType = AmmoType.PowerAmmoType;

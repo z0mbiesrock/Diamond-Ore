@@ -1,7 +1,14 @@
-const register = require("diamond-ore/units/unitReg");
+//const register = require("diamond-ore/units/unitReg");
 const SpoNavT3 = extend(UnitType, "scylla", {
+	update(){
+		this.super$update();
+		if (this.healthf() < 1){
+			this.health += 0.25;
+			this.clampHealth();
+		}
+	},
 });
-SpoNavT3.constructor = () => extend(WaterMoveUnit, {
+/* SpoNavT3.constructor = () => extend(WaterMoveUnit, {
 	update(){
 		this.super$update();
 		if (this.healthf() < 1){
@@ -11,7 +18,7 @@ SpoNavT3.constructor = () => extend(WaterMoveUnit, {
 	},
 
 	//classId: () => SpoNavT3.classId
-});
+}); */
 //register(SpoNavT3);
 SpoNavT3.ammoType = new ItemAmmoType(Items.sporePod);
 

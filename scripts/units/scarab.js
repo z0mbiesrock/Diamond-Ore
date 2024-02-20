@@ -1,7 +1,7 @@
 const register = require("diamond-ore/units/unitReg");
 const SuiAirT4 = extend(UnitType, "scarab", {
 });
-SuiAirT4.constructor = () => extend(UnitEntity, {
+SuiAirT4.constructor = () => extend(UnitType, {
 	update(){
 		this.super$update();
 		if (this.dead || this.health <= 0){

@@ -14,7 +14,7 @@ itemCapacity: 50
 hitSize: 5
 rotateShooting: false
 lowAltitude: true
-destructibleWreck: false
+createWreck: false
 circleTarget: true
 immunities: [wet, tarred, sapped, spore-slowed, corroded]
 engineOffset: 5

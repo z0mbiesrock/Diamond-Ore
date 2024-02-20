@@ -14,6 +14,7 @@ itemCapacity: 100
 hitSize: 9
 crashDamageMultiplier: 9
 rotateShooting: false
+createWreck: false
 circleTarget: true
 immunities: [wet, tarred, sapped, spore-slowed, corroded, burning, melting]
 engineOffset: 7
